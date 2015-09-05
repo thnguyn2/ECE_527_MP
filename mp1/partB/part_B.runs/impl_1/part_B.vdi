@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Fri Sep  4 21:42:07 2015
+# Process ID: 15920
+# Log file: /media/huutan86/Data/source_code/ECE527/mps/mp1/partB/part_B.runs/impl_1/part_B.vdi
+# Journal file: /media/huutan86/Data/source_code/ECE527/mps/mp1/partB/part_B.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source part_B.tcl -notrace
+Command: open_checkpoint part_B_routed.dcp
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partB/part_B.runs/impl_1/.Xil/Vivado-15920-huutan86-Lenovo-IdeaPad-Y580/dcp/part_B.xdc]
+Finished Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partB/part_B.runs/impl_1/.Xil/Vivado-15920-huutan86-Lenovo-IdeaPad-Y580/dcp/part_B.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1128.547 ; gain = 0.000 ; free physical = 2091 ; free virtual = 12851
+Restored from archive | CPU: 0.010000 secs | Memory: 0.038658 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1128.547 ; gain = 0.000 ; free physical = 2091 ; free virtual = 12851
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 1215546
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC 23-20] Rule violation (ZPS7-1) PS7 block required - The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./part_B.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1490.438 ; gain = 361.891 ; free physical = 1730 ; free virtual = 12493
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 21:42:33 2015...

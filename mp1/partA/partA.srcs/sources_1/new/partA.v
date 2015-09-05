@@ -25,17 +25,19 @@ module partA(
     input [7:0] sw
     );
     reg [DELAY_NUM_CYCLES-1:0] reg_byte_out_led [7:0]; //Byte shift register for storing the values
-    reg [7:0] reg_leds;
-    integer i;
-    assign leds = reg_byte_out_led[7:0][2];
+    integer i,j;
+    genvar k;
+    //assign leds = reg_leds;
     always @ (posedge clk)
     begin
         if (reset)
         begin
-            reg_leds <= 8'h00;
-            for (i=0;i<8;i=i+1) //Reset the byte shift register
+           for (i=0;i<8;i=i+1) //Reset the byte shift register
             begin
-                reg_byte_out_led[i]<=3'd0;
+                for (j=0;j<DELAY_NUM_CYCLES;j=j+1)
+                begin
+                    reg_byte_out_led[i][j]<=1'b0;
+                end
             end
             
         end
@@ -44,19 +46,18 @@ module partA(
             //Output the MSBs of the byte shift registers
             for (i=0;i<8;i = i+1)
             begin
-                reg_byte_out_led[i] <= {reg_byte_out_led[i][2:0],sw[i]};                        
+                reg_byte_out_led[i] <= {reg_byte_out_led[i][DELAY_NUM_CYCLES-1:0],sw[i]};                        
                                
             end
          end         
     end
     
-   /* always @ (*)
-    begin
-        for (i=0;i<8;i=i+1)
-        begin
-             reg_leds[i]=reg_byte_out_led[i][2]; //Why there is an extra D-FF is used here? Gen-var problem
-             
+    //Assigning output values
+    generate
+        for (k=0;k<8;k = k+1)
+        begin: OUTPUT
+            assign leds[k] = reg_byte_out_led[k][DELAY_NUM_CYCLES-1];
         end
-    end*/
-          
+    endgenerate
+   
 endmodule

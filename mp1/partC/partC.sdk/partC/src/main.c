@@ -140,12 +140,14 @@ XGpio Gpio; /* The Instance of the GPIO Driver */
 * @note		This function will not return if the test is running.
 *
 ******************************************************************************/
+
+//Function prototype definition
+void LoopDelay(int);
+
 int main(void)
 {
 	u32 SW_Data;
 	int Status;
-	volatile int Delay;
-
 	/*
 	 * Initialize the GPIO driver
 	 */
@@ -161,18 +163,34 @@ int main(void)
 	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED);
 
 	/* Loop forever blinking the LED */
-
+	int delaycount = 50000000;
 	while (1) {
-		/*
-		 * Read the state of the data so that only the LED state can be
-		 * modified
-		 */
+		/* Mode 0 - Display the current value of the switches*/
 		SW_Data = XGpio_DiscreteRead(&Gpio, SW_CHANNEL);
 		XGpio_DiscreteWrite(&Gpio,LED_CHANNEL,SW_Data);
+		LoopDelay(delaycount);
+		/* Mode 1- Shift to the right by 2 bits*/
+		SW_Data = XGpio_DiscreteRead(&Gpio, SW_CHANNEL);
+		XGpio_DiscreteWrite(&Gpio,LED_CHANNEL,SW_Data>>2);
+		LoopDelay(delaycount);
+		/* Mode 2 - Circular shift to the left by 3 bits */
+		SW_Data = XGpio_DiscreteRead(&Gpio, SW_CHANNEL);
+		XGpio_DiscreteWrite(&Gpio,LED_CHANNEL,((SW_Data<<3)+((SW_Data & 0xE0)>>5)));
+		LoopDelay(delaycount);
+		/* Mode 3 - Inverted all bits */
+		SW_Data = XGpio_DiscreteRead(&Gpio, SW_CHANNEL);
+		XGpio_DiscreteWrite(&Gpio,LED_CHANNEL,(SW_Data ^ 0xFF));
+		LoopDelay(delaycount);
 	}
 
 	return XST_SUCCESS;
 }
 
+void LoopDelay(int count)
+{
+		int curval;
+		for (curval = 0;curval<=count;curval++);
+
+}
 
 

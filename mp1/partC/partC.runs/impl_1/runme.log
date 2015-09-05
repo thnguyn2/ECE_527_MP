@@ -553,3 +553,142 @@ INFO: [Common 17-186] '/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/par
 INFO: [Common 17-83] Releasing license: Implementation
 write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2183.852 ; gain = 229.395 ; free physical = 903 ; free virtual = 11491
 INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 17:20:41 2015...
+
+*** Running vivado
+    with args -log partC_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source partC_wrapper.tcl -notrace
+
+
+****** Vivado v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source partC_wrapper.tcl -notrace
+Command: open_checkpoint partC_wrapper_routed.dcp
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.runs/impl_1/.Xil/Vivado-11576-huutan86-Lenovo-IdeaPad-Y580/dcp/partC_wrapper_early.xdc]
+Finished Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.runs/impl_1/.Xil/Vivado-11576-huutan86-Lenovo-IdeaPad-Y580/dcp/partC_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1195.574 ; gain = 3.000 ; free physical = 1798 ; free virtual = 12497
+Restored from archive | CPU: 0.230000 secs | Memory: 1.213860 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1195.574 ; gain = 3.000 ; free physical = 1798 ; free virtual = 12497
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 1215546
+open_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1195.574 ; gain = 280.711 ; free physical = 1786 ; free virtual = 12482
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./partC_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1558.465 ; gain = 362.891 ; free physical = 1249 ; free virtual = 11949
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 21:04:04 2015...
+
+*** Running vivado
+    with args -log partC_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source partC_wrapper.tcl -notrace
+
+
+****** Vivado v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source partC_wrapper.tcl -notrace
+Command: open_checkpoint partC_wrapper_routed.dcp
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.runs/impl_1/.Xil/Vivado-12701-huutan86-Lenovo-IdeaPad-Y580/dcp/partC_wrapper_early.xdc]
+Finished Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.runs/impl_1/.Xil/Vivado-12701-huutan86-Lenovo-IdeaPad-Y580/dcp/partC_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1195.570 ; gain = 3.000 ; free physical = 1538 ; free virtual = 12238
+Restored from archive | CPU: 0.230000 secs | Memory: 1.213860 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1195.570 ; gain = 3.000 ; free physical = 1538 ; free virtual = 12238
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 1215546
+open_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1195.570 ; gain = 280.711 ; free physical = 1541 ; free virtual = 12237
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+/opt/Xilinx/Vivado/2015.1/bin/loader: line 157: 12701 Killed                  "$RDI_PROG" "$@"
+
+*** Running vivado
+    with args -log partC_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source partC_wrapper.tcl -notrace
+
+
+****** Vivado v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source partC_wrapper.tcl -notrace
+Command: open_checkpoint partC_wrapper_routed.dcp
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.runs/impl_1/.Xil/Vivado-13222-huutan86-Lenovo-IdeaPad-Y580/dcp/partC_wrapper_early.xdc]
+Finished Parsing XDC File [/media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.runs/impl_1/.Xil/Vivado-13222-huutan86-Lenovo-IdeaPad-Y580/dcp/partC_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1195.570 ; gain = 3.000 ; free physical = 1556 ; free virtual = 12257
+Restored from archive | CPU: 0.230000 secs | Memory: 1.213860 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1195.570 ; gain = 3.000 ; free physical = 1556 ; free virtual = 12257
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 1215546
+open_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1195.570 ; gain = 280.711 ; free physical = 1559 ; free virtual = 12256
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./partC_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1558.461 ; gain = 362.891 ; free physical = 1197 ; free virtual = 11898
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 21:09:17 2015...

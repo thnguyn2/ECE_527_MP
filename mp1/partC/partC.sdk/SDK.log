@@ -9,3 +9,39 @@
 17:37:30 INFO  : Processor reset is completed for ps7_cortexa9_0
 17:38:47 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 17:38:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:47:19 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:03:47 INFO  : Processing command line option -hwspec /media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.sdk/partC_wrapper.hdf.
+21:03:47 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+21:03:48 INFO  : Checking for hwspec changes in the project partC_wrapper_hw_platform_0.
+21:03:48 INFO  : XSDB server has started successfully.
+21:09:51 INFO  : ps7_init is completed.
+21:09:52 INFO  : ps7_post_config is completed.
+21:09:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:12:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:12:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:12:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:12:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:12:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:14:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:15:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:16:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:17:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:17:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:18:55 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:18:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:22:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:22:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:22:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:24:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:24:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:25:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:25:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:26:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:26:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:27:37 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:27:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:29:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:29:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:30:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:30:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:35:13 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
