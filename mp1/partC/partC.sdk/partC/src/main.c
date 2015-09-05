@@ -163,7 +163,7 @@ int main(void)
 	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED);
 
 	/* Loop forever blinking the LED */
-	int delaycount = 50000000;
+	int delaycount = 88888888;//Should be good enough for 1 second
 	while (1) {
 		/* Mode 0 - Display the current value of the switches*/
 		SW_Data = XGpio_DiscreteRead(&Gpio, SW_CHANNEL);

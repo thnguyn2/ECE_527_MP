@@ -1,6 +1,21 @@
-21:30:30 **** Incremental Build of configuration Debug for project partC ****
+15:22:56 **** Auto Build of configuration Debug for project partC ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: partC.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "partC.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: partC.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size partC.elf  |tee "partC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23968	   1168	  22580	  47716	   ba64	partC.elf
+Finished building: partC.elf.size
+ 
 
-21:30:30 Build Finished (took 66ms)
+15:22:56 Build Finished (took 168ms)
 

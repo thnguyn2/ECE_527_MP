@@ -45,3 +45,33 @@
 21:30:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 21:30:40 INFO  : Processor reset is completed for ps7_cortexa9_0
 21:35:13 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:14:46 INFO  : Processing command line option -hwspec /media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.sdk/partC_wrapper.hdf.
+15:14:49 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+15:14:49 INFO  : Checking for hwspec changes in the project partC_wrapper_hw_platform_0.
+15:14:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1441421087000,  Project:1441405241000
+15:14:56 INFO  : The hardware specification for project 'partC_wrapper_hw_platform_0' is different from /media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.sdk/partC_wrapper.hdf.
+15:14:56 INFO  : Copied contents of /media/huutan86/Data/source_code/ECE527/mps/mp1/partC/partC.sdk/partC_wrapper.hdf into /partC_wrapper_hw_platform_0/system.hdf.
+15:15:05 INFO  : XSDB server has started successfully.
+15:15:32 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:15:47 INFO  : 
+15:15:48 INFO  : Updating hardware inferred compiler options for partC.
+15:15:48 INFO  : Clearing existing target manager status.
+15:15:54 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:16:09 INFO  : ps7_init is completed.
+15:16:09 INFO  : ps7_post_config is completed.
+15:16:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:16:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:16:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:18:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:18:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:19:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:19:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:20:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:20:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:21:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:21:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:21:42 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:21:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:22:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:22:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:23:01 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
