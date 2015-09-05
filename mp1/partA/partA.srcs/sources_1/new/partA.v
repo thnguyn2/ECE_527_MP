@@ -27,7 +27,7 @@ module partA(
     reg [DELAY_NUM_CYCLES-1:0] reg_byte_out_led [7:0]; //Byte shift register for storing the values
     reg [7:0] reg_leds;
     integer i;
-    assign leds = reg_leds;
+    assign leds = reg_byte_out_led[7:0][2];
     always @ (posedge clk)
     begin
         if (reset)
@@ -37,6 +37,7 @@ module partA(
             begin
                 reg_byte_out_led[i]<=3'd0;
             end
+            
         end
         else
         begin
@@ -44,9 +45,18 @@ module partA(
             for (i=0;i<8;i = i+1)
             begin
                 reg_byte_out_led[i] <= {reg_byte_out_led[i][2:0],sw[i]};                        
-                reg_leds[i]<=reg_byte_out_led[i][2]; //Why there is an extra D-FF is used here? Gen-var problem
-                              
+                               
             end
-         end
+         end         
     end
+    
+   /* always @ (*)
+    begin
+        for (i=0;i<8;i=i+1)
+        begin
+             reg_leds[i]=reg_byte_out_led[i][2]; //Why there is an extra D-FF is used here? Gen-var problem
+             
+        end
+    end*/
+          
 endmodule
