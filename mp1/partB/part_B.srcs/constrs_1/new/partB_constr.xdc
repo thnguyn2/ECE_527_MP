@@ -44,3 +44,14 @@ set_property PACKAGE_PIN R18 [get_ports right_btn]
 set_property PACKAGE_PIN N15 [get_ports left_btn]
 set_property PACKAGE_PIN R16 [get_ports bot_btn]
 
+
+
+set_property LOAD 0 [get_ports {leds[7]}]
+set_property LOAD 0 [get_ports {leds[6]}]
+set_property LOAD 0 [get_ports {leds[5]}]
+set_property LOAD 0 [get_ports {leds[4]}]
+set_property LOAD 0 [get_ports {leds[2]}]
+set_property LOAD 0 [get_ports {leds[1]}]
+set_property LOAD 0 [get_ports {leds[0]}]
+set_property LOAD 0 [get_ports {leds[3]}]
+set_load 0.000 [all_outputs]

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1441418097">
-  <File Type="VDS-TIMING-PB" Name="partA_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1441679290">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+  <File Type="PA-TCL" Name="partA.tcl"/>
+  <File Type="RDS-RDS" Name="partA.vds"/>
   <File Type="VDS-TIMINGSUMMARY" Name="partA_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="partA_timing_summary_synth.pb"/>
   <File Type="RDS-DCP" Name="partA.dcp"/>
   <File Type="RDS-UTIL-PB" Name="partA_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="partA_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="partA_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="partA.vds"/>
-  <File Type="PA-TCL" Name="partA.tcl"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/partA.v">

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Fri Sep  4 20:56:08 2015
+| Date         : Mon Sep  7 21:46:20 2015
 | Host         : huutan86-Lenovo-IdeaPad-Y580 running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file partA_timing_summary_routed.rpt -rpx partA_timing_summary_routed.rpx
 | Design       : partA

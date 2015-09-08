@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date              : Fri Sep  4 21:02:00 2015
+| Date              : Tue Sep  8 10:35:57 2015
 | Host              : huutan86-Lenovo-IdeaPad-Y580 running 64-bit Ubuntu 14.04.3 LTS
 | Command           : report_clock_utilization -file part_B_clock_utilization_routed.rpt
 | Design            : part_B

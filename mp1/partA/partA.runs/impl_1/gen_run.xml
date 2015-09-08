@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1441418097">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1441679290">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="PA-TCL" Name="partA.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="partA_timing_summary_postroute_physopted.pb"/>
+  <File Type="OPT-DCP" Name="partA_opt.dcp"/>
+  <File Type="OPT-DRC" Name="partA_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="partA.hwdef"/>
+  <File Type="PWROPT-DCP" Name="partA_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="partA_drc_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="partA_placed.dcp"/>
+  <File Type="PLACE-IO" Name="partA_io_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="partA_timing_summary_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="partA.bit"/>
+  <File Type="ROUTE-TIMING-RPX" Name="partA_timing_summary_routed.rpx"/>
+  <File Type="BG-BIN" Name="partA.bin"/>
+  <File Type="BITSTR-MSK" Name="partA.msk"/>
+  <File Type="ROUTE-CLK" Name="partA_clock_utilization_routed.rpt"/>
+  <File Type="BG-BGN" Name="partA.bgn"/>
+  <File Type="BITSTR-RBT" Name="partA.rbt"/>
+  <File Type="BITSTR-NKY" Name="partA.nky"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="partA_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-BMM" Name="partA_bd.bmm"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="partA_timing_summary_postroute_physopted.rpx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="partA.vdi"/>
-  <File Type="BG-DRC" Name="partA.drc"/>
-  <File Type="BG-BGN" Name="partA.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="partA.sysdef"/>
-  <File Type="BITSTR-MMI" Name="partA.mmi"/>
-  <File Type="BITSTR-BMM" Name="partA_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="partA.nky"/>
-  <File Type="BITSTR-RBT" Name="partA.rbt"/>
-  <File Type="BITSTR-MSK" Name="partA.msk"/>
-  <File Type="BG-BIN" Name="partA.bin"/>
-  <File Type="BG-BIT" Name="partA.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="partA_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="partA_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="partA_postroute_physopt.dcp"/>
-  <File Type="ROUTE-CLK" Name="partA_clock_utilization_routed.rpt"/>
+  <File Type="BG-DRC" Name="partA.drc"/>
   <File Type="ROUTE-SIMILARITY" Name="partA_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="partA_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="partA.mmi"/>
+  <File Type="PHYSOPT-DCP" Name="partA_physopt.dcp"/>
+  <File Type="BITSTR-SYSDEF" Name="partA.sysdef"/>
+  <File Type="PHYSOPT-DRC" Name="partA_drc_physopted.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="partA_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="partA_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="partA_route_status.pb"/>
@@ -27,27 +42,12 @@
   <File Type="ROUTE-DRC-PB" Name="partA_drc_routed.pb"/>
   <File Type="ROUTE-DRC" Name="partA_drc_routed.rpt"/>
   <File Type="ROUTE-DCP" Name="partA_routed.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="partA_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="partA_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="partA_postplace_pwropt.dcp"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="partA_incremental_reuse_pre_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="partA_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-CTRL" Name="partA_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="partA_utilization_placed.pb"/>
   <File Type="PLACE-UTIL" Name="partA_utilization_placed.rpt"/>
   <File Type="PLACE-CLK" Name="partA_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="partA_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="partA_placed.dcp"/>
-  <File Type="PWROPT-DRC" Name="partA_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="partA_pwropt.dcp"/>
-  <File Type="OPT-HWDEF" Name="partA.hwdef"/>
-  <File Type="OPT-DRC" Name="partA_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="partA_opt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="partA_timing_summary_postroute_physopted.pb"/>
-  <File Type="PA-TCL" Name="partA.tcl"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/partA.v">

@@ -24,9 +24,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.hwdef"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.hwdef"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="partC_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.v"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_auto_pc_1/partC_auto_pc_1.xci"/>
@@ -34,6 +33,7 @@
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_axi_periph_1/partC_processing_system7_0_axi_periph_1.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_1/partC_axi_gpio_0_1.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/partC_wrapper.v">
         <FileInfo>

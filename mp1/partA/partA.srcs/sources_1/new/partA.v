@@ -46,7 +46,7 @@ module partA(
             //Output the MSBs of the byte shift registers
             for (i=0;i<8;i = i+1)
             begin
-                reg_byte_out_led[i] <= {reg_byte_out_led[i][DELAY_NUM_CYCLES-1:0],sw[i]};                        
+                reg_byte_out_led[i] <= {reg_byte_out_led[i][DELAY_NUM_CYCLES-2:0],sw[i]};                        
                                
             end
          end         
