@@ -1,17 +1,21 @@
-
-*** Running vivado
-    with args -log partA.vdi -applog -m64 -messageDb vivado.pb -mode batch -source partA.tcl -notrace
-
-
-*** Running vivado
-    with args -log partA.vdi -applog -m64 -messageDb vivado.pb -mode batch -source partA.tcl -notrace
-
-
-****** Vivado v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Sat Sep 12 08:17:48 2015
+# Process ID: 3727
+# Log file: /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/partA.vdi
+# Journal file: /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Sat Sep 12 08:17:55 2015
+# Process ID: 4048
+# Log file: /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/partA.vdi
+# Journal file: /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
 source partA.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -20,12 +24,6 @@ INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2015.1
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-
-****** Vivado v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
 source partA.tcl -notrace
 Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.srcs/constrs_1/new/pin_assignment.xdc]
 Design is defaulting to srcset: sources_1
@@ -75,7 +73,6 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 242341d35
@@ -243,7 +240,6 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 242341d35
@@ -914,53 +910,3 @@ Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 INFO: [Common 17-206] Exiting Vivado at Sat Sep 12 08:19:03 2015...
-
-*** Running vivado
-    with args -log partA.vdi -applog -m64 -messageDb vivado.pb -mode batch -source partA.tcl -notrace
-
-
-****** Vivado v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source partA.tcl -notrace
-Command: open_checkpoint partA_routed.dcp
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2015.1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/.Xil/Vivado-6050-zombie/dcp/partA.xdc]
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/.Xil/Vivado-6050-zombie/dcp/partA.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1128.539 ; gain = 0.000 ; free physical = 3777 ; free virtual = 13186
-Restored from archive | CPU: 0.030000 secs | Memory: 0.049377 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1128.539 ; gain = 0.000 ; free physical = 3777 ; free virtual = 13186
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-INFO: [Project 1-484] Checkpoint was created with build 1215546
-open_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1128.539 ; gain = 213.684 ; free physical = 3779 ; free virtual = 13186
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [DRC 23-27] Running DRC with 8 threads
-WARNING: [DRC 23-20] Rule violation (ZPS7-1) PS7 block required - The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./partA.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] '/home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 12 08:19:52 2015. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1490.430 ; gain = 361.891 ; free physical = 3373 ; free virtual = 12798
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 12 08:19:52 2015...

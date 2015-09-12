@@ -9,14 +9,14 @@ create_project -in_memory -part xc7z020clg484-1
 
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /media/huutan86/Data/source_code/ECE527/mps/mp1/partA/partA.cache/wt [current_project]
-set_property parent.project_path /media/huutan86/Data/source_code/ECE527/mps/mp1/partA/partA.xpr [current_project]
+set_property webtalk.parent_dir /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.cache/wt [current_project]
+set_property parent.project_path /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-read_verilog -library xil_defaultlib /media/huutan86/Data/source_code/ECE527/mps/mp1/partA/partA.srcs/sources_1/new/partA.v
-read_xdc /media/huutan86/Data/source_code/ECE527/mps/mp1/partA/partA.srcs/constrs_1/new/pin_assignment.xdc
-set_property used_in_implementation false [get_files /media/huutan86/Data/source_code/ECE527/mps/mp1/partA/partA.srcs/constrs_1/new/pin_assignment.xdc]
+read_verilog -library xil_defaultlib /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.srcs/sources_1/new/partA.v
+read_xdc /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.srcs/constrs_1/new/pin_assignment.xdc
+set_property used_in_implementation false [get_files /home/thnguyn2/source_code/ECE_527_MP/mp1/partA/partA.srcs/constrs_1/new/pin_assignment.xdc]
 
 synth_design -top partA -part xc7z020clg484-1
 write_checkpoint -noxdef partA.dcp

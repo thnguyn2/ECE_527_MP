@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Tue Sep  8 20:37:48 2015
-| Host         : huutan86-Lenovo-IdeaPad-Y580 running 64-bit Ubuntu 14.04.3 LTS
+| Date         : Sat Sep 12 08:18:31 2015
+| Host         : zombie running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_utilization -file partA_utilization_placed.rpt -pb partA_utilization_placed.pb
 | Design       : partA
 | Device       : xc7z020
