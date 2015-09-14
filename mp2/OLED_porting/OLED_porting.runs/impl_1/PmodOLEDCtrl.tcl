@@ -50,17 +50,16 @@ set_msg_config -id {Synth 8-638} -limit 10000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/wt [current_project]
-  set_property parent.project_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.xpr [current_project]
-  set_property ip_repo_paths /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
-  set_property ip_output_repo /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
-  add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/PmodOLEDCtrl.dcp
-  read_edif /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/ipcore_dir/charLib.ngc
+  set_property webtalk.parent_dir H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/wt [current_project]
+  set_property parent.project_path H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.xpr [current_project]
+  set_property ip_repo_paths h:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
+  set_property ip_output_repo h:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
+  add_files -quiet H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/PmodOLEDCtrl.dcp
+  read_edif H:/ECE527/ECE_527_MP/mp2/OLED_porting/ipcore_dir/charLib.ngc
   link_design -top PmodOLEDCtrl -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]

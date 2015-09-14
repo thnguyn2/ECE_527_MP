@@ -1,11 +1,11 @@
 #-----------------------------------------------------------
 # Vivado v2015.1 (64-bit)
-# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Sat Sep 12 12:55:18 2015
-# Process ID: 29831
-# Log file: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/impl_1/PmodOLEDCtrl.vdi
-# Journal file: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/impl_1/vivado.jou
+# Start of session at: Sun Sep 13 20:09:36 2015
+# Process ID: 2844
+# Log file: H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/impl_1/PmodOLEDCtrl.vdi
+# Journal file: H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source PmodOLEDCtrl.tcl -notrace
 Design is defaulting to srcset: sources_1
@@ -20,18 +20,17 @@ CRITICAL WARNING: [Project 1-558] Could not resolve non-primitive black box cell
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1188.105 ; gain = 271.234 ; free physical = 443 ; free virtual = 11263
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 485.262 ; gain = 271.176
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
 Running DRC as a precondition to command opt_design
 
 Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1202.133 ; gain = 13.922 ; free physical = 434 ; free virtual = 11252
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.261 . Memory (MB): peak = 490.063 ; gain = 0.793
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -45,21 +44,21 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 101a48379
 
-Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1689.656 ; gain = 0.000 ; free physical = 149 ; free virtual = 10824
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.166 . Memory (MB): peak = 970.633 ; gain = 0.000
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-10] Eliminated 0 cells.
 Phase 2 Constant Propagation | Checksum: 14fb77f7c
 
-Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1689.656 ; gain = 0.000 ; free physical = 148 ; free virtual = 10822
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.317 . Memory (MB): peak = 970.633 ; gain = 0.000
 
 Phase 3 Sweep
 INFO: [Opt 31-12] Eliminated 46 unconnected nets.
 INFO: [Opt 31-11] Eliminated 0 unconnected cells.
 Phase 3 Sweep | Checksum: 118f7a80d
 
-Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.28 . Memory (MB): peak = 1689.656 ; gain = 0.000 ; free physical = 149 ; free virtual = 10824
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.408 . Memory (MB): peak = 970.633 ; gain = 0.000
 
 Starting Connectivity Check Task
 ERROR: [Opt 31-30] Blackbox Example/CHAR_LIB_COMP/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (RAMB16BWER) is driving pin I0 of primitive cell Example/temp_spi_data[0]_i_1. This blackbox cannot be found in the existing library.
@@ -79,14 +78,14 @@ Resolution: Please check the input design and ensure that the specific blackbox 
 ERROR: [Opt 31-30] Blackbox Example/CHAR_LIB_COMP/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (RAMB16BWER) is driving pin D of primitive cell Example/temp_spi_data_reg[7]. This blackbox cannot be found in the existing library.
 Resolution: Please check the input design and ensure that the specific blackbox module is defined. Once the design is modified, then re-run the Vivado flow.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1689.656 ; gain = 0.000 ; free physical = 149 ; free virtual = 10824
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 970.633 ; gain = 0.000
 Implement Debug Cores | Checksum: 187d38536
 Logic Optimization | Checksum: 187d38536
 Ending Logic Optimization Task | Checksum: 118f7a80d
 
-Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.28 . Memory (MB): peak = 1689.656 ; gain = 0.000 ; free physical = 149 ; free virtual = 10824
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.454 . Memory (MB): peak = 970.633 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-19 Infos, 4 Warnings, 1 Critical Warnings and 9 Errors encountered.
+18 Infos, 4 Warnings, 1 Critical Warnings and 9 Errors encountered.
 opt_design failed
 ERROR: [Opt 31-236] Found primitives driven by Empty Hierarchy Cells/Black boxes.
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 12 12:55:48 2015...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 13 20:10:32 2015...

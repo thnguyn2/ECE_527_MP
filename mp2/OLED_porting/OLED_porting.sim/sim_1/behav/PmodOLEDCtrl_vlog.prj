@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../SpiCtrl.v"
+verilog xil_defaultlib  "../../../Delay.v"
+verilog xil_defaultlib  "../../../ipcore_dir/charLib.v"
+verilog xil_defaultlib  "../../../OledInit.v"
+sv xil_defaultlib  "../../../OledEX.sv"
+verilog xil_defaultlib  "../../../PmodOLEDCtrl.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
