@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Sep 15 00:14:24 2015'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Sep 15 07:53:19 2015'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1215546" description="" />
-  <keyValuePair key="date_generated" value="Tue Sep 15 00:14:24 2015" description="" />
+  <keyValuePair key="date_generated" value="Tue Sep 15 07:53:18 2015" description="" />
   <keyValuePair key="os_platform" value="LIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2015.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="8566aa1fd86d4cd3b824093b5facf73f" description="" />
@@ -128,7 +128,7 @@
    <keyValuePair key="movable_instances" value="1102" description="" />
    <keyValuePair key="nets" value="1131" description="" />
    <keyValuePair key="pins" value="6478" description="" />
-   <keyValuePair key="placer_runtime" value="5.060000" description="" />
+   <keyValuePair key="placer_runtime" value="4.060000" description="" />
    <keyValuePair key="placer_timing_driven" value="1" description="" />
    <keyValuePair key="pll" value="0" description="" />
    <keyValuePair key="threads" value="8" description="" />
@@ -382,7 +382,7 @@
    <keyValuePair key="nets" value="1131" description="" />
    <keyValuePair key="pins" value="6478" description="" />
    <keyValuePair key="pll" value="0" description="" />
-   <keyValuePair key="router_runtime" value="28.830000" description="" />
+   <keyValuePair key="router_runtime" value="26.020000" description="" />
    <keyValuePair key="router_timing_driven" value="1" description="" />
    <keyValuePair key="threads" value="8" description="" />
    <keyValuePair key="timing_constraints_exist" value="1" description="" />
@@ -415,10 +415,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:03:04s" description="" />
+   <keyValuePair key="elapsed" value="00:02:57s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="765.090MB" description="" />
-   <keyValuePair key="memory_peak" value="1681.961MB" description="" />
+   <keyValuePair key="memory_gain" value="768.285MB" description="" />
+   <keyValuePair key="memory_peak" value="1685.145MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="8" description="">
@@ -438,7 +438,7 @@
    <keyValuePair key="muxf7" value="77" description="" />
    <keyValuePair key="muxf8" value="8" description="" />
    <keyValuePair key="obuf" value="3" description="" />
-   <keyValuePair key="obuft" value="4" description="" />
+   <keyValuePair key="obuft" value="3" description="" />
    <keyValuePair key="ramb18e1" value="1" description="" />
    <keyValuePair key="vcc" value="8" description="" />
   </section>
@@ -458,7 +458,7 @@
    <keyValuePair key="muxf7" value="77" description="" />
    <keyValuePair key="muxf8" value="8" description="" />
    <keyValuePair key="obuf" value="3" description="" />
-   <keyValuePair key="obuft" value="4" description="" />
+   <keyValuePair key="obuft" value="3" description="" />
    <keyValuePair key="ramb18e1" value="1" description="" />
    <keyValuePair key="vcc" value="8" description="" />
   </section>

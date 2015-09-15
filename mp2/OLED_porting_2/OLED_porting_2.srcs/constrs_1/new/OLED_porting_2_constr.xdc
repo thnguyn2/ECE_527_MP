@@ -1,4 +1,3 @@
-set_property IOSTANDARD LVCMOS33 [get_ports CS]
 set_property IOSTANDARD LVCMOS33 [get_ports VBAT]
 set_property IOSTANDARD LVCMOS33 [get_ports DC]
 set_property IOSTANDARD LVCMOS33 [get_ports SCLK]

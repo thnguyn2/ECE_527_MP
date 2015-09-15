@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Tue Sep 15 00:09:06 2015
-# Process ID: 14952
+# Start of session at: Tue Sep 15 07:47:57 2015
+# Process ID: 3523
 # Log file: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/PmodOLEDCtrl.vds
 # Journal file: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
@@ -13,7 +13,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 942.867 ; gain = 134.457 ; free physical = 2141 ; free virtual = 12729
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 942.855 ; gain = 134.457 ; free physical = 3538 ; free virtual = 13439
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'PmodOLEDCtrl' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:17]
 INFO: [Synth 8-638] synthesizing module 'OledInit' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
@@ -22,24 +22,24 @@ INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (1#1) [/home/thnguyn2/sou
 INFO: [Synth 8-638] synthesizing module 'Delay' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
 INFO: [Synth 8-256] done synthesizing module 'Delay' (2#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
 INFO: [Synth 8-256] done synthesizing module 'OledInit' (3#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:67]
 INFO: [Synth 8-638] synthesizing module 'OledEX' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.sv:19]
-INFO: [Synth 8-638] synthesizing module 'charLib' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/.Xil/Vivado-14952-zombie/realtime/charLib_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'charLib' (4#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/.Xil/Vivado-14952-zombie/realtime/charLib_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'charLib' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/.Xil/Vivado-3523-zombie/realtime/charLib_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'charLib' (4#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/.Xil/Vivado-3523-zombie/realtime/charLib_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'OledEX' (5#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.sv:19]
-WARNING: [Synth 8-350] instance 'Example' of module 'OledEX' requires 8 connections, but only 5 given [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:80]
-WARNING: [Synth 8-3848] Net CS in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:34]
-WARNING: [Synth 8-3848] Net SDIN in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:35]
-WARNING: [Synth 8-3848] Net SCLK in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:36]
-WARNING: [Synth 8-3848] Net DC in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:37]
-WARNING: [Synth 8-3848] Net init_en in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:50]
-WARNING: [Synth 8-3848] Net example_en in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:57]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:78]
+WARNING: [Synth 8-350] instance 'Example' of module 'OledEX' requires 8 connections, but only 5 given [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:77]
+WARNING: [Synth 8-3848] Net SDIN in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:33]
+WARNING: [Synth 8-3848] Net SCLK in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:34]
+WARNING: [Synth 8-3848] Net DC in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:35]
+WARNING: [Synth 8-3848] Net init_en in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:48]
+WARNING: [Synth 8-3848] Net example_en in module/entity PmodOLEDCtrl does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:54]
 INFO: [Synth 8-256] done synthesizing module 'PmodOLEDCtrl' (6#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:17]
-WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port CS
 WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port SDIN
 WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port SCLK
 WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port DC
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 993.156 ; gain = 184.746 ; free physical = 2089 ; free virtual = 12678
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 993.145 ; gain = 184.746 ; free physical = 3485 ; free virtual = 13386
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -48,10 +48,10 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin Init:EN to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:66]
-WARNING: [Synth 8-3295] tying undriven pin Example:EN to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Init:EN to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:63]
+WARNING: [Synth 8-3295] tying undriven pin Example:EN to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v:77]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 993.156 ; gain = 184.746 ; free physical = 2089 ; free virtual = 12678
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 993.145 ; gain = 184.746 ; free physical = 3485 ; free virtual = 13385
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -65,22 +65,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1355.859 ; gain = 1.000 ; free physical = 1787 ; free virtual = 12376
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1355.840 ; gain = 1.000 ; free physical = 3271 ; free virtual = 13172
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1786 ; free virtual = 12375
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3270 ; free virtual = 13171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1786 ; free virtual = 12375
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3270 ; free virtual = 13171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1786 ; free virtual = 12375
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3270 ; free virtual = 13171
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
 INFO: [Synth 8-5545] ROM "SPI_FIN" won't be mapped to RAM because address size (40) is larger than maximum supported(18)
@@ -125,7 +125,7 @@ INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:00:58 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1753 ; free virtual = 12342
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:00:58 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3152 ; free virtual = 13053
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -302,7 +302,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1753 ; free virtual = 12341
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3152 ; free virtual = 13053
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -332,14 +332,13 @@ INFO: [Synth 8-5545] ROM "FIN" won't be mapped to RAM because address size (144)
 INFO: [Synth 8-5545] ROM "temp_dc" won't be mapped to RAM because address size (111) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "temp_delay_ms" won't be mapped to RAM because address size (111) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (111) is larger than maximum supported(18)
-WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port CS
 WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port SDIN
 WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port SCLK
 WARNING: [Synth 8-3331] design PmodOLEDCtrl has unconnected port DC
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:01:55 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1745 ; free virtual = 12333
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3146 ; free virtual = 13047
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:55 ; elapsed = 00:01:55 . Memory (MB): peak = 1355.859 ; gain = 547.449 ; free physical = 1745 ; free virtual = 12333
+Finished Parallel Reinference  : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 1355.840 ; gain = 547.441 ; free physical = 3146 ; free virtual = 13047
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
@@ -460,9 +459,9 @@ WARNING: [Synth 8-3332] Sequential element (\current_state_reg[71] ) is unused a
 WARNING: [Synth 8-3332] Sequential element (\current_state_reg[67] ) is unused and will be removed from module OledInit.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:20 . Memory (MB): peak = 1386.703 ; gain = 578.293 ; free physical = 1707 ; free virtual = 12296
+Finished Area Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:21 . Memory (MB): peak = 1386.684 ; gain = 578.285 ; free physical = 3108 ; free virtual = 13011
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:20 ; elapsed = 00:02:20 . Memory (MB): peak = 1386.703 ; gain = 578.293 ; free physical = 1707 ; free virtual = 12296
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:20 ; elapsed = 00:02:21 . Memory (MB): peak = 1386.684 ; gain = 578.285 ; free physical = 3108 ; free virtual = 13011
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
@@ -471,7 +470,7 @@ Report RTL Partitions:
 |1     |OledEX__GB2   |           1|     16183|
 |2     |OledInit      |           1|      4076|
 +------+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:20 ; elapsed = 00:02:20 . Memory (MB): peak = 1386.703 ; gain = 578.293 ; free physical = 1707 ; free virtual = 12296
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:20 ; elapsed = 00:02:21 . Memory (MB): peak = 1386.684 ; gain = 578.285 ; free physical = 3108 ; free virtual = 13011
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -479,10 +478,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:28 ; elapsed = 00:02:29 . Memory (MB): peak = 1389.707 ; gain = 581.297 ; free physical = 1700 ; free virtual = 12289
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:29 ; elapsed = 00:02:30 . Memory (MB): peak = 1388.688 ; gain = 580.289 ; free physical = 3095 ; free virtual = 13006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:30 ; elapsed = 00:02:30 . Memory (MB): peak = 1392.707 ; gain = 584.297 ; free physical = 1697 ; free virtual = 12286
+Finished Timing Optimization : Time (s): cpu = 00:02:30 ; elapsed = 00:02:31 . Memory (MB): peak = 1392.688 ; gain = 584.289 ; free physical = 3090 ; free virtual = 13002
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -496,7 +495,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:04 ; elapsed = 00:03:05 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1469 ; free virtual = 12058
+Finished Technology Mapping : Time (s): cpu = 00:02:57 ; elapsed = 00:02:59 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -514,7 +513,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:05 ; elapsed = 00:03:06 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1468 ; free virtual = 12057
+Finished IO Insertion : Time (s): cpu = 00:02:57 ; elapsed = 00:02:59 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -527,7 +526,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:05 ; elapsed = 00:03:06 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1468 ; free virtual = 12057
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:57 ; elapsed = 00:02:59 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -539,13 +538,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:05 ; elapsed = 00:03:07 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1469 ; free virtual = 12058
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:58 ; elapsed = 00:03:00 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:03:05 ; elapsed = 00:03:07 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1469 ; free virtual = 12058
+Start Renaming Generated Ports : Time (s): cpu = 00:02:58 ; elapsed = 00:03:00 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:05 ; elapsed = 00:03:07 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1469 ; free virtual = 12058
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:58 ; elapsed = 00:03:00 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -579,14 +578,14 @@ Report Cell Usage:
 |15    |FDSE    |    30|
 |16    |IBUF    |     2|
 |17    |OBUF    |     3|
-|18    |OBUFT   |     4|
+|18    |OBUFT   |     3|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------------+----------+------+
 |      |Instance       |Module    |Cells |
 +------+---------------+----------+------+
-|1     |top            |          |  6106|
+|1     |top            |          |  6105|
 |2     |  Example      |OledEX    |  4973|
 |3     |    DELAY_COMP |Delay_0   |   143|
 |4     |    SPI_COMP   |SpiCtrl_1 |    33|
@@ -595,11 +594,11 @@ Report Instance Areas:
 |7     |    SPI_COMP   |SpiCtrl   |    33|
 +------+---------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:06 ; elapsed = 00:03:08 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1471 ; free virtual = 12059
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:58 ; elapsed = 00:03:00 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 593 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:59 ; elapsed = 00:03:00 . Memory (MB): peak = 1681.961 ; gain = 402.266 ; free physical = 1470 ; free virtual = 12059
-Synthesis Optimization Complete : Time (s): cpu = 00:03:06 ; elapsed = 00:03:08 . Memory (MB): peak = 1681.961 ; gain = 873.551 ; free physical = 1470 ; free virtual = 12059
+Synthesis finished with 0 errors, 0 critical warnings and 592 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:51 ; elapsed = 00:02:53 . Memory (MB): peak = 1685.145 ; gain = 405.469 ; free physical = 2795 ; free virtual = 12707
+Synthesis Optimization Complete : Time (s): cpu = 00:02:59 ; elapsed = 00:03:00 . Memory (MB): peak = 1685.145 ; gain = 876.746 ; free physical = 2795 ; free virtual = 12707
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -610,8 +609,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   (MUXCY,XORCY) => CARRY4: 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-86 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+86 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:07 ; elapsed = 00:03:08 . Memory (MB): peak = 1713.977 ; gain = 797.105 ; free physical = 1465 ; free virtual = 12054
-report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1745.996 ; gain = 0.000 ; free physical = 1462 ; free virtual = 12051
-INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 00:12:21 2015...
+synth_design: Time (s): cpu = 00:02:59 ; elapsed = 00:03:00 . Memory (MB): peak = 1717.160 ; gain = 800.301 ; free physical = 2795 ; free virtual = 12707
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1749.180 ; gain = 0.000 ; free physical = 2791 ; free virtual = 12704
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 07:51:04 2015...

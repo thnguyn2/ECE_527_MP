@@ -17,7 +17,6 @@
 module PmodOLEDCtrl(
 		CLK,
 		RST,
-		CS,
 		SDIN,
 		SCLK,
 		DC,
@@ -29,12 +28,11 @@ module PmodOLEDCtrl(
 	// ===========================================================================
 	// 										Port Declarations
 	// ===========================================================================
-	input CLK;
-	input RST;
-	output CS;
-	output SDIN;
-	output SCLK;
-	output DC;
+	input CLK; //Input clock to the FPGA
+	input RST; //Reset signal to the FPGA
+	output SDIN;//Data from the FPGA
+	output SCLK;//Clock source for the SPI comuminication
+	output DC; //Data/command signal from the FPGA
 	output RES;
 	output VBAT;
 	output VDD;
@@ -42,14 +40,13 @@ module PmodOLEDCtrl(
 	// ===========================================================================
 	// 							  Parameters, Regsiters, and Wires
 	// ===========================================================================
-	wire CS, SDIN, SCLK, DC;
+	wire SDIN, SCLK, DC;
 	wire VDD, VBAT, RES;
 
 	reg [110:0] current_state = "Idle";
 
 	wire init_en;
 	wire init_done;
-	wire init_cs;
 	wire init_sdo;
 	wire init_sclk;
 	wire init_dc;
@@ -67,7 +64,7 @@ module PmodOLEDCtrl(
 			.CLK(CLK),
 			.RST(RST),
 			.EN(init_en),
-			.CS(init_cs),
+			.CS(1'b0),
 			.SDO(init_sdo),
 			.SCLK(init_sclk),
 			.DC(init_dc),
@@ -78,10 +75,10 @@ module PmodOLEDCtrl(
 	);
 	
 	OledEX Example(
+	        .CS(1'b0),
 			.CLK(CLK),
 			.RST(RST),
-			.EN(example_en),
-			.CS(example_cs),
+			.EN(example_en),			
 			.SDO(example_sdo)
     );
 
