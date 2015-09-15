@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442192242">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442207331">
+  <File Type="VDS-TIMING-PB" Name="PmodOLEDCtrl_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="PmodOLEDCtrl_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="PmodOLEDCtrl.dcp"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="PmodOLEDCtrl_utilization_synth.pb"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+  <File Type="RDS-UTIL" Name="PmodOLEDCtrl_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="PmodOLEDCtrl_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="PmodOLEDCtrl.vds"/>
   <File Type="PA-TCL" Name="PmodOLEDCtrl.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="PmodOLEDCtrl.vds"/>
-  <File Type="RDS-UTIL" Name="PmodOLEDCtrl_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="PmodOLEDCtrl_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="PmodOLEDCtrl_timing_summary_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/SpiCtrl.v">
@@ -96,7 +96,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/OLED_pinassign.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/OLED_pinassign.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

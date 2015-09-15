@@ -1,10 +1,10 @@
 #-----------------------------------------------------------
 # Vivado v2015.1 (64-bit)
-# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Sun Sep 13 19:57:30 2015
-# Process ID: 2776
-# Log file: H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/PmodOLEDCtrl.vds
-# Journal file: H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1\vivado.jou
+# Start of session at: Mon Sep 14 00:08:51 2015
+# Process ID: 6455
+# Log file: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/PmodOLEDCtrl.vds
+# Journal file: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source PmodOLEDCtrl.tcl -notrace

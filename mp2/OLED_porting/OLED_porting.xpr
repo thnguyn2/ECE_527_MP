@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.xpr">
+<Project Version="7" Minor="5" Path="/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e2049235179c45d19f6820d0c891d216"/>
@@ -143,9 +143,6 @@
     </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">

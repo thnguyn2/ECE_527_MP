@@ -1,0 +1,62 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Tue Sep 15 00:13:05 2015
+| Host         : zombie running 64-bit Ubuntu 14.04.3 LTS
+| Command      : report_control_sets -verbose -file PmodOLEDCtrl_control_sets_placed.rpt
+| Design       : PmodOLEDCtrl
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     9 |
+| Minimum Number of register sites lost to control set restrictions |    29 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               7 |            7 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              25 |            6 |
+| Yes          | No                    | No                     |              54 |           30 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              85 |           36 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------+----------------------------------------+------------------+----------------+
+|  Clock Signal  |                 Enable Signal                 |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------------+----------------------------------------+------------------+----------------+
+|  CLK_IBUF_BUFG |                                               | RST_IBUF                               |                1 |              3 |
+|  CLK_IBUF_BUFG | Init/SPI_COMP/shift_counter[3]_i_2__0_n_0     | Init/SPI_COMP/shift_counter[3]_i_1_n_0 |                1 |              4 |
+|  CLK_IBUF_BUFG |                                               | Init/SPI_COMP/counter[4]_i_1_n_0       |                1 |              5 |
+|  CLK_IBUF_BUFG | Init/DELAY_COMP/current_state_reg[27]_i_1_n_0 | RST_IBUF                               |                2 |              5 |
+|  CLK_IBUF_BUFG |                                               |                                        |                7 |              7 |
+|  CLK_IBUF_BUFG | Init/DELAY_COMP/ms_counter[0]_i_1__0_n_0      | Init/DELAY_COMP/p_1_in[27]             |                3 |             12 |
+|  CLK_IBUF_BUFG |                                               | Init/DELAY_COMP/p_1_in[27]             |                4 |             17 |
+|  CLK_IBUF_BUFG | Init/after_state[94]_i_1_n_0                  |                                        |               30 |             54 |
+|  CLK_IBUF_BUFG | Init/SPI_COMP/E[0]                            | RST_IBUF                               |               30 |             64 |
++----------------+-----------------------------------------------+----------------------------------------+------------------+----------------+
+
+

@@ -44,8 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set rc [catch {
@@ -54,12 +52,13 @@ set rc [catch {
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/wt [current_project]
-  set_property parent.project_path H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.xpr [current_project]
-  set_property ip_repo_paths h:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
-  set_property ip_output_repo h:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
-  add_files -quiet H:/ECE527/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/PmodOLEDCtrl.dcp
-  read_edif H:/ECE527/ECE_527_MP/mp2/OLED_porting/ipcore_dir/charLib.ngc
+  set_property webtalk.parent_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/wt [current_project]
+  set_property parent.project_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.xpr [current_project]
+  set_property ip_repo_paths /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
+  set_property ip_output_repo /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.cache/ip [current_project]
+  add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.runs/synth_1/PmodOLEDCtrl.dcp
+  read_edif /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/ipcore_dir/charLib.ngc
+  read_xdc /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting/OLED_porting.srcs/constrs_1/new/OLED_pinassign.xdc
   link_design -top PmodOLEDCtrl -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -121,5 +120,19 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+}
+
+start_step write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  write_bitstream -force PmodOLEDCtrl.bit 
+  catch { write_sysdef -hwdef PmodOLEDCtrl.hwdef -bitfile PmodOLEDCtrl.bit -meminfo PmodOLEDCtrl.mmi -ltxfile debug_nets.ltx -file PmodOLEDCtrl.sysdef }
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
 }
 
