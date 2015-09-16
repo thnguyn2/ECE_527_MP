@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Sep 15 08:29:39 2015" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Sep 16 16:47:44 2015" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "Vivado v2015.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1215546" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "c293afa6-1e1a-4452-b749-b6a9751a48a0" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "ec1a62ca-c668-44a0-b400-5cfc047f3c61" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "2" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Ubuntu" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Ubuntu 14.04.3 LTS" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz" -context "user_environment"
@@ -22,8 +22,7 @@ webtalk_add_data -client project -key cpu_speed -value "1200.000 MHz" -context "
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "user_environment"
 webtalk_register_client -client labtool
-webtalk_add_data -client labtool -key cable -value "Digilent/Zed/15000000" -context "labtool\\usage"
-webtalk_add_data -client labtool -key chain -value "0000400023727093" -context "labtool\\usage"
-webtalk_add_data -client labtool -key pgmcnt -value "02:00:00" -context "labtool\\usage"
-webtalk_transmit -clientid 1759253771 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/usage_statistics_ext_labtool.xml -html /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/usage_statistics_ext_labtool.html -wdm /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
+webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
+webtalk_transmit -clientid 66859210 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/usage_statistics_ext_labtool.xml -html /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/usage_statistics_ext_labtool.html -wdm /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate

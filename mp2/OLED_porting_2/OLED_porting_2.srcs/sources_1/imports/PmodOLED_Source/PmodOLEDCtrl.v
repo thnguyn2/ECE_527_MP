@@ -17,6 +17,7 @@
 module PmodOLEDCtrl(
 		CLK,
 		RST,
+		//CS,
 		SDIN,
 		SCLK,
 		DC,
@@ -28,11 +29,12 @@ module PmodOLEDCtrl(
 	// ===========================================================================
 	// 										Port Declarations
 	// ===========================================================================
-	input CLK; //Input clock to the FPGA
-	input RST; //Reset signal to the FPGA
-	output SDIN;//Data from the FPGA
-	output SCLK;//Clock source for the SPI comuminication
-	output DC; //Data/command signal from the FPGA
+	input CLK;
+	input RST;
+	//output CS;
+	output SDIN;
+	output SCLK;
+	output DC;
 	output RES;
 	output VBAT;
 	output VDD;
@@ -40,13 +42,14 @@ module PmodOLEDCtrl(
 	// ===========================================================================
 	// 							  Parameters, Regsiters, and Wires
 	// ===========================================================================
-	wire SDIN, SCLK, DC;
+	wire CS, SDIN, SCLK, DC;
 	wire VDD, VBAT, RES;
 
 	reg [110:0] current_state = "Idle";
 
 	wire init_en;
 	wire init_done;
+	wire init_cs;
 	wire init_sdo;
 	wire init_sclk;
 	wire init_dc;
@@ -64,7 +67,7 @@ module PmodOLEDCtrl(
 			.CLK(CLK),
 			.RST(RST),
 			.EN(init_en),
-			.CS(1'b0),
+			.CS(init_cs),
 			.SDO(init_sdo),
 			.SCLK(init_sclk),
 			.DC(init_dc),
@@ -75,13 +78,31 @@ module PmodOLEDCtrl(
 	);
 	
 	OledEX Example(
-	        .CS(1'b0),
 			.CLK(CLK),
 			.RST(RST),
-			.EN(example_en),			
-			.SDO(example_sdo)
-    );
+			.EN(example_en),
+			.CS(example_cs),
+			.SDO(example_sdo),
+			.SCLK(example_sclk),
+			.DC(example_dc),
+			.FIN(example_done)
+	);
 
+
+	//MUXes to indicate which outputs are routed out depending on which block is enabled
+	assign CS = (current_state == "OledInitialize") ? init_cs : example_cs;
+	assign SDIN = (current_state == "OledInitialize") ? init_sdo : example_sdo;
+	assign SCLK = (current_state == "OledInitialize") ? init_sclk : example_sclk;
+	assign DC = (current_state == "OledInitialize") ? init_dc : example_dc;
+	//END output MUXes
+
+	
+	//MUXes that enable blocks when in the proper states
+	assign init_en = (current_state == "OledInitialize") ? 1'b1 : 1'b0;
+	assign example_en = (current_state == "OledExample") ? 1'b1 : 1'b0;
+	//END enable MUXes
+
+	
 	//  State Machine
 	always @(posedge CLK) begin
 			if(RST == 1'b1) begin

@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-// Date        : Mon Sep 14 22:59:05 2015
+// Date        : Wed Sep 16 16:46:14 2015
 // Host        : zombie running 64-bit Ubuntu 14.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_funcsim.v

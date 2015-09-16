@@ -16,3 +16,4 @@ set_property PACKAGE_PIN P16 [get_ports RST]
 set_property PACKAGE_PIN Y9 [get_ports CLK]
 
 create_clock -period 10.000 -name sys_clk -waveform {0.000 5.000} [get_ports CLK -filter direction==in]
+
