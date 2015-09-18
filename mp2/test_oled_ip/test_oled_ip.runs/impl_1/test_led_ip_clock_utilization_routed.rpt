@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date              : Thu Sep 17 23:27:01 2015
+| Date              : Thu Sep 17 23:58:35 2015
 | Host              : zombie running 64-bit Ubuntu 14.04.3 LTS
 | Command           : report_clock_utilization -file test_led_ip_clock_utilization_routed.rpt
 | Design            : test_led_ip

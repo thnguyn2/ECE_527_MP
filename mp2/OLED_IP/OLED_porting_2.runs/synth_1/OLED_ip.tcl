@@ -26,9 +26,6 @@ read_verilog -library xil_defaultlib {
   /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v
   /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v
 }
-read_xdc /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc
-set_property used_in_implementation false [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc]
-
 synth_design -top OLED_ip -part xc7z020clg484-1
 write_checkpoint -noxdef OLED_ip.dcp
 catch { report_utilization -file OLED_ip_utilization_synth.rpt -pb OLED_ip_utilization_synth.pb }

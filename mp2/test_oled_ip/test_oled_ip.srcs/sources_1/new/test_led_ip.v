@@ -42,7 +42,7 @@ module test_led_ip(
     output VDD;
     input [7:0] input_sw;
    
-    OLED_ip_0 OLED_ip_inst(.CLK(CLK),
+   OLED_ip_0 OLED_ip_inst(.CLK(CLK),
         .RST(RST),
         .SDIN(SDIN),
         .SCLK(SCLK),

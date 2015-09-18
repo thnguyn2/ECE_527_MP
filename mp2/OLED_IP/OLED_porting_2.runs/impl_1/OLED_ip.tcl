@@ -65,7 +65,6 @@ set rc [catch {
   set_property netlist_only true [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/charLib_synth_1/charLib.dcp]
   read_xdc -mode out_of_context -ref charLib /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc
   set_property processing_order EARLY [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc]
-  read_xdc /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc
   link_design -top OLED_ip -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]

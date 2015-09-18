@@ -6,8 +6,6 @@ debug::add_scope template.lib 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -18,8 +16,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs [current_project]
-add_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_1/OLED_porting_2.srcs/sources_1/ip/charLib.coe
-add_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib.coe
+add_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib.coe
 add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp
 set_property used_in_implementation false [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp]
 read_verilog -library xil_defaultlib /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v

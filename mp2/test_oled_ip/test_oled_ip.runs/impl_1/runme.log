@@ -3,10 +3,6 @@
     with args -log test_led_ip.vdi -applog -m64 -messageDb vivado.pb -mode batch -source test_led_ip.tcl -notrace
 
 
-*** Running vivado
-    with args -log test_led_ip.vdi -applog -m64 -messageDb vivado.pb -mode batch -source test_led_ip.tcl -notrace
-
-
 ****** Vivado v2015.1 (64-bit)
   **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
   **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
@@ -21,49 +17,40 @@ INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2015.1
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-
-****** Vivado v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source test_led_ip.tcl -notrace
-Design is defaulting to srcset: sources_1
-Design is defaulting to constrset: constrs_1
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:1]
+Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:1]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:2]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:2]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:3]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:3]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:4]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:4]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:5]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:5]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:6]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:6]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:7]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:7]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:8]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:8]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:9]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:9]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:10]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:10]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:11]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:11]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:12]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:12]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:13]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:13]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:14]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:14]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:15]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:15]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:16]
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:16]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
+Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
 Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
 WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc:36]
 Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
@@ -72,67 +59,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1203.098 ; gain = 286.234 ; free physical = 2231 ; free virtual = 10965
-Command: opt_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command opt_design
-
-Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Project 1-454] Reading design checkpoint '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp' for cell 'OLED_ip_inst'
-INFO: [Project 1-461] DRC finished with 0 Errors
-INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
-
-Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1215.125 ; gain = 10.895 ; free physical = 2220 ; free virtual = 10956
-INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2015.1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:1]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:2]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:3]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:4]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:5]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:6]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:7]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:8]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:9]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:10]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:11]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:12]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:13]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:14]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:15]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:16]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
-WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc:36]
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp'
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1203.105 ; gain = 286.234 ; free physical = 1977 ; free virtual = 10710
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1203.105 ; gain = 286.234 ; free physical = 2800 ; free virtual = 11588
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -143,7 +70,7 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1215.133 ; gain = 10.895 ; free physical = 1970 ; free virtual = 10703
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1215.133 ; gain = 10.895 ; free physical = 2797 ; free virtual = 11585
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -156,28 +83,28 @@ INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 123640118
 
-Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1702.648 ; gain = 0.000 ; free physical = 1610 ; free virtual = 10343
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1702.656 ; gain = 0.000 ; free physical = 2450 ; free virtual = 11238
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-10] Eliminated 705 cells.
 Phase 2 Constant Propagation | Checksum: 2288d947d
 
-Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.52 . Memory (MB): peak = 1702.648 ; gain = 0.000 ; free physical = 1608 ; free virtual = 10341
+Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.46 . Memory (MB): peak = 1702.656 ; gain = 0.000 ; free physical = 2450 ; free virtual = 11238
 
 Phase 3 Sweep
 INFO: [Opt 31-12] Eliminated 933 unconnected nets.
 INFO: [Opt 31-11] Eliminated 699 unconnected cells.
 Phase 3 Sweep | Checksum: 20b0fa056
 
-Time (s): cpu = 00:00:00.97 ; elapsed = 00:00:00.82 . Memory (MB): peak = 1702.648 ; gain = 0.000 ; free physical = 1604 ; free virtual = 10337
+Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.74 . Memory (MB): peak = 1702.656 ; gain = 0.000 ; free physical = 2450 ; free virtual = 11238
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1702.648 ; gain = 0.000 ; free physical = 1604 ; free virtual = 10337
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1702.656 ; gain = 0.000 ; free physical = 2450 ; free virtual = 11238
 Ending Logic Optimization Task | Checksum: 20b0fa056
 
-Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.83 . Memory (MB): peak = 1702.648 ; gain = 0.000 ; free physical = 1604 ; free virtual = 10337
+Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:00.75 . Memory (MB): peak = 1702.656 ; gain = 0.000 ; free physical = 2450 ; free virtual = 11238
 Implement Debug Cores | Checksum: 16929f1cc
 Logic Optimization | Checksum: 16929f1cc
 
@@ -193,19 +120,19 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
 Ending PowerOpt Patch Enables Task | Checksum: 20b0fa056
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1702.656 ; gain = 0.000 ; free physical = 1590 ; free virtual = 10323
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1702.664 ; gain = 0.000 ; free physical = 2434 ; free virtual = 11223
 Ending Power Optimization Task | Checksum: 20b0fa056
 
-Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 1702.656 ; gain = 0.008 ; free physical = 1589 ; free virtual = 10323
+Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.24 . Memory (MB): peak = 1702.664 ; gain = 0.008 ; free physical = 2434 ; free virtual = 11223
 INFO: [Common 17-83] Releasing license: Implementation
 28 Infos, 1 Warnings, 16 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1702.656 ; gain = 499.559 ; free physical = 1589 ; free virtual = 10323
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1702.664 ; gain = 499.559 ; free physical = 2434 ; free virtual = 11223
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1734.664 ; gain = 0.000 ; free physical = 1584 ; free virtual = 10318
+Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1734.672 ; gain = 0.000 ; free physical = 2433 ; free virtual = 11222
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/test_led_ip_drc_opted.rpt.
 Command: place_design
@@ -225,37 +152,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Runtime Estimator
 Phase 1 Placer Runtime Estimator | Checksum: 153e6fa5f
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1734.676 ; gain = 0.000 ; free physical = 1540 ; free virtual = 10274
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1734.684 ; gain = 0.000 ; free physical = 2424 ; free virtual = 11212
 
 Phase 2 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1734.676 ; gain = 0.000 ; free physical = 1540 ; free virtual = 10274
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1734.676 ; gain = 0.000 ; free physical = 1538 ; free virtual = 10272
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1734.684 ; gain = 0.000 ; free physical = 2424 ; free virtual = 11212
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1734.684 ; gain = 0.000 ; free physical = 2424 ; free virtual = 11212
 
 Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 2.1.1 Pre-Place Cells
 Phase 2.1.1 Pre-Place Cells | Checksum: caf7f840
 
-Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1734.676 ; gain = 0.000 ; free physical = 1538 ; free virtual = 10272
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1734.684 ; gain = 0.000 ; free physical = 2424 ; free virtual = 11212
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 2.1.2 IO & Clk Clean Up
 Phase 2.1.2 IO & Clk Clean Up | Checksum: caf7f840
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.66 . Memory (MB): peak = 1782.688 ; gain = 48.012 ; free physical = 1467 ; free virtual = 10201
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.62 . Memory (MB): peak = 1782.695 ; gain = 48.012 ; free physical = 2420 ; free virtual = 11209
 
 Phase 2.1.3 Implementation Feasibility check On IDelay
 Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: caf7f840
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1782.688 ; gain = 48.012 ; free physical = 1467 ; free virtual = 10201
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.63 . Memory (MB): peak = 1782.695 ; gain = 48.012 ; free physical = 2420 ; free virtual = 11209
 
 Phase 2.1.4 Commit IO Placement
 Phase 2.1.4 Commit IO Placement | Checksum: 16e642de
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1782.688 ; gain = 48.012 ; free physical = 1467 ; free virtual = 10201
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.63 . Memory (MB): peak = 1782.695 ; gain = 48.012 ; free physical = 2420 ; free virtual = 11209
 Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 7501cc94
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1782.688 ; gain = 48.012 ; free physical = 1467 ; free virtual = 10201
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.63 . Memory (MB): peak = 1782.695 ; gain = 48.012 ; free physical = 2420 ; free virtual = 11209
 
 Phase 2.2 Build Placer Netlist Model
 
@@ -264,121 +191,58 @@ Phase 2.2.1 Place Init Design
 Phase 2.2.1.1 Init Lut Pin Assignment
 Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: 1333131bc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.79 . Memory (MB): peak = 1782.688 ; gain = 48.012 ; free physical = 1362 ; free virtual = 10095
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-
-Starting Logic Optimization Task
-
-Phase 1 Retarget
-
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.72 . Memory (MB): peak = 1782.695 ; gain = 48.012 ; free physical = 2419 ; free virtual = 11208
 Phase 2.2.1 Place Init Design | Checksum: a484d9f0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1801.680 ; gain = 67.004 ; free physical = 1281 ; free virtual = 10014
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1800.688 ; gain = 66.004 ; free physical = 2419 ; free virtual = 11207
 Phase 2.2 Build Placer Netlist Model | Checksum: a484d9f0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1801.680 ; gain = 67.004 ; free physical = 1281 ; free virtual = 10014
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1800.688 ; gain = 66.004 ; free physical = 2419 ; free virtual = 11207
 
 Phase 2.3 Constrain Clocks/Macros
 
 Phase 2.3.1 Constrain Global/Regional Clocks
 Phase 2.3.1 Constrain Global/Regional Clocks | Checksum: a484d9f0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1801.680 ; gain = 67.004 ; free physical = 1281 ; free virtual = 10014
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1800.688 ; gain = 66.004 ; free physical = 2419 ; free virtual = 11207
 Phase 2.3 Constrain Clocks/Macros | Checksum: a484d9f0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1801.680 ; gain = 67.004 ; free physical = 1281 ; free virtual = 10014
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1800.688 ; gain = 66.004 ; free physical = 2419 ; free virtual = 11207
 Phase 2 Placer Initialization | Checksum: a484d9f0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1801.680 ; gain = 67.004 ; free physical = 1281 ; free virtual = 10014
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1800.688 ; gain = 66.004 ; free physical = 2419 ; free virtual = 11207
 
 Phase 3 Global Placement
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-194] Inserted BUFG CLK_IBUF_BUFG_inst to drive 907 load(s) on clock net CLK_IBUF
-INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
-INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 123640118
-
-Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1703.656 ; gain = 0.000 ; free physical = 1275 ; free virtual = 10008
-
-Phase 2 Constant Propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 705 cells.
-Phase 2 Constant Propagation | Checksum: 2288d947d
-
-Time (s): cpu = 00:00:00.65 ; elapsed = 00:00:00.56 . Memory (MB): peak = 1703.656 ; gain = 0.000 ; free physical = 1268 ; free virtual = 10001
-
-Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 933 unconnected nets.
-INFO: [Opt 31-11] Eliminated 699 unconnected cells.
-Phase 3 Sweep | Checksum: 20b0fa056
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.93 . Memory (MB): peak = 1703.656 ; gain = 0.000 ; free physical = 1263 ; free virtual = 9997
-
-Starting Connectivity Check Task
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1703.656 ; gain = 0.000 ; free physical = 1263 ; free virtual = 9997
-Ending Logic Optimization Task | Checksum: 20b0fa056
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.94 . Memory (MB): peak = 1703.656 ; gain = 0.000 ; free physical = 1263 ; free virtual = 9997
-Implement Debug Cores | Checksum: 16929f1cc
-Logic Optimization | Checksum: 16929f1cc
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.12 ns.
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 20b0fa056
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1703.664 ; gain = 0.000 ; free physical = 1256 ; free virtual = 9989
-Ending Power Optimization Task | Checksum: 20b0fa056
-
-Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.30 . Memory (MB): peak = 1703.664 ; gain = 0.008 ; free physical = 1256 ; free virtual = 9989
-INFO: [Common 17-83] Releasing license: Implementation
-28 Infos, 1 Warnings, 16 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1703.664 ; gain = 500.559 ; free physical = 1256 ; free virtual = 9989
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1735.672 ; gain = 0.000 ; free physical = 1254 ; free virtual = 9989
-INFO: [DRC 23-27] Running DRC with 8 threads
 Phase 3 Global Placement | Checksum: 1749292ee
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1252 ; free virtual = 9985
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4 Detail Placement
 
 Phase 4.1 Commit Multi Column Macros
 Phase 4.1 Commit Multi Column Macros | Checksum: 1749292ee
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1252 ; free virtual = 9985
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4.2 Commit Most Macros & LUTRAMs
 Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 1841812a6
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1253 ; free virtual = 9986
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4.3 Area Swap Optimization
 Phase 4.3 Area Swap Optimization | Checksum: 1952bdb26
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1253 ; free virtual = 9986
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4.4 updateClock Trees: DP
 Phase 4.4 updateClock Trees: DP | Checksum: 1952bdb26
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1253 ; free virtual = 9986
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4.5 Timing Path Optimizer
 Phase 4.5 Timing Path Optimizer | Checksum: ec8701f8
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1253 ; free virtual = 9986
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4.6 Small Shape Detail Placement
 
@@ -387,338 +251,107 @@ Phase 4.6.1 Commit Small Macros & Core Logic
 Phase 4.6.1.1 setBudgets
 Phase 4.6.1.1 setBudgets | Checksum: b871dfa1
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1253 ; free virtual = 9986
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11195
 
 Phase 4.6.1.2 Commit Slice Clusters
-INFO: [Coretcl 2-168] The results of DRC are in file /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/test_led_ip_drc_opted.rpt.
-Command: place_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-Running DRC as a precondition to command place_design
-INFO: [DRC 23-27] Running DRC with 8 threads
 Phase 4.6.1.2 Commit Slice Clusters | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
 Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
 Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 4.6 Small Shape Detail Placement | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 4.7 Re-assign LUT pins
 Phase 4.7 Re-assign LUT pins | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 4 Detail Placement | Checksum: 16ad83fea
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 5 Post Placement Optimization and Clean-Up
 
 Phase 5.1 PCOPT Shape updates
 Phase 5.1 PCOPT Shape updates | Checksum: 17a90e8f4
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 6 Post Commit Optimization
 
 Phase 6.1 updateClock Trees: PCOPT
 Phase 6.1 updateClock Trees: PCOPT | Checksum: 17a90e8f4
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1244 ; free virtual = 9978
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 6.2 Post Placement Optimization
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-
-Starting Placer Task
-INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
-
-Phase 1 Placer Runtime Estimator
 
 Phase 6.2.1 Post Placement Timing Optimization
 INFO: [Place 30-746] Post Placement Timing Summary WNS=1.438. For the most accurate timing information please run report_timing.
 Phase 6.2.1 Post Placement Timing Optimization | Checksum: 1241bf9ba
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 6.2 Post Placement Optimization | Checksum: 1241bf9ba
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 6 Post Commit Optimization | Checksum: 1241bf9ba
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 5.2 Sweep Clock Roots: Post-Placement
-Phase 1 Placer Runtime Estimator | Checksum: 153e6fa5f
-
-Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1735.684 ; gain = 0.000 ; free physical = 1241 ; free virtual = 9975
-
-Phase 2 Placer Initialization
 Phase 5.2 Sweep Clock Roots: Post-Placement | Checksum: 1241bf9ba
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.684 ; gain = 0.000 ; free physical = 1241 ; free virtual = 9975
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 5.3 Post Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1735.684 ; gain = 0.000 ; free physical = 1241 ; free virtual = 9975
 Phase 5.3 Post Placement Cleanup | Checksum: 1241bf9ba
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 5.4 Placer Reporting
 
 Phase 5.4.1 Restore STA
 Phase 5.4.1 Restore STA | Checksum: 1241bf9ba
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 5.4 Placer Reporting | Checksum: 1241bf9ba
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 
 Phase 5.5 Final Placement Cleanup
 Phase 5.5 Final Placement Cleanup | Checksum: 11ed17b0f
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
-
-Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
-
-Phase 2.1.1 Pre-Place Cells
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Phase 5 Post Placement Optimization and Clean-Up | Checksum: 11ed17b0f
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 Ending Placer Task | Checksum: cfae7238
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.703 ; gain = 115.027 ; free physical = 1241 ; free virtual = 9975
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.027 ; free physical = 2406 ; free virtual = 11194
 INFO: [Common 17-83] Releasing license: Implementation
 41 Infos, 1 Warnings, 16 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 1849.703 ; gain = 115.035 ; free physical = 1241 ; free virtual = 9975
-Writing placer database...
-Phase 2.1.1 Pre-Place Cells | Checksum: caf7f840
-
-Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1735.684 ; gain = 0.000 ; free physical = 1237 ; free virtual = 9971
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.36 . Memory (MB): peak = 1849.703 ; gain = 0.000 ; free physical = 1239 ; free virtual = 9976
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-
-Phase 2.1.2 IO & Clk Clean Up
-report_io: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.25 . Memory (MB): peak = 1849.703 ; gain = 0.000 ; free physical = 1238 ; free virtual = 9973
-Phase 2.1.2 IO & Clk Clean Up | Checksum: caf7f840
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.81 . Memory (MB): peak = 1783.695 ; gain = 48.012 ; free physical = 1238 ; free virtual = 9973
-
-Phase 2.1.3 Implementation Feasibility check On IDelay
-Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: caf7f840
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.82 . Memory (MB): peak = 1783.695 ; gain = 48.012 ; free physical = 1236 ; free virtual = 9971
-
-Phase 2.1.4 Commit IO Placement
-Phase 2.1.4 Commit IO Placement | Checksum: 16e642de
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.82 . Memory (MB): peak = 1783.695 ; gain = 48.012 ; free physical = 1232 ; free virtual = 9966
-Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 7501cc94
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.82 . Memory (MB): peak = 1783.695 ; gain = 48.012 ; free physical = 1234 ; free virtual = 9969
-
-Phase 2.2 Build Placer Netlist Model
-
-Phase 2.2.1 Place Init Design
-
-Phase 2.2.1.1 Init Lut Pin Assignment
-Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: 1333131bc
-
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.94 . Memory (MB): peak = 1783.695 ; gain = 48.012 ; free physical = 1237 ; free virtual = 9972
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1849.703 ; gain = 0.000 ; free physical = 1237 ; free virtual = 9972
-report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1849.703 ; gain = 0.000 ; free physical = 1237 ; free virtual = 9971
-Command: route_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command route_design
-INFO: [DRC 23-27] Running DRC with 8 threads
-Phase 2.2.1 Place Init Design | Checksum: a484d9f0
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1802.688 ; gain = 67.004 ; free physical = 1234 ; free virtual = 9969
-Phase 2.2 Build Placer Netlist Model | Checksum: a484d9f0
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1802.688 ; gain = 67.004 ; free physical = 1234 ; free virtual = 9969
-
-Phase 2.3 Constrain Clocks/Macros
-
-Phase 2.3.1 Constrain Global/Regional Clocks
-Phase 2.3.1 Constrain Global/Regional Clocks | Checksum: a484d9f0
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1802.688 ; gain = 67.004 ; free physical = 1234 ; free virtual = 9969
-Phase 2.3 Constrain Clocks/Macros | Checksum: a484d9f0
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1802.688 ; gain = 67.004 ; free physical = 1234 ; free virtual = 9969
-Phase 2 Placer Initialization | Checksum: a484d9f0
-
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1802.688 ; gain = 67.004 ; free physical = 1234 ; free virtual = 9969
-
-Phase 3 Global Placement
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-
-
-Starting Routing Task
-INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-
-Phase 1 Build RT Design
-Phase 3 Global Placement | Checksum: 1749292ee
-
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1221 ; free virtual = 9956
-
-Phase 4 Detail Placement
-
-Phase 4.1 Commit Multi Column Macros
-Phase 4.1 Commit Multi Column Macros | Checksum: 1749292ee
-
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1221 ; free virtual = 9956
-
-Phase 4.2 Commit Most Macros & LUTRAMs
-Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 1841812a6
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1220 ; free virtual = 9955
-
-Phase 4.3 Area Swap Optimization
-Phase 4.3 Area Swap Optimization | Checksum: 1952bdb26
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1220 ; free virtual = 9955
-
-Phase 4.4 updateClock Trees: DP
-Phase 4.4 updateClock Trees: DP | Checksum: 1952bdb26
-
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1220 ; free virtual = 9955
-
-Phase 4.5 Timing Path Optimizer
-Phase 4.5 Timing Path Optimizer | Checksum: ec8701f8
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:05 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1220 ; free virtual = 9954
-
-Phase 4.6 Small Shape Detail Placement
-
-Phase 4.6.1 Commit Small Macros & Core Logic
-
-Phase 4.6.1.1 setBudgets
-Phase 4.6.1.1 setBudgets | Checksum: b871dfa1
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:05 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1220 ; free virtual = 9954
-
-Phase 4.6.1.2 Commit Slice Clusters
-Phase 4.6.1.2 Commit Slice Clusters | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1214 ; free virtual = 9949
-Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1214 ; free virtual = 9949
-
-Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
-Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1214 ; free virtual = 9949
-
-Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
-Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1214 ; free virtual = 9949
-Phase 4.6 Small Shape Detail Placement | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1214 ; free virtual = 9949
-
-Phase 4.7 Re-assign LUT pins
-Phase 4.7 Re-assign LUT pins | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1213 ; free virtual = 9948
-Phase 4 Detail Placement | Checksum: 16ad83fea
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1213 ; free virtual = 9948
-
-Phase 5 Post Placement Optimization and Clean-Up
-
-Phase 5.1 PCOPT Shape updates
-Phase 5.1 PCOPT Shape updates | Checksum: 17a90e8f4
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9947
-
-Phase 5.2 Post Commit Optimization
-
-Phase 5.2.1 updateClock Trees: PCOPT
-Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 17a90e8f4
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9947
-
-Phase 5.2.2 Post Placement Optimization
-
-Phase 5.2.2.1 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.438. For the most accurate timing information please run report_timing.
-Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-Phase 5.2.2 Post Placement Optimization | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-Phase 5.2 Post Commit Optimization | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-
-Phase 5.3 Sweep Clock Roots: Post-Placement
-Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-
-Phase 5.4 Post Placement Cleanup
-Phase 5.4 Post Placement Cleanup | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-
-Phase 5.5 Placer Reporting
-
-Phase 5.5.1 Restore STA
-Phase 5.5.1 Restore STA | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-Phase 5.5 Placer Reporting | Checksum: 1241bf9ba
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-
-Phase 5.6 Final Placement Cleanup
-Phase 5.6 Final Placement Cleanup | Checksum: 11ed17b0f
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-Phase 5 Post Placement Optimization and Clean-Up | Checksum: 11ed17b0f
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-Ending Placer Task | Checksum: cfae7238
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 1850.711 ; gain = 115.027 ; free physical = 1212 ; free virtual = 9946
-INFO: [Common 17-83] Releasing license: Implementation
-41 Infos, 1 Warnings, 16 Critical Warnings and 0 Errors encountered.
-place_design completed successfully
-place_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 1850.711 ; gain = 115.035 ; free physical = 1212 ; free virtual = 9946
+place_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 1848.711 ; gain = 114.035 ; free physical = 2406 ; free virtual = 11194
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.35 . Memory (MB): peak = 1850.711 ; gain = 0.000 ; free physical = 1206 ; free virtual = 9944
-report_io: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1850.711 ; gain = 0.000 ; free physical = 1208 ; free virtual = 9943
-report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1850.711 ; gain = 0.000 ; free physical = 1208 ; free virtual = 9942
-report_control_sets: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1850.711 ; gain = 0.000 ; free physical = 1208 ; free virtual = 9943
+Write XDEF Complete: Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.26 . Memory (MB): peak = 1848.711 ; gain = 0.000 ; free physical = 2402 ; free virtual = 11194
+report_io: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1848.711 ; gain = 0.000 ; free physical = 2403 ; free virtual = 11192
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1848.711 ; gain = 0.000 ; free physical = 2401 ; free virtual = 11190
+report_control_sets: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1848.711 ; gain = 0.000 ; free physical = 2401 ; free virtual = 11190
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -734,78 +367,43 @@ INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 
 Phase 1 Build RT Design
 Phase 1 Build RT Design | Checksum: 21ac1dc2
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1872.348 ; gain = 22.645 ; free physical = 991 ; free virtual = 9726
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1871.355 ; gain = 22.645 ; free physical = 2286 ; free virtual = 11075
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
 Phase 2.1 Create Timer | Checksum: 21ac1dc2
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1872.348 ; gain = 22.645 ; free physical = 991 ; free virtual = 9726
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1871.355 ; gain = 22.645 ; free physical = 2284 ; free virtual = 11073
 
 Phase 2.2 Pre Route Cleanup
 Phase 2.2 Pre Route Cleanup | Checksum: 21ac1dc2
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1882.336 ; gain = 32.633 ; free physical = 961 ; free virtual = 9696
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1882.344 ; gain = 33.633 ; free physical = 2254 ; free virtual = 11043
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
 Phase 2.3 Update Timing | Checksum: 13136c681
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:37 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 948 ; free virtual = 9682
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2240 ; free virtual = 11029
 INFO: [Route 35-57] Estimated Timing Summary | WNS=1.558  | TNS=0.000  | WHS=-0.134 | THS=-6.112 |
 
 Phase 2 Router Initialization | Checksum: 16865839a
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 948 ; free virtual = 9682
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2240 ; free virtual = 11029
 
 Phase 3 Initial Routing
 Phase 3 Initial Routing | Checksum: 1fa84c7a3
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:38 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 946 ; free virtual = 9681
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2240 ; free virtual = 11029
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 497
  Number of Nodes with overlaps = 53
-Phase 1 Build RT Design | Checksum: 21ac1dc2
-
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:39 . Memory (MB): peak = 1873.355 ; gain = 22.645 ; free physical = 942 ; free virtual = 9677
-
-Phase 2 Router Initialization
-
-Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 21ac1dc2
-
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:39 . Memory (MB): peak = 1873.355 ; gain = 22.645 ; free physical = 942 ; free virtual = 9676
-
-Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 21ac1dc2
-
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:39 . Memory (MB): peak = 1883.344 ; gain = 32.633 ; free physical = 913 ; free virtual = 9648
- Number of Nodes with overlaps = 0
-
-Phase 2.3 Update Timing
  Number of Nodes with overlaps = 8
-Phase 2.3 Update Timing | Checksum: 13136c681
-
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:40 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 897 ; free virtual = 9632
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.558  | TNS=0.000  | WHS=-0.134 | THS=-6.112 |
-
-Phase 2 Router Initialization | Checksum: 16865839a
-
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:40 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 897 ; free virtual = 9632
-
-Phase 3 Initial Routing
  Number of Nodes with overlaps = 1
-Phase 3 Initial Routing | Checksum: 1fa84c7a3
-
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:41 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 897 ; free virtual = 9632
-
-Phase 4 Rip-up And Reroute
-
-Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
@@ -813,15 +411,15 @@ Phase 4.1 Global Iteration 0
 Phase 4.1.1 Update Timing
 Phase 4.1.1 Update Timing | Checksum: 1b852c50e
 
-Time (s): cpu = 00:01:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 INFO: [Route 35-57] Estimated Timing Summary | WNS=1.499  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
 Phase 4.1 Global Iteration 0 | Checksum: 7fa0e0ae
 
-Time (s): cpu = 00:01:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 Phase 4 Rip-up And Reroute | Checksum: 7fa0e0ae
 
-Time (s): cpu = 00:01:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 5 Delay and Skew Optimization
 
@@ -830,32 +428,32 @@ Phase 5.1 Delay CleanUp
 Phase 5.1.1 Update Timing
 Phase 5.1.1 Update Timing | Checksum: 7995e606
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
 Phase 5.1 Delay CleanUp | Checksum: 7995e606
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 5.2 Clock Skew Optimization
 Phase 5.2 Clock Skew Optimization | Checksum: 7995e606
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 Phase 5 Delay and Skew Optimization | Checksum: 7995e606
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Update Timing
 Phase 6.1 Update Timing | Checksum: cf79cfd9
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=0.104  | THS=0.000  |
 
 Phase 6 Post Hold Fix | Checksum: 6bd372d7
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 7 Route finalize
 
@@ -872,19 +470,19 @@ Router Utilization Summary
 
 Phase 7 Route finalize | Checksum: c450ebcc
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
 Phase 8 Verifying routed nets | Checksum: c450ebcc
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 9 Depositing Routes
 Phase 9 Depositing Routes | Checksum: 1b2773e5e
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Phase 10 Post Router Timing
 INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=0.104  | THS=0.000  |
@@ -892,134 +490,21 @@ INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=0.1
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
 Phase 10 Post Router Timing | Checksum: 1b2773e5e
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 895 ; free virtual = 9630
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11029
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 54 Infos, 1 Warnings, 16 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1896.391 ; gain = 46.688 ; free physical = 892 ; free virtual = 9627
-Writing placer database...
- Number of Nodes with overlaps = 497
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.38 . Memory (MB): peak = 1896.391 ; gain = 0.000 ; free physical = 887 ; free virtual = 9626
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/test_led_ip_drc_routed.rpt.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
- Number of Nodes with overlaps = 53
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 23:26:56 2015...
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-
-Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 1b852c50e
-
-Time (s): cpu = 00:01:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.499  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: 7fa0e0ae
-
-Time (s): cpu = 00:01:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-Phase 4 Rip-up And Reroute | Checksum: 7fa0e0ae
-
-Time (s): cpu = 00:01:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 5 Delay and Skew Optimization
-
-Phase 5.1 Delay CleanUp
-
-Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 7995e606
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 5.1 Delay CleanUp | Checksum: 7995e606
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 7995e606
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-Phase 5 Delay and Skew Optimization | Checksum: 7995e606
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 6 Post Hold Fix
-
-Phase 6.1 Update Timing
-Phase 6.1 Update Timing | Checksum: cf79cfd9
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=0.104  | THS=0.000  |
-
-Phase 6 Post Hold Fix | Checksum: 6bd372d7
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 7 Route finalize
-
-Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.56182 %
-  Global Horizontal Routing Utilization  = 0.704277 %
-  Routable Net Status*
-  *Does not include unroutable nets such as driverless and loadless.
-  Run report_route_status for detailed report.
-  Number of Failed Nets               = 0
-  Number of Unrouted Nets             = 0
-  Number of Partially Routed Nets     = 0
-  Number of Node Overlaps             = 0
-
-Phase 7 Route finalize | Checksum: c450ebcc
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 8 Verifying routed nets
-
- Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: c450ebcc
-
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1b2773e5e
-
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.614  | TNS=0.000  | WHS=0.104  | THS=0.000  |
-
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1b2773e5e
-
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-INFO: [Route 35-16] Router Completed Successfully
-
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:51 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
-
-Routing Is Done.
-INFO: [Common 17-83] Releasing license: Implementation
-54 Infos, 1 Warnings, 16 Critical Warnings and 0 Errors encountered.
-route_design completed successfully
-route_design: Time (s): cpu = 00:01:36 ; elapsed = 00:00:52 . Memory (MB): peak = 1897.398 ; gain = 46.688 ; free physical = 1829 ; free virtual = 10565
+route_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:23 . Memory (MB): peak = 1895.398 ; gain = 46.688 ; free physical = 2239 ; free virtual = 11028
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.91 ; elapsed = 00:00:00.38 . Memory (MB): peak = 1897.398 ; gain = 0.000 ; free physical = 1824 ; free virtual = 10563
+Write XDEF Complete: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1895.398 ; gain = 0.000 ; free physical = 2235 ; free virtual = 11028
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/test_led_ip_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -1027,40 +512,6 @@ INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum o
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 23:27:01 2015...
-
-*** Running vivado
-    with args -log test_led_ip.vdi -applog -m64 -messageDb vivado.pb -mode batch -source test_led_ip.tcl -notrace
-
-
-****** Vivado v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source test_led_ip.tcl -notrace
-Command: open_checkpoint test_led_ip_routed.dcp
-INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2015.1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/.Xil/Vivado-5406-zombie/dcp/test_led_ip_early.xdc]
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/.Xil/Vivado-5406-zombie/dcp/test_led_ip_early.xdc]
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/.Xil/Vivado-5406-zombie/dcp/test_led_ip.xdc]
-WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc:36]
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/.Xil/Vivado-5406-zombie/dcp/test_led_ip.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1194.566 ; gain = 1.000 ; free physical = 2390 ; free virtual = 11131
-Restored from archive | CPU: 0.170000 secs | Memory: 2.436737 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1194.566 ; gain = 1.000 ; free physical = 2390 ; free virtual = 11131
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-INFO: [Project 1-484] Checkpoint was created with build 1215546
-open_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1194.566 ; gain = 279.711 ; free physical = 2393 ; free virtual = 11129
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
 Running DRC as a precondition to command write_bitstream
@@ -1078,5 +529,5 @@ Writing bitstream ./test_led_ip.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1561.457 ; gain = 366.891 ; free physical = 2024 ; free virtual = 10765
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 23:27:44 2015...
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2197.855 ; gain = 238.395 ; free physical = 1931 ; free virtual = 10725
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 23:58:53 2015...

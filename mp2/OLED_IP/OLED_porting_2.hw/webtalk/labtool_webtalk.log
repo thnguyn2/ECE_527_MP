@@ -4,9 +4,9 @@
   **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl -notrace
+source /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl -notrace
 
     while executing
-"webtalk_transmit -clientid 237705071 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_po..."
-    (file "/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl" line 28)
-INFO: [Common 17-206] Exiting Webtalk at Wed Sep 16 16:29:59 2015...
+"webtalk_transmit -clientid 2061490106 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_..."
+    (file "/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 17 23:49:23 2015...

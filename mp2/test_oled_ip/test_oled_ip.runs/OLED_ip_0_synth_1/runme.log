@@ -12,28 +12,28 @@ source OLED_ip_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0_funcsim.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0_funcsim.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_ip_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_ip_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_ip_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_ip_0_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'OLED_ip_0' generated file not found '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_ip_0_funcsim.vhdl'. Please regenerate to continue.
 Command: synth_design -top OLED_ip_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 947.863 ; gain = 139.461 ; free physical = 2984 ; free virtual = 11705
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 947.867 ; gain = 139.461 ; free physical = 3041 ; free virtual = 11832
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'OLED_ip_0' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/synth/OLED_ip_0.v:56]
-INFO: [Synth 8-638] synthesizing module 'OLED_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
-INFO: [Synth 8-638] synthesizing module 'OledInit' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
-INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
-INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (1#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
-INFO: [Synth 8-638] synthesizing module 'Delay' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
-INFO: [Synth 8-256] done synthesizing module 'Delay' (2#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
-INFO: [Synth 8-256] done synthesizing module 'OledInit' (3#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
-INFO: [Synth 8-638] synthesizing module 'OledEX' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
-INFO: [Synth 8-638] synthesizing module 'charLib' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'OLED_ip_0' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/synth/OLED_ip_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'OLED_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (1#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
+INFO: [Synth 8-638] synthesizing module 'Delay' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (2#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (3#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+INFO: [Synth 8-638] synthesizing module 'OledEX' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
+INFO: [Synth 8-638] synthesizing module 'charLib' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -106,8 +106,8 @@ INFO: [Synth 8-638] synthesizing module 'charLib' [/home/thnguyn2/source_code/EC
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:221]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -180,7 +180,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [/home/thnguyn2/sourc
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -248,7 +248,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [/home/thnguyn2
 	Parameter C_COMMON_CLK bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -318,22 +318,22 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [/home/thnguyn2/source
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_MEM_TYPE bound to: 3 - type: integer 
 	Parameter C_HAS_RSTA bound to: 0 - type: integer 
@@ -370,13 +370,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [/home/thnguyn2/so
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (4#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192945]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192949]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192953]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192957]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192971]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (4#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192945]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192949]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192953]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192957]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192971]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
@@ -449,7 +449,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [/home/thnguy
 	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
 	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -506,9 +506,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [/home/thnguyn2
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 11 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 11 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -662,13 +662,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [/home/t
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 9 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 9 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:101785]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (5#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (6#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185631]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185784]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (7#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:101785]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (5#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (6#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185631]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185784]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (7#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
 	Parameter C_MEM_TYPE bound to: 3 - type: integer 
 	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
@@ -679,16 +679,16 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [/home/thnguyn2/s
 	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (8#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (9#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (10#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (11#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
-INFO: [Synth 8-256] done synthesizing module 'charLib' (12#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'OledEX' (13#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
-INFO: [Synth 8-256] done synthesizing module 'OLED_ip' (14#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
-INFO: [Synth 8-256] done synthesizing module 'OLED_ip_0' (15#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/synth/OLED_ip_0.v:56]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (8#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (9#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (10#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (11#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'charLib' (12#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'OledEX' (13#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
+INFO: [Synth 8-256] done synthesizing module 'OLED_ip' (14#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
+INFO: [Synth 8-256] done synthesizing module 'OLED_ip_0' (15#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/synth/OLED_ip_0.v:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1148.820 ; gain = 340.418 ; free physical = 2779 ; free virtual = 11501
+Finished RTL Elaboration : Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 1148.824 ; gain = 340.418 ; free physical = 2820 ; free virtual = 11613
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -697,10 +697,10 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINA[8] to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183623]
-INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINB[8] to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183623]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINA[8] to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183623]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINB[8] to constant 0 [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183623]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1148.820 ; gain = 340.418 ; free physical = 2778 ; free virtual = 11500
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 1148.824 ; gain = 340.418 ; free physical = 2820 ; free virtual = 11612
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -709,8 +709,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
+Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
 Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
@@ -718,16 +718,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1376.844 ; gain = 0.000 ; free physical = 2675 ; free virtual = 11398
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1377.848 ; gain = 1.000 ; free physical = 2744 ; free virtual = 11536
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2669 ; free virtual = 11392
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2743 ; free virtual = 11535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2669 ; free virtual = 11392
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2743 ; free virtual = 11535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -735,7 +735,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/Example/CHAR_LIB_COMP. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2669 ; free virtual = 11392
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2743 ; free virtual = 11535
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
 INFO: [Synth 8-5545] ROM "SPI_FIN" won't be mapped to RAM because address size (40) is larger than maximum supported(18)
@@ -792,7 +792,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'OLED_ip'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:32 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2622 ; free virtual = 11344
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:34 ; elapsed = 00:01:34 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2675 ; free virtual = 11467
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -979,7 +979,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:33 ; elapsed = 00:01:33 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2622 ; free virtual = 11344
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:35 ; elapsed = 00:01:35 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2675 ; free virtual = 11467
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1010,9 +1010,9 @@ INFO: [Synth 8-5545] ROM "temp_spi_data" won't be mapped to RAM because address 
 INFO: [Synth 8-5545] ROM "temp_delay_ms" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:06 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2620 ; free virtual = 11343
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:07 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2674 ; free virtual = 11467
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:06 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2620 ; free virtual = 11343
+Finished Parallel Reinference  : Time (s): cpu = 00:02:07 ; elapsed = 00:02:07 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2674 ; free virtual = 11467
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
@@ -1048,9 +1048,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Exam
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Examplei_0/\after_page_state_reg[27] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Examplei_0/\current_state_reg[142] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:02:37 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2585 ; free virtual = 11308
+Finished Area Optimization : Time (s): cpu = 00:02:40 ; elapsed = 00:02:41 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2634 ; free virtual = 11426
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:36 ; elapsed = 00:02:37 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2585 ; free virtual = 11308
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:40 ; elapsed = 00:02:41 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2634 ; free virtual = 11426
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
@@ -1062,7 +1062,7 @@ Report RTL Partitions:
 |4     |OledEX__GB3   |           1|       536|
 |5     |OLED_ip__GC0  |           1|      4350|
 +------+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:36 ; elapsed = 00:02:37 . Memory (MB): peak = 1376.844 ; gain = 568.441 ; free physical = 2585 ; free virtual = 11308
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:40 ; elapsed = 00:02:41 . Memory (MB): peak = 1377.848 ; gain = 569.441 ; free physical = 2634 ; free virtual = 11426
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1070,10 +1070,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:45 ; elapsed = 00:02:45 . Memory (MB): peak = 1405.836 ; gain = 597.434 ; free physical = 2543 ; free virtual = 11266
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:49 ; elapsed = 00:02:49 . Memory (MB): peak = 1405.844 ; gain = 597.438 ; free physical = 2595 ; free virtual = 11388
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:45 ; elapsed = 00:02:46 . Memory (MB): peak = 1407.836 ; gain = 599.434 ; free physical = 2541 ; free virtual = 11263
+Finished Timing Optimization : Time (s): cpu = 00:02:49 ; elapsed = 00:02:50 . Memory (MB): peak = 1408.840 ; gain = 600.434 ; free physical = 2593 ; free virtual = 11385
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1093,7 +1093,7 @@ WARNING: [Synth 8-3332] Sequential element (\Example/current_state_reg[111] ) is
 WARNING: [Synth 8-3332] Sequential element (\Example/current_state_reg[14] ) is unused and will be removed from module OLED_ip.
 WARNING: [Synth 8-3332] Sequential element (\Init/temp_dc_reg ) is unused and will be removed from module OLED_ip.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:56 ; elapsed = 00:02:57 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2450 ; free virtual = 11173
+Finished Technology Mapping : Time (s): cpu = 00:03:00 ; elapsed = 00:03:01 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11294
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1111,7 +1111,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2450 ; free virtual = 11173
+Finished IO Insertion : Time (s): cpu = 00:03:01 ; elapsed = 00:03:01 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1124,7 +1124,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2450 ; free virtual = 11173
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:01 ; elapsed = 00:03:01 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1136,13 +1136,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2451 ; free virtual = 11173
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:01 ; elapsed = 00:03:02 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2451 ; free virtual = 11173
+Start Renaming Generated Ports : Time (s): cpu = 00:03:01 ; elapsed = 00:03:02 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2451 ; free virtual = 11173
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:01 ; elapsed = 00:03:02 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1195,17 +1195,17 @@ Report Instance Areas:
 |15    |      SPI_COMP                              |SpiCtrl                       |    53|
 +------+--------------------------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:57 ; elapsed = 00:02:58 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2451 ; free virtual = 11173
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:02 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:49 ; elapsed = 00:02:49 . Memory (MB): peak = 1498.602 ; gain = 353.586 ; free physical = 2451 ; free virtual = 11173
-Synthesis Optimization Complete : Time (s): cpu = 00:02:57 ; elapsed = 00:02:58 . Memory (MB): peak = 1498.602 ; gain = 690.199 ; free physical = 2451 ; free virtual = 11173
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:52 ; elapsed = 00:02:53 . Memory (MB): peak = 1498.605 ; gain = 352.586 ; free physical = 2501 ; free virtual = 11293
+Synthesis Optimization Complete : Time (s): cpu = 00:03:01 ; elapsed = 00:03:02 . Memory (MB): peak = 1498.605 ; gain = 690.199 ; free physical = 2501 ; free virtual = 11293
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
+Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
@@ -1214,7 +1214,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 133 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 1530.617 ; gain = 613.754 ; free physical = 2450 ; free virtual = 11173
+synth_design: Time (s): cpu = 00:03:01 ; elapsed = 00:03:02 . Memory (MB): peak = 1530.621 ; gain = 613.754 ; free physical = 2501 ; free virtual = 11293
 INFO: [Coretcl 2-1174] Renamed 14 cell refs.
-report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1562.637 ; gain = 0.000 ; free physical = 2449 ; free virtual = 11172
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 23:10:15 2015...
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1562.641 ; gain = 0.000 ; free physical = 2499 ; free virtual = 11291
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 23:56:28 2015...
