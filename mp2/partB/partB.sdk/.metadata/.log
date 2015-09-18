@@ -1251,3 +1251,15 @@ Binding(F4,
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-09-18 16:57:16.478
 !MESSAGE Indexed 'standalone_bsp_0_xaxidma_example_sg_poll_1' (3 sources, 40 headers) in 0.31 sec: 1,048 declarations; 3,534 references; 0 unresolved inclusions; 3 syntax errors; 4 unresolved names (0.09%)
+
+!ENTRY org.eclipse.tcf 4 0 2015-09-18 17:07:48.390
+!MESSAGE Cannot close channel streams
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at java.io.FilterOutputStream.close(Unknown Source)
+	at org.eclipse.tcf.core.ChannelTCP.stop(ChannelTCP.java:194)
+	at org.eclipse.tcf.core.AbstractChannel$8.run(AbstractChannel.java:691)
