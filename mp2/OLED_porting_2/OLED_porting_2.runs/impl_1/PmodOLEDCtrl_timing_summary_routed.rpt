@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Wed Sep 16 22:05:32 2015
-| Host         : zombie running 64-bit Ubuntu 14.04.3 LTS
+| Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
+| Date         : Fri Sep 18 11:35:30 2015
+| Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file PmodOLEDCtrl_timing_summary_routed.rpt -rpx PmodOLEDCtrl_timing_summary_routed.rpx
 | Design       : PmodOLEDCtrl
 | Device       : 7z020-clg484

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Wed Sep 16 22:05:55 2015'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Sep 18 11:36:07 2015'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1215546" description="" />
-  <keyValuePair key="date_generated" value="Wed Sep 16 22:05:55 2015" description="" />
-  <keyValuePair key="os_platform" value="LIN64" description="" />
+  <keyValuePair key="date_generated" value="Fri Sep 18 11:36:07 2015" description="" />
+  <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2015.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="8566aa1fd86d4cd3b824093b5facf73f" description="" />
   <keyValuePair key="project_iteration" value="0" description="" />
-  <keyValuePair key="random_id" value="6864dc4e41af50bf8875ba93afa2237b" description="" />
-  <keyValuePair key="registration_id" value="211083026_1777510696_210611924_361" description="" />
+  <keyValuePair key="random_id" value="f20e81307b695c68906f7b687fe95367" description="" />
+  <keyValuePair key="registration_id" value="211083026_1777510696_210611924_300" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
   <keyValuePair key="target_device" value="xc7z020" description="" />
   <keyValuePair key="target_family" value="zynq" description="" />
@@ -20,9 +20,9 @@
  </section>
  <section name="user_environment" level="1" order="2" description="">
   <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz" description="" />
-  <keyValuePair key="cpu_speed" value="1200.000 MHz" description="" />
-  <keyValuePair key="os_name" value="Ubuntu" description="" />
-  <keyValuePair key="os_release" value="Ubuntu 14.04.3 LTS" description="" />
+  <keyValuePair key="cpu_speed" value="2394 MHz" description="" />
+  <keyValuePair key="os_name" value="Microsoft Windows 7 , 64-bit" description="" />
+  <keyValuePair key="os_release" value="Service Pack 1  (build 7601)" description="" />
   <keyValuePair key="system_ram" value="8.000 GB" description="" />
   <keyValuePair key="total_processors" value="1" description="" />
  </section>
@@ -113,7 +113,7 @@
  </section>
  <section name="placer" level="1" order="4" description="">
   <section name="usage" level="2" order="1" description="">
-   <keyValuePair key="bogomips" value="4789" description="" />
+   <keyValuePair key="bogomips" value="0" description="" />
    <keyValuePair key="bram18" value="1" description="" />
    <keyValuePair key="bram36" value="0" description="" />
    <keyValuePair key="bufg" value="0" description="" />
@@ -128,10 +128,10 @@
    <keyValuePair key="movable_instances" value="2237" description="" />
    <keyValuePair key="nets" value="2300" description="" />
    <keyValuePair key="pins" value="13005" description="" />
-   <keyValuePair key="placer_runtime" value="5.960000" description="" />
+   <keyValuePair key="placer_runtime" value="15.460000" description="" />
    <keyValuePair key="placer_timing_driven" value="1" description="" />
    <keyValuePair key="pll" value="0" description="" />
-   <keyValuePair key="threads" value="8" description="" />
+   <keyValuePair key="threads" value="2" description="" />
    <keyValuePair key="timing_constraints_exist" value="1" description="" />
   </section>
  </section>
@@ -219,9 +219,9 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="clg484" description="" />
-   <keyValuePair key="pct_clock_constrained" value="1.500000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="1.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="50" description="" />
-   <keyValuePair key="platform" value="lin64" description="" />
+   <keyValuePair key="platform" value="nt64" description="" />
    <keyValuePair key="process" value="typical" description="" />
    <keyValuePair key="ram_enable" value="50.000000" description="" />
    <keyValuePair key="ram_write" value="50.000000" description="" />
@@ -543,7 +543,7 @@
  <section name="router" level="1" order="8" description="">
   <section name="usage" level="2" order="1" description="">
    <keyValuePair key="actual_expansions" value="1330322" description="" />
-   <keyValuePair key="bogomips" value="4789" description="" />
+   <keyValuePair key="bogomips" value="0" description="" />
    <keyValuePair key="bram18" value="1" description="" />
    <keyValuePair key="bram36" value="0" description="" />
    <keyValuePair key="bufg" value="0" description="" />
@@ -562,9 +562,9 @@
    <keyValuePair key="nets" value="2300" description="" />
    <keyValuePair key="pins" value="13005" description="" />
    <keyValuePair key="pll" value="0" description="" />
-   <keyValuePair key="router_runtime" value="27.260000" description="" />
+   <keyValuePair key="router_runtime" value="35.662000" description="" />
    <keyValuePair key="router_timing_driven" value="1" description="" />
-   <keyValuePair key="threads" value="8" description="" />
+   <keyValuePair key="threads" value="2" description="" />
    <keyValuePair key="timing_constraints_exist" value="1" description="" />
   </section>
  </section>
@@ -595,10 +595,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:03:13s" description="" />
+   <keyValuePair key="elapsed" value="00:04:14s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="586.676MB" description="" />
-   <keyValuePair key="memory_peak" value="1503.543MB" description="" />
+   <keyValuePair key="memory_gain" value="575.098MB" description="" />
+   <keyValuePair key="memory_peak" value="773.918MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="10" description="">

@@ -52,16 +52,16 @@ set rc [catch {
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.cache/wt [current_project]
-  set_property parent.project_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.xpr [current_project]
-  set_property ip_repo_paths /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.cache/ip [current_project]
-  set_property ip_output_repo /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.cache/ip [current_project]
-  add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/PmodOLEDCtrl.dcp
-  add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/charLib_synth_1/charLib.dcp
-  set_property netlist_only true [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/charLib_synth_1/charLib.dcp]
-  read_xdc -mode out_of_context -ref charLib /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc
-  set_property processing_order EARLY [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc]
-  read_xdc /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc
+  set_property webtalk.parent_dir E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.cache/wt [current_project]
+  set_property parent.project_path E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.xpr [current_project]
+  set_property ip_repo_paths e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.cache/ip [current_project]
+  set_property ip_output_repo e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.cache/ip [current_project]
+  add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/synth_1/PmodOLEDCtrl.dcp
+  add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/charLib_synth_1/charLib.dcp
+  set_property netlist_only true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.runs/charLib_synth_1/charLib.dcp]
+  read_xdc -mode out_of_context -ref charLib e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc
+  set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc]
+  read_xdc E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_porting_2/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc
   link_design -top PmodOLEDCtrl -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]
