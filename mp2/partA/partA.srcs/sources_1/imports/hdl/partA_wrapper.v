@@ -15,7 +15,7 @@ module partA_wrapper
   input [31:0]gpio2_io_i;
   input [31:0]gpio_io_i;
 
-  wire [31:0o2_io_i;
+  wire [31:0]gpo2_io_i;
   wire [31:0]gpio_io_i;
 
   partA partA_i

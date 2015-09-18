@@ -2,524 +2,141 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Sep 17 22:51:25 2015
-# Process ID: 24903
+# Start of session at: Fri Sep 18 00:00:56 2015
+# Process ID: 15878
 # Log file: /home/thnguyn2/source_code/ECE_527_MP/vivado.log
 # Journal file: /home/thnguyn2/source_code/ECE_527_MP/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.xpr
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 5807.383 ; gain = 138.332 ; free physical = 3423 ; free virtual = 12114
-close_project
-****** Webtalk v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.hw/webtalk/labtool_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 181088720 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.hw/webtalk..."
-    (file "/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.hw/webtalk/labtool_webtalk.tcl" line 26)
-INFO: [Common 17-206] Exiting Webtalk at Thu Sep 17 22:51:56 2015...
-create_project test_oled_ip /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip -part xc7z020clg484-1
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
-set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -rebuild
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  {} [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/ip [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/ip'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  {} [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-close_project
-create_project managed_ip_project /home/thnguyn2/source_code/ECE_527_MP/mp2/manage_oled_ip_location/managed_ip_project -part xc7z020clg484-1 -ip
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
-set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property target_simulator XSim [current_project]
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -rebuild
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -rebuild
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  {} [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-close_project
 open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-ipx::package_project -root_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP -vendor user.org -library user -taxonomy /UserIP -force
-WARNING: [IP_Flow 19-1834] The constraints file "OLED_porting_2_constr.xdc" is added to the synthesis file group only, but will be used for both synthesis and implementation in the IP generation.
-INFO: [IP_Flow 19-2228] Inferred bus interface "RST" of definition type "xilinx.com:signal:reset:1.0".
-INFO: [IP_Flow 19-2228] Inferred bus interface "CLK" of definition type "xilinx.com:signal:clock:1.0".
-set_property vendor Tan_Enyu [ipx::current_core]
-set_property library OLED_ip [ipx::current_core]
-reset_run charLib_synth_1
-reset_run synth_1
-launch_runs impl_1 -jobs 4
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'charLib'...
-WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'charLib' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
-[Thu Sep 17 22:56:10 2015] Launched charLib_synth_1, synth_1...
-Run output will be captured here:
-charLib_synth_1: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/charLib_synth_1/runme.log
-synth_1: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/synth_1/runme.log
-[Thu Sep 17 22:56:10 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/impl_1/runme.log
-ipx::unload_core /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/component.xml
-ipx::open_ipxact_file /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/component.xml
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property core_revision 2 [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP
-INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP'
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-ipx::check_integrity -quiet [ipx::current_core]
-ipx::archive_core /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/Tan_Enyu_OLED_ip_OLED_ip_1.0.zip [ipx::current_core]
 close_project
-open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.xpr
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2061490106 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_..."
+    (file "/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 17 23:49:23 2015...
+open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg484-1
+Top: partA_wrapper
+ERROR: [Synth 8-2715] syntax error near o2_io_i [/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:18]
+INFO: [Synth 8-2350] module partA_wrapper ignored due to previous errors [/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:12]
+Failed to read verilog '/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v'
+1 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v" into library work [/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v" into library work [/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:1]
+[Fri Sep 18 00:10:22 2015] Launched synth_1...
+Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/synth_1/runme.log
+open_bd_design {/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/partA.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <partA> from BD file </home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/partA.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 5955.035 ; gain = 25.043 ; free physical = 2759 ; free virtual = 11630
+launch_runs impl_1 -jobs 4
+[Fri Sep 18 00:11:32 2015] Launched impl_1...
+Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -jobs 4
+[Fri Sep 18 00:11:37 2015] Launched impl_1...
+Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run blk_mem_gen_0_synth_1
+launch_runs blk_mem_gen_0_synth_1 blk_mem_gen_0_impl_1 -jobs 4
+[Fri Sep 18 00:12:55 2015] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_synth_1/runme.log
+[Fri Sep 18 00:12:55 2015] Launched blk_mem_gen_0_synth_1, blk_mem_gen_0_impl_1...
+Run output will be captured here:
+blk_mem_gen_0_synth_1: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_synth_1/runme.log
+blk_mem_gen_0_impl_1: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 set_property  ip_repo_paths  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs [current_project]
 update_ip_catalog
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -add_ip /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/Tan_Enyu_OLED_ip_OLED_ip_1.0.zip -repo_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs
-INFO: [IP_Flow 19-949] Unzipped '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/Tan_Enyu_OLED_ip_OLED_ip_1.0.zip' into repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -rebuild
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -delete_ip Tan_Enyu:OLED_ip:OLED_ip:1.0 -repo_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs
-INFO: [IP_Flow 19-1659] Deleted IP 'Tan_Enyu:OLED_ip:OLED_ip:1.0' from repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs' at /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/Tan_Enyu_OLED_ip_OLED_ip_1.0.
-INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -rebuild
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-update_ip_catalog -add_ip /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/Tan_Enyu_OLED_ip_OLED_ip_1.0.zip -repo_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs
-INFO: [IP_Flow 19-949] Unzipped '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/Tan_Enyu_OLED_ip_OLED_ip_1.0.zip' into repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'.
-INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 create_ip -name OLED_ip -vendor Tan_Enyu -library OLED_ip -version 1.0 -module_name OLED_ip_0
-generate_target {instantiation_template} [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+generate_target {instantiation_template} [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_0'...
-generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0'...
+INFO: [Common 17-365] Interrupt caught but 'generate_target' cannot be canceled. Please wait for command to finish.
+generate_target: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 6004.555 ; gain = 7.910 ; free physical = 1616 ; free virtual = 10940
+INFO: [Common 17-681] Processing pending cancel.
+INFO: [Vivado 12-3734] generate_target is canceled
+set_property generate_synth_checkpoint false [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_0'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0/charLib'...
 WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'charLib' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0/charLib'...
-generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 5867.965 ; gain = 0.000 ; free physical = 3208 ; free virtual = 11913
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
-launch_run -jobs 4 OLED_ip_0_synth_1
-[Thu Sep 17 23:02:48 2015] Launched OLED_ip_0_synth_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/runme.log
-file mkdir /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new
-close [ open /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v w ]
-add_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v
+reset_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+delete_ip_run [get_files -of_objects [get_fileset blk_mem_gen_0] /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [Project 1-386] Moving file '/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' from fileset 'blk_mem_gen_0' to fileset 'sources_1'.
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-create_ip -name OLED_ip -vendor Tan_Enyu -library OLED_ip -version 1.0 -module_name OLED_ip_1
-generate_target {instantiation_template} [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_1/OLED_ip_1.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_1'...
-update_compile_order -fileset sources_1
-set_property generate_synth_checkpoint false [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_1/OLED_ip_1.xci]
-generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_1/OLED_ip_1.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_1'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_1'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_1'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_1/charLib'...
-WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'charLib' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_1/charLib'...
-generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 5869.559 ; gain = 1.594 ; free physical = 2613 ; free virtual = 11335
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-remove_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_1/OLED_ip_1.xci
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-remove_files -fileset OLED_ip_0 /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci
-delete_fileset OLED_ip_0
-file delete -force /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0
-remove_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib.coe
-file delete -force /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib.coe
-create_ip -name OLED_ip -vendor Tan_Enyu -library OLED_ip -version 1.0 -module_name OLED_ip_0
-generate_target {instantiation_template} [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'blk_mem_gen_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_run -jobs 4 blk_mem_gen_0_synth_1
+[Fri Sep 18 00:17:05 2015] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_synth_1/runme.log
+set_property generate_synth_checkpoint true [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_0'...
-update_compile_order -fileset sources_1
-generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0/charLib'...
-WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'charLib' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0/charLib'...
-generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 5886.609 ; gain = 0.000 ; free physical = 3170 ; free virtual = 11890
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'OLED_ip_0/charLib'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'OLED_ip_0/charLib'. Target already exists and is up to date.
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci]
 launch_run -jobs 4 OLED_ip_0_synth_1
-[Thu Sep 17 23:07:09 2015] Launched OLED_ip_0_synth_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/runme.log
-launch_runs OLED_ip_0_impl_1 -jobs 4
-[Thu Sep 17 23:10:33 2015] Launched OLED_ip_0_impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_impl_1/runme.log
-set_property source_mgmt_mode None [current_project]
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7z020clg484-1
-Top: test_led_ip
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:07:53 ; elapsed = 00:21:22 . Memory (MB): peak = 5916.480 ; gain = 5108.074 ; free physical = 3138 ; free virtual = 11866
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'test_led_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
-ERROR: [Synth 8-439] module 'OLED_ip' not found [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:27]
-ERROR: [Synth 8-285] failed synthesizing module 'test_led_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:07:53 ; elapsed = 00:21:22 . Memory (MB): peak = 5927.727 ; gain = 5119.320 ; free physical = 3127 ; free virtual = 11854
----------------------------------------------------------------------------------
-RTL Elaboration failed
-1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design failed
-ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7z020clg484-1
-Top: test_led_ip
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:08:02 ; elapsed = 00:22:06 . Memory (MB): peak = 5938.383 ; gain = 5129.977 ; free physical = 3118 ; free virtual = 11846
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'test_led_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:27]
-INFO: [Synth 8-638] synthesizing module 'OLED_ip_0' [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/realtime/OLED_ip_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'OLED_ip_0' (1#1) [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/realtime/OLED_ip_0_stub.v:7]
-WARNING: [Synth 8-689] width (8) of port connection 'ram_data' does not match port width (512) of module 'OLED_ip_0' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:27]
-WARNING: [Synth 8-350] instance 'OLED_ip_inst' of module 'OLED_ip_0' requires 9 connections, but only 1 given [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:27]
-INFO: [Synth 8-256] done synthesizing module 'test_led_ip' (2#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:08:03 ; elapsed = 00:22:07 . Memory (MB): peak = 5946.641 ; gain = 5138.234 ; free physical = 3106 ; free virtual = 11834
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:08:04 ; elapsed = 00:22:07 . Memory (MB): peak = 5950.539 ; gain = 5142.133 ; free physical = 3103 ; free virtual = 11830
----------------------------------------------------------------------------------
-INFO: [Project 1-454] Reading design checkpoint '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp' for cell 'OLED_ip_inst'
-INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2015.1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/dcp/OLED_ip_0_in_context.xdc] for cell 'OLED_ip_inst'
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/dcp/OLED_ip_0_in_context.xdc] for cell 'OLED_ip_inst'
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:1]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:2]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:3]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:4]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:5]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:6]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:7]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:8]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:9]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:10]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:11]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:12]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:13]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:14]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:15]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:16]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:08:19 ; elapsed = 00:22:15 . Memory (MB): peak = 6387.426 ; gain = 5579.020 ; free physical = 2816 ; free virtual = 11544
-12 Infos, 3 Warnings, 16 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 6387.426 ; gain = 457.039 ; free physical = 2816 ; free virtual = 11544
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[3]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[7]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[2]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[6]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[1]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[5]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[0]}]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list {input_sw[4]}]]
-set_property package_pin "" [get_ports [list  {input_sw[3]}]]
-place_ports {input_sw[0]} F22
-set_property package_pin "" [get_ports [list  {input_sw[2]}]]
-place_ports {input_sw[1]} G22
-place_ports {input_sw[2]} H22
-place_ports {input_sw[3]} F21
-place_ports {input_sw[4]} H19
-place_ports {input_sw[5]} H18
-place_ports {input_sw[6]} H17
-place_ports {input_sw[7]} M15
-file mkdir /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new
-close [ open /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc w ]
-add_files -fileset constrs_1 /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc
-set_property target_constrs_file /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc [current_fileset -constrset]
-save_constraints -force
-launch_runs impl_1 -to_step write_bitstream
-[Thu Sep 17 23:17:05 2015] Launched synth_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/synth_1/runme.log
-[Thu Sep 17 23:17:05 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/runme.log
-refresh_design
-ERROR: [Synth 8-2715] syntax error near CLK [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:25]
-WARNING: [Synth 8-2611] redeclaration of ansi port RST is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:35]
-ERROR: [Synth 8-2531] port RST is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:35]
-WARNING: [Synth 8-2611] redeclaration of ansi port SDIN is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:37]
-ERROR: [Synth 8-2531] port SDIN is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:37]
-WARNING: [Synth 8-2611] redeclaration of ansi port SCLK is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:38]
-ERROR: [Synth 8-2531] port SCLK is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:38]
-WARNING: [Synth 8-2611] redeclaration of ansi port DC is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:39]
-ERROR: [Synth 8-2531] port DC is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:39]
-WARNING: [Synth 8-2611] redeclaration of ansi port RES is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-ERROR: [Synth 8-2531] port RES is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-WARNING: [Synth 8-2611] redeclaration of ansi port VBAT is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:41]
-ERROR: [Synth 8-2531] port VBAT is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:41]
-WARNING: [Synth 8-2611] redeclaration of ansi port VDD is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:42]
-ERROR: [Synth 8-2531] port VDD is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:42]
-ERROR: [Synth 8-2715] syntax error near . [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:52]
-ERROR: [Synth 8-2537] port CLK is not defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:34]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:34]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:35]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:37]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:38]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:39]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:41]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:42]
-ERROR: [Synth 8-2537] port input_sw is not defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:44]
-Failed to read verilog '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v'
-ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
-refresh_design
-ERROR: [Synth 8-2715] syntax error near CLK [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:25]
-WARNING: [Synth 8-2611] redeclaration of ansi port RST is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:35]
-ERROR: [Synth 8-2531] port RST is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:35]
-WARNING: [Synth 8-2611] redeclaration of ansi port SDIN is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:36]
-ERROR: [Synth 8-2531] port SDIN is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:36]
-WARNING: [Synth 8-2611] redeclaration of ansi port SCLK is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:37]
-ERROR: [Synth 8-2531] port SCLK is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:37]
-WARNING: [Synth 8-2611] redeclaration of ansi port DC is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:38]
-ERROR: [Synth 8-2531] port DC is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:38]
-WARNING: [Synth 8-2611] redeclaration of ansi port RES is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:39]
-ERROR: [Synth 8-2531] port RES is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:39]
-WARNING: [Synth 8-2611] redeclaration of ansi port VBAT is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-ERROR: [Synth 8-2531] port VBAT is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-WARNING: [Synth 8-2611] redeclaration of ansi port VDD is not allowed [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:41]
-ERROR: [Synth 8-2531] port VDD is already defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:41]
-ERROR: [Synth 8-2715] syntax error near . [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:51]
-ERROR: [Synth 8-2537] port CLK is not defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:34]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:34]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:35]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:36]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:37]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:38]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:39]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-ERROR: [Synth 8-2545] port declaration not allowed in test_led_ip with formal port declaration list [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:41]
-ERROR: [Synth 8-2537] port input_sw is not defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:43]
-Failed to read verilog '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v'
-ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-[Thu Sep 17 23:23:18 2015] Launched synth_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/synth_1/runme.log
-[Thu Sep 17 23:23:18 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/runme.log
-refresh_design
-ERROR: [Synth 8-2715] syntax error near . [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:51]
-ERROR: [Synth 8-2537] port CLK is not defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:34]
-ERROR: [Synth 8-2537] port input_sw is not defined [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:43]
-INFO: [Synth 8-2350] module test_led_ip ignored due to previous errors [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
-Failed to read verilog '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v'
-ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-[Thu Sep 17 23:24:07 2015] Launched synth_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/synth_1/runme.log
-[Thu Sep 17 23:24:07 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/runme.log
-reset_run synth_1
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:10:25 ; elapsed = 00:33:13 . Memory (MB): peak = 6387.426 ; gain = 5579.020 ; free physical = 2806 ; free virtual = 11538
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'test_led_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
-INFO: [Synth 8-638] synthesizing module 'OLED_ip_0' [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/realtime/OLED_ip_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'OLED_ip_0' (1#1) [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/realtime/OLED_ip_0_stub.v:7]
-WARNING: [Synth 8-689] width (8) of port connection 'ram_data' does not match port width (512) of module 'OLED_ip_0' [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:53]
-WARNING: [Synth 8-3848] Net RES in module/entity test_led_ip does not have driver. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:40]
-INFO: [Synth 8-256] done synthesizing module 'test_led_ip' (2#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v:23]
-WARNING: [Synth 8-3331] design test_led_ip has unconnected port RES
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:10:26 ; elapsed = 00:33:13 . Memory (MB): peak = 6387.426 ; gain = 5579.020 ; free physical = 2806 ; free virtual = 11538
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:10:26 ; elapsed = 00:33:14 . Memory (MB): peak = 6387.426 ; gain = 5579.020 ; free physical = 2806 ; free virtual = 11538
----------------------------------------------------------------------------------
-INFO: [Project 1-454] Reading design checkpoint '/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp' for cell 'OLED_ip_inst'
-INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2015.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/dcp/OLED_ip_0_in_context.xdc] for cell 'OLED_ip_inst'
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/dcp/OLED_ip_0_in_context.xdc] for cell 'OLED_ip_inst'
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:8]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:10]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk' completely overrides clock 'CLK'.
-New: create_clock -period 10.000 -name sys_clk -waveform {0.000 5.000} [get_ports CLK], [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc:18]
-Previous: create_clock -period 10.000 [get_ports CLK], [/home/thnguyn2/source_code/ECE_527_MP/.Xil/Vivado-24903-zombie/dcp/OLED_ip_0_in_context.xdc:1]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc] for cell 'OLED_ip_inst/inst'
-Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
-WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc:36]
-Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
-Completed Processing XDC Constraints
-
-refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 6438.723 ; gain = 51.297 ; free physical = 2789 ; free virtual = 11521
-launch_runs synth_1 -jobs 4
-[Thu Sep 17 23:24:51 2015] Launched synth_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 4
-[Thu Sep 17 23:25:21 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/runme.log
-reset_run impl_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-
-launch_runs impl_1 -jobs 4
-[Thu Sep 17 23:25:26 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2015.1
-  **** Build date : Apr 27 2015-19:09:54
-    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248708080
-current_hw_device [lindex [get_hw_devices] 1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
-INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
-ERROR: [Common 17-9] Error reading message records.
-launch_runs impl_1 -to_step write_bitstream
-[Thu Sep 17 23:27:05 2015] Launched impl_1...
-Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/runme.log
-set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
-set_property PROGRAM.FILE {/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/impl_1/test_led_ip.bit} [lindex [get_hw_devices] 1]
-program_hw_devices [lindex [get_hw_devices] 1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices] 1]
-INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
-2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+[Fri Sep 18 00:17:27 2015] Launched OLED_ip_0_synth_1...
+Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/OLED_ip_0_synth_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget

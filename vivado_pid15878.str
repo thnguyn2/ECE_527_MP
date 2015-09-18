@@ -1,0 +1,797 @@
+/*
+
+Vivado v2015.1 (64-bit)
+SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+Process ID: 15878
+
+Current time: 	9/18/15 12:01:08 AM CDT
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: DISTRIB_ID=Ubuntu
+Version: 3.13.0-63-generic
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	/opt/Xilinx/Vivado/2015.1/tps/lnx64/jre
+
+User name: 	root
+User directory: /home/thnguyn2/source_code/ECE_527_MP
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: /home/thnguyn2/.Xilinx/Vivado/2015.1/vivado.ini
+Vivado layouts directory: /home/thnguyn2/.Xilinx/Vivado/2015.1/layouts/application
+
+GUI allocated memory:	118 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,836 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 31 MB (+29603kb) [00:00:05]
+// [Engine Memory]: 4,836 MB (+4918983kb) [00:00:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,841 MB. GUI used memory: 20 MB. Current time: 9/18/15 12:01:10 AM CDT
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr", 1); // t:v (JViewport:JComponent, cl:JFrame)
+// Opening Vivado Project: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr. Version: Vivado v2015.1 
+// cp:P (cl:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// Tcl Message: open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 50 MB (+19085kb) [00:00:49]
+// [GUI Memory]: 53 MB (+72kb) [00:00:51]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 56 MB (+825kb) [00:00:52]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 62 MB (+2768kb) [00:00:52]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,963 MB. GUI used memory: 29 MB. Current time: 9/18/15 12:01:55 AM CDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: OLED_porting_2; location: /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP; part: xc7z020clg484-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // A:k (H:JPanel, cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v), Example - OledEX (OledEX.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip (OLED_ip.v), Example - OledEX (OledEX.v)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 64 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // X:JMenu (JPopupMenu:JComponent, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close Project"); // ab:JMenuItem (JPopupMenu:JComponent, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// cp:P (cl:JFrame):  Close Project : addNotify
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,971 MB. GUI used memory: 28 MB. Current time: 9/18/15 12:03:13 AM CDT
+// Tcl Message: close_project 
+// Tcl Message: ****** Webtalk v2015.1 (64-bit)   **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015   **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.  source /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl -notrace      while executing "webtalk_transmit -clientid 2061490106 -regid "211083026_1777510696_210611924_361" -xml /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_..."     (file "/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.hw/webtalk/labtool_webtalk.tcl" line 26) INFO: [Common 17-206] Exiting Webtalk at Thu Sep 17 23:49:23 2015... 
+dismissDialog("Close Project"); // cp:P (cl:JFrame)
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.xpr", 2); // t:v (JViewport:JComponent, cl:JFrame)
+// Opening Vivado Project: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.xpr. Version: Vivado v2015.1 
+// cp:P (cl:JFrame):  Open Project : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: partA; location: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA; part: xc7z020clg484-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, partA_wrapper.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, partA_wrapper.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// [GUI Memory]: 68 MB (+3434kb) [00:02:27]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 4, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 4, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// t:P (cl:JFrame): Re-customize IP: addNotify
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // w:JideButton (CommandBar:DockableBar, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+// [GUI Memory]: 72 MB (+268kb) [00:03:21]
+// Elapsed time: 184 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd), partA (partA.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd), partA (partA.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd), partA (partA.v)]", 5, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 14, true); // w:Y (v:H, cl:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// cp:P (cl:JFrame):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 5,030 MB. GUI used memory: 38 MB. Current time: 9/18/15 12:08:50 AM CDT
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7z020clg484-1 Top: partA_wrapper 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: ERROR: [Synth 8-2715] syntax error near o2_io_i [/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:18] 
+// Tcl Message: INFO: [Synth 8-2350] module partA_wrapper ignored due to previous errors [/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:12] 
+// Tcl Message: Failed to read verilog '/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v' 
+// Tcl Message: 1 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// N:a (cl:JFrame): Critical Messages: addNotify
+dismissDialog("Open Elaborated Design"); // cp:P (cl:JFrame)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, N:a)
+dismissDialog("Critical Messages"); // N:a (cl:JFrame)
+selectCheckBox(PAResourceItoN.MsgView_ERROR_MESSAGES, (String) null, false); // h:JCheckBox (JPanel:JComponent, cl:JFrame): FALSE
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("partA_wrapper.v", 143, 202); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd)]", 2, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 4); // A:k (H:JPanel, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5); // A:k (H:JPanel, cl:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 4); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+// PAPropertyPanels.initPanels (blk_mem_gen_0_synth_1) elapsed time: 0.2s
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_synth_1 ; blk_mem_gen_0 ; Synthesis Out-of-date ; 100 ;  ;  ;  ;  ;  ;  ; 0.0 ; 0 ; 0.0 ; 0 ; 0.3571428656578064 ; 0 ; 0.0 ; 0 ; Thu Sep 17 22:44:33 CDT 2015 ; 00:00:00 ; Vivado Synthesis Defaults (Vivado Synthesis 2015) ; xc7z020clg484-1 ;  ; Vivado Synthesis Defaults", 3, "blk_mem_gen_0_synth_1", 0, true); // W:av (JViewport:JComponent, cl:JFrame) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+// [GUI Memory]: 76 MB (+16kb) [00:09:06]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Fri Sep 18 00:10:22 2015] Launched synth_1... Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/synth_1/runme.log 
+// [Engine Memory]: 5,078 MB (+1168kb) [00:09:19]
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd)]", 2, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd)]", 2, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// cp:P (cl:JFrame):  Open Block Design : addNotify
+// Tcl Message: open_bd_design {/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/partA.bd} 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <partA> from BD file </home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/partA.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [GUI Memory]: 85 MB (+5850kb) [00:09:38]
+// TclEventType: RSB_CONNECTION_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,103 MB. GUI used memory: 43 MB. Current time: 9/18/15 12:10:42 AM CDT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 5955.035 ; gain = 25.043 ; free physical = 2759 ; free virtual = 11630 
+dismissDialog("Open Block Design"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 49 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Fri Sep 18 00:11:32 2015] Launched impl_1... Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_ALREADY_RUNNING_WOULD_YOU_LIKE_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Fri Sep 18 00:11:37 2015] Launched impl_1... Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+// TclEventType: RUN_STEP_COMPLETED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// t:P (cl:JFrame): Re-customize IP: addNotify
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+// [GUI Memory]: 91 MB (+1680kb) [00:10:48]
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Power Estimation", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // aM:g (G:JPanel, t:P)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+// t:P (cl:JFrame): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // aM:g (G:JPanel, t:P)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // A:k (H:JPanel, cl:JFrame)
+// [GUI Memory]: 98 MB (+2311kb) [00:11:31]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 11); // A:k (H:JPanel, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_synth_1 ; blk_mem_gen_0 ; Synthesis Out-of-date ; 100 ;  ;  ;  ;  ;  ;  ; 0.0 ; 0 ; 0.0 ; 0 ; 0.3571428656578064 ; 0 ; 0.0 ; 0 ; Thu Sep 17 22:44:33 CDT 2015 ; 00:00:00 ; Vivado Synthesis Defaults (Vivado Synthesis 2015) ; xc7z020clg484-1 ;  ; Vivado Synthesis Defaults", 3); // W:av (JViewport:JComponent, cl:JFrame)
+// PAPropertyPanels.initPanels (blk_mem_gen_0_synth_1) elapsed time: 0.2s
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_synth_1 ; blk_mem_gen_0 ; Synthesis Out-of-date ; 100 ;  ;  ;  ;  ;  ;  ; 0.0 ; 0 ; 0.0 ; 0 ; 0.3571428656578064 ; 0 ; 0.0 ; 0 ; Thu Sep 17 22:44:33 CDT 2015 ; 00:00:00 ; Vivado Synthesis Defaults (Vivado Synthesis 2015) ; xc7z020clg484-1 ;  ; Vivado Synthesis Defaults", 3, "blk_mem_gen_0_synth_1", 0, true); // W:av (JViewport:JComponent, cl:JFrame) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_impl_1 ; blk_mem_gen_0 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7z020clg484-1 ;  ; Vivado Implementation Defaults", 4, "blk_mem_gen_0_impl_1", 0, false); // W:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_impl_1 ; blk_mem_gen_0 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7z020clg484-1 ;  ; Vivado Implementation Defaults", 4, "blk_mem_gen_0_impl_1", 0, false); // W:av (JViewport:JComponent, cl:JFrame)
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_impl_1 ; blk_mem_gen_0 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7z020clg484-1 ;  ; Vivado Implementation Defaults", 4); // W:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_impl_1 ; blk_mem_gen_0 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7z020clg484-1 ;  ; Vivado Implementation Defaults", 4, "blk_mem_gen_0_impl_1", 0, false, false, false, false, false, true); // W:av (JViewport:JComponent, cl:JFrame) - Double Click
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "blk_mem_gen_0_impl_1 ; blk_mem_gen_0 ; Not started ; 0 ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2015) ; xc7z020clg484-1 ;  ; Vivado Implementation Defaults", 4, "blk_mem_gen_0_impl_1", 0, false, false, false, false, true, false); // W:av (JViewport:JComponent, cl:JFrame) - Popup Trigger
+selectMenu(PAResourceEtoH.ExpRunMenu_LAUNCH_STEP, "Launch Step To"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceEtoH.ExpRunMenu_LAUNCH_RUNS, "Launch Runs..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// f:ag (cl:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:ag)
+// f:ag (cl:JFrame): Launch Runs: addNotify
+// cp:P (f:ag):  Starting Design Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run blk_mem_gen_0_synth_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs blk_mem_gen_0_synth_1 blk_mem_gen_0_impl_1 -jobs 4 
+// Tcl Message: [Fri Sep 18 00:12:55 2015] Launched blk_mem_gen_0_synth_1... Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_synth_1/runme.log [Fri Sep 18 00:12:55 2015] Launched blk_mem_gen_0_synth_1, blk_mem_gen_0_impl_1... Run output will be captured here: blk_mem_gen_0_synth_1: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_synth_1/runme.log blk_mem_gen_0_impl_1: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (f:ag)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 4); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 4); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 5, false); // A:k (H:JPanel, cl:JFrame)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v)]", 12, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v)]", 12, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v), inst - blk_mem_gen_v8_2 (blk_mem_gen_v8_2.v)]", 13, true); // A:k (H:JPanel, cl:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v), inst - blk_mem_gen_v8_2 (blk_mem_gen_v8_2.v)]", 13); // A:k (H:JPanel, cl:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 4); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v), inst - blk_mem_gen_v8_2 (blk_mem_gen_v8_2.v), blk_mem_gen_v8_2_inst - BLK_MEM_GEN_v8_2_mem_module (blk_mem_gen_v8_2.v)]", 13, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v), inst - blk_mem_gen_v8_2 (blk_mem_gen_v8_2.v), blk_mem_gen_v8_2_inst - BLK_MEM_GEN_v8_2_mem_module (blk_mem_gen_v8_2.v)]", 13, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v), inst - blk_mem_gen_v8_2 (blk_mem_gen_v8_2.v), blk_mem_gen_v8_2_inst - BLK_MEM_GEN_v8_2_mem_module (blk_mem_gen_v8_2.v)]", 21, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v)]", 11, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.v)]", 11, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 10); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 10); // A:k (H:JPanel, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,121 MB. GUI used memory: 59 MB. Current time: 9/18/15 12:13:50 AM CDT
+// t:P (cl:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+// Elapsed time: 12 seconds
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// cp:P (cl:JFrame):  IP Catalog : addNotify
+dismissDialog("IP Catalog"); // cp:P (cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_IP_SETTINGS, "IP Catalog_ip_settings"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// Project Settings: addNotify
+selectButton(PAResourceOtoP.ProjectSettingsIPRepositoryPanel_ADD_REPOSITORY, "Add Repository"); // w:JideButton (CommandBar:DockableBar, k:br)
+// TclEventType: RUN_COMPLETED
+setFolderChooser("/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs");
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs'. 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,150 MB. GUI used memory: 73 MB. Current time: 9/18/15 12:14:30 AM CDT
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:br)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:br)
+dismissDialog("Project Settings"); // k:br (cl:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "OLED"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, cl:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "OLED_ip_v1_0 ;  ; Production ; Included ; Tan_Enyu:OLED_ip:OLED_ip:1.0", 2, "OLED_ip_v1_0", 0, false); // O:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "OLED_ip_v1_0 ;  ; Production ; Included ; Tan_Enyu:OLED_ip:OLED_ip:1.0", 2, "OLED_ip_v1_0", 0, false); // O:av (JViewport:JComponent, cl:JFrame)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "OLED_ip_v1_0 ;  ; Production ; Included ; Tan_Enyu:OLED_ip:OLED_ip:1.0", 2); // O:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "OLED_ip_v1_0 ;  ; Production ; Included ; Tan_Enyu:OLED_ip:OLED_ip:1.0", 2, "OLED_ip_v1_0", 0, false, false, false, false, false, true); // O:av (JViewport:JComponent, cl:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// 'i' command handler elapsed time: 7 seconds
+selectButton("PAResourceAtoD.CustomizeCore_ADD_IP_TO_BLOCK_DESIGN_OR_CUSTOMIZE_Customize IP", "Customize IP"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// t:P (cl:JFrame): Customize IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Customize IP"); // t:P (cl:JFrame)
+// TclEventType: CREATE_IP_CORE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name OLED_ip -vendor Tan_Enyu -library OLED_ip -version 1.0 -module_name OLED_ip_0 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_0'... 
+// aB:ag (cl:JFrame): Generate Output Products: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_APPLY_OPTIONS_AND_DISMISS_DIALOG_WITHOUT, "Apply"); // a:JButton (JPanel:JComponent, aB:ag)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, aB:ag)
+// cp:P (cl:JFrame):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0'... 
+// Elapsed time: 12 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, cp:P)
+selectButton("RDIResource.ProgressDialog_ARE_YOU_SURE_YOU_WANT_TO_CANCEL_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: INFO: [Common 17-365] Interrupt caught but 'generate_target' cannot be canceled. Please wait for command to finish. 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 6004.555 ; gain = 7.910 ; free physical = 1616 ; free virtual = 10940 
+// Tcl Message: INFO: [Common 17-681] Processing pending cancel. 
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 6, false); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 6); // A:k (H:JPanel, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v), inst - OLED_ip (OLED_ip.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v), inst - OLED_ip (OLED_ip.v)]", 5); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// [GUI Memory]: 107 MB (+4955kb) [00:14:20]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aB:ag (cl:JFrame): Generate Output Products: addNotify
+selectRadioButton(PAResourceQtoS.SimpleOutputProductDialog_SYNTHESIZE_DESIGN_GLOBALLY, "Global"); // a:JRadioButton (JPanel:JComponent, aB:ag)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_APPLY_OPTIONS_AND_DISMISS_DIALOG_WITHOUT, "Apply"); // a:JButton (JPanel:JComponent, aB:ag)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property generate_synth_checkpoint false [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, aB:ag)
+// cp:P (cl:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0/charLib'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0/charLib'... 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// 'aO' command handler elapsed time: 10 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partA_wrapper (partA_wrapper.v), partA_i - partA (partA.bd)]", 2, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// t:P (cl:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v), inst - OLED_ip (OLED_ip.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v), inst - OLED_ip (OLED_ip.v)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v), inst - OLED_ip (OLED_ip.v)]", 5, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v), inst - OLED_ip (OLED_ip.v)]", 5); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 22 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 6); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 6, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 6, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE
+// aB:ag (cl:JFrame): Reset Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_RESET_OUTPUT_PRODUCTS, "Reset"); // a:JButton (JPanel:JComponent, aB:ag)
+// cp:P (cl:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: reset_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_DELETE
+// Tcl Message: delete_ip_run [get_files -of_objects [get_fileset blk_mem_gen_0] /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] 
+// Tcl Message: INFO: [Project 1-386] Moving file '/home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' from fileset 'blk_mem_gen_0' to fileset 'sources_1'. 
+dismissDialog("Managing Output Products"); // cp:P (cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 6, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 6, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5, false); // A:k (H:JPanel, cl:JFrame)
+// [GUI Memory]: 113 MB (+114kb) [00:15:51]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aB:ag (cl:JFrame): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, aB:ag)
+// cp:P (cl:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_run -jobs 4 blk_mem_gen_0_synth_1 
+// Tcl Message: [Fri Sep 18 00:17:05 2015] Launched blk_mem_gen_0_synth_1... Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/blk_mem_gen_0_synth_1/runme.log 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// 'aO' command handler elapsed time: 5 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 5); // A:k (H:JPanel, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,181 MB. GUI used memory: 75 MB. Current time: 9/18/15 12:17:15 AM CDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 3, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aB:ag (cl:JFrame): Generate Output Products: addNotify
+selectRadioButton(PAResourceQtoS.SimpleOutputProductDialog_SYNTHESIZE_ALL_IP_INCLUDING_IP_CONTAINED, "Out of context per IP"); // a:JRadioButton (JPanel:JComponent, aB:ag)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, aB:ag)
+// cp:P (cl:JFrame):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property generate_synth_checkpoint true [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'OLED_ip_0'... INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'OLED_ip_0/charLib'. Target already exists and is up to date. INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'OLED_ip_0/charLib'. Target already exists and is up to date. 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ip/OLED_ip_0/OLED_ip_0.xci] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_run -jobs 4 OLED_ip_0_synth_1 
+// Tcl Message: [Fri Sep 18 00:17:27 2015] Launched OLED_ip_0_synth_1... Run output will be captured here: /home/thnguyn2/source_code/ECE_527_MP/mp2/partA/partA.runs/OLED_ip_0_synth_1/runme.log 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// 'aO' command handler elapsed time: 8 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci)]", 6); // A:k (H:JPanel, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4); // A:k (H:JPanel, cl:JFrame)
+// [GUI Memory]: 118 MB (+19kb) [00:16:50]
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 63 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 9, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 9, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 9, false); // A:k (H:JPanel, cl:JFrame)
+// [GUI Memory]: 129 MB (+4754kb) [00:17:58]
+// [GUI Memory]: 137 MB (+1175kb) [00:18:04]
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.dcp)]", 10, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.dcp)]", 10, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 (blk_mem_gen_0.dcp)]", 10, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// ab:ah (cl:JFrame): Unable to Open File: addNotify
+selectButton(PAResourceOtoP.OpenFileAction_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ab:ah)
+dismissDialog("Unable to Open File"); // ab:ah (cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// t:P (cl:JFrame): Re-customize IP: addNotify
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true); // A:k (H:JPanel, cl:JFrame) - Node
+// [GUI Memory]: 144 MB (+538kb) [00:18:13]
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "IP Symbol", 1); // aM:g (G:JPanel, t:P)
+selectCheckBox((HResource) null, "Generate address interface with 32 bits", true); // h:JCheckBox (m:D, t:P): TRUE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // aM:g (G:JPanel, t:P)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 17, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 17, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 17, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 17, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 17, false); // A:k (H:JPanel, cl:JFrame)
+// t:P (cl:JFrame): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // aM:g (G:JPanel, t:P)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // aM:g (G:JPanel, t:P)
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // w:JideButton (CommandBar:DockableBar, t:P)
+selectMenuItem(PAResourceCommand.PACommandNames_SHOW_PRODUCT_GUIDE, "Product Guide"); // ab:JMenuItem (ai:JPopupMenu, t:P)
+// Run Command: PAResourceCommand.PACommandNames_SHOW_PRODUCT_GUIDE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 13); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 12); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 12, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "blk_mem_gen_v8_2.v", 5); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OLED_ip_0 (OLED_ip_0.xci), OLED_ip_0 (OLED_ip_0.dcp)]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd), U0 - blk_mem_gen_v8_2 - xilinx]", 9, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectCodeEditor("blk_mem_gen_0.vhd", 1041, 136); // H:bj (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // i:l (JPanel:JComponent, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,205 MB. GUI used memory: 83 MB. Current time: 9/18/15 12:21:30 AM CDT
+// Elapsed time: 272 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// t:P (cl:JFrame): Re-customize IP: addNotify
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 18 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+// Elapsed time: 56 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aM:g (G:JPanel, t:P)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:P)
+dismissDialog("Re-customize IP"); // t:P (cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci)]", 7, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 10, true); // A:k (H:JPanel, cl:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_0 (blk_mem_gen_0.xci), blk_mem_gen_0 - blk_mem_gen_0_arch (blk_mem_gen_0.vhd)]", 8); // A:k (H:JPanel, cl:JFrame)
