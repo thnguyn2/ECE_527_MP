@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442547454">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442548570">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="OLED_ip.vdi"/>
   <File Type="BG-DRC" Name="OLED_ip.drc"/>
@@ -80,11 +80,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/import_ise_summary.txt"/>
-    <File Path="$PSRCDIR/sources_1/ip/charLib/charLib.upgrade_log"/>
-    <File Path="$PSRCDIR/sources_1/ip/charLib.coe">
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledEX.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -95,12 +94,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledEX.v">
+    <File Path="$PPRDIR/import_ise_summary.txt"/>
+    <File Path="$PSRCDIR/sources_1/ip/charLib/charLib.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/charLib.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
+    </File>
+    <File Path="$PPRDIR/component.xml">
+      <FileInfo SFType="IPXACT"/>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>

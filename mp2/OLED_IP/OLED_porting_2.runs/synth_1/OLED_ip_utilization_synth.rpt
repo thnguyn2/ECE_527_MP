@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Thu Sep 17 22:39:46 2015
+| Date         : Thu Sep 17 22:59:45 2015
 | Host         : zombie running 64-bit Ubuntu 14.04.3 LTS
 | Command      : report_utilization -file OLED_ip_utilization_synth.rpt -pb OLED_ip_utilization_synth.pb
 | Design       : OLED_ip
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1290 |     0 |     53200 |  2.42 |
-|   LUT as Logic          | 1290 |     0 |     53200 |  2.42 |
+| Slice LUTs*             | 1424 |     0 |     53200 |  2.68 |
+|   LUT as Logic          | 1424 |     0 |     53200 |  2.68 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  380 |     0 |    106400 |  0.36 |
-|   Register as Flip Flop |  380 |     0 |    106400 |  0.36 |
+| Slice Registers         |  902 |     0 |    106400 |  0.85 |
+|   Register as Flip Flop |  902 |     0 |    106400 |  0.85 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                |   22 |     0 |     26600 |  0.08 |
-| F8 Muxes                |    0 |     0 |     13300 |  0.00 |
+| F7 Muxes                |   87 |     0 |     26600 |  0.33 |
+| F8 Muxes                |   32 |     0 |     13300 |  0.24 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 33    |          Yes |         Set |            - |
-| 347   |          Yes |       Reset |            - |
+| 34    |          Yes |         Set |            - |
+| 868   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -87,24 +87,24 @@ Table of Contents
 4. IO and GT Specific
 ---------------------
 
-+-----------------------------+------+-------+-----------+-------+
-|          Site Type          | Used | Fixed | Available | Util% |
-+-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    8 |     0 |       200 |  4.00 |
-| Bonded IPADs                |    0 |     0 |         2 |  0.00 |
-| Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
-| PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
-| PHASER_REF                  |    0 |     0 |         4 |  0.00 |
-| OUT_FIFO                    |    0 |     0 |        16 |  0.00 |
-| IN_FIFO                     |    0 |     0 |        16 |  0.00 |
-| IDELAYCTRL                  |    0 |     0 |         4 |  0.00 |
-| IBUFGDS                     |    0 |     0 |       192 |  0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        16 |  0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        16 |  0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       200 |  0.00 |
-| ILOGIC                      |    0 |     0 |       200 |  0.00 |
-| OLOGIC                      |    0 |     0 |       200 |  0.00 |
-+-----------------------------+------+-------+-----------+-------+
++-----------------------------+------+-------+-----------+--------+
+|          Site Type          | Used | Fixed | Available |  Util% |
++-----------------------------+------+-------+-----------+--------+
+| Bonded IOB                  |  520 |     0 |       200 | 260.00 |
+| Bonded IPADs                |    0 |     0 |         2 |   0.00 |
+| Bonded IOPADs               |    0 |     0 |       130 |   0.00 |
+| PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |
+| PHASER_REF                  |    0 |     0 |         4 |   0.00 |
+| OUT_FIFO                    |    0 |     0 |        16 |   0.00 |
+| IN_FIFO                     |    0 |     0 |        16 |   0.00 |
+| IDELAYCTRL                  |    0 |     0 |         4 |   0.00 |
+| IBUFGDS                     |    0 |     0 |       192 |   0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        16 |   0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        16 |   0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       200 |   0.00 |
+| ILOGIC                      |    0 |     0 |       200 |   0.00 |
+| OLOGIC                      |    0 |     0 |       200 |   0.00 |
++-----------------------------+------+-------+-----------+--------+
 
 
 5. Clocking
@@ -146,18 +146,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  846 |                 LUT |
-| FDRE     |  347 |        Flop & Latch |
-| LUT5     |  219 |                 LUT |
-| LUT2     |  184 |                 LUT |
-| LUT4     |  156 |                 LUT |
-| LUT3     |   93 |                 LUT |
+| LUT6     |  988 |                 LUT |
+| FDRE     |  868 |        Flop & Latch |
+| IBUF     |  514 |                  IO |
+| LUT5     |  201 |                 LUT |
+| LUT2     |  193 |                 LUT |
+| LUT4     |  154 |                 LUT |
+| LUT3     |   96 |                 LUT |
+| MUXF7    |   87 |               MuxFx |
 | LUT1     |   43 |                 LUT |
-| FDSE     |   33 |        Flop & Latch |
-| MUXF7    |   22 |               MuxFx |
+| FDSE     |   34 |        Flop & Latch |
+| MUXF8    |   32 |               MuxFx |
 | CARRY4   |   18 |          CarryLogic |
 | OBUF     |    6 |                  IO |
-| IBUF     |    2 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

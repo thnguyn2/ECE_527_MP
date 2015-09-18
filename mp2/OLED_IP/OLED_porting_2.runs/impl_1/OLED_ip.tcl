@@ -44,18 +44,21 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_property webtalk.parent_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.cache/wt [current_project]
   set_property parent.project_path /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr [current_project]
-  set_property ip_repo_paths /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.cache/ip [current_project]
+  set_property ip_repo_paths {
+  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.cache/ip
+  /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP
+} [current_project]
   set_property ip_output_repo /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.cache/ip [current_project]
   add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/synth_1/OLED_ip.dcp
   add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/charLib_synth_1/charLib.dcp
@@ -124,19 +127,5 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-}
-
-start_step write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  write_bitstream -force OLED_ip.bit 
-  catch { write_sysdef -hwdef OLED_ip.hwdef -bitfile OLED_ip.bit -meminfo OLED_ip.mmi -ltxfile debug_nets.ltx -file OLED_ip.sysdef }
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
 }
 
