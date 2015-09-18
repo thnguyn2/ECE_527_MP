@@ -1,0 +1,551 @@
+
+*** Running vivado
+    with args -log OLED_ip.vds -m64 -mode batch -messageDb vivado.pb -notrace -source OLED_ip.tcl
+
+
+****** Vivado v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source OLED_ip.tcl -notrace
+Command: synth_design -top OLED_ip -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 941.859 ; gain = 133.457 ; free physical = 2506 ; free virtual = 11104
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'OLED_ip' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (1#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
+INFO: [Synth 8-638] synthesizing module 'Delay' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (2#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (3#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+INFO: [Synth 8-638] synthesizing module 'OledEX' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
+INFO: [Synth 8-638] synthesizing module 'charLib' [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/synth_1/.Xil/Vivado-20524-zombie/realtime/charLib_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'charLib' (4#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.runs/synth_1/.Xil/Vivado-20524-zombie/realtime/charLib_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'OledEX' (5#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
+INFO: [Synth 8-256] done synthesizing module 'OLED_ip' (6#1) [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 993.148 ; gain = 184.746 ; free physical = 2454 ; free virtual = 11052
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 993.148 ; gain = 184.746 ; free physical = 2453 ; free virtual = 11052
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc]
+Finished Parsing XDC File [/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1359.875 ; gain = 0.000 ; free physical = 2226 ; free virtual = 10824
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2224 ; free virtual = 10822
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2224 ; free virtual = 10822
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2224 ; free virtual = 10822
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
+INFO: [Synth 8-5545] ROM "SPI_FIN" won't be mapped to RAM because address size (40) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (40) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "shift_counter" won't be mapped to RAM because address size (40) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (40) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "ms_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "temp_delay_ms" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_res" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_vdd" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "after_state" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_data" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_vbat" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_fin" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "FIN" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "current_screen" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "temp_delay_ms" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "after_state" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_char" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "temp_dc" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_data" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_addr" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'OLED_ip'
+INFO: [Synth 8-5545] ROM "init_en" won't be mapped to RAM because address size (111) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "example_en" won't be mapped to RAM because address size (111) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (111) is larger than maximum supported(18)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 | 0000000001001001011001000110110001100101
+                 iSTATE0 |                              001 | 0000000001010011011001010110111001100100
+                 iSTATE1 |                              010 | 0100100001101111011011000110010000110001
+                 iSTATE2 |                              011 | 0100100001101111011011000110010000110010
+                 iSTATE3 |                              100 | 0100100001101111011011000110010000110011
+                 iSTATE4 |                              101 | 0100100001101111011011000110010000110100
+                 iSTATE5 |                              110 | 0000000001000100011011110110111001100101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 | 000000000000000000000000000000000000000000000000000000000000000000000000000000001001001011001000110110001100101
+                 iSTATE0 |                             0010 | 100111101101100011001010110010001001001011011100110100101110100011010010110000101101100011010010111101001100101
+                 iSTATE1 |                             0100 | 000000000000000000000000100111101101100011001010110010001000101011110000110000101101101011100000110110001100101
+                 iSTATE2 |                             1000 | 000000000000000000000000000000000000000000000000000000000000000000000000000000001000100011011110110111001100101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'OLED_ip'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2162 ; free virtual = 10761
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |OledEX__GB0   |           1|     60274|
+|2     |OledEX__GB1   |           1|     22826|
+|3     |OledEX__GB2   |           1|       128|
+|4     |OledEX__GB3   |           1|       431|
+|5     |OLED_ip__GC0  |           1|     32886|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              143 Bit    Registers := 1     
+	              112 Bit    Registers := 1     
+	              104 Bit    Registers := 2     
+	               96 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               17 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 69    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input    143 Bit        Muxes := 1     
+	  14 Input    143 Bit        Muxes := 1     
+	  26 Input    112 Bit        Muxes := 1     
+	  28 Input    104 Bit        Muxes := 1     
+	  11 Input    104 Bit        Muxes := 1     
+	   2 Input    104 Bit        Muxes := 1     
+	   2 Input     95 Bit        Muxes := 2     
+	   3 Input     31 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 2     
+	  26 Input     11 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 16    
+	   2 Input      8 Bit        Muxes := 2     
+	  28 Input      8 Bit        Muxes := 1     
+	  26 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  28 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
+	  26 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 47    
+	   7 Input      1 Bit        Muxes := 2     
+	  28 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module OLED_ip 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+Module Delay__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     31 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SpiCtrl__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 1     
+Module OledEX 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              143 Bit    Registers := 1     
+	              112 Bit    Registers := 1     
+	               96 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 66    
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    143 Bit        Muxes := 1     
+	  14 Input    143 Bit        Muxes := 1     
+	  26 Input    112 Bit        Muxes := 1     
+	   2 Input     95 Bit        Muxes := 2     
+	  26 Input     11 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 16    
+	  26 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  26 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module SpiCtrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 1     
+Module Delay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     31 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module OledInit 
+Detailed RTL Component Info : 
++---Registers : 
+	              104 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	  28 Input    104 Bit        Muxes := 1     
+	  11 Input    104 Bit        Muxes := 1     
+	   2 Input    104 Bit        Muxes := 1     
+	  28 Input      8 Bit        Muxes := 1     
+	  28 Input      4 Bit        Muxes := 1     
+	  28 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2162 ; free virtual = 10761
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "temp_delay_ms" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_dc" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "FIN" won't be mapped to RAM because address size (144) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_addr" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_data" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_char" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "after_state" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "current_screen" won't be mapped to RAM because address size (95) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "ms_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (28) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "ms_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (28) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "after_state" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_fin" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_res" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_vbat" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_vdd" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_spi_data" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_delay_ms" won't be mapped to RAM because address size (104) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (103) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2161 ; free virtual = 10759
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2161 ; free virtual = 10759
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |OledEX__GB0   |           1|     36181|
+|2     |OledEX__GB1   |           1|      4125|
+|3     |OledEX__GB2   |           1|       160|
+|4     |OledEX__GB3   |           1|       543|
+|5     |OLED_ip__GC0  |           1|     32401|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_3/\current_screen_reg[0][10][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_1/\temp_delay_ms_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_1/\temp_delay_ms_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_1/\current_screen_reg[0][3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_1/\DELAY_COMP/current_state_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_1/\DELAY_COMP/current_state_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_2/\current_screen_reg[0][1][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_2/\current_screen_reg[2][2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\after_char_state_reg[87] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_0/\after_char_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_0/\after_update_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\after_state_reg[111] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\after_page_state_reg[142] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\current_screen_reg[0][2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\current_state_reg[143] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_0/\after_state_reg[38] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_0/\after_page_state_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\after_state_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\after_page_state_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\current_state_reg[142] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\Init/after_state_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\Init/after_state_reg[101] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\Init/DELAY_COMP/current_state_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/\Init/DELAY_COMP/current_state_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Examplei_0/\current_state_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\current_state_reg[111] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_0/\temp_char_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Examplei_3/\temp_addr_reg[10] )
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2128 ; free virtual = 10727
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2128 ; free virtual = 10727
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |OledEX__GB0   |           1|      1616|
+|2     |OledEX__GB1   |           1|       276|
+|3     |OledEX__GB2   |           1|         3|
+|4     |OledEX__GB3   |           1|        14|
+|5     |OLED_ip__GC0  |           1|      4350|
++------+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 1359.875 ; gain = 551.473 ; free physical = 2128 ; free virtual = 10727
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:01:54 . Memory (MB): peak = 1397.875 ; gain = 589.473 ; free physical = 2081 ; free virtual = 10680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:01:54 . Memory (MB): peak = 1398.883 ; gain = 590.480 ; free physical = 2080 ; free virtual = 10679
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |OledEX__GB0   |           1|      1616|
+|2     |OledEX__GB1   |           1|       276|
+|3     |OledEX__GB2   |           1|         3|
+|4     |OledEX__GB3   |           1|        14|
+|5     |OLED_ip__GC0  |           1|      4350|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\Init/temp_dc_reg ) is unused and will be removed from module OLED_ip.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |charLib       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |charLib |     1|
+|2     |BUFG    |     1|
+|3     |CARRY4  |    12|
+|4     |LUT1    |    43|
+|5     |LUT2    |   184|
+|6     |LUT3    |    93|
+|7     |LUT4    |   156|
+|8     |LUT5    |   219|
+|9     |LUT6    |   846|
+|10    |MUXCY_L |    22|
+|11    |MUXF7   |    22|
+|12    |XORCY   |    24|
+|13    |FDRE    |   347|
+|14    |FDSE    |    33|
+|15    |IBUF    |     2|
+|16    |OBUF    |     6|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------------+----------+------+
+|      |Instance       |Module    |Cells |
++------+---------------+----------+------+
+|1     |top            |          |  2018|
+|2     |  Example      |OledEX    |   854|
+|3     |    DELAY_COMP |Delay_0   |   121|
+|4     |    SPI_COMP   |SpiCtrl_1 |    50|
+|5     |  Init         |OledInit  |  1150|
+|6     |    DELAY_COMP |Delay     |   140|
+|7     |    SPI_COMP   |SpiCtrl   |    53|
++------+---------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:05 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:57 ; elapsed = 00:01:58 . Memory (MB): peak = 1483.297 ; gain = 199.578 ; free physical = 1997 ; free virtual = 10596
+Synthesis Optimization Complete : Time (s): cpu = 00:02:05 ; elapsed = 00:02:05 . Memory (MB): peak = 1483.297 ; gain = 674.895 ; free physical = 1997 ; free virtual = 10596
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+112 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:04 ; elapsed = 00:02:05 . Memory (MB): peak = 1515.312 ; gain = 598.449 ; free physical = 1996 ; free virtual = 10595
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1547.332 ; gain = 0.000 ; free physical = 1994 ; free virtual = 10593
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 22:39:46 2015...

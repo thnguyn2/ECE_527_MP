@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442547454">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="OLED_ip.vdi"/>
+  <File Type="BG-DRC" Name="OLED_ip.drc"/>
+  <File Type="BG-BGN" Name="OLED_ip.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="OLED_ip.sysdef"/>
+  <File Type="BITSTR-MMI" Name="OLED_ip.mmi"/>
+  <File Type="BITSTR-BMM" Name="OLED_ip_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="OLED_ip.nky"/>
+  <File Type="BITSTR-RBT" Name="OLED_ip.rbt"/>
+  <File Type="BITSTR-MSK" Name="OLED_ip.msk"/>
+  <File Type="BG-BIN" Name="OLED_ip.bin"/>
+  <File Type="BG-BIT" Name="OLED_ip.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="OLED_ip_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="OLED_ip_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="OLED_ip_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="OLED_ip_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="OLED_ip_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="OLED_ip_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="OLED_ip_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="OLED_ip_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="OLED_ip_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="OLED_ip_route_status.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="OLED_ip_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="OLED_ip_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="OLED_ip_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="OLED_ip_drc_routed.rpt"/>
+  <File Type="ROUTE-DCP" Name="OLED_ip_routed.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="OLED_ip_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="OLED_ip_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="OLED_ip_postplace_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="OLED_ip_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="OLED_ip_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="OLED_ip_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="OLED_ip_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="OLED_ip_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="OLED_ip_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="OLED_ip_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="OLED_ip_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="OLED_ip_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="OLED_ip_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="OLED_ip.hwdef"/>
+  <File Type="OPT-DRC" Name="OLED_ip_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="OLED_ip_opt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="OLED_ip_timing_summary_postroute_physopted.pb"/>
+  <File Type="PA-TCL" Name="OLED_ip.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/SpiCtrl.v">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pmodoledctrl_Verilog/PmodOLED_Source/SpiCtrl.v"/>
+        <Attr Name="ImportTime" Val="1340736620"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/Delay.v">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pmodoledctrl_Verilog/PmodOLED_Source/Delay.v"/>
+        <Attr Name="ImportTime" Val="1340736598"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledInit.v">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pmodoledctrl_Verilog/PmodOLED_Source/OledInit.v"/>
+        <Attr Name="ImportTime" Val="1340736572"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/import_ise_summary.txt"/>
+    <File Path="$PSRCDIR/sources_1/ip/charLib/charLib.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/charLib.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OLED_ip.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledEX.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="OLED_ip"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/PmodOLED_Source/PmodOLED.ucf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pmodoledctrl_Verilog/PmodOLED_Source/PmodOLED.ucf"/>
+        <Attr Name="ImportTime" Val="1319060314"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/OLED_porting_2_constr.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/OLED_porting_2_constr.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="charLib"/>
+</GenRun>
