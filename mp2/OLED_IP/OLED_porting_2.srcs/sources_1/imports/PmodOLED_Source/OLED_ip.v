@@ -23,7 +23,8 @@ module OLED_ip(
 		DC,
 		RES,
 		VBAT,
-		VDD
+		VDD,
+		ram_data
     );
 
 	// ===========================================================================
@@ -38,7 +39,7 @@ module OLED_ip(
 	output RES;
 	output VBAT;
 	output VDD;
-
+    input [511:0] ram_data;
 	// ===========================================================================
 	// 							  Parameters, Regsiters, and Wires
 	// ===========================================================================
@@ -86,7 +87,7 @@ module OLED_ip(
 			.SCLK(example_sclk),
 			.DC(example_dc),
 			.FIN(example_done),
-			.ram_data(512'h4546)
+			.ram_data(ram_data)
 	);
 
 
