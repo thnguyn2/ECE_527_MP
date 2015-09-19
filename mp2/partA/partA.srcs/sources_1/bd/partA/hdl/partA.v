@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Fri Sep 18 17:36:46 2015
+//Date        : Fri Sep 18 18:21:35 2015
 //Host        : zombie running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target partA.bd
 //Design      : partA
@@ -32,8 +32,8 @@ module partA
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    btns_5bits_tri_i,
-    leds_8bits_tri_o);
+    gpip_tri_i,
+    gpop_tri_o);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,13 +55,13 @@ module partA
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [4:0]btns_5bits_tri_i;
-  output [7:0]leds_8bits_tri_o;
+  input [31:0]gpip_tri_i;
+  output [31:0]gpop_tri_o;
 
   wire GND_1;
   wire VCC_1;
-  wire [7:0]axi_gpio_0_GPIO2_TRI_O;
-  wire [4:0]axi_gpio_0_GPIO_TRI_I;
+  wire [31:0]axi_gpio_0_GPIO2_TRI_O;
+  wire [31:0]axi_gpio_0_GPIO_TRI_I;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -143,8 +143,8 @@ module partA
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
 
-  assign axi_gpio_0_GPIO_TRI_I = btns_5bits_tri_i[4:0];
-  assign leds_8bits_tri_o[7:0] = axi_gpio_0_GPIO2_TRI_O;
+  assign axi_gpio_0_GPIO_TRI_I = gpip_tri_i[31:0];
+  assign gpop_tri_o[31:0] = axi_gpio_0_GPIO2_TRI_O;
   GND GND
        (.G(GND_1));
   VCC VCC

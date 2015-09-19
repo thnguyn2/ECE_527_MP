@@ -21,21 +21,26 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/bd/partA/partA.bd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_1/partA_processing_system7_0_axi_periph_1.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_1/partA_axi_gpio_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_xbar_0/partA_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_1_0/partA_axi_gpio_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.hwdef"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA.hwh"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="partA_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.v"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_rst_processing_system7_0_100M_1/partA_rst_processing_system7_0_100M_1.xci"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib.coe">
+      <File Path="$PSRCDIR/sources_1/imports/hdl/partA_wrapper.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/partA/hdl/partA_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1442618495"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -49,10 +54,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/hdl/partA_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/partA/hdl/partA_wrapper.v"/>
-          <Attr Name="ImportTime" Val="1442615806"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/OLED_ip_0/OLED_porting_2.srcs/sources_1/ip/charLib.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/central_module.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -60,6 +78,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="partA_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -73,6 +92,8 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="partA_wrapper"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
