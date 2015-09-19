@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Fri Sep 18 18:21:35 2015
+//Date        : Sat Sep 19 11:47:52 2015
 //Host        : zombie running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target partA.bd
 //Design      : partA
@@ -9,9 +9,10 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "partA,IP_Integrator,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=partA,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=2,da_board_cnt=6,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "partA.hwdef" *) 
+(* CORE_GENERATION_INFO = "partA,IP_Integrator,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=partA,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=6,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=4,da_board_cnt=8,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "partA.hwdef" *) 
 module partA
-   (DDR_addr,
+   (DC,
+    DDR_addr,
     DDR_ba,
     DDR_cas_n,
     DDR_ck_n,
@@ -32,8 +33,21 @@ module partA
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    gpip_tri_i,
-    gpop_tri_o);
+    PRST,
+    RES,
+    SCLK,
+    SDIN,
+    VBAT,
+    VDD,
+    addra,
+    dina,
+    douta,
+    gpio2_io_o,
+    gpio_io_i,
+    oled_data,
+    pclk,
+    wea);
+  output DC;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,13 +69,35 @@ module partA
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [31:0]gpip_tri_i;
-  output [31:0]gpop_tri_o;
+  output [0:0]PRST;
+  output RES;
+  output SCLK;
+  output SDIN;
+  output VBAT;
+  output VDD;
+  input [31:0]addra;
+  input [511:0]dina;
+  output [511:0]douta;
+  output [31:0]gpio2_io_o;
+  input [31:0]gpio_io_i;
+  input [511:0]oled_data;
+  output pclk;
+  input [63:0]wea;
 
   wire GND_1;
+  wire OLED_ip_0_DC;
+  wire OLED_ip_0_RES;
+  wire OLED_ip_0_SCLK;
+  wire OLED_ip_0_SDIN;
+  wire OLED_ip_0_VBAT;
+  wire OLED_ip_0_VDD;
   wire VCC_1;
-  wire [31:0]axi_gpio_0_GPIO2_TRI_O;
-  wire [31:0]axi_gpio_0_GPIO_TRI_I;
+  wire [31:0]addra_1;
+  wire [31:0]axi_gpio_0_gpio2_io_o;
+  wire [511:0]blk_mem_gen_0_douta;
+  wire [511:0]dina_1;
+  wire [31:0]gpio_io_i_1;
+  wire [511:0]oled_data_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -142,16 +178,40 @@ module partA
   wire processing_system7_0_axi_periph_M00_AXI_WVALID;
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
+  wire [63:0]wea_1;
 
-  assign axi_gpio_0_GPIO_TRI_I = gpip_tri_i[31:0];
-  assign gpop_tri_o[31:0] = axi_gpio_0_GPIO2_TRI_O;
+  assign DC = OLED_ip_0_DC;
+  assign PRST[0] = rst_processing_system7_0_100M_peripheral_aresetn;
+  assign RES = OLED_ip_0_RES;
+  assign SCLK = OLED_ip_0_SCLK;
+  assign SDIN = OLED_ip_0_SDIN;
+  assign VBAT = OLED_ip_0_VBAT;
+  assign VDD = OLED_ip_0_VDD;
+  assign addra_1 = addra[31:0];
+  assign dina_1 = dina[511:0];
+  assign douta[511:0] = blk_mem_gen_0_douta;
+  assign gpio2_io_o[31:0] = axi_gpio_0_gpio2_io_o;
+  assign gpio_io_i_1 = gpio_io_i[31:0];
+  assign oled_data_1 = oled_data[511:0];
+  assign pclk = processing_system7_0_FCLK_CLK0;
+  assign wea_1 = wea[63:0];
   GND GND
        (.G(GND_1));
+  partA_OLED_ip_0_1 OLED_ip_0
+       (.CLK(processing_system7_0_FCLK_CLK0),
+        .DC(OLED_ip_0_DC),
+        .RES(OLED_ip_0_RES),
+        .RST(rst_processing_system7_0_100M_peripheral_aresetn),
+        .SCLK(OLED_ip_0_SCLK),
+        .SDIN(OLED_ip_0_SDIN),
+        .VBAT(OLED_ip_0_VBAT),
+        .VDD(OLED_ip_0_VDD),
+        .ram_data(oled_data_1));
   VCC VCC
        (.P(VCC_1));
-  partA_axi_gpio_0_1 axi_gpio_0
-       (.gpio2_io_o(axi_gpio_0_GPIO2_TRI_O),
-        .gpio_io_i(axi_gpio_0_GPIO_TRI_I),
+  partA_axi_gpio_0_0 axi_gpio_0
+       (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
+        .gpio_io_i(gpio_io_i_1),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR),
         .s_axi_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),
@@ -171,6 +231,12 @@ module partA
         .s_axi_wready(processing_system7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_wstrb(processing_system7_0_axi_periph_M00_AXI_WSTRB),
         .s_axi_wvalid(processing_system7_0_axi_periph_M00_AXI_WVALID));
+  partA_blk_mem_gen_0_1 blk_mem_gen_0
+       (.addra(addra_1),
+        .clka(processing_system7_0_FCLK_CLK0),
+        .dina(dina_1),
+        .douta(blk_mem_gen_0_douta),
+        .wea(wea_1));
   partA_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -235,7 +301,7 @@ module partA
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
         .USB0_VBUS_PWRFAULT(GND_1));
-  partA_processing_system7_0_axi_periph_1 processing_system7_0_axi_periph
+  partA_processing_system7_0_axi_periph_0 processing_system7_0_axi_periph
        (.ACLK(processing_system7_0_FCLK_CLK0),
         .ARESETN(rst_processing_system7_0_100M_interconnect_aresetn),
         .M00_ACLK(processing_system7_0_FCLK_CLK0),
@@ -297,7 +363,7 @@ module partA
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
-  partA_rst_processing_system7_0_100M_1 rst_processing_system7_0_100M
+  partA_rst_processing_system7_0_100M_0 rst_processing_system7_0_100M
        (.aux_reset_in(VCC_1),
         .dcm_locked(VCC_1),
         .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
@@ -307,7 +373,7 @@ module partA
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
 endmodule
 
-module partA_processing_system7_0_axi_periph_1
+module partA_processing_system7_0_axi_periph_0
    (ACLK,
     ARESETN,
     M00_ACLK,

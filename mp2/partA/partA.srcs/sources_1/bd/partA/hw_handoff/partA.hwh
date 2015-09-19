@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep 18 18:22:00 2015" VIVADOVERSION="2015.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Sep 19 11:48:41 2015" VIVADOVERSION="2015.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="partA" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -25,8 +25,81 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef"/>
     <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef"/>
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="31" NAME="gpip_tri_i" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="31" NAME="gpop_tri_o" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="pclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="511" NAME="oled_data" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_oled_data">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="ram_data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addra">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="511" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dina">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="511" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="douta"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="63" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_wea">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="wea"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="SDIN" SIGIS="undef" SIGNAME="OLED_ip_0_SDIN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="SDIN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="OLED_ip_0_SCLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="SCLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="DC" SIGIS="undef" SIGNAME="OLED_ip_0_DC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="DC"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="RES" SIGIS="undef" SIGNAME="OLED_ip_0_RES">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="RES"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="VBAT" SIGIS="undef" SIGNAME="OLED_ip_0_VBAT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="VBAT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="VDD" SIGIS="undef" SIGNAME="OLED_ip_0_VDD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="OLED_ip_0" PORT="VDD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="PRST" RIGHT="0" SIGIS="undef" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -59,19 +132,64 @@
         <PORTMAP PHYSICAL="FIXED_IO_ps_porb"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="gpip" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP PHYSICAL="gpip_tri_i"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="gpop" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP PHYSICAL="gpop_tri_o"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
   </EXTERNALINTERFACES>
 
   <MODULES>
+    <MODULE FULLNAME="/OLED_ip_0" HWVERSION="1.0" INSTANCE="OLED_ip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="OLED_ip" VLNV="Tan_Enyu:OLED_ip:OLED_ip:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="partA_OLED_ip_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="SDIN" SIGIS="undef" SIGNAME="OLED_ip_0_SDIN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SDIN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="OLED_ip_0_SCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="DC" SIGIS="undef" SIGNAME="OLED_ip_0_DC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="DC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RES" SIGIS="undef" SIGNAME="OLED_ip_0_RES">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RES"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="VBAT" SIGIS="undef" SIGNAME="OLED_ip_0_VBAT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="VBAT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="VDD" SIGIS="undef" SIGNAME="OLED_ip_0_VDD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="VDD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="511" NAME="ram_data" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_oled_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="oled_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/axi_gpio_0" HWVERSION="2.0" INSTANCE="axi_gpio_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
@@ -92,7 +210,7 @@
         <PARAMETER NAME="C_IS_DUAL" VALUE="1"/>
         <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
         <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="Component_Name" VALUE="partA_axi_gpio_0_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="partA_axi_gpio_0_0"/>
         <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
         <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
@@ -196,8 +314,16 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="gpio_io_i" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_io_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE">
@@ -238,14 +364,205 @@
             <PORTMAP PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="GPIO" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR">
           <PORTMAPS>
             <PORTMAP PHYSICAL="gpio_io_i"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="GPIO2" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO2" TYPE="INITIATOR">
           <PORTMAPS>
             <PORTMAP PHYSICAL="gpio2_io_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/blk_mem_gen_0" HWVERSION="8.2" INSTANCE="blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.2">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_2;d=pg058-blk-mem-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_ELABORATION_DIR" VALUE="./"/>
+        <PARAMETER NAME="C_INTERFACE_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SLAVE_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BRAM_BLOCK" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_32BIT_ADDRESS" VALUE="1"/>
+        <PARAMETER NAME="C_CTRL_ECC_ALGO" VALUE="NONE"/>
+        <PARAMETER NAME="C_HAS_AXI_ID" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_MEM_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_BYTE_SIZE" VALUE="8"/>
+        <PARAMETER NAME="C_ALGORITHM" VALUE="1"/>
+        <PARAMETER NAME="C_PRIM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="0"/>
+        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="no_coe_file_loaded"/>
+        <PARAMETER NAME="C_INIT_FILE" VALUE="NONE"/>
+        <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_RSTA" VALUE="0"/>
+        <PARAMETER NAME="C_RST_PRIORITY_A" VALUE="CE"/>
+        <PARAMETER NAME="C_RSTRAM_A" VALUE="0"/>
+        <PARAMETER NAME="C_INITA_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ENA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_REGCEA" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="1"/>
+        <PARAMETER NAME="C_WEA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="512"/>
+        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="512"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="32"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="32"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
+        <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
+        <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
+        <PARAMETER NAME="C_INITB_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ENB" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_REGCEB" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="1"/>
+        <PARAMETER NAME="C_WEB_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="512"/>
+        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="512"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="32"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="32"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_MUX_PIPELINE_STAGES" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SOFTECC_INPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SOFTECC_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_USE_SOFTECC" VALUE="0"/>
+        <PARAMETER NAME="C_USE_ECC" VALUE="0"/>
+        <PARAMETER NAME="C_EN_ECC_PIPE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_INJECTERR" VALUE="0"/>
+        <PARAMETER NAME="C_SIM_COLLISION_CHECK" VALUE="ALL"/>
+        <PARAMETER NAME="C_COMMON_CLK" VALUE="0"/>
+        <PARAMETER NAME="C_DISABLE_WARN_BHV_COLL" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SLEEP_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_USE_URAM" VALUE="0"/>
+        <PARAMETER NAME="C_EN_RDADDRA_CHG" VALUE="0"/>
+        <PARAMETER NAME="C_EN_RDADDRB_CHG" VALUE="0"/>
+        <PARAMETER NAME="C_EN_DEEPSLEEP_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="8"/>
+        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     53.604396 mW"/>
+        <PARAMETER NAME="Component_Name" VALUE="partA_blk_mem_gen_0_1"/>
+        <PARAMETER NAME="Interface_Type" VALUE="Native"/>
+        <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
+        <PARAMETER NAME="AXI_Slave_Type" VALUE="Memory_Slave"/>
+        <PARAMETER NAME="Use_AXI_ID" VALUE="false"/>
+        <PARAMETER NAME="AXI_ID_Width" VALUE="4"/>
+        <PARAMETER NAME="Memory_Type" VALUE="Single_Port_RAM"/>
+        <PARAMETER NAME="PRIM_type_to_Implement" VALUE="BRAM"/>
+        <PARAMETER NAME="Enable_32bit_Address" VALUE="true"/>
+        <PARAMETER NAME="ecctype" VALUE="No_ECC"/>
+        <PARAMETER NAME="ECC" VALUE="false"/>
+        <PARAMETER NAME="softecc" VALUE="false"/>
+        <PARAMETER NAME="EN_SLEEP_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_DEEPSLEEP_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_SHUTDOWN_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_ECC_PIPE" VALUE="false"/>
+        <PARAMETER NAME="RD_ADDR_CHNG_A" VALUE="false"/>
+        <PARAMETER NAME="RD_ADDR_CHNG_B" VALUE="false"/>
+        <PARAMETER NAME="Use_Error_Injection_Pins" VALUE="false"/>
+        <PARAMETER NAME="Error_Injection_Type" VALUE="Single_Bit_Error_Injection"/>
+        <PARAMETER NAME="Use_Byte_Write_Enable" VALUE="true"/>
+        <PARAMETER NAME="Byte_Size" VALUE="8"/>
+        <PARAMETER NAME="Algorithm" VALUE="Minimum_Area"/>
+        <PARAMETER NAME="Primitive" VALUE="8kx2"/>
+        <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
+        <PARAMETER NAME="Write_Width_A" VALUE="512"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="32"/>
+        <PARAMETER NAME="Read_Width_A" VALUE="512"/>
+        <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="Enable_A" VALUE="Always_Enabled"/>
+        <PARAMETER NAME="Write_Width_B" VALUE="512"/>
+        <PARAMETER NAME="Read_Width_B" VALUE="512"/>
+        <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="Enable_B" VALUE="Always_Enabled"/>
+        <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="true"/>
+        <PARAMETER NAME="Register_PortA_Output_of_Memory_Core" VALUE="false"/>
+        <PARAMETER NAME="Use_REGCEA_Pin" VALUE="false"/>
+        <PARAMETER NAME="Register_PortB_Output_of_Memory_Primitives" VALUE="false"/>
+        <PARAMETER NAME="Register_PortB_Output_of_Memory_Core" VALUE="false"/>
+        <PARAMETER NAME="Use_REGCEB_Pin" VALUE="false"/>
+        <PARAMETER NAME="register_porta_input_of_softecc" VALUE="false"/>
+        <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
+        <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
+        <PARAMETER NAME="Load_Init_File" VALUE="false"/>
+        <PARAMETER NAME="Coe_File" VALUE="no_coe_file_loaded"/>
+        <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
+        <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
+        <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
+        <PARAMETER NAME="Reset_Memory_Latch_A" VALUE="false"/>
+        <PARAMETER NAME="Reset_Priority_A" VALUE="CE"/>
+        <PARAMETER NAME="Output_Reset_Value_A" VALUE="0"/>
+        <PARAMETER NAME="Use_RSTB_Pin" VALUE="false"/>
+        <PARAMETER NAME="Reset_Memory_Latch_B" VALUE="false"/>
+        <PARAMETER NAME="Reset_Priority_B" VALUE="CE"/>
+        <PARAMETER NAME="Output_Reset_Value_B" VALUE="0"/>
+        <PARAMETER NAME="Reset_Type" VALUE="SYNC"/>
+        <PARAMETER NAME="Additional_Inputs_for_Power_Estimation" VALUE="false"/>
+        <PARAMETER NAME="Port_A_Clock" VALUE="100"/>
+        <PARAMETER NAME="Port_A_Write_Rate" VALUE="50"/>
+        <PARAMETER NAME="Port_B_Clock" VALUE="0"/>
+        <PARAMETER NAME="Port_B_Write_Rate" VALUE="0"/>
+        <PARAMETER NAME="Port_A_Enable_Rate" VALUE="100"/>
+        <PARAMETER NAME="Port_B_Enable_Rate" VALUE="0"/>
+        <PARAMETER NAME="Collision_Warnings" VALUE="ALL"/>
+        <PARAMETER NAME="Disable_Collision_Warnings" VALUE="false"/>
+        <PARAMETER NAME="Disable_Out_of_Range_Warnings" VALUE="false"/>
+        <PARAMETER NAME="use_bram_block" VALUE="Stand_Alone"/>
+        <PARAMETER NAME="MEM_FILE" VALUE="NONE"/>
+        <PARAMETER NAME="CTRL_ECC_ALGO" VALUE="NONE"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clka" SIGIS="undef" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_wea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="511" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dina">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="511" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="douta"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="BRAM_PORTA" TYPE="TARGET">
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="addra"/>
+            <PORTMAP PHYSICAL="clka"/>
+            <PORTMAP PHYSICAL="dina"/>
+            <PORTMAP PHYSICAL="douta"/>
+            <PORTMAP PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -416,7 +733,7 @@
         <PARAMETER NAME="PCW_CRYSTAL_PERIPHERAL_FREQMHZ" VALUE="33.333333"/>
         <PARAMETER NAME="PCW_APU_PERIPHERAL_FREQMHZ" VALUE="666.666667"/>
         <PARAMETER NAME="PCW_DCI_PERIPHERAL_FREQMHZ" VALUE="10.159"/>
-        <PARAMETER NAME="PCW_QSPI_PERIPHERAL_FREQMHZ" VALUE="200.000000"/>
+        <PARAMETER NAME="PCW_QSPI_PERIPHERAL_FREQMHZ" VALUE="200"/>
         <PARAMETER NAME="PCW_SMC_PERIPHERAL_FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PCW_USB0_PERIPHERAL_FREQMHZ" VALUE="60"/>
         <PARAMETER NAME="PCW_USB1_PERIPHERAL_FREQMHZ" VALUE="60"/>
@@ -439,7 +756,7 @@
         <PARAMETER NAME="PCW_TPIU_PERIPHERAL_FREQMHZ" VALUE="200"/>
         <PARAMETER NAME="PCW_FPGA0_PERIPHERAL_FREQMHZ" VALUE="100.000000"/>
         <PARAMETER NAME="PCW_FPGA1_PERIPHERAL_FREQMHZ" VALUE="150.000000"/>
-        <PARAMETER NAME="PCW_FPGA2_PERIPHERAL_FREQMHZ" VALUE="50.000000"/>
+        <PARAMETER NAME="PCW_FPGA2_PERIPHERAL_FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PCW_FPGA3_PERIPHERAL_FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PCW_ACT_APU_PERIPHERAL_FREQMHZ" VALUE="666.666687"/>
         <PARAMETER NAME="PCW_UIPARAM_ACT_DDR_FREQ_MHZ" VALUE="533.333374"/>
@@ -1390,9 +1707,12 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pclk"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="OLED_ip_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
@@ -1846,7 +2166,7 @@
         <PARAMETER NAME="M61_SECURE" VALUE="0"/>
         <PARAMETER NAME="M62_SECURE" VALUE="0"/>
         <PARAMETER NAME="M63_SECURE" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="partA_processing_system7_0_axi_periph_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="partA_processing_system7_0_axi_periph_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -2236,7 +2556,7 @@
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="partA_rst_processing_system7_0_100M_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="partA_rst_processing_system7_0_100M_0"/>
         <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
         <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -2266,8 +2586,10 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="OLED_ip_0" PORT="RST"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="PRST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

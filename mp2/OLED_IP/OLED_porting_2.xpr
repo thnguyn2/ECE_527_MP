@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr">
+<Project Version="7" Minor="5" Path="E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8566aa1fd86d4cd3b824093b5facf73f"/>
@@ -82,12 +82,6 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/PmodOLED_Source/PmodOLED.ucf">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../pmodoledctrl_Verilog/PmodOLED_Source/PmodOLED.ucf"/>
-          <Attr Name="ImportTime" Val="1319060314"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
@@ -133,6 +127,9 @@
     </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">

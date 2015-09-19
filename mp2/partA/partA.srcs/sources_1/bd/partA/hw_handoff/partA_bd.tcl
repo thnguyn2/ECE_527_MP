@@ -146,14 +146,34 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
-  set gpip [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpip ]
-  set gpop [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpop ]
 
   # Create ports
+  set DC [ create_bd_port -dir O DC ]
+  set PRST [ create_bd_port -dir O -from 0 -to 0 PRST ]
+  set RES [ create_bd_port -dir O RES ]
+  set SCLK [ create_bd_port -dir O SCLK ]
+  set SDIN [ create_bd_port -dir O SDIN ]
+  set VBAT [ create_bd_port -dir O VBAT ]
+  set VDD [ create_bd_port -dir O VDD ]
+  set addra [ create_bd_port -dir I -from 31 -to 0 addra ]
+  set dina [ create_bd_port -dir I -from 511 -to 0 dina ]
+  set douta [ create_bd_port -dir O -from 511 -to 0 douta ]
+  set gpio2_io_o [ create_bd_port -dir O -from 31 -to 0 gpio2_io_o ]
+  set gpio_io_i [ create_bd_port -dir I -from 31 -to 0 gpio_io_i ]
+  set oled_data [ create_bd_port -dir I -from 511 -to 0 oled_data ]
+  set pclk [ create_bd_port -dir O -type clk pclk ]
+  set wea [ create_bd_port -dir I -from 63 -to 0 wea ]
+
+  # Create instance: OLED_ip_0, and set properties
+  set OLED_ip_0 [ create_bd_cell -type ip -vlnv Tan_Enyu:OLED_ip:OLED_ip:1.0 OLED_ip_0 ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
-  set_property -dict [ list CONFIG.C_ALL_INPUTS {1} CONFIG.C_ALL_INPUTS_2 {0} CONFIG.C_ALL_OUTPUTS_2 {1} CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_GPIO_WIDTH {32} CONFIG.C_IS_DUAL {1} CONFIG.GPIO2_BOARD_INTERFACE {Custom} CONFIG.GPIO_BOARD_INTERFACE {Custom} CONFIG.USE_BOARD_FLOW {true}  ] $axi_gpio_0
+  set_property -dict [ list CONFIG.C_ALL_INPUTS {1} CONFIG.C_ALL_INPUTS_2 {0} CONFIG.C_ALL_OUTPUTS_2 {1} CONFIG.C_IS_DUAL {1} CONFIG.GPIO2_BOARD_INTERFACE {Custom} CONFIG.USE_BOARD_FLOW {true}  ] $axi_gpio_0
+
+  # Create instance: blk_mem_gen_0, and set properties
+  set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
+  set_property -dict [ list CONFIG.Byte_Size {8} CONFIG.Enable_32bit_Address {true} CONFIG.Enable_A {Always_Enabled} CONFIG.Read_Width_A {512} CONFIG.Read_Width_B {512} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Use_Byte_Write_Enable {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Depth_A {32} CONFIG.Write_Width_A {512} CONFIG.Write_Width_B {512} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -167,18 +187,29 @@ proc create_root_design { parentCell } {
   set rst_processing_system7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_processing_system7_0_100M ]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports gpip] [get_bd_intf_pins axi_gpio_0/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_0_GPIO2 [get_bd_intf_ports gpop] [get_bd_intf_pins axi_gpio_0/GPIO2]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins processing_system7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
+  connect_bd_net -net OLED_ip_0_DC [get_bd_ports DC] [get_bd_pins OLED_ip_0/DC]
+  connect_bd_net -net OLED_ip_0_RES [get_bd_ports RES] [get_bd_pins OLED_ip_0/RES]
+  connect_bd_net -net OLED_ip_0_SCLK [get_bd_ports SCLK] [get_bd_pins OLED_ip_0/SCLK]
+  connect_bd_net -net OLED_ip_0_SDIN [get_bd_ports SDIN] [get_bd_pins OLED_ip_0/SDIN]
+  connect_bd_net -net OLED_ip_0_VBAT [get_bd_ports VBAT] [get_bd_pins OLED_ip_0/VBAT]
+  connect_bd_net -net OLED_ip_0_VDD [get_bd_ports VDD] [get_bd_pins OLED_ip_0/VDD]
+  connect_bd_net -net addra_1 [get_bd_ports addra] [get_bd_pins blk_mem_gen_0/addra]
+  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_ports gpio2_io_o] [get_bd_pins axi_gpio_0/gpio2_io_o]
+  connect_bd_net -net blk_mem_gen_0_douta [get_bd_ports douta] [get_bd_pins blk_mem_gen_0/douta]
+  connect_bd_net -net dina_1 [get_bd_ports dina] [get_bd_pins blk_mem_gen_0/dina]
+  connect_bd_net -net gpio_io_i_1 [get_bd_ports gpio_io_i] [get_bd_pins axi_gpio_0/gpio_io_i]
+  connect_bd_net -net oled_data_1 [get_bd_ports oled_data] [get_bd_pins OLED_ip_0/ram_data]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports pclk] [get_bd_pins OLED_ip_0/CLK] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_ports PRST] [get_bd_pins OLED_ip_0/RST] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+  connect_bd_net -net wea_1 [get_bd_ports wea] [get_bd_pins blk_mem_gen_0/wea]
 
   # Create address segments
   create_bd_addr_seg -range 0x10000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
