@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.xpr">
+<Project Version="7" Minor="5" Path="E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="11b0a84c29544b68ba07529a97cf5fa1"/>
@@ -13,7 +13,7 @@
     <Option Name="SourceMgmtMode" Val="None"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../OLED_IP/OLED_porting_2.srcs"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../OLED_IP"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
@@ -28,6 +28,19 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/OLED_ip_0_2/OLED_ip_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/OLED_ip_0_2/OLED_porting_2.srcs/sources_1/ip/charLib.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -62,19 +75,6 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="OLED_ip_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/OLED_ip_0">
-      <File Path="$PSRCDIR/sources_1/ip/OLED_ip_0_1/OLED_ip_0.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="OLED_ip_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -96,20 +96,14 @@
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
     </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="OLED_ip_0_synth_1" Type="Ft3:Synth" SrcSet="OLED_ip_0" Part="xc7z020clg484-1" ConstrsSet="OLED_ip_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/OLED_ip_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -128,22 +122,6 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="OLED_ip_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="OLED_ip_0" Description="Vivado Implementation Defaults" SynthRun="OLED_ip_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
     </Run>
   </Runs>
 </Project>

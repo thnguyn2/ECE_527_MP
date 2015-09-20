@@ -89,6 +89,16 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
+          <spirit:name>PRST</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>gpio_io_i</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -194,16 +204,6 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
-        <spirit:port>
-          <spirit:name>PRST</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>0</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -253,13 +253,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>OLED_ip_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="OLED_ip" spirit:name="OLED_ip" spirit:vendor="Tan_Enyu" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">partA_OLED_ip_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>blk_mem_gen_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="blk_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.2"/>
         <spirit:configurableElementValues>
@@ -272,6 +265,13 @@
           <spirit:configurableElementValue spirit:referenceId="Register_PortA_Output_of_Memory_Primitives">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Use_RSTA_Pin">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="use_bram_block">Stand_Alone</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>OLED_ip_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="central_controller_ip" spirit:name="OLED_ip" spirit:vendor="Tan_Enyu" spirit:version="3.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">partA_OLED_ip_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -295,11 +295,11 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="CLK"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="CLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -309,11 +309,11 @@
       <spirit:adHocConnection>
         <spirit:name>rst_processing_system7_0_100M_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="peripheral_aresetn"/>
+        <spirit:externalPortReference spirit:portRef="PRST"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="RST"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
-        <spirit:externalPortReference spirit:portRef="PRST"/>
+        <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="RST"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_processing_system7_0_100M_interconnect_aresetn</spirit:name>
@@ -329,11 +329,6 @@
         <spirit:name>axi_gpio_0_gpio2_io_o</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="gpio2_io_o"/>
         <spirit:externalPortReference spirit:portRef="gpio2_io_o"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>oled_data_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="oled_data"/>
-        <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="ram_data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>addra_1</spirit:name>
@@ -384,6 +379,11 @@
         <spirit:name>OLED_ip_0_VDD</spirit:name>
         <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="VDD"/>
         <spirit:externalPortReference spirit:portRef="VDD"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>oled_data_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="oled_data"/>
+        <spirit:internalPortReference spirit:componentRef="OLED_ip_0" spirit:portRef="ram_data"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

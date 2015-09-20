@@ -18,14 +18,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_processin
 # IP: bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_rst_processing_system7_0_100M_0 || ORIG_REF_NAME==partA_rst_processing_system7_0_100M_0}]
 
+# IP: bd/partA/ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_blk_mem_gen_0_1 || ORIG_REF_NAME==partA_blk_mem_gen_0_1}]
+
 # IP: bd/partA/ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_OLED_ip_0_1 || ORIG_REF_NAME==partA_OLED_ip_0_1}]
 
 # IP: bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/charLib.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==charLib || ORIG_REF_NAME==charLib}]
-
-# IP: bd/partA/ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_blk_mem_gen_0_1 || ORIG_REF_NAME==partA_blk_mem_gen_0_1}]
 
 # IP: bd/partA/ip/partA_auto_pc_0/partA_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_auto_pc_0 || ORIG_REF_NAME==partA_auto_pc_0}]
@@ -49,12 +49,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0_ooc.xdc
 
-# XDC: bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc
-
-# XDC: ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==partA_OLED_ip_0_1 || ORIG_REF_NAME==partA_OLED_ip_0_1}] {/inst }]/inst ]]
-
 # XDC: bd/partA/ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1_ooc.xdc
+
+# XDC: bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc
 
 # XDC: bd/partA/ip/partA_auto_pc_0/partA_auto_pc_0_ooc.xdc
 

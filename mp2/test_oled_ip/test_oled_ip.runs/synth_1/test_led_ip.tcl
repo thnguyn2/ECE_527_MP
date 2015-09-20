@@ -6,23 +6,31 @@ debug::add_scope template.lib 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.cache/wt [current_project]
-set_property parent.project_path /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.xpr [current_project]
+set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+set_property webtalk.parent_dir E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.cache/wt [current_project]
+set_property parent.project_path E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property ip_repo_paths /home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP/OLED_porting_2.srcs [current_project]
-add_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib.coe
-add_files -quiet /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp
-set_property used_in_implementation false [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.runs/OLED_ip_0_synth_1/OLED_ip_0.dcp]
-read_verilog -library xil_defaultlib /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v
-read_xdc /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc
-set_property used_in_implementation false [get_files /home/thnguyn2/source_code/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
+set_property ip_repo_paths e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP [current_project]
+add_files E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib.coe
+add_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_2/OLED_porting_2.srcs/sources_1/ip/charLib.coe
+read_ip e:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_2/OLED_ip_0.xci
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_2/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc]
+set_property is_locked true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/ip/OLED_ip_0_2/OLED_ip_0.xci]
 
+read_verilog -library xil_defaultlib E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/sources_1/new/test_led_ip.v
+read_xdc E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc
+set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp2/test_oled_ip/test_oled_ip.srcs/constrs_1/new/test_oled_ip_const.xdc]
+
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 synth_design -top test_led_ip -part xc7z020clg484-1
 write_checkpoint -noxdef test_led_ip.dcp
 catch { report_utilization -file test_led_ip_utilization_synth.rpt -pb test_led_ip_utilization_synth.pb }

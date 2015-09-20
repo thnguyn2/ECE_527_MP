@@ -165,7 +165,7 @@ proc create_root_design { parentCell } {
   set wea [ create_bd_port -dir I -from 63 -to 0 wea ]
 
   # Create instance: OLED_ip_0, and set properties
-  set OLED_ip_0 [ create_bd_cell -type ip -vlnv Tan_Enyu:OLED_ip:OLED_ip:1.0 OLED_ip_0 ]
+  set OLED_ip_0 [ create_bd_cell -type ip -vlnv Tan_Enyu:central_controller_ip:OLED_ip:3.0 OLED_ip_0 ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]

@@ -7,7 +7,7 @@
   <spirit:componentInstances>
     <spirit:componentInstance>
       <spirit:instanceName>partA_OLED_ip_0_1</spirit:instanceName>
-      <spirit:componentRef spirit:vendor="Tan_Enyu" spirit:library="OLED_ip" spirit:name="OLED_ip" spirit:version="1.0"/>
+      <spirit:componentRef spirit:vendor="Tan_Enyu" spirit:library="central_controller_ip" spirit:name="OLED_ip" spirit:version="3.0"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">partA_OLED_ip_0_1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:configurableElementValue>

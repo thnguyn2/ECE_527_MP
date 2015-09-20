@@ -1,12 +1,3 @@
 set_property SRC_FILE_INFO {cfile:e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xdc rfile:../../../partA.srcs/sources_1/bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:partA_i/processing_system7_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc rfile:../../../partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc id:2 order:EARLY scoped_inst:partA_i/OLED_ip_0/inst} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3
-set_property src_info {type:SCOPED_XDC file:2 line:4 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCMOS33 [get_ports RST]
-set_property src_info {type:SCOPED_XDC file:2 line:6 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCMOS33 [get_ports CLK]
-set_property src_info {type:SCOPED_XDC file:2 line:15 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN P16 [get_ports RST]
-set_property src_info {type:SCOPED_XDC file:2 line:16 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN Y9 [get_ports CLK]

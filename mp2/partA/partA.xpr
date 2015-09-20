@@ -12,7 +12,7 @@
     <Option Name="BoardPart" Val="em.avnet.com:zed:part0:1.3"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../OLED_IP/OLED_porting_2.srcs"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../OLED_IP"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
@@ -26,29 +26,30 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="partA_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_auto_pc_0/partA_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.v"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="partA_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA.hwh"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.hwdef"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA_bd.tcl"/>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/central_controller.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/partA_wrapper.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/partA/hdl/partA_wrapper.v"/>
           <Attr Name="ImportTime" Val="1442675454"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/central_controller.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

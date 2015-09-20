@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Sat Sep 19 11:47:52 2015
+//Date        : Sat Sep 19 21:38:30 2015
 //Host        : zombie running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target partA.bd
 //Design      : partA

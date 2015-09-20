@@ -113,7 +113,7 @@ module partA_wrapper
   wire [63:0]wea;
 
   //Initialization for the controller module
-  central_controller(.clk(pclk),
+ /* central_controller c1(.clk(pclk),
       .reset(PRST),
       .out_led(out_leds),
       .dip_sw(dip_sw),
@@ -128,6 +128,8 @@ module partA_wrapper
       .gpio_io_o(gpio2_io_o),
       //For interfacing with the OLED_IP module
       .oled_data(oled_data));
+  */
+  
   
     
   partA partA_i

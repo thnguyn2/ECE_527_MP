@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: Tan_Enyu:OLED_ip:OLED_ip:1.0
+// IP VLNV: Tan_Enyu:central_controller_ip:OLED_ip:3.0
 // IP Revision: 2
 
 (* X_CORE_INFO = "OLED_ip,Vivado 2015.1" *)

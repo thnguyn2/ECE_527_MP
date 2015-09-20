@@ -61,17 +61,16 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_veriloginstantiationtemplate</spirit:name>
-        <spirit:displayName>Verilog Instantiation Template</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_veriloginstantiationtemplate_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>ac21baea</spirit:value>
+            <spirit:value>d80b56c7</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -87,7 +86,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Sep 19 16:48:23 UTC 2015</spirit:value>
+            <spirit:value>Thu Jan 01 00:00:00 UTC 1970</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -105,7 +104,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>ac21baea</spirit:value>
+            <spirit:value>d80b56c7</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -121,7 +120,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Sep 19 16:48:23 UTC 2015</spirit:value>
+            <spirit:value>Sun Sep 20 02:38:12 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -140,7 +139,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>ac21baea</spirit:value>
+            <spirit:value>d80b56c7</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -156,76 +155,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Sep 19 16:48:23 UTC 2015</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>StaleAtRelink</spirit:name>
-            <spirit:value>false</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
-        <spirit:displayName>Simulation</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>06db9414</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>customizationCRCversion</spirit:name>
-            <spirit:value>5</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>e4d92fdb</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>boundaryCRCversion</spirit:name>
-            <spirit:value>1</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Sep 19 16:48:23 UTC 2015</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>StaleAtRelink</spirit:name>
-            <spirit:value>false</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
-        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>06db9414</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>customizationCRCversion</spirit:name>
-            <spirit:value>5</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>e4d92fdb</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>boundaryCRCversion</spirit:name>
-            <spirit:value>1</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Sep 19 16:48:23 UTC 2015</spirit:value>
+            <spirit:value>Sun Sep 20 02:38:12 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -243,7 +173,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -263,7 +192,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -283,7 +211,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -296,7 +223,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -309,7 +235,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -322,7 +247,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -335,7 +259,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -348,7 +271,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -365,7 +287,6 @@
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -381,20 +302,43 @@
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
-      <spirit:name>xilinx_veriloginstantiationtemplate_view_fileset</spirit:name>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>partA_OLED_ip_0_1.veo</spirit:name>
-        <spirit:userFileType>verilogTemplate</spirit:userFileType>
+        <spirit:name>partA_OLED_ip_0_1.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>partA_OLED_ip_0_1_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>partA_OLED_ip_0_1_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>partA_OLED_ip_0_1_funcsim.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>partA_OLED_ip_0_1_funcsim.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/constrs_1/new/OLED_porting_2_constr.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>OLED_porting_2.srcs/sources_1/ip/charLib/charLib.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
@@ -404,23 +348,23 @@
         <spirit:userFileType>coe</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v</spirit:name>
+        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v</spirit:name>
+        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v</spirit:name>
+        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v</spirit:name>
+        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v</spirit:name>
+        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -432,47 +376,8 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>OLED_porting_2.srcs/sources_1/ip/charLib/charLib.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>OLED_porting_2.srcs/sources_1/ip/charLib.coe</spirit:name>
-        <spirit:userFileType>coe</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/tan_enyu/oled_ip_v1_0/6bd001c5/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>sim/partA_OLED_ip_0_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>OLED_ip_v1_0</spirit:description>
+  <spirit:description>OLED_ip_v3_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -487,13 +392,12 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>OLED_ip_v1_0</xilinx:displayName>
+      <xilinx:displayName>OLED_ip_v3_0</xilinx:displayName>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-09-18T04:00:53Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2015-09-20T01:46:28Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="user.org:user:OLED_ip:1.0_ARCHIVE_LOCATION">/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
-        <xilinx:tag xilinx:name="Tan_Enyu:user:OLED_ip:1.0_ARCHIVE_LOCATION">/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
-        <xilinx:tag xilinx:name="Tan_Enyu:OLED_ip:OLED_ip:1.0_ARCHIVE_LOCATION">/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
+        <xilinx:tag xilinx:name="Tan_Enyu:central_controller_ip:OLED_ip:1.0_ARCHIVE_LOCATION">E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
+        <xilinx:tag xilinx:name="Tan_Enyu:central_controller_ip:OLED_ip:3.0_ARCHIVE_LOCATION">E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="user_prop"/>
@@ -503,7 +407,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="de8923ff"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f4a32266"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="66bbef64"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="2bb73b7c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="694ca652"/>
     </xilinx:packagingInfo>

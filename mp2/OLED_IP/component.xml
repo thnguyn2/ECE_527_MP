@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>Tan_Enyu</spirit:vendor>
-  <spirit:library>OLED_IP</spirit:library>
+  <spirit:library>central_controller_ip</spirit:library>
   <spirit:name>OLED_ip</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:version>3.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>RST</spirit:name>
@@ -66,7 +66,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d03751cf</spirit:value>
+            <spirit:value>f6db842f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -84,7 +84,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d03751cf</spirit:value>
+            <spirit:value>f6db842f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -98,7 +98,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f92e9879</spirit:value>
+            <spirit:value>f64a5dae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -264,7 +264,7 @@
       <spirit:file>
         <spirit:name>OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f73e167a</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_3acdc453</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -321,18 +321,18 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/OLED_ip_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/OLED_ip_v3_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
         <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>OLED_ip_v1_0</spirit:description>
+  <spirit:description>OLED_ip_v3_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">OLED_ip_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">OLED_ip_v3_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -343,17 +343,18 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>OLED_ip_v1_0</xilinx:displayName>
+      <xilinx:displayName>OLED_ip_v3_0</xilinx:displayName>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-09-18T04:50:42Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2015-09-20T01:46:28Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="Tan_Enyu:OLED_IP:OLED_ip:1.0_ARCHIVE_LOCATION">/home/thnguyn2/source_code/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
+        <xilinx:tag xilinx:name="Tan_Enyu:central_controller_ip:OLED_ip:1.0_ARCHIVE_LOCATION">E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
+        <xilinx:tag xilinx:name="Tan_Enyu:central_controller_ip:OLED_ip:3.0_ARCHIVE_LOCATION">E:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="de8923ff"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d03e6956"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="66bbef64"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="2bb73b7c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="694ca652"/>
     </xilinx:packagingInfo>

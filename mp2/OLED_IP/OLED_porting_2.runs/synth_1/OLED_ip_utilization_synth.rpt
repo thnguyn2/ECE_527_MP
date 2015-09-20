@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Thu Sep 17 23:48:08 2015
-| Host         : zombie running 64-bit Ubuntu 14.04.3 LTS
+| Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
+| Date         : Sat Sep 19 19:58:27 2015
+| Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file OLED_ip_utilization_synth.rpt -pb OLED_ip_utilization_synth.pb
 | Design       : OLED_ip
 | Device       : xc7z020
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1424 |     0 |     53200 |  2.68 |
-|   LUT as Logic          | 1424 |     0 |     53200 |  2.68 |
+| Slice LUTs*             | 1423 |     0 |     53200 |  2.67 |
+|   LUT as Logic          | 1423 |     0 |     53200 |  2.67 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |  902 |     0 |    106400 |  0.85 |
 |   Register as Flip Flop |  902 |     0 |    106400 |  0.85 |
@@ -146,13 +146,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  988 |                 LUT |
+| LUT6     |  984 |                 LUT |
 | FDRE     |  868 |        Flop & Latch |
 | IBUF     |  514 |                  IO |
 | LUT5     |  201 |                 LUT |
-| LUT2     |  193 |                 LUT |
-| LUT4     |  154 |                 LUT |
-| LUT3     |   96 |                 LUT |
+| LUT2     |  194 |                 LUT |
+| LUT4     |  158 |                 LUT |
+| LUT3     |   97 |                 LUT |
 | MUXF7    |   87 |               MuxFx |
 | LUT1     |   43 |                 LUT |
 | FDSE     |   34 |        Flop & Latch |
