@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2015.1" bd:top="partA" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2015.1" bd:top="partA" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -118,6 +118,12 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
+          <spirit:name>PRSTN</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>gpio_io_i</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -229,12 +235,6 @@
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
-        <spirit:port>
-          <spirit:name>PRSTN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -335,8 +335,8 @@
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_RESET0_N"/>
-        <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="ext_reset_in"/>
         <spirit:externalPortReference spirit:portRef="PRSTN"/>
+        <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="ext_reset_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_processing_system7_0_100M_interconnect_aresetn</spirit:name>

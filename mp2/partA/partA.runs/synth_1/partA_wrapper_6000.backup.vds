@@ -1,0 +1,1394 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Mon Sep 21 07:37:07 2015
+# Process ID: 6192
+# Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/partA_wrapper.vds
+# Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source partA_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
+Command: synth_design -top partA_wrapper -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 288.922 ; gain = 111.602
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'partA_wrapper' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:12]
+	Parameter ModeRst bound to: 4'b0000 
+	Parameter ModeInit bound to: 4'b0001 
+	Parameter ModeInitDone bound to: 4'b0010 
+	Parameter ModeRcvTestVector bound to: 4'b0011 
+	Parameter ModeWriteTestVectorToRam bound to: 4'b0100 
+INFO: [Synth 8-638] synthesizing module 'partA' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:13]
+INFO: [Synth 8-638] synthesizing module 'GND' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-638] synthesizing module 'partA_OLED_ip_0_1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/synth/partA_OLED_ip_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'OLED_ip' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
+INFO: [Synth 8-638] synthesizing module 'Delay' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (4#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
+INFO: [Synth 8-638] synthesizing module 'OledEX' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
+INFO: [Synth 8-638] synthesizing module 'charLib' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_INIT_FILE bound to: charLib.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:264]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_INIT_FILE bound to: charLib.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_INIT_FILE bound to: charLib.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_ALGORITHM_i bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA_ALGO bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA_i bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB_ALGO bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RSTA_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_REGCEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WEA_I_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_WIDTH_A_CORE bound to: 8 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_ADDRA_WIDTH_CORE bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RSTB_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_REGCEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WEB_I_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_WIDTH_B_CORE bound to: 8 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_ADDRB_WIDTH_CORE bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_A bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_B bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192945]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192949]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192953]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192957]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192971]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
+	Parameter C_USER_WIDTH bound to: 8 - type: integer 
+	Parameter C_USER_DEPTH bound to: 2048 - type: integer 
+	Parameter C_TOTAL_PRIMS bound to: 1 - type: integer 
+	Parameter C_DEPTH_RESOLUTION bound to: 2048 - type: integer 
+	Parameter C_START_WIDTH bound to: 320000'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_START_DEPTH bound to: 320000'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_PRIM_WIDTH bound to: 320000'b0000000000000000000000000000100100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_PRIM_DEPTH bound to: 320000'b0000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_USED_WIDTH bound to: 320000'b0000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RSTA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_REGCEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA_i bound to: 0 - type: integer 
+	Parameter C_WE_WIDTH_A bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_RATIO_WA bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_RATIO_RA bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RSTB_WIDTH bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_REGCEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
+	Parameter C_WE_WIDTH_B bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_RATIO_WB bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_RATIO_RB bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_A bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
+	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: bool 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_USER_WIDTH bound to: 8 - type: integer 
+	Parameter C_USER_DEPTH bound to: 2048 - type: integer 
+	Parameter C_START_WIDTH bound to: 0 - type: integer 
+	Parameter C_START_DEPTH bound to: 0 - type: integer 
+	Parameter C_PRIM_WIDTH bound to: 9 - type: integer 
+	Parameter C_PRIM_DEPTH bound to: 2048 - type: integer 
+	Parameter C_USED_WIDTH bound to: 8 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 8'b00000000 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_RATIO_WA bound to: 1 - type: integer 
+	Parameter C_RATIO_RA bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 8'b00000000 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_RATIO_WB bound to: 1 - type: integer 
+	Parameter C_RATIO_RB bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
+	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: bool 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_MEM_ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter C_MEM_ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+INFO: [Synth 8-3919] null assignment ignored [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_USER_WIDTH bound to: 8 - type: integer 
+	Parameter C_USER_DEPTH bound to: 2048 - type: integer 
+	Parameter C_START_WIDTH bound to: 0 - type: integer 
+	Parameter C_START_DEPTH bound to: 0 - type: integer 
+	Parameter C_PRIM_WIDTH bound to: 9 - type: integer 
+	Parameter C_PRIM_DEPTH bound to: 2048 - type: integer 
+	Parameter C_USED_WIDTH bound to: 8 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_USE_BYTE_WE bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_SSRA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_SINITA_VAL bound to: 9'b000000000 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 9 - type: integer 
+	Parameter C_RATIO_WA bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 9 - type: integer 
+	Parameter C_RATIO_RA bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter C_HAS_SSRB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_SINITB_VAL bound to: 9'b000000000 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 9 - type: integer 
+	Parameter C_RATIO_WB bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 9 - type: integer 
+	Parameter C_RATIO_RB bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
+	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: bool 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_MEM_ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter C_MEM_ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+	Parameter DOA_REG bound to: 0 - type: integer 
+	Parameter DOB_REG bound to: 0 - type: integer 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_08 bound to: 256'b0000000000100100001001100011110001100100001001100011110001100100000000000000000000000000000000110000000000000011000000000000000000000000000000000000000000000000010111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_09 bound to: 256'b0000000000000000000000000000000000000011000000000000000000000000000000000010100001011000001000100101010101001110010100000010000000000000001000010101001000100100000010000001001000100101010000100000000000110010010010010100100101111111010010010100100100100110 
+	Parameter INIT_0A bound to: 256'b0000000000000000000010000000100000111110000010000000100000000000000000000001010100010101000011100000111000010101000101010000000000000000000000000001110000100010010000010000000000000000000000000000000000000000000000000100000100100010000111000000000000000000 
+	Parameter INIT_0B bound to: 256'b0000000000000001000000100000010000001000000100000010000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000100000001000000010000000100000001000000000000000000000000000000000000011000001010000000000000000000000000000 
+	Parameter INIT_0C bound to: 256'b0000000000000000001101100100100101001001010000010010001000000000000000000000000001101110010010010101000101100001010000100000000000000000000000000000000001000000011111110100000100000000000000000000000000000000001111100100000101000001010000010011111000000000 
+	Parameter INIT_0D bound to: 256'b0000000000000000000000110000110100010001001000010100001100000000000000000000000001110000010010000100100101001010001111000000000000000000000000000111000101001001010010010100100100100111000000000000000000000000000100000111111100010010000101000001100000000000 
+	Parameter INIT_0E bound to: 256'b0000000000000000000000000011000001010010000000000000000000000000000000000000000000000000000000000001001000000000000000000000000000000000000000000001111000101001010010010000100100000110000000000000000000000000001101100100100101001001010010010011011000000000 
+	Parameter INIT_0F bound to: 256'b0000000000000000000000100000010101011001000000010000001000000000000000000000000000001000000101000001010000100010000000000000000000000000000101000001010000010100000101000001010000010100000000000000000000000000001000100001010000010100000010000000000000000000 
+	Parameter INIT_10 bound to: 256'b0000000000100010010000010100000101000001010000010010001000011100000000000011011001001001010010010100100101001001011111110100000100000000010000000111110001001010000010010100101001111100010000000000000000101110010100010100110101010101010111010100000100111110 
+	Parameter INIT_11 bound to: 256'b0000000000001000001110100100100101001001010000010010001000011100000000000000001100000001000111010000100101001001011111110100000100000000011000110100000101011101010010010100100101111111010000010000000000011100001000100100000101000001010000010111111101000001 
+	Parameter INIT_12 bound to: 256'b0000000001000001011000010001001000001100000010000111111101000001000000000000000100000001001111110100000101000001010000000011000000000000000000000100000101000001011111110100000101000001000000000000000001000001011111110000100000001000000010000111111101000001 
+	Parameter INIT_13 bound to: 256'b0000000000011100001000100100000101000001010000010010001000011100000000000000000101111111000100010000110001000010011111110100000100000000010000010111111101000010000011000100001001111111010000010000000001100000010000000100000001000000010000010111111101000001 
+	Parameter INIT_14 bound to: 256'b0000000000110011010010010100100101001001010010010100100101100110000000000100011001101001000110010000100100001001011111110100000100000000010011000101001001100001001000010010000100010010000011000000000000000110000010010000100100001001010010010111111101000001 
+	Parameter INIT_15 bound to: 256'b0000000000000001000111110110000100010100011000010001111100000001000000000000000100001111001100010100000000110001000011110000000100000000000000010011111101000001010000000100000100111111000000010000000000000011000000010100000101111111010000010000000100000011 
+	Parameter INIT_16 bound to: 256'b0000000000000000000000000100000101000001011111110000000000000000000000000110000101000011010001010100100101010001011000010100001100000000000000010000001101000100011110000100010000000011000000010000000001000001010000010011011000001000001101100100000101000001 
+	Parameter INIT_17 bound to: 256'b0000000001000000010000000100000001000000010000000100000000000000000000000000010000000010000000010000000100000010000001000000000000000000000000000000000001111111010000010100000100000000000000000000000001000000001000000001000000001000000001000000001000000001 
+	Parameter INIT_18 bound to: 256'b0000000000000000001001000100001001000010010000100011110000000000000000000011000001001000010010000100100000111111010000010000000000000000010000000011110001001010010010100100101000110100000000000000000000000000000000000000000000000000000000100000000100000000 
+	Parameter INIT_19 bound to: 256'b0000000000000001001111110100100101001001010010010010011000000000000000000000000000001001010010010111111001001000000000000000000000000000000000000010110001001010010010100100101000111100000000000000000001000000001111110100100101001000010010000011000000000000 
+	Parameter INIT_1A bound to: 256'b0000000001000010010000100010010000011000000100000111111101000001000000000000000000000000001111010100010001000000000000000000000000000000000000000000000001000000011111010100010000000000000000000000000001000000011110000100010000000100010010000111111101000001 
+	Parameter INIT_1B bound to: 256'b0000000000000000001111000100001001000010010000100011110000000000000000000100000001111100010000100000001001000100011111100100001000000000010000000111111000000010011111000000001001111110010000100000000000000000010000000100000001111111010000010100000000000000 
+	Parameter INIT_1C bound to: 256'b0000000000000000001101100100101001001010010010100110010000000000000000000000010000000010000000100100010001111110010000100000000000000000010000010111111101001001000010010000100100000110000000000000000000000110000010010000100101001001011111110100000100000000 
+	Parameter INIT_1D bound to: 256'b0000000000000010000111100110001000011000011000100001111000000010000000000000001000001110001100100100000000110010000011100000001001000000011111100010001001000000010000000011111000000010000000000000000000000000001000000100010001000100001111110000010000000000 
+	Parameter INIT_1E bound to: 256'b0000000000000000000000000100000100110110000010000000000000000000000000000110001001000110010010100101001001100010010001100000000000000000000000010000001100000101001110000100010101000011000000010000000001000010011000100001010000001000000101000110001001000010 
+	Parameter INIT_1F bound to: 256'b0101010110101010010101011010101001010101101010100101010110101010000000000001100000010000000100000000100000001000000110000000000000000000000000000000100000110110010000010000000000000000000000000000000000000000000000000000000001111111000000000000000000000000 
+	Parameter INIT_20 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_21 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_22 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_23 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_24 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_25 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_26 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_27 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_28 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_29 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_2A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_2B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_2C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_2D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_2E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_2F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_30 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_31 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_32 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_33 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_34 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_35 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_36 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_37 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_38 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_39 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_A bound to: 18'b000000000000000000 
+	Parameter INIT_B bound to: 20'b00000000000000000000 
+	Parameter INIT_FILE bound to: NONE - type: string 
+	Parameter IS_CLKARDCLK_INVERTED bound to: 1'b0 
+	Parameter IS_CLKBWRCLK_INVERTED bound to: 1'b0 
+	Parameter IS_ENARDEN_INVERTED bound to: 1'b0 
+	Parameter IS_ENBWREN_INVERTED bound to: 1'b0 
+	Parameter IS_RSTRAMARSTRAM_INVERTED bound to: 1'b0 
+	Parameter IS_RSTRAMB_INVERTED bound to: 1'b0 
+	Parameter IS_RSTREGARSTREG_INVERTED bound to: 1'b0 
+	Parameter IS_RSTREGB_INVERTED bound to: 1'b0 
+	Parameter RAM_MODE bound to: TDP - type: string 
+	Parameter RDADDR_COLLISION_HWCONFIG bound to: PERFORMANCE - type: string 
+	Parameter READ_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_WIDTH_B bound to: 9 - type: integer 
+	Parameter RSTREG_PRIORITY_A bound to: REGCE - type: string 
+	Parameter RSTREG_PRIORITY_B bound to: REGCE - type: string 
+	Parameter SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter SRVAL_A bound to: 18'b000000000000000000 
+	Parameter SRVAL_B bound to: 20'b00000000000000000000 
+	Parameter WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_WIDTH_A bound to: 9 - type: integer 
+	Parameter WRITE_WIDTH_B bound to: 9 - type: integer 
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:101785]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185631]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185784]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A_CORE bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B_CORE bound to: 8 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (10#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (11#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (12#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'charLib' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'OledEX' (14#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
+INFO: [Synth 8-256] done synthesizing module 'OLED_ip' (15#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
+INFO: [Synth 8-256] done synthesizing module 'partA_OLED_ip_0_1' (16#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/synth/partA_OLED_ip_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-256] done synthesizing module 'VCC' (17#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-638] synthesizing module 'partA_axi_gpio_0_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_axi_gpio_0_0/synth/partA_axi_gpio_0_0.vhd:85]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 1 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:189' bound to instance 'U0' of component 'axi_gpio' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_axi_gpio_0_0/synth/partA_axi_gpio_0_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:282]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 1 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
+	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:219]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/axi_lite_ipif.vhd:249]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000111111111 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:239]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_IPIF_ABUS_WIDTH bound to: 9 - type: integer 
+	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/address_decoder.vhd:190]
+	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b00 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (18#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b01 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (18#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b10 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (18#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b11 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (18#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (19#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/address_decoder.vhd:190]
+INFO: [Synth 8-226] default block is never used [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:448]
+INFO: [Synth 8-4512] found unpartitioned construct node [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:417]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (20#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (21#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/axi_lite_ipif.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
+	Parameter C_DW bound to: 32 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
+	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-226] default block is never used [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:579]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 32 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:671]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:707]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:723]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:739]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:739]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:739]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (22#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (23#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (24#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'partA_axi_gpio_0_0' (25#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_axi_gpio_0_0/synth/partA_axi_gpio_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'partA_blk_mem_gen_0_1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_blk_mem_gen_0_1/synth/partA_blk_mem_gen_0_1.vhd:69]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: NONE - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 8 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     53.604396 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_blk_mem_gen_0_1/synth/partA_blk_mem_gen_0_1.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:264]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: NONE - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 8 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     53.604396 mW - type: string 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: NONE - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_ALGORITHM_i bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA_ALGO bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA_i bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 32 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 5 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB_ALGO bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 64 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 512 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 32 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 5 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]

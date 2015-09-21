@@ -149,6 +149,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set DC [ create_bd_port -dir O DC ]
+  set PRSTN [ create_bd_port -dir O PRSTN ]
   set RES [ create_bd_port -dir O RES ]
   set SCLK [ create_bd_port -dir O SCLK ]
   set SDIN [ create_bd_port -dir O SDIN ]
@@ -207,7 +208,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net oled_data_1 [get_bd_ports oled_data] [get_bd_pins OLED_ip_0/ram_data]
   connect_bd_net -net oled_rst_1 [get_bd_ports oled_rst] [get_bd_pins OLED_ip_0/RST]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports pclk] [get_bd_pins OLED_ip_0/CLK] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_ports PRSTN] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
   connect_bd_net -net wea_1 [get_bd_ports wea] [get_bd_pins blk_mem_gen_0/wea]

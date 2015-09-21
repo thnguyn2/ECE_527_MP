@@ -1,10 +1,10 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
--- Date        : Sat Sep 19 21:13:11 2015
+-- Date        : Mon Sep 21 13:59:06 2015
 -- Host        : zombie running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode synth_stub
---               e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1_stub.vhdl
+--               E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1_stub.vhdl
 -- Design      : partA_OLED_ip_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

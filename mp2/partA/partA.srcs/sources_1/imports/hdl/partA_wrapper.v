@@ -119,15 +119,26 @@ module partA_wrapper
   reg [7:0] reg_out_leds;
   reg [511:0] reg_oled_data;
   //Define the finite state machine for the controller module
-  parameter ModeRst = 4'd0, ModeInit = 4'd1, ModeInitDone = 4'd2, ModeRcvTestVector = 4'd3, ModeWriteTestVectorToRam = 4'd4;
+  parameter ModeRst = 4'd0, ModeInit = 4'd1, ModeRcvTestVector = 4'd2, ModeWriteTestVector = 4'd3, ModeWriteTestVectorToRam = 4'd4;
   
   reg [3:0] cur_state;
   reg [3:0] next_state;
-  
+  reg initDone;
+  reg rcvDone;
+  reg bramWriteDone;
+  reg [511:0] reg_dina;
+  reg [31:0] reg_addra;
+  reg [63:0] reg_wea;
   //Define the output logics based on register variables
   assign out_leds[3:0] = reg_out_leds[3:0];
   assign out_leds[7] = pclk;
   assign out_leds[6] = prstn;
+  assign oled_data = reg_oled_data; 
+  assign dina = reg_dina;
+  assign addra = reg_addra;
+  assign wea = reg_wea;
+  
+  
  
   //Define logics at the initial state
   initial
@@ -139,14 +150,43 @@ module partA_wrapper
   //Next state logic - Not that the pclk is enable only when the program is downloaded in the ZynQ processor
   always @(posedge pclk)
   begin
-        if (RST)
-        begin
+        if (RST) begin
             next_state <= ModeInit;
-        end
+        end 
         else
         begin
-            cur_state <= next_state;
+            case (cur_state)
+                ModeInit:
+                    begin
+                        if (initDone)
+                        begin
+                            next_state <=ModeRcvTestVector;          
+                        end          
+                   end
+                ModeRcvTestVector:
+                    begin
+                        if (rcvDone)
+                        begin
+                            next_state <= ModeWriteTestVector;
+                        end
+                    end
+                ModeWriteTestVector:
+                    begin
+                        if (bramWriteDone)
+                        begin
+                            
+                        end
+                    end
+                default:
+                    begin
+                    end    
+            endcase
         end
+  end
+  
+  always @(posedge pclk)
+  begin
+    cur_state <=next_state;
   end
   
   //Output logic corresponding to each FSM state
@@ -155,18 +195,32 @@ module partA_wrapper
     case (cur_state)
         ModeRst:
             begin
-                reg_out_leds [3:0] =4'd1;
+                reg_out_leds [3:0] =4'd0;
                 reg_oled_rst = 1; 
             end
         ModeInit:
             begin
-                reg_out_leds [3:0] =4'd2;
+                reg_out_leds [3:0] =4'd1;
                 reg_oled_rst = 0; //Generate the reset signal for the OLED
-                reg_oled_data = 8'h31;
+                reg_oled_data = 512'h31; //Init mode
+                initDone = 1; //Allow moving to next state
+                      
             end
-        ModeInitDone:
+       ModeRcvTestVector:
             begin
+                reg_out_leds [3:0] =4'd2;
+                rcvDone = 1;             
             end
+       ModeWriteTestVector:
+             begin
+                   //Write a few data to BRAM
+                   reg_addra = 32'd0;
+                   reg_dina = 512'h48;
+                   reg_wea = 64'h1;
+                   reg_out_leds [3:0] = 4'd3;
+                   reg_oled_data = 512'h33; //Init mode
+                   bramWriteDone = 1;                                                
+             end                   
        default:
             begin
             end

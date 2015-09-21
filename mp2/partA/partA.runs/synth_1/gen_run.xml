@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442837788">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442861561">
   <File Type="RDS-DCP" Name="partA_wrapper.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="partA_wrapper_utilization_synth.pb"/>
@@ -58,4 +58,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="partA_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_blk_mem_gen_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_rst_processing_system7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_OLED_ip_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_auto_pc_0"/>
 </GenRun>

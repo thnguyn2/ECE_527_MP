@@ -12,12 +12,13 @@ source partA_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Ubuntu_source_code_data/ECE_527_MP/mp2/OLED_IP'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 229.836 ; gain = 38.328
 Command: synth_design -top partA_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 288.801 ; gain = 111.563
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 284.090 ; gain = 106.035
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'partA_wrapper' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:12]
 	Parameter ModeRst bound to: 4'b0000 
@@ -28,311 +29,673 @@ INFO: [Synth 8-638] synthesizing module 'partA_wrapper' [E:/Ubuntu_source_code_d
 INFO: [Synth 8-638] synthesizing module 'partA' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:13]
 INFO: [Synth 8-638] synthesizing module 'GND' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
-INFO: [Synth 8-638] synthesizing module 'partA_OLED_ip_0_1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/synth/partA_OLED_ip_0_1.v:56]
-INFO: [Synth 8-638] synthesizing module 'OLED_ip' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OLED_ip.v:17]
-INFO: [Synth 8-638] synthesizing module 'OledInit' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
-INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
-INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.v:19]
-INFO: [Synth 8-638] synthesizing module 'Delay' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
-INFO: [Synth 8-256] done synthesizing module 'Delay' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/Delay.v:17]
-INFO: [Synth 8-256] done synthesizing module 'OledInit' (4#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledInit.v:17]
-INFO: [Synth 8-638] synthesizing module 'OledEX' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/tan_enyu/oled_ip_v3_0/47f580aa/OLED_porting_2.srcs/sources_1/imports/PmodOLED_Source/OledEX.v:19]
-INFO: [Synth 8-638] synthesizing module 'charLib' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:67]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
-	Parameter C_AXI_TYPE bound to: 1 - type: integer 
-	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 3 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
-	Parameter C_INIT_FILE bound to: charLib.mem - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_HAS_RSTA bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_USE_URAM bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
-	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/synth/charLib.vhd:221]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2.vhd:264]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
-	Parameter C_AXI_TYPE bound to: 1 - type: integer 
-	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 3 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
-	Parameter C_INIT_FILE bound to: charLib.mem - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_HAS_RSTA bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_USE_URAM bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
-	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
-	Parameter C_AXI_TYPE bound to: 1 - type: integer 
-	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
-	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
-	Parameter C_MEM_TYPE bound to: 3 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
-	Parameter C_INIT_FILE bound to: charLib.mem - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_RST_TYPE bound to: sync - type: string 
-	Parameter C_HAS_RSTA bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
-	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
-	Parameter C_FAMILY bound to: virtex6 - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_MEM_TYPE bound to: 3 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_ALGORITHM_i bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: charLib.mif - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_RST_TYPE bound to: sync - type: string 
-	Parameter C_HAS_RSTA bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA_ALGO bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA_i bound to: 0 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB_ALGO bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/834889ee/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+INFO: [Synth 8-638] synthesizing module 'partA_OLED_ip_0_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_OLED_ip_0_1_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_OLED_ip_0_1' (2#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_OLED_ip_0_1_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-256] done synthesizing module 'VCC' (3#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-638] synthesizing module 'partA_axi_gpio_0_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_axi_gpio_0_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_axi_gpio_0_0' (4#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_axi_gpio_0_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_blk_mem_gen_0_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_blk_mem_gen_0_1_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_blk_mem_gen_0_1' (5#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_blk_mem_gen_0_1_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_processing_system7_0_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_processing_system7_0_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_processing_system7_0_0' (6#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_processing_system7_0_0_stub.v:7]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'partA_processing_system7_0_0' requires 78 connections, but only 63 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:244]
+INFO: [Synth 8-638] synthesizing module 'partA_processing_system7_0_axi_periph_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:380]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1D0TYCK' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:685]
+INFO: [Synth 8-638] synthesizing module 'partA_auto_pc_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_auto_pc_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_auto_pc_0' (7#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_auto_pc_0_stub.v:7]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'partA_auto_pc_0' requires 59 connections, but only 57 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:920]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1D0TYCK' (8#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:685]
+INFO: [Synth 8-256] done synthesizing module 'partA_processing_system7_0_axi_periph_0' (9#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:380]
+INFO: [Synth 8-638] synthesizing module 'partA_rst_processing_system7_0_100M_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_rst_processing_system7_0_100M_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_rst_processing_system7_0_100M_0' (10#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/realtime/partA_rst_processing_system7_0_100M_0_stub.v:7]
+WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'partA_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:370]
+INFO: [Synth 8-256] done synthesizing module 'partA' (11#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:13]
+WARNING: [Synth 8-3848] Net addra in module/entity partA_wrapper does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:109]
+WARNING: [Synth 8-3848] Net dina in module/entity partA_wrapper does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:110]
+WARNING: [Synth 8-3848] Net gpio_io_i in module/entity partA_wrapper does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:113]
+WARNING: [Synth 8-3848] Net wea in module/entity partA_wrapper does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:117]
+INFO: [Synth 8-256] done synthesizing module 'partA_wrapper' (12#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:12]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port out_leds[5]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port out_leds[4]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port push_btn
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[7]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[6]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[5]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[4]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[3]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[2]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[1]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 318.238 ; gain = 140.184
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[31] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[30] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[29] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[28] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[27] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[26] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[25] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[24] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[23] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[22] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[21] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[20] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[19] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[18] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[17] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[16] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[15] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[14] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[13] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[12] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[11] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[10] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[9] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[8] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[7] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[6] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[5] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[4] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:addra[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[511] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[510] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[509] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[508] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[507] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[506] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[505] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[504] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[503] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[502] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[501] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[500] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[499] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[498] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[497] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[496] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[495] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[494] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[493] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[492] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[491] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[490] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[489] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[488] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[487] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[486] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[485] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[484] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[483] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[482] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[481] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[480] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[479] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[478] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[477] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[476] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[475] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[474] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[473] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[472] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[471] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[470] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[469] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[468] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[467] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[466] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[465] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[464] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[463] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[462] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[461] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[460] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[459] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[458] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[457] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[456] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[455] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[454] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[453] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[452] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[451] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[450] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[449] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[448] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[447] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[446] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[445] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:dina[444] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:198]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 318.238 ; gain = 140.184
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc] for cell 'partA_i/processing_system7_0'
+Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc] for cell 'partA_i/processing_system7_0'
+Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/constrs_1/new/partA_constr.xdc]
+Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/constrs_1/new/partA_constr.xdc]
+Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 606.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-7576-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property DONT_TOUCH = true for partA_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/OLED_ip_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/processing_system7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for partA_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "reg_out_leds" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_oled_rst" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_oled_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'reg_out_leds_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:128]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_oled_data_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:131]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_oled_rst_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:175]
+WARNING: [Synth 8-327] inferring latch for variable 'initDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:182]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module partA_wrapper 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port out_leds[5]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port out_leds[4]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port push_btn
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[7]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[6]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[5]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[4]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[3]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[2]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[1]
+WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 606.313 ; gain = 428.258
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\next_state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\reg_oled_data_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_oled_data_reg[511] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_out_leds_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cur_state_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[3] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[2] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[511] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[510] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[509] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[508] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[507] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[506] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[505] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[504] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[503] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[502] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[501] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[500] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[499] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[498] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[497] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[496] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[495] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[494] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[493] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[492] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[491] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[490] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[489] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[488] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[487] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[486] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[485] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[484] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[483] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[482] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[481] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[480] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[479] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[478] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[477] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[476] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[475] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[474] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[473] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[472] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[471] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[470] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[469] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[468] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[467] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[466] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[465] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[464] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[463] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[462] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[461] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[460] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[459] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[458] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[457] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[456] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[455] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[454] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[453] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[452] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[451] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[450] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[449] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[448] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[447] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[446] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[445] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[444] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[443] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[442] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[441] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[440] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[439] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[438] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[437] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[436] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[435] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[434] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[433] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[432] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[431] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[430] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[429] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[428] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[427] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[426] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[425] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[424] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[423] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[422] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[421] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[420] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[419] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[418] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[417] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[416] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[415] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_oled_data_reg[414] ) is unused and will be removed from module partA_wrapper.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:50 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:50 . Memory (MB): peak = 606.313 ; gain = 428.258
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:50 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:15 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:15 . Memory (MB): peak = 606.313 ; gain = 428.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:15 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------+----------+
+|      |BlackBox name                         |Instances |
++------+--------------------------------------+----------+
+|1     |partA_OLED_ip_0_1                     |         1|
+|2     |partA_axi_gpio_0_0                    |         1|
+|3     |partA_blk_mem_gen_0_1                 |         1|
+|4     |partA_processing_system7_0_0          |         1|
+|5     |partA_auto_pc_0                       |         1|
+|6     |partA_rst_processing_system7_0_100M_0 |         1|
++------+--------------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------------+------+
+|      |Cell                                  |Count |
++------+--------------------------------------+------+
+|1     |partA_OLED_ip_0_1                     |     1|
+|2     |partA_auto_pc_0                       |     1|
+|3     |partA_axi_gpio_0_0                    |     1|
+|4     |partA_blk_mem_gen_0_1                 |     1|
+|5     |partA_processing_system7_0_0          |     1|
+|6     |partA_rst_processing_system7_0_100M_0 |     1|
+|7     |GND                                   |     1|
+|8     |LUT1                                  |     2|
+|9     |LUT2                                  |     2|
+|10    |LUT4                                  |     2|
+|11    |VCC                                   |     1|
+|12    |FDRE                                  |     4|
+|13    |LD                                    |     3|
+|14    |IBUF                                  |     1|
+|15    |OBUF                                  |    12|
+|16    |OBUFT                                 |     2|
++------+--------------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------------+----------------------------------------+------+
+|      |Instance                            |Module                                  |Cells |
++------+------------------------------------+----------------------------------------+------+
+|1     |top                                 |                                        |  1007|
+|2     |  partA_i                           |partA                                   |   979|
+|3     |    processing_system7_0_axi_periph |partA_processing_system7_0_axi_periph_0 |   177|
+|4     |      s00_couplers                  |s00_couplers_imp_1D0TYCK                |   177|
++------+------------------------------------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1174 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 624.813 ; gain = 95.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 624.813 ; gain = 446.758
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  LD => LDCE: 2 instances
+  LD => LDCE (inverted pins: G): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 233 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 624.813 ; gain = 394.977
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 624.813 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 14:00:31 2015...

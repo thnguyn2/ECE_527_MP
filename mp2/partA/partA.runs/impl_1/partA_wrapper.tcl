@@ -44,8 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set rc [catch {
@@ -63,6 +61,18 @@ set rc [catch {
 } [current_project]
   set_property ip_output_repo e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.cache/ip [current_project]
   add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/partA_wrapper.dcp
+  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.dcp
+  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.dcp]
+  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.dcp
+  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.dcp]
+  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.dcp
+  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.dcp]
+  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.dcp
+  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.dcp]
+  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.dcp
+  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.dcp]
+  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_auto_pc_0/partA_auto_pc_0.dcp
+  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_auto_pc_0/partA_auto_pc_0.dcp]
   read_xdc -ref partA_processing_system7_0_0 -cells inst e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xdc
   set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xdc]
   read_xdc -prop_thru_buffers -ref partA_axi_gpio_0_0 -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0_board.xdc

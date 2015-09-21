@@ -24,35 +24,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_blk_mem_g
 # IP: bd/partA/ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_OLED_ip_0_1 || ORIG_REF_NAME==partA_OLED_ip_0_1}]
 
-# IP: bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/charLib.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==charLib || ORIG_REF_NAME==charLib}]
-
 # IP: bd/partA/ip/partA_auto_pc_0/partA_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_auto_pc_0 || ORIG_REF_NAME==partA_auto_pc_0}]
-
-# XDC: bd/partA/ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==partA_processing_system7_0_0 || ORIG_REF_NAME==partA_processing_system7_0_0}] {/inst }]/inst ]]
-
-# XDC: bd/partA/ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==partA_axi_gpio_0_0 || ORIG_REF_NAME==partA_axi_gpio_0_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/partA/ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0_ooc.xdc
-
-# XDC: bd/partA/ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==partA_axi_gpio_0_0 || ORIG_REF_NAME==partA_axi_gpio_0_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0_board.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_rst_processing_system7_0_100M_0 || ORIG_REF_NAME==partA_rst_processing_system7_0_100M_0}]
-
-# XDC: bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==partA_rst_processing_system7_0_100M_0 || ORIG_REF_NAME==partA_rst_processing_system7_0_100M_0}]
-
-# XDC: bd/partA/ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0_ooc.xdc
-
-# XDC: bd/partA/ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1_ooc.xdc
-
-# XDC: bd/partA/ip/partA_OLED_ip_0_1/OLED_porting_2.srcs/sources_1/ip/charLib/charLib_ooc.xdc
-
-# XDC: bd/partA/ip/partA_auto_pc_0/partA_auto_pc_0_ooc.xdc
 
 # XDC: bd/partA/partA_ooc.xdc

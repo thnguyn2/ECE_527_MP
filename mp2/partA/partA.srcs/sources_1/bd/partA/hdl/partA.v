@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Mon Sep 21 07:10:25 2015
+//Date        : Mon Sep 21 13:42:43 2015
 //Host        : zombie running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target partA.bd
 //Design      : partA
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "partA,IP_Integrator,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=partA,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=6,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=4,da_board_cnt=8,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "partA.hwdef" *) 
+(* CORE_GENERATION_INFO = "partA,IP_Integrator,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=partA,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=6,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=4,da_board_cnt=8,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "partA.hwdef" *) 
 module partA
    (DC,
     DDR_addr,
