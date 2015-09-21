@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Sat Sep 19 21:38:30 2015
+//Date        : Mon Sep 21 07:10:25 2015
 //Host        : zombie running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target partA.bd
 //Design      : partA
@@ -33,7 +33,7 @@ module partA
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    PRST,
+    PRSTN,
     RES,
     SCLK,
     SDIN,
@@ -45,6 +45,7 @@ module partA
     gpio2_io_o,
     gpio_io_i,
     oled_data,
+    oled_rst,
     pclk,
     wea);
   output DC;
@@ -69,7 +70,7 @@ module partA
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [0:0]PRST;
+  output PRSTN;
   output RES;
   output SCLK;
   output SDIN;
@@ -81,6 +82,7 @@ module partA
   output [31:0]gpio2_io_o;
   input [31:0]gpio_io_i;
   input [511:0]oled_data;
+  input oled_rst;
   output pclk;
   input [63:0]wea;
 
@@ -98,6 +100,7 @@ module partA
   wire [511:0]dina_1;
   wire [31:0]gpio_io_i_1;
   wire [511:0]oled_data_1;
+  wire oled_rst_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -181,7 +184,7 @@ module partA
   wire [63:0]wea_1;
 
   assign DC = OLED_ip_0_DC;
-  assign PRST[0] = rst_processing_system7_0_100M_peripheral_aresetn;
+  assign PRSTN = processing_system7_0_FCLK_RESET0_N;
   assign RES = OLED_ip_0_RES;
   assign SCLK = OLED_ip_0_SCLK;
   assign SDIN = OLED_ip_0_SDIN;
@@ -193,6 +196,7 @@ module partA
   assign gpio2_io_o[31:0] = axi_gpio_0_gpio2_io_o;
   assign gpio_io_i_1 = gpio_io_i[31:0];
   assign oled_data_1 = oled_data[511:0];
+  assign oled_rst_1 = oled_rst;
   assign pclk = processing_system7_0_FCLK_CLK0;
   assign wea_1 = wea[63:0];
   GND GND
@@ -201,7 +205,7 @@ module partA
        (.CLK(processing_system7_0_FCLK_CLK0),
         .DC(OLED_ip_0_DC),
         .RES(OLED_ip_0_RES),
-        .RST(rst_processing_system7_0_100M_peripheral_aresetn),
+        .RST(oled_rst_1),
         .SCLK(OLED_ip_0_SCLK),
         .SDIN(OLED_ip_0_SDIN),
         .VBAT(OLED_ip_0_VBAT),

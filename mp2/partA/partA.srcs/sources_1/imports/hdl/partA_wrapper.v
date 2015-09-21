@@ -39,10 +39,12 @@ module partA_wrapper
     VDD,
     out_leds,
     push_btn,
-    dip_sw
+    dip_sw,
+    RST //input pin for reseting the module
     //Several signals have been deleted here for internal used in this module, do not regenerate this wrapper automatically again!!!!
     );
-    
+   
+  input RST;  
   output [7:0] out_leds;
   input push_btn;
   input [7:0] dip_sw;
@@ -74,6 +76,7 @@ module partA_wrapper
   output VBAT;
   output VDD;
 
+  reg reg_oled_rst; ///This is an external pins for reseting the OLED. The module will start operating after the reset button is pressed.
   
   wire DC;
   wire [14:0]DDR_addr;
@@ -110,25 +113,65 @@ module partA_wrapper
   wire [31:0] gpio_io_i;
   wire [511:0] oled_data;
   wire pclk;
+  wire prstn;
   wire [63:0]wea;
 
-  //Initialization for the controller module
- /* central_controller c1(.clk(pclk),
-      .reset(PRST),
-      .out_led(out_leds),
-      .dip_sw(dip_sw),
-      .push_btn(push_btn),
-      //For interfacing with bram
-      .bram_addresss(addra),
-      .bram_dina(dina),
-      .bram_douta(douta),
-      .bram_wea(wea),
-      //For interfacing with the ZynQ
-      .gpio_io_i(gpio_io_i), //Output bus to the AXI GPIO
-      .gpio_io_o(gpio2_io_o),
-      //For interfacing with the OLED_IP module
-      .oled_data(oled_data));
-  */
+  reg [7:0] reg_out_leds;
+  reg [511:0] reg_oled_data;
+  //Define the finite state machine for the controller module
+  parameter ModeRst = 4'd0, ModeInit = 4'd1, ModeInitDone = 4'd2, ModeRcvTestVector = 4'd3, ModeWriteTestVectorToRam = 4'd4;
+  
+  reg [3:0] cur_state;
+  reg [3:0] next_state;
+  
+  //Define the output logics based on register variables
+  assign out_leds[3:0] = reg_out_leds[3:0];
+  assign out_leds[7] = pclk;
+  assign out_leds[6] = prstn;
+ 
+  //Define logics at the initial state
+  initial
+  begin
+        cur_state <= ModeRst;
+        next_state <= ModeRst;  
+  end
+  
+  //Next state logic - Not that the pclk is enable only when the program is downloaded in the ZynQ processor
+  always @(posedge pclk)
+  begin
+        if (RST)
+        begin
+            next_state <= ModeInit;
+        end
+        else
+        begin
+            cur_state <= next_state;
+        end
+  end
+  
+  //Output logic corresponding to each FSM state
+  always @ (*)
+  begin
+    case (cur_state)
+        ModeRst:
+            begin
+                reg_out_leds [3:0] =4'd1;
+                reg_oled_rst = 1; 
+            end
+        ModeInit:
+            begin
+                reg_out_leds [3:0] =4'd2;
+                reg_oled_rst = 0; //Generate the reset signal for the OLED
+                reg_oled_data = 8'h31;
+            end
+        ModeInitDone:
+            begin
+            end
+       default:
+            begin
+            end
+    endcase
+  end
   
   
     
@@ -168,5 +211,6 @@ module partA_wrapper
         .oled_data(oled_data),
         .pclk(pclk),
         .wea(wea),
-        .PRST(PRST));
+        .PRSTN(prstn),
+        .oled_rst(reg_oled_rst));
 endmodule

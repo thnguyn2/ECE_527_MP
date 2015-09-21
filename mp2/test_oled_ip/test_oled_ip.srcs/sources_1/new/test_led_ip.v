@@ -41,9 +41,46 @@ module test_led_ip(
     output VBAT;
     output VDD;
     input [7:0] input_sw;
+    
+    //Crete a small FSM to reset the module
+    parameter ModeRST = 1'b0;
+    parameter ModeRun = 1'b1;
+    reg curmode, nextmode;
+    reg oled_rst; //Reset pin for the OLED
+    initial @ (posedge CLK)
+    begin
+        curmode <= ModeRST;
+        nextmode <= ModeRST;
+    end
+    //Next state logic
+    always @(posedge CLK)
+    begin
+        if (RST)
+        begin
+            nextmode <= ModeRun;
+        end
+        else
+        begin
+            curmode <= nextmode;
+        end
+    end
    
+   //Output logic
+   always @(*)
+   begin
+        case (curmode)
+            ModeRST:
+                begin
+                    oled_rst = 1;
+                end
+            ModeRun:
+                begin
+                    oled_rst = 0;
+                end
+        endcase
+   end  
    OLED_ip_0 OLED_ip_inst(.CLK(CLK),
-        .RST(RST),
+        .RST(oled_rst),
         .SDIN(SDIN),
         .SCLK(SCLK),
         .DC(DC),

@@ -149,7 +149,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set DC [ create_bd_port -dir O DC ]
-  set PRST [ create_bd_port -dir O -from 0 -to 0 PRST ]
+  set PRSTN [ create_bd_port -dir O PRSTN ]
   set RES [ create_bd_port -dir O RES ]
   set SCLK [ create_bd_port -dir O SCLK ]
   set SDIN [ create_bd_port -dir O SDIN ]
@@ -161,6 +161,7 @@ proc create_root_design { parentCell } {
   set gpio2_io_o [ create_bd_port -dir O -from 31 -to 0 gpio2_io_o ]
   set gpio_io_i [ create_bd_port -dir I -from 31 -to 0 gpio_io_i ]
   set oled_data [ create_bd_port -dir I -from 511 -to 0 oled_data ]
+  set oled_rst [ create_bd_port -dir I -type rst oled_rst ]
   set pclk [ create_bd_port -dir O -type clk pclk ]
   set wea [ create_bd_port -dir I -from 63 -to 0 wea ]
 
@@ -205,10 +206,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net dina_1 [get_bd_ports dina] [get_bd_pins blk_mem_gen_0/dina]
   connect_bd_net -net gpio_io_i_1 [get_bd_ports gpio_io_i] [get_bd_pins axi_gpio_0/gpio_io_i]
   connect_bd_net -net oled_data_1 [get_bd_ports oled_data] [get_bd_pins OLED_ip_0/ram_data]
+  connect_bd_net -net oled_rst_1 [get_bd_ports oled_rst] [get_bd_pins OLED_ip_0/RST]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports pclk] [get_bd_pins OLED_ip_0/CLK] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_ports PRSTN] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_ports PRST] [get_bd_pins OLED_ip_0/RST] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
   connect_bd_net -net wea_1 [get_bd_ports wea] [get_bd_pins blk_mem_gen_0/wea]
 
   # Create address segments

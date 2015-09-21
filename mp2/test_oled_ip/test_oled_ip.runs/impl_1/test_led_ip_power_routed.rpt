@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date             : Sat Sep 19 20:57:53 2015
+| Date             : Sun Sep 20 22:53:40 2015
 | Host             : zombie running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file test_led_ip_power_routed.rpt -pb test_led_ip_power_summary_routed.pb
 | Design           : test_led_ip
@@ -49,14 +49,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     2287 |       --- |             --- |
-|   LUT as Logic |     0.001 |     1517 |     53200 |            2.85 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |     2294 |       --- |             --- |
+|   LUT as Logic |     0.001 |     1520 |     53200 |            2.86 |
 |   CARRY4       |    <0.001 |       18 |     13300 |            0.14 |
-|   Register     |    <0.001 |      400 |    106400 |            0.38 |
+|   Register     |    <0.001 |      402 |    106400 |            0.38 |
 |   F7/F8 Muxes  |    <0.001 |       40 |     53200 |            0.08 |
-|   Others       |     0.000 |       38 |       --- |             --- |
-| Signals        |     0.001 |     1904 |       --- |             --- |
+|   Others       |     0.000 |       40 |       --- |             --- |
+| Signals        |     0.001 |     1907 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |       140 |            0.36 |
 | I/O            |    <0.001 |       15 |       200 |            7.50 |
 | Static Power   |     0.122 |          |           |                 |
@@ -149,7 +149,7 @@ Table of Contents
 | test_led_ip                                 |     0.007 |
 |   OLED_ip_inst                              |     0.006 |
 |     inst                                    |     0.006 |
-|       Example                               |     0.002 |
+|       Example                               |     0.003 |
 |         CHAR_LIB_COMP                       |    <0.001 |
 |           U0                                |    <0.001 |
 |             inst_blk_mem_gen                |    <0.001 |

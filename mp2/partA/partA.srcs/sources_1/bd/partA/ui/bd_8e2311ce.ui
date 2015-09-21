@@ -4,13 +4,14 @@
 preplace port DDR -pg 1 -y 500 -defaultsOSRD
 preplace port VBAT -pg 1 -y 360 -defaultsOSRD
 preplace port SCLK -pg 1 -y 300 -defaultsOSRD
+preplace port oled_rst -pg 1 -y 330 -defaultsOSRD
 preplace port DC -pg 1 -y 320 -defaultsOSRD
+preplace port PRSTN -pg 1 -y 540 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 520 -defaultsOSRD
 preplace port SDIN -pg 1 -y 280 -defaultsOSRD
 preplace port VDD -pg 1 -y 380 -defaultsOSRD
 preplace port RES -pg 1 -y 340 -defaultsOSRD
 preplace port pclk -pg 1 -y 640 -defaultsOSRD
-preplace portBus PRST -pg 1 -y 430 -defaultsOSRD
 preplace portBus oled_data -pg 1 -y 350 -defaultsOSRD
 preplace portBus dina -pg 1 -y 120 -defaultsOSRD
 preplace portBus addra -pg 1 -y 70 -defaultsOSRD
@@ -25,20 +26,28 @@ preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -y 110 -defaultsOSRD -resize 112 194
 preplace inst processing_system7_0_axi_periph -pg 1 -lvl 1 -y 1350 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -y 570 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 2 1 N
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 1 1 520
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 1 1 590
 preplace netloc addra_1 1 0 2 NJ 70 N
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 160 690 NJ 710 1240
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 210 720 NJ 730 1250
 preplace netloc dina_1 1 0 2 NJ 120 N
-preplace netloc gpio_io_i_1 1 0 3 NJ 920 NJ 920 1230
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 180 700 NJ 720 1230
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 3 180 1090 510 850 1260
+preplace netloc gpio_io_i_1 1 0 3 NJ 920 NJ 920 1250
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 200 700 NJ 720 1270
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 2 200 1090 540
+preplace netloc oled_data_1 1 0 1 160
+preplace netloc OLED_ip_0_DC 1 1 2 550 320 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 2 1 N
-preplace netloc blk_mem_gen_0_douta 1 1 2 540 230 NJ
+preplace netloc OLED_ip_0_SCLK 1 1 2 540 300 NJ
+preplace netloc OLED_ip_0_SDIN 1 1 2 530 280 NJ
+preplace netloc blk_mem_gen_0_douta 1 1 2 580 230 NJ
+preplace netloc OLED_ip_0_VBAT 1 1 2 580 360 NJ
 preplace netloc axi_gpio_0_gpio2_io_o 1 2 1 N
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 0 2 190 720 510
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 170 710 530 730 1250
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 0 2 190 710 530
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 180 570 570 710 1260
+preplace netloc oled_rst_1 1 0 1 170
+preplace netloc OLED_ip_0_RES 1 1 2 560 340 NJ
+preplace netloc OLED_ip_0_VDD 1 1 2 590 380 NJ
 preplace netloc wea_1 1 0 2 NJ 170 N
-levelinfo -pg 1 140 350 1040 1280
+levelinfo -pg 1 140 370 1060 1290
 ",
 }
 {

@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Sat Sep 19 21:38:30 2015
+//Date        : Mon Sep 21 07:10:25 2015
 //Host        : zombie running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target partA_wrapper.bd
 //Design      : partA_wrapper
@@ -32,7 +32,7 @@ module partA_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    PRST,
+    PRSTN,
     RES,
     SCLK,
     SDIN,
@@ -44,6 +44,7 @@ module partA_wrapper
     gpio2_io_o,
     gpio_io_i,
     oled_data,
+    oled_rst,
     pclk,
     wea);
   output DC;
@@ -68,7 +69,7 @@ module partA_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [0:0]PRST;
+  output PRSTN;
   output RES;
   output SCLK;
   output SDIN;
@@ -80,6 +81,7 @@ module partA_wrapper
   output [31:0]gpio2_io_o;
   input [31:0]gpio_io_i;
   input [511:0]oled_data;
+  input oled_rst;
   output pclk;
   input [63:0]wea;
 
@@ -105,7 +107,7 @@ module partA_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]PRST;
+  wire PRSTN;
   wire RES;
   wire SCLK;
   wire SDIN;
@@ -117,6 +119,7 @@ module partA_wrapper
   wire [31:0]gpio2_io_o;
   wire [31:0]gpio_io_i;
   wire [511:0]oled_data;
+  wire oled_rst;
   wire pclk;
   wire [63:0]wea;
 
@@ -143,7 +146,7 @@ module partA_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .PRST(PRST),
+        .PRSTN(PRSTN),
         .RES(RES),
         .SCLK(SCLK),
         .SDIN(SDIN),
@@ -155,6 +158,7 @@ module partA_wrapper
         .gpio2_io_o(gpio2_io_o),
         .gpio_io_i(gpio_io_i),
         .oled_data(oled_data),
+        .oled_rst(oled_rst),
         .pclk(pclk),
         .wea(wea));
 endmodule
