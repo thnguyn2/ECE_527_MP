@@ -128,7 +128,7 @@ module partA_wrapper
   reg rcvDone;
   reg bramReadInitDone;
   reg bramWriteDone;
-  reg delayRamDone;
+  reg delayRamReadDone;
   reg ramDataVerified;
   reg [511:0] reg_dina;
   reg [511:0] reg_douta;
@@ -152,7 +152,7 @@ module partA_wrapper
         cur_state <= ModeRst;
         next_state <= ModeRst;  
         delayRamReadCnt<=RamDelay; //Delay a number of clock cycles for Ram Latency
-        delayRamDone <=0;
+        delayRamReadDone <=0;
         bramWriteDone <=0;
         bramReadInitDone <=0;
         ramDataVerified <=0;
@@ -198,7 +198,7 @@ module partA_wrapper
                     end
                ModeDelayRamRead:
                     begin
-                        if (delayRamDone)
+                        if (delayRamReadDone)
                         begin
                             next_state <=ModeRamDelayDone;
                         end
@@ -235,15 +235,16 @@ module partA_wrapper
             begin
                 reg_out_leds [3:0] =4'd1;
                 reg_oled_rst = 0; //Generate the reset signal for the OLED
-                //reg_oled_data = 512'h31; //Init mode
+                reg_oled_data = 512'h31; //Init mode
                 initDone = 1; //Allow moving to next state
                       
             end
        ModeRcvTestVector:
             begin
                 reg_out_leds [3:0] =4'd2;
+                reg_oled_rst = 0;
                 reg_oled_data = 512'h32; //Init mode
-                rcvDone = 0;
+                rcvDone = 1;
                              
             end
        ModeWriteTestVector:
@@ -253,7 +254,8 @@ module partA_wrapper
                    reg_dina = 512'h41424344;
                    reg_wea = {64{1'b1}}; //Allow writting all the bits
                    reg_out_leds [3:0] = 4'd3;
-                   //reg_oled_data = 512'h33; //Init mode
+                   reg_oled_rst = 0;
+                   reg_oled_data = 512'h33; //Init mode
                    bramWriteDone = 1;                                                
              end    
        ModeReadTestVectorInit:
@@ -261,32 +263,40 @@ module partA_wrapper
                    reg_wea = 64'h0;
                    reg_addra = 32'd0;
                    reg_out_leds [3:0] = 4'd4;
+                   reg_oled_rst = 0;
+                   reg_oled_data = 512'h34; //Init mode
                    bramReadInitDone = 1;                                         
             end
        ModeDelayRamRead:
             begin
-                   delayRamReadCnt = (delayRamReadCnt -1);
                    reg_out_leds [3:0] = 4'd5;
+                   reg_oled_rst = 0;
+                   reg_oled_data = 512'h35; //Init mode
                    if (delayRamReadCnt==0)
                    begin
-                        delayRamReadCnt = delayRamReadCnt;
-                        delayRamDone = 1;
-                        
-                        
+                        delayRamReadCnt = RamDelay;
+                        delayRamReadDone = 1;                      
+                   end
+                   else
+                   begin
+                       delayRamReadCnt = (delayRamReadCnt -1);                              
                    end
             end
       ModeRamDelayDone:
             begin
-                   delayRamDone =0; //Prepare for the next test vector
+                   delayRamReadDone =0; //Prepare for the next test vector
                    reg_douta = douta;
-                  
+                   reg_oled_rst = 0;
+                   reg_oled_data = 512'h36; //Init mode                                
+                   reg_out_leds [3:0]= 4'd6;
+                                                                 
                    //The following commands takes so long to compile 
                    //if (reg_dina==reg_douta)
                    //begin
                         //reg_out_leds = 8'h01;
                    ramDataVerified = 1'b1;
-                   reg_oled_data = 512'h37; //Delay done                                   
-           
+                                 
+                 
                   
                   /* end
                    else
@@ -299,6 +309,8 @@ module partA_wrapper
       ModelDisplayRamData:
             begin
                 reg_out_leds = 4'd7;
+                reg_oled_rst = 0;
+                reg_oled_data = reg_douta; //Init mode      
             end
        default:
             begin
