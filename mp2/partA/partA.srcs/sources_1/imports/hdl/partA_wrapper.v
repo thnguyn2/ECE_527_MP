@@ -119,20 +119,26 @@ module partA_wrapper
   reg [7:0] reg_out_leds;
   reg [511:0] reg_oled_data;
   //Define the finite state machine for the controller module
-  parameter ModeRst = 4'd0, ModeInit = 4'd1, ModeRcvTestVector = 4'd2, ModeWriteTestVector = 4'd3, ModeWriteTestVectorToRam = 4'd4;
+  parameter ModeRst = 4'd0, ModeInit = 4'd1, ModeRcvTestVector = 4'd2, ModeWriteTestVector = 4'd3, ModeReadTestVectorInit = 4'd4, ModeDelayRamRead = 4'd5, ModeRamDelayDone = 4'd6, ModelDisplayRamData = 4'd7;
+  parameter RamDelay =3'd5;
   
   reg [3:0] cur_state;
   reg [3:0] next_state;
   reg initDone;
   reg rcvDone;
+  reg bramReadInitDone;
   reg bramWriteDone;
+  reg delayRamDone;
+  reg ramDataVerified;
   reg [511:0] reg_dina;
+  reg [511:0] reg_douta;
   reg [31:0] reg_addra;
   reg [63:0] reg_wea;
+  reg [2:0] delayRamReadCnt;
   //Define the output logics based on register variables
-  assign out_leds[3:0] = reg_out_leds[3:0];
-  assign out_leds[7] = pclk;
-  assign out_leds[6] = prstn;
+  assign out_leds = reg_out_leds;
+//  assign out_leds[7] = pclk;
+//  assign out_leds[6] = prstn;
   assign oled_data = reg_oled_data; 
   assign dina = reg_dina;
   assign addra = reg_addra;
@@ -145,6 +151,12 @@ module partA_wrapper
   begin
         cur_state <= ModeRst;
         next_state <= ModeRst;  
+        delayRamReadCnt<=RamDelay; //Delay a number of clock cycles for Ram Latency
+        delayRamDone <=0;
+        bramWriteDone <=0;
+        bramReadInitDone <=0;
+        ramDataVerified <=0;
+        
   end
   
   //Next state logic - Not that the pclk is enable only when the program is downloaded in the ZynQ processor
@@ -174,7 +186,28 @@ module partA_wrapper
                     begin
                         if (bramWriteDone)
                         begin
-                            
+                            next_state <= ModeReadTestVectorInit;
+                        end
+                    end
+               ModeReadTestVectorInit:
+                    begin
+                        if (bramReadInitDone)
+                        begin
+                            next_state<= ModeDelayRamRead;
+                        end
+                    end
+               ModeDelayRamRead:
+                    begin
+                        if (delayRamDone)
+                        begin
+                            next_state <=ModeRamDelayDone;
+                        end
+                    end
+               ModeRamDelayDone:
+                    begin
+                        if (ramDataVerified)
+                        begin
+                            next_state <=ModelDisplayRamData;
                         end
                     end
                 default:
@@ -202,25 +235,71 @@ module partA_wrapper
             begin
                 reg_out_leds [3:0] =4'd1;
                 reg_oled_rst = 0; //Generate the reset signal for the OLED
-                reg_oled_data = 512'h31; //Init mode
+                //reg_oled_data = 512'h31; //Init mode
                 initDone = 1; //Allow moving to next state
                       
             end
        ModeRcvTestVector:
             begin
                 reg_out_leds [3:0] =4'd2;
-                rcvDone = 1;             
+                reg_oled_data = 512'h32; //Init mode
+                rcvDone = 0;
+                             
             end
        ModeWriteTestVector:
              begin
                    //Write a few data to BRAM
                    reg_addra = 32'd0;
-                   reg_dina = 512'h48;
-                   reg_wea = 64'h1;
+                   reg_dina = 512'h41424344;
+                   reg_wea = {64{1'b1}}; //Allow writting all the bits
                    reg_out_leds [3:0] = 4'd3;
-                   reg_oled_data = 512'h33; //Init mode
+                   //reg_oled_data = 512'h33; //Init mode
                    bramWriteDone = 1;                                                
-             end                   
+             end    
+       ModeReadTestVectorInit:
+            begin
+                   reg_wea = 64'h0;
+                   reg_addra = 32'd0;
+                   reg_out_leds [3:0] = 4'd4;
+                   bramReadInitDone = 1;                                         
+            end
+       ModeDelayRamRead:
+            begin
+                   delayRamReadCnt = (delayRamReadCnt -1);
+                   reg_out_leds [3:0] = 4'd5;
+                   if (delayRamReadCnt==0)
+                   begin
+                        delayRamReadCnt = delayRamReadCnt;
+                        delayRamDone = 1;
+                        
+                        
+                   end
+            end
+      ModeRamDelayDone:
+            begin
+                   delayRamDone =0; //Prepare for the next test vector
+                   reg_douta = douta;
+                  
+                   //The following commands takes so long to compile 
+                   //if (reg_dina==reg_douta)
+                   //begin
+                        //reg_out_leds = 8'h01;
+                   ramDataVerified = 1'b1;
+                   reg_oled_data = 512'h37; //Delay done                                   
+           
+                  
+                  /* end
+                   else
+                   begin
+                        //reg_out_leds = 8'h02;
+                        ramDataVerified = 1'b0;
+                   end
+                   */                 
+            end
+      ModelDisplayRamData:
+            begin
+                reg_out_leds = 4'd7;
+            end
        default:
             begin
             end

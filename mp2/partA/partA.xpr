@@ -25,30 +25,30 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xci">
-          <Proxy FileSetName="partA_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci">
-          <Proxy FileSetName="partA_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_auto_pc_0/partA_auto_pc_0.xci">
-          <Proxy FileSetName="partA_auto_pc_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.v"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_OLED_ip_0_1/partA_OLED_ip_0_1.xci">
           <Proxy FileSetName="partA_OLED_ip_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.xci">
-          <Proxy FileSetName="partA_blk_mem_gen_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.xci">
           <Proxy FileSetName="partA_rst_processing_system7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA.hwh"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xci">
+          <Proxy FileSetName="partA_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci">
+          <Proxy FileSetName="partA_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.hwdef"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA.hwh"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="partA_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_auto_pc_0/partA_auto_pc_0.xci">
+          <Proxy FileSetName="partA_auto_pc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_blk_mem_gen_0_1/partA_blk_mem_gen_0_1.xci">
+          <Proxy FileSetName="partA_blk_mem_gen_0_1"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/partA_wrapper.v">
         <FileInfo>
@@ -165,54 +165,42 @@
     </Run>
     <Run Id="partA_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="partA_processing_system7_0_0" Part="xc7z020clg484-1" ConstrsSet="partA_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/partA_processing_system7_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="partA_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="partA_axi_gpio_0_0" Part="xc7z020clg484-1" ConstrsSet="partA_axi_gpio_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/partA_axi_gpio_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="partA_rst_processing_system7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="partA_rst_processing_system7_0_100M_0" Part="xc7z020clg484-1" ConstrsSet="partA_rst_processing_system7_0_100M_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/partA_rst_processing_system7_0_100M_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="partA_blk_mem_gen_0_1_synth_1" Type="Ft3:Synth" SrcSet="partA_blk_mem_gen_0_1" Part="xc7z020clg484-1" ConstrsSet="partA_blk_mem_gen_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/partA_blk_mem_gen_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="partA_OLED_ip_0_1_synth_1" Type="Ft3:Synth" SrcSet="partA_OLED_ip_0_1" Part="xc7z020clg484-1" ConstrsSet="partA_OLED_ip_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/partA_OLED_ip_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="partA_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="partA_auto_pc_0" Part="xc7z020clg484-1" ConstrsSet="partA_auto_pc_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/partA_auto_pc_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -234,9 +222,7 @@
     </Run>
     <Run Id="partA_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="partA_processing_system7_0_0" Description="Vivado Implementation Defaults" SynthRun="partA_processing_system7_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -250,9 +236,7 @@
     </Run>
     <Run Id="partA_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="partA_axi_gpio_0_0" Description="Vivado Implementation Defaults" SynthRun="partA_axi_gpio_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -266,9 +250,7 @@
     </Run>
     <Run Id="partA_rst_processing_system7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="partA_rst_processing_system7_0_100M_0" Description="Vivado Implementation Defaults" SynthRun="partA_rst_processing_system7_0_100M_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -282,9 +264,7 @@
     </Run>
     <Run Id="partA_blk_mem_gen_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="partA_blk_mem_gen_0_1" Description="Vivado Implementation Defaults" SynthRun="partA_blk_mem_gen_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -298,9 +278,7 @@
     </Run>
     <Run Id="partA_OLED_ip_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="partA_OLED_ip_0_1" Description="Vivado Implementation Defaults" SynthRun="partA_OLED_ip_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -314,9 +292,7 @@
     </Run>
     <Run Id="partA_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="partA_auto_pc_0" Description="Vivado Implementation Defaults" SynthRun="partA_auto_pc_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

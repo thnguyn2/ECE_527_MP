@@ -94,3 +94,255 @@
 14:18:56 INFO  : ps7_post_config is completed.
 14:18:56 INFO  : Processor reset is completed for ps7_cortexa9_0
 14:20:10 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:59:11 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+14:59:15 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+14:59:15 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+14:59:19 INFO  : XSDB server has started successfully.
+14:59:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+14:59:43 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+15:00:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:03:30 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:04:15 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+15:04:17 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+15:04:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442865248546,  Project:1442862292295
+15:04:17 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+15:04:17 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+15:04:17 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+15:04:18 INFO  : XSDB server has started successfully.
+15:04:24 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:04:30 INFO  : 
+15:04:38 INFO  : Updating hardware inferred compiler options for partA_app.
+15:04:38 INFO  : Clearing existing target manager status.
+15:04:39 INFO  : Closing and re-opening the MSS file of ther project partA
+15:04:39 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:06:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+15:06:12 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+15:06:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:06:32 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:06:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+15:06:58 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+15:07:39 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:08:39 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+15:08:41 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+15:08:41 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+15:08:42 INFO  : XSDB server has started successfully.
+15:09:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+15:09:12 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+15:09:38 INFO  : ps7_init is completed.
+15:09:38 INFO  : ps7_post_config is completed.
+15:09:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:11:55 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:44:07 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+15:44:09 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+15:44:09 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442868075759,  Project:1442865248546
+15:44:09 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+15:44:09 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+15:44:09 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+15:44:12 INFO  : XSDB server has started successfully.
+15:44:15 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:44:19 INFO  : 
+15:44:22 INFO  : Updating hardware inferred compiler options for partA_app.
+15:44:22 INFO  : Clearing existing target manager status.
+15:44:39 INFO  : Closing and re-opening the MSS file of ther project partA
+15:44:39 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:46:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:46:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+15:46:15 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+15:46:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:02:37 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:03:34 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:03:36 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+16:03:37 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442869044860,  Project:1442868075759
+16:03:37 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:03:37 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:03:37 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+16:03:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:03:45 INFO  : XSDB server has started successfully.
+16:03:49 INFO  : 
+16:03:51 INFO  : Updating hardware inferred compiler options for partA_app.
+16:03:51 INFO  : Clearing existing target manager status.
+16:03:52 INFO  : Closing and re-opening the MSS file of ther project partA
+16:03:53 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:05:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:05:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+16:05:10 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+16:05:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:05:36 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:05:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:06:19 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:06:21 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+16:06:22 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:06:23 INFO  : XSDB server has started successfully.
+16:06:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:06:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+16:06:31 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+16:07:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:07:05 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:07:17 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:26:09 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:26:12 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+16:26:12 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442870261978,  Project:1442869044860
+16:26:12 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:26:12 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+16:26:12 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:26:14 INFO  : XSDB server has started successfully.
+16:26:19 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:26:23 INFO  : 
+16:26:26 INFO  : Updating hardware inferred compiler options for partA_app.
+16:26:26 INFO  : Clearing existing target manager status.
+16:26:37 INFO  : Closing and re-opening the MSS file of ther project partA
+16:26:38 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:28:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:28:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+16:28:27 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+16:28:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:28:45 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:30:06 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:31:21 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:31:23 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+16:31:24 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:31:27 INFO  : XSDB server has started successfully.
+16:31:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:31:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+16:31:37 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+16:32:01 INFO  : ps7_init is completed.
+16:32:01 INFO  : ps7_post_config is completed.
+16:32:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:32:26 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:58:00 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:58:03 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+16:58:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442872477211,  Project:1442870261978
+16:58:03 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+16:58:03 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+16:58:03 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:58:07 INFO  : XSDB server has started successfully.
+16:58:13 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:58:18 INFO  : 
+16:58:21 INFO  : Updating hardware inferred compiler options for partA_app.
+16:58:21 INFO  : Clearing existing target manager status.
+16:58:24 INFO  : Closing and re-opening the MSS file of ther project partA
+16:58:24 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:59:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+16:59:35 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+16:59:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:59:58 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:01:52 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:38:41 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+18:38:44 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+18:38:44 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442878576986,  Project:1442872477211
+18:38:44 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+18:38:44 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+18:38:44 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+18:38:46 INFO  : XSDB server has started successfully.
+18:38:52 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:38:57 INFO  : 
+18:38:59 INFO  : Updating hardware inferred compiler options for partA_app.
+18:38:59 INFO  : Clearing existing target manager status.
+18:39:01 INFO  : Closing and re-opening the MSS file of ther project partA
+18:39:01 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:39:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:39:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+18:39:14 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+18:40:15 INFO  : ps7_init is completed.
+18:40:15 INFO  : ps7_post_config is completed.
+18:40:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:40:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:44:47 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+19:44:49 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+19:44:49 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442882153979,  Project:1442878576986
+19:44:49 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+19:44:49 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+19:44:50 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+19:44:51 INFO  : XSDB server has started successfully.
+19:44:56 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:45:01 INFO  : 
+19:45:02 INFO  : Updating hardware inferred compiler options for partA_app.
+19:45:02 INFO  : Clearing existing target manager status.
+19:45:03 INFO  : Closing and re-opening the MSS file of ther project partA
+19:45:03 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+19:45:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+19:45:39 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+19:45:55 INFO  : ps7_init is completed.
+19:45:56 INFO  : ps7_post_config is completed.
+19:45:56 INFO  : Processor reset is completed for ps7_cortexa9_0
