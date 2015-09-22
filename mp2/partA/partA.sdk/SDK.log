@@ -369,3 +369,25 @@ java.lang.RuntimeException: Failed to download ELF file
 20:49:12 INFO  : ps7_post_config is completed.
 20:49:13 INFO  : Processor reset is completed for ps7_cortexa9_0
 20:49:34 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:23:17 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+21:23:20 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+21:23:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442888401991,  Project:1442886126508
+21:23:20 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+21:23:20 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+21:23:21 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+21:23:23 INFO  : XSDB server has started successfully.
+21:23:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:23:31 INFO  : 
+21:23:34 INFO  : Updating hardware inferred compiler options for partA_app.
+21:23:35 INFO  : Clearing existing target manager status.
+21:23:37 INFO  : Closing and re-opening the MSS file of ther project partA
+21:23:38 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+21:24:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708080" && level==0} -index 1' command is executed.
+21:24:20 INFO  : FPGA configured successfully with bitstream "E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper_hw_platform_0/partA_wrapper.bit"
+21:24:49 INFO  : ps7_init is completed.
+21:24:49 INFO  : ps7_post_config is completed.
+21:24:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:43:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:43:40 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:43:43 INFO  : Processor reset is completed for ps7_cortexa9_0

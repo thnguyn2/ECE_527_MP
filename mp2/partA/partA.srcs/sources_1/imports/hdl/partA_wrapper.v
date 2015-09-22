@@ -241,17 +241,23 @@ module partA_wrapper
             end
        ModeRcvTestVector:
             begin
-                reg_out_leds [3:0] =4'd2;
                 reg_oled_rst = 0;
                 reg_oled_data = 512'h32; //Init mode
-                rcvDone = 1;
+                                
+                //Communicate with the PS to receive the data and send it to the LED
+                reg_out_leds [7:0] = gpio2_io_o[7:0];
+                
+                
+                
+                
+                rcvDone = 0;
                              
             end
        ModeWriteTestVector:
              begin
                    //Write a few data to BRAM
                    reg_addra = 32'd0;
-                   reg_dina = 512'h41424344;
+                   reg_dina = "First message";
                    reg_wea = {64{1'b1}}; //Allow writting all the bits
                    reg_out_leds [3:0] = 4'd3;
                    reg_oled_rst = 0;

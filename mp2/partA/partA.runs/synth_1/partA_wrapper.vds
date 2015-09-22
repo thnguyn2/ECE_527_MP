@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Mon Sep 21 20:50:53 2015
-# Process ID: 6584
+# Start of session at: Mon Sep 21 21:15:30 2015
+# Process ID: 6824
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/partA_wrapper.vds
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -16,7 +16,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 285.613 ; gain = 108.426
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 285.273 ; gain = 107.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'partA_wrapper' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:12]
 	Parameter ModeRst bound to: 4'b0000 
@@ -31,26 +31,26 @@ INFO: [Synth 8-638] synthesizing module 'partA_wrapper' [E:/Ubuntu_source_code_d
 INFO: [Synth 8-638] synthesizing module 'partA' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:13]
 INFO: [Synth 8-638] synthesizing module 'GND' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
-INFO: [Synth 8-638] synthesizing module 'partA_OLED_ip_0_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_OLED_ip_0_1_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'partA_OLED_ip_0_1' (2#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_OLED_ip_0_1_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_OLED_ip_0_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_OLED_ip_0_1_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_OLED_ip_0_1' (2#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_OLED_ip_0_1_stub.v:7]
 INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
 INFO: [Synth 8-256] done synthesizing module 'VCC' (3#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
-INFO: [Synth 8-638] synthesizing module 'partA_axi_gpio_0_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_axi_gpio_0_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'partA_axi_gpio_0_0' (4#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_axi_gpio_0_0_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'partA_blk_mem_gen_0_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_blk_mem_gen_0_1_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'partA_blk_mem_gen_0_1' (5#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_blk_mem_gen_0_1_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'partA_processing_system7_0_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_processing_system7_0_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'partA_processing_system7_0_0' (6#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_processing_system7_0_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_axi_gpio_0_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_axi_gpio_0_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_axi_gpio_0_0' (4#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_axi_gpio_0_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_blk_mem_gen_0_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_blk_mem_gen_0_1_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_blk_mem_gen_0_1' (5#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_blk_mem_gen_0_1_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_processing_system7_0_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_processing_system7_0_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_processing_system7_0_0' (6#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_processing_system7_0_0_stub.v:7]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'partA_processing_system7_0_0' requires 78 connections, but only 63 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:244]
 INFO: [Synth 8-638] synthesizing module 'partA_processing_system7_0_axi_periph_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:380]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1D0TYCK' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:685]
-INFO: [Synth 8-638] synthesizing module 'partA_auto_pc_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_auto_pc_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'partA_auto_pc_0' (7#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_auto_pc_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_auto_pc_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_auto_pc_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_auto_pc_0' (7#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_auto_pc_0_stub.v:7]
 WARNING: [Synth 8-350] instance 'auto_pc' of module 'partA_auto_pc_0' requires 59 connections, but only 57 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:920]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1D0TYCK' (8#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:685]
 INFO: [Synth 8-256] done synthesizing module 'partA_processing_system7_0_axi_periph_0' (9#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:380]
-INFO: [Synth 8-638] synthesizing module 'partA_rst_processing_system7_0_100M_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_rst_processing_system7_0_100M_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'partA_rst_processing_system7_0_100M_0' (10#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/realtime/partA_rst_processing_system7_0_100M_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'partA_rst_processing_system7_0_100M_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_rst_processing_system7_0_100M_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'partA_rst_processing_system7_0_100M_0' (10#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/realtime/partA_rst_processing_system7_0_100M_0_stub.v:7]
 WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'partA_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:370]
 INFO: [Synth 8-256] done synthesizing module 'partA' (11#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/bd/partA/hdl/partA.v:13]
 WARNING: [Synth 8-3848] Net gpio_io_i in module/entity partA_wrapper does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:113]
@@ -65,7 +65,7 @@ WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[2]
 WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[1]
 WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 319.863 ; gain = 142.676
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 319.480 ; gain = 142.012
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -74,48 +74,48 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[31] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[30] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[29] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[28] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[27] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[26] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[25] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[24] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[23] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[22] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[21] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[20] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[19] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[18] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[17] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[16] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[15] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[14] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[13] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[12] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[11] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[10] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[9] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[8] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[7] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[6] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[5] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[4] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
-WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:323]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[31] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[30] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[29] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[28] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[27] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[26] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[25] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[24] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[23] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[22] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[21] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[20] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[19] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[18] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[17] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[16] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[15] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[14] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[13] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[12] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[11] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[10] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[9] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[8] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[7] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[6] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[5] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[4] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
+WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:329]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 319.863 ; gain = 142.676
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 319.480 ; gain = 142.012
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc] for cell 'partA_i/processing_system7_0'
-Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc] for cell 'partA_i/processing_system7_0'
+Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc] for cell 'partA_i/processing_system7_0'
+Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc] for cell 'partA_i/processing_system7_0'
 Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/constrs_1/new/partA_constr.xdc]
 Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/constrs_1/new/partA_constr.xdc]
 Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/dont_touch.xdc]
@@ -125,150 +125,150 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 623.754 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 623.824 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 2).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 3).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 7).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 8).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 10).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 12).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 14).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 16).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 18).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 20).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 22).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 24).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 25).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 26).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 27).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 28).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 29).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 30).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 31).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 32).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 33).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 34).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 35).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 36).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 37).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 38).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 39).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 40).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 41).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 42).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 43).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 44).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 45).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 46).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 47).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 48).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 49).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 50).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 51).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 52).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 53).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 54).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 55).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 56).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 57).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 58).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 59).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 60).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 61).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 62).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 63).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 64).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 65).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 66).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 67).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 68).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 69).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 70).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 71).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 72).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 73).
-Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 74).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 75).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 76).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 77).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 78).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 79).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 80).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 81).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 82).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 83).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 84).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 85).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 86).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 87).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 88).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 89).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 90).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 91).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 92).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 93).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 94).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 95).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 96).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 97).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 98).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 99).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 100).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 101).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 102).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 103).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 104).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 105).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 106).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 107).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 108).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 109).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 110).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 111).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 112).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 113).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 114).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 115).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 116).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 117).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 118).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 119).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 120).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 121).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 122).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 123).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 124).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 125).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 126).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 127).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 128).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 129).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 130).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6584-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.runs/synth_1/.Xil/Vivado-6824-zombie/dcp/partA_processing_system7_0_0_in_context.xdc, line 131).
 Applied set_property DONT_TOUCH = true for partA_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for partA_i/OLED_ip_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for partA_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
@@ -278,7 +278,7 @@ Applied set_property DONT_TOUCH = true for partA_i/processing_system7_0_axi_peri
 Applied set_property DONT_TOUCH = true for partA_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for partA_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "delayRamReadDone" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 WARNING: [Synth 8-327] inferring latch for variable 'reg_out_leds_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:139]
@@ -288,15 +288,15 @@ WARNING: [Synth 8-327] inferring latch for variable 'reg_oled_data_reg' [E:/Ubun
 WARNING: [Synth 8-327] inferring latch for variable 'reg_oled_rst_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:232]
 WARNING: [Synth 8-327] inferring latch for variable 'reg_wea_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:145]
 WARNING: [Synth 8-327] inferring latch for variable 'initDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:239]
-WARNING: [Synth 8-327] inferring latch for variable 'rcvDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:247]
-WARNING: [Synth 8-327] inferring latch for variable 'bramWriteDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:259]
-WARNING: [Synth 8-327] inferring latch for variable 'bramReadInitDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:268]
-WARNING: [Synth 8-327] inferring latch for variable 'delayRamReadDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:278]
-WARNING: [Synth 8-327] inferring latch for variable 'ramDataVerified_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:297]
-WARNING: [Synth 8-327] inferring latch for variable 'reg_douta_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:288]
-WARNING: [Synth 8-327] inferring latch for variable 'delayRamReadCnt_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:275]
+WARNING: [Synth 8-327] inferring latch for variable 'rcvDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:253]
+WARNING: [Synth 8-327] inferring latch for variable 'bramWriteDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:265]
+WARNING: [Synth 8-327] inferring latch for variable 'bramReadInitDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:274]
+WARNING: [Synth 8-327] inferring latch for variable 'delayRamReadDone_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:284]
+WARNING: [Synth 8-327] inferring latch for variable 'ramDataVerified_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:303]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_douta_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:294]
+WARNING: [Synth 8-327] inferring latch for variable 'delayRamReadCnt_reg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.srcs/sources_1/imports/hdl/partA_wrapper.v:281]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,7 +363,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 623.754 ; gain = 446.566
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -377,9 +377,9 @@ WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[2]
 WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[1]
 WARNING: [Synth 8-3331] design partA_wrapper has unconnected port dip_sw[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Parallel Reinference  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 623.824 ; gain = 446.355
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -388,19 +388,13 @@ Report RTL Partitions:
 +-+--------------+------------+----------+
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (ramDataVerified_reg)
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (bramReadInitDone_reg)
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (rcvDone_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (rcvDone_reg)
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (initDone_reg)
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\next_state_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\reg_dina_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\reg_dina_reg[102] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_dina_reg[511] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_addra_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_out_leds_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_out_leds_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cur_state_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[7] ) is unused and will be removed from module partA_wrapper.
-WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[6] ) is unused and will be removed from module partA_wrapper.
-WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[5] ) is unused and will be removed from module partA_wrapper.
-WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[4] ) is unused and will be removed from module partA_wrapper.
 WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[3] ) is unused and will be removed from module partA_wrapper.
 WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[2] ) is unused and will be removed from module partA_wrapper.
 WARNING: [Synth 8-3332] Sequential element (\reg_out_leds_reg[1] ) is unused and will be removed from module partA_wrapper.
@@ -497,21 +491,25 @@ WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[455] ) is unused and w
 WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[454] ) is unused and will be removed from module partA_wrapper.
 WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[453] ) is unused and will be removed from module partA_wrapper.
 WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[452] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[451] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[450] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[449] ) is unused and will be removed from module partA_wrapper.
+WARNING: [Synth 8-3332] Sequential element (\reg_dina_reg[448] ) is unused and will be removed from module partA_wrapper.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 623.824 ; gain = 446.355
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -520,10 +518,10 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 INFO: Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 623.754 ; gain = 446.566
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 623.824 ; gain = 446.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -535,7 +533,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 635.973 ; gain = 458.785
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -585,7 +583,7 @@ WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[2] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin partA_i:gpio_io_i[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -598,7 +596,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -610,13 +608,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Start Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -647,46 +645,45 @@ Report Cell Usage:
 |7     |BUFG                                  |     2|
 |8     |GND                                   |     1|
 |9     |LUT1                                  |     3|
-|10    |LUT2                                  |     1|
-|11    |LUT3                                  |     7|
-|12    |LUT4                                  |   513|
-|13    |LUT5                                  |     2|
-|14    |LUT6                                  |     2|
-|15    |VCC                                   |     1|
-|16    |FDRE                                  |    21|
-|17    |LD                                    |  1029|
-|18    |IBUF                                  |     1|
-|19    |OBUF                                  |    14|
+|10    |LUT3                                  |     8|
+|11    |LUT4                                  |   520|
+|12    |LUT5                                  |     1|
+|13    |LUT6                                  |     3|
+|14    |VCC                                   |     1|
+|15    |FDRE                                  |    21|
+|16    |LD                                    |  1033|
+|17    |IBUF                                  |     1|
+|18    |OBUF                                  |    14|
 +------+--------------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------------+----------------------------------------+------+
 |      |Instance                            |Module                                  |Cells |
 +------+------------------------------------+----------------------------------------+------+
-|1     |top                                 |                                        |  2574|
+|1     |top                                 |                                        |  2585|
 |2     |  partA_i                           |partA                                   |   979|
 |3     |    processing_system7_0_axi_periph |partA_processing_system7_0_axi_periph_0 |   177|
 |4     |      s00_couplers                  |s00_couplers_imp_1D0TYCK                |   177|
 +------+------------------------------------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 635.145 ; gain = 457.676
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 678 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 635.973 ; gain = 90.043
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 635.973 ; gain = 458.785
+Synthesis finished with 0 errors, 0 critical warnings and 674 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 635.145 ; gain = 88.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 635.145 ; gain = 457.676
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1030 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1034 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'partA_wrapper' is not ideal for floorplanning, since the cellview 'partA_wrapper' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1029 instances were transformed.
-  LD => LDCE: 1029 instances
+  A total of 1033 instances were transformed.
+  LD => LDCE: 1033 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+49 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 635.973 ; gain = 405.266
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 635.973 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 20:51:43 2015...
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 635.145 ; gain = 404.375
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 635.145 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 21:16:28 2015...

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date             : Mon Sep 21 20:54:21 2015
+| Date             : Mon Sep 21 21:19:05 2015
 | Host             : zombie running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file partA_wrapper_power_routed.rpt -pb partA_wrapper_power_summary_routed.pb
 | Design           : partA_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.740 |
-| Dynamic (W)              | 1.581 |
+| Total On-Chip Power (W)  | 1.742 |
+| Dynamic (W)              | 1.583 |
 | Device Static (W)        | 0.159 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 64.9  |
@@ -50,20 +50,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.008 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     5971 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     2148 |     53200 |            4.04 |
-|   Register              |    <0.001 |     2715 |    106400 |            2.55 |
+| Slice Logic             |     0.003 |     5991 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     2151 |     53200 |            4.04 |
+|   Register              |    <0.001 |     2727 |    106400 |            2.56 |
 |   CARRY4                |    <0.001 |       36 |     13300 |            0.27 |
 |   BUFG                  |    <0.001 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes           |    <0.001 |      119 |     53200 |            0.22 |
 |   LUT as Shift Register |    <0.001 |       64 |     17400 |            0.37 |
 |   Others                |     0.000 |      236 |       --- |             --- |
-| Signals                 |     0.003 |     5368 |       --- |             --- |
-| Block RAM               |     0.036 |      8.5 |       140 |            6.07 |
-| I/O                     |     0.002 |       24 |       200 |           12.00 |
+| Signals                 |     0.004 |     5387 |       --- |             --- |
+| Block RAM               |     0.035 |      8.5 |       140 |            6.07 |
+| I/O                     |     0.004 |       24 |       200 |           12.00 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.159 |          |           |                 |
-| Total                   |     1.740 |          |           |                 |
+| Total                   |     1.742 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -149,7 +149,7 @@ Table of Contents
 +----------------------------------------------------------+-----------+
 | Name                                                     | Power (W) |
 +----------------------------------------------------------+-----------+
-| partA_wrapper                                            |     1.581 |
+| partA_wrapper                                            |     1.583 |
 |   partA_i                                                |     1.578 |
 |     OLED_ip_0                                            |     0.007 |
 |       inst                                               |     0.007 |
@@ -172,11 +172,11 @@ Table of Contents
 |           I_SLAVE_ATTACHMENT                             |    <0.001 |
 |             I_DECODER                                    |    <0.001 |
 |         gpio_core_1                                      |    <0.001 |
-|     blk_mem_gen_0                                        |     0.035 |
-|       U0                                                 |     0.035 |
-|         inst_blk_mem_gen                                 |     0.035 |
-|           gnative_mem_map_bmg.native_mem_map_blk_mem_gen |     0.035 |
-|             valid.cstr                                   |     0.035 |
+|     blk_mem_gen_0                                        |     0.034 |
+|       U0                                                 |     0.034 |
+|         inst_blk_mem_gen                                 |     0.034 |
+|           gnative_mem_map_bmg.native_mem_map_blk_mem_gen |     0.034 |
+|             valid.cstr                                   |     0.034 |
 |               ramloop[0].ram.r                           |     0.004 |
 |                 prim_noinit.ram                          |     0.004 |
 |               ramloop[1].ram.r                           |     0.004 |
