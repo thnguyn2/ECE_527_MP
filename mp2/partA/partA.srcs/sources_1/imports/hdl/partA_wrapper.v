@@ -119,16 +119,37 @@ module partA_wrapper
   reg [7:0] reg_out_leds;
   reg [511:0] reg_oled_data;
   //Define the finite state machine for the controller module
-  parameter ModeRst = 4'd0, ModeInit = 4'd1, ModeRcvTestVector = 4'd2, ModeWriteTestVector = 4'd3, ModeReadTestVectorInit = 4'd4, ModeDelayRamRead = 4'd5, ModeRamDelayDone = 4'd6, ModelDisplayRamData = 4'd7;
-  parameter RamDelay =3'd5;
+  parameter ModeInit = 4'd1;
+  parameter ModeReady = 4'd2;
+  parameter ModeDataParsing = 4'd3;
+  parameter ModeRamWrite = 4'd4;
+  parameter ModeRead1 = 4'd5; //For checking written value of the Ram
+  parameter ModeRamRead1Delay = 4'd6; //Delay for reading the value of the Ram
+  parameter ModeSendData = 4'd7; //Delay for reading the value of the Ram
+        
+  parameter ModeChangeDsp = 4'd8;
+  parameter ModeRcvTestVector = 4'd15;
+  parameter ModeReadTestVectorInit = 4'd10;
+
+  parameter ModelDisplayRamData = 4'd7;
+  parameter RamDelay =3'd5; //2 should be enough
   
   reg [3:0] cur_state;
   reg [3:0] next_state;
+  reg [4:0] reg_cur_test_vector_idx; //This is the index of the current test vector for display
+  reg [7:0] reg_cur_data;
+  reg [4:0] reg_test_vector_idx;
+  reg [5:0] reg_byte_address;
+  reg [7:0] reg_read_back_data;
+  
+  reg reg_ps_w; //Write request bit from the PS
+  reg reg_pl_busy;
+  reg reg_pl_dp; //Data was processed by the PL
   reg initDone;
-  reg rcvDone;
-  reg bramReadInitDone;
+  reg parsingDone;
+  reg bramRead1InitDone;
   reg bramWriteDone;
-  reg delayRamReadDone;
+  reg delayRamRead1Done;
   reg ramDataVerified;
   reg [511:0] reg_dina;
   reg [511:0] reg_douta;
@@ -137,24 +158,26 @@ module partA_wrapper
   reg [2:0] delayRamReadCnt;
   //Define the output logics based on register variables
   assign out_leds = reg_out_leds;
-//  assign out_leds[7] = pclk;
-//  assign out_leds[6] = prstn;
   assign oled_data = reg_oled_data; 
   assign dina = reg_dina;
   assign addra = reg_addra;
   assign wea = reg_wea;
-  
+  assign gpio_io_i[31] = reg_pl_busy;
+  assign gpio_io_i[30] = reg_pl_dp;
+  assign gpio_io_i[7:0] = reg_read_back_data;
+  assign gpio_io_i[13:8] = reg_byte_address;
+  assign gpio_io_i[18:14] = reg_test_vector_idx;
   
  
   //Define logics at the initial state
   initial
   begin
-        cur_state <= ModeRst;
-        next_state <= ModeRst;  
+        cur_state <= ModeInit;
+        next_state <= ModeInit;  
         delayRamReadCnt<=RamDelay; //Delay a number of clock cycles for Ram Latency
-        delayRamReadDone <=0;
+        delayRamRead1Done <=0;
         bramWriteDone <=0;
-        bramReadInitDone <=0;
+        bramRead1InitDone <=0;
         ramDataVerified <=0;
         
   end
@@ -162,38 +185,66 @@ module partA_wrapper
   //Next state logic - Not that the pclk is enable only when the program is downloaded in the ZynQ processor
   always @(posedge pclk)
   begin
-        if (RST) begin
-            next_state <= ModeInit;
-        end 
-        else
         begin
             case (cur_state)
                 ModeInit:
                     begin
                         if (initDone)
                         begin
-                            next_state <=ModeRcvTestVector;          
+                            next_state <=ModeReady;          
                         end          
                    end
-                ModeRcvTestVector:
+                ModeReady:
                     begin
-                        if (rcvDone)
+                        if (reg_ps_w)
                         begin
-                            next_state <= ModeWriteTestVector;
+                            next_state <= ModeDataParsing; //Parse the received d
+                        end
+                        else 
+                        begin
+                            if (push_btn)
+                            begin
+                                next_state <= ModeChangeDsp;
+                            end                   
                         end
                     end
-                ModeWriteTestVector:
+                ModeDataParsing:
+                    begin
+                        if (parsingDone)
+                        begin
+                            next_state<=ModeRamWrite;
+                        end
+                    end
+                ModeRamWrite:
                     begin
                         if (bramWriteDone)
                         begin
-                            next_state <= ModeReadTestVectorInit;
+                            next_state<=ModeRead1;
                         end
                     end
-               ModeReadTestVectorInit:
+               ModeRead1:
                     begin
-                        if (bramReadInitDone)
+                        if (bramRead1InitDone)
                         begin
-                            next_state<= ModeDelayRamRead;
+                            next_state<=ModeRamRead1Delay;
+                        end 
+                    end
+               ModeRamRead1Delay:
+                    begin
+                        if (delayRamRead1Done)
+                        begin
+                            next_state<=ModeSendData;
+                        end
+                    end
+              ModeSendData: //Send the data back to the PS
+                    begin
+                    end   
+                    
+             /*  ModeReadTestVectorInit:
+                    begin
+                        if (bramRead1InitDone)
+                        begin
+                           // next_state<= ModeDelayRamRead;
                         end
                     end
                ModeDelayRamRead:
@@ -209,7 +260,7 @@ module partA_wrapper
                         begin
                             next_state <=ModelDisplayRamData;
                         end
-                    end
+                    end*/
                 default:
                     begin
                     end    
@@ -226,67 +277,100 @@ module partA_wrapper
   always @ (*)
   begin
     case (cur_state)
-        ModeRst:
+       ModeInit:
             begin
-                reg_out_leds [3:0] =4'd0;
-                reg_oled_rst = 1; 
-            end
-        ModeInit:
-            begin
+                reg_cur_test_vector_idx = 0;
                 reg_out_leds [3:0] =4'd1;
-                reg_oled_rst = 0; //Generate the reset signal for the OLED
-                reg_oled_data = 512'h31; //Init mode
+                reg_oled_rst = 0; //Generate the reset signal for the OLED. Important to have the following reset sequence 010..000
                 initDone = 1; //Allow moving to next state
                       
             end
-       ModeRcvTestVector:
+       ModeReady:
+            begin
+                reg_out_leds [3:0] =4'd2;
+                reg_oled_rst = 1;
+                //reg_oled_data = "ydaer metsyS :2";//2 System ready.
+                reg_ps_w = gpio2_io_o[31]; //Read the request bit from the PS                          
+                
+            end
+       ModeDataParsing:
+            begin
+                reg_out_leds [3:0] = 4'd3;
+                reg_oled_rst = 0;
+                reg_oled_data = "gnisrap ataD :3"; //3. Data parsing
+                reg_cur_data = gpio2_io_o[7:0]; //Read the data
+                reg_byte_address = gpio2_io_o[13:8];
+                reg_test_vector_idx = gpio2_io_o[18:14];
+                //Signals the PS that its is not available to get more data
+                reg_pl_busy = 1; //PL is still busy
+                reg_pl_dp = 0; //Data is not done with processing
+                parsingDone = 1;//Done with Data Parsing
+            end
+       ModeRamWrite:
+            begin
+                reg_pl_busy = 1;
+                reg_pl_dp = 0; 
+                reg_oled_rst = 0;
+                reg_oled_data = "..gnitirw maR :4"; //4. Writting value into the Ram
+                reg_out_leds [3:0] = 4'd4;
+                reg_addra = reg_test_vector_idx;
+                reg_dina = (reg_cur_data<<(8*reg_byte_address));
+                reg_wea = (1<<reg_byte_address);
+                bramWriteDone = 1;
+            end
+      ModeRead1:
+            begin
+                reg_pl_busy = 1;
+                reg_pl_dp = 0; 
+                reg_oled_rst = 0;
+                reg_oled_data = "..gnidaer maR :5"; //5. Reading value written into the Ram
+                reg_out_leds [3:0] = 4'd5;
+                reg_addra = reg_test_vector_idx;
+                reg_wea = {64{1'b0}};
+                bramRead1InitDone = 1;
+            end
+      ModeRamRead1Delay:
+            begin
+                reg_pl_busy = 1;
+                reg_pl_dp = 0; 
+                reg_oled_rst = 0;
+                reg_oled_data = "..gniyaleD :6"; //5. Reading value written into the Ram
+                reg_out_leds [3:0] = 4'd6;
+                if (delayRamReadCnt==0)
+                begin
+                        delayRamReadCnt = RamDelay;
+                        delayRamRead1Done = 1; 
+                                            
+                end
+                else
+                begin
+                       delayRamReadCnt = (delayRamReadCnt -1);                              
+                end
+            end 
+      ModeSendData:
             begin
                 reg_oled_rst = 0;
-                reg_oled_data = 512'h32; //Init mode
-                                
-                //Communicate with the PS to receive the data and send it to the LED
-                reg_out_leds [7:0] = gpio2_io_o[7:0];
-                
-                
-                
-                
-                rcvDone = 0;
-                             
+                reg_oled_data = "..gnidneS :7"; //5. Reading value written into the Ram
+                reg_out_leds [3:0] = 4'd7;
+                reg_read_back_data = (douta>>(8*reg_byte_address));
+                reg_pl_busy = 0; //PL is not busy any more
+                reg_pl_dp = 1;//Data is processed
             end
-       ModeWriteTestVector:
-             begin
-                   //Write a few data to BRAM
-                   reg_addra = 32'd0;
-                   reg_dina = "First message";
-                   reg_wea = {64{1'b1}}; //Allow writting all the bits
-                   reg_out_leds [3:0] = 4'd3;
-                   reg_oled_rst = 0;
-                   reg_oled_data = 512'h33; //Init mode
-                   bramWriteDone = 1;                                                
-             end    
-       ModeReadTestVectorInit:
+      /* ModeReadTestVectorInit:
             begin
                    reg_wea = 64'h0;
                    reg_addra = 32'd0;
                    reg_out_leds [3:0] = 4'd4;
                    reg_oled_rst = 0;
                    reg_oled_data = 512'h34; //Init mode
-                   bramReadInitDone = 1;                                         
+                   bramRead1InitDone = 1;                                         
             end
        ModeDelayRamRead:
             begin
                    reg_out_leds [3:0] = 4'd5;
                    reg_oled_rst = 0;
                    reg_oled_data = 512'h35; //Init mode
-                   if (delayRamReadCnt==0)
-                   begin
-                        delayRamReadCnt = RamDelay;
-                        delayRamReadDone = 1;                      
-                   end
-                   else
-                   begin
-                       delayRamReadCnt = (delayRamReadCnt -1);                              
-                   end
+                  
             end
       ModeRamDelayDone:
             begin
@@ -311,7 +395,7 @@ module partA_wrapper
                         ramDataVerified = 1'b0;
                    end
                    */                 
-            end
+            //end
       ModelDisplayRamData:
             begin
                 reg_out_leds = 4'd7;
