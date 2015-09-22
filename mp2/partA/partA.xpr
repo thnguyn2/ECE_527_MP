@@ -25,10 +25,13 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.hwdef"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA.hwh"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="partA_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xci">
+          <Proxy FileSetName="partA_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci">
+          <Proxy FileSetName="partA_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_auto_pc_0/partA_auto_pc_0.xci">
           <Proxy FileSetName="partA_auto_pc_0"/>
         </CompFileExtendedInfo>
@@ -42,13 +45,10 @@
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_rst_processing_system7_0_100M_0/partA_rst_processing_system7_0_100M_0.xci">
           <Proxy FileSetName="partA_rst_processing_system7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xci">
-          <Proxy FileSetName="partA_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci">
-          <Proxy FileSetName="partA_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hdl/partA.hwdef"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="hw_handoff/partA.hwh"/>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="partA_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/partA_wrapper.v">
         <FileInfo>

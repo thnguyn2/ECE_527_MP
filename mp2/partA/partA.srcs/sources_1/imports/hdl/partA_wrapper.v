@@ -126,12 +126,10 @@ module partA_wrapper
   parameter ModeRead1 = 4'd5; //For checking written value of the Ram
   parameter ModeRamRead1Delay = 4'd6; //Delay for reading the value of the Ram
   parameter ModeSendData = 4'd7; //Delay for reading the value of the Ram
-        
+      
   parameter ModeChangeDsp = 4'd8;
-  parameter ModeRcvTestVector = 4'd15;
-  parameter ModeReadTestVectorInit = 4'd10;
-
-  parameter ModelDisplayRamData = 4'd7;
+  
+  
   parameter RamDelay =3'd5; //2 should be enough
   
   reg [3:0] cur_state;
@@ -142,10 +140,12 @@ module partA_wrapper
   reg [5:0] reg_byte_address;
   reg [7:0] reg_read_back_data;
   
+  reg oled_reseted;
   reg reg_ps_w; //Write request bit from the PS
   reg reg_pl_busy;
   reg reg_pl_dp; //Data was processed by the PL
   reg initDone;
+  reg sendDone;
   reg parsingDone;
   reg bramRead1InitDone;
   reg bramWriteDone;
@@ -179,7 +179,8 @@ module partA_wrapper
         bramWriteDone <=0;
         bramRead1InitDone <=0;
         ramDataVerified <=0;
-        
+        sendDone <=0; //Status bit for sending to the PS
+        oled_reseted<=0;
   end
   
   //Next state logic - Not that the pclk is enable only when the program is downloaded in the ZynQ processor
@@ -238,29 +239,14 @@ module partA_wrapper
                     end
               ModeSendData: //Send the data back to the PS
                     begin
-                    end   
-                    
-             /*  ModeReadTestVectorInit:
-                    begin
-                        if (bramRead1InitDone)
+                        if (sendDone)
                         begin
-                           // next_state<= ModeDelayRamRead;
+                            next_state<=ModeReady;
                         end
-                    end
-               ModeDelayRamRead:
-                    begin
-                        if (delayRamReadDone)
-                        begin
-                            next_state <=ModeRamDelayDone;
-                        end
-                    end
-               ModeRamDelayDone:
-                    begin
-                        if (ramDataVerified)
-                        begin
-                            next_state <=ModelDisplayRamData;
-                        end
-                    end*/
+                    end  
+              ModeChangeDsp:
+                     begin
+                     end
                 default:
                     begin
                     end    
@@ -287,17 +273,28 @@ module partA_wrapper
             end
        ModeReady:
             begin
+                sendDone = 0;
                 reg_out_leds [3:0] =4'd2;
-                reg_oled_rst = 1;
+                if (oled_reseted==0)//Just reset the OLED module once.
+                begin
+                    reg_oled_rst = 1;
+                end
+                else
+                begin
+                    reg_oled_rst = 0; 
+                end
                 //reg_oled_data = "ydaer metsyS :2";//2 System ready.
-                reg_ps_w = gpio2_io_o[31]; //Read the request bit from the PS                          
+                reg_ps_w = gpio2_io_o[31]; //Read the request bit from the PS   
+                reg_oled_data = "..ydaeR: 2"; //5. Reading value written into the Ram
+                                           
                 
             end
        ModeDataParsing:
             begin
+                oled_reseted = 1;
                 reg_out_leds [3:0] = 4'd3;
                 reg_oled_rst = 0;
-                reg_oled_data = "gnisrap ataD :3"; //3. Data parsing
+                //reg_oled_data = "gnisrap ataD :3"; //3. Data parsing
                 reg_cur_data = gpio2_io_o[7:0]; //Read the data
                 reg_byte_address = gpio2_io_o[13:8];
                 reg_test_vector_idx = gpio2_io_o[18:14];
@@ -308,10 +305,11 @@ module partA_wrapper
             end
        ModeRamWrite:
             begin
+                parsingDone = 0;
                 reg_pl_busy = 1;
                 reg_pl_dp = 0; 
                 reg_oled_rst = 0;
-                reg_oled_data = "..gnitirw maR :4"; //4. Writting value into the Ram
+                //reg_oled_data = "..gnitirw maR :4"; //4. Writting value into the Ram
                 reg_out_leds [3:0] = 4'd4;
                 reg_addra = reg_test_vector_idx;
                 reg_dina = (reg_cur_data<<(8*reg_byte_address));
@@ -320,10 +318,11 @@ module partA_wrapper
             end
       ModeRead1:
             begin
+                bramWriteDone = 0;
                 reg_pl_busy = 1;
                 reg_pl_dp = 0; 
                 reg_oled_rst = 0;
-                reg_oled_data = "..gnidaer maR :5"; //5. Reading value written into the Ram
+                //reg_oled_data = "..gnidaer maR :5"; //5. Reading value written into the Ram
                 reg_out_leds [3:0] = 4'd5;
                 reg_addra = reg_test_vector_idx;
                 reg_wea = {64{1'b0}};
@@ -331,10 +330,11 @@ module partA_wrapper
             end
       ModeRamRead1Delay:
             begin
+                bramRead1InitDone = 0;
                 reg_pl_busy = 1;
                 reg_pl_dp = 0; 
                 reg_oled_rst = 0;
-                reg_oled_data = "..gniyaleD :6"; //5. Reading value written into the Ram
+                //reg_oled_data = "..gniyaleD :6"; //5. Reading value written into the Ram
                 reg_out_leds [3:0] = 4'd6;
                 if (delayRamReadCnt==0)
                 begin
@@ -349,59 +349,30 @@ module partA_wrapper
             end 
       ModeSendData:
             begin
+                delayRamRead1Done = 0;
                 reg_oled_rst = 0;
-                reg_oled_data = "..gnidneS :7"; //5. Reading value written into the Ram
+                //reg_oled_data = "..gnidneS :7"; //5. Reading value written into the Ram
                 reg_out_leds [3:0] = 4'd7;
                 reg_read_back_data = (douta>>(8*reg_byte_address));
                 reg_pl_busy = 0; //PL is not busy any more
                 reg_pl_dp = 1;//Data is processed
+                sendDone = 1;
             end
-      /* ModeReadTestVectorInit:
+            
+      ModeChangeDsp:
             begin
-                   reg_wea = 64'h0;
-                   reg_addra = 32'd0;
-                   reg_out_leds [3:0] = 4'd4;
-                   reg_oled_rst = 0;
-                   reg_oled_data = 512'h34; //Init mode
-                   bramRead1InitDone = 1;                                         
+                reg_pl_busy = 1;
+                reg_pl_dp = 0; 
+                reg_oled_rst = 0;
+                reg_oled_data = "..To be displyed:7"; //5. Reading value written into the Ram
             end
-       ModeDelayRamRead:
-            begin
-                   reg_out_leds [3:0] = 4'd5;
-                   reg_oled_rst = 0;
-                   reg_oled_data = 512'h35; //Init mode
-                  
-            end
-      ModeRamDelayDone:
-            begin
-                   delayRamReadDone =0; //Prepare for the next test vector
-                   reg_douta = douta;
-                   reg_oled_rst = 0;
-                   reg_oled_data = 512'h36; //Init mode                                
-                   reg_out_leds [3:0]= 4'd6;
-                                                                 
-                   //The following commands takes so long to compile 
-                   //if (reg_dina==reg_douta)
-                   //begin
-                        //reg_out_leds = 8'h01;
-                   ramDataVerified = 1'b1;
-                                 
-                 
-                  
-                  /* end
-                   else
-                   begin
-                        //reg_out_leds = 8'h02;
-                        ramDataVerified = 1'b0;
-                   end
-                   */                 
-            //end
-      ModelDisplayRamData:
+    
+   /*   ModelDisplayRamData:
             begin
                 reg_out_leds = 4'd7;
                 reg_oled_rst = 0;
                 reg_oled_data = reg_douta; //Init mode      
-            end
+            end*/
        default:
             begin
             end

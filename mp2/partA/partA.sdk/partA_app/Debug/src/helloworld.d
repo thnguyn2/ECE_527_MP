@@ -12,7 +12,7 @@ src/helloworld.o src/helloworld.d: ../src/helloworld.c ../src/platform.h \
  ../../partA/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../partA/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  ../../partA/ps7_cortexa9_0/include/xil_printf.h \
- ../../partA/ps7_cortexa9_0/include/xparameters.h
+ ../../partA/ps7_cortexa9_0/include/xparameters.h ../src/testvector.h
 
 ../src/platform.h:
 
@@ -43,3 +43,5 @@ src/helloworld.o src/helloworld.d: ../src/helloworld.c ../src/platform.h \
 ../../partA/ps7_cortexa9_0/include/xil_printf.h:
 
 ../../partA/ps7_cortexa9_0/include/xparameters.h:
+
+../src/testvector.h:

@@ -58,12 +58,9 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xgpio.h"
-
+#include "testvector.h"//Header file for the test vector
 
 /************************** Constant Definitions *****************************/
-
-#define LED 0x01   /* Assumes bit 0 of GPIO is connected to an LED  */
-
 /*
  * The following constant maps to the name of the hardware instances that
  * were created in the EDK XPS system.
@@ -81,7 +78,8 @@
  * The following constant is used to determine which channel of the GPIO is
  * used for the LED if there are 2 channels supported.
  */
-#define LED_CHANNEL 2 //The output is the second channel of the GPIO
+#define OUPTPUT_CHANNEL 2 //The output is the second channel of the GPIO
+#define INPUT_CHANNEL 1 //This is the input channel
 
 /**************************** Type Definitions *******************************/
 
@@ -137,15 +135,28 @@ XGpio Gpio; /* The Instance of the GPIO Driver */
 * @note		This function will not return if the test is running.
 *
 ******************************************************************************/
+u32 createDataPacket(u8 data, u8 byteaddr, u8 test_vect_addr)
+
+{
+	//Create a packet of 32 bit where the MSB is 1 (Write Request bit), bit 18->14: Address of the test vector in BRAM, bit 13->8: address of the byte in the test vector, 7->0: data to be written
+	unsigned int temp=0;
+	temp = (u32)(data+ (u32)byteaddr*256 + (u32)test_vect_addr* 16384)+ 2147483648;
+	return temp;
+}
+
 int main(void)
 {
 	u32 Data;
+	u32 InData;
 	int Status;
 	volatile int Delay;
+	int test_vect_idx =0;
+	int charidx = 0;
+	u8 DataWrittenDone = 0;
+	char curchar;
 
 	 init_platform();
 
-	 print("Hello World\n\r");
 
 
 	/*
@@ -156,40 +167,37 @@ int main(void)
 		return XST_FAILURE;
 	}
 
-	/*
-	 * Set the direction for all signals to be inputs except the
-	 * LED output
-	 */
-	//XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED);//No need to do this since the LED will be the output
+	for (test_vect_idx=0;test_vect_idx<num_test_vectors;test_vect_idx++)
+	{
+		for (charidx=0;charidx<64;charidx++)
+		{
+			curchar = testvector[test_vect_idx][charidx]; //Read the current character
+			Data = createDataPacket(curchar,charidx,test_vect_idx); //Send the 'A' character to byte 3 of testvector 1
+			print("Sending character \n");
+			XGpio_DiscreteWrite(&Gpio, OUPTPUT_CHANNEL, Data); //Write into the PL
+			//Double check by reading from the PL
+			for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while
+			//Read back the data from the PL side to see its status
+			do
+			{
+				InData = XGpio_DiscreteRead(&Gpio, INPUT_CHANNEL);
+				for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while before recheck
+			}
+			while (InData&(1<<31));
+			if ((InData&0xFF)==(Data&0xFF))
+			{
+				print("Correct\n");
+			}
+			else
+			{
+				print("Incorrect\n");
+			}
 
-	/* Loop forever blinking the LED */
-
-	while (1) {
-		/*
-		 * Read the state of the data so that only the LED state can be
-		 * modified
-		 */
-		//Data = XGpio_DiscreteRead(&Gpio, LED_CHANNEL);
-
-
-		XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, 0xFFFF0FF0);
-
-
-		/* Wait a small amount of time so the LED is visible */
-
-		for (Delay = 0; Delay < LED_DELAY; Delay++);
-
-		/*
-		 * Read the state of the data so that only the LED state can be
-		 * modified
-		 */
-		//Data = XGpio_DiscreteRead(&Gpio, LED_CHANNEL);
-
-		/*
-		 * Set the LED to the opposite state such that it blinks using
-		 * the other API functions
-		 */
+		}
 	}
+
+
+
 
 	cleanup_platform();
 	return XST_SUCCESS;

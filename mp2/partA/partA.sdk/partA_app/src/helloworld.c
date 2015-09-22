@@ -58,7 +58,7 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xgpio.h"
-
+#include "testvector.h"//Header file for the test vector
 
 /************************** Constant Definitions *****************************/
 /*
@@ -72,7 +72,7 @@
  * sure that it is visible to the human eye.  This constant might need to be
  * tuned for faster or slower processor speeds.
  */
-#define LED_DELAY     1000000
+#define LED_DELAY     10000000
 
 /*
  * The following constant is used to determine which channel of the GPIO is
@@ -150,7 +150,10 @@ int main(void)
 	u32 InData;
 	int Status;
 	volatile int Delay;
+	int test_vect_idx =0;
+	int charidx = 0;
 	u8 DataWrittenDone = 0;
+	char curchar;
 
 	 init_platform();
 
@@ -164,35 +167,37 @@ int main(void)
 		return XST_FAILURE;
 	}
 
-
-
-		Data = createDataPacket(0x41,63,31); //Send the 'A' character to byte 3 of testvector 1
-		print("Sending data\n");
-		XGpio_DiscreteWrite(&Gpio, OUPTPUT_CHANNEL, Data);
-		for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while
-		//Read back the data from the PL side to see its status
-		do
+	for (test_vect_idx=0;test_vect_idx<num_test_vectors;test_vect_idx++)
+	{
+		for (charidx=0;charidx<64;charidx++)
 		{
-			InData = XGpio_DiscreteRead(&Gpio, INPUT_CHANNEL);
-			if (InData&(1<<31))
+			curchar = testvector[test_vect_idx][charidx]; //Read the current character
+			Data = createDataPacket(curchar,charidx,test_vect_idx); //Send the 'A' character to byte 3 of testvector 1
+			print("Sending character \n");
+			XGpio_DiscreteWrite(&Gpio, OUPTPUT_CHANNEL, Data); //Write into the PL
+			//Double check by reading from the PL
+			for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while
+			//Read back the data from the PL side to see its status
+			do
 			{
-				print("PL is busy\n");
+				InData = XGpio_DiscreteRead(&Gpio, INPUT_CHANNEL);
+				for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while before recheck
+			}
+			while (InData&(1<<31));
+			if ((InData&0xFF)==(Data&0xFF))
+			{
+				print("Correct\n");
 			}
 			else
 			{
-				print("PL is free\n");
+				print("Incorrect\n");
 			}
-			for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while before recheck
+			for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while
+
 		}
-		while (InData&(1<<31));
-		if ((InData&0xFF)==(Data&0xFF))
-		{
-			print("Correct\n");
-		}
-		else
-		{
-			print("Incorrect\n");
-		}
+	}
+
+
 
 
 	cleanup_platform();

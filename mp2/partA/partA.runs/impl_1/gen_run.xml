@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442906617">
-  <File Type="OPT-DCP" Name="partA_wrapper_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1442909753">
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="OPT-DCP" Name="partA_wrapper_opt.dcp"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
-  <File Type="PWROPT-DCP" Name="partA_wrapper_pwropt.dcp"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
   <File Type="ROUTE-DCP" Name="partA_wrapper_routed.dcp"/>
   <File Type="PA-TCL" Name="partA_wrapper.tcl"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="PWROPT-DCP" Name="partA_wrapper_pwropt.dcp"/>
   <File Type="OPT-DRC" Name="partA_wrapper_drc_opted.rpt"/>
   <File Type="PWROPT-DRC" Name="partA_wrapper_drc_pwropted.rpt"/>
   <File Type="OPT-HWDEF" Name="partA_wrapper.hwdef"/>
@@ -20,8 +20,8 @@
   <File Type="PLACE-PRE-SIMILARITY" Name="partA_wrapper_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="partA_wrapper_postplace_pwropt.dcp"/>
   <File Type="PHYSOPT-DCP" Name="partA_wrapper_physopt.dcp"/>
-  <File Type="RDI-RDI" Name="partA_wrapper.vdi"/>
   <File Type="PHYSOPT-DRC" Name="partA_wrapper_drc_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="partA_wrapper.vdi"/>
   <File Type="ROUTE-DRC" Name="partA_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="partA_wrapper_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="partA_wrapper_power_routed.rpt"/>
@@ -103,10 +103,10 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="partA_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="partA_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="partA_blk_mem_gen_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="partA_rst_processing_system7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="partA_blk_mem_gen_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="partA_OLED_ip_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="partA_auto_pc_0"/>
 </GenRun>

@@ -58,7 +58,7 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xgpio.h"
-
+#include "testvector.h"//Header file for the test vector
 
 /************************** Constant Definitions *****************************/
 /*
@@ -135,19 +135,25 @@ XGpio Gpio; /* The Instance of the GPIO Driver */
 * @note		This function will not return if the test is running.
 *
 ******************************************************************************/
-u32 createDataPacket(char data, char byteaddr, char test_vect_addr)
+u32 createDataPacket(u8 data, u8 byteaddr, u8 test_vect_addr)
+
 {
 	//Create a packet of 32 bit where the MSB is 1 (Write Request bit), bit 18->14: Address of the test vector in BRAM, bit 13->8: address of the byte in the test vector, 7->0: data to be written
-	u32 temp;
-	temp = ((1<<32)|(data+ ((u32) byteaddr)<<8+((u32)test_vect_addr<<14)));
+	unsigned int temp=0;
+	temp = (u32)(data+ (u32)byteaddr*256 + (u32)test_vect_addr* 16384)+ 2147483648;
 	return temp;
 }
 
 int main(void)
 {
 	u32 Data;
+	u32 InData;
 	int Status;
 	volatile int Delay;
+	int test_vect_idx =0;
+	int charidx = 0;
+	u8 DataWrittenDone = 0;
+	char curchar;
 
 	 init_platform();
 
@@ -161,22 +167,36 @@ int main(void)
 		return XST_FAILURE;
 	}
 
+	for (test_vect_idx=0;test_vect_idx<num_test_vectors;test_vect_idx++)
+	{
+		for (charidx=0;charidx<64;charidx++)
+		{
+			curchar = testvector[test_vect_idx][charidx]; //Read the current character
+			Data = createDataPacket(curchar,charidx,test_vect_idx); //Send the 'A' character to byte 3 of testvector 1
+			print("Sending data\n");
+			XGpio_DiscreteWrite(&Gpio, OUPTPUT_CHANNEL, Data);
+			for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while
+			//Read back the data from the PL side to see its status
+			do
+			{
+				InData = XGpio_DiscreteRead(&Gpio, INPUT_CHANNEL);
+				for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while before recheck
+			}
+			while (InData&(1<<31));
+			if ((InData&0xFF)==(Data&0xFF))
+			{
+				print("Correct\n");
+			}
+			else
+			{
+				print("Incorrect\n");
+			}
 
-	//while (1) {
-		/*
-		 * Read the state of the data so that only the LED state can be
-		 * modified
-		 */
-		//Data = XGpio_DiscreteRead(&Gpio, LED_CHANNEL);
-
-		Data = createDataPacket(0x41,3.1);//Send the 'A' character to byte 3 of testvector 1
-		print("Sending data\n");
-
-		XGpio_DiscreteWrite(&Gpio, OUPTPUT_CHANNEL, 0xFFFF0FF0);
-		//for (Delay = 0; Delay < LED_DELAY; Delay++);
+		}
+	}
 
 
-	//}
+
 
 	cleanup_platform();
 	return XST_SUCCESS;
