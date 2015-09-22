@@ -1,6 +1,6 @@
-04:56:15 **** Incremental Build of configuration Debug for project partA_app ****
+05:39:50 **** Incremental Build of configuration Debug for project partA_app ****
 make all 
 make: Nothing to be done for `all'.
 
-04:56:15 Build Finished (took 119ms)
+05:39:50 Build Finished (took 120ms)
 

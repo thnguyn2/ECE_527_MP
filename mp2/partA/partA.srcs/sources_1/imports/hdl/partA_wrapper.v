@@ -159,6 +159,7 @@ module partA_wrapper
   reg delayRamRead2Done;
   reg ramDataVerified;
   reg newDispPageSet;
+  reg screenUpdated;
   reg [511:0] reg_dina;
   reg [511:0] reg_douta;
   reg [31:0] reg_addra;
@@ -191,6 +192,7 @@ module partA_wrapper
         oled_reseted<=0;
         reg_cur_test_vector_idx<=0;
         newDispPageSet<=0;
+        screenUpdated<=0;
   end
   
   //Next state logic - Not that the pclk is enable only when the program is downloaded in the ZynQ processor
@@ -278,9 +280,14 @@ module partA_wrapper
                     end
             ModeScreenUpdate:
                     begin
+                        if ((screenUpdated)&(push_btn)) //Stay in this mode until another push button is pressed.
+                        begin
+                            next_state<=ModeReady;
+                        end
                     end
                 default:
                     begin
+                            next_state<=cur_state;
                     end    
             endcase
         end
@@ -306,10 +313,8 @@ module partA_wrapper
        ModeReady:
             begin
                 reg_out_leds [3:0] =4'd2;
-                reg_oled_rst = 1;
-                reg_oled_data = "ydaer metsyS :2";//2 System ready.
+                reg_oled_rst=1;
                 reg_ps_w = gpio2_io_o[31]; //Read the request bit from the PS   
-                reg_oled_data = "..ydaeR: 2"; //5. Reading value written into the Ram
                 
                 
             end
@@ -385,6 +390,7 @@ module partA_wrapper
             
       ModeChangeDsp:
             begin
+                screenUpdated = 0;
                 reg_pl_busy = 1;
                 reg_pl_dp = 0; 
                 reg_oled_rst = 0;
@@ -399,6 +405,7 @@ module partA_wrapper
             end
      ModeRead2:
             begin
+                newDispPageSet = 0;
                 reg_pl_busy = 1;
                 reg_pl_dp = 0; 
                 reg_oled_rst = 0;
@@ -410,6 +417,7 @@ module partA_wrapper
             end
       ModeRamRead2Delay:
             begin
+                bramRead2InitDone =0;
                 reg_pl_busy = 1;
                 reg_pl_dp = 0; 
                 reg_oled_rst = 0;
@@ -432,6 +440,7 @@ module partA_wrapper
                 reg_oled_rst = 0;
                 reg_oled_data = douta; //5. Reading value written into the Ram
                 reg_out_leds [3:0] = 4'd11;
+                screenUpdated = 1;
                 
             end
   
