@@ -875,3 +875,299 @@ Unknown Error Occured
 03:22:32 INFO  : ps7_post_config is completed.
 03:22:32 INFO  : Processor reset is completed for ps7_cortexa9_0
 03:23:25 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:39:24 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+03:39:25 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+03:39:26 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+03:39:27 INFO  : XSDB server has started successfully.
+03:39:59 INFO  : ps7_init is completed.
+03:39:59 INFO  : ps7_post_config is completed.
+03:39:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:41:15 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:41:39 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+03:41:40 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+03:41:40 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+03:41:41 INFO  : XSDB server has started successfully.
+03:42:04 INFO  : ps7_init is completed.
+03:42:04 INFO  : ps7_post_config is completed.
+03:42:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:42:28 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:46:41 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+03:46:42 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+03:46:42 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+03:46:43 INFO  : XSDB server has started successfully.
+03:46:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442911559136,  Project:1442909913134
+03:46:43 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+03:46:43 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+03:46:47 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:46:50 INFO  : 
+03:46:51 INFO  : Updating hardware inferred compiler options for partA_app.
+03:46:51 INFO  : Clearing existing target manager status.
+03:47:25 INFO  : ps7_init is completed.
+03:47:25 INFO  : ps7_post_config is completed.
+03:47:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:53:23 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:55:18 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+03:55:19 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+03:55:19 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+03:55:20 INFO  : XSDB server has started successfully.
+03:55:21 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442912073457,  Project:1442911559136
+03:55:21 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+03:55:21 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+03:55:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:55:39 INFO  : 
+03:55:40 INFO  : Updating hardware inferred compiler options for partA_app.
+03:55:40 INFO  : Clearing existing target manager status.
+03:56:14 INFO  : ps7_init is completed.
+03:56:14 INFO  : ps7_post_config is completed.
+03:56:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:00:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:03:44 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:03:45 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:03:45 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:03:46 INFO  : XSDB server has started successfully.
+04:03:46 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442912575216,  Project:1442912073457
+04:03:46 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:03:46 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+04:04:03 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:04:07 INFO  : 
+04:04:08 INFO  : Updating hardware inferred compiler options for partA_app.
+04:04:08 INFO  : Clearing existing target manager status.
+04:04:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:05:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:05:55 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:05:56 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:05:56 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:05:57 INFO  : XSDB server has started successfully.
+04:06:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:06:35 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:19:19 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:19:20 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:19:21 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:19:22 INFO  : XSDB server has started successfully.
+04:19:22 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442913529868,  Project:1442912575216
+04:19:22 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:19:22 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+04:19:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:19:29 INFO  : 
+04:19:30 INFO  : Updating hardware inferred compiler options for partA_app.
+04:19:30 INFO  : Clearing existing target manager status.
+04:19:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:20:03 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:20:36 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:20:37 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:20:38 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:20:39 INFO  : XSDB server has started successfully.
+04:21:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:21:09 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:21:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:22:19 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:22:19 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:22:20 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:22:21 INFO  : XSDB server has started successfully.
+04:22:52 INFO  : ps7_init is completed.
+04:22:52 INFO  : ps7_post_config is completed.
+04:22:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:23:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:23:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:24:15 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:24:36 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:24:37 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:24:37 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:24:38 INFO  : XSDB server has started successfully.
+04:25:16 INFO  : ps7_init is completed.
+04:25:16 INFO  : ps7_post_config is completed.
+04:25:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:25:57 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:26:15 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:26:16 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:26:17 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:26:18 INFO  : XSDB server has started successfully.
+04:26:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:27:18 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:27:35 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:27:36 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:27:37 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:27:38 INFO  : XSDB server has started successfully.
+04:27:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:28:45 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:29:06 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:29:06 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:29:07 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:29:08 INFO  : XSDB server has started successfully.
+04:29:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:29:42 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:29:59 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:30:00 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:30:01 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:30:02 INFO  : XSDB server has started successfully.
+04:30:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:30:20 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:30:29 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:30:57 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:30:58 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:30:59 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:31:00 INFO  : XSDB server has started successfully.
+04:31:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:31:50 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:32:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:33:23 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:33:24 INFO  : XSDB server has started successfully.
+04:33:24 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:33:25 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:33:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:33:53 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:34:11 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:34:31 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:34:32 INFO  : XSDB server has started successfully.
+04:34:33 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:34:34 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:34:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:34:48 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:35:32 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:35:52 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:35:53 INFO  : XSDB server has started successfully.
+04:35:54 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:35:54 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:36:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:36:08 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:606)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:294)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+04:36:36 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:37:10 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:37:11 INFO  : XSDB server has started successfully.
+04:37:11 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:37:12 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:37:28 INFO  : ps7_init is completed.
+04:37:28 INFO  : ps7_post_config is completed.
+04:37:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:38:03 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+04:38:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:38:42 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:39:03 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:39:04 INFO  : XSDB server has started successfully.
+04:39:05 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:39:06 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:39:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:40:49 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:41:13 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:41:13 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:41:14 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:41:20 INFO  : XSDB server has started successfully.
+04:41:51 INFO  : ps7_init is completed.
+04:41:51 INFO  : ps7_post_config is completed.
+04:41:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:42:07 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:51:03 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:51:04 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:51:05 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:51:07 INFO  : XSDB server has started successfully.
+04:51:07 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442915412055,  Project:1442913529868
+04:51:07 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:51:07 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+04:51:11 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:51:14 INFO  : 
+04:51:15 INFO  : Updating hardware inferred compiler options for partA_app.
+04:51:15 INFO  : Clearing existing target manager status.
+04:51:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:51:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+04:55:39 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+04:55:40 INFO  : XSDB server has started successfully.
+04:55:40 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:55:41 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+04:55:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442915691748,  Project:1442915412055
+04:55:43 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+04:55:43 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+04:56:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:56:03 INFO  : 
+04:56:04 INFO  : Updating hardware inferred compiler options for partA_app.
+04:56:04 INFO  : Clearing existing target manager status.
+04:56:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:56:43 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

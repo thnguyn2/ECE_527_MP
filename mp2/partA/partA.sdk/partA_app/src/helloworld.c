@@ -72,7 +72,7 @@
  * sure that it is visible to the human eye.  This constant might need to be
  * tuned for faster or slower processor speeds.
  */
-#define LED_DELAY     10000000
+#define LED_DELAY     1000000
 
 /*
  * The following constant is used to determine which channel of the GPIO is
@@ -150,8 +150,8 @@ int main(void)
 	u32 InData;
 	int Status;
 	volatile int Delay;
-	int test_vect_idx =0;
-	int charidx = 0;
+	char test_vect_idx =0;
+	char charidx = 0;
 	u8 DataWrittenDone = 0;
 	char curchar;
 
@@ -166,6 +166,7 @@ int main(void)
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
+
 
 	for (test_vect_idx=0;test_vect_idx<num_test_vectors;test_vect_idx++)
 	{
@@ -192,13 +193,12 @@ int main(void)
 			{
 				print("Incorrect\n");
 			}
+			XGpio_DiscreteWrite(&Gpio, OUPTPUT_CHANNEL, 0x00000000); //Release the bus immediately
 			for (Delay = 0; Delay < LED_DELAY; Delay++); //Wait for a while
 
 		}
 	}
-
-
-
+	print("Done sending. Please press the center button to begin...");
 
 	cleanup_platform();
 	return XST_SUCCESS;
