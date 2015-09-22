@@ -1,0 +1,6 @@
+15:30:40 **** Incremental Build of configuration Debug for project mp2bsw ****
+make all 
+make: Nothing to be done for `all'.
+
+15:30:41 Build Finished (took 609ms)
+
