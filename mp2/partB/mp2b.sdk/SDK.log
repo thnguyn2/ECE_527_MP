@@ -194,3 +194,8 @@ Cannot write to target
 15:28:24 INFO  : XSDB server has started successfully.
 15:30:46 INFO  : Processor reset is completed for ps7_cortexa9_0
 15:31:18 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+00:01:49 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partB/mp2b.sdk/hardwareplatform_wrapper.hdf.
+00:01:51 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+00:01:55 INFO  : XSDB server has started successfully.
+00:03:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:03:26 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

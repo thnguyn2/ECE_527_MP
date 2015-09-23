@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:37:43 MDT 2015
+# 
+# Start of session at: Sat Sep 19 11:55:00 2015
+# Process ID: 5256
+# Log file: Z:/Documents/UIUC/ECE527/ECE_527_MP/mp2/partB/mp2b.sdk/webtalk/webtalk.log
+# Journal file: Z:/Documents/UIUC/ECE527/ECE_527_MP/mp2/partB/mp2b.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

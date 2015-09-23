@@ -25,10 +25,10 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_axi_gpio_0_0/partA_axi_gpio_0_0.xci">
           <Proxy FileSetName="partA_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_axi_periph_0/partA_processing_system7_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="partA.bd" FileRelPathName="ip/partA_processing_system7_0_0/partA_processing_system7_0_0.xci">
           <Proxy FileSetName="partA_processing_system7_0_0"/>
         </CompFileExtendedInfo>

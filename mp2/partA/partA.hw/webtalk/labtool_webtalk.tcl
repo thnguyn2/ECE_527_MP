@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Sep 22 05:43:02 2015" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Sep 22 23:43:18 2015" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "Vivado v2015.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1215546" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -22,8 +22,7 @@ webtalk_add_data -client project -key cpu_speed -value "2394 MHz" -context "user
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "user_environment"
 webtalk_register_client -client labtool
-webtalk_add_data -client labtool -key cable -value "Digilent/Zed/15000000" -context "labtool\\usage"
-webtalk_add_data -client labtool -key chain -value "0000400023727093" -context "labtool\\usage"
-webtalk_add_data -client labtool -key pgmcnt -value "17:00:00" -context "labtool\\usage"
-webtalk_transmit -clientid 4080934099 -regid "211083026_1777510696_210611924_300" -xml E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/usage_statistics_ext_labtool.xml -html E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/usage_statistics_ext_labtool.html -wdm E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
+webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
+webtalk_transmit -clientid 2672653909 -regid "211083026_1777510696_210611924_300" -xml E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/usage_statistics_ext_labtool.xml -html E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/usage_statistics_ext_labtool.html -wdm E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate

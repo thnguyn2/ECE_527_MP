@@ -1289,3 +1289,18 @@ java.lang.RuntimeException: Failed to download ELF file
 05:39:53 INFO  : ps7_init is completed.
 05:39:53 INFO  : ps7_post_config is completed.
 05:39:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:45:02 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+23:45:15 INFO  : XSDB server has started successfully.
+23:45:21 INFO  : Processing command line option -hwspec E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+23:45:22 INFO  : Checking for hwspec changes in the project partA_wrapper_hw_platform_0.
+23:45:31 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1442982635988,  Project:1442918320882
+23:45:31 INFO  : The hardware specification for project 'partA_wrapper_hw_platform_0' is different from E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf.
+23:45:31 INFO  : Copied contents of E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partA/partA.sdk/partA_wrapper.hdf into \partA_wrapper_hw_platform_0\system.hdf.
+23:46:20 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:46:24 INFO  : 
+23:46:25 INFO  : Updating hardware inferred compiler options for partA_app.
+23:46:25 INFO  : Clearing existing target manager status.
+23:46:36 INFO  : ps7_init is completed.
+23:46:37 INFO  : ps7_post_config is completed.
+23:46:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:46:56 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

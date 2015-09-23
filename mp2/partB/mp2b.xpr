@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="Z:/Documents/UIUC/ECE527/ECE_527_MP/mp2/partB/mp2b.xpr">
+<Project Version="7" Minor="5" Path="E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partB/mp2b.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="413518008bdf4c80861e57411a456e58"/>
@@ -24,25 +24,25 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hdl/hardwareplatform.hwdef"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hw_handoff/hardwareplatform_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hw_handoff/hardwareplatform.hwh"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hardwareplatform_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_us_2/hardwareplatform_auto_us_2.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_us_1/hardwareplatform_auto_us_1.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_us_0/hardwareplatform_auto_us_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_processing_system7_0_0/hardwareplatform_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_axi_dma_0_0/hardwareplatform_axi_dma_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_pc_1/hardwareplatform_auto_pc_1.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_c_addsub_0_0/hardwareplatform_c_addsub_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hdl/hardwareplatform.v"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_xlconcat_0_0/hardwareplatform_xlconcat_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_pc_0/hardwareplatform_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_axis_data_fifo_0_0/hardwareplatform_axis_data_fifo_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_xbar_0/hardwareplatform_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_axi_mem_intercon_0/hardwareplatform_axi_mem_intercon_0.xci"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_rst_processing_system7_0_100M_0/hardwareplatform_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_processing_system7_0_axi_periph_0/hardwareplatform_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_axi_dma_0_0/hardwareplatform_axi_dma_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_processing_system7_0_0/hardwareplatform_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hdl/hardwareplatform.hwdef"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hw_handoff/hardwareplatform_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hw_handoff/hardwareplatform.hwh"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="hardwareplatform_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_pc_0/hardwareplatform_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_us_2/hardwareplatform_auto_us_2.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_us_1/hardwareplatform_auto_us_1.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_us_0/hardwareplatform_auto_us_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_auto_pc_1/hardwareplatform_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="hardwareplatform.bd" FileRelPathName="ip/hardwareplatform_c_addsub_0_0/hardwareplatform_c_addsub_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/hardwareplatform_wrapper.v">
         <FileInfo>

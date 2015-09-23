@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date             : Tue Sep 22 05:38:07 2015
+| Date             : Tue Sep 22 23:30:00 2015
 | Host             : zombie running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file partA_wrapper_power_routed.rpt -pb partA_wrapper_power_summary_routed.pb
 | Design           : partA_wrapper
