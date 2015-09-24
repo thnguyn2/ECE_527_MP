@@ -34,22 +34,39 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.hwdef"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="partC_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_auto_pc_0/partC_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.v"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_xbar_0/partC_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_axi_periph_0/partC_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.hwdef"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_auto_pc_0/partC_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="partC_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/pg_comp.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/gk0_compute.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="partC_wrapper"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/pg_comp.v"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -72,6 +89,7 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="partC_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/gk0_compute.v"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
