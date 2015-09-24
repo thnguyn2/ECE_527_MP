@@ -77,7 +77,7 @@
  * sure that it is visible to the human eye.  This constant might need to be
  * tuned for faster or slower processor speeds.
  */
-#define LED_DELAY     500 //This number of cycle should be larger than 32 bits * 6 clocks since the PS is acting at 600 Mhz.
+#define LED_DELAY     1000 //This number of cycle should be larger than 32 bits * 6 clocks since the PS is acting at 600 Mhz.
 
 /*
  * The following constant is used to determine which channel of the GPIO is
