@@ -31,7 +31,6 @@ module partC_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    leds
     );
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -54,8 +53,7 @@ module partC_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [7:0] leds;
- 
+    
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -82,20 +80,9 @@ module partC_wrapper
   wire [31:0]input2;
   wire [31:0]sum_res;
   
+  //----Carry ripple adder---
+  carry_ripple_adder adder1(.A(input1),.B(input2),.Cin(1'b0),.S(sum_res));  
   
-  reg [31:0] reg_input1;
-  reg [31:0] reg_input2;
-  reg [31:0] reg_sum_res;
-  reg [7:0] reg_leds;
-  assign sum_res = reg_sum_res;
-  assign leds = reg_leds;
-  always @ (posedge clk)
-  begin
-    reg_sum_res <= (input1 + input2);
-    reg_leds[3:0] <= input1[3:0];
-    reg_leds[7:4] <= input2[3:0];
-  end
-
   partC partC_i
        (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),

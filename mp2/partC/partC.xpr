@@ -18,11 +18,15 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/hdl/partC_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/new/full_adder.v">
         <FileInfo>
-          <Attr Name="IsGlobalInclude" Val="1"/>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/partC/hdl/partC_wrapper.v"/>
-          <Attr Name="ImportTime" Val="1443035713"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/carry_ripple_adder.v">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -34,6 +38,9 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.hwdef"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
@@ -43,12 +50,11 @@
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_xbar_0/partC_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_axi_periph_0/partC_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/pg_comp.v">
+      <File Path="$PSRCDIR/sources_1/imports/hdl/partC_wrapper.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/partC/hdl/partC_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1443069191"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -62,24 +68,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/pg_comp.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="partC_wrapper"/>
-        <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/pg_comp.v"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/partC_constr.xdc">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/partC_constr.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -89,7 +94,6 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="partC_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/gk0_compute.v"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
