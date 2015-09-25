@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Sep 24 21:10:50 2015
-# Process ID: 8156
+# Start of session at: Thu Sep 24 23:28:23 2015
+# Process ID: 1008
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.runs/synth_1/partC_wrapper.vds
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -17,20 +17,53 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 WARNING: [Synth 8-1935] empty port in module declaration [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:33]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 306.523 ; gain = 129.242
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 307.418 ; gain = 130.309
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'partC_wrapper' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:12]
-INFO: [Synth 8-638] synthesizing module 'carry_ripple_adder' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_ripple_adder.v:23]
-INFO: [Synth 8-638] synthesizing module 'full_adder' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/full_adder.v:23]
-INFO: [Synth 8-256] done synthesizing module 'full_adder' (1#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/full_adder.v:23]
-WARNING: [Synth 8-3848] Net Cout in module/entity carry_ripple_adder does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_ripple_adder.v:28]
-INFO: [Synth 8-256] done synthesizing module 'carry_ripple_adder' (2#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_ripple_adder.v:23]
-WARNING: [Synth 8-350] instance 'adder1' of module 'carry_ripple_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:82]
+INFO: [Synth 8-638] synthesizing module 'carry_look_ahead_adder' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:23]
+WARNING: [Synth 8-387] label required on module instance [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:41]
+INFO: [Synth 8-638] synthesizing module 'pg_4bits' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_comp.v:23]
+INFO: [Synth 8-256] done synthesizing module 'pg_4bits' (1#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_comp.v:23]
+WARNING: [Synth 8-387] label required on module instance [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+INFO: [Synth 8-638] synthesizing module 'pg_i_plus_3_to_i' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_i_plus_3_to_i.v:23]
+INFO: [Synth 8-256] done synthesizing module 'pg_i_plus_3_to_i' (2#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_i_plus_3_to_i.v:23]
+WARNING: [Synth 8-387] label required on module instance [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+INFO: [Synth 8-638] synthesizing module 'Four_bit_adder' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/Four_bit_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Four_bit_adder' (3#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/Four_bit_adder.v:23]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-350] instance 'nolabel_line43' of module 'Four_bit_adder' requires 5 connections, but only 4 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3848] Net S in module/entity carry_look_ahead_adder does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:26]
+WARNING: [Synth 8-3848] Net Gij in module/entity carry_look_ahead_adder does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:32]
+WARNING: [Synth 8-3848] Net Pij in module/entity carry_look_ahead_adder does not have driver. [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:31]
+INFO: [Synth 8-256] done synthesizing module 'carry_look_ahead_adder' (4#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:23]
+WARNING: [Synth 8-350] instance 'adder1' of module 'carry_look_ahead_adder' requires 4 connections, but only 3 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:90]
 INFO: [Synth 8-638] synthesizing module 'partC' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:277]
 INFO: [Synth 8-638] synthesizing module 'GND' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
-INFO: [Synth 8-256] done synthesizing module 'GND' (3#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-256] done synthesizing module 'GND' (5#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
-INFO: [Synth 8-256] done synthesizing module 'VCC' (4#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-256] done synthesizing module 'VCC' (6#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:35496]
 INFO: [Synth 8-638] synthesizing module 'partC_axi_gpio_0_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/synth/partC_axi_gpio_0_0.vhd:85]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -95,30 +128,30 @@ INFO: [Synth 8-638] synthesizing module 'pselect_f' [e:/Ubuntu_source_code_data/
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b00 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b01 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b10 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b11 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/address_decoder.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/address_decoder.vhd:190]
 INFO: [Synth 8-226] default block is never used [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:448]
 INFO: [Synth 8-4512] found unpartitioned construct node [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:417]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:239]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/axi_lite_ipif.vhd:249]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/slave_attachment.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (10#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/876b8fe4/hdl/src/vhdl/axi_lite_ipif.vhd:249]
 INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
@@ -433,10 +466,10 @@ INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instanc
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (10#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
-INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (11#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:282]
-INFO: [Synth 8-256] done synthesizing module 'partC_axi_gpio_0_0' (12#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/synth/partC_axi_gpio_0_0.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (11#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (12#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'partC_axi_gpio_0_0' (14#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/synth/partC_axi_gpio_0_0.vhd:85]
 INFO: [Synth 8-638] synthesizing module 'partC_axi_gpio_1_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/synth/partC_axi_gpio_1_0.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -484,9 +517,9 @@ INFO: [Synth 8-638] synthesizing module 'GPIO_Core__parameterized0' [e:/Ubuntu_s
 	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 INFO: [Synth 8-226] default block is never used [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:346]
-INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (12#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
-INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (12#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:282]
-INFO: [Synth 8-256] done synthesizing module 'partC_axi_gpio_1_0' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/synth/partC_axi_gpio_1_0.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (14#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/gpio_core.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (14#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'partC_axi_gpio_1_0' (15#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/synth/partC_axi_gpio_1_0.vhd:84]
 INFO: [Synth 8-638] synthesizing module 'partC_processing_system7_0_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/synth/partC_processing_system7_0_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
@@ -546,20 +579,20 @@ INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_syst
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1325]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1326]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (14#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (16#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-638] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:268]
-INFO: [Synth 8-256] done synthesizing module 'BIBUF' (15#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:268]
+INFO: [Synth 8-256] done synthesizing module 'BIBUF' (17#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:268]
 INFO: [Synth 8-638] synthesizing module 'PS7' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:26467]
-INFO: [Synth 8-256] done synthesizing module 'PS7' (16#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:26467]
-INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (17#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+INFO: [Synth 8-256] done synthesizing module 'PS7' (18#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:26467]
+INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (19#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
 WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/synth/partC_processing_system7_0_0.v:346]
-INFO: [Synth 8-256] done synthesizing module 'partC_processing_system7_0_0' (18#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/synth/partC_processing_system7_0_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'partC_processing_system7_0_0' (20#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/synth/partC_processing_system7_0_0.v:57]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'partC_processing_system7_0_0' requires 78 connections, but only 63 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:483]
 INFO: [Synth 8-638] synthesizing module 'partC_processing_system7_0_axi_periph_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:638]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_2G8YCJ' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:12]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_2G8YCJ' (19#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:12]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_2G8YCJ' (21#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:12]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1D5TC7F' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:144]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1D5TC7F' (20#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:144]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1D5TC7F' (22#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:144]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_Q97R48' [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:1195]
 INFO: [Synth 8-638] synthesizing module 'partC_auto_pc_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_auto_pc_0/synth/partC_auto_pc_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_axi_protocol_converter' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
@@ -780,27 +813,27 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_axi2vector' [e:
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_axi2vector' (21#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_axi2vector' (23#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 66 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice' (22#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice' (24#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 49 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized0' (22#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized0' (24#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 14 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized1' (22#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized1' (24#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 47 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized2' (22#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized2' (24#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_vector2axi' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -893,8 +926,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_vector2axi' [e:
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_vector2axi' (23#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axi_register_slice' (24#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_vector2axi' (25#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axi_register_slice' (26#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_aw_channel' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -906,20 +939,20 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_cmd_tra
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_incr_cmd' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter L_AXI_ADDR_LOW_BIT bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_incr_cmd' (25#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_incr_cmd' (27#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_wrap_cmd' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter L_AXI_ADDR_LOW_BIT bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_wrap_cmd' (26#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_cmd_translator' (27#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_cmd_translator.v:17]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_wrap_cmd' (28#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_cmd_translator' (29#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_cmd_translator.v:17]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_wr_cmd_fsm' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
 	Parameter SM_IDLE bound to: 2'b00 
 	Parameter SM_CMD_EN bound to: 2'b01 
 	Parameter SM_CMD_ACCEPTED bound to: 2'b10 
 	Parameter SM_DONE_WAIT bound to: 2'b11 
 INFO: [Synth 8-226] default block is never used [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:64]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_wr_cmd_fsm' (28#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_aw_channel' (29#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_wr_cmd_fsm' (30#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_aw_channel' (31#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_b_channel' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter LP_RESP_OKAY bound to: 2'b00 
@@ -940,7 +973,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_
 	Parameter C_EMPTY_PRE bound to: 2'b00 
 	Parameter C_FULL bound to: 2'b10 
 	Parameter C_FULL_PRE bound to: 2'b01 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo' (30#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo' (32#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 	Parameter C_WIDTH bound to: 2 - type: integer 
 	Parameter C_AWIDTH bound to: 2 - type: integer 
@@ -949,8 +982,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_
 	Parameter C_EMPTY_PRE bound to: 2'b00 
 	Parameter C_FULL bound to: 2'b10 
 	Parameter C_FULL_PRE bound to: 2'b01 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized0' (30#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_b_channel' (31#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized0' (32#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_b_channel' (33#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_ar_channel' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -960,8 +993,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_rd_cmd_
 	Parameter SM_CMD_ACCEPTED bound to: 2'b10 
 	Parameter SM_DONE bound to: 2'b11 
 INFO: [Synth 8-226] default block is never used [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:72]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_rd_cmd_fsm' (32#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:10]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_ar_channel' (33#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_rd_cmd_fsm' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:10]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_ar_channel' (35#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_r_channel' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
@@ -979,7 +1012,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_
 	Parameter C_EMPTY_PRE bound to: 5'b00000 
 	Parameter C_FULL bound to: 5'b11110 
 	Parameter C_FULL_PRE bound to: 5'b11010 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized1' (33#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized1' (35#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 	Parameter C_WIDTH bound to: 13 - type: integer 
 	Parameter C_AWIDTH bound to: 5 - type: integer 
@@ -988,8 +1021,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_
 	Parameter C_EMPTY_PRE bound to: 5'b00000 
 	Parameter C_FULL bound to: 5'b11110 
 	Parameter C_FULL_PRE bound to: 5'b11010 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized2' (33#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_r_channel' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized2' (35#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s_r_channel' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axi_register_slice__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
@@ -1175,32 +1208,32 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_axi2vector__par
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_axi2vector__parameterized0' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_axi2vector__parameterized0' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized3' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 35 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized3' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized3' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized4' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized4' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized4' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized5' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized5' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized5' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized6' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 35 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized6' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized6' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized7' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 34 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized7' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized7' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_vector2axi__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -1293,12 +1326,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_vector2axi__par
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_vector2axi__parameterized0' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axi_register_slice__parameterized0' (34#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s' (35#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_axi_protocol_converter' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
-INFO: [Synth 8-256] done synthesizing module 'partC_auto_pc_0' (37#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_auto_pc_0/synth/partC_auto_pc_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_Q97R48' (38#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:1195]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_vector2axi__parameterized0' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_infrastructure_v1_1/cf21a66f/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axi_register_slice__parameterized0' (36#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s' (37#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_axi_protocol_converter' (38#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
+INFO: [Synth 8-256] done synthesizing module 'partC_auto_pc_0' (39#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_auto_pc_0/synth/partC_auto_pc_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_Q97R48' (40#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:1195]
 INFO: [Synth 8-638] synthesizing module 'partC_xbar_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_xbar_0/synth/partC_xbar_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_axi_crossbar' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1410,7 +1443,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_addr_arbiter_sasd' [e
 	Parameter C_GRANT_ENC bound to: 1 - type: integer 
 	Parameter C_ARB_PRIORITY bound to: 0 - type: integer 
 	Parameter P_PRIO_MASK bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_addr_arbiter_sasd' (39#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v:65]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_addr_arbiter_sasd' (41#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v:65]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_addr_decoder' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
@@ -1434,8 +1467,8 @@ INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_comparator_stat
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_carry_and' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
 	Parameter C_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_carry_and' (40#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_comparator_static' (41#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_carry_and' (42#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_comparator_static' (43#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_comparator_static__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000010010000100000000000000 
@@ -1443,49 +1476,49 @@ INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_comparator_stat
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_comparator_static__parameterized0' (41#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_addr_decoder' (42#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_comparator_static__parameterized0' (43#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_addr_decoder' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_splitter' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
 	Parameter C_NUM_M bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_splitter' (43#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_splitter' (45#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_splitter__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
 	Parameter C_NUM_M bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_splitter__parameterized0' (43#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_splitter__parameterized0' (45#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_mux_enc' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 3 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 1 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized0' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized0' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 1 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized1' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized1' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 3 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized2' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized2' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized8' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized8' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axic_register_slice__parameterized8' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized3' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 3 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized3' (44#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_mux_enc__parameterized3' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/generic_baseblocks_v2_1/da89d453/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_decerr_slave' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -1501,12 +1534,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_decerr_slave' [e:/Ubu
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_decerr_slave' (45#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_crossbar_sasd' (46#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_axi_crossbar' (47#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
-INFO: [Synth 8-256] done synthesizing module 'partC_xbar_0' (48#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_xbar_0/synth/partC_xbar_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_decerr_slave' (47#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_crossbar_sasd' (48#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_axi_crossbar' (49#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
+INFO: [Synth 8-256] done synthesizing module 'partC_xbar_0' (50#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_xbar_0/synth/partC_xbar_0.v:57]
 WARNING: [Synth 8-350] instance 'xbar' of module 'partC_xbar_0' requires 40 connections, but only 38 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:1154]
-INFO: [Synth 8-256] done synthesizing module 'partC_processing_system7_0_axi_periph_0' (49#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:638]
+INFO: [Synth 8-256] done synthesizing module 'partC_processing_system7_0_axi_periph_0' (51#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:638]
 INFO: [Synth 8-638] synthesizing module 'partC_rst_processing_system7_0_100M_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/synth/partC_rst_processing_system7_0_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -1536,7 +1569,7 @@ INFO: [Synth 8-638] synthesizing module 'lpf' [e:/Ubuntu_source_code_data/ECE_52
 INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:34522' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/lpf.vhd:190]
 INFO: [Synth 8-638] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:34522]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-256] done synthesizing module 'SRL16' (50#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:34522]
+INFO: [Synth 8-256] done synthesizing module 'SRL16' (52#1) [C:/Xilinx/Vivado/2015.1/scripts/rt/data/unisim_comp.v:34522]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -1550,7 +1583,7 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [e:/Ubuntu_so
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (50#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (52#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -1564,21 +1597,21 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [e:/Ubuntu_so
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (50#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (51#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/lpf.vhd:138]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (52#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/lib_cdc_v1_0/3c38df9f/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (53#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/lpf.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'sequence' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/sequence.vhd:146]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/upcnt_n.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (52#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/upcnt_n.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence' (53#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/sequence.vhd:146]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (54#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/proc_sys_reset.vhd:199]
-INFO: [Synth 8-256] done synthesizing module 'partC_rst_processing_system7_0_100M_0' (55#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/synth/partC_rst_processing_system7_0_100M_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (54#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/upcnt_n.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence' (55#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/sequence.vhd:146]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (56#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/proc_sys_reset.vhd:199]
+INFO: [Synth 8-256] done synthesizing module 'partC_rst_processing_system7_0_100M_0' (57#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/synth/partC_rst_processing_system7_0_100M_0.vhd:74]
 WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'partC_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:628]
-INFO: [Synth 8-256] done synthesizing module 'partC' (56#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:277]
+INFO: [Synth 8-256] done synthesizing module 'partC' (58#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:277]
 WARNING: [Synth 8-308] ignoring empty port [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:34]
-INFO: [Synth 8-256] done synthesizing module 'partC_wrapper' (57#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:12]
+INFO: [Synth 8-256] done synthesizing module 'partC_wrapper' (59#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 428.082 ; gain = 250.801
+Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 427.941 ; gain = 250.832
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1587,8 +1620,65 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[0].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line43 :Ci to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[1].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[2].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[3].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[4].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[5].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[6].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line42 :Pij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line42 :Gij to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:42]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line43 :Co to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line43 :S[3] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line43 :S[2] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line43 :S[1] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
+WARNING: [Synth 8-3295] tying undriven pin \genblk1[7].nolabel_line43 :S[0] to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:43]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 428.082 ; gain = 250.801
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 427.941 ; gain = 250.832
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 589 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1624,16 +1714,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 588 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 675.914 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 676.746 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Constraint Validation : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1650,7 +1740,7 @@ Applied set_property DONT_TOUCH = true for partC_i/processing_system7_0_axi_peri
 Applied set_property DONT_TOUCH = true for partC_i/processing_system7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for partC_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -1668,7 +1758,7 @@ INFO: [Synth 8-5544] ROM "p_0_in1" won't be mapped to Block RAM because address 
 INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_crossbar_v2_1/9368eebf/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:136]
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/sequence.vhd:222]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1690,7 +1780,8 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 6     
 	   2 Input      2 Bit       Adders := 2     
 +---XORs : 
-	   3 Input      1 Bit         XORs := 32    
+	   2 Input      4 Bit         XORs := 8     
+	   2 Input      1 Bit         XORs := 32    
 +---Registers : 
 	               66 Bit    Registers := 4     
 	               64 Bit    Registers := 1     
@@ -1707,6 +1798,8 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 18    
 	                1 Bit    Registers := 187   
++---Multipliers : 
+	                  1x1  Multipliers := 8     
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     64 Bit        Muxes := 1     
@@ -1733,10 +1826,18 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module full_adder 
+Module pg_4bits 
 Detailed RTL Component Info : 
 +---XORs : 
-	   3 Input      1 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 1     
+Module pg_i_plus_3_to_i 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                  1x1  Multipliers := 1     
+Module Four_bit_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
 Module pselect_f 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -2024,7 +2125,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 675.914 ; gain = 498.633
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -2034,9 +2135,9 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [e:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Parallel Reinference  : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 676.746 ; gain = 499.637
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -2047,16 +2148,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 676.746 ; gain = 499.637
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 675.914 ; gain = 498.633
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 676.746 ; gain = 499.637
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -2064,10 +2165,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:15 . Memory (MB): peak = 808.977 ; gain = 631.695
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 809.961 ; gain = 632.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 826.016 ; gain = 648.734
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:18 . Memory (MB): peak = 827.016 ; gain = 649.906
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2180,7 +2281,7 @@ INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GE
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 846.504 ; gain = 669.223
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2220,7 +2321,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 846.504 ; gain = 669.223
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2233,7 +2334,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 846.504 ; gain = 669.223
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2245,13 +2346,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 846.504 ; gain = 669.223
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 846.504 ; gain = 669.223
+Start Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 846.504 ; gain = 669.223
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2291,11 +2392,11 @@ Report Cell Usage:
 |3     |CARRY4  |    12|
 |4     |GND     |     1|
 |5     |LUT1    |   159|
-|6     |LUT2    |    51|
-|7     |LUT3    |   286|
-|8     |LUT4    |   159|
+|6     |LUT2    |    73|
+|7     |LUT3    |   269|
+|8     |LUT4    |   171|
 |9     |LUT5    |   143|
-|10    |LUT6    |   377|
+|10    |LUT6    |   395|
 |11    |MUXCY_L |    22|
 |12    |PS7     |     1|
 |13    |SRL16   |     1|
@@ -2312,7 +2413,7 @@ Report Instance Areas:
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                      |Cells |
 +------+---------------------------------------------------+------------------------------------------------------------+------+
-|1     |top                                                |                                                            |  3164|
+|1     |top                                                |                                                            |  3199|
 |2     |  partC_i                                          |partC                                                       |  3074|
 |3     |    axi_gpio_0                                     |partC_axi_gpio_0_0                                          |   732|
 |4     |      U0                                           |axi_gpio                                                    |   732|
@@ -2374,11 +2475,11 @@ Report Instance Areas:
 |60    |          SEQ_COUNTER                              |upcnt_n                                                     |    14|
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 846.504 ; gain = 669.223
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 846.000 ; gain = 668.891
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:01:09 . Memory (MB): peak = 846.504 ; gain = 349.879
-Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 846.504 ; gain = 669.223
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:01:09 . Memory (MB): peak = 846.000 ; gain = 348.313
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 846.000 ; gain = 668.891
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 451 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2391,8 +2492,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-446 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+450 Infos, 94 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 846.504 ; gain = 597.711
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 846.504 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 21:12:17 2015...
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 846.000 ; gain = 597.117
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.255 . Memory (MB): peak = 846.000 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 23:29:53 2015...

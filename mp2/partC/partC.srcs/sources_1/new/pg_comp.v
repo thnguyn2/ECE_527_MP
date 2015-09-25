@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module pg_comp(
-    input [31:0] A,
-    input [31:0 ]B,
-    output [32:0] P,
-    output [32:0] G
+module pg_4bits(
+    input [3:0] A,
+    input [3:0 ]B,
+    output [3:0] P,
+    output [3:0] G
     );
-    assign P = {A[31:0]^B[31:0],1'b0};
-    assign G = {A[31:0]&B[31:0],1'b0};
+    assign P = A^B;
+    assign G = A&B;
 endmodule

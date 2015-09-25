@@ -34,8 +34,10 @@ set_property used_in_implementation false [get_files -all E:/Ubuntu_source_code_
 set_property is_locked true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/partC.bd]
 
 read_verilog -library xil_defaultlib {
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/full_adder.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_ripple_adder.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/Four_bit_adder.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_i_plus_3_to_i.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_comp.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v
 }
 read_xdc dont_touch.xdc
