@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrixmath.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp3\parta\matrixmath.c"/>
+    <originFiles name="matrixmath.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp3\parta\matrixmath.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
