@@ -1,6 +1,6 @@
 
-#ifndef _MATRIXMATH_H
-#define _MATRIXMATH_H
+#ifndef __MATRIXMATH_H_
+#define __MATRIXMATH_H_
 
 #define MATRIX_MAX_SIZE		100
 
