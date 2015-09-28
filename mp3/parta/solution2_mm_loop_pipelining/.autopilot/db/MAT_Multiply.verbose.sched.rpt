@@ -3,11 +3,11 @@
 ================================================================
 == Vivado HLS Report for 'MAT_Multiply'
 ================================================================
-* Date:           Mon Sep 28 12:35:12 2015
+* Date:           Mon Sep 28 14:07:42 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        parta
-* Solution:       solution2_loop_pipelining
+* Solution:       solution2_mm_loop_pipelining
 * Product family: zynq
 * Target device:  xc7z020clg484-1
 

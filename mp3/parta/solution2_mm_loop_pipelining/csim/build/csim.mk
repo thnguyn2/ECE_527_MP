@@ -74,7 +74,7 @@ AUTOCC := apcc
 
 $(ObjDir)/matrixmath_test.o: ../../../matrixmath_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../matrixmath_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD   $(IFLAG) $(DFLAG)  $< -o $@ ; \
+	$(Verb)  $(AUTOCC) -c -MMD    $(IFLAG) $(DFLAG)  $< -o $@ ; \
 
 -include $(ObjDir)/matrixmath_test.d
 

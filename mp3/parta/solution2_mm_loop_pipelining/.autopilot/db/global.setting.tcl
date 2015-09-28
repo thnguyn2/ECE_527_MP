@@ -42,7 +42,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c ../matrixmath.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_loop_pipelining/solution2_loop_pipelining.directive}
+set DirectiveFile {/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/solution2_mm_loop_pipelining.directive}
 set TBFiles {verilog ../matrixmath_test.c bc ../matrixmath_test.c vhdl ../matrixmath_test.c sc ../matrixmath_test.c cas ../matrixmath_test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -54,5 +54,5 @@ set PlatformFiles {{DefaultPlatform {xilinx/zynq/zynq xilinx/zynq/zynq_fpv6}}}
 set DefaultPlatform "DefaultPlatform"
 set TBTVFileNotFound ""
 set AppFile "../vivado_hls.app"
-set ApsFile "solution2_loop_pipelining.aps"
+set ApsFile "solution2_mm_loop_pipelining.aps"
 set AvePath "../.."

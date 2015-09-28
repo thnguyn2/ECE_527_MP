@@ -1,11 +1,11 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'MAT_Multiply'" level="0">
-<item name = "Date">Mon Sep 28 12:35:14 2015
+<item name = "Date">Mon Sep 28 14:07:43 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">parta</item>
-<item name = "Solution">solution2_loop_pipelining</item>
+<item name = "Solution">solution2_mm_loop_pipelining</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020clg484-1</item>
 </section>
