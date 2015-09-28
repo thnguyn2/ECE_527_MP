@@ -52,6 +52,11 @@
 			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath.h</location>
 		</link>
 		<link>
+			<name>testbench/matrixmath_test.c</name>
+			<type>1</type>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath_test.c</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution1/solution1.directive</location>

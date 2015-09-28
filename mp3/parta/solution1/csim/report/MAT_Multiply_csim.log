@@ -1,11 +1,3 @@
-@I [LIC-101] Checked out feature [VIVADO_HLS]
-@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.1/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-63-generic) on Mon Sep 28 10:21:52 CDT 2015
-            in directory '/home/parallels/source_code/ECE_527_MP/mp3'
-@I [HLS-10] Opening project '/home/parallels/source_code/ECE_527_MP/mp3/parta'.
-@I [HLS-10] Opening solution '/home/parallels/source_code/ECE_527_MP/mp3/parta/solution1'.
-@I [SYN-201] Setting up clock 'default' with a period of 10ns.
-@I [HLS-10] Setting target device to 'xc7z020clg484-1'
 make: `csim.exe' is up to date.
 Testing dimensions set Row C = 10, Col C = 10, Col A =10: PASSED...
 Testing dimensions set Row C = 10, Col C = 10, Col A =50: PASSED...
@@ -35,4 +27,3 @@ Testing dimensions set Row C = 100, Col C = 100, Col A =10: PASSED...
 Testing dimensions set Row C = 100, Col C = 100, Col A =50: PASSED...
 Testing dimensions set Row C = 100, Col C = 100, Col A =100: PASSED...
 @I [SIM-1] CSim done with 0 errors.
-@I [LIC-101] Checked in feature [VIVADO_HLS]

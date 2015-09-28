@@ -5,13 +5,14 @@
 ############################################################
 open_project parta
 set_top MAT_Multiply
-add_files parta/matrixmath.h
 add_files parta/matrixmath.c
+add_files parta/matrixmath.h
+add_files -tb parta/matrixmath_test.c
 open_solution "solution1"
 set_part {xc7z020clg484-1}
 create_clock -period 10 -name default
 source "./parta/solution1/directives.tcl"
-#csim_design
+csim_design
 csynth_design
-#cosim_design
+cosim_design
 export_design -format ip_catalog
