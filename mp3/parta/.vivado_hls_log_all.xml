@@ -2,7 +2,10 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="@E [HLS-70] Synthesizability check failed." projectName="parta" solutionName="solution3_fifo_unoptimized" date="2015-09-28T10:31:30.025-0700"/>
+        <logs message="@E [SYNCHK-91] Port 'C' (parta/matrixmath.c:4) of function 'MAT_Multiply' cannot be set to a FIFO &#xA;               as it has both write (parta/matrixmath.c:20:10) and read (parta/matrixmath.c:20:10) operations." projectName="parta" solutionName="solution3_fifo_unoptimized" date="2015-09-28T10:31:30.013-0700"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
@@ -12,8 +15,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('B_load_2', parta/matrixmath.c:20) on array 'B' due to limited memory ports." projectName="parta" solutionName="solution2_loop_pipelining" date="2015-09-28T10:21:58.638-0700" type="Warning"/>
-        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'Product' (parta/matrixmath.c:19) because its parent loop or function is pipelined." projectName="parta" solutionName="solution2_loop_pipelining" date="2015-09-28T10:21:41.113-0700" type="Warning"/>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('B_load_2', parta/matrixmath.c:20) on array 'B' due to limited memory ports." projectName="parta" solutionName="solution2_loop_pipelining" date="2015-09-28T10:35:06.580-0700" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'Product' (parta/matrixmath.c:19) because its parent loop or function is pipelined." projectName="parta" solutionName="solution2_loop_pipelining" date="2015-09-28T10:34:45.984-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
