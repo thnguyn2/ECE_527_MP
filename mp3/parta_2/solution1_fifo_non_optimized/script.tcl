@@ -5,8 +5,8 @@
 ############################################################
 open_project parta_2
 set_top MAT_Multiply
-add_files parta_2/matrixmath.c
 add_files parta_2/matrixmath.h
+add_files parta_2/matrixmath.c
 add_files -tb parta_2/matrixmath_test.c
 open_solution "solution1_fifo_non_optimized"
 set_part {xc7z020clg484-1}
