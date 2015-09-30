@@ -29,67 +29,67 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/.apc/.src</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/.apc/.tb</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1_fifo_non_optimized/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/.tcls</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/.tcls</location>
 		</link>
 		<link>
 			<name>solution2_fifo_pipeline/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/.tcls</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/.tcls</location>
 		</link>
 		<link>
 			<name>source/matrixmath.c</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/matrixmath.c</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c</location>
 		</link>
 		<link>
 			<name>source/matrixmath.h</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/matrixmath.h</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.h</location>
 		</link>
 		<link>
 			<name>testbench/matrixmath_test.c</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/matrixmath_test.c</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath_test.c</location>
 		</link>
 		<link>
 			<name>solution1_fifo_non_optimized/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/solution1_fifo_non_optimized.directive</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/solution1_fifo_non_optimized.directive</location>
 		</link>
 		<link>
 			<name>solution1_fifo_non_optimized/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/directives.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1_fifo_non_optimized/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/script.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution1_fifo_non_optimized/script.tcl</location>
 		</link>
 		<link>
 			<name>solution2_fifo_pipeline/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/solution2_fifo_pipeline.directive</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/solution2_fifo_pipeline.directive</location>
 		</link>
 		<link>
 			<name>solution2_fifo_pipeline/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/directives.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution2_fifo_pipeline/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/script.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution2_fifo_pipeline/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
