@@ -2,7 +2,9 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="@E [HLS-70] Compilation errors found:&#xD;&#xA;partB/matrixmath.c:82:10: error: subscripted value is not an array, pointer, or vector&#xD;&#xA;                                        C[i][j] = arrayC[i][j];&#xD;&#xA;                                        ~~~~^~&#xD;&#xA;1 error generated.&#xD;&#xA;Failed checking during preprocessing.&#xD;&#xA;    while executing&#xD;&#xA;&quot;source Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/partB/solution2_optimized/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/partB/solution2_optimized/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;" projectName="partB" solutionName="solution2_optimized" date="2015-10-01T17:46:46.872-0500"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
@@ -11,10 +13,7 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('arrayB_load_2', partB/matrixmath.c:39) on array 'arrayB' due to limited memory ports." projectName="partB" solutionName="solution2_optimized" date="2015-09-30T20:14:15.007-0700" type="Warning"/>
-        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'Product' (partB/matrixmath.c:38) because its parent loop or function is pipelined." projectName="partB" solutionName="solution2_optimized" date="2015-09-30T20:13:56.452-0700" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>

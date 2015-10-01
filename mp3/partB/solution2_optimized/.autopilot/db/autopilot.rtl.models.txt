@@ -1,5 +1,0 @@
-MAT_Multiply_mul_32s_32s_32_6
-MAT_Multiply_mac_muladd_7ns_8ns_7ns_14_1
-MAT_Multiply_arrayA
-MAT_Multiply_arrayC
-MAT_Multiply

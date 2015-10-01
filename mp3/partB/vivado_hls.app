@@ -6,8 +6,8 @@
     </Simulation>
     <files xmlns="">
         <file name="../matrixmath_test.c" sc="0" tb="1" cflags=" "/>
-        <file name="partB/matrixmath.h" sc="0" tb="false" cflags=""/>
         <file name="partB/matrixmath.c" sc="0" tb="false" cflags=""/>
+        <file name="partB/matrixmath.h" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="inactive"/>

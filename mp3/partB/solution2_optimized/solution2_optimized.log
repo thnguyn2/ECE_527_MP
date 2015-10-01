@@ -6,65 +6,23 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 ==============================================================
 
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
 @I [HLS-10] Analyzing design file 'partB/matrixmath.c' ... 
-@I [HLS-10] Validating synthesis directives ...
-@I [HLS-10] Starting code transformations ...
-@I [HLS-10] Checking synthesizability ...
-@I [XFORM-502] Unrolling all sub-loops inside loop 'Col' (partB/matrixmath.c:33) in function 'MAT_Multiply' for pipelining.
-@W [XFORM-505] Ignored pipeline directive for loop 'Product' (partB/matrixmath.c:38) because its parent loop or function is pipelined.
-@I [XFORM-501] Unrolling loop 'Product' (partB/matrixmath.c:38) in function 'MAT_Multiply' completely.
-@I [XFORM-541] Flattening a loop nest 'Row_load' (partB/matrixmath.c:21:4) in function 'MAT_Multiply'.
-@I [XFORM-541] Flattening a loop nest 'Row' (partB/matrixmath.c:32:4) in function 'MAT_Multiply'.
-@I [XFORM-541] Flattening a loop nest 'Row_Assign' (partB/matrixmath.c:44:6) in function 'MAT_Multiply'.
-@I [HLS-111] Elapsed time: 8.30025 seconds; current memory usage: 79.4 MB.
-@I [HLS-10] Starting hardware synthesis ...
-@I [HLS-10] Synthesizing 'MAT_Multiply' ...
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Scheduling module 'MAT_Multiply' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [SCHED-11] Starting scheduling ...
-@I [SCHED-61] Pipelining loop 'Row_load_Col_load'.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
-@I [SCHED-61] Pipelining loop 'Row_Col'.
-@W [SCHED-69] Unable to schedule 'load' operation ('arrayB_load_2', partB/matrixmath.c:39) on array 'arrayB' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 100, Depth: 406.
-@I [SCHED-61] Pipelining loop 'Row_Assign_Col_Assign'.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
-@I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 14.8627 seconds; current memory usage: 109 MB.
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Exploring micro-architecture for module 'MAT_Multiply' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [BIND-100] Starting micro-architecture generation ...
-@I [BIND-101] Performing variable lifetime analysis.
-@I [BIND-101] Exploring resource sharing.
-@I [BIND-101] Binding ...
-@I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 2.07657 seconds; current memory usage: 118 MB.
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Generating RTL for module 'MAT_Multiply' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/A' to 'ap_fifo'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/B' to 'ap_fifo'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/C' to 'ap_fifo'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/mA' to 'ap_none'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/nA' to 'ap_none'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/mB' to 'ap_none'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/nB' to 'ap_none'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/mC' to 'ap_none'.
-@I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/nC' to 'ap_none'.
-@I [RTGEN-500] Setting interface mode on function 'MAT_Multiply' to 'ap_ctrl_hs'.
-@I [RTGEN-100] Generating core module 'MAT_Multiply_mac_muladd_7ns_8ns_7ns_14_1': 4 instance(s).
-@I [RTGEN-100] Generating core module 'MAT_Multiply_mul_32s_32s_32_6': 100 instance(s).
-@I [RTGEN-100] Finished creating RTL model for 'MAT_Multiply'.
-@I [HLS-111] Elapsed time: 2.0465 seconds; current memory usage: 130 MB.
-@I [RTMG-282] Generating pipelined core: 'MAT_Multiply_mul_32s_32s_32_6_MulnS_0'
-@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayA_ram' using block RAMs.
-@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayC_ram' using block RAMs.
-@I [HLS-10] Finished generating all RTL models.
-@I [WSYSC-301] Generating RTL SystemC for 'MAT_Multiply'.
-@I [WVHDL-304] Generating RTL VHDL for 'MAT_Multiply'.
-@I [WVLOG-307] Generating RTL Verilog for 'MAT_Multiply'.
-@I [HLS-112] Total elapsed time: 31.853 seconds; peak memory usage: 130 MB.
-@I [LIC-101] Checked in feature [VIVADO_HLS]
+@E [HLS-70] Compilation errors found:
+partB/matrixmath.c:82:10: error: subscripted value is not an array, pointer, or vector
+                                        C[i][j] = arrayC[i][j];
+                                        ~~~~^~
+1 error generated.
+Failed checking during preprocessing.
+    while executing
+"source Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/partB/solution2_optimized/csynth.tcl"
+    invoked from within
+"hls::main Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/partB/solution2_optimized/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+@I [LIC-101] Checked in feature [HLS]

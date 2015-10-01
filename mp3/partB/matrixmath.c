@@ -14,41 +14,71 @@ void MAT_Multiply(int *A,
 	int arrayB[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
 	long arrayC[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
 
-	unsigned int i, j, k;
+	unsigned int i, j, k, iA, jA, iB, jB;
+	int tempA, tempB;
 	if ((nA == mB)&(mA == mC)&(nB==nC))//Multiplication only when the dimensions are suitable
 	{
-		Row_load: for (i=0;i<MATRIX_MAX_SIZE;i++)
-			Col_load: for (j=0;j<MATRIX_MAX_SIZE;j++)
+
+		// Initialize output matrix C
+		Row_Zero: for (i=0;i<MATRIX_MAX_SIZE;i++)
+			Col_Zero: for (j=0;j<MATRIX_MAX_SIZE;j++)
 			{
-				if ((i<mA)&&(j<nA))
-					arrayA[i][j] = A[i*MATRIX_MAX_SIZE+j];
-				if ((i<mB)&&(j<nB))
-					arrayB[i][j] = B[i*MATRIX_MAX_SIZE+j];
 				if ((i<mC)&&(j<nC))
 					arrayC[i][j] = 0;
-
 			}
-		Row: for (i=0; i<MATRIX_MAX_SIZE; i++)
-			Col: for (j=0; j<MATRIX_MAX_SIZE; j++)
-			{
-				if ((i<mC)&(j<nC))
-				{
-					arrayC[i][j] = 0;
-					Product: for (k=0; k<MATRIX_MAX_SIZE; k++)
-								if (k<nA)
-									arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
+
+		Get_Element: for (i=0; i<(MATRIX_MAX_SIZE*MATRIX_MAX_SIZE); i++){
+
+			// obtain incoming FIFO indices
+			if (i==0){
+				iA = 0;
+				jA = 0;
+				iB = 0;
+				jB = 0;
+			} else {
+				iA++;
+				if (iA >= nA){
+					iA = 0;
+					jA++;
+				}
+				iB++;
+				if (iB >= nB){
+					iB = 0;
+					jB++;
 				}
 			}
-		//Assignment
-		Row_Assign: for (i=0; i<MATRIX_MAX_SIZE; i++)
-					Col_Assign: for (j=0; j<MATRIX_MAX_SIZE; j++)
-					{
-						if ((i<mC)&(j<nC))
-						{
-							C[i*MATRIX_MAX_SIZE+j] = arrayC[i][j];
-						}
-					}
 
+			// Load values
+			tempA = A[i];
+			tempB = B[i];
+			arrayA[iA][jA] = tempA;
+			arrayB[iB][jB] = tempB;
+
+			if ((iA < nA) && (jA < mA)){
+			LoopA: for (j=0; j<MATRIX_MAX_SIZE; j++){
+
+				// if data dependency is available for to multiply with A
+				product1: if (((iB > jA) || ((iB==jA) && (j <= jB)))){
+					arrayC[jA][j] += tempA * arrayB[jA][j];
+				}
+			}
+			}
+
+			if ((iB < nB) && (jB < mB)){
+			LoopB: for (j=0; j<MATRIX_MAX_SIZE; j++){
+				// if data dependency is available to multiply with B
+				product2: if (((jA < iB) || ((jA==iB) && (j <= iA)))){
+					arrayC[j][jB] += arrayA[j][jB] * tempB;
+				}
+			}
+			}
+		}
+
+		Row_C: for (i=0;i<MATRIX_MAX_SIZE;i++)
+			Col_C: for (j=0;j<MATRIX_MAX_SIZE;j++)
+			{
+					C[i][j] = arrayC[i][j];
+			}
 	}
 }
 

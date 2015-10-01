@@ -1,17 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-    <sourceFile name="">
-        <directive functionName="MAT_Multiply" label="Product" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
-        <directive functionName="MAT_Multiply" label="Col" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
-        <directive functionName="MAT_Multiply" label="Col_Assign" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
-        <directive functionName="MAT_Multiply" label="Col_load" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
-    </sourceFile>
+  <sourceFile>
+    <directive functionName="MAT_Multiply" label="Product" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Col" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Col_Assign" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Col_load" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Loop" functionLabel="">
+      <pragma name="UNROLL">
+        <option name="factor" value="100"/>
+      </pragma>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Col_Zero" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Row_Zero" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="" functionLabel="">
+      <pragma name="ARRAY_PARTITION">
+        <option name="variable" value="arrayA" positionalBoolean="4"/>
+        <option name="cyclic" value="" positionalBoolean="type"/>
+        <option name="factor" value="100"/>
+        <option name="dim" value="2"/>
+      </pragma>
+    </directive>
+    <directive functionName="MAT_Multiply" label="" functionLabel="">
+      <pragma name="ARRAY_PARTITION">
+        <option name="variable" value="arrayB" positionalBoolean="4"/>
+        <option name="cyclic" value="" positionalBoolean="type"/>
+        <option name="factor" value="100"/>
+        <option name="dim" value="1"/>
+      </pragma>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Loop" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="LoopA" functionLabel="">
+      <pragma name="UNROLL">
+        <option name="factor" value="10"/>
+      </pragma>
+    </directive>
+    <directive functionName="MAT_Multiply" label="LoopB" functionLabel="">
+      <pragma name="UNROLL">
+        <option name="factor" value="10"/>
+      </pragma>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Get_Element" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+  </sourceFile>
+  <sourceFile name="partB/matrixmath.c">
+    <directive functionName="MAT_Multiply" label="Col_C" functionLabel=" ">
+      <pragma name="PIPELINE"/>
+    </directive>
+    <directive functionName="MAT_Multiply" label="Row_C" functionLabel=" ">
+      <pragma name="PIPELINE"/>
+    </directive>
+  </sourceFile>
 </AutoPilot:ProjectResources>
-
