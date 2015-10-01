@@ -1,5 +1,5 @@
-#1 "partB/.settings/matrixmath.c"
-#1 "partB/.settings/matrixmath.c" 1
+#1 "partB/matrixmath.c"
+#1 "partB/matrixmath.c" 1
 #1 "<built-in>" 1
 #1 "<built-in>" 3
 #149 "<built-in>" 3
@@ -190,73 +190,69 @@
 #define _ssdm_op_Delayed(X) X */
 #6 "<command line>" 2
 #1 "<built-in>" 2
-#1 "partB/.settings/matrixmath.c" 2
-//---Fifo interface design. ---
+#1 "partB/matrixmath.c" 2
+//---Memory map interface design---
 
-#1 "partB/.settings/matrixmath.h" 1
-
-
+#1 "partB/matrixmath.h" 1
 
 
 
 
 
-void MAT_Multiply(int A[1000][1000],
-  int B[1000][1000], long C[1000][1000],
-  unsigned char mA, unsigned char nA, unsigned char mB,
-  unsigned char nB, unsigned char mC, unsigned char nC);
-#3 "partB/.settings/matrixmath.c" 2
 
-void MAT_Multiply(int A[1000][1000],
-  int B[1000][1000], long C[1000][1000],
-  unsigned char mA, unsigned char nA, unsigned char mB,
-  unsigned char nB, unsigned char mC, unsigned char nC)
-{_ssdm_SpecArrayDimSize(A,1000);_ssdm_SpecArrayDimSize(B,1000);_ssdm_SpecArrayDimSize(C,1000);
-_ssdm_op_SpecInterface(C, "ap_fifo", 0, 0, 0, 0, "", "", "");
-#8 "partB/.settings/matrixmath.c"
 
-_ssdm_op_SpecInterface(B, "ap_fifo", 0, 0, 0, 0, "", "", "");
-#8 "partB/.settings/matrixmath.c"
+void MAT_Multiply(int *A, int *B, long *C,
+  unsigned int mA, unsigned int nA, unsigned int mB,
+  unsigned int nB, unsigned int mC, unsigned int nC);
+#3 "partB/matrixmath.c" 2
 
+void MAT_Multiply(int *A,
+  int *B, long *C,
+  unsigned int mA, unsigned int nA, unsigned int mB,
+  unsigned int nB, unsigned int mC, unsigned int nC)
+{
 _ssdm_op_SpecInterface(A, "ap_fifo", 0, 0, 0, 0, "", "", "");
-#8 "partB/.settings/matrixmath.c"
+_ssdm_op_SpecInterface(B, "ap_fifo", 0, 0, 0, 0, "", "", "");
+_ssdm_op_SpecInterface(C, "ap_fifo", 0, 0, 0, 0, "", "", "");
 
- unsigned char i, j, k;
- long temp;
- int A_cached_row[1000];
- int B_cached[1000][1000];
+ int arrayA[100][100];
+ int arrayB[100][100];
+ long arrayC[100][100];
 
+ unsigned int i, j, k;
  if ((nA == mB)&(mA == mC)&(nB==nC))//Multiplication only when the dimensions are suitable
  {
-  Row: for (i=0; i<1000; i++)
-   Col: for (j=0; j<1000; j++)
+  Row_load: for (i=0;i<100;i++)
+   Col_load: for (j=0;j<100;j++)
    {
-    //Make sure the data is fully cached to avoid multiple read.
+    if ((i<mA)&&(j<nA))
+     arrayA[i][j] = A[i*100 +j];
+    if ((i<mB)&&(j<nB))
+     arrayB[i][j] = B[i*100 +j];
+    if ((i<mC)&&(j<nC))
+     arrayC[i][j] = 0;
 
+   }
+  Row: for (i=0; i<100; i++)
+   Col: for (j=0; j<100; j++)
+   {
     if ((i<mC)&(j<nC))
     {
-     temp = 0;
-     if (j==0)
-     {
-      //Cache the whole row of matrix A
-      RowCaching: for (k=0;k<1000;k++)
-       A_cached_row[k]=A[i][k];
-     }
-
-     //Cache all the columns of matrix B, see Fig. 7.21. B will be read only once
-     if (i==0)
-     {
-      ColCaching: for (k=0;k<1000;k++)
-       B_cached[k][j]=B[k][j];
-     }
-
-     Product: for (k=0; k<1000; k++)
-     {
+     arrayC[i][j] = 0;
+     Product: for (k=0; k<100; k++)
         if (k<nA)
-         temp += A_cached_row[k] * B_cached[k][j];
-     }
-     C[i][j] = temp;
+         arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
     }
    }
+  //Assignment
+  Row_Assign: for (i=0; i<100; i++)
+     Col_Assign: for (j=0; j<100; j++)
+     {
+      if ((i<mC)&(j<nC))
+      {
+       C[i*100 +j] = arrayC[i][j];
+      }
+     }
+
  }
 }

@@ -5,9 +5,9 @@
 ############################################################
 open_project partB
 set_top MAT_Multiply
-add_files partB/.settings/matrixmath.c
-add_files partB/.settings/matrixmath.h
-add_files -tb partB/.settings/matrixmath_test.c
+add_files partB/matrixmath.c
+add_files partB/matrixmath.h
+add_files -tb partB/matrixmath_test.c
 open_solution "solution1"
 set_part {xc7z020clg484-1}
 create_clock -period 10 -name default

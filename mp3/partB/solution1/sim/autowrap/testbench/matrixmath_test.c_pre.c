@@ -1,7 +1,7 @@
-# 1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath_test.c"
+# 1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath_test.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath_test.c"
+# 1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath_test.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
@@ -787,7 +787,7 @@ extern int ftrylockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)
 extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
 # 943 "/usr/include/stdio.h" 3 4
 
-# 2 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath_test.c" 2
+# 2 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath_test.c" 2
 # 1 "/usr/include/stdlib.h" 1 3 4
 # 32 "/usr/include/stdlib.h" 3 4
 # 1 "/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
@@ -1787,8 +1787,8 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 956 "/usr/include/stdlib.h" 2 3 4
 # 968 "/usr/include/stdlib.h" 3 4
 
-# 3 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath_test.c" 2
-# 1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.h" 1
+# 3 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath_test.c" 2
+# 1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.h" 1
 
 
 
@@ -1796,50 +1796,53 @@ extern int getloadavg (double __loadavg[], int __nelem)
 
 
 
-void MAT_Multiply(int A[1000][1000],
-  int B[1000][1000], long C[1000][1000],
-  unsigned char mA, unsigned char nA, unsigned char mB,
-  unsigned char nB, unsigned char mC, unsigned char nC);
-# 4 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath_test.c" 2
+void MAT_Multiply(int *A, int *B, long *C,
+  unsigned int mA, unsigned int nA, unsigned int mB,
+  unsigned int nB, unsigned int mC, unsigned int nC);
+# 4 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath_test.c" 2
 
 
-void generateMatMultGt(int A[1000][1000],int B[1000][1000], long C[1000][1000],
-  unsigned char mA, unsigned char nA, unsigned char nB)
+void generateMatMultGt(int *A,int *B, long *C,
+  unsigned int mA, unsigned int nA, unsigned int nB)
 {
 
  int rowA, colA, rowB, colB, rowC, colC;
 
  for (rowA = 0;rowA<mA;rowA++)
   for (colA = 0;colA<nA;colA++)
-   A[rowA][colA]= rand();
+   A[rowA*700 + colA]= rand();
 
  for (rowB = 0;rowB<nA;rowB++)
    for (colB = 0;colB<nB;colB++)
-    B[rowB][colB]= rand();
+    B[rowB*700 +colB]= rand();
 
  for (rowC = 0;rowC<mA;rowC++)
   for (colC = 0;colC<nB;colC++)
   {
-   C[rowC][colC]=0;
+   C[rowC*700 +colC]=0;
    for (colA = 0;colA<nA;colA++)
    {
-    C[rowC][colC]+=A[rowC][colA]*B[colA][colC];
+    C[rowC*700 +colC]+=A[rowC*700 +colA]*B[colA*700 +colC];
    }
   }
 
 }
 
 
+
 int main()
 {
- char array_dim[3] = {10,50,100};
- int A[1000][1000];
- int B[1000][1000];
- long SW_C[1000][1000];
- long HW_C[1000][1000];
- int err_count;
- unsigned char mA, nA, nB;
+ int array_dim[3] = {10,100,700};
+ int *A, *B;
+ long *SW_C, *HW_C;
+ A = (int*)malloc(sizeof(int)*700*700);
+ B = (int*)malloc(sizeof(int)*700*700);
+ SW_C = (long*)malloc(sizeof(long)*700*700);
+ HW_C = (long*)malloc(sizeof(long)*700*700);
+ long err_count;
+ unsigned int mA, nA, nB;
  int rowDimIdx, colDimIdx,colADimIdx,rowC,colC;
+ int ret_val;
  for (rowDimIdx =0;rowDimIdx<3;rowDimIdx++)
   for (colDimIdx=0;colDimIdx<3;colDimIdx++)
    for (colADimIdx = 0;colADimIdx<3;colADimIdx++)
@@ -1854,7 +1857,7 @@ int main()
     for (rowC=0;rowC<mA;rowC++)
      for (colC=0;colC<nB;colC++)
       {
-       if (SW_C[rowC][colC]!=HW_C[rowC][colC])
+       if (SW_C[rowC*700 +colC]!=HW_C[rowC*700 +colC])
        {
         err_count++;
        }
@@ -1862,7 +1865,7 @@ int main()
     printf("Testing dimensions set Row C = %d, Col C = %d, Col A =%d: ",mA,nB,nA);
     if (err_count)
     {
-     printf("FAILED...Error count: %d\n",err_count);
+     printf("FAILED...Error count: %ld\n",err_count);
      break;
     }
     else
@@ -1870,6 +1873,9 @@ int main()
      printf("PASSED...\n");
     }
    }
+ free(A);
+ free(B);
+ free(SW_C);
+ free(HW_C);
  return err_count;
- return 0;
 }

@@ -1,1 +1,4 @@
+MAT_Multiply_mul_32s_32s_32_6
+MAT_Multiply_arrayA
+MAT_Multiply_arrayC
 MAT_Multiply

@@ -5,75 +5,80 @@
 // 
 // ==============================================================
 
-#1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.c"
+#1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.c"
 #1 "<built-in>"
 #1 "<command-line>"
-#1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.c"
+#1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.c"
 
-#1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.h" 1
-
-
+#1 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.h" 1
 
 
 
 
 
-void MAT_Multiply(int A[1000][1000],
-  int B[1000][1000], long C[1000][1000],
-  unsigned char mA, unsigned char nA, unsigned char mB,
-  unsigned char nB, unsigned char mC, unsigned char nC);
-#3 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.c" 2
+
+
+void MAT_Multiply(int *A, int *B, long *C,
+  unsigned int mA, unsigned int nA, unsigned int mB,
+  unsigned int nB, unsigned int mC, unsigned int nC);
+#3 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.c" 2
 
 
 #ifndef HLS_FASTSIM
 #include "apatb_MAT_Multiply.h"
 #endif
 #define MAT_Multiply(...) AESL_ORIG_DUT_MAT_Multiply(__VA_ARGS__)
-#4 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.c"
-void MAT_Multiply(int A[1000][1000],
-  int B[1000][1000], long C[1000][1000],
-  unsigned char mA, unsigned char nA, unsigned char mB,
-  unsigned char nB, unsigned char mC, unsigned char nC)
+#4 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.c"
+void MAT_Multiply(int *A,
+  int *B, long *C,
+  unsigned int mA, unsigned int nA, unsigned int mB,
+  unsigned int nB, unsigned int mC, unsigned int nC)
 {
- unsigned char i, j, k;
- long temp;
- int A_cached_row[1000];
- int B_cached[1000][1000];
+#pragma HLS INTERFACE ap_fifo port =A
+#pragma HLS INTERFACE ap_fifo port =B
+#pragma HLS INTERFACE ap_fifo port =C
 
+ int arrayA[700][700];
+ int arrayB[700][700];
+ long arrayC[700][700];
+
+ unsigned int i, j, k;
  if ((nA == mB)&(mA == mC)&(nB==nC))
  {
-  Row: for (i=0; i<1000; i++)
-   Col: for (j=0; j<1000; j++)
+  Row_load: for (i=0;i<700;i++)
+   Col_load: for (j=0;j<700;j++)
    {
+    if ((i<mA)&&(j<nA))
+     arrayA[i][j] = A[i*700 +j];
+    if ((i<mB)&&(j<nB))
+     arrayB[i][j] = B[i*700 +j];
+    if ((i<mC)&&(j<nC))
+     arrayC[i][j] = 0;
 
-
+   }
+  Row: for (i=0; i<700; i++)
+   Col: for (j=0; j<700; j++)
+   {
     if ((i<mC)&(j<nC))
     {
-     temp = 0;
-     if (j==0)
-     {
-
-      RowCaching: for (k=0;k<1000;k++)
-       A_cached_row[k]=A[i][k];
-     }
-
-
-     if (i==0)
-     {
-      ColCaching: for (k=0;k<1000;k++)
-       B_cached[k][j]=B[k][j];
-     }
-
-     Product: for (k=0; k<1000; k++)
-     {
+     arrayC[i][j] = 0;
+     Product: for (k=0; k<700; k++)
         if (k<nA)
-         temp += A_cached_row[k] * B_cached[k][j];
-     }
-     C[i][j] = temp;
+         arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
     }
    }
+
+  Row_Assign: for (i=0; i<700; i++)
+     Col_Assign: for (j=0; j<700; j++)
+     {
+      if ((i<mC)&(j<nC))
+      {
+       C[i*700 +j] = arrayC[i][j];
+      }
+     }
+
  }
 }
 #undef MAT_Multiply
 
-#47 "/home/parallels/source_code/ECE_527_MP/mp3/partB/.settings/matrixmath.c"
+#53 "/home/parallels/source_code/ECE_527_MP/mp3/partB/matrixmath.c"

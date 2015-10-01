@@ -4,4 +4,4 @@
 // Copyright (C) 2015 Xilinx Inc. All rights reserved.
 // ==============================================================
 
-extern void MAT_Multiply (int A[1000][1000], int B[1000][1000], long C[1000][1000], unsigned char mA, unsigned char nA, unsigned char mB, unsigned char nB, unsigned char mC, unsigned char nC);
+extern void MAT_Multiply (int* A, int* B, long* C, unsigned int mA, unsigned int nA, unsigned int mB, unsigned int nB, unsigned int mC, unsigned int nC);

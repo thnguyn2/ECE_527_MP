@@ -1,0 +1,9 @@
+verilog xil_defaultlib "MAT_Multiply_arrayC.v"
+verilog xil_defaultlib "AESL_autofifo_A.v"
+verilog xil_defaultlib "MAT_Multiply_mul_32s_32s_32_6.v"
+verilog xil_defaultlib "MAT_Multiply.autotb.v"
+verilog xil_defaultlib "AESL_autofifo_B.v"
+verilog xil_defaultlib "MAT_Multiply_arrayA.v"
+verilog xil_defaultlib "MAT_Multiply.v"
+verilog xil_defaultlib "AESL_autofifo_C.v"
+

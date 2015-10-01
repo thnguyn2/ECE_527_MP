@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../.settings/matrixmath_test.c ../../../.settings/matrixmath.c
+HLS_SOURCES = ../../../matrixmath_test.c ../../../matrixmath.c
 
 TARGET := csim.exe
 
@@ -72,14 +72,14 @@ all: $(TARGET)
 
 AUTOCC := apcc  
 
-$(ObjDir)/matrixmath_test.o: ../../../.settings/matrixmath_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../.settings/matrixmath_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/matrixmath_test.o: ../../../matrixmath_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../matrixmath_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD   $(IFLAG) $(DFLAG)  $< -o $@ ; \
 
 -include $(ObjDir)/matrixmath_test.d
 
-$(ObjDir)/matrixmath.o: ../../../.settings/matrixmath.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../.settings/matrixmath.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/matrixmath.o: ../../../matrixmath.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../matrixmath.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD    $(IFLAG) $(DFLAG)  $< -o $@ ; \
 
 -include $(ObjDir)/matrixmath.d
