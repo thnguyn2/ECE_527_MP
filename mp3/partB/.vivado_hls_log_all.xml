@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('arrayB_load_2', partB/matrixmath.c:39) on array 'arrayB' due to limited memory ports." projectName="partB" solutionName="solution2_optimized" date="2015-09-30T20:14:15.007-0700" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'Product' (partB/matrixmath.c:38) because its parent loop or function is pipelined." projectName="partB" solutionName="solution2_optimized" date="2015-09-30T20:13:56.452-0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
