@@ -29,87 +29,87 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/.apc/.src</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/.apc/.tb</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1_mm_non_optimized/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/.tcls</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/.tcls</location>
 		</link>
 		<link>
 			<name>solution2_mm_loop_pipelining/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/.tcls</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/.tcls</location>
 		</link>
 		<link>
 			<name>solution3_mm_unroll/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution3_mm_unroll/.tcls</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution3_mm_unroll/.tcls</location>
 		</link>
 		<link>
 			<name>source/matrixmath.c</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/matrixmath.c</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath.c</location>
 		</link>
 		<link>
 			<name>source/matrixmath.h</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/matrixmath.h</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath.h</location>
 		</link>
 		<link>
 			<name>testbench/matrixmath_test.c</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/matrixmath_test.c</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath_test.c</location>
 		</link>
 		<link>
 			<name>solution1_mm_non_optimized/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/solution1_mm_non_optimized.directive</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/solution1_mm_non_optimized.directive</location>
 		</link>
 		<link>
 			<name>solution1_mm_non_optimized/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/directives.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1_mm_non_optimized/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/script.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution1_mm_non_optimized/script.tcl</location>
 		</link>
 		<link>
 			<name>solution2_mm_loop_pipelining/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/solution2_mm_loop_pipelining.directive</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/solution2_mm_loop_pipelining.directive</location>
 		</link>
 		<link>
 			<name>solution2_mm_loop_pipelining/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/directives.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution2_mm_loop_pipelining/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/script.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/script.tcl</location>
 		</link>
 		<link>
 			<name>solution3_mm_unroll/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution3_mm_unroll/solution3_mm_unroll.directive</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution3_mm_unroll/solution3_mm_unroll.directive</location>
 		</link>
 		<link>
 			<name>solution3_mm_unroll/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution3_mm_unroll/directives.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution3_mm_unroll/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution3_mm_unroll/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution3_mm_unroll/script.tcl</location>
+			<location>/home/parallels/source_code/ECE_527_MP/mp3/parta/solution3_mm_unroll/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

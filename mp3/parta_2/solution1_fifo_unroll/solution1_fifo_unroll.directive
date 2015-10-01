@@ -1,0 +1,54 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="A" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="B" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="C" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="A_cached_row" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="10"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="B_cached" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="factor" value="10"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="RowCaching" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="20"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="ColCaching" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="20"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="Product" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="20"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

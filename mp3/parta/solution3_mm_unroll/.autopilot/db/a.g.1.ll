@@ -1,6 +1,6 @@
-; ModuleID = 'Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution3_mm_unroll/.autopilot/db/a.g.1.bc'
+; ModuleID = '/home/parallels/source_code/ECE_527_MP/mp3/parta/solution3_mm_unroll/.autopilot/db/a.g.1.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
-target triple = "x86_64-w64-mingw32"
+target triple = "x86_64-unknown-linux-gnu"
 
 @.str = private unnamed_addr constant [4 x i8] c"Row\00", align 1 ; [#uses=1 type=[4 x i8]*]
 @.str1 = private unnamed_addr constant [4 x i8] c"Col\00", align 1 ; [#uses=1 type=[4 x i8]*]
@@ -9,20 +9,20 @@ target triple = "x86_64-w64-mingw32"
 @str = internal constant [13 x i8] c"MAT_Multiply\00" ; [#uses=1 type=[13 x i8]*]
 
 ; [#uses=0]
-define void @MAT_Multiply([100 x i32]* %A, [100 x i32]* %B, [100 x i32]* %C, i8 zeroext %mA, i8 zeroext %nA, i8 zeroext %mB, i8 zeroext %nB, i8 zeroext %mC, i8 zeroext %nC) nounwind uwtable {
+define void @MAT_Multiply([100 x i32]* %A, [100 x i32]* %B, [100 x i64]* %C, i8 zeroext %mA, i8 zeroext %nA, i8 zeroext %mB, i8 zeroext %nB, i8 zeroext %mC, i8 zeroext %nC) nounwind uwtable {
   call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @str) nounwind
   call void @llvm.dbg.value(metadata !{[100 x i32]* %A}, i64 0, metadata !20), !dbg !21 ; [debug line = 4:23] [debug variable = A]
   call void @llvm.dbg.value(metadata !{[100 x i32]* %B}, i64 0, metadata !22), !dbg !23 ; [debug line = 5:7] [debug variable = B]
-  call void @llvm.dbg.value(metadata !{[100 x i32]* %C}, i64 0, metadata !24), !dbg !25 ; [debug line = 5:25] [debug variable = C]
+  call void @llvm.dbg.value(metadata !{[100 x i64]* %C}, i64 0, metadata !24), !dbg !25 ; [debug line = 5:25] [debug variable = C]
   call void @llvm.dbg.value(metadata !{i8 %mA}, i64 0, metadata !26), !dbg !27 ; [debug line = 6:17] [debug variable = mA]
   call void @llvm.dbg.value(metadata !{i8 %nA}, i64 0, metadata !28), !dbg !29 ; [debug line = 6:35] [debug variable = nA]
   call void @llvm.dbg.value(metadata !{i8 %mB}, i64 0, metadata !30), !dbg !31 ; [debug line = 6:53] [debug variable = mB]
   call void @llvm.dbg.value(metadata !{i8 %nB}, i64 0, metadata !32), !dbg !33 ; [debug line = 7:17] [debug variable = nB]
   call void @llvm.dbg.value(metadata !{i8 %mC}, i64 0, metadata !34), !dbg !35 ; [debug line = 7:35] [debug variable = mC]
   call void @llvm.dbg.value(metadata !{i8 %nC}, i64 0, metadata !36), !dbg !37 ; [debug line = 7:53] [debug variable = nC]
-  call void (...)* @_ssdm_SpecArrayDimSize([100 x i32]* %A, i32 100), !dbg !38 ; [debug line = 8:2]
-  call void (...)* @_ssdm_SpecArrayDimSize([100 x i32]* %B, i32 100), !dbg !40 ; [debug line = 8:32]
-  call void (...)* @_ssdm_SpecArrayDimSize([100 x i32]* %C, i32 100), !dbg !41 ; [debug line = 8:62]
+  call void (...)* @_ssdm_SpecArrayDimSize([100 x i32]* %A, i32 100) nounwind, !dbg !38 ; [debug line = 8:2]
+  call void (...)* @_ssdm_SpecArrayDimSize([100 x i32]* %B, i32 100) nounwind, !dbg !40 ; [debug line = 8:32]
+  call void (...)* @_ssdm_SpecArrayDimSize([100 x i64]* %C, i32 100) nounwind, !dbg !41 ; [debug line = 8:62]
   %tmp = icmp eq i8 %nA, %mB, !dbg !42            ; [#uses=1 type=i1] [debug line = 10:2]
   %tmp.1 = icmp eq i8 %mA, %mC, !dbg !42          ; [#uses=1 type=i1] [debug line = 10:2]
   %tmp.2 = and i1 %tmp, %tmp.1, !dbg !42          ; [#uses=1 type=i1] [debug line = 10:2]
@@ -39,7 +39,7 @@ define void @MAT_Multiply([100 x i32]* %A, [100 x i32]* %B, [100 x i32]* %C, i8 
   br i1 %exitcond2, label %.loopexit3.loopexit, label %1, !dbg !43 ; [debug line = 12:13]
 
 ; <label>:1                                       ; preds = %.preheader
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([4 x i8]* @.str, i64 0, i64 0)), !dbg !46 ; [debug line = 13:4]
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([4 x i8]* @.str, i64 0, i64 0)) nounwind, !dbg !46 ; [debug line = 13:4]
   %rbegin6 = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([4 x i8]* @.str, i64 0, i64 0)) nounwind, !dbg !46 ; [#uses=1 type=i32] [debug line = 13:4]
   %tmp.5 = icmp ult i8 %i, %mA, !dbg !48          ; [#uses=1 type=i1] [debug line = 15:5]
   %tmp.6 = zext i8 %i to i64, !dbg !51            ; [#uses=2 type=i64] [debug line = 17:6]
@@ -51,17 +51,17 @@ define void @MAT_Multiply([100 x i32]* %A, [100 x i32]* %B, [100 x i32]* %C, i8 
   br i1 %exitcond1, label %8, label %3, !dbg !53  ; [debug line = 13:14]
 
 ; <label>:3                                       ; preds = %2
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([4 x i8]* @.str1, i64 0, i64 0)), !dbg !54 ; [debug line = 14:5]
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([4 x i8]* @.str1, i64 0, i64 0)) nounwind, !dbg !54 ; [debug line = 14:5]
   %rbegin = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([4 x i8]* @.str1, i64 0, i64 0)) nounwind, !dbg !54 ; [#uses=1 type=i32] [debug line = 14:5]
-  call void (...)* @_ssdm_Unroll(i32 1, i32 0, i32 5, i8* getelementptr inbounds ([1 x i8]* @.str2, i64 0, i64 0)), !dbg !55 ; [debug line = 15:1]
+  call void (...)* @_ssdm_Unroll(i32 1, i32 0, i32 5, i8* getelementptr inbounds ([1 x i8]* @.str2, i64 0, i64 0)) nounwind, !dbg !55 ; [debug line = 15:1]
   %tmp.8 = icmp ult i8 %j, %nB, !dbg !48          ; [#uses=1 type=i1] [debug line = 15:5]
   %tmp.9 = and i1 %tmp.5, %tmp.8, !dbg !48        ; [#uses=1 type=i1] [debug line = 15:5]
   br i1 %tmp.9, label %4, label %.loopexit, !dbg !48 ; [debug line = 15:5]
 
 ; <label>:4                                       ; preds = %3
   %tmp.10 = zext i8 %j to i64, !dbg !51           ; [#uses=2 type=i64] [debug line = 17:6]
-  %C.addr = getelementptr inbounds [100 x i32]* %C, i64 %tmp.6, i64 %tmp.10, !dbg !51 ; [#uses=3 type=i32*] [debug line = 17:6]
-  store i32 0, i32* %C.addr, align 4, !dbg !51    ; [debug line = 17:6]
+  %C.addr = getelementptr inbounds [100 x i64]* %C, i64 %tmp.6, i64 %tmp.10, !dbg !51 ; [#uses=3 type=i64*] [debug line = 17:6]
+  store i64 0, i64* %C.addr, align 8, !dbg !51    ; [debug line = 17:6]
   br label %5, !dbg !56                           ; [debug line = 18:20]
 
 ; <label>:5                                       ; preds = %._crit_edge, %4
@@ -70,9 +70,9 @@ define void @MAT_Multiply([100 x i32]* %A, [100 x i32]* %B, [100 x i32]* %C, i8 
   br i1 %exitcond, label %.loopexit.loopexit, label %6, !dbg !56 ; [debug line = 18:20]
 
 ; <label>:6                                       ; preds = %5
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([8 x i8]* @.str3, i64 0, i64 0)), !dbg !58 ; [debug line = 19:2]
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([8 x i8]* @.str3, i64 0, i64 0)) nounwind, !dbg !58 ; [debug line = 19:2]
   %rbegin4 = call i32 (...)* @_ssdm_op_SpecRegionBegin(i8* getelementptr inbounds ([8 x i8]* @.str3, i64 0, i64 0)) nounwind, !dbg !58 ; [#uses=1 type=i32] [debug line = 19:2]
-  call void (...)* @_ssdm_Unroll(i32 1, i32 0, i32 50, i8* getelementptr inbounds ([1 x i8]* @.str2, i64 0, i64 0)), !dbg !60 ; [debug line = 20:1]
+  call void (...)* @_ssdm_Unroll(i32 1, i32 0, i32 10, i8* getelementptr inbounds ([1 x i8]* @.str2, i64 0, i64 0)) nounwind, !dbg !60 ; [debug line = 20:1]
   %tmp.11 = icmp ult i8 %k, %nA, !dbg !61         ; [#uses=1 type=i1] [debug line = 19:1]
   br i1 %tmp.11, label %7, label %._crit_edge, !dbg !61 ; [debug line = 19:1]
 
@@ -85,10 +85,11 @@ define void @MAT_Multiply([100 x i32]* %A, [100 x i32]* %B, [100 x i32]* %C, i8 
   %B.load = load i32* %B.addr, align 4, !dbg !62  ; [#uses=2 type=i32] [debug line = 20:10]
   call void (...)* @_ssdm_SpecKeepArrayLoad(i32 %B.load) nounwind
   %tmp.14 = mul nsw i32 %B.load, %A.load, !dbg !62 ; [#uses=1 type=i32] [debug line = 20:10]
-  %C.load = load i32* %C.addr, align 4, !dbg !62  ; [#uses=2 type=i32] [debug line = 20:10]
-  call void (...)* @_ssdm_SpecKeepArrayLoad(i32 %C.load) nounwind
-  %tmp.15 = add nsw i32 %C.load, %tmp.14, !dbg !62 ; [#uses=1 type=i32] [debug line = 20:10]
-  store i32 %tmp.15, i32* %C.addr, align 4, !dbg !62 ; [debug line = 20:10]
+  %tmp.15 = sext i32 %tmp.14 to i64, !dbg !62     ; [#uses=1 type=i64] [debug line = 20:10]
+  %C.load = load i64* %C.addr, align 8, !dbg !62  ; [#uses=2 type=i64] [debug line = 20:10]
+  call void (...)* @_ssdm_SpecKeepArrayLoad(i64 %C.load) nounwind
+  %tmp.16 = add nsw i64 %C.load, %tmp.15, !dbg !62 ; [#uses=1 type=i64] [debug line = 20:10]
+  store i64 %tmp.16, i64* %C.addr, align 8, !dbg !62 ; [debug line = 20:10]
   br label %._crit_edge, !dbg !62                 ; [debug line = 20:10]
 
 ._crit_edge:                                      ; preds = %7, %6
@@ -146,13 +147,13 @@ declare i32 @_ssdm_op_SpecRegionEnd(...)
 !llvm.dbg.cu = !{!0}
 !hls.encrypted.func = !{}
 
-!0 = metadata !{i32 786449, i32 0, i32 1, metadata !"Z:/Documents/UIUC/ECE527/ECE_527_MP/mp3/parta/solution3_mm_unroll/.autopilot/db/matrixmath.pragma.2.c", metadata !"z:/Documents/UIUC/ECE527/ECE_527_MP/mp3", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ]
+!0 = metadata !{i32 786449, i32 0, i32 1, metadata !"/home/parallels/source_code/ECE_527_MP/mp3/parta/solution3_mm_unroll/.autopilot/db/matrixmath.pragma.2.c", metadata !"/home/parallels/source_code/ECE_527_MP/mp3", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ]
 !1 = metadata !{metadata !2}
 !2 = metadata !{i32 0}
 !3 = metadata !{metadata !4}
 !4 = metadata !{metadata !5}
-!5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"MAT_Multiply", metadata !"MAT_Multiply", metadata !"", metadata !6, i32 4, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void ([100 x i32]*, [100 x i32]*, [100 x i32]*, i8, i8, i8, i8, i8, i8)* @MAT_Multiply, null, null, metadata !18, i32 8} ; [ DW_TAG_subprogram ]
-!6 = metadata !{i32 786473, metadata !"parta/matrixmath.c", metadata !"z:/Documents/UIUC/ECE527/ECE_527_MP/mp3", null} ; [ DW_TAG_file_type ]
+!5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"MAT_Multiply", metadata !"MAT_Multiply", metadata !"", metadata !6, i32 4, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void ([100 x i32]*, [100 x i32]*, [100 x i64]*, i8, i8, i8, i8, i8, i8)* @MAT_Multiply, null, null, metadata !18, i32 8} ; [ DW_TAG_subprogram ]
+!6 = metadata !{i32 786473, metadata !"parta/matrixmath.c", metadata !"/home/parallels/source_code/ECE_527_MP/mp3", null} ; [ DW_TAG_file_type ]
 !7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !8 = metadata !{null, metadata !9, metadata !9, metadata !14, metadata !17, metadata !17, metadata !17, metadata !17, metadata !17, metadata !17}
 !9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ]
@@ -161,8 +162,8 @@ declare i32 @_ssdm_op_SpecRegionEnd(...)
 !12 = metadata !{metadata !13}
 !13 = metadata !{i32 786465, i64 0, i64 99}       ; [ DW_TAG_subrange_type ]
 !14 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !15} ; [ DW_TAG_pointer_type ]
-!15 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 3200, i64 32, i32 0, i32 0, metadata !16, metadata !12, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!16 = metadata !{i32 786468, null, metadata !"long int", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]
+!15 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 6400, i64 64, i32 0, i32 0, metadata !16, metadata !12, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!16 = metadata !{i32 786468, null, metadata !"long int", null, i32 0, i64 64, i64 64, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]
 !17 = metadata !{i32 786468, null, metadata !"unsigned char", null, i32 0, i64 8, i64 8, i64 0, i32 0, i32 8} ; [ DW_TAG_base_type ]
 !18 = metadata !{metadata !19}
 !19 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]

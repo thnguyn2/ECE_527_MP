@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="matrixmath.h" path="/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath.h"/>
     <originFiles name="matrixmath.c" path="/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath.c"/>
+    <originFiles name="matrixmath.h" path="/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath.h"/>
   </source>
   <testbench>
     <originFiles name="matrixmath_test.c" path="/home/parallels/source_code/ECE_527_MP/mp3/parta/matrixmath_test.c"/>

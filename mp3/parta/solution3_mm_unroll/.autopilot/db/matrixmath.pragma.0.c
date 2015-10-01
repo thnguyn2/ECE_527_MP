@@ -2,14 +2,13 @@
 #1 "parta/matrixmath.c" 1
 #1 "<built-in>" 1
 #1 "<built-in>" 3
-#147 "<built-in>" 3
+#149 "<built-in>" 3
 #1 "<command line>" 1
 
 
 
 
-
-#1 "C:/Xilinx/Vivado_HLS/2015.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+#1 "/opt/Xilinx/Vivado_HLS/2015.1/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2015 Xilinx, Inc. All rights reserved.
@@ -62,7 +61,7 @@
  *
  * $Id$
  */
-#279 "C:/Xilinx/Vivado_HLS/2015.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+#279 "/opt/Xilinx/Vivado_HLS/2015.1/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -189,7 +188,7 @@
 
 /*#define _ssdm_op_WaitUntil(X) while (!(X)) _ssdm_op_Wait(1);
 #define _ssdm_op_Delayed(X) X */
-#7 "<command line>" 2
+#6 "<command line>" 2
 #1 "<built-in>" 2
 #1 "parta/matrixmath.c" 2
 //---Memory map interface design---
@@ -227,7 +226,7 @@ void MAT_Multiply(int A[100][100],
      C[i][j] = 0;
      Product: for (k=0; k<100; k++)
         
-#pragma HLS UNROLL factor=50
+#pragma HLS UNROLL factor=10
 #19 "parta/matrixmath.c"
 if (k<nA)
          C[i][j] += A[i][k] * B[k][j];

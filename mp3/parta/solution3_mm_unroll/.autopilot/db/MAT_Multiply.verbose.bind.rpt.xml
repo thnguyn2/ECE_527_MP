@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'MAT_Multiply'" level="0">
-<item name = "Date">Tue Sep 29 10:24:28 2015
+<item name = "Date">Thu Oct  1 14:07:48 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">parta</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 8992201, 2, 8992202, none</column>
+<column name="">1, 8912201, 2, 8912202, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,13 +35,13 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Row">12200, 8992200, 122 ~ 89922, -, -, 100, no</column>
-<column name=" + Col">120, 89920, 6 ~ 4496, -, -, 20, no</column>
-<column name="  ++ Product">102, 898, 51 ~ 449, -, -, 2, no</column>
-<column name="  ++ Product">102, 898, 51 ~ 449, -, -, 2, no</column>
-<column name="  ++ Product">102, 898, 51 ~ 449, -, -, 2, no</column>
-<column name="  ++ Product">102, 898, 51 ~ 449, -, -, 2, no</column>
-<column name="  ++ Product">102, 898, 51 ~ 449, -, -, 2, no</column>
+<column name="- Row">12200, 8912200, 122 ~ 89122, -, -, 100, no</column>
+<column name=" + Col">120, 89120, 6 ~ 4456, -, -, 20, no</column>
+<column name="  ++ Product">110, 890, 11 ~ 89, -, -, 10, no</column>
+<column name="  ++ Product">110, 890, 11 ~ 89, -, -, 10, no</column>
+<column name="  ++ Product">110, 890, 11 ~ 89, -, -, 10, no</column>
+<column name="  ++ Product">110, 890, 11 ~ 89, -, -, 10, no</column>
+<column name="  ++ Product">110, 890, 11 ~ 89, -, -, 10, no</column>
 </table>
 </item>
 </section>

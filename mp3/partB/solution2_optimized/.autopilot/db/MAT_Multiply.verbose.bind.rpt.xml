@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'MAT_Multiply'" level="0">
-<item name = "Date">Wed Sep 30 22:14:20 2015
+<item name = "Date">Thu Oct  1 11:04:55 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">partB</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 9.97, 1.25</column>
+<column name="default">10.00, 10.07, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 1020311, 2, 1020312, none</column>
+<column name="">1, 4011500008, 2, 4011500009, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,9 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Row_load_Col_load">10000, 10000, 2, 1, 1, 10000, yes</column>
-<column name="- Row_Col">1000305, 1000305, 406, 100, 1, 10000, yes</column>
-<column name="- Row_Assign_Col_Assign">10001, 10001, 3, 1, 1, 10000, yes</column>
+<column name="- Row_load_Col_load">1000001, 1000001, 3, 1, 1, 1000000, yes</column>
+<column name="- Row_Col">4009500000, 4009500000, 8019, -, -, 500000, no</column>
+<column name=" + Product">4005, 4005, 10, 4, 1, 1000, yes</column>
+<column name=" + Product">4005, 4005, 10, 4, 1, 1000, yes</column>
+<column name="- Row_Assign_Col_Assign">1000003, 1000003, 5, 1, 1, 1000000, yes</column>
 </table>
 </item>
 </section>

@@ -11,7 +11,10 @@
 #pragma line 1 "partB/matrixmath.c" 2 ::: 182
 #pragma line 1 "partB/matrixmath.h" 1 ::: 185
 #pragma line 3 "partB/matrixmath.c" 2 ::: 196
-#pragma line 22 "partB/matrixmath.c" ::: 218
-#pragma line 33 "partB/matrixmath.c" ::: 232
-#pragma line 38 "partB/matrixmath.c" ::: 240
-#pragma line 45 "partB/matrixmath.c" ::: 250
+#pragma line 13 "partB/matrixmath.c" ::: 209
+#pragma line 14 "partB/matrixmath.c" ::: 213
+#pragma line 15 "partB/matrixmath.c" ::: 217
+#pragma line 23 "partB/matrixmath.c" ::: 228
+#pragma line 34 "partB/matrixmath.c" ::: 242
+#pragma line 37 "partB/matrixmath.c" ::: 248
+#pragma line 50 "partB/matrixmath.c" ::: 264

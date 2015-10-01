@@ -5,8 +5,8 @@
 ############################################################
 open_project partB
 set_top MAT_Multiply
-add_files partB/matrixmath.c
 add_files partB/matrixmath.h
+add_files partB/matrixmath.c
 add_files -tb partB/matrixmath_test.c
 open_solution "solution1"
 set_part {xc7z020clg484-1}

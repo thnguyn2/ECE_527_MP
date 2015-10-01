@@ -1,0 +1,8 @@
+lappend pragmaStatus0 {pragma "INTERFACE" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "INTERFACE" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "INTERFACE" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus3 {pragma "ARRAY_PARTITION" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "A_cached_row"}
+lappend pragmaStatus4 {pragma "ARRAY_PARTITION" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "B_cached"}
+lappend pragmaStatus5 {pragma "UNROLL" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply/RowCaching" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus6 {pragma "UNROLL" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply/ColCaching" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus7 {pragma "UNROLL" source "/home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c" location "MAT_Multiply/Product" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

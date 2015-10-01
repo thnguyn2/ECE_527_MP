@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'MAT_Multiply'
 ================================================================
-* Date:           Mon Sep 28 14:07:43 2015
+* Date:           Thu Oct  1 08:29:16 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        parta
@@ -9259,15 +9259,15 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 1
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ A]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x7f6453907fc0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ B]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x7f64531f1a20; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ C]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; mode=0x7f6453820da0; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
-Port [ mA]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f6452c9de50; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ nA]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f6453717090; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ mB]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f6453907b60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ nB]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f6452c4a860; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ mC]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f64538603f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ nC]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f6452c5a760; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ A]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x7f498f1c23e0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ B]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x7f498f1a60b0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ C]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; mode=0x7f498f1b2a70; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ mA]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f498eb65bb0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ nA]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f498ede6080; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ mB]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f498eded460; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ nB]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f498c2bdf70; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ mC]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f498edeb430; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ nC]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x7f498e9cdb60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------

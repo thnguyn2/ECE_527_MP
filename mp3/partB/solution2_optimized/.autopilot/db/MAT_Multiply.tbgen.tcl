@@ -89,9 +89,9 @@ set Spec2ImplPortList {
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 
-	A { fifo_read 10000 has_conditional }
-	B { fifo_read 10000 has_conditional }
-	C { fifo_write 10000 has_conditional }
+	A { fifo_read 1000000 has_conditional }
+	B { fifo_read 1000000 has_conditional }
+	C { fifo_write 1000000 has_conditional }
 }
 
 # RTL bus port read request latency information:

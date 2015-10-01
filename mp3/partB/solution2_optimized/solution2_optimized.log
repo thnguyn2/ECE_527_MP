@@ -11,13 +11,19 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 @I [HLS-10] Validating synthesis directives ...
 @I [HLS-10] Starting code transformations ...
 @I [HLS-10] Checking synthesizability ...
-@I [XFORM-502] Unrolling all sub-loops inside loop 'Col' (partB/matrixmath.c:33) in function 'MAT_Multiply' for pipelining.
-@W [XFORM-505] Ignored pipeline directive for loop 'Product' (partB/matrixmath.c:38) because its parent loop or function is pipelined.
-@I [XFORM-501] Unrolling loop 'Product' (partB/matrixmath.c:38) in function 'MAT_Multiply' completely.
-@I [XFORM-541] Flattening a loop nest 'Row_load' (partB/matrixmath.c:21:4) in function 'MAT_Multiply'.
-@I [XFORM-541] Flattening a loop nest 'Row' (partB/matrixmath.c:32:4) in function 'MAT_Multiply'.
-@I [XFORM-541] Flattening a loop nest 'Row_Assign' (partB/matrixmath.c:44:6) in function 'MAT_Multiply'.
-@I [HLS-111] Elapsed time: 8.30025 seconds; current memory usage: 79.4 MB.
+@I [XFORM-501] Unrolling loop 'Col' (partB/matrixmath.c:34) in function 'MAT_Multiply' partially with a factor of 2.
+@I [XFORM-101] Partitioning array 'arrayA' (partB/matrixmath.c:13) in dimension 1 with a cyclic factor 2.
+@I [XFORM-101] Partitioning array 'arrayB' (partB/matrixmath.c:14) in dimension 1 with a cyclic factor 2.
+@I [XFORM-101] Partitioning array 'arrayC' (partB/matrixmath.c:15) in dimension 1 with a cyclic factor 2.
+@I [XFORM-401] Performing if-conversion on hyperblock from (partB/matrixmath.c:41:10) to (partB/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 10 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (partB/matrixmath.c:41:10) to (partB/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 10 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (partB/matrixmath.c:53:8) to (partB/matrixmath.c:54:7) in function 'MAT_Multiply'... converting 4 basic blocks.
+@I [XFORM-541] Flattening a loop nest 'Row_load' (partB/matrixmath.c:22:4) in function 'MAT_Multiply'.
+@W [XFORM-542] Cannot flatten a loop nest 'Col' (partB/matrixmath.c:34:5) in function 'MAT_Multiply' : 
+               more than one sub loop.
+@I [XFORM-541] Flattening a loop nest 'Row' (partB/matrixmath.c:33:4) in function 'MAT_Multiply'.
+@I [XFORM-541] Flattening a loop nest 'Row_Assign' (partB/matrixmath.c:49:6) in function 'MAT_Multiply'.
+@I [HLS-111] Elapsed time: 1.14145 seconds; current memory usage: 56.4 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'MAT_Multiply' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -25,14 +31,34 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-61] Pipelining loop 'Row_load_Col_load'.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
-@I [SCHED-61] Pipelining loop 'Row_Col'.
-@W [SCHED-69] Unable to schedule 'load' operation ('arrayB_load_2', partB/matrixmath.c:39) on array 'arrayB' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 100, Depth: 406.
-@I [SCHED-61] Pipelining loop 'Row_Assign_Col_Assign'.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+@I [SCHED-61] Pipelining loop 'Product'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (partB/matrixmath.c:41) of variable 'tmp_34' on array 'arrayC[0]' and 'load' operation ('arrayC_0_load_1', partB/matrixmath.c:41) on array 'arrayC[0]'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between 'store' operation (partB/matrixmath.c:41) of variable 'tmp_34' on array 'arrayC[0]' and 'load' operation ('arrayC_0_load_1', partB/matrixmath.c:41) on array 'arrayC[0]'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between 'store' operation (partB/matrixmath.c:41) of variable 'tmp_34' on array 'arrayC[0]' and 'load' operation ('arrayC_0_load_1', partB/matrixmath.c:41) on array 'arrayC[0]'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 10.
+@I [SCHED-61] Pipelining loop 'Product'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (partB/matrixmath.c:41) of variable 'tmp_34_1' on array 'arrayC[0]' and 'load' operation ('arrayC_0_load_2', partB/matrixmath.c:41) on array 'arrayC[0]'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between 'store' operation (partB/matrixmath.c:41) of variable 'tmp_34_1' on array 'arrayC[0]' and 'load' operation ('arrayC_0_load_2', partB/matrixmath.c:41) on array 'arrayC[0]'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between 'store' operation (partB/matrixmath.c:41) of variable 'tmp_34_1' on array 'arrayC[0]' and 'load' operation ('arrayC_0_load_2', partB/matrixmath.c:41) on array 'arrayC[0]'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 10.
+@I [SCHED-61] Pipelining loop 'Row_Assign_Col_Assign'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 5.
+@W [SCHED-21] Estimated clock period (10.1ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+@W [SCHED-21] The critical path consists of the following:
+	'icmp' operation ('exitcond3', partB/matrixmath.c:49) (2.07 ns)
+	'select' operation ('i_2_mid2', partB/matrixmath.c:49) (1.37 ns)
+	'icmp' operation ('tmp_15', partB/matrixmath.c:51) (2.52 ns)
+	'and' operation ('tmp_19', partB/matrixmath.c:51) (1.37 ns)
+	blocking operation 2.74 ns on control path)
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 14.8627 seconds; current memory usage: 109 MB.
+@I [HLS-111] Elapsed time: 0.202156 seconds; current memory usage: 57.7 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -41,7 +67,7 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 2.07657 seconds; current memory usage: 118 MB.
+@I [HLS-111] Elapsed time: 0.060038 seconds; current memory usage: 58.8 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -55,16 +81,17 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 @I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/mC' to 'ap_none'.
 @I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/nC' to 'ap_none'.
 @I [RTGEN-500] Setting interface mode on function 'MAT_Multiply' to 'ap_ctrl_hs'.
-@I [RTGEN-100] Generating core module 'MAT_Multiply_mac_muladd_7ns_8ns_7ns_14_1': 4 instance(s).
-@I [RTGEN-100] Generating core module 'MAT_Multiply_mul_32s_32s_32_6': 100 instance(s).
+@I [RTGEN-100] Generating core module 'MAT_Multiply_mac_muladd_11ns_9ns_10ns_19_1': 2 instance(s).
+@I [RTGEN-100] Generating core module 'MAT_Multiply_mac_muladd_9ns_11ns_10ns_19_1': 4 instance(s).
+@I [RTGEN-100] Generating core module 'MAT_Multiply_mul_32s_32s_32_6': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'MAT_Multiply'.
-@I [HLS-111] Elapsed time: 2.0465 seconds; current memory usage: 130 MB.
+@I [HLS-111] Elapsed time: 0.122659 seconds; current memory usage: 60.5 MB.
 @I [RTMG-282] Generating pipelined core: 'MAT_Multiply_mul_32s_32s_32_6_MulnS_0'
-@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayA_ram' using block RAMs.
-@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayC_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayA_0_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayC_0_ram' using block RAMs.
 @I [HLS-10] Finished generating all RTL models.
 @I [WSYSC-301] Generating RTL SystemC for 'MAT_Multiply'.
 @I [WVHDL-304] Generating RTL VHDL for 'MAT_Multiply'.
 @I [WVLOG-307] Generating RTL Verilog for 'MAT_Multiply'.
-@I [HLS-112] Total elapsed time: 31.853 seconds; peak memory usage: 130 MB.
+@I [HLS-112] Total elapsed time: 3.221 seconds; peak memory usage: 60.5 MB.
 @I [LIC-101] Checked in feature [VIVADO_HLS]

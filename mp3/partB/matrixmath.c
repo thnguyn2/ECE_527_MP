@@ -13,12 +13,13 @@ void MAT_Multiply(int *A,
 	int arrayA[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
 	int arrayB[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
 	long arrayC[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
+	long temp;
 
 	unsigned int i, j, k;
 	if ((nA == mB)&(mA == mC)&(nB==nC))//Multiplication only when the dimensions are suitable
 	{
 		Row_load: for (i=0;i<MATRIX_MAX_SIZE;i++)
-			Col_load: for (j=0;j<MATRIX_MAX_SIZE;j++)
+			Col_load:for (j=0;j<MATRIX_MAX_SIZE;j++)
 			{
 				if ((i<mA)&&(j<nA))
 					arrayA[i][j] = A[i*MATRIX_MAX_SIZE+j];
@@ -31,14 +32,18 @@ void MAT_Multiply(int *A,
 		Row: for (i=0; i<MATRIX_MAX_SIZE; i++)
 			Col: for (j=0; j<MATRIX_MAX_SIZE; j++)
 			{
-				if ((i<mC)&(j<nC))
-				{
-					arrayC[i][j] = 0;
-					Product: for (k=0; k<MATRIX_MAX_SIZE; k++)
+				 arrayC[i][j] = 0;
+			 	 Product: for (k=0; k<MATRIX_MAX_SIZE; k++)
+					{
+						if ((i<mC)&(j<nC))
+							{
 								if (k<nA)
 									arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
-				}
+							}
+					}
 			}
+
+
 		//Assignment
 		Row_Assign: for (i=0; i<MATRIX_MAX_SIZE; i++)
 					Col_Assign: for (j=0; j<MATRIX_MAX_SIZE; j++)

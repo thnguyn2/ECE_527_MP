@@ -67,22 +67,101 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 }
 
 
-set id 101
-set name MAT_Multiply_mac_muladd_7ns_8ns_7ns_14_1
+set id 3
+set name MAT_Multiply_mac_muladd_9ns_11ns_10ns_19_1
 set corename simcore_mac
 set op mac
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 7
+set in0_width 9
 set in0_signed 0
-set in1_width 8
+set in1_width 11
 set in1_signed 0
-set in2_width 7
+set in2_width 10
 set in2_signed 0
-set out_width 14
+set out_width 19
 set exp i0*i1+i2
-set arg_lists {i0 {7 0 +} i1 {8 0 +} m {14 0 +} i2 {7 0 +} p {14 0 +} c_reg {1} }
+set arg_lists {i0 {9 0 +} i1 {11 0 +} m {19 0 +} i2 {10 0 +} p {19 0 +} c_reg {1} }
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
+eval "ap_gen_simcore_mac { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ${name}
+}
+
+
+set op mac
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
+}
+
+
+set id 6
+set name MAT_Multiply_mac_muladd_11ns_9ns_10ns_19_1
+set corename simcore_mac
+set op mac
+set stage_num 1
+set max_latency -1
+set registered_input 1
+set in0_width 11
+set in0_signed 0
+set in1_width 9
+set in1_signed 0
+set in2_width 10
+set in2_signed 0
+set out_width 19
+set exp i0*i1+i2
+set arg_lists {i0 {11 0 +} i1 {9 0 +} m {19 0 +} i2 {10 0 +} p {19 0 +} c_reg {1} }
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
 eval "ap_gen_simcore_mac { \
@@ -147,13 +226,13 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 105
-set MemName MAT_Multiply_arrayA
+set ID 9
+set MemName MAT_Multiply_arrayA_0
 set CoreName ap_simcore_mem
-set PortList { 2 1 }
+set PortList { 2 3 }
 set DataWd 32
-set AddrRange 10000
-set AddrWd 14
+set AddrRange 500000
+set AddrWd 19
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
@@ -229,21 +308,21 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 106
-set MemName MAT_Multiply_arrayC
+set ID 10
+set MemName MAT_Multiply_arrayC_0
 set CoreName ap_simcore_mem
-set PortList { 2 2 }
+set PortList { 2 3 }
 set DataWd 64
-set AddrRange 10000
-set AddrWd 14
+set AddrRange 500000
+set AddrWd 19
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
 set IsROM 0
 set ROMData {}
-set NumOfStage 2
+set NumOfStage 4
 set MaxLatency -1
-set DelayBudget 2.71
+set DelayBudget 2.61
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -320,7 +399,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 107 \
+    id 11 \
     name A \
     type fifo \
     dir I \
@@ -335,7 +414,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 108 \
+    id 12 \
     name B \
     type fifo \
     dir I \
@@ -350,7 +429,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 109 \
+    id 13 \
     name C \
     type fifo \
     dir O \
@@ -365,7 +444,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 110 \
+    id 14 \
     name mA \
     type other \
     dir I \
@@ -380,7 +459,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 111 \
+    id 15 \
     name nA \
     type other \
     dir I \
@@ -395,7 +474,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 112 \
+    id 16 \
     name mB \
     type other \
     dir I \
@@ -410,7 +489,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 113 \
+    id 17 \
     name nB \
     type other \
     dir I \
@@ -425,7 +504,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 114 \
+    id 18 \
     name mC \
     type other \
     dir I \
@@ -440,7 +519,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 115 \
+    id 19 \
     name nC \
     type other \
     dir I \

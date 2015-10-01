@@ -10,7 +10,7 @@ set C_modelType { void 0 }
 set C_modelArgList { 
 	{ A int 32 regular {array 10000 { 1 3 } 1 1 }  }
 	{ B int 32 regular {array 10000 { 1 3 } 1 1 }  }
-	{ C int 32 regular {array 10000 { 2 3 } 1 1 }  }
+	{ C int 64 regular {array 10000 { 2 3 } 1 1 }  }
 	{ mA uint 8 regular  }
 	{ nA uint 8 regular  }
 	{ mB uint 8 regular  }
@@ -21,7 +21,7 @@ set C_modelArgList {
 set C_modelArgMapList {[ 
 	{ "Name" : "A", "interface" : "memory", "bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "A","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
  	{ "Name" : "B", "interface" : "memory", "bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "B","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
- 	{ "Name" : "C", "interface" : "memory", "bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "C","cData": "long int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
+ 	{ "Name" : "C", "interface" : "memory", "bitwidth" : 64,"bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "C","cData": "long int","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
  	{ "Name" : "mA", "interface" : "wire", "bitwidth" : 8,"bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "mA","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "nA", "interface" : "wire", "bitwidth" : 8,"bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "nA","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "mB", "interface" : "wire", "bitwidth" : 8,"bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "mB","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
@@ -46,8 +46,8 @@ set portList {
 	{ C_address0 sc_out sc_lv 14 signal 2 } 
 	{ C_ce0 sc_out sc_logic 1 signal 2 } 
 	{ C_we0 sc_out sc_logic 1 signal 2 } 
-	{ C_d0 sc_out sc_lv 32 signal 2 } 
-	{ C_q0 sc_in sc_lv 32 signal 2 } 
+	{ C_d0 sc_out sc_lv 64 signal 2 } 
+	{ C_q0 sc_in sc_lv 64 signal 2 } 
 	{ mA sc_in sc_lv 8 signal 3 } 
 	{ nA sc_in sc_lv 8 signal 4 } 
 	{ mB sc_in sc_lv 8 signal 5 } 
@@ -71,8 +71,8 @@ set NewPortList {[
  	{ "name": "C_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "C", "role": "address0" }} , 
  	{ "name": "C_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "C", "role": "ce0" }} , 
  	{ "name": "C_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "C", "role": "we0" }} , 
- 	{ "name": "C_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "C", "role": "d0" }} , 
- 	{ "name": "C_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "C", "role": "q0" }} , 
+ 	{ "name": "C_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "C", "role": "d0" }} , 
+ 	{ "name": "C_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "C", "role": "q0" }} , 
  	{ "name": "mA", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "mA", "role": "default" }} , 
  	{ "name": "nA", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "nA", "role": "default" }} , 
  	{ "name": "mB", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "mB", "role": "default" }} , 
@@ -82,7 +82,7 @@ set NewPortList {[
 set Spec2ImplPortList { 
 	A { ap_memory {  { A_address0 mem_address 1 14 }  { A_ce0 mem_ce 1 1 }  { A_q0 mem_dout 0 32 } } }
 	B { ap_memory {  { B_address0 mem_address 1 14 }  { B_ce0 mem_ce 1 1 }  { B_q0 mem_dout 0 32 } } }
-	C { ap_memory {  { C_address0 mem_address 1 14 }  { C_ce0 mem_ce 1 1 }  { C_we0 mem_we 1 1 }  { C_d0 mem_din 1 32 }  { C_q0 mem_dout 0 32 } } }
+	C { ap_memory {  { C_address0 mem_address 1 14 }  { C_ce0 mem_ce 1 1 }  { C_we0 mem_we 1 1 }  { C_d0 mem_din 1 64 }  { C_q0 mem_dout 0 64 } } }
 	mA { ap_none {  { mA in_data 0 8 } } }
 	nA { ap_none {  { nA in_data 0 8 } } }
 	mB { ap_none {  { mB in_data 0 8 } } }

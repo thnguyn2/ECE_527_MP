@@ -215,54 +215,68 @@ void MAT_Multiply(int *A,
 #pragma HLS INTERFACE ap_fifo port =B
 #pragma HLS INTERFACE ap_fifo port =C
 
- int arrayA[100][100];
- int arrayB[100][100];
- long arrayC[100][100];
+ int arrayA[1000][1000];
+#pragma HLS ARRAY_PARTITION variable=arrayA cyclic factor=2 dim=1
+#13 "partB/matrixmath.c"
+
+ int arrayB[1000][1000];
+#pragma HLS ARRAY_PARTITION variable=arrayB cyclic factor=2 dim=1
+#14 "partB/matrixmath.c"
+
+ long arrayC[1000][1000];
+#pragma HLS ARRAY_PARTITION variable=arrayC cyclic factor=2 dim=1
+#15 "partB/matrixmath.c"
+
+ long temp;
 
  unsigned int i, j, k;
  if ((nA == mB)&(mA == mC)&(nB==nC))//Multiplication only when the dimensions are suitable
  {
-  Row_load: for (i=0;i<100;i++)
-   Col_load: for (j=0;j<100;j++)
+  Row_load: for (i=0;i<1000;i++)
+   Col_load:for (j=0;j<1000;j++)
    {
 #pragma HLS PIPELINE
-#22 "partB/matrixmath.c"
+#23 "partB/matrixmath.c"
 
     if ((i<mA)&&(j<nA))
-     arrayA[i][j] = A[i*100 +j];
+     arrayA[i][j] = A[i*1000 +j];
     if ((i<mB)&&(j<nB))
-     arrayB[i][j] = B[i*100 +j];
+     arrayB[i][j] = B[i*1000 +j];
     if ((i<mC)&&(j<nC))
      arrayC[i][j] = 0;
 
    }
-  Row: for (i=0; i<100; i++)
-   Col: for (j=0; j<100; j++)
+  Row: for (i=0; i<1000; i++)
+   Col: for (j=0; j<1000; j++)
    {
-#pragma HLS PIPELINE
-#33 "partB/matrixmath.c"
+#pragma HLS UNROLL factor=2
+#34 "partB/matrixmath.c"
 
-    if ((i<mC)&(j<nC))
-    {
      arrayC[i][j] = 0;
-     Product: for (k=0; k<100; k++)
-        
-#pragma HLS PIPELINE
-#38 "partB/matrixmath.c"
-if (k<nA)
-         arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
-    }
-   }
-  //Assignment
-  Row_Assign: for (i=0; i<100; i++)
-     Col_Assign: for (j=0; j<100; j++)
+      Product: for (k=0; k<1000; k++)
      {
 #pragma HLS PIPELINE
-#45 "partB/matrixmath.c"
+#37 "partB/matrixmath.c"
+
+      if ((i<mC)&(j<nC))
+       {
+        if (k<nA)
+         arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
+       }
+     }
+   }
+
+
+  //Assignment
+  Row_Assign: for (i=0; i<1000; i++)
+     Col_Assign: for (j=0; j<1000; j++)
+     {
+#pragma HLS PIPELINE
+#50 "partB/matrixmath.c"
 
       if ((i<mC)&(j<nC))
       {
-       C[i*100 +j] = arrayC[i][j];
+       C[i*1000 +j] = arrayC[i][j];
       }
      }
 

@@ -3,14 +3,40 @@
         <directive functionName="MAT_Multiply" label="Product" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
-        <directive functionName="MAT_Multiply" label="Col" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
         <directive functionName="MAT_Multiply" label="Col_Assign" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
         <directive functionName="MAT_Multiply" label="Col_load" functionLabel="">
             <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="Col" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="arrayB" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="arrayC" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="arrayA" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="1"/>
+            </pragma>
         </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>

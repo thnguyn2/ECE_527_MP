@@ -28,6 +28,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="/home/parallels/source_code/ECE_527_MP/mp3"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 								</option>
@@ -45,6 +46,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="/home/parallels/source_code/ECE_527_MP/mp3"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 								</option>
@@ -112,6 +114,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="/home/parallels/source_code/ECE_527_MP/mp3"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 								</option>
@@ -124,6 +127,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="/home/parallels/source_code/ECE_527_MP/mp3"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 								</option>
