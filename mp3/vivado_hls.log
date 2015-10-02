@@ -1,56 +1,100 @@
 @I [LIC-101] Checked out feature [VIVADO_HLS]
 @I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.1/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-65-generic) on Thu Oct 01 14:31:36 CDT 2015
+            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-65-generic) on Fri Oct 02 07:19:08 CDT 2015
             in directory '/home/parallels/source_code/ECE_527_MP/mp3'
-@I [HLS-10] Opening project '/home/parallels/source_code/ECE_527_MP/mp3/parta_2'.
-@I [HLS-10] Adding design file 'parta_2/matrixmath.h' to the project
-@I [HLS-10] Adding design file 'parta_2/matrixmath.c' to the project
-@I [HLS-10] Adding test bench file 'parta_2/matrixmath_test.c' to the project
-@I [HLS-10] Opening solution '/home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution1_fifo_unroll'.
+@I [HLS-10] Opening project '/home/parallels/source_code/ECE_527_MP/mp3/partB'.
+@I [HLS-10] Adding design file 'partB/matrixmath.h' to the project
+@I [HLS-10] Adding design file 'partB/matrixmath.c' to the project
+@I [HLS-10] Adding test bench file 'partB/matrixmath_test.c' to the project
+@I [HLS-10] Opening solution '/home/parallels/source_code/ECE_527_MP/mp3/partB/solution2_optimized'.
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
-@I [HLS-10] Analyzing design file 'parta_2/matrixmath.c' ... 
+@I [HLS-10] Analyzing design file 'partB/matrixmath.c' ... 
+partB/matrixmath.c:32:14: warning: incompatible pointer types passing 'int [1000][1000]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+                load_mat(A,arrayA,mA,nA);
+                           ^~~~~~
+partB/matrixmath.c:4:28: note: passing argument to parameter 'arrayX' here
+void load_mat(int *X, int *arrayX, unsigned int m, unsigned int n)
+                           ^
+partB/matrixmath.c:33:14: warning: incompatible pointer types passing 'int [1000][1000]' to parameter of type 'int *' [-Wincompatible-pointer-types]
+                load_mat(B,arrayB,mB,nB);
+                           ^~~~~~
+partB/matrixmath.c:4:28: note: passing argument to parameter 'arrayX' here
+void load_mat(int *X, int *arrayX, unsigned int m, unsigned int n)
+                           ^
+2 warnings generated.
 @I [HLS-10] Validating synthesis directives ...
+@W [HLS-40] Directive 'PIPELINE' cannot be applied: Label 'Col_load' does not exist in function 'MAT_Multiply'. 
 @I [HLS-10] Starting code transformations ...
 @I [HLS-10] Checking synthesizability ...
-@I [XFORM-501] Unrolling loop 'RowCaching' (parta_2/matrixmath.c:28) in function 'MAT_Multiply' partially with a factor of 20.
-@I [XFORM-501] Unrolling loop 'ColCaching' (parta_2/matrixmath.c:35) in function 'MAT_Multiply' partially with a factor of 20.
-@I [XFORM-501] Unrolling loop 'Product' (parta_2/matrixmath.c:39) in function 'MAT_Multiply' partially with a factor of 20.
-@I [XFORM-101] Partitioning array 'A_cached_row' (parta_2/matrixmath.c:11) in dimension 1 with a cyclic factor 10.
-@W [XFORM-104] Completely partitioning array 'B_cached' (parta_2/matrixmath.c:12) accessed through non-constant indices on dimension 1 (parta_2/matrixmath.c:41:10), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
-@I [XFORM-101] Partitioning array 'B_cached' (parta_2/matrixmath.c:12) in dimension 1 completely.
-@W [XFORM-124] Array 'C' (parta_2/matrixmath.c:5) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
-@W [XFORM-124] Array 'B' (parta_2/matrixmath.c:5) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
-@W [XFORM-124] Array 'A' (parta_2/matrixmath.c:4) may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [XFORM-401] Performing if-conversion on hyperblock to (parta_2/matrixmath.c:41:10) in function 'MAT_Multiply'... converting 7 basic blocks.
-@I [HLS-111] Elapsed time: 2.48874 seconds; current memory usage: 65.6 MB.
+@I [XFORM-131] Reshaping array 'arrayA' (partB/matrixmath.c:24) in dimension 2 completely.
+@I [XFORM-131] Reshaping array 'arrayB' (partB/matrixmath.c:25) in dimension 1 completely.
+@W [XFORM-542] Cannot flatten a loop nest 'Col' (partB/matrixmath.c:38:5) in function 'MAT_Multiply' : 
+               the outer loop is not a perfect loop.
+@I [XFORM-541] Flattening a loop nest 'Row' (partB/matrixmath.c:37:4) in function 'MAT_Multiply'.
+@I [XFORM-541] Flattening a loop nest 'Row_Assign' (partB/matrixmath.c:53:6) in function 'MAT_Multiply'.
+@I [XFORM-541] Flattening a loop nest 'Row_load' (partB/matrixmath.c:8:5) in function 'load_mat'.
+@I [XFORM-541] Flattening a loop nest 'Row_load' (partB/matrixmath.c:8:5) in function 'load_mat.1'.
+@I [HLS-111] Elapsed time: 1.30687 seconds; current memory usage: 75.2 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'MAT_Multiply' ...
+@W [SYN-103] Legalizing function name 'MAT_Multiply_load_mat.1' to 'MAT_Multiply_load_mat_1'.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'MAT_Multiply_load_mat' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Row_load_Col_load'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (partB/matrixmath.c:11) of variable 'tmp_73' on array 'arrayX' and 'load' operation ('arrayX_load', partB/matrixmath.c:11) on array 'arrayX'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between 'store' operation (partB/matrixmath.c:11) of variable 'tmp_73' on array 'arrayX' and 'load' operation ('arrayX_load', partB/matrixmath.c:11) on array 'arrayX'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between 'store' operation (partB/matrixmath.c:11) of variable 'tmp_73' on array 'arrayX' and 'load' operation ('arrayX_load', partB/matrixmath.c:11) on array 'arrayX'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 7.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.153695 seconds; current memory usage: 75.9 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'MAT_Multiply_load_mat' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.01665 seconds; current memory usage: 76.3 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'MAT_Multiply_load_mat_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Row_load_Col_load'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 7.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.057783 seconds; current memory usage: 76.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'MAT_Multiply_load_mat_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.011252 seconds; current memory usage: 76.7 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Product'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (partB/matrixmath.c:45) of variable 'tmp_21' on array 'arrayC' and 'load' operation ('arrayC_load_1', partB/matrixmath.c:45) on array 'arrayC'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between 'store' operation (partB/matrixmath.c:45) of variable 'tmp_21' on array 'arrayC' and 'load' operation ('arrayC_load_1', partB/matrixmath.c:45) on array 'arrayC'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between 'store' operation (partB/matrixmath.c:45) of variable 'tmp_21' on array 'arrayC' and 'load' operation ('arrayC_load_1', partB/matrixmath.c:45) on array 'arrayC'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 11.
+@I [SCHED-61] Pipelining loop 'Row_Assign_Col_Assign'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 5.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 1.85984 seconds; current memory usage: 71 MB.
+@I [HLS-111] Elapsed time: 0.176962 seconds; current memory usage: 77.2 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -59,7 +103,17 @@
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.465089 seconds; current memory usage: 75.5 MB.
+@I [HLS-111] Elapsed time: 0.048742 seconds; current memory usage: 77.8 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'MAT_Multiply_load_mat' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'MAT_Multiply_load_mat'.
+@I [HLS-111] Elapsed time: 0.369995 seconds; current memory usage: 78.8 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'MAT_Multiply_load_mat_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'MAT_Multiply_load_mat_1'.
+@I [HLS-111] Elapsed time: 0.19691 seconds; current memory usage: 80.2 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -73,15 +127,19 @@
 @I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/mC' to 'ap_none'.
 @I [RTGEN-500] Setting interface mode on port 'MAT_Multiply/nC' to 'ap_none'.
 @I [RTGEN-500] Setting interface mode on function 'MAT_Multiply' to 'ap_ctrl_hs'.
-@I [RTGEN-100] Generating core module 'MAT_Multiply_mul_32s_32s_32_6': 20 instance(s).
+@I [RTGEN-100] Generating core module 'MAT_Multiply_lshr_32000ns_15ns_32000_2': 2 instance(s).
+@I [RTGEN-100] Generating core module 'MAT_Multiply_mac_muladd_10ns_11ns_10ns_20_1': 2 instance(s).
+@I [RTGEN-100] Generating core module 'MAT_Multiply_mul_32s_32s_32_6': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'MAT_Multiply'.
-@I [HLS-111] Elapsed time: 0.799463 seconds; current memory usage: 83.6 MB.
+@I [HLS-111] Elapsed time: 0.360584 seconds; current memory usage: 82.5 MB.
+@I [RTMG-286] Generating pipelined shifter : 'MAT_Multiply_lshr_32000ns_15ns_32000_2'
 @I [RTMG-282] Generating pipelined core: 'MAT_Multiply_mul_32s_32s_32_6_MulnS_0'
-@I [RTMG-278] Implementing memory 'MAT_Multiply_A_cached_row_0_ram' using distributed RAMs.
-@I [RTMG-278] Implementing memory 'MAT_Multiply_B_cached_0_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayA_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayB_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'MAT_Multiply_arrayC_ram' using block RAMs.
 @I [HLS-10] Finished generating all RTL models.
 @I [WSYSC-301] Generating RTL SystemC for 'MAT_Multiply'.
 @I [WVHDL-304] Generating RTL VHDL for 'MAT_Multiply'.
 @I [WVLOG-307] Generating RTL Verilog for 'MAT_Multiply'.
-@I [HLS-112] Total elapsed time: 8.765 seconds; peak memory usage: 83.6 MB.
+@I [HLS-112] Total elapsed time: 4.508 seconds; peak memory usage: 82.5 MB.
 @I [LIC-101] Checked in feature [VIVADO_HLS]

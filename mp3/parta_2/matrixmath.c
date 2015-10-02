@@ -17,10 +17,9 @@ void MAT_Multiply(int A[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE],
 			Col: for (j=0; j<MATRIX_MAX_SIZE; j++)
 			{
 				//Make sure the data is fully cached to avoid multiple read.
-
+				temp = 0;
 				if ((i<mC)&(j<nC))
 				{
-					temp = 0;
 					if (j==0)
 					{
 						//Cache the whole row of matrix A
@@ -40,8 +39,8 @@ void MAT_Multiply(int A[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE],
 								if (k<nA)
 									temp += A_cached_row[k] * B_cached[k][j];
 					}
-					C[i][j] = temp;
 				}
+				C[i][j] = temp;
 			}
 	}
 }

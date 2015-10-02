@@ -2,8 +2,8 @@
 # xsim v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Mon Sep 28 12:36:27 2015
-# Process ID: 28978
+# Start of session at: Thu Oct  1 20:57:17 2015
+# Process ID: 6151
 # Log file: /home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/sim/verilog/xsim.log
 # Journal file: /home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/sim/verilog/xsim.jou
 #-----------------------------------------------------------
@@ -13,7 +13,3 @@ Vivado Simulator 2015.1
 Time resolution is 1 ps
 source MAT_Multiply.tcl
 ## run all
-$finish called at time : 270083305400 ps : File "/home/parallels/source_code/ECE_527_MP/mp3/parta/solution2_mm_loop_pipelining/sim/verilog/MAT_Multiply.autotb.v" Line 707
-run: Time (s): cpu = 00:00:00.29 ; elapsed = 00:44:26 . Memory (MB): peak = 278.133 ; gain = 0.000 ; free physical = 5138 ; free virtual = 6981
-## quit
-INFO: [Common 17-206] Exiting xsim at Mon Sep 28 13:20:57 2015...

@@ -32,7 +32,7 @@ void generateMatMultGt(int A[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE],int B[MATRIX_MAX_
 
 int main()
 {
-	char array_dim[3] = {10,50,100};
+	char array_dim[3] = {10,50,MATRIX_MAX_SIZE};
 	int A[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
 	int B[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];
 	long SW_C[MATRIX_MAX_SIZE][MATRIX_MAX_SIZE];

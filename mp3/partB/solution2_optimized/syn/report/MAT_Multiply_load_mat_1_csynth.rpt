@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vivado HLS Report for 'MAT_Multiply_load_mat_1'
+================================================================
+* Date:           Fri Oct  2 07:19:11 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        partB
+* Solution:       solution2_optimized
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.46|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1000007|  1000007|  1000007|  1000007|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |      Latency      | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- Row_load_Col_load  |  1000005|  1000005|         7|          1|          1|  1000000|    yes   |
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      1|       0|    115|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     52|
+|Register         |        -|      -|      82|     11|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      1|      82|    178|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |tmp_1_fu_201_p2                |     *    |      1|  0|   0|          10|          10|
+    |i_s_fu_154_p2                  |     +    |      0|  0|  10|          10|           1|
+    |indvar_flatten_next_fu_134_p2  |     +    |      0|  0|  20|          20|           1|
+    |j_1_fu_192_p2                  |     +    |      0|  0|  10|          10|           1|
+    |tmp_4_fu_210_p2                |     +    |      0|  0|  20|          20|          20|
+    |i_mid2_fu_160_p3               |  Select  |      0|  0|  10|           1|          10|
+    |j_mid2_fu_146_p3               |  Select  |      0|  0|  10|           1|           1|
+    |ap_sig_bdd_81                  |    and   |      0|  0|   1|           1|           1|
+    |or_cond_fu_186_p2              |    and   |      0|  0|   1|           1|           1|
+    |exitcond9_fu_140_p2            |   icmp   |      0|  0|   4|          10|           6|
+    |exitcond_flatten_fu_128_p2     |   icmp   |      0|  0|   7|          20|          17|
+    |tmp_3_fu_181_p2                |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_fu_172_p2                  |   icmp   |      0|  0|  11|          32|          32|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |Total                          |          |      1|  0| 115|         168|         133|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |   1|          4|    1|          4|
+    |ap_reg_ppiten_pp0_it6  |   1|          2|    1|          2|
+    |i_phi_fu_109_p4        |  10|          2|   10|         20|
+    |i_reg_105              |  10|          2|   10|         20|
+    |indvar_flatten_reg_94  |  20|          2|   20|         40|
+    |j_reg_116              |  10|          2|   10|         20|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  52|         14|   52|        106|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                 |   3|   0|    3|          0|
+    |ap_reg_ppiten_pp0_it0     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it1     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it2     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it3     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it4     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it5     |   1|   0|    1|          0|
+    |ap_reg_ppiten_pp0_it6     |   1|   0|    1|          0|
+    |arrayX_addr_reg_273       |  10|   0|   10|          0|
+    |exitcond_flatten_reg_244  |   1|   0|    1|          0|
+    |i_mid2_reg_258            |  10|   0|   10|          0|
+    |i_reg_105                 |  10|   0|   10|          0|
+    |indvar_flatten_reg_94     |  20|   0|   20|          0|
+    |j_mid2_reg_253            |  10|   0|   10|          0|
+    |j_reg_116                 |  10|   0|   10|          0|
+    |or_cond_reg_264           |   1|   0|    1|          0|
+    |arrayX_addr_reg_273       |   0|  10|   10|          0|
+    |or_cond_reg_264           |   0|   1|    1|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     |  82|  11|   93|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-------+------------+-------------------------+--------------+
+|    RTL Ports    | Dir |  Bits |  Protocol  |      Source Object      |    C Type    |
++-----------------+-----+-------+------------+-------------------------+--------------+
+|ap_clk           |  in |      1| ap_ctrl_hs | MAT_Multiply_load_mat.1 | return value |
+|ap_rst           |  in |      1| ap_ctrl_hs | MAT_Multiply_load_mat.1 | return value |
+|ap_start         |  in |      1| ap_ctrl_hs | MAT_Multiply_load_mat.1 | return value |
+|ap_done          | out |      1| ap_ctrl_hs | MAT_Multiply_load_mat.1 | return value |
+|ap_idle          | out |      1| ap_ctrl_hs | MAT_Multiply_load_mat.1 | return value |
+|ap_ready         | out |      1| ap_ctrl_hs | MAT_Multiply_load_mat.1 | return value |
+|X_dout           |  in |     32|   ap_fifo  |            X            |    pointer   |
+|X_empty_n        |  in |      1|   ap_fifo  |            X            |    pointer   |
+|X_read           | out |      1|   ap_fifo  |            X            |    pointer   |
+|arrayX_address0  | out |     10|  ap_memory |          arrayX         |     array    |
+|arrayX_ce0       | out |      1|  ap_memory |          arrayX         |     array    |
+|arrayX_q0        |  in |  32000|  ap_memory |          arrayX         |     array    |
+|arrayX_address1  | out |     10|  ap_memory |          arrayX         |     array    |
+|arrayX_ce1       | out |      1|  ap_memory |          arrayX         |     array    |
+|arrayX_we1       | out |      1|  ap_memory |          arrayX         |     array    |
+|arrayX_d1        | out |  32000|  ap_memory |          arrayX         |     array    |
+|m                |  in |     32|   ap_none  |            m            |    scalar    |
+|n                |  in |     32|   ap_none  |            n            |    scalar    |
++-----------------+-----+-------+------------+-------------------------+--------------+
+

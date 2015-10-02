@@ -129,6 +129,7 @@ wire [13 : 0] C_address0;
 wire  C_ce0;
 wire  C_we0;
 wire [63 : 0] C_d0;
+wire [63 : 0] C_q0;
 wire [7 : 0] mA;
 wire [7 : 0] nA;
 wire [7 : 0] mB;
@@ -162,6 +163,7 @@ reg interface_done = 0;
 .C_ce0(C_ce0),
 .C_we0(C_we0),
 .C_d0(C_d0),
+.C_q0(C_q0),
 .mA(mA),
 .nA(nA),
 .mB(mB),
@@ -293,12 +295,13 @@ wire	arrayC_done;
 // Assignment between dut and arrayC
 assign arrayC_address0 = C_address0;
 assign arrayC_ce0 = C_ce0;
+assign C_q0 = arrayC_dout0;
 assign arrayC_we0 = C_we0;
 assign arrayC_din0 = C_d0;
 assign arrayC_we1 = 0;
 assign arrayC_din1 = 0;
-assign arrayC_ready= ready_initial | arrayC_done;
-assign arrayC_done =	AESL_done_delay;
+assign arrayC_ready= ready;
+assign arrayC_done = interface_done;
 
 
 // The signal of port mA
@@ -819,6 +822,15 @@ always @ (posedge AESL_clock or posedge AESL_reset) begin
         AESL_mLatCnterOut[AESL_mLatCnterOut_addr] = AESL_clk_counter;
         AESL_mLatCnterOut_addr = AESL_mLatCnterOut_addr + 1;
         reported_stuck <= 0;
+    end
+    else if (reported_stuck == 0 && reported_stuck_cnt < 4) begin
+        if ( AESL_mLatCnterIn_addr > AESL_mLatCnterOut_addr ) begin
+          if ( AESL_clk_counter - AESL_mLatCnterIn[AESL_mLatCnterOut_addr] > 5 * 9020201 ) begin
+              $display("WARNING: The latency is much larger than expected. Simulation may stuck.");
+              reported_stuck <= 1;
+              reported_stuck_cnt <= reported_stuck_cnt + 1;
+          end
+        end
     end
 end
 

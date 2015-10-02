@@ -27,8 +27,8 @@ using namespace sc_dt;
 // wrapc file define: "B"
 #define AUTOTB_TVIN_B  "../tv/cdatafile/c.MAT_Multiply.autotvin_B.dat"
 // wrapc file define: "C"
-#define AUTOTB_TVOUT_C  "../tv/cdatafile/c.MAT_Multiply.autotvout_C.dat"
 #define AUTOTB_TVIN_C  "../tv/cdatafile/c.MAT_Multiply.autotvin_C.dat"
+#define AUTOTB_TVOUT_C  "../tv/cdatafile/c.MAT_Multiply.autotvout_C.dat"
 // wrapc file define: "mA"
 #define AUTOTB_TVIN_mA  "../tv/cdatafile/c.MAT_Multiply.autotvin_mA.dat"
 // wrapc file define: "nA"
@@ -694,8 +694,8 @@ void MAT_Multiply (int A[100][100], int B[100][100], long long C[100][100], char
 		// release memory allocation: "B"
 		delete [] tvin_B;
 		// release memory allocation: "C"
-		delete [] tvout_C;
 		delete [] tvin_C;
+		delete [] tvout_C;
 		// release memory allocation: "mA"
 		delete [] tvin_mA;
 		// release memory allocation: "nA"

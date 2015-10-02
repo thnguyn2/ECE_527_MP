@@ -1,0 +1,320 @@
+@I [HLS-0] Workspace /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized opened at Fri Oct 02 07:16:30 CDT 2015
+@I [HLS-100] Command "config_clock -quiet -name default -period 10 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 6.2e-05Total elapsed time: 0.213 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 4.1e-05Total elapsed time: 0.213 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000206Total elapsed time: 0.213 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000102Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000135Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000124Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.6e-05Total elapsed time: 0.214 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000859Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 7.9e-05Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 7.1e-05Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 5.9e-05Total elapsed time: 0.214 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 5.7e-05Total elapsed time: 0.215 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002553Total elapsed time: 0.216 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000479Total elapsed time: 0.217 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000327Total elapsed time: 0.217 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.8e-05Total elapsed time: 0.219 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.2e-05Total elapsed time: 0.219 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.3e-05Total elapsed time: 0.219 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000251Total elapsed time: 0.219 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000338Total elapsed time: 0.220 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001437Total elapsed time: 0.220 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.5e-05Total elapsed time: 0.220 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 5e-06Total elapsed time: 0.220 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.3e-05Total elapsed time: 0.221 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3e-06Total elapsed time: 0.221 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.008551Total elapsed time: 0.222 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000743Total elapsed time: 0.223 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000364Total elapsed time: 0.223 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001338Total elapsed time: 0.224 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002135Total elapsed time: 0.227 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004156Total elapsed time: 0.231 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006405Total elapsed time: 0.231 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00603Total elapsed time: 0.237 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005182Total elapsed time: 0.243 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.072555Total elapsed time: 0.316 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000495Total elapsed time: 0.329 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001073Total elapsed time: 0.329 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000393Total elapsed time: 0.336 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.025147Total elapsed time: 0.341 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002366Total elapsed time: 0.344 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000104Total elapsed time: 0.344 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.120787Total elapsed time: 0.344 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 7.7e-05Total elapsed time: 0.345 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.122108Total elapsed time: 0.345 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.122217Total elapsed time: 0.345 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 6e-06Total elapsed time: 0.345 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001787Total elapsed time: 0.347 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000124Total elapsed time: 0.351 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.9e-05Total elapsed time: 0.351 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.5e-05Total elapsed time: 0.351 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000237Total elapsed time: 0.351 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00031Total elapsed time: 0.351 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001352Total elapsed time: 0.352 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001686Total elapsed time: 0.352 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.00975Total elapsed time: 0.355 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000945Total elapsed time: 0.356 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001042Total elapsed time: 0.356 sec.
+@I [HLS-100] Command "set_part xc7z020clg484-1 "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 5e-06Total elapsed time: 0.358 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 5e-06Total elapsed time: 0.359 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 5e-06Total elapsed time: 0.359 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.2e-05Total elapsed time: 0.359 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3e-06Total elapsed time: 0.359 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.001871Total elapsed time: 0.360 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 4e-06Total elapsed time: 0.360 sec.
+@I [HLS-100] Command "license_exists VIVADO_HLS "
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 5e-06Total elapsed time: 0.361 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.001115Total elapsed time: 0.361 sec.
+@I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.004841Total elapsed time: 0.361 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 3e-06Total elapsed time: 0.361 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 8e-06Total elapsed time: 0.361 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3e-06Total elapsed time: 0.361 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.151472Total elapsed time: 0.362 sec.
+@I [HLS-100] Command "cosim_design "
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000118Total elapsed time: 0.362 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000131Total elapsed time: 0.367 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000154Total elapsed time: 0.375 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000356Total elapsed time: 0.376 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000739Total elapsed time: 0.376 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000194Total elapsed time: 0.376 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000631Total elapsed time: 0.377 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.4e-05Total elapsed time: 0.377 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000102Total elapsed time: 0.377 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001105Total elapsed time: 0.379 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000386Total elapsed time: 0.379 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001608Total elapsed time: 0.381 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002001Total elapsed time: 0.383 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004448Total elapsed time: 0.388 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006611Total elapsed time: 0.388 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006257Total elapsed time: 0.394 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00584Total elapsed time: 0.400 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.067653Total elapsed time: 0.469 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022178Total elapsed time: 0.491 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002423Total elapsed time: 0.494 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000108Total elapsed time: 0.494 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.114772Total elapsed time: 0.494 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8e-05Total elapsed time: 0.495 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.116069Total elapsed time: 0.495 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.116152Total elapsed time: 0.495 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2015.1/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000976Total elapsed time: 0.496 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00106Total elapsed time: 0.496 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000103Total elapsed time: 0.496 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000228Total elapsed time: 0.497 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000104Total elapsed time: 0.497 sec.
+@I [HLS-100] Command "is_encrypted /home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath_test.c "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 5.6e-05Total elapsed time: 0.503 sec.
+@I [HLS-100] Command "is_encrypted /home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.h "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 1.4e-05Total elapsed time: 0.503 sec.
+@I [HLS-100] Command "is_encrypted /home/parallels/source_code/ECE_527_MP/mp3/parta_2/matrixmath.c "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 1.2e-05Total elapsed time: 0.503 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000101Total elapsed time: 0.504 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.1e-05Total elapsed time: 0.504 sec.
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000333Total elapsed time: 0.512 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000362Total elapsed time: 0.513 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000319Total elapsed time: 0.513 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00013Total elapsed time: 0.514 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000118Total elapsed time: 0.514 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/./sim/autowrap/testbench/matrixmath_test.c_pre.c /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/./sim/autowrap/testbench/matrixmath_test.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
+@I [HLS-0] Marker-Pragma convertor: ./sim/autowrap/testbench/matrixmath_test.c_pre.c.tb.c.line ./sim/autowrap/testbench/matrixmath_test.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
+@I [HLS-0] Marker-Pragma convertor: /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/./sim/autowrap/testbench/matrixmath.c_pre.c /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/./sim/autowrap/testbench/matrixmath.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
+@I [HLS-0] Marker-Pragma convertor: ./sim/autowrap/testbench/matrixmath.c_pre.c.tb.c.line ./sim/autowrap/testbench/matrixmath.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000303Total elapsed time: 1.358 sec.
+@I [HLS-100] Command "source .run_sim.tcl "
+@I [SIM-302] Starting C TB testing ... 
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006437Total elapsed time: 5.562 sec.
+@I [SIM-333] Generating C post check test bench ...
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000257Total elapsed time: 5.568 sec.
+@I [SIM-12] Generating RTL test bench ...
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00015Total elapsed time: 5.571 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000112Total elapsed time: 5.572 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.9e-05Total elapsed time: 5.572 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.8e-05Total elapsed time: 5.572 sec.
+@I [HLS-100] Command "source ../tv/cdatafile/ref.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.4e-05Total elapsed time: 5.573 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000126Total elapsed time: 5.573 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000108Total elapsed time: 5.573 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000132Total elapsed time: 5.574 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.5e-05Total elapsed time: 5.574 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000109Total elapsed time: 5.577 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.9e-05Total elapsed time: 5.583 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.9e-05Total elapsed time: 5.583 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.7e-05Total elapsed time: 5.583 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000112Total elapsed time: 5.594 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 9.5e-05Total elapsed time: 5.594 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000102Total elapsed time: 5.594 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.8e-05Total elapsed time: 5.595 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.8e-05Total elapsed time: 5.595 sec.
+@I [HLS-100] Command "source ../tv/cdatafile/ref.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 4.8e-05Total elapsed time: 5.595 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.9e-05Total elapsed time: 5.595 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.1e-05Total elapsed time: 5.595 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.3e-05Total elapsed time: 5.595 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.3e-05Total elapsed time: 5.596 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000114Total elapsed time: 5.598 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000123Total elapsed time: 5.604 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.6e-05Total elapsed time: 5.604 sec.
+@I [HLS-100] Command "source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/.autopilot/db/MAT_Multiply.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.3e-05Total elapsed time: 5.604 sec.
+@I [HLS-100] Command "source .run_sim.tcl "
+@I [HLS-100] Command "source check_sim.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000102Total elapsed time: 5.629 sec.
+@I [HLS-100] Command "source .sim.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000104Total elapsed time: 5.630 sec.
+@I [SIM-323] Starting verilog simulation. 
+@I [SIM-15] Starting XSIM ...
+@I [SIM-316] Starting C post checking ...
+@E [SIM-361] C TB post check failed, nonzero return value '196'.
+@I [HLS-100] Command 'ap_source' returned 1; elapsed 0.02386Total elapsed time: 71.769 sec.
+@E [SIM-4] *** C/RTL co-simulation finished: FAIL ***
+@I [HLS-100] Command 'cosim_design' returned 2; elapsed 0.357991Total elapsed time: 71.792 sec.
+@I [HLS-100] Command 'ap_source' returned 1; elapsed 0.511579Total elapsed time: 71.792 sec.
+command 'ap_source' returned error code
+    while executing
+"source /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/cosim.tcl"
+    invoked from within
+"hls::main /home/parallels/source_code/ECE_527_MP/mp3/parta_2/solution_fifo_non_optimized/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.000284Total elapsed time: 71.793 sec.

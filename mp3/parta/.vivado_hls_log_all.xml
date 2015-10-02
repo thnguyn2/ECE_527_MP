@@ -12,8 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('B_load_2', parta/matrixmath.c:20) on array 'B' due to limited memory ports." projectName="parta" solutionName="solution2_mm_loop_pipelining" date="2015-10-01T06:29:11.646-0700" type="Warning"/>
-        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'Product' (parta/matrixmath.c:19) because its parent loop or function is pipelined." projectName="parta" solutionName="solution2_mm_loop_pipelining" date="2015-10-01T06:28:54.947-0700" type="Warning"/>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('B_load_2', parta/matrixmath.c:20) on array 'B' due to limited memory ports." projectName="parta" solutionName="solution2_mm_loop_pipelining" date="2015-10-01T18:56:21.679-0700" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'Product' (parta/matrixmath.c:19) because its parent loop or function is pipelined." projectName="parta" solutionName="solution2_mm_loop_pipelining" date="2015-10-01T18:56:02.233-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

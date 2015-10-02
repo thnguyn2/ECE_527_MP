@@ -1,0 +1,279 @@
+
+
+================================================================
+== Vivado HLS Report for 'MAT_Multiply_load_mat'
+================================================================
+* Date:           Fri Oct  2 07:17:25 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        partB
+* Solution:       solution1_non_optimized
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      6.98|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  2002001|  2002001|  2002001|  2002001|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Row_load   |  2002000|  2002000|      2002|          -|          -|  1000|    no    |
+        | + Col_load  |     2000|     2000|         2|          -|          -|  1000|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	2  / (exitcond)
+4 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: stg_5 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 100, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind
+
+ST_1: n_read [1/1] 1.04ns
+:1  %n_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %n)
+
+ST_1: m_read [1/1] 1.04ns
+:2  %m_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %m)
+
+ST_1: stg_8 [1/1] 1.57ns
+:3  br label %1
+
+
+ <State 2>: 2.52ns
+ST_2: i [1/1] 0.00ns
+:0  %i = phi i10 [ 0, %0 ], [ %i_1, %6 ]
+
+ST_2: phi_mul [1/1] 0.00ns
+:1  %phi_mul = phi i20 [ 0, %0 ], [ %next_mul, %6 ]
+
+ST_2: next_mul [1/1] 2.08ns
+:2  %next_mul = add i20 %phi_mul, 1000
+
+ST_2: i_cast3 [1/1] 0.00ns
+:3  %i_cast3 = zext i10 %i to i32
+
+ST_2: exitcond1 [1/1] 2.07ns
+:4  %exitcond1 = icmp eq i10 %i, -24
+
+ST_2: empty [1/1] 0.00ns
+:5  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1000, i64 1000, i64 1000)
+
+ST_2: i_1 [1/1] 1.84ns
+:6  %i_1 = add i10 %i, 1
+
+ST_2: stg_16 [1/1] 0.00ns
+:7  br i1 %exitcond1, label %7, label %2
+
+ST_2: stg_17 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str) nounwind
+
+ST_2: tmp_s [1/1] 0.00ns
+:1  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str) nounwind
+
+ST_2: tmp [1/1] 2.52ns
+:2  %tmp = icmp ult i32 %i_cast3, %m_read
+
+ST_2: stg_20 [1/1] 1.57ns
+:3  br label %3
+
+ST_2: stg_21 [1/1] 0.00ns
+:0  ret void
+
+
+ <State 3>: 6.98ns
+ST_3: j [1/1] 0.00ns
+:0  %j = phi i10 [ 0, %2 ], [ %j_1, %._crit_edge ]
+
+ST_3: j_cast2 [1/1] 0.00ns
+:1  %j_cast2 = zext i10 %j to i20
+
+ST_3: j_cast1 [1/1] 0.00ns
+:2  %j_cast1 = zext i10 %j to i32
+
+ST_3: exitcond [1/1] 2.07ns
+:3  %exitcond = icmp eq i10 %j, -24
+
+ST_3: empty_11 [1/1] 0.00ns
+:4  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1000, i64 1000, i64 1000)
+
+ST_3: j_1 [1/1] 1.84ns
+:5  %j_1 = add i10 %j, 1
+
+ST_3: stg_28 [1/1] 0.00ns
+:6  br i1 %exitcond, label %6, label %4
+
+ST_3: stg_29 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str1) nounwind
+
+ST_3: tmp_3 [1/1] 2.52ns
+:1  %tmp_3 = icmp ult i32 %j_cast1, %n_read
+
+ST_3: or_cond [1/1] 1.37ns
+:2  %or_cond = and i1 %tmp, %tmp_3
+
+ST_3: stg_32 [1/1] 0.00ns
+:3  br i1 %or_cond, label %5, label %._crit_edge
+
+ST_3: tmp_4 [1/1] 2.08ns
+:0  %tmp_4 = add i20 %j_cast2, %phi_mul
+
+ST_3: tmp_5 [1/1] 0.00ns
+:1  %tmp_5 = zext i20 %tmp_4 to i64
+
+ST_3: X_read [1/1] 4.38ns
+:2  %X_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X)
+
+ST_3: arrayX_addr [1/1] 0.00ns
+:3  %arrayX_addr = getelementptr [1000000 x i32]* %arrayX, i64 0, i64 %tmp_5
+
+ST_3: stg_37 [2/2] 2.61ns
+:4  store i32 %X_read, i32* %arrayX_addr, align 4
+
+ST_3: empty_12 [1/1] 0.00ns
+:0  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str, i32 %tmp_s) nounwind
+
+ST_3: stg_39 [1/1] 0.00ns
+:1  br label %1
+
+
+ <State 4>: 2.61ns
+ST_4: stg_40 [1/2] 2.61ns
+:4  store i32 %X_read, i32* %arrayX_addr, align 4
+
+ST_4: stg_41 [1/1] 0.00ns
+:5  br label %._crit_edge
+
+ST_4: stg_42 [1/1] 0.00ns
+._crit_edge:0  br label %3
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

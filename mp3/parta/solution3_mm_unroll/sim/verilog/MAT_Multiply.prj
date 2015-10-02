@@ -1,0 +1,8 @@
+verilog xil_defaultlib "MAT_Multiply_mul_32s_32s_32_6.v"
+verilog xil_defaultlib "AESL_automem_C.v"
+verilog xil_defaultlib "MAT_Multiply_mac_muladd_7ns_8ns_7ns_14_1.v"
+verilog xil_defaultlib "MAT_Multiply.autotb.v"
+verilog xil_defaultlib "MAT_Multiply.v"
+verilog xil_defaultlib "AESL_automem_B.v"
+verilog xil_defaultlib "AESL_automem_A.v"
+

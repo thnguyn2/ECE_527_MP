@@ -1,7 +1,4 @@
-Running: xsim.dir/MAT_Multiply/xsimk -maxdeltaid 10000 -simmode gui -wdb MAT_Multiply.wdb -simrunnum 0 -socket 60544
+Running: xsim.dir/MAT_Multiply/xsimk -maxdeltaid 10000 -simmode gui -wdb MAT_Multiply.wdb -simrunnum 0 -socket 60179
 Design successfully loaded
 Design Loading Memory Usage: 95976 KB (Peak: 97024 KB)
 Design Loading CPU Usage: 20 ms
-Simulation completed
-Simulation Memory Usage: 173812 KB (Peak: 235248 KB)
-Simulation CPU Usage: 2664160 ms

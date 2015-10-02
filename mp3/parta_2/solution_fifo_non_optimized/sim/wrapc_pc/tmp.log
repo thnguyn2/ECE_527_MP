@@ -1,0 +1,9 @@
+Testing dimensions set Row C = 10, Col C = 10, Col A =10: FAILED...Error count: 100
+Testing dimensions set Row C = 10, Col C = 50, Col A =10: FAILED...Error count: 500
+Testing dimensions set Row C = 10, Col C = 50, Col A =10: FAILED...Error count: 500
+Testing dimensions set Row C = 50, Col C = 10, Col A =10: FAILED...Error count: 500
+Testing dimensions set Row C = 50, Col C = 50, Col A =10: FAILED...Error count: 2500
+Testing dimensions set Row C = 50, Col C = 50, Col A =10: FAILED...Error count: 2500
+Testing dimensions set Row C = 50, Col C = 10, Col A =10: FAILED...Error count: 500
+Testing dimensions set Row C = 50, Col C = 50, Col A =10: FAILED...Error count: 2500
+Testing dimensions set Row C = 50, Col C = 50, Col A =10: FAILED...Error count: 2500

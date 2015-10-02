@@ -191,6 +191,7 @@
 #pragma line 6 "<command line>" 2
 #pragma line 1 "<built-in>" 2
 #pragma line 1 "parta/matrixmath.c" 2
+//---Memory map interface design---
 #pragma empty_line
 #pragma line 1 "parta/matrixmath.h" 1
 #pragma empty_line
