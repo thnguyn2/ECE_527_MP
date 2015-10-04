@@ -84,7 +84,7 @@ module partC_wrapper
   //carry_ripple_adder adder1(.A(input1),.B(input2),.Cin(1'b0),.S(sum_res));  
   
   //----Carry skip adder---
-  //---To be implemented----
+  //carry_skip_adder(.A(input1),.B(input2),.S(sum_res));
   
   //----Carry look ahead reader---
   carry_look_ahead_adder adder1(.A(input1),.B(input2),.S(sum_res));  

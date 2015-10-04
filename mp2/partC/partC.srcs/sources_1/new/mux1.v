@@ -35,12 +35,14 @@ module mux1(
 //    and1(.A(Select), .B(A1), .C(j));
 //    or1(.A(i), .B(j), .C(Y));
 
+    reg reg_Y;
+    assign y = reg_Y;
     // use infered mux
     always @(Sel or A0 or A1)
     begin
         case (Sel)
-            1'b0: Y = A0;
-            default: Y = A1;
+            1'b0: reg_Y = A0;
+            default: reg_Y = A1;
         endcase
     end
 endmodule

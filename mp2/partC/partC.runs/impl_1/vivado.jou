@@ -1,10 +1,10 @@
 #-----------------------------------------------------------
 # Vivado v2015.1 (64-bit)
-# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Sep 24 23:32:20 2015
-# Process ID: 8552
-# Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.vdi
-# Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.runs/impl_1\vivado.jou
+# Start of session at: Sun Oct  4 18:28:16 2015
+# Process ID: 9625
+# Log file: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.vdi
+# Journal file: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source partC_wrapper.tcl -notrace

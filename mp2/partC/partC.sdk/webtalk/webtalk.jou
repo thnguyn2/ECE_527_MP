@@ -1,10 +1,10 @@
 #-----------------------------------------------------------
 # Webtalk v2015.1 (64-bit)
-# SW Build 1215546 on Mon Apr 27 19:37:43 MDT 2015
+# SW Build 1215546 on Mon Apr 27 19:19:00 MDT 2015
 # 
-# Start of session at: Wed Sep 23 23:09:32 2015
-# Process ID: 5036
-# Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.sdk/webtalk/webtalk.log
-# Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.sdk/webtalk\webtalk.jou
+# Start of session at: Sun Oct  4 18:30:43 2015
+# Process ID: 11446
+# Log file: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/webtalk/webtalk.log
+# Journal file: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/webtalk/webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

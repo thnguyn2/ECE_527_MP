@@ -50,9 +50,10 @@ set_msg_config -id {Synth 8-638} -limit 10000
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   open_checkpoint partC_wrapper_routed.dcp
-  set_property webtalk.parent_dir E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.cache/wt [current_project]
   write_bitstream -force partC_wrapper.bit 
   catch { write_sysdef -hwdef partC_wrapper.hwdef -bitfile partC_wrapper.bit -meminfo partC_wrapper.mmi -ltxfile debug_nets.ltx -file partC_wrapper.sysdef }
   close_msg_db -file write_bitstream.pb

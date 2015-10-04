@@ -28,6 +28,25 @@ module full_adder(
     output Cout
     );
     
-    assign Si = Ai ^ Bi ^ Ci;
-    assign Cout = (~Ai&Bi&Ci) | (Ai&(~Bi)&Ci) | (Ai & Bi &(~Ci) | (Ai & Bi & Ci)) ;
+    wire S1, S2, S3, S4;
+    xor3bits(.A(Ai), .B(Bi), .C(Ci), .S(Si));
+    and3bits(.A(~Ai), .B(Bi), .C(Ci), .S(S1));
+    and3bits(.A(Ai), .B(~Bi), .C(Ci), .S(S2));
+    and3bits(.A(Ai), .B(Bi), .C(~Ci), .S(S3));
+    and3bits(.A(Ai), .B(Bi), .C(Ci), .S(S4));
+    or4bits(.A(S1),.B(S2),.C(S3),.D(S4),.S(Cout));
+    
+endmodule
+
+module xor3bits(input A, input B, input C, output S);
+    assign S = A^B^C;
+endmodule
+
+
+module or4bits(input A, input B, input C, input D, output S);
+    assign S = A|B|C|D;
+endmodule
+
+module and3bits(input A, input B, input C, output S);
+    assign S = A&B&C;
 endmodule
