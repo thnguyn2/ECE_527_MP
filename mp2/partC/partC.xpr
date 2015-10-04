@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="E:/Ubuntu_source_code_data/ECE_527_MP/mp2/partC/partC.xpr">
+<Project Version="7" Minor="5" Path="Z:/Documents/UIUC/ECE527/ECE_527_MP/mp2/partC/partC.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d6413a66c6034d79bde595921ce89856"/>
@@ -52,18 +52,18 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_auto_pc_0/partC_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_axi_periph_0/partC_processing_system7_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.hwdef"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hw_handoff/partC.hwh"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="partC_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_auto_pc_0/partC_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="hdl/partC.v"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_xbar_0/partC_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_axi_periph_0/partC_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="partC.bd" FileRelPathName="ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/partC_wrapper.v">
         <FileInfo>
@@ -83,6 +83,134 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/carry_ripple_adder.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/carry_skip_adder.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/cary_select_adder.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/and1.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/or1.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/xor1.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/and4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/xor4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/pg4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/pg_group4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/adder4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/mux1.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/not1.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/mux4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/carry_skip4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/and4input.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/carry_select4.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
