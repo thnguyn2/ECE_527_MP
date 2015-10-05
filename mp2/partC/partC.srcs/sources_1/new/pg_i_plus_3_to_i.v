@@ -29,17 +29,24 @@ module pg_i_plus_3_to_i(
     //i = 1, 5, 9,...
     wire P30, P20, P10;
     wire G30, G20, G10;
+    wire temp0, temp1, temp2;
     //Compute the group propagation bit
-    assign P10 = Pii[1] & Pii[0];
-    assign P20 = Pii[2] & P10;
-    assign P30 = Pii[3] & P20;
+   
+    and1(.A(Pii[1]),.B(Pii[0]),.C(P10));
+    and1(.A(Pii[2]),.B(P10),.C(P20));
+    and1(.A(Pii[3]),.B(P20),.C(P30));
     assign Pij = P30;
         
     //Group generation bit
     assign Gij = G30;
-    assign G30= Gii[3] | (Pii[3]& G20);
-    assign G20 = Gii[2] | (Pii[2]* G10);
-    assign G10 = Gii[1] | (Pii[1] & Gii[0]);
+
+    and1(.A(Pii[3]),.B(G20),.C(temp0));
+    and1(.A(Pii[2]),.B(G10),.C(temp1));
+    and1(.A(Pii[1]),.B(Gii[0]),.C(temp2));
+    or1(.A(Gii[3]),.B(temp0),.C(G30));
+    or1(.A(Gii[2]),.B(temp1),.C(G20));
+    or1(.A(Gii[1]),.B(temp2),.C(G10));
+                    
     //Compute the group propagation bits and group generation bit P(i+3):i and G(i+3):i;
     
     

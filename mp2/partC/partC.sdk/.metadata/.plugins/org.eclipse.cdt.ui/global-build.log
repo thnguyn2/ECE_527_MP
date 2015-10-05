@@ -3274,3 +3274,59 @@ Invoking: ARM gcc compiler
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
 /bin/sh: 1: arm-xilinx-eabi-gcc: not found
 make: *** [src/helloworld.o] Error 127
+16:42:13 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+make: *** [src/helloworld.o] Error 127
+16:50:44 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+16:59:37 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127
+17:04:10 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127
+17:05:21 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127
+17:05:40 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127
+17:10:12 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127
+17:16:04 **** Incremental Build of configuration Debug for project partC_1 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+/bin/sh: 1: arm-xilinx-eabi-gcc: not found
+make: *** [src/helloworld.o] Error 127

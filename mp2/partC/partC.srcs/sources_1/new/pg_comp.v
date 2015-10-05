@@ -26,6 +26,6 @@ module pg_4bits(
     output [3:0] P,
     output [3:0] G
     );
-    assign P = A^B;
-    assign G = A&B;
+    xor4(.A(A),.B(B),.C(P));
+    and4(.A(A),.B(B),.C(G));
 endmodule

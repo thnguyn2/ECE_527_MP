@@ -1,4 +1,4 @@
-16:33:01 **** Incremental Build of configuration Debug for project partC_1 ****
+17:16:04 **** Incremental Build of configuration Debug for project partC_1 ****
 make all 
 Building file: ../src/helloworld.c
 Invoking: ARM gcc compiler
@@ -6,5 +6,5 @@ arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I
 /bin/sh: 1: arm-xilinx-eabi-gcc: not found
 make: *** [src/helloworld.o] Error 127
 
-16:33:01 Build Finished (took 92ms)
+17:16:04 Build Finished (took 80ms)
 

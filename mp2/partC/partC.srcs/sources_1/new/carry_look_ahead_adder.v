@@ -31,6 +31,7 @@ module carry_look_ahead_adder(
     wire [7:0] Pij;
     wire [7:0] Gij;
     wire [8:0] Cin_arr;
+    wire [7:0] temp_arr;
     assign Cin_arr[0]=1'b0;
     assign Co = Cin_arr[8];
     genvar i;
@@ -42,7 +43,8 @@ module carry_look_ahead_adder(
             pg_i_plus_3_to_i(.Pii(Pi_arr[i]),.Gii(Gi_arr[i]),.Pij(Pij[i]),.Gij(Gij[i]));
             Four_bit_adder(.Gi(Gi_arr[i]),.Pi(Pi_arr[i]),.Ci(Cin_arr[i]),.S(S[(4*i+3):(4*i)]));
             //Compute the carry to propagate
-            assign Cin_arr[i+1] = (Gij[i]) | (Pij[i] & Cin_arr[i]);
+            and1(.A(Pij[i]),.B(Cin_arr[i]),.C(temp_arr[i]));
+            or1(.A(Gij[i]),.B(temp_arr[i]),.C(Cin_arr[i+1]));
         end
     endgenerate
  endmodule

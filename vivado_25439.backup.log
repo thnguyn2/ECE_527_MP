@@ -1,0 +1,309 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Sun Oct  4 18:36:43 2015
+# Process ID: 3059
+# Log file: /home/parallels/source_code/ECE_527_MP/vivado.log
+# Journal file: /home/parallels/source_code/ECE_527_MP/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 5763.645 ; gain = 135.723 ; free physical = 6270 ; free virtual = 8034
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 18:38:57 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 18:38:57 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/.Xil/Vivado-3059-ubuntu/dcp/partC_wrapper_early.xdc]
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/.Xil/Vivado-3059-ubuntu/dcp/partC_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 6039.512 ; gain = 3.996 ; free physical = 5595 ; free virtual = 7670
+Restored from archive | CPU: 0.260000 secs | Memory: 2.196625 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 6039.512 ; gain = 3.996 ; free physical = 5595 ; free virtual = 7670
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 6161.766 ; gain = 362.879 ; free physical = 5467 ; free virtual = 7543
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.1
+  **** Build date : Apr 27 2015-19:09:54
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248708080
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 18:47:43 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 18:47:43 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_hw
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 466407070 -regid "211083026_1777510696_210611924_202" -xml /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtal..."
+    (file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtalk/labtool_webtalk.tcl" line 29)
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct  4 18:32:23 2015...
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 18:55:38 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 18:55:38 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 18:56:46 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 18:56:46 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.1
+  **** Build date : Apr 27 2015-19:09:54
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248708080
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 19:01:02 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 19:01:02 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtools 27-3175] Target jsn-Zed-210248708080 is no longer available.
+Please use disconnect_hw_server to close the current server connection. Check cable connectivity and that the target board is powered up.
+Restart the hw_server application running on host localhost, port 3121 and then use connect_hw_server to re-establish connection to target.
+close_hw
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 466407070 -regid "211083026_1777510696_210611924_202" -xml /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtal..."
+    (file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtalk/labtool_webtalk.tcl" line 29)
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct  4 18:32:23 2015...
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248708080
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 19:06:23 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 19:06:23 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 19:07:10 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 19:07:10 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 19:07:25 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 19:07:25 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_hw
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 466407070 -regid "211083026_1777510696_210611924_202" -xml /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtal..."
+    (file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.hw/webtalk/labtool_webtalk.tcl" line 29)
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct  4 18:32:23 2015...
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 19:12:14 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 19:12:14 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Oct  4 19:13:04 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 19:13:04 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.1
+  **** Build date : Apr 27 2015-19:09:54
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248708080
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_hw

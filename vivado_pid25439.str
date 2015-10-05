@@ -1,0 +1,96 @@
+/*
+
+Vivado v2015.1 (64-bit)
+SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+Process ID: 25439
+
+Current time: 	10/4/15 5:17:27 PM PDT
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: DISTRIB_ID=Ubuntu
+Version: 3.13.0-65-generic
+Architecture: amd64
+Available processors (cores): 2
+
+DISPLAY: :0
+Screen size: 1440x900
+Screen resolution (DPI): 134
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	/opt/Xilinx/Vivado/2015.1/tps/lnx64/jre
+
+User name: 	root
+User directory: /home/parallels/source_code/ECE_527_MP
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: /home/parallels/.Xilinx/Vivado/2015.1/vivado.ini
+Vivado layouts directory: /home/parallels/.Xilinx/Vivado/2015.1/layouts/application
+
+GUI allocated memory:	146 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,816 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 61 MB (+61196kb) [00:00:05]
+// [Engine Memory]: 4,816 MB (+4898175kb) [00:00:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,816 MB. GUI used memory: 23 MB. Current time: 10/4/15 5:17:30 PM PDT
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr", 0); // t:v (JViewport:JComponent, cl:JFrame)
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr. Version: Vivado v2015.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 72 MB (+8259kb) [00:01:53]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,961 MB. GUI used memory: 31 MB. Current time: 10/4/15 5:19:17 PM PDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: partC; location: /home/parallels/source_code/ECE_527_MP/mp2/partC; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 5775.418 ; gain = 142.156 ; free physical = 3939 ; free virtual = 6688 
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partC_wrapper (partC_wrapper.v)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, partC_wrapper (partC_wrapper.v)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectCodeEditor("partC_wrapper.v", 19, 387); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("partC_wrapper.v", 24, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 

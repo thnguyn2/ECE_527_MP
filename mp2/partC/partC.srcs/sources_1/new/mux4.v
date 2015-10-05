@@ -28,17 +28,14 @@ module mux4(
     );
 
     // using 1 bit multiplexers
-//    mux1(.A0(A0[0]), .A1(A1[0]), .Sel(Sel), .Y(Y[0]));
-//    mux1(.A0(A0[1]), .A1(A1[1]), .Sel(Sel), .Y(Y[1]));
-//    mux1(.A0(A0[2]), .A1(A1[2]), .Sel(Sel), .Y(Y[2]));
-//    mux1(.A0(A0[3]), .A1(A1[3]), .Sel(Sel), .Y(Y[3]));
-
+    reg reg_Y;
+    assign Y = reg_Y;
     // use infered mux
     always @(Sel or A0 or A1)
     begin
         case (Sel)
-            1'b0: Y = A0;
-            default: Y = A1;
+            1'b0: reg_Y = A0;
+            default: reg_Y = A1;
         endcase
     end
 endmodule

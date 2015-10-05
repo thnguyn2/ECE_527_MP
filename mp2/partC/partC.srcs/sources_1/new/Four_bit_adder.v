@@ -27,18 +27,29 @@ module Four_bit_adder(
     input Co,
     input [3:0] S
     );
+    
     //Implement the full 4 bit adder input carry given Pii and Gii
     wire G00, G10, G20, G30;
+    wire temp0, temp1, temp2, temp3;
+    
     assign G00 = Ci;
-    assign G10 = Gi[0] | (Pi[0] & G00);
-    assign G20 = Gi[1] | (Pi[1] & G10);
-    assign G30 = Gi[2] | (Pi[2] & G20);
+    
+    and1(.A(Pi[0]),.B(G00),.C(temp0));
+    and1(.A(Pi[1]),.B(G10),.C(temp1));
+    and1(.A(Pi[2]),.B(G20),.C(temp2));
+    or1(.A(Gi[0]),.B(temp0),.C(G10));
+    or1(.A(Gi[1]),.B(temp1),.C(G20));
+    or1(.A(Gi[2]),.B(temp2),.C(G30));
+        
+            
     //Compute the output logic
-    assign S[0] = Pi[0] ^ G00;
-    assign S[1] = Pi[1] ^ G10;
-    assign S[2] = Pi[2] ^ G20;
-    assign S[3] = Pi[3] ^ G30;
+    xor1(.A(Pi[0]),.B(G00),.C(S[0]));
+    xor1(.A(Pi[1]),.B(G10),.C(S[1]));
+    xor1(.A(Pi[2]),.B(G20),.C(S[2]));
+    xor1(.A(Pi[3]),.B(G30),.C(S[3]));
+ 
     //Compute the carry out
-    assign Co = Gi[3] | (Pi[3] & G30);
+    and1(.A(Pi[3]),.B(G30),.C(temp3));
+    or1(.A(Gi[3]),.B(temp3),.C(Co));
     
 endmodule

@@ -2,48 +2,12 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Sun Oct  4 18:21:21 2015
-# Process ID: 6419
+# Start of session at: Sun Oct  4 19:17:14 2015
+# Process ID: 25439
 # Log file: /home/parallels/source_code/ECE_527_MP/vivado.log
 # Journal file: /home/parallels/source_code/ECE_527_MP/vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr
 update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
 update_compile_order -fileset sources_1
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
-set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
-current_hw_device [lindex [get_hw_devices] 1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
-set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
-program_hw_devices [lindex [get_hw_devices] 1]
-refresh_hw_device [lindex [get_hw_devices] 1]
-file copy -force /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.sysdef /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
-
-launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
-launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
-close_hw
-open_hw
-connect_hw_server
-open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
-set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
-current_hw_device [lindex [get_hw_devices] 1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
-set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
-set_property PROGRAM.FILE {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/partC_wrapper.bit} [lindex [get_hw_devices] 1]
-program_hw_devices [lindex [get_hw_devices] 1]
-refresh_hw_device [lindex [get_hw_devices] 1]
-launch_sdk -workspace /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk -hwspec /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.sdk/partC_wrapper.hdf
