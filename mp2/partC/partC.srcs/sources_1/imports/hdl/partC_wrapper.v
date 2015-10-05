@@ -80,18 +80,19 @@ module partC_wrapper
   wire [31:0]input2;
   wire [31:0]sum_res;
   
+  wire Cout;
   //----Carry ripple adder---
-  carry_ripple_adder adder1(.A(input1),.B(input2),.Cin(1'b0),.S(sum_res));  
+  carry_ripple_adder adder1(.A(input1),.B(input2),.Cin(1'b0),.S(sum_res),.Cout(Cout));  
   
   //----Carry skip adder---
-  //carry_skip_adder(.A(input1),.B(input2),.S(sum_res));
+  //carry_skip_adder(.A(input1),.B(input2),.S(sum_res),.Co(Cout));
   
   //----Carry look ahead reader---
-  //carry_look_ahead_adder adder1(.A(input1),.B(input2),.S(sum_res));  
+  //carry_look_ahead_adder adder1(.A(input1),.B(input2),.S(sum_res),.Co(Cout));  
     
   
   //----Carry select adder---
-  //cary_select_adder(.A(input1),.B(input2),.S(sum_res));
+  //cary_select_adder(.A(input1),.B(input2),.S(sum_res),.Co(Cout));
   
   partC partC_i
        (.DDR_addr(DDR_addr),

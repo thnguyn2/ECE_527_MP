@@ -378,3 +378,4 @@ java.lang.RuntimeException: Failed to download ELF file
 17:15:54 INFO  : Checking for hwspec changes in the project partC_wrapper_hw_platform_1.
 17:15:55 INFO  : XSDB server has started successfully.
 17:16:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:35:16 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
