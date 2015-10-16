@@ -1,0 +1,9 @@
+7b5cd1a7f4929dbd388e754d2ad77315  usr/share/doc/jasper/changelog.gz
+87f765f5449532d7b7a69a93e294e9b1  usr/share/doc/jasper/copyright
+f14e082a69affc79428f57c64524461c  usr/share/initramfs-tools/hooks/jasper
+da83f826fb0eb730aa5e7bfe64677511  usr/share/initramfs-tools/scripts/local-bottom/jasper_setup
+9bff18ad08b1f0a7705505484f585800  usr/share/initramfs-tools/scripts/local-premount/jasper_growroot
+ae07118bc9f82057e6487eabdb968137  usr/share/jasper-initramfs/apt/enable_additional_repos.py
+a2d0489e9d0c049400e1ffeb801ad0ac  usr/share/jasper-initramfs/init/serial.conf
+b06dc0611b70ba4a7d188dc656369ee6  usr/share/jasper-initramfs/sysctl/30-jasper-root-on-sd.conf
+25a19436b45fb769527b6a2719867883  usr/share/jasper-initramfs/sysctl/30-jasper-smsc-min-free-kbytes.conf

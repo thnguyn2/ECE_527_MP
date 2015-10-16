@@ -1,0 +1,7 @@
+This style file is for modifying the way the latin option to the babel 
+package operates when typesetting Latin. The style is in some way 
+"frenchizied" for what concerns punctuation spacings and footnote 
+style, and shortcuts are available in order to set accents on all 
+vowels, including y and the diphthongs ae and oe.
+
+The license is the LaTeX Project Public License.

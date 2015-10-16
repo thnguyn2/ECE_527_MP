@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{verbatimbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\parskip 1em
+
+This is a test of the \textsf{verbatimbox} style package, to 
+test the \verb,verbbox, environment.  I am about to call on the
+\verb,verbbox, environment to see how if I can stuff \verb,verbatim,
+text into a \LaTeX{} box.  Here goes...
+
+\begin{verbbox}
+      Program test
+      implicit none
+      integer a, x
+      a = 0
+      x = 1
+   10 a = a + x
+      if (a .eq. 100) stop
+      goto 10
+      end
+!@#$%^&*()_+=-{}|\][<>?/\\\
+\end{verbbox}
+
+OK, I have created a \verb,verbbox, (which creates no output in and of
+itself), and I now wish to see if I can stick it into a \verb,tabular,
+environment.  Note, when sticking a verbbox into the \verb,tabular,
+environment, use the \verb,[t], option of \verb,\theverbbox,.
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+%\raisebox{0.7in}{First box of table}&%
+%\theverbbox[t] &
+%\raisebox{0.7in}{last box of table}\\
+First box of table&%
+\begin{tabular}{@{} c @{}} \theverbbox[t]\end{tabular}&
+last box of table\\
+\hline
+\end{tabular}
+\end{center}
+
+Otherwise, if I choose, I can just stick the \verb,verbatim, box into an
+\verb,fbox,,
+so as to frame the result.  This latter case produces the same output as
+would the \verb,boxedverbatim, environment in the \textsf{moreverb}
+package.
+
+\fbox{\theverbbox}
+
+Being a box, I can use \verb,verbbox, output as part of a figure or
+table, for example.  Bottom line: the \textsf{verbatimbox} package
+provides nice flexibility in utilizing the \verb,verbatim, environment
+in a variety of ways.
+
+\end{document}

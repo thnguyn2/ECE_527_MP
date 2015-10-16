@@ -1,0 +1,6 @@
+\ctable[
+  framerule = .1pt,
+  maxwidth=3cm
+]{lX}{}{\FL 1 & first row\LL}
+
+$Id: 06a,v 1.1 2007-07-22 15:30:56 wybo Exp $

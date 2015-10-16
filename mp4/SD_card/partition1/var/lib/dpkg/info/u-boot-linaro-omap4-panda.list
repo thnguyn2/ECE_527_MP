@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/u-boot
+/usr/lib/u-boot/omap4_panda
+/usr/lib/u-boot/omap4_panda/u-boot.bin
+/usr/lib/u-boot/omap4_panda/u-boot.img
+/usr/lib/u-boot/omap4_panda/MLO
+/usr/share
+/usr/share/doc
+/usr/share/doc/u-boot-linaro-omap4-panda
+/usr/share/doc/u-boot-linaro-omap4-panda/changelog.Debian.gz
+/usr/share/doc/u-boot-linaro-omap4-panda/copyright

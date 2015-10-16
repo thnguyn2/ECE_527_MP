@@ -1,0 +1,75 @@
+Tue Jul 28 02:52:40 CDT 2015
+updmap: This is updmap, version $Id: updmap 14402 2009-07-23 17:09:15Z karl $
+updmap: using transcript file `/var/lib/texmf/web2c/updmap.log'
+updmap is creating new map files using the following configuration:
+
+  config file: `/var/lib/texmf/web2c/updmap.cfg'
+  dvips output directory: `/var/lib/texmf/fonts/map/dvips/updmap'
+  pdftex output directory: `/var/lib/texmf/fonts/map/pdftex/updmap'
+  dvipdfm output directory: `/var/lib/texmf/fonts/map/dvipdfm/updmap'
+
+  prefer outlines: `true'
+  texhash enabled: `false'
+  download standard fonts (dvips): `false'
+  download standard fonts (pdftex): `true'
+  download standard fonts (dvipdfm): `true'
+
+updmap: scanning for LW35 support files
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/tetex/dvips35.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/tetex/pdftex35.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/tetex/dvipdfm35.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/tetex/ps2pk35.map'
+
+updmap: Scanning for MixedMap entries:
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/amsfonts/cm.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/amsfonts/cmextra.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/cm/cmtext-bsr-interpolated.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/amsfonts/cyrillic.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/esint-type1/esint.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/amsfonts/latxfont.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/manfnt/manfnt.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/mflogo/mflogo.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/amsfonts/symbols.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/xypic/xypic.map'
+
+updmap: Scanning for Map entries:
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/psnfss/charter.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/epiolmec/epiolmec.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/amsfonts/euler.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/psnfss/fpls.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-cs.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-ec.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-l7x.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-math.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-qx.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-rm.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-t5.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-texnansi.map'
+updmap: using map file `/usr/share/texmf/fonts/map/dvips/lm/lm-ts1.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/psnfss/pazo.map'
+updmap: using map file `/usr/share/texmf-texlive/fonts/map/dvips/psnfss/utopia.map'
+
+updmap: Generating output for ps2pk...
+updmap: Generating output for dvips...
+updmap: Generating output for pdftex...
+updmap: Generating output for dvipdfm...
+updmap: All output generated.
+
+
+updmap: Files generated:
+-rw-r--r-- 1 root root 22228 Jul 28 02:52 /var/lib/texmf/fonts/map/dvipdfm/updmap/dvipdfm_dl14.map
+-rw-r--r-- 1 root root 22855 Jul 28 02:52 /var/lib/texmf/fonts/map/dvipdfm/updmap/dvipdfm_ndl14.map
+-rw-r--r-- 1 root root  8893 Jul 28 02:52 /var/lib/texmf/fonts/map/dvips/updmap/builtin35.map
+-rw-r--r-- 1 root root 12952 Jul 28 02:52 /var/lib/texmf/fonts/map/dvips/updmap/download35.map
+-rw-r--r-- 1 root root 67362 Jul 28 02:52 /var/lib/texmf/fonts/map/dvips/updmap/ps2pk.map
+-rw-r--r-- 1 root root 58351 Jul 28 02:52 /var/lib/texmf/fonts/map/dvips/updmap/psfonts_pk.map
+-rw-r--r-- 1 root root 63309 Jul 28 02:52 /var/lib/texmf/fonts/map/dvips/updmap/psfonts_t1.map
+-rw-r--r-- 1 root root 67369 Jul 28 02:52 /var/lib/texmf/fonts/map/pdftex/updmap/pdftex_dl14.map
+-rw-r--r-- 1 root root 65819 Jul 28 02:52 /var/lib/texmf/fonts/map/pdftex/updmap/pdftex_ndl14.map
+
+updmap: Map file links or copies:
+lrwxrwxrwx 1 root root 16 Jul 28 02:52 /var/lib/texmf/fonts/map/dvipdfm/updmap/dvipdfm.map -> dvipdfm_dl14.map
+lrwxrwxrwx 1 root root 14 Jul 28 02:52 /var/lib/texmf/fonts/map/dvips/updmap/psfonts.map -> psfonts_t1.map
+lrwxrwxrwx 1 root root 15 Jul 28 02:52 /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map -> pdftex_dl14.map
+
+updmap: Done.

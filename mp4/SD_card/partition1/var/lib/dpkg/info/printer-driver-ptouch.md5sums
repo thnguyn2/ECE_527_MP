@@ -1,0 +1,5 @@
+3ff6474b4a4376b29d4468128e4a99ec  usr/lib/arm-linux-gnueabihf/cups/filter/rastertoptch
+9ac97b1f4f3871ec282363cd8be79af4  usr/lib/cups/driver/ptouch
+b8cf11fc4623afd90fa4a9a1cfdc805a  usr/share/cups/ppd-updaters/printer-driver-ptouch.ppd-updater
+93c3e281bea48b64b1620cb55968b82b  usr/share/doc/printer-driver-ptouch/changelog.Debian.gz
+f34d3e82e5daaec9b848b2b1b0fb7718  usr/share/doc/printer-driver-ptouch/copyright

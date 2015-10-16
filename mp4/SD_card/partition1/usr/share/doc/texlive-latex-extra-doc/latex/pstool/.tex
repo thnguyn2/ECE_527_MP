@@ -1,0 +1,16 @@
+\pdfoutput =0
+\let \origdocument \document 
+\let \EndPreamble \endinput 
+\def \document {\endgroup \endinput }
+\input {example}
+\usepackage [active,tightpage]{preview}
+\let \document \origdocument 
+\pagestyle {empty}
+\begin {document}
+\centering \null \vfill 
+\begin {preview}
+\or 
+\includegraphics []{\relax }
+\end {preview}
+\vfill \end {document}
+

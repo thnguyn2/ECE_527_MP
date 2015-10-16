@@ -1,0 +1,9 @@
+pgf for Debian
+--------------
+
+ - pgf is fully documented under /usr/share/doc/texmf/pgf.  To read
+documentations, use texdoc(1) command. 
+
+  For pdf document, run `texdoc pgfmanual.pdf.gz'.
+
+ -- OHURA Makoto <ohura@debian.org>, Fri,  8 Jun 2007 00:02:43 +0900

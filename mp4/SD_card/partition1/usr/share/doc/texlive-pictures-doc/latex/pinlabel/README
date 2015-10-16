@@ -1,0 +1,6 @@
+Thios package comprise two files and a subdirectory :
+
+pinlabel.sty : sole input file used by pinlabel
+pinlabdoc.pdf : the documentation file
+
+src/ :  subdirectory containing source files for pinlabdoc.pdf

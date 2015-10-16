@@ -1,0 +1,27 @@
+\begin{center}
+\psset{lightsrc=40 20 25,viewpoint=50 30 10 rtp2xyz,Decran=30,deactivatecolor}
+\begin{pspicture}(-5,-5)(5,5)
+\rput(-1,0){%
+\psSolid[object=datfile,file=V1,unit=2]
+\psSolid[object=grille,base=-4 8 0 10,ngrid=1,action=draw,unit=0.5]%
+\psSolid[object=datfile,file=V2,unit=2]}
+\rput(-3.5,3){%
+\psSolid[object=datfile,file=L1]
+\psSolid[object=grille,base=-4 8 -4 10,ngrid=1,action=draw,unit=0.25]%
+\psSolid[object=datfile,file=L2]}
+\rput(3,3){%
+\psset{lightsrc=40 20 25,viewpoint=50 10 20 rtp2xyz,Decran=30}
+\psSolid[object=datfile,file=S1]
+\psSolid[object=grille,base=-4 8 -4 10,ngrid=1,action=draw,unit=0.25]%
+\psSolid[object=datfile,file=S2]}
+\rput(3,-3){%
+\psSolid[object=datfile,file=G1]
+\psSolid[object=grille,base=-4 8 -2 12,ngrid=1,action=draw,unit=0.25]%
+\psSolid[object=datfile,file=G2]}
+\rput(-3.5,-3){%
+\psset{lightsrc=40 20 25,viewpoint=50 10 20 rtp2xyz,Decran=30}
+\psSolid[object=datfile,file=S3]
+\psSolid[object=grille,base=-4 8 -4 10,ngrid=1,action=draw,unit=0.25]%
+\psSolid[object=datfile,file=S4]}
+\end{pspicture}
+\end{center}

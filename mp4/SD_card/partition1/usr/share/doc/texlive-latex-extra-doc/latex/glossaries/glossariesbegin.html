@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002 (1.67)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The glossaries package: a guide for beginners</TITLE>
+<META NAME="description" CONTENT="The glossaries package: a guide for beginners">
+<META NAME="keywords" CONTENT="glossariesbegin">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+<H1 ALIGN="CENTER">The glossaries package: a guide for beginners</H1>
+<P ALIGN="CENTER"><STRONG>Nicola L.C. Talbot</STRONG></P>
+<P ALIGN="CENTER"><STRONG>24th September 2009</STRONG></P>
+<BR>
+
+<H2><A NAME="SECTION00010000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html22"
+  HREF="glossariesbegin.html#SECTION00020000000000000000">1 What Do I Need?</A>
+<LI><A NAME="tex2html23"
+  HREF="glossariesbegin.html#SECTION00030000000000000000">2 Getting Started</A>
+<LI><A NAME="tex2html24"
+  HREF="glossariesbegin.html#SECTION00040000000000000000">3 Defining a Term or Symbol</A>
+<LI><A NAME="tex2html25"
+  HREF="glossariesbegin.html#SECTION00050000000000000000">4 Using a Term</A>
+<LI><A NAME="tex2html26"
+  HREF="glossariesbegin.html#SECTION00060000000000000000">5 Acronyms</A>
+<LI><A NAME="tex2html27"
+  HREF="glossariesbegin.html#SECTION00070000000000000000">6 Displaying the Glossary or List of Acronyms</A>
+</UL>
+<!--End of Table of Contents-->
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+This document is a brief guide to the <TT>glossaries</TT> package for
+beginners who find the size of the main user manual daunting and, as
+such, it only covers the basics. For more advanced topics, see the
+<A NAME="tex2html1"
+  HREF="glossaries-manual.html">main user manual</A>.
+</DIV>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000"></A>
+<A NAME="requirements"></A>
+<BR>
+1 What Do I Need?
+</H1>
+
+<P>
+You need to have the <TT>glossaries</TT> package installed. You also
+need to have the following packages installed: <TT>ifthen</TT>,
+<TT>xkeyval</TT> (at least version 2.5f), <TT>xfor</TT> and <TT>amsgen</TT>.
+You may also need <TT>longtable</TT>, <TT>supertabular</TT> and
+<TT>array</TT>, depending on what glossary style you want to use.
+All these packages can be downloaded from CTAN if you don't have
+them installed. See <A NAME="tex2html2"
+  HREF="http://www.tex.ac.uk/cgi-bin/texfaq2html?label=installthings">Installing things on a 
+(La)TeX System</A>
+for further assistance. 
+
+<P>
+You also need an indexing application. The <TT>glossaries</TT> package
+is configured to use either <TT>makeindex</TT> or <TT>xindy</TT>.
+<TT>Makeindex</TT> should be available on all TeX systems. It's
+possible you may not have <TT>xindy</TT> installed, but it can be
+downloaded from the <A NAME="tex2html3"
+  HREF="http://www.xindy.org/">xindy home
+page</A>.
+The <TT>glossaries</TT> package provides a helper Perl script called
+<TT>makeglossaries</TT> which will act as an interface to
+<TT>makeindex</TT> or <TT>xindy</TT>. If you want to use
+<TT>makeglossaries</TT>, you need to have Perl installed, but you can
+use <TT>makeindex</TT> or <TT>xindy</TT> directly if you prefer.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000"></A>
+<A NAME="start"></A>
+<BR>
+2 Getting Started
+</H1>
+
+<P>
+The most obvious things to do is to remember to load the 
+<TT>glossaries</TT> package:
+<PRE>
+\usepackage{glossaries}
+</PRE>
+Note that the <TT>glossaries</TT> package must be loaded <I>after</I>
+the <TT>hyperref</TT> package (contrary to the general advice that
+<TT>hyperref</TT> should be loaded last). The <TT>glossaries</TT> package 
+should also be loaded after <TT>html</TT>, <TT>inputenc</TT>,
+<TT>babel</TT> and <TT>ngerman</TT>.
+
+<P>
+If you want to use <TT>xindy</TT> rather than <TT>makeindex</TT> to sort the
+glossaries, you need to specify this in the package options:
+<PRE>
+\usepackage[xindy]{glossaries}
+</PRE>
+Other package options are described in 
+the section 
+<A NAME="tex2html4"
+  HREF="glossaries-manual.html#sec:pkgopts">"Package Options"</A>
+in the main <TT>glossaries</TT> user manual.
+
+<P>
+Next, you need to enable the creation of the various external
+files that are needed to create the glossaries, lists of acronyms
+or symbols for your document. This is done using:
+
+<P>
+<TT>&#92;makeglossaries</TT>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000"></A>
+<A NAME="defterm"></A>
+<BR>
+3 Defining a Term or Symbol
+</H1>
+
+<P>
+You must define terms or symbols before you can use them in the
+document. This is best done in the preamble. Each term is defined
+using:
+
+<P>
+<TT>&#92;newglossaryentry&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>settings</I>&gt;&#125;</TT>
+<P>
+where &lt;<I>label</I>&gt; is a unique label used to identify the term.
+The second argument, &lt;<I>settings</I>&gt;, is a key=value comma 
+separated list that is used to set the required information for
+the term. A full list of available keys can be found in 
+<A NAME="tex2html5"
+  HREF="glossaries-manual.html#sec:newglosentry">"Defining Glossary Entries"</A>
+in the main <TT>glossaries</TT> user manual. The principle keys are
+<TT>name</TT> and <TT>description</TT>.
+
+<P>
+For example, to define the term "electrolyte":
+<PRE>
+\newglossaryentry{electrolyte}{name=electrolyte,
+description={solution able to conduct electric current}}
+</PRE>
+In the above example, the label and the name happen to be the same.
+In the next example, the name contains a ligature but the label
+doesn't:
+<PRE>
+\newglossaryentry{oesophagus}{name=\oe sophagus,
+description={canal from mouth to stomach},
+plural=\oe sophagi}
+</PRE>
+In this case the label is <TT>oesophagus</TT>. Note that in this
+case, the plural has to be specified using the <TT>plural</TT> key
+since it isn't formed by simply appending the letter "s". 
+
+<P>
+When you define terms, it is important to remember that they will
+be sorted by an external application that doesn't interpret LaTeX commands. <TT>Xindy</TT> is a little more TeX-aware than <TT>makeindex</TT>, but
+for this example they will both mis-sort <code>\oe sophagus</code>.
+Xindy will ignore the <code>\oe </code> part and will sort it according
+to <TT>sophagus</TT>, so it will be placed with the terms starting
+with an "s". <TT>Makeindex</TT>, on the other hand, will sort it according
+to <code>\oe sophagus</code> which starts with a symbol (the backslash),
+so it will end up in the symbol group. You therefore need to 
+specify how to sort the term:
+<PRE>
+\newglossaryentry{oesophagus}{name=\oe sophagus,
+description={canal from mouth to stomach},
+plural=\oe sophagi,sort=oesophagus}
+</PRE>
+Note, however, that if you use the <TT>inputenc</TT> package and
+<TT>xindy</TT>, you can use the encoded character <TT>&#339;</TT> rather than
+<TT>&#92;oe</TT> and <TT>xindy</TT> will sort it correctly:
+<PRE>
+\newglossaryentry{oesophagus}{name=œsophagus,
+description={canal from mouth to stomach},
+plural=œsophagi}
+</PRE>
+
+<P>
+If the name starts with an accented character, the first character
+must be grouped:
+<PRE>
+\newglossaryentry{elite}{name={\'e}lite,
+description={select group of people},
+sort=elite}
+</PRE>
+or
+<PRE>
+\newglossaryentry{elite}{name={é}lite,
+description={select group of people}}
+</PRE>
+
+<P>
+The name can also be a symbol, but you will also need to specify
+the sort key. For example:
+<PRE>
+\newglossaryentry{pi}{name={\ensuremath{\pi}},
+description={ratio of circumference of circle to its 
+diameter},sort=pi}
+</PRE>
+It's also possible to have a name and a symbol. For example:
+<PRE>
+\newglossaryentry{set}{name=set,
+description={a collection of objects},
+symbol={\ensuremath{\mathcal{S}}}}
+</PRE>
+Note, however, that not all glossary styles display the symbol
+in the glossary.
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000"></A>
+<A NAME="usingterm"></A>
+<BR>
+4 Using a Term
+</H1>
+
+<P>
+Once you have defined a term, you can use it in the document. The
+<TT>glossaries</TT> package provides a number of commands that are
+described in the section
+<A NAME="tex2html6"
+  HREF="glossaries-manual.html#sec:glslink">"Links to Glossary Entries"</A>
+in the main <TT>glossaries</TT> user manual.
+Here, I shall just cover the main commands:
+
+<P>
+<TT>&#92;gls&#123;&lt;<I>label</I>&gt;&#125;</TT>
+<P>
+This prints the term associated with &lt;<I>label</I>&gt;. Using the
+example in the previous section, <code>\gls{oesophagus}</code>
+will display &#339;sophagus. If the <TT>hyperref</TT> package has also
+been loaded, the term will also be hyperlinked to the relevant
+entry in the glossary.
+
+<P>
+<TT>&#92;glspl&#123;&lt;<I>label</I>&gt;&#125;</TT>
+<P>
+This prints the plural of the term associated with &lt;<I>label</I>&gt;,
+so <code>\glspl{oesophagus}</code> will display &#339;sophagi. Again, the
+text will be a hyperlink to the relevant entry in the glossary, if
+hyperlinks are defined.
+
+<P>
+There are also versions that convert the first character to upper
+case if you need to start a sentence with a term:
+
+<P>
+<TT>&#92;Gls&#123;&lt;<I>label</I>&gt;&#125;</TT>
+<P>
+and
+
+<P>
+<TT>&#92;Glspl&#123;&lt;<I>label</I>&gt;&#125;</TT>
+<P>
+For example:
+<PRE>
+\Glspl{electrolyte} usually exist as solutions of salts, 
+bases or acids.
+</PRE>
+
+<P>
+Note that these commands all have two optional arguments that
+aren't discussed here, but they are
+described in the section
+<A NAME="tex2html7"
+  HREF="glossaries-manual.html#sec:glslink">"Links to Glossary Entries"</A>
+in the main <TT>glossaries</TT> user manual.
+
+<P>
+<B>Caveat:</B> don't use these commands in moving arguments, such
+as those used by <TT>&#92;chapter</TT>, <TT>&#92;section</TT> and <TT>&#92;caption</TT>.
+You can, instead, use commands such as
+
+<P>
+<TT>&#92;glsentrytext&#123;&lt;<I>label</I>&gt;&#125;</TT>
+<P>
+See the section
+<A NAME="tex2html8"
+  HREF="glossaries-manual.html#sec:glsnolink">"Using Glossary Terms Without Links"</A>
+in the main <TT>glossaries</TT> user manual.
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000"></A>
+<A NAME="acronyms"></A>
+<BR>
+5 Acronyms
+</H1>
+
+<P>
+The <TT>glossaries</TT> package also allows you to define acronyms.
+By default, acronyms will be added to the main glossary, but if
+you use the <TT>acronym</TT> package option, acronyms will be
+placed in a separate list of acronyms:
+<PRE>
+\usepackage[acronym]{glossaries}
+</PRE>
+There are other options that govern how acronyms appear. For further
+details, see the section
+<A NAME="tex2html9"
+  HREF="glossaries-manual.html#sec:acronyms">"Acronyms"</A>
+in
+the main <TT>glossaries</TT> user manual.
+
+<P>
+Acronyms must be defined before use and are defined using:
+
+<P>
+<TT>&#92;newacronym&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>abbrv</I>&gt;&#125;&#123;&lt;<I>full</I>&gt;&#125;</TT>
+<P>
+where &lt;<I>label</I>&gt; is the label identifying the acronym, &lt;<I>abbrv</I>&gt;
+is the abbreviated form and &lt;<I>full</I>&gt; is the fully expanded text.
+For example:
+<PRE>
+\newacronym{label}{svm}{support vector machine}
+</PRE>
+
+<P>
+Once the acronym is defined, it can be used in the same way as 
+any other glossary term with commands such as <TT>&#92;gls</TT> and
+<TT>&#92;glspl</TT>. On first use, the default will display &lt;<I>full</I>&gt;
+(&lt;<I>abbrv</I>&gt;). On subsequent use, only the abbreviation will
+appear. For example:
+<PRE>
+A \gls{svm} was implemented.
+</PRE>
+If this is the first time this term has been used, the above would 
+produce:
+<P>
+A support vector machine (svm) was implemented.
+<P>
+otherwise it would produce:
+<P>
+A svm was implemented.
+<P>
+You can reset an acronym so that the next use fully 
+expands it again using:
+
+<P>
+<TT>&#92;glsreset&#123;&lt;<I>label</I>&gt;&#125;</TT>
+<P>
+or you can reset all acronyms using
+
+<P>
+<TT>&#92;glsresetall</TT>
+<P>
+For further details on resetting and unsetting acronyms, see
+the section 
+<A NAME="tex2html10"
+  HREF="glossaries-manual.html#sec:glsunset">"Unsetting and Resetting Entry Flags"</A>
+in the main <TT>glossaries</TT> user manual.
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000"></A>
+<A NAME="printglossaries"></A>
+<BR>
+6 Displaying the Glossary or List of Acronyms
+</H1>
+
+<P>
+In order to display the sorted list of terms, you first need to
+use
+
+<P>
+<TT>&#92;printglossaries</TT>
+<P>
+at the place where you want the glossary and list of acronyms to
+appear.  Note that <TT>&#92;printglossaries</TT> won't produce any text the
+first time you create your document, as an external indexing
+application needs to be used to sort and collate the entries.
+Creating the completed document is therefore <I>at least</I> a three
+step process.
+
+<P>
+Suppose your document is called <TT>myDoc.tex</TT>, then you need
+to:
+
+<OL>
+<LI>Build/LaTeX your document, either by clicking on an
+appropriate button in your front-end/text editor or by typing the
+following at a terminal/command prompt:
+<PRE>
+latex myDoc
+</PRE>
+
+<P>
+</LI>
+<LI>Run the indexing application on the external file(s) created
+by the <TT>glossaries</TT> package. If you have used the <TT>xindy</TT>
+package option, you must use <TT>xindy</TT>, otherwise you must use 
+<TT>makeindex</TT>. The <TT>glossaries</TT> package comes with a convenient
+Perl wrapper that calls the appropriate indexing application the
+required number of times with the required options. If you have Perl
+installed, all you need to do is type
+<PRE>
+makeglossaries myDoc
+</PRE>
+in a terminal or command prompt. If you are using a front-end (such
+as WinEdt or TeXnicCenter) and you want it to automatically run
+makeglossaries when you build your document, you will need to
+consult the front-end's documentation.
+
+<P>
+If you don't have Perl installed, you will need to call <TT>makeindex</TT>
+or <TT>xindy</TT> explicitly. This is more complicated and is described in 
+the section
+<A NAME="tex2html11"
+  HREF="glossaries-manual.html#sec:makeglossaries">"Generating the Associated Glossary Files"</A>
+in the
+main <TT>glossaries</TT> user manual.
+
+<P>
+</LI>
+<LI>Once you have successfully run the indexing application, you
+need to build/LaTeX your document again (see step&nbsp;1).
+</LI>
+</OL>
+Note that sometimes you may have to repeat steps&nbsp;2 and&nbsp;3.
+
+<P>
+The appearance of the glossary depends on the glossary style in
+use. The default style uses the <TT>description</TT> environment, 
+but there are many other styles available. These are described
+in the section
+<A NAME="tex2html12"
+  HREF="glossaries-manual.html#sec:styles">"Glossary Styles"</A>
+in the main <TT>glossaries</TT> user manual.
+By default, a number or list of numbers will appear after each entry 
+in the glossary. This indicates the page (or pages)
+on which the term was used. This list can be suppressed using
+the <TT>nonumberlist</TT> package option:
+<PRE>
+\usepackage[nonumberlist]{glossaries}
+</PRE>
+
+<P>
+Further information can be found in the main <TT>glossaries</TT>
+<A NAME="tex2html13"
+  HREF="glossaries-manual.html">user
+manual</A>
+and there is also an
+<A NAME="tex2html14"
+  HREF="http://www.latex-community.org/index.php?option=com_content&amp;view=article&amp;id=263:glossaries-nomenclature-lists-of-symbols-and-acronyms&amp;catid=55:latex-general&amp;Itemid=114">article on the glossaries package</A>
+on the LaTeX Community's Know How section.
+<BR><HR>
+
+</BODY>
+</HTML>

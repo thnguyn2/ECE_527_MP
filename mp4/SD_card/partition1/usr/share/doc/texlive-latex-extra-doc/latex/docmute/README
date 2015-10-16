@@ -1,0 +1,3 @@
+The docmute package enables to input or include standalone
+LaTeX documents as if they consisted of only the content
+between \begin{document} and \end{document}.

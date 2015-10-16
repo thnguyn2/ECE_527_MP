@@ -1,0 +1,8 @@
+8d61f8a30c15dc06d71a6670d348c44a  usr/bin/zeitgeist-daemon
+c8477d065accf34313e3f1b082d0632e  usr/lib/zeitgeist/zeitgeist-fts
+29703e39a20eef8f89d9242e57bbdc89  usr/share/dbus-1/services/org.gnome.zeitgeist.fts.service
+bbc640135c555376e75e751bccabdbe6  usr/share/dbus-1/services/org.gnome.zeitgeist.service
+e16c3375303b980ef1ca450e87c94bb5  usr/share/doc/zeitgeist-core/NEWS.gz
+57ec321fbdb5b62e044049835a87cada  usr/share/doc/zeitgeist-core/changelog.Debian.gz
+7c7e3625a97a8c7a07ae65fbb29bfca1  usr/share/doc/zeitgeist-core/copyright
+dcd9de3b6b5cc81b410f944904fd499d  usr/share/man/man1/zeitgeist-daemon.1.gz

@@ -1,0 +1,1 @@
+../../../texlive-latex-base-doc/generic/babel/00readme.txt

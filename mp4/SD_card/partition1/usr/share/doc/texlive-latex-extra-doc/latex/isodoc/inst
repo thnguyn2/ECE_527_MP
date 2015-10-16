@@ -1,0 +1,103 @@
+#!/bin/bash
+
+# this script creates and installs the isodoc class and its
+# documentation
+
+# ./inst            : create everything, install in local tree, make zip for CTAN
+# ./inst clean      : remove all that can be restored
+# ./inst zip        : make a zip file for CTAN
+
+function die {
+  echo "$@"
+  exit 1
+}
+
+function clean() { # remove all that can be restored,
+                   # except isodoc.cls and isodoc.pdf
+  for i in *.tex; do
+    mk -C $i
+  done
+  mk -c isodoc
+  rm -f chopin* texnan* *.png *.jpg *.pfb # these are in binaries.m64
+  rm -f logo[12].pdf *.txt
+}
+
+# The script needs:
+# mk        http://www.ctan.org/tex-archive/support/latex_maker
+# vpp       http://www.ctan.org/tex-archive/support/view_print_ps_pdf/
+# unzip     unzip-5.52-14.rpm
+# uudecode  sharutils-4.6-13.rpm
+
+for i in mk vpp unzip uudecode; do 
+  type $i &> /dev/null || die executable $i not found
+done
+
+NAME=isodoc
+LOCAL=`kpsewhich --expand-var '$TEXMFLOCAL'`     # local tex dir
+if [ "$LOCAL" = "" ]; then
+  echo 'Could not find value for $TEXMFLOCAL'
+  exit 1
+fi
+LOCAL=${LOCAL}tex/latex
+ln -sf ../isodoc.dtx
+ln -sf ../isodoc.ins
+
+
+# binary files are stored cvs as a mime64-encoded zip file binaries.m64
+# pack binaries, if necessary, with:
+#   zip -m binaries chopin* texnan* *.jpg *.png
+#   uunecode binaries.zip <binaries.zip > binaries.m64
+#   rm binaries.zip
+# but don't forget to add the original $Id...$ line on top of the new encoded file
+
+case "$1" in 
+clean)
+  clean
+  rm -f isodoc.{cls,pdf,ins,dtx}
+  ;;
+zip) 
+  echo make zip
+  mv isodoc.cls isodoc.pdf ..
+  clean
+  rm isodoc.dtx isodoc.ins
+  cd ..
+  version=`grep ' v[0-9.]\+ isodoc class' isodoc.dtx |sed 's/.* v\([0-9.]\+\) .*/\1/' `
+  zipfile=isodoc-$version.zip
+  zip -Drq $zipfile * -x CVS/*
+  rm isodoc.cls isodoc.pdf
+  ;;
+"")
+  echo unpack binaries
+  uudecode binaries.m64
+  unzip -q binaries
+  rm binaries.zip
+
+  # make verbinput files without $Id-lines
+  echo make example files
+  for i in `grep -l '$\(Id\): ' *.{tex,sty}`; do
+    grep -v '$\(Id\): ' $i >${i%.???}.txt
+  done
+  
+  echo y |tex $NAME.ins >/dev/null
+  for i in *.tex; do
+    mk --noview --noprint $i
+  done
+  vpp --noview --batch='1 ologo1' logoletter.pdf
+  vpp --noview --batch='2 ologo2' logoletter.pdf
+
+  echo make documentation
+  pdflatex --interaction=batchmode $NAME.dtx > /dev/null
+  makeindex -q -s gglo.ist -o $NAME.gls $NAME.glo
+  makeindex -q -s gind.ist -o $NAME.ind $NAME.idx
+  pdflatex --interaction=batchmode $NAME.dtx > /dev/null
+  
+  echo install in local tree
+  sudo cp $NAME.{dtx,cls,pdf} $LOCAL       # install in local tex tree
+  sudo -i mktexlsr
+  ;;
+*)
+  echo illegal argument
+  exit 1
+  ;;
+esac
+# $Id: inst,v 1.13 2009-06-15 13:21:28 wybo Exp $

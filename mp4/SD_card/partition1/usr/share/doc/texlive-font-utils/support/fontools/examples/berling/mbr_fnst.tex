@@ -1,0 +1,62 @@
+\input fontinst.sty
+\needsfontinstversion{1.900}
+
+
+
+\installfonts
+
+\installfamily{T1}{mbrx}{\hyphenchar\font="7F}
+
+\installfont{mbrr9e}
+    {rmbrr9e,resetberling-t1,newlatin}{t1}{T1}{mbrx}{m}{n}{}
+\installfont{mbrri9e}
+    {rmbrri9e,resetberling-t1,newlatin}{t1}{T1}{mbrx}{m}{it}{}
+\installfont{mbrb9e}
+    {rmbrb9e,resetberling-t1,newlatin}{t1}{T1}{mbrx}{b}{n}{}
+\installfont{mbrbi9e}
+    {rmbrbi9e,resetberling-t1,newlatin}{t1}{T1}{mbrx}{b}{it}{}
+
+
+
+\installfamily{T1}{mbrj}{\hyphenchar\font="7F}
+
+\installfont{mbrrj9d}
+    {rmbrrj9d,resetberling-t1j,newlatin}{t1}{T1}{mbrj}{m}{n}{}
+\installfont{mbrrij9d}
+    {rmbrrij9d,resetberling-t1j,newlatin}{t1}{T1}{mbrj}{m}{it}{}
+\installfont{mbrbj9d}
+    {rmbrbj9d,resetberling-t1j,newlatin}{t1}{T1}{mbrj}{b}{n}{}
+\installfont{mbrbij9d}
+    {rmbrbij9d,resetberling-t1j,newlatin}{t1}{T1}{mbrj}{b}{it}{}
+
+
+
+\installfamily{TS1}{mbrx}{}
+
+\installfont{mbrr9c}
+    {rmbrr9c,resetberling-ts1,rmbrrj9d,resetberling-t1j,resetosf,textcomp}
+	{ts1}{TS1}{mbrx}{m}{n}{}
+\installfont{mbrri9c}
+	{rmbrri9c,resetberling-ts1,rmbrrij9d,resetberling-t1j,resetosf,textcomp}
+	{ts1}{TS1}{mbrx}{m}{it}{}
+\installfont{mbrb9c}
+    {rmbrb9c,resetberling-ts1,rmbrbj9d,resetberling-t1j,resetosf,textcomp}
+	{ts1}{TS1}{mbrx}{b}{n}{}
+\installfont{mbrbi9c}
+	{rmbrbi9c,resetberling-ts1,rmbrbij9d,resetberling-t1j,resetosf,textcomp}
+	{ts1}{TS1}{mbrx}{b}{it}{}
+
+
+
+\installfamily{TS1}{mbrx}{}
+
+\installfontas{mbrr9c}{TS1}{mbrj}{m}{n}{}
+\installfontas{mbrri9c}{TS1}{mbrj}{m}{it}{}
+\installfontas{mbrb9c}{TS1}{mbrj}{b}{n}{}
+\installfontas{mbrbi9c}{TS1}{mbrj}{b}{it}{}
+
+
+
+\endinstallfonts
+
+\bye

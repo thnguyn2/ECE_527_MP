@@ -1,0 +1,1 @@
+../../../../../texlive-font-utils/fonts/fontinst/examples/eurofont/Makefile

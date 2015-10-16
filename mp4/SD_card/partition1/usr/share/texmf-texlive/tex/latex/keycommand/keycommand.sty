@@ -1,0 +1,225 @@
+%%
+%% This is file `keycommand.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% keycommand.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% keycommand : an easy way to define commands with optional keys [v2.z 2009/08/26]
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 1.3 of this license or (at your option) any later
+%% version. The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% This work consists of the main source file keycommand.dtx
+%% and the derived files
+%%    keycommand.sty, keycommand.pdf, keycommand.ins,
+%%    keycommand-example.tex
+%% 
+%% keycommand : an easy way to define commands with optional keys
+%% Copyright (C) 2009 by Florent Chervet <florent.chervet@free.fr>
+%% 
+
+\NeedsTeXFormat{LaTeX2e}% LaTeX 2.09 can't be used (nor non-LaTeX)
+   [2005/12/01]% LaTeX must be 2005/12/01 or younger (see kvsetkeys.dtx).
+\ProvidesPackage{keycommand}
+   [2009/07/22 v2.e- an easy way to define commands with optional keys]
+\RequirePackage{etex,kvsetkeys}
+\edef\kcmd@AtEnd{\catcode34 \the\catcode34}% "
+\catcode34 4
+\def\kcmd@keydef#1#2#3#4#5{% #1=\global, #2=command, #3=family, #4=key, #5=def
+   #1\expandafter\edef\csname kcmd@keys\string#2\endcsname{%
+      \csname kcmd@keys\string#2\endcsname,#4}%
+   #1\@namedef{KV@#3@#4@default\expandafter}\expandafter{%
+      \csname KV@#3@#4\endcsname{#5}}%
+   #1\@namedef{KV@#3@#4}##1}
+\def\kcmd@definekey#1#2#3#4#5{%
+   \begingroup\edef\@tempa{\endgroup
+      \unexpanded{\kcmd@keydef{#1}{#2}{#3}{#4}{#5}}{\def
+            \expandafter\noexpand\csname #3@#4\endcsname{####1}}%
+   }\@tempa}
+\def\kcmd@undefinekeys#1#2{%
+   \@ifundefined{kcmd@keys\string#2}
+      \relax
+      {\expandafter\@for\expandafter\kcmp@temp
+         \expandafter:\expandafter=\csname kcmd@keys\string#2\endcsname
+      \do{#1\expandafter\let
+            \csname KV@kcmd@\expandafter\@gobble\string #2@\kcmp@temp @default\endcsname
+            \@undefined
+         #1\expandafter\let
+            \csname KV@kcmd@\expandafter\@gobble\string #2@\kcmp@temp\endcsname
+            \@undefined}}%
+   #1\@namedef{kcmd@keys\string#2}{\@gobble}}
+
+\DeclareRobustCommand\keycmd{\@star@or@long\kcmd@prefix}
+\def\kcmd@prefix{\begingroup
+   \let\kcmd@gbl\@empty
+   \def\kcmd@prfx{\l@ngrel@x}%
+   \futurelet\x\kcmd@@prefix}
+\def\kcmd@@prefix{%
+   \let\kcmd@next@addto\kcmd@next@prefix
+   \ifx\x\@sptoken         \let\next\kcmd@space@prefix
+   \else                   \let\next\kcmd@addto@prfx
+      \ifx\x\long
+      \else\ifx\x\outer
+      \else\ifx\x\protected
+      \else\ifx\x\global   \def\kcmd@gbl{\global}%
+      \else
+                           \def\kcmd@next@addto{\expandafter\key@cmd\noexpand}%
+         \ifx\x\def
+         \else\ifx\x\edef
+         \else\ifx\x\gdef  \def\kcmd@gbl{\global}%
+         \else\ifx\x\xdef  \def\kcmd@gbl{\global}%
+         \else             \let\kcmd@next@addto\kcmd@next@prefix
+            \ifx\y\x\kcmd@error@prefix
+            \else\let\y\x
+            \fi
+            \let\next\kcmd@expand@prefix
+         \fi\fi\fi\fi
+      \fi\fi\fi\fi
+   \fi\next}
+\def\kcmd@next@prefix{\futurelet\x\kcmd@@prefix}
+\def\kcmd@expand@prefix{\expandafter\kcmd@next@prefix}
+\def\kcmd@addto@prfx#1{\let\y\@undefined
+   \expandafter\def\expandafter\kcmd@prfx
+         \expandafter{\kcmd@prfx#1}\kcmd@next@addto}
+\expandafter\def\expandafter\kcmd@space@prefix\space{\kcmd@next@prefix}
+\def\kcmd@error@prefix{\@latex@error{A \string\def\space
+   (or \string\gdef\space or \string\edef\space or \string\xdef)\MessageBreak
+   was expected after \string\keycmd\MessageBreak
+   I found a \meaning\x!\MessageBreak
+   see keycommand documentation for more information}\@ehd}
+\def\key@cmd#1{\@testopt{\expandafter\@keycmd\noexpand#1}{}}
+\def\@keycmd#1[#2]{\@tempswafalse\expandafter
+   \@rc@ifdefinable\noexpand#1{\@tempswatrue}%
+   \if@tempswa
+      \let#1=\relax
+      \def\next{\kcmd@def#1{#2}}%
+   \else \def\next{\afterassignment\endgroup
+      \def\kcmd@notdefinable}%
+   \fi\next}
+\def\kcmd@relaxify{%
+   \let\commandkey\relax
+   \let\kvsetkeys\relax
+   \let\kv@parse\relax
+   \let\@testopt\relax
+   \let\kv@set@family@handler\relax
+   \let\kcmd@undefinekeys\relax
+   \let\kcmd@keyerr\relax
+   \let\kcmd@definekey\relax
+   \def\"##1"{\expandafter\noexpand\csname ##1\endcsname}}
+\def\kcmd@def#1#2{% #1=\Command, #2=key-values
+   \edef\kcmd@fam{kcmd@\expandafter\@gobble\string#1}%
+   \kcmd@relaxify
+   \edef\kcmd@def@##1{\endgroup
+      \kv@set@family@handler{\kcmd@fam}{\kcmd@keyerr{#1}{####1}{####2}}%
+      \kcmd@undefinekeys{\kcmd@gbl}{#1}%
+      \kv@parse{##1}{\kcmd@definekey{\kcmd@gbl}{#1}{\kcmd@fam}}%
+      \kcmd@gbl\protected\def#1{% entry point
+         \def\commandkey########1{\noexpand\csname\kcmd@fam @########1\endcsname}%
+         \def\"kcmd\string#1"########1[########2]{%
+               \kvsetkeys{\kcmd@fam}{########1,########2}%
+               \"\string #1"}%
+         \@testopt{\"kcmd\string#1"{##1}}{}}%
+      \let\commandkey\relax
+      \expandafter\expandafter\expandafter
+         \expandafter\expandafter\expandafter
+            \expandafter\kcmd@prfx\"\string#1"%
+   }\kcmd@def@{#2}}
+\def\kcmd@keyerr#1#2#3{%
+   \let\wheremsg\@empty
+   \ifdefined\trcg@where\trcg@where{#1}\fi
+   \@latex@error{There was no key "#2" \MessageBreak
+      in the keycommand \string#1!\MessageBreak
+      see the definition of the keycommand (or environment)\wheremsg}\@ehd}
+\DeclareRobustCommand\newkeycommand{\@star@or@long
+   {\expandafter\new@keycommand\noexpand}}
+\DeclareRobustCommand\renewkeycommand{\@star@or@long
+   {\expandafter\renew@keycommand\noexpand}}
+\DeclareRobustCommand\providekeycommand{\@star@or@long
+   {\expandafter\provide@keycommand\noexpand}}
+\def\new@keycommand#1{\@testopt{\expandafter\@newkeycommand\noexpand#1}{}}
+\def\@newkeycommand#1[#2]{\begingroup
+   \@tempswafalse\expandafter
+   \@ifdefinable\noexpand#1{\@tempswatrue}%
+   \if@tempswa
+      \let#1=\relax
+      \let\kcmd@gbl\@empty
+      \def\kcmd@prfx##1{\unexpanded{\@testopt{\@argdef{##1}}0}}%
+      \def\next{\kcmd@def#1{#2}}%
+   \else \def\next{\afterassignment\endgroup
+      \def\kcmd@notdefinable}%
+   \fi\next}
+\def\renew@keycommand#1{\begingroup
+   \escapechar\m@ne\edef\@gtempa{{\string#1}}%
+   \expandafter\@ifundefined\@gtempa
+      {\endgroup\@latex@error{\noexpand#1undefined}\@ehc}
+      \endgroup
+   \let\@ifdefinable\@rc@ifdefinable
+   \expandafter\new@keycommand\noexpand#1}
+\def\provide@keycommand#1{\begingroup
+   \escapechar\m@ne\edef\@gtempa{{\string#1}}%
+   \expandafter\@ifundefined\@gtempa
+      {\endgroup\new@keycommand#1}
+      {\endgroup\let\kcmd@notdefinable\noexpand
+      \renew@keycommand\kcmd@notdefinable}}
+\DeclareRobustCommand\newkeyenvironment{\@star@or@long\new@keyenvironment}
+\DeclareRobustCommand\renewkeyenvironment{\@star@or@long\renew@keyenvironment}
+\def\new@keyenvironment#1{\@testopt{\@newkeyenva{#1}}{}}
+\def\@newkeyenva#1[#2]{%
+   \kernel@ifnextchar [{\@newkeyenvb{#1}[{#2}]}{\@newkeyenv{#1}{[{#2}][0]}}}
+\def\@newkeyenvb#1[#2][#3]{\@newkeyenv{#1}{[{#2}][#3]}}
+\def\@newkeyenv#1#2#3#4{%
+   \@ifundefined{#1}%
+      {\expandafter\let\csname #1\expandafter\endcsname
+            \csname end#1\endcsname}%
+      \relax
+   \expandafter\@newkeycommand
+      \csname #1\endcsname#2{#3}%
+   \l@ngrel@x\expandafter\def\csname end#1\endcsname{#4}}
+\def\renew@keyenvironment#1{%
+  \@ifundefined{#1}%
+     {\@latex@error{Environment #1 undefined}\@ehc
+     }\relax
+  \expandafter\let\csname#1\endcsname\relax
+  \expandafter\let\csname\expandafter\string\csname #1\endcsname\endcsname\relax
+  \expandafter\let\csname end#1\endcsname\relax
+  \new@keyenvironment{#1}}
+
+
+\def\kcmd@afterelse#1\else#2\fi{\fi#1}
+\def\kcmd@afterfi#1\fi{\fi#1}
+\newcommand\kcmd@expandnext[2]{%
+   \ifx#1\kcmd@expandnext
+      \kcmd@afterelse\expandafter\expandafter\expandafter
+            \expandafter\@kcmd@expandnext{#2}{\expandafter\expandafter\expandafter}%
+   \else\kcmd@afterfi\expandafter#1\expandafter{#2}%
+   \fi}
+\long\def\@kcmd@expandnext#1#2#3{%
+   \ifx#1\kcmd@expandnext
+      \expandafter\kcmd@afterelse\expandafter\expandafter\expandafter
+            \expandafter\@kcmd@expandnext{#3}{\expandafter#2#2}%
+   \else
+      \expandafter\kcmd@afterfi#2#1#2{#3}%
+   \fi}
+\def\kcmd@expandonce#1{\unexpanded\expandafter{#1}}
+\begingroup\catcode`\:=4\catcode`\&=4
+\gdef\kcmd@ifblank#1{\kcmd@ifblank@#1&&\@secondoftwo\@firstoftwo:}
+\gdef\kcmd@ifblank@#1#2&#3#4#5:{#4}
+\endgroup
+\newcommand\ifcommandkey[3]{%
+   \kcmd@expandnext\kcmd@expandnext\kcmd@expandnext\kcmd@expandnext\kcmd@expandnext
+   \kcmd@expandnext\kcmd@expandnext\kcmd@expandnext\kcmd@expandnext\kcmd@expandnext
+   \kcmd@expandnext\kcmd@expandnext\kcmd@expandnext\kcmd@ifblank{%
+      \kcmd@expandnext\kcmd@expandnext\kcmd@expandonce{\commandkey{#1}}}
+      {#3}
+      {#2}}
+\kcmd@AtEnd
+\endinput
+%%
+%% End of file `keycommand.sty'.

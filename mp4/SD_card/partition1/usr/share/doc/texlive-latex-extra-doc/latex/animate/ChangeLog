@@ -1,0 +1,76 @@
+2009-10-08
+	* New: embedding files and pages in reverse order now possible with
+	\animategraphics
+
+2009-10-02
+	* small code changes
+
+2009-09-30
+	* small code changes
+
+2009-09-24
+	* DVI resolution is now checked during PS to PDF conversion and a warning
+	message is written to stderr if it is >1200dpi. Large dpi values may
+	lead to distorted animations when using Ghostscript ps2pdf.
+
+2009-08-31
+	* small code and documentation adjustments
+
+2009-08-17
+	* small code changes
+
+2009-07-23
+	* slight changes in the documentation
+
+2009-07-20
+	* New: the transparency stack can now be cleared using `c' in the
+	timeline file
+	* improved documentation of the timeline option
+	* new animateinline example (Lorenz Attractor) 
+	* Fix: animfp.sty: trailing zeros are now removed from the fractional part
+	of the result of the addition of two reals
+
+2009-06-08
+	* Fix: \newframe did not like non-integer frame rates; the same applied to
+	frame rate arguments in timeline files
+
+2009-05-07
+	* minor changes/additions in the documentation
+
+2009-01-26
+	* minor code refinements
+
+2008-10-06
+	* Fix: sometimes, when used with Powerdot document class, parts
+	of embedded graphics were missing
+
+2008-08-28
+	* Fix: package `calc' like length specifications didn't work with resizing
+	options
+
+2008-08-26
+	* \@anim@scale rewritten
+	* New: length commands \width, \height, \depth and \totalheight for use
+	with the resizing options
+
+2008-08-20
+	* New: multipage PDF support for XeTeX output driver
+	* Change: some exotic graphics formats that depend on QuickTime removed
+	from search list for XeTeX output driver
+
+2008-08-06
+	* minor modifications of the documentation
+
+2008-07-31
+	* minor code and documentation refinements
+
+2008-07-17
+	* New: start of maintaining a ChangeLog file
+	* Fix: wrong calculation of dimension variables in \multiframe command
+	* Change: stepped animations (using `step' option) don't loop any longer
+	by default if `controls' option is set; better \multiframe diagnostics of
+	wrong user input
+
+2008-07-14
+	* New: \multiframe command for building loops around parameterized
+	pictures

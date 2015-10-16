@@ -1,0 +1,9 @@
+203747207446c68697f3e7e1d1c90462  usr/lib/compiz/libccp.so
+4e72f5b438a3c9e0ee18e81684f048a6  usr/lib/compizconfig/backends/libini.so
+0824e93ac776a407f3406fa0feb00468  usr/lib/libcompizconfig.so.0.0.0
+d7dcb5c28d96ac04c040cd587b0f106d  usr/share/compiz/ccp.xml
+616150a920cf08c7348f4be15ec1cdc3  usr/share/compizconfig/extra.profile
+a858e7a6916c9e68d96205968de020dc  usr/share/compizconfig/normal.profile
+184bf131d48db2e067a78f8226ee0928  usr/share/doc/libcompizconfig0/changelog.Debian.gz
+2891dd2b26cee3f3db17ab4b2ded29d1  usr/share/doc/libcompizconfig0/copyright
+a1121df1c9f868f91275e61b874d2209  usr/share/gconf/schemas/compiz-ccp.schemas

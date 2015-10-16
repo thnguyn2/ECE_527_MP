@@ -1,0 +1,8 @@
+\ctable{c}{
+  \tnote{First note}
+  \tnote[b]{Second note}
+  \tnote[c]{Third note}
+}{\FL Table's\tmark\ first\tmark[b]\ row
+      with footnotes\tmark[c]\LL}
+
+$Id: 12a,v 1.2 2008-04-12 15:33:16 wybo Exp $

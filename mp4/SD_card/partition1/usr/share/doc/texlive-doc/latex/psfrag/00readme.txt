@@ -1,0 +1,1 @@
+../../../texlive-latex-recommended-doc/latex/psfrag/00readme.txt

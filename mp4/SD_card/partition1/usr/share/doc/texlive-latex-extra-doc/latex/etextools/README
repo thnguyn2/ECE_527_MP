@@ -1,0 +1,30 @@
+% etextools v3.1 - (pretty stable ;) - 2009/09/30
+% This work consists of the main source file etextools.dtx
+% and the derived files
+%      etextools.sty, etextools.pdf, etextools.ins,
+%      examples will be uploaded later...
+% Unpacking:
+%    (a) If etextools.ins is present:
+%           etex etextools.ins
+%    (b) Without etextools.ins:
+%           etex etextools.dtx
+%    (c) If you insist on using LaTeX
+%           latex \let\install=y\input{etextools.dtx}
+%        (quote the arguments according to the demands of your shell)
+% Documentation: (pdf)latex etextools.dtx; ...
+% -----------------------------------------------------------------------------------------
+    *** The List of Commands is in page 3 of the documentation. ***
+etextools provides many (purely expandable) tools for LaTeX -------------------------------
+- Extensive list management (csv lists, lists of single tokens/characters, etoolbox lists):
+   . purely expandable loops (csvloop, forcsvloop etc.)
+   . conversion (csvtolist etc.))
+   . addition/deletion (csvadd, listdel etc.)
+   . purely expandable linear interpolation (interval, locinterplin)
+- Tests on strings (among them \ifstrnum to check if a string could be parsed by eTeX's \number)
+- Selective detokenization (\detokenizeChars) and character-test
+- Purely expandable macros with options (\FE@testopt) or modifiers (\FE@modifiers)
+- Vectorized form of \futurelet: \futuredef can read more than one single token
+
+              The pdf documentation contains a lot of example in verbatim.
+                         *** Any suggestion welcome ! ***
+% -----------------------------------------------------------------------------------------

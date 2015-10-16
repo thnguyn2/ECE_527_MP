@@ -1,0 +1,1 @@
+../../../texlive-latex-extra-doc/latex/fink/fink.el

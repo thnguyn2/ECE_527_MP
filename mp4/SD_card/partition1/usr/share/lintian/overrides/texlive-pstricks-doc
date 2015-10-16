@@ -1,0 +1,4 @@
+texlive-pstricks-doc: zero-byte-file-in-doc-directory
+texlive-pstricks-doc: extra-license-file
+texlive-pstricks-doc: script-not-executable
+texlive-pstricks-doc: wrong-name-for-upstream-changelog

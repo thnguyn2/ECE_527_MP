@@ -1,0 +1,8 @@
+294773a2eeebae750651a724c1ff5e2c  usr/bin/bbox
+5d008a3b4995ed139df73418e10d116a  usr/bin/ps2eps
+6d8114253c980bb768b7f646f5c0e5fb  usr/share/doc/ps2eps/README
+4b864d9d0ca2e17271b85bf1e455b172  usr/share/doc/ps2eps/README.Debian
+34c7d9cd652767bc52957086f0fabed2  usr/share/doc/ps2eps/changelog.Debian.gz
+9c874b16d9611f796b5f2f667c7e5314  usr/share/doc/ps2eps/copyright
+659c5258d0d61ff98c53ac8d597a1b66  usr/share/man/man1/bbox.1.gz
+f4fce9bf8ff33eb32ae13c7826087183  usr/share/man/man1/ps2eps.1.gz

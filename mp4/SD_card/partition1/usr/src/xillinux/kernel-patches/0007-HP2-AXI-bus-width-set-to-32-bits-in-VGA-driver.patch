@@ -1,0 +1,114 @@
+From fd14f196f3db45d23feeca4d7c3cf1cb5209f0a6 Mon Sep 17 00:00:00 2001
+From: Eli Billauer <eli.billauer@gmail.com>
+Date: Tue, 11 Sep 2012 18:21:16 +0300
+Subject: [PATCH 7/8] HP2 AXI bus width set to 32 bits in VGA driver
+
+It should be done by some driver taking its information from the device tree.
+But the kernel port to Zynq isn't there yet.
+
+Signed-off-by: Eli Billauer <eli.billauer@gmail.com>
+---
+ drivers/video/xillyvga.c |   51 +++++++++++++++++++++++++++++++++++++++++++++-
+ 1 files changed, 50 insertions(+), 1 deletions(-)
+
+diff --git a/drivers/video/xillyvga.c b/drivers/video/xillyvga.c
+index 4893a50..676e876 100644
+--- a/drivers/video/xillyvga.c
++++ b/drivers/video/xillyvga.c
+@@ -107,6 +107,7 @@ struct xillyvga_drvdata {
+ 
+ 	u32		pseudo_palette[PALETTE_ENTRIES_NO];
+ 					/* Fake palette of 16 colors */
++	void *afi;  /* Pointer to AFI control registers. To be removed. */
+ };
+ 
+ #define to_xillyvga_drvdata(_info) \
+@@ -181,6 +182,17 @@ static struct fb_ops xillyvga_ops =
+  * Bus independent setup/teardown
+  */
+ 
++#define AFIBASE 0xF8008000
++
++#define AFI0BASE 0x00000000
++#define AFI1BASE 0x00001000
++#define AFI2BASE 0x00002000
++#define AFI3BASE 0x00003000
++
++/* Offsets */
++#define AFI_RDCHAN_CTRL 0x00
++#define AFI_WRCHAN_CTRL 0x14
++
+ static int xillyvga_assign(struct device *dev,
+ 			   struct xillyvga_drvdata *drvdata,
+ 			   unsigned long physaddr,
+@@ -206,6 +218,34 @@ static int xillyvga_assign(struct device *dev,
+ 		goto err_map;
+ 	}
+ 
++	/*
++	 * UGLY HACK ALERT:
++	 * The HP2 AXI3 bus interface is used in 32-bit mode, which must be
++	 * set in the relevant registers. This may have been done OK by
++	 * FSBL, but let's not trust that. May not work if a driver has
++	 * taken over this memory region (which doesn't seems to be planned)
++	 */
++
++	if  (!request_mem_region(AFIBASE + AFI2BASE, 0x1000, DRIVER_NAME)) {
++		printk(KERN_ERR DRIVER_NAME ": AFI request_mem_region failed. Aborting.\n");
++		rc = -EBUSY;
++		goto failed_request_afi;
++	}
++
++	drvdata->afi = ioremap(AFIBASE + AFI2BASE, 0x1000);
++
++	if (!drvdata->afi) {
++		printk(KERN_ERR DRIVER_NAME ": Failed to map AFI I/O memory. Aborting.\n");
++		rc = -EBUSY;
++		goto failed_iomap_afi;
++	}
++
++	iowrite32(ioread32(drvdata->afi + AFI_RDCHAN_CTRL) | 1,
++		  drvdata->afi + AFI_RDCHAN_CTRL);
++	iowrite32(ioread32(drvdata->afi + AFI_WRCHAN_CTRL) | 1,
++		  drvdata->afi + AFI_WRCHAN_CTRL);
++
++
+ 	/* Allocate the framebuffer memory */
+ 	drvdata->fb_virt = dma_alloc_coherent(dev, PAGE_ALIGN(fbsize),
+ 					      &drvdata->fb_phys, GFP_KERNEL);
+@@ -301,8 +341,13 @@ err_noalign:
+ 	dma_free_coherent(dev, PAGE_ALIGN(fbsize), drvdata->fb_virt,
+ 			  drvdata->fb_phys);
+ 
+-
+ err_fbmem:
++	iounmap(drvdata->afi);
++
++failed_iomap_afi:
++	release_mem_region(AFIBASE + AFI0BASE, 0x1000);
++
++failed_request_afi:
+ 	iounmap(drvdata->registers);
+ 
+ err_map:
+@@ -333,6 +378,9 @@ static int xillyvga_release(struct device *dev)
+ 	dma_free_coherent(dev, PAGE_ALIGN(drvdata->info.fix.smem_len),
+ 			  drvdata->fb_virt, drvdata->fb_phys);
+ 
++	iounmap(drvdata->afi);
++	release_mem_region(AFIBASE + AFI0BASE, 0x1000);
++
+ 	iounmap(drvdata->registers);
+ 	release_mem_region(drvdata->regs_phys, 128);
+ 
+@@ -370,6 +418,7 @@ static int xillyvga_of_probe(struct platform_device *op)
+ 	}
+ 
+ 	dev_set_drvdata(&op->dev, drvdata);
++
+ 	return xillyvga_assign(&op->dev, drvdata, res.start, &pdata);
+ 
+  err:
+-- 
+1.7.2.3
+

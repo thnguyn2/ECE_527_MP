@@ -1,0 +1,239 @@
+\NeedsTeXFormat{LaTeX2e}[1994/12/01]
+\ProvidesPackage{niceverb}[2009/04/15 v0.2
+                           minimize \string\verb\space code (UL)] 
+
+%% Copyright (C) 2009 Uwe Lueck, 
+%% http://www.contact-ednotes.sty.de.vu 
+%% -- author-maintained in the sense of LPPL below -- 
+%%
+%% This file can be redistributed and/or modified under 
+%% the terms of the LaTeX Project Public License; either 
+%% version 1.3a of the License, or any later version.
+%% The latest version of this license is in
+%%     http://www.latex-project.org/lppl.txt
+%% We did our best to help you, but there is NO WARRANTY. 
+%%
+%% Please report bugs, problems, and suggestions via 
+%% 
+%%   http://www.contact-ednotes.sty.de.vu 
+%%
+%% === Switching category codes ===
+\providecommand{\CatCode}{\catcode`}
+% \providecommand*{\MakeActive}[1]{\CatCode#1\active}
+\providecommand*{\MakeAlign} [1]{\CatCode#14\relax}
+\providecommand*{\MakeLetter}[1]{\CatCode#111\relax}
+\providecommand*{\MakeOther} [1]{\CatCode#112\relax}
+\providecommand*{\MakeSub}   [1]{\CatCode#18\relax}
+
+\newcommand*{\MakeActiveLet}[2]{%% cf. \@sverb & \do@noligs
+  \CatCode#1\active
+  \begingroup
+    \lccode`\~`#1\relax \lowercase{\endgroup \let~#2}} 
+
+\MakeLetter\_
+
+% \newcommand*{\make_iii_other}{\MakeOther\\\MakeOther\{\MakeOther\}}
+  %% <- replaced 2009/04/05
+%% === Sloppy variant of &\verb ===
+\newcommand*{\begin_min_verb}{% 
+  \relax \ifmmode \hbox \else \leavevmode\null \fi 
+    %% <- standard, for $$...$$
+  \bgroup \tt %%%\let\do\MakeOther \dospecials
+    \MakeLetter\_\MakeLetter\@}
+\newcommand*{\SimpleVerb}[1]{%
+%% Mainly avoid `\verb''s noligs list which overrides definitions 
+%% of some active characters, while 'cmtt' doesn't have any 
+%% ligatures anyway. 
+  \ifx\protect\@typeset@protect
+    \begin_min_verb %%%\make_iii_other %% much usual 2009/04/05
+      \let\do\MakeOther \dospecials    %% 2009/04/06
+      \MakeOther\|%% probably 'niceverb'
+      \MakeActiveLet#1\niceverb_egroup %% 2009/04/11
+      \verb@eol@error %% TODO change message 2009/04/09
+  \else \string\SimpleVerb \string#1\fi}
+%% 2009/04/11: about `etc.'
+\newcommand*{\niceverb_egroup}{\egroup\ifmmode\else\@\fi} 
+%%
+%% === Single quotes typeset meta-code ===
+\newcommand*{\lq_verb}{%
+  \ifx\protect\@typeset@protect
+    \expandafter \lq_double_test
+  \else \lq \fi}
+%     \ifcat\noexpand'\noexpand~%
+%       \expandafter\expandafter\expandafter 
+%         \protect_corresp_quotes
+%     \else
+%       \rq_verb
+%     \fi
+%   \fi}
+\newcommand*{\lq_double_test}{%
+  %% test settles next catcode, better switch to ``other'' 
+  %% in advance:
+  \begingroup \let\do\MakeOther \dospecials 
+    \futurelet\let_token \lq_double_decide}
+\newcommand*{\lq_double_decide}{%
+  \ifx\let_token\lq_verb
+      \endgroup
+    \lq\lq \expandafter \@gobble
+%% Corresponding right quotes will become ``other'' due to 
+%% having no space at the left. 
+  %%TODO to be changed with 'wiki.sty'.
+  \else
+      \endgroup
+%     \expandafter \rq_verb
+    \expandafter \SimpleVerb \expandafter \'%
+  \fi}
+% \newcommand*{\rq_verb}{\SimpleVerb\'} 
+% \AtBeginDocument{\MakeActiveLet\`\rq_verb}
+\AtBeginDocument{\MakeActiveLet\`\lq_verb}
+  %% Strings referred to will be code
+  %% TODO to be changed with wiki.sty
+%%
+%% === Ampersand typesets meta-code ===
+\newcommand*{\CmdSyntaxVerb}{% 
+  \ifx\protect\@typeset@protect
+    \expandafter \cmd_syntax_verb
+  \else %% thinking of .aux only
+    \string\CmdSyntaxVerb \expandafter \string
+  \fi}
+\newcommand*{\cmd_syntax_verb}[1]{%
+  \begin_min_verb \string#1\futurelet\let_token \after_cs}
+
+\AtBeginDocument{\MakeActiveLet\&\CmdSyntaxVerb} 
+  %% not needed with \Auto... OTHERWISE useful in args!
+  %% TODO \MakeAmpCmdSyntax
+  %% TODO \let\endcell& (wie \endline, \endgraf) \MakeEndCell
+\newcommand*{\after_cs}{%
+  \ifcat\noexpand\let_token a\egroup \space
+  \else \expandafter \decide_verb \fi}
+\newcommand*{\test_more_verb}{\futurelet\let_token \decide_verb}
+\newcommand*{\decide_verb}{%
+%  \show\let_token
+    \jumpteg_on_with\bgroup\braces_verb
+    \jumpteg_on_with[\brackets_verb
+    \jumpteg_on_with*\star_verb
+  \egroup}
+    %% CAUTION/TODO wrong before (... if cmd without arg
+    %%         use \ then or choose usual verb...
+    %%         or \MakeLetter\( etc. ... or \xspace
+\newcommand*{\jumpteg_on_with}[2]{%
+  \ifx\let_token#1\do_jumpteg_with#2\fi}
+ %% TODO cf. xfor, xspace (break@loop); 
+ %% \DoOrBranch#1...#1 or so
+\def\do_jumpteg_with#1#2\egroup{\fi#1}
+\def\braces_verb#1{\string{#1\string}\test_more_verb}
+\def\brackets_verb[#1]{[#1]\test_more_verb}
+\def\star_verb*{*\test_more_verb}
+%%
+%% === Escape character typesets meta-code ===
+\DeclareRobustCommand*{\BuildCsSyntax}{% 
+  \futurelet\let_token \build_cs_syntax_sp}
+\newcommand*{\build_cs_syntax_sp}{%
+  \ifx\let_token\@sptoken \else %% TODO ^^M!?
+    \expandafter \start_build_cs_syntax
+  \fi}
+\newcommand*{\start_build_cs_syntax}[1]{%
+  \edef\string_built{\string#1}%% #1 may be active
+  \MakeLetter\_\MakeLetter\@%% CAUTION, cf. ...
+  \test_more_cs}
+\newcommand*{\test_more_cs}{%
+  \futurelet\let_token \decide_more_cs}
+\newcommand*{\decide_more_cs}{%
+  \ifcat\noexpand\let_token a\expandafter \add_to_cs
+  \else 
+    \MakeSub\_\MakeOther\@%
+    \expandafter \in@ \expandafter
+      {\csname \string_built \expandafter \endcsname 
+        \expandafter}\expandafter{\niceverbNoVerbList}%
+    \ifin@
+      \csname \string_built 
+        \expandafter\expandafter\expandafter \endcsname
+    \else
+      \begin_min_verb \@backslashchar\string_built
+        \expandafter\expandafter\expandafter \test_more_verb
+    \fi
+  \fi}
+  %% TODO such \if nestings with ifthen!? 
+ %% cf.:
+%  \let\let_token,\typeout{\meaning\let_token} 
+  %% TEST TODO fuer xspace!? (\ifin@)
+\newcommand*{\add_to_cs}[1]{% 
+  \edef\string_built{\string_built#1}\test_more_cs}
+\newcommand*{\AutoCmdSyntaxVerb}{\MakeActiveLet\\\BuildCsSyntax}
+  %% TODO or \niceverbswitch...
+
+\newcommand*{\EndAutoCmdSyntaxVerb}{\CatCode\\\z@}
+\newcommand*{\NormalCommand}{} \let\NormalCommand\@nameuse
+  %% Were tests:
+%  \futurelet\LetToken\relax \relax 
+%  \show\LetToken \typeout{\ifcat\noexpand\LetToken aa\else x\fi}
+
+\newcommand*{\niceverbNoVerbList}{%
+  \begin\end\item\verb\EndAutoCmdSyntaxVerb\NormalCommand
+  \section\subsection\subsubsection}%% TODO!?
+\providecommand*{\AddToMacro}[1]{%
+  \expandafter \def \expandafter #1\expandafter}
+%%
+%% === Meta-variables ===
+\def\niceverb_meta#1>{%
+  \mbox{\normalfont\itshape $\langle$#1\/$\rangle$}} 
+  %% TODO offer without angles as well
+\AtBeginDocument{\MakeActiveLet\<\niceverb_meta}
+  %% difference to ltxguide.cls: also outside verbatim
+%%
+%% === Hash mark is code ===
+\newcommand*{\param_verb}[1]{{\tt\##1}}
+\AtBeginDocument{\MakeActiveLet\#\param_verb}
+%%
+%% === Single right quote for &\textsf ===
+\newcommand*{\niceverb_rq_sf}{%
+%   \relax %% in case of \hskip1sp 2009/04/08 
+           %% but spoils ligature  2009/04/09
+  \ifx\protect\@typeset@protect
+    \expandafter \niceverb_rq_sf_test
+  \else \rq \fi}
+%% Another macro just to avoid more sequences of `\expandafter':
+\newcommand*{\niceverb_rq_sf_test}{%
+  \ifhmode 
+    \ifdim\lastskip>\z@ 
+      \expandafter\expandafter\expandafter \niceverb_rq_sf_exec
+    \else 
+      \ifnum\spacefactor=1001 %% in parentheses 2009/04/10
+        \expandafter\expandafter\expandafter\expandafter
+          \expandafter\expandafter\expandafter 
+            \niceverb_rq_sf_exec
+      \else \rq \fi
+%       \rq
+    \fi
+  \else \ifvmode 
+    \expandafter\expandafter\expandafter \niceverb_rq_sf_exec
+    \else \rq \fi
+  \fi}
+\sfcode`\(=1001 %% enable in parentheses 2009/04/10
+{\CatCode\'\active \gdef\niceverb_rq_sf_exec#1'{\textsf{#1}}}
+  %% TODO to be changed with wiki.sty:
+\AtBeginDocument{\MakeActiveLet\'\niceverb_rq_sf}
+
+  %% TODO \niceverbswitch{<mode>}{<on/off>} (bzw. Doku ohne {})
+%%
+%% === Leave package mode ===
+\MakeSub\_
+
+\endinput
+%%
+%% === VERSION HISTORY ===
+
+v0.1   2009/02/21   very first, sent to CTAN
+v0.2   2009/04/04   ...NoVerbList: \subsubsection, \AddToMacro, 
+       2009/04/05   \SimpleVerb makes more other than iii
+       2009/04/06   just uses \dospecials
+       2009/04/08   debugging code for rq/sf, +\relax
+       2009/04/09   +\verb@eol@error, prepared for new doc method, 
+                    removed spurious \makeat..., -\relax (ligature), 
+       2009/04/10   ('-trick
+       2009/04/11   \@ after \SimpleVerb
+       2009/04/14   noted TODO below
+       2009/04/15   change v0.1 to 2009/02/21
+
+TODO: choose expansions of active characters by options 2009/04/10
+TODO: &\@tempa and &\_tempa fail 2009/04/14

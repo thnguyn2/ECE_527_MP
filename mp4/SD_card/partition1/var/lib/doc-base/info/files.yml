@@ -1,0 +1,130 @@
+---
+~1/cups:
+  CT: 1394969440
+  ID: cups
+~1/dc:
+  CT: 1394969440
+  ID: dc
+~1/debian-tex-policy:
+  CT: 1438069085
+  ID: debian-tex-policy
+~1/doc-base:
+  CT: 1394969440
+  ID: doc-base
+~1/dvd+rw-tools:
+  CT: 1394969440
+  ID: dvd+rw-tools
+~1/espeak-documentation:
+  CT: 1394969440
+  ID: espeak-documentation
+~1/expat:
+  CT: 15126
+  ID: expat
+~1/findutils:
+  CT: 1394969440
+  ID: findutils
+~1/fontconfig-devel:
+  CT: 15131
+  ID: fontconfig-devel
+~1/fontconfig-user:
+  CT: 1394969440
+  ID: fontconfig-user
+~1/foo2zjs:
+  CT: 1394969440
+  ID: foo2zjs
+~1/gnupginterface:
+  CT: 1394969440
+  ID: gnupginterface
+~1/initramfs-maintainer:
+  CT: 1438071684
+  ID: initramfs-maintainer
+~1/install-docs-man:
+  CT: 1394969440
+  ID: install-docs-man
+~1/kbd-font-formats:
+  CT: 1394969440
+  ID: kbd-font-formats
+~1/lacheck:
+  CT: 1438069296
+  ID: lacheck
+~1/latex-beamer:
+  CT: 1438069303
+  ID: latex-beamer
+~1/latex-xcolor:
+  CT: 1438069290
+  ID: latex-xcolor
+~1/libexif-api:
+  CT: 3603
+  ID: libexif-api
+~1/libfreetype6-dev:
+  CT: 15129
+  ID: libfreetype6-dev
+~1/libpng12:
+  CT: 1394969440
+  ID: libpng12
+~1/libusb-dev:
+  CT: 3604
+  ID: libusb-dev
+~1/luatex-reference:
+  CT: 1438069143
+  ID: luatex-reference
+~1/man-db:
+  CT: 1394969440
+  ID: man-db
+~1/nano:
+  CT: 1394969440
+  ID: nano
+~1/nano-faq:
+  CT: 1394969440
+  ID: nano-faq
+~1/nat:
+  CT: 1394969440
+  ID: nat
+~1/packet-filter:
+  CT: 1394969440
+  ID: packet-filter
+~1/pgf:
+  CT: 1438069300
+  ID: pgf
+~1/pnm2ppa-calibrate:
+  CT: 1394969440
+  ID: pnm2ppa-calibrate
+~1/pnm2ppa-color:
+  CT: 1394969440
+  ID: pnm2ppa-color
+~1/pnm2ppa-ppa-networking:
+  CT: 1394969440
+  ID: pnm2ppa-ppa-networking
+~1/po-debconf:
+  CT: 1438069136
+  ID: po-debconf
+~1/preview-latex-style:
+  CT: 1438069211
+  ID: preview-latex-style
+~1/python-policy:
+  CT: 1394969440
+  ID: python-policy
+~1/python-pycurl:
+  CT: 1394969440
+  ID: python-pycurl
+~1/shared-mime-info:
+  CT: 1438071989
+  ID: shared-mime-info
+~1/tex-on-debian:
+  CT: 1438069085
+  ID: tex-on-debian
+~1/time:
+  CT: 1394969440
+  ID: time
+~1/users-and-groups:
+  CT: 1394969440
+  ID: users-and-groups
+~1/xapian-python-docs:
+  CT: 1394969440
+  ID: xapian-python-docs
+~1/xterm-ctlseqs:
+  CT: 1394969440
+  ID: xterm-ctlseqs
+~1/xterm-faq:
+  CT: 1394969440
+  ID: xterm-faq

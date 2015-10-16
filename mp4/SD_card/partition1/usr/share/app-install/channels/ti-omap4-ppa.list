@@ -1,0 +1,4 @@
+# channel for the omap4 support packages from TI
+#
+#:description:This channel contains additional software from TI to improve omap4
+deb http://ppa.launchpad.net/tiomap-dev/release/ubuntu oneiric main

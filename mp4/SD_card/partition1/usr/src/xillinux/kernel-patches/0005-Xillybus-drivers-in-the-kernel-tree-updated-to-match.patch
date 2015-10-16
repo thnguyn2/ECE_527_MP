@@ -1,0 +1,679 @@
+From 209126baad1d9cdb0230318d6a2fc42745dd181b Mon Sep 17 00:00:00 2001
+From: Eli Billauer <eli.billauer@gmail.com>
+Date: Tue, 18 Feb 2014 19:47:10 +0200
+Subject: [PATCH 5/8] Xillybus drivers (in the kernel tree) updated to match 3.14-rc3
+
+Among others, this adds support for coherent DMA (through ACP)
+
+Signed-off-by: Eli Billauer <eli.billauer@gmail.com>
+---
+ drivers/staging/xillybus/Kconfig         |    6 +-
+ drivers/staging/xillybus/xillybus_core.c |  153 ++++++++++++++----------------
+ drivers/staging/xillybus/xillybus_of.c   |   53 ++++++----
+ drivers/staging/xillybus/xillybus_pcie.c |   31 +++---
+ 4 files changed, 121 insertions(+), 122 deletions(-)
+
+diff --git a/drivers/staging/xillybus/Kconfig b/drivers/staging/xillybus/Kconfig
+index 8a4181f..75c38c8 100644
+--- a/drivers/staging/xillybus/Kconfig
++++ b/drivers/staging/xillybus/Kconfig
+@@ -4,7 +4,7 @@
+ 
+ config XILLYBUS
+ 	tristate "Xillybus generic FPGA interface"
+-	depends on PCI || (OF_ADDRESS && OF_IRQ) && m
++	depends on PCI || (OF_ADDRESS && OF_IRQ)
+ 	help
+ 	  Xillybus is a generic interface for peripherals designed on
+ 	  programmable logic (FPGA). The driver probes the hardware for
+@@ -16,14 +16,14 @@ if XILLYBUS
+ 
+ config XILLYBUS_PCIE
+ 	tristate "Xillybus over PCIe"
+-	depends on XILLYBUS && PCI
++	depends on PCI
+ 	help
+ 	  Set to M if you want Xillybus to use PCI Express for communicating
+ 	  with the FPGA.
+ 
+ config XILLYBUS_OF
+ 	tristate "Xillybus over Device Tree"
+-	depends on XILLYBUS && OF_ADDRESS && OF_IRQ
++	depends on OF_ADDRESS && OF_IRQ
+ 	help
+ 	  Set to M if you want Xillybus to find its resources from the
+ 	  Open Firmware Flattened Device Tree. If the target is an embedded
+diff --git a/drivers/staging/xillybus/xillybus_core.c b/drivers/staging/xillybus/xillybus_core.c
+index 7db6f03..2ebaf16 100644
+--- a/drivers/staging/xillybus/xillybus_core.c
++++ b/drivers/staging/xillybus/xillybus_core.c
+@@ -101,7 +101,7 @@ static struct workqueue_struct *xillybus_wq;
+  * wr_mutex -> rd_mutex -> register_mutex -> wr_spinlock -> rd_spinlock
+  */
+ 
+-static void malformed_message(u32 *buf)
++static void malformed_message(struct xilly_endpoint *endpoint, u32 *buf)
+ {
+ 	int opcode;
+ 	int msg_channel, msg_bufno, msg_data, msg_dir;
+@@ -112,9 +112,9 @@ static void malformed_message(u32 *buf)
+ 	msg_bufno = (buf[0] >> 12) & 0x3ff;
+ 	msg_data = buf[1] & 0xfffffff;
+ 
+-	pr_warn("xillybus: Malformed message (skipping): "
+-		"opcode=%d, channel=%03x, dir=%d, bufno=%03x, data=%07x\n",
+-		opcode, msg_channel, msg_dir, msg_bufno, msg_data);
++	dev_warn(endpoint->dev,
++		 "Malformed message (skipping): opcode=%d, channel=%03x, dir=%d, bufno=%03x, data=%07x\n",
++		 opcode, msg_channel, msg_dir, msg_bufno, msg_data);
+ }
+ 
+ /*
+@@ -152,16 +152,16 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 
+ 	for (i = 0; i < buf_size; i += 2)
+ 		if (((buf[i+1] >> 28) & 0xf) != ep->msg_counter) {
+-			malformed_message(&buf[i]);
+-			pr_warn("xillybus: Sending a NACK on "
+-				"counter %x (instead of %x) on entry %d\n",
++			malformed_message(ep, &buf[i]);
++			dev_warn(ep->dev,
++				 "Sending a NACK on counter %x (instead of %x) on entry %d\n",
+ 				((buf[i+1] >> 28) & 0xf),
+ 				ep->msg_counter,
+ 				i/2);
+ 
+ 			if (++ep->failed_messages > 10)
+-				pr_err("xillybus: Lost sync with "
+-				       "interrupt messages. Stopping.\n");
++				dev_err(ep->dev,
++					"Lost sync with interrupt messages. Stopping.\n");
+ 			else {
+ 				ep->ephw->hw_sync_sgl_for_device(
+ 					ep,
+@@ -177,7 +177,7 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 			break;
+ 
+ 	if (i >= buf_size) {
+-		pr_err("xillybus: Bad interrupt message. Stopping.\n");
++		dev_err(ep->dev, "Bad interrupt message. Stopping.\n");
+ 		return IRQ_HANDLED;
+ 	}
+ 
+@@ -196,7 +196,7 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 
+ 			if ((msg_channel > ep->num_channels) ||
+ 			    (msg_channel == 0)) {
+-				malformed_message(&buf[i]);
++				malformed_message(ep, &buf[i]);
+ 				break;
+ 			}
+ 
+@@ -204,7 +204,7 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 
+ 			if (msg_dir) { /* Write channel */
+ 				if (msg_bufno >= channel->num_wr_buffers) {
+-					malformed_message(&buf[i]);
++					malformed_message(ep, &buf[i]);
+ 					break;
+ 				}
+ 				spin_lock(&channel->wr_spinlock);
+@@ -221,7 +221,7 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 				/* Read channel */
+ 
+ 				if (msg_bufno >= channel->num_rd_buffers) {
+-					malformed_message(&buf[i]);
++					malformed_message(ep, &buf[i]);
+ 					break;
+ 				}
+ 
+@@ -243,14 +243,14 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 			if ((msg_channel > ep->num_channels) ||
+ 			    (msg_channel == 0) || (!msg_dir) ||
+ 			    !ep->channels[msg_channel]->wr_supports_nonempty) {
+-				malformed_message(&buf[i]);
++				malformed_message(ep, &buf[i]);
+ 				break;
+ 			}
+ 
+ 			channel = ep->channels[msg_channel];
+ 
+ 			if (msg_bufno >= channel->num_wr_buffers) {
+-				malformed_message(&buf[i]);
++				malformed_message(ep, &buf[i]);
+ 				break;
+ 			}
+ 			spin_lock(&channel->wr_spinlock);
+@@ -283,16 +283,11 @@ irqreturn_t xillybus_isr(int irq, void *data)
+ 		case XILLYMSG_OPCODE_FATAL_ERROR:
+ 			ep->fatal_error = 1;
+ 			wake_up_interruptible(&ep->ep_wait); /* For select() */
+-			pr_err("xillybus: FPGA reported a fatal "
+-			       "error. This means that the low-level "
+-			       "communication with the device has failed. "
+-			       "This hardware problem is most likely "
+-			       "unrelated to xillybus (neither kernel "
+-			       "module nor FPGA core), but reports are "
+-			       "still welcome. All I/O is aborted.\n");
++			dev_err(ep->dev,
++				"FPGA reported a fatal error. This means that the low-level communication with the device has failed. This hardware problem is most likely unrelated to Xillybus (neither kernel module nor FPGA core), but reports are still welcome. All I/O is aborted.\n");
+ 			break;
+ 		default:
+-			malformed_message(&buf[i]);
++			malformed_message(ep, &buf[i]);
+ 			break;
+ 		}
+ 	}
+@@ -486,8 +481,8 @@ static int xilly_setupchannels(struct xilly_endpoint *ep,
+ 
+ 		if ((channelnum > ep->num_channels) ||
+ 		    ((channelnum == 0) && !is_writebuf)) {
+-			pr_err("xillybus: IDT requests channel out "
+-			       "of range. Aborting.\n");
++			dev_err(ep->dev,
++				"IDT requests channel out of range. Aborting.\n");
+ 			return -ENODEV;
+ 		}
+ 
+@@ -565,9 +560,8 @@ static int xilly_setupchannels(struct xilly_endpoint *ep,
+ 				 */
+ 				if ((left_of_wr_salami < bytebufsize) &&
+ 				    (left_of_wr_salami > 0)) {
+-					pr_err("xillybus: "
+-					       "Corrupt buffer allocation "
+-					       "in IDT. Aborting.\n");
++					dev_err(ep->dev,
++						"Corrupt buffer allocation in IDT. Aborting.\n");
+ 					return -ENODEV;
+ 				}
+ 
+@@ -644,9 +638,8 @@ static int xilly_setupchannels(struct xilly_endpoint *ep,
+ 				 */
+ 				if ((left_of_rd_salami < bytebufsize) &&
+ 				    (left_of_rd_salami > 0)) {
+-					pr_err("xillybus: "
+-					       "Corrupt buffer allocation "
+-					       "in IDT. Aborting.\n");
++					dev_err(ep->dev,
++						"Corrupt buffer allocation in IDT. Aborting.\n");
+ 					return -ENODEV;
+ 				}
+ 
+@@ -706,19 +699,19 @@ static int xilly_setupchannels(struct xilly_endpoint *ep,
+ 	}
+ 
+ 	if (!msg_buf_done) {
+-		pr_err("xillybus: Corrupt IDT: No message buffer. "
+-		       "Aborting.\n");
++		dev_err(ep->dev,
++			"Corrupt IDT: No message buffer. Aborting.\n");
+ 		return -ENODEV;
+ 	}
+ 
+ 	return 0;
+ 
+ memfail:
+-	pr_err("xillybus: Failed to allocate write buffer memory. "
+-	       "Aborting.\n");
++	dev_err(ep->dev,
++		"Failed to allocate write buffer memory. Aborting.\n");
+ 	return -ENOMEM;
+ dmafail:
+-	pr_err("xillybus: Failed to map DMA memory!. Aborting.\n");
++	dev_err(ep->dev, "Failed to map DMA memory!. Aborting.\n");
+ 	return -ENOMEM;
+ }
+ 
+@@ -745,8 +738,8 @@ static void xilly_scan_idt(struct xilly_endpoint *endpoint,
+ 	scan++;
+ 
+ 	if (scan > end_of_idt) {
+-		pr_err("xillybus: IDT device name list overflow. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"IDT device name list overflow. Aborting.\n");
+ 		idt_handle->chandesc = NULL;
+ 		return;
+ 	} else
+@@ -757,8 +750,8 @@ static void xilly_scan_idt(struct xilly_endpoint *endpoint,
+ 	if (len & 0x03) {
+ 		idt_handle->chandesc = NULL;
+ 
+-		pr_err("xillybus: Corrupt IDT device name list. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"Corrupt IDT device name list. Aborting.\n");
+ 	}
+ 
+ 	idt_handle->entries = len >> 2;
+@@ -787,7 +780,7 @@ static int xilly_obtain_idt(struct xilly_endpoint *endpoint)
+ 					 XILLY_TIMEOUT);
+ 
+ 	if (channel->wr_sleepy) {
+-		pr_err("xillybus: Failed to obtain IDT. Aborting.\n");
++		dev_err(endpoint->dev, "Failed to obtain IDT. Aborting.\n");
+ 
+ 		if (endpoint->fatal_error)
+ 			return -EIO;
+@@ -803,8 +796,8 @@ static int xilly_obtain_idt(struct xilly_endpoint *endpoint)
+ 		DMA_FROM_DEVICE);
+ 
+ 	if (channel->wr_buffers[0]->end_offset != endpoint->idtlen) {
+-		pr_err("xillybus: IDT length mismatch (%d != %d). "
+-		       "Aborting.\n",
++		dev_err(endpoint->dev,
++			"IDT length mismatch (%d != %d). Aborting.\n",
+ 		       channel->wr_buffers[0]->end_offset, endpoint->idtlen);
+ 		rc = -ENODEV;
+ 		return rc;
+@@ -812,7 +805,7 @@ static int xilly_obtain_idt(struct xilly_endpoint *endpoint)
+ 
+ 	if (crc32_le(~0, channel->wr_buffers[0]->addr,
+ 		     endpoint->idtlen+1) != 0) {
+-		pr_err("xillybus: IDT failed CRC check. Aborting.\n");
++		dev_err(endpoint->dev, "IDT failed CRC check. Aborting.\n");
+ 		rc = -ENODEV;
+ 		return rc;
+ 	}
+@@ -821,9 +814,8 @@ static int xilly_obtain_idt(struct xilly_endpoint *endpoint)
+ 
+ 	/* Check version number. Accept anything below 0x82 for now. */
+ 	if (*version > 0x82) {
+-		pr_err("xillybus: No support for IDT version 0x%02x. "
+-		       "Maybe the xillybus driver needs an upgarde. "
+-		       "Aborting.\n",
++		dev_err(endpoint->dev,
++			"No support for IDT version 0x%02x. Maybe the xillybus driver needs an upgarde. Aborting.\n",
+ 		       (int) *version);
+ 		rc = -ENODEV;
+ 		return rc;
+@@ -1312,9 +1304,8 @@ static int xillybus_myflush(struct xilly_channel *channel, long timeout)
+ 				 channel->rd_wait,
+ 				 (!channel->rd_full),
+ 				 timeout) == 0) {
+-			pr_warn("xillybus: "
+-				"Timed out while flushing. "
+-				"Output data may be lost.\n");
++			dev_warn(channel->endpoint->dev,
++				"Timed out while flushing. Output data may be lost.\n");
+ 
+ 			rc = -ETIMEDOUT;
+ 			break;
+@@ -1354,12 +1345,11 @@ static void xillybus_autoflush(struct work_struct *work)
+ 	rc = xillybus_myflush(channel, -1);
+ 
+ 	if (rc == -EINTR)
+-		pr_warn("xillybus: Autoflush failed because "
+-			"work queue thread got a signal.\n");
++		dev_warn(channel->endpoint->dev,
++			 "Autoflush failed because work queue thread got a signal.\n");
+ 	else if (rc)
+-		pr_err("xillybus: Autoflush failed under "
+-		       "weird circumstances.\n");
+-
++		dev_err(channel->endpoint->dev,
++			"Autoflush failed under weird circumstances.\n");
+ }
+ 
+ static ssize_t xillybus_write(struct file *filp, const char __user *userbuf,
+@@ -1615,8 +1605,8 @@ static int xillybus_open(struct inode *inode, struct file *filp)
+ 	mutex_unlock(&ep_list_lock);
+ 
+ 	if (!endpoint) {
+-		pr_err("xillybus: open() failed to find a device "
+-		       "for major=%d and minor=%d\n", major, minor);
++		pr_err("xillybus: open() failed to find a device for major=%d and minor=%d\n",
++		       major, minor);
+ 		return -ENODEV;
+ 	}
+ 
+@@ -1642,15 +1632,15 @@ static int xillybus_open(struct inode *inode, struct file *filp)
+ 	if ((filp->f_mode & FMODE_READ) && (filp->f_flags & O_NONBLOCK) &&
+ 	    (channel->wr_synchronous || !channel->wr_allow_partial ||
+ 	     !channel->wr_supports_nonempty)) {
+-		pr_err("xillybus: open() failed: "
+-		       "O_NONBLOCK not allowed for read on this device\n");
++		dev_err(endpoint->dev,
++			"open() failed: O_NONBLOCK not allowed for read on this device\n");
+ 		return -ENODEV;
+ 	}
+ 
+ 	if ((filp->f_mode & FMODE_WRITE) && (filp->f_flags & O_NONBLOCK) &&
+ 	    (channel->rd_synchronous || !channel->rd_allow_partial)) {
+-		pr_err("xillybus: open() failed: "
+-		       "O_NONBLOCK not allowed for write on this device\n");
++		dev_err(endpoint->dev,
++			"open() failed: O_NONBLOCK not allowed for write on this device\n");
+ 		return -ENODEV;
+ 	}
+ 
+@@ -1765,8 +1755,8 @@ static int xillybus_release(struct inode *inode, struct file *filp)
+ 		rc = mutex_lock_interruptible(&channel->rd_mutex);
+ 
+ 		if (rc) {
+-			pr_warn("xillybus: Failed to close file. "
+-				"Hardware left in messy state.\n");
++			dev_warn(channel->endpoint->dev,
++				 "Failed to close file. Hardware left in messy state.\n");
+ 			return rc;
+ 		}
+ 
+@@ -1791,8 +1781,8 @@ static int xillybus_release(struct inode *inode, struct file *filp)
+ 	if (filp->f_mode & FMODE_READ) {
+ 		rc = mutex_lock_interruptible(&channel->wr_mutex);
+ 		if (rc) {
+-			pr_warn("xillybus: Failed to close file. "
+-				"Hardware left in messy state.\n");
++			dev_warn(channel->endpoint->dev,
++				 "Failed to close file. Hardware left in messy state.\n");
+ 			return rc;
+ 		}
+ 
+@@ -1853,10 +1843,8 @@ static int xillybus_release(struct inode *inode, struct file *filp)
+ 
+ 				if (channel->wr_sleepy) {
+ 					mutex_unlock(&channel->wr_mutex);
+-					pr_warn("xillybus: Hardware failed to "
+-						"respond to close command, "
+-						"therefore left in "
+-						"messy state.\n");
++					dev_warn(channel->endpoint->dev,
++						 "Hardware failed to respond to close command, therefore left in messy state.\n");
+ 					return -EINTR;
+ 				}
+ 			}
+@@ -2022,7 +2010,7 @@ static int xillybus_init_chrdev(struct xilly_endpoint *endpoint,
+ 				 xillyname);
+ 
+ 	if (rc) {
+-		pr_warn("xillybus: Failed to obtain major/minors");
++		dev_warn(endpoint->dev, "Failed to obtain major/minors");
+ 		goto error1;
+ 	}
+ 
+@@ -2034,7 +2022,7 @@ static int xillybus_init_chrdev(struct xilly_endpoint *endpoint,
+ 	rc = cdev_add(&endpoint->cdev, MKDEV(major, minor),
+ 		      endpoint->num_channels);
+ 	if (rc) {
+-		pr_warn("xillybus: Failed to add cdev. Aborting.\n");
++		dev_warn(endpoint->dev, "Failed to add cdev. Aborting.\n");
+ 		goto error2;
+ 	}
+ 
+@@ -2057,14 +2045,15 @@ static int xillybus_init_chrdev(struct xilly_endpoint *endpoint,
+ 				       "%s", devname);
+ 
+ 		if (IS_ERR(device)) {
+-			pr_warn("xillybus: Failed to create %s "
+-				"device. Aborting.\n", devname);
++			dev_warn(endpoint->dev,
++				 "Failed to create %s device. Aborting.\n",
++				 devname);
+ 			goto error3;
+ 		}
+ 	}
+ 
+-	pr_info("xillybus: Created %d device files.\n",
+-		endpoint->num_channels);
++	dev_info(endpoint->dev, "Created %d device files.\n",
++		 endpoint->num_channels);
+ 	return 0; /* succeed */
+ 
+ error3:
+@@ -2093,8 +2082,8 @@ static void xillybus_cleanup_chrdev(struct xilly_endpoint *endpoint)
+ 				       endpoint->lowest_minor),
+ 				 endpoint->num_channels);
+ 
+-	pr_info("xillybus: Removed %d device files.\n",
+-		endpoint->num_channels);
++	dev_info(endpoint->dev, "Removed %d device files.\n",
++		 endpoint->num_channels);
+ }
+ 
+ 
+@@ -2107,7 +2096,7 @@ struct xilly_endpoint *xillybus_init_endpoint(struct pci_dev *pdev,
+ 
+ 	endpoint = kzalloc(sizeof(*endpoint), GFP_KERNEL);
+ 	if (!endpoint) {
+-		pr_err("xillybus: Failed to allocate memory. Aborting.\n");
++		dev_err(dev, "Failed to allocate memory. Aborting.\n");
+ 		return NULL;
+ 	}
+ 
+@@ -2141,8 +2130,8 @@ static int xilly_quiesce(struct xilly_endpoint *endpoint)
+ 					 XILLY_TIMEOUT);
+ 
+ 	if (endpoint->idtlen < 0) {
+-		pr_err("xillybus: Failed to quiesce the device on "
+-		       "exit. Quitting while leaving a mess.\n");
++		dev_err(endpoint->dev,
++			"Failed to quiesce the device on exit. Quitting while leaving a mess.\n");
+ 		return -ENODEV;
+ 	}
+ 	return 0; /* Success */
+@@ -2209,7 +2198,7 @@ int xillybus_endpoint_discovery(struct xilly_endpoint *endpoint)
+ 					 XILLY_TIMEOUT);
+ 
+ 	if (endpoint->idtlen < 0) {
+-		pr_err("xillybus: No response from FPGA. Aborting.\n");
++		dev_err(endpoint->dev, "No response from FPGA. Aborting.\n");
+ 		rc = -ENODEV;
+ 		goto failed_quiesce;
+ 	}
+@@ -2323,7 +2312,7 @@ static int __init xillybus_init(void)
+ 	xillybus_class = class_create(THIS_MODULE, xillyname);
+ 	if (IS_ERR(xillybus_class)) {
+ 		rc = PTR_ERR(xillybus_class);
+-		pr_warn("xillybus: Failed to register class xillybus\n");
++		pr_warn("Failed to register class xillybus\n");
+ 
+ 		return rc;
+ 	}
+diff --git a/drivers/staging/xillybus/xillybus_of.c b/drivers/staging/xillybus/xillybus_of.c
+index 92c2931..23a609b 100644
+--- a/drivers/staging/xillybus/xillybus_of.c
++++ b/drivers/staging/xillybus/xillybus_of.c
+@@ -31,7 +31,8 @@ static const char xillyname[] = "xillybus_of";
+ 
+ /* Match table for of_platform binding */
+ static struct of_device_id xillybus_of_match[] = {
+-	{ .compatible = "xlnx,xillybus-1.00.a", },
++	{ .compatible = "xillybus,xillybus-1.00.a", },
++	{ .compatible = "xlnx,xillybus-1.00.a", }, /* Deprecated */
+ 	{}
+ };
+ 
+@@ -53,6 +54,13 @@ static void xilly_dma_sync_single_for_device_of(struct xilly_endpoint *ep,
+ 	dma_sync_single_for_device(ep->dev, dma_handle, size, direction);
+ }
+ 
++static void xilly_dma_sync_single_nop(struct xilly_endpoint *ep,
++				      dma_addr_t dma_handle,
++				      size_t size,
++				      int direction)
++{
++}
++
+ static dma_addr_t xilly_map_single_of(struct xilly_cleanup *mem,
+ 				      struct xilly_endpoint *ep,
+ 				      void *ptr,
+@@ -101,14 +109,26 @@ static struct xilly_endpoint_hardware of_hw = {
+ 	.unmap_single = xilly_unmap_single_of
+ };
+ 
++static struct xilly_endpoint_hardware of_hw_coherent = {
++	.owner = THIS_MODULE,
++	.hw_sync_sgl_for_cpu = xilly_dma_sync_single_nop,
++	.hw_sync_sgl_for_device = xilly_dma_sync_single_nop,
++	.map_single = xilly_map_single_of,
++	.unmap_single = xilly_unmap_single_of
++};
++
+ static int xilly_drv_probe(struct platform_device *op)
+ {
+ 	struct device *dev = &op->dev;
+ 	struct xilly_endpoint *endpoint;
+ 	int rc = 0;
+ 	int irq;
++	struct xilly_endpoint_hardware *ephw = &of_hw;
+ 
+-	endpoint = xillybus_init_endpoint(NULL, dev, &of_hw);
++	if (of_property_read_bool(dev->of_node, "dma-coherent"))
++		ephw = &of_hw_coherent;
++
++	endpoint = xillybus_init_endpoint(NULL, dev, ephw);
+ 
+ 	if (!endpoint)
+ 		return -ENOMEM;
+@@ -117,22 +137,24 @@ static int xilly_drv_probe(struct platform_device *op)
+ 
+ 	rc = of_address_to_resource(dev->of_node, 0, &endpoint->res);
+ 	if (rc) {
+-		pr_warn("xillybus: Failed to obtain device tree "
+-			"resource\n");
++		dev_warn(endpoint->dev,
++			 "Failed to obtain device tree resource\n");
+ 		goto failed_request_regions;
+ 	}
+ 
+ 	if  (!request_mem_region(endpoint->res.start,
+ 				 resource_size(&endpoint->res), xillyname)) {
+-		pr_err("xillybus: request_mem_region failed. Aborting.\n");
++		dev_err(endpoint->dev,
++			"request_mem_region failed. Aborting.\n");
+ 		rc = -EBUSY;
+ 		goto failed_request_regions;
+ 	}
+ 
+ 	endpoint->registers = of_iomap(dev->of_node, 0);
+-
+ 	if (!endpoint->registers) {
+-		pr_err("xillybus: Failed to map I/O memory. Aborting.\n");
++		dev_err(endpoint->dev,
++			"Failed to map I/O memory. Aborting.\n");
++		rc = -EIO;
+ 		goto failed_iomap0;
+ 	}
+ 
+@@ -141,8 +163,8 @@ static int xilly_drv_probe(struct platform_device *op)
+ 	rc = request_irq(irq, xillybus_isr, 0, xillyname, endpoint);
+ 
+ 	if (rc) {
+-		pr_err("xillybus: Failed to register IRQ handler. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"Failed to register IRQ handler. Aborting.\n");
+ 		rc = -ENODEV;
+ 		goto failed_register_irq;
+ 	}
+@@ -198,15 +220,4 @@ static struct platform_driver xillybus_platform_driver = {
+ 	},
+ };
+ 
+-static int __init xillybus_of_init(void)
+-{
+-	return platform_driver_register(&xillybus_platform_driver);
+-}
+-
+-static void __exit xillybus_of_exit(void)
+-{
+-	platform_driver_unregister(&xillybus_platform_driver);
+-}
+-
+-module_init(xillybus_of_init);
+-module_exit(xillybus_of_exit);
++module_platform_driver(xillybus_platform_driver);
+diff --git a/drivers/staging/xillybus/xillybus_pcie.c b/drivers/staging/xillybus/xillybus_pcie.c
+index 6701365..51426d8 100644
+--- a/drivers/staging/xillybus/xillybus_pcie.c
++++ b/drivers/staging/xillybus/xillybus_pcie.c
+@@ -30,7 +30,7 @@ MODULE_LICENSE("GPL v2");
+ 
+ static const char xillyname[] = "xillybus_pcie";
+ 
+-static DEFINE_PCI_DEVICE_TABLE(xillyids) = {
++static const struct pci_device_id xillyids[] = {
+ 	{PCI_DEVICE(PCI_VENDOR_ID_XILINX, PCI_DEVICE_ID_XILLYBUS)},
+ 	{PCI_DEVICE(PCI_VENDOR_ID_ALTERA, PCI_DEVICE_ID_XILLYBUS)},
+ 	{PCI_DEVICE(PCI_VENDOR_ID_ACTEL, PCI_DEVICE_ID_XILLYBUS)},
+@@ -134,7 +134,7 @@ static int xilly_probe(struct pci_dev *pdev,
+ 	struct xilly_endpoint *endpoint;
+ 	int rc = 0;
+ 
+-	endpoint = xillybus_init_endpoint(pdev, NULL, &pci_hw);
++	endpoint = xillybus_init_endpoint(pdev, &pdev->dev, &pci_hw);
+ 
+ 	if (!endpoint)
+ 		return -ENOMEM;
+@@ -148,29 +148,29 @@ static int xilly_probe(struct pci_dev *pdev,
+ 	pci_disable_link_state(pdev, PCIE_LINK_STATE_L0S);
+ 
+ 	if (rc) {
+-		pr_err("xillybus: pci_enable_device() failed. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"pci_enable_device() failed. Aborting.\n");
+ 		goto no_enable;
+ 	}
+ 
+ 	if (!(pci_resource_flags(pdev, 0) & IORESOURCE_MEM)) {
+-		pr_err("xillybus: Incorrect BAR configuration. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"Incorrect BAR configuration. Aborting.\n");
+ 		rc = -ENODEV;
+ 		goto bad_bar;
+ 	}
+ 
+ 	rc = pci_request_regions(pdev, xillyname);
+ 	if (rc) {
+-		pr_err("xillybus: pci_request_regions() failed. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"pci_request_regions() failed. Aborting.\n");
+ 		goto failed_request_regions;
+ 	}
+ 
+ 	endpoint->registers = pci_iomap(pdev, 0, 128);
+-
+ 	if (!endpoint->registers) {
+-		pr_err("xillybus: Failed to map BAR 0. Aborting.\n");
++		dev_err(endpoint->dev, "Failed to map BAR 0. Aborting.\n");
++		rc = -EIO;
+ 		goto failed_iomap0;
+ 	}
+ 
+@@ -178,16 +178,16 @@ static int xilly_probe(struct pci_dev *pdev,
+ 
+ 	/* Set up a single MSI interrupt */
+ 	if (pci_enable_msi(pdev)) {
+-		pr_err("xillybus: Failed to enable MSI interrupts. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"Failed to enable MSI interrupts. Aborting.\n");
+ 		rc = -ENODEV;
+ 		goto failed_enable_msi;
+ 	}
+ 	rc = request_irq(pdev->irq, xillybus_isr, 0, xillyname, endpoint);
+ 
+ 	if (rc) {
+-		pr_err("xillybus: Failed to register MSI handler. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev,
++			"Failed to register MSI handler. Aborting.\n");
+ 		rc = -ENODEV;
+ 		goto failed_register_msi;
+ 	}
+@@ -202,8 +202,7 @@ static int xilly_probe(struct pci_dev *pdev,
+ 	if (!pci_set_dma_mask(pdev, DMA_BIT_MASK(32)))
+ 		endpoint->dma_using_dac = 0;
+ 	else {
+-		pr_err("xillybus: Failed to set DMA mask. "
+-		       "Aborting.\n");
++		dev_err(endpoint->dev, "Failed to set DMA mask. Aborting.\n");
+ 		rc = -ENODEV;
+ 		goto failed_dmamask;
+ 	}
+-- 
+1.7.2.3
+

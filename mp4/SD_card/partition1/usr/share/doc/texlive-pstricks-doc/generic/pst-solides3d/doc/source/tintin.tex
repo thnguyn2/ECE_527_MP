@@ -1,0 +1,26 @@
+\makeatletter
+\makeatother
+
+\definecolor{BlueDark}{cmyk}{1,1,0,0.7}
+%\psset{unit=0.75}
+\begin{pspicture*}(-5,-5)(5,6)
+\pscircle*[linecolor=BlueDark]{5}
+\psRandomStar[linecolor=yellow!50,randomPoints=200](-5,-5)(5,5){\pscircle{5}}
+\psset{lightsrc=866 0 500}
+\psset[pst-solides3d]{viewpoint=1000 0 -20 rtp2xyz,Decran=300}
+\psRandomStar[linecolor={[cmyk]{0,0,1,0.6}},
+    randomPoints=200,sizeStar=0.8pt](-5,-5)(5,5){\pscircle[linestyle=none]{5}}
+\psSolid[object=datfile,file=fusee62,deactivatecolor,grid](0,0,-2)
+%\rput(0,-6){Dernière case, page 62 : Objectif Lune}
+\end{pspicture*}
+
+
+%% \definecolor{BlueDark}{cmyk}{1,1,0,0.5}
+%% \psset{unit=0.5}
+%% \psset[pst-solides3d]{viewpoint=1000 0 20 rtp2xyz,Decran=300}
+%% \begin{pspicture}(-5,-5)(7,10)
+%% \psframe*[linecolor=BlueDark](-5,-5)(7,10)%
+%% \psRandomStar[linecolor=yellow!50,randomPoints=100](-5,-5)(7,10){\pscircle{5}}
+%% \psset{lightsrc=100 20 100}
+%% \psSolid[object=datfile,file=fusee1,grid](0,0,0)
+%% \end{pspicture}

@@ -1,0 +1,5 @@
+The termlist package provides environments to indent and label any
+kind of terms with the equation counter, like mathematical terms are
+indented and labelled inside an equation or eqnarray environment.
+
+Copyright 2008 Bernd Rellermeyer

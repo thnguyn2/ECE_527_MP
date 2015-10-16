@@ -1,0 +1,4 @@
+93f16e539222a4291e4d79fc574bc86c  usr/lib/gvfs/gvfs-fuse-daemon
+d17de82c9a85d7dad9bf743c374d3fc3  usr/share/doc/gvfs-fuse/TODO
+334978aba9b1a12476f5620e5826b4ad  usr/share/doc/gvfs-fuse/copyright
+8166c5414108573ffa29deef341d8195  usr/share/lintian/overrides/gvfs-fuse

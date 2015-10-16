@@ -1,0 +1,1 @@
+../../../texlive-latex-recommended-doc/latex/memoir/anvil2.mps

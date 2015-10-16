@@ -1,0 +1,1 @@
+../../../texlive-pictures-doc/latex/tkz-tab/readme-us.txt

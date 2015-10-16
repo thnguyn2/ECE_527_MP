@@ -1,0 +1,54 @@
+\newcommand{\Sommet}{1.4142135623730951}
+\newcommand{\PosFoyer}{2}
+\newcommand{\HypAngle}{0}
+\setcounter{i}{1}
+\newcounter{CoefDiv}\setcounter{CoefDiv}{20}
+\newcounter{Inc}\setcounter{Inc}{2}
+\newcounter{n}\setcounter{n}{2}
+%% rayon des cercles successifs utilisés pour trouver les points de H
+%% on choisit \Rii=\Ri+2\Sommet (définition de l'hyperbole)
+\newcommand{\Ri}{% c'est du postscript
+  \PosFoyer\space\Sommet\space sub \arabic{i}\space\arabic{CoefDiv}\space div add}
+\newcommand{\Rii}{\Ri\space\Sommet\space 2 mul add}
+\pstGeonode[PosAngle=90]{O}(\PosFoyer;\HypAngle){F}
+\pstSymO[PosAngle=180]{O}{F}\pstLineAB{F}{F'}
+%% TRACÉ DES ASYMPTOTES
+\pstCircleOA{O}{F}
+%% positionnement des deux sommets de H
+\pstGeonode[PosAngle=-135](\Sommet;\HypAngle){S}
+\pstGeonode[PosAngle=-45](-\Sommet;\HypAngle){S'}
+%% l'intersection de la droite perpendiculaire à (FF') passant par S,
+%% coupe les asymptotes sur le cercle de diamètre [FF'] (cette droite est une tangente)
+\pstRotation[RotAngle=90, PointSymbol=none]{S}{O}[B]
+\pstInterLC[PosAngleA=90, PosAngleB=-90]{S}{B}{O}{F}{A_1}{A_2}
+\pstLineAB[nodesepA=-3,nodesepB=-5]{A_1}{O}
+\pstLineAB[nodesepA=-3,nodesepB=-5]{A_2}{O}
+%% cos(\Psi)=OS/OF (c-a-d \Sommet/\PosFoyer)
+%% ici \sqrt(2)/2, donc \Psi=45 => hyperbole équilatère
+\pstMarkAngle[LabelSep=.8, MarkAngleRadius=.7, arrows=->,
+  LabelSep=1.1]{F}{O}{A_1}{$\Psi$}
+\ncline[linecolor=red]{A_1}{A_2}
+\pstRightAngle[RightAngleSize=.15]{A_1}{S}{O}
+\psset{PointName=none}
+\whiledo{\value{n}<8}{%
+  \psset{RadiusA=\pstDistVal{\Ri},RadiusB=\pstDistVal{\Rii},PointSymbol=none}
+  \pstInterCC{F}{}{F'}{}{M\arabic{n}}{P\arabic{n}}
+  \pstInterCC{F'}{}{F}{}{M'\arabic{n}}{P'\arabic{n}}
+  %% bcp de points au début, moins ensuite
+  %% n -> numéro du point, i -> taille des cercles
+  %% Inc -> incrément variable de i (2^n)
+  \stepcounter{n}\addtocounter{i}{\value{Inc}}
+  \addtocounter{Inc}{\value{Inc}}}%% fin de whiledo
+\psset{linecolor=blue}
+%% tracé des quatres 1/2 branches de l'hyperbole
+\pstGenericCurve[GenCurvFirst=S]{M}{2}{7}
+\pstGenericCurve[GenCurvFirst=S]{P}{2}{7}
+\pstGenericCurve[GenCurvFirst=S']{M'}{2}{7}
+\pstGenericCurve[GenCurvFirst=S']{P'}{2}{7}
+%% pour vérif le trace paramètrique
+%\parametricplot[linecolor=black, linewidth=.25\pslinewidth]{-1}{1}
+%  {t dup tx@EcldDict begin sh exch ch end \Sommet\space mul exch
+%   \PosFoyer\space dup mul \Sommet\space dup mul sub sqrt mul}
+%\parametricplot[linecolor=black, linewidth=.25\pslinewidth]{-1}{1}
+%  {t dup tx@EcldDict begin sh exch ch end neg \Sommet\space mul exch
+%    \PosFoyer\space dup mul \Sommet\space dup mul sub sqrt mul}

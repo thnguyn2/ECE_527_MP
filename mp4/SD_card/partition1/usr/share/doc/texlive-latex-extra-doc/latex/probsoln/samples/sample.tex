@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+
+\usepackage{probsoln}
+ %uncomment the following line to display the answers
+\showanswers
+
+ % The following will generate a different set of
+ % problems in subsequent years
+ %\PSNrandseed{\year}
+\PSNrandseed{2007}
+
+\begin{document}
+\title{Sample Problem Sheet}
+\author{Nicola Talbot}
+\maketitle
+
+\begin{enumerate}
+ % Differentiation from first principles
+\selectrandomly{1stprncp}{1}
+
+\item Differentiate the following functions:
+\newcount\oldseed
+\PSNgetrandseed\oldseed
+\begin{enumerate}
+\selectrandomly{easy}{5}
+\end{enumerate}
+\PSNrandseed\oldseed
+
+ % Implicit differentiation
+\selectrandomly{implicit}{2}
+
+ % Finite probability spaces
+\selectrandomly{probspaces}{2}
+
+ % Multiple choice question
+\selectrandomly{mchoice}{1}
+
+ % select one essay style question that doesn't come with a solution
+
+\selectrandomly{nosoln}{1}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,865 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002 (1.67)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>datetime.sty v2.55: Formatting Current Date and Time</TITLE>
+<META NAME="description" CONTENT="datetime.sty v2.55: Formatting Current Date and Time">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+
+<P>
+
+ <H1 ALIGN="CENTER">datetime.sty v2.55: Formatting Current Date and 
+Time</H1>
+<P ALIGN="CENTER"><STRONG>Nicola L. C. Talbot
+<BR>
+<BR>
+School of Computing Sciences
+<BR>
+University of East Anglia
+<BR>
+Norwich.  NR4 7TJ.
+<BR>
+United Kingdom.
+<BR> <TT><A NAME="tex2html1"
+  HREF="http://theoval.cmp.uea.ac.uk/~nlct/">http://theoval.cmp.uea.ac.uk/~nlct/</A></TT></STRONG></P>
+<P ALIGN="CENTER"><STRONG>20 Aug 2007</STRONG></P>
+ <BR>
+
+<H2><A NAME="SECTION00010000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html24"
+  HREF="manual.html#SECTION00020000000000000000">Introduction</A>
+<LI><A NAME="tex2html25"
+  HREF="manual.html#SECTION00030000000000000000">Date Declarations</A>
+<LI><A NAME="tex2html26"
+  HREF="manual.html#SECTION00040000000000000000">Time Commands</A>
+<LI><A NAME="tex2html27"
+  HREF="manual.html#SECTION00050000000000000000">Formating Dates</A>
+<LI><A NAME="tex2html28"
+  HREF="manual.html#SECTION00060000000000000000">Defining New Date Formats</A>
+<LI><A NAME="tex2html29"
+  HREF="manual.html#SECTION00070000000000000000">Saving Dates</A>
+<LI><A NAME="tex2html30"
+  HREF="manual.html#SECTION00080000000000000000">Predefined Names</A>
+<LI><A NAME="tex2html31"
+  HREF="manual.html#SECTION00090000000000000000">Package Options</A>
+<LI><A NAME="tex2html32"
+  HREF="manual.html#SECTION000100000000000000000">Multilingual Support</A>
+<LI><A NAME="tex2html33"
+  HREF="manual.html#SECTION000110000000000000000">Configuration File</A>
+<LI><A NAME="tex2html34"
+  HREF="manual.html#SECTION000120000000000000000">LaTeX2HTML styles</A>
+<LI><A NAME="tex2html35"
+  HREF="manual.html#SECTION000130000000000000000">Troubleshooting</A>
+</UL>
+<!--End of Table of Contents--> 
+<H1><A NAME="SECTION00020000000000000000">
+Introduction</A>
+</H1>
+
+The <TT>datetime</TT> package is a LaTeX2e package that 
+provides various different formats for <TT>&#092;today</TT>,
+and provides commands for displaying the current time.  
+If you only want the 
+time commands but not the date changing commands, you can pass 
+the option <TT>nodate</TT> to the package.
+
+<P>
+Since version 2.4, the <TT>datetime</TT> package has been 
+separated into two packages: <TT>datetime</TT> and 
+<TT>fmtcount</TT>.  When I originally created this package, 
+I defined the commands, <TT>&#092;ordinal</TT> etc which could be used 
+in the definition of <TT>&#092;today</TT>.  Since then, I have extended 
+the number of commands available that can be used to display the 
+value of a LaTeX counter, however it seems more appropriate to 
+define all these counter-related commands in a separate package. 
+The <TT>fmtcount</TT> package is now distributed separately 
+from the <TT>datetime</TT> package, and will also need to 
+be installed.
+
+<P>
+As from version 2.42, the <TT>datetime</TT> package is now 
+compatible with <TT>babel</TT>, however you must load the 
+<TT>datetime</TT> package <I>after</I> the <TT>babel</TT> package.  
+For example:
+<PRE>
+\usepackage[francais]{babel}
+\usepackage{datetime}
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+Date Declarations</A>
+</H1>
+ There are various declarations that change the effect of 
+<TT>&#092;today</TT>.  The change can be localised by placing the 
+declaration within a group.
+
+<P>
+
+ <I>Day</I> <I>Month</I> <I>Year</I> formats:
+<BR>
+The declaration <code>\longdate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+Wednesday 8<SUP>th</SUP> March, 2000
+ if the package option <TT>dayofweek</TT> is used, or 
+8<SUP>th</SUP> March, 2000 if the package option
+ <TT>nodayofweek</TT> is used.
+<BR>
+The declaration <code>\shortdate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+Wed 8<SUP>th</SUP> Mar, 2000 if the package option 
+<TT>dayofweek</TT> is used, or 8<SUP>th</SUP> Mar, 2000 
+if the package option <TT>nodayofweek</TT> is used.
+<BR>
+The declaration <code>\ddmmyyyydate</code> will redefine 
+<code>\today</code> to produce
+ the current date displayed in the form 08/03/2000
+<BR>
+The declaration <code>\dmyyyydate</code> will redefine 
+<code>\today</code> to produce
+ the current date displayed in the form 8/3/2000
+<BR>
+The declaration <code>\ddmmyydate</code> will redefine 
+<code>\today</code> to produce
+ the current date displayed in the form 08/03/00
+<BR>
+The declaration <code>\dmyydate</code> will redefine 
+<code>\today</code> to produce
+ the current date displayed in the form 8/3/00
+<BR>
+The declaration <code>\textdate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form: 
+Wednesday the Eighth of March, Two Thousand if the package option 
+<TT>dayofweek</TT> is used, or Eighth of March, Two Thousand if 
+the package option <TT>nodayofweek</TT> is used. Note that 
+<code>\textdate</code> is defined for use with English, it won't
+look right if it is used when another language has been
+selected<A NAME="tex2html2"
+  HREF="#foot411"><SUP>1</SUP></A>.  If you want to define a similar command for
+another language, you will first need to check that the
+<TT>fmtcount</TT> package supports that language.
+
+<P>
+
+ <I>Month</I> <I>Day</I> <I>Year</I> formats:
+<BR>
+The declaration <code>\usdate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+March 8, 2000. (As TeX and LaTeX do by default.)
+<BR>
+The declaration <code>\mmddyyyydate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+03/08/2000
+<BR>
+The declaration <code>\mdyyyydate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+3/8/2000
+<BR>
+The declaration <code>\mmddyydate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+03/08/00
+<BR>
+The declaration <code>\mdyydate</code> will redefine 
+<code>\today</code> to produce the current date displayed in the form 
+3/8/00
+
+<P>
+In addition, the declarations <code>\date</code><I>lang</I> are 
+available for all languages defined either by
+calling <TT>babel</TT> prior to <TT>datetime</TT> or by 
+passing the language name as an option to <TT>datetime</TT>.
+See&nbsp;<A HREF="manual.html#sec:newdate">later</A> 
+if you want to define your own customised date format.
+
+<P>
+As from version 2.43, the numerical date formats (such as 
+<code>\ddmmyyyydate</code>) use the command
+<code>\dateseparator</code> to separate the numbers.  So, for example, 
+if you want to hyphens instead of slashes, you can do:
+<PRE>
+\renewcommand{\dateseparator}{-}
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+Time Commands</A>
+</H1>
+
+ The current time is displayed using the command 
+<code>\currenttime</code>.
+
+ The format can be changed using the declaration
+<TT>&#092;settimeformat{</TT><EM>style</EM><TT>}</TT>, where <I>style</I> is the name of the
+format<A NAME="tex2html3"
+  HREF="#foot416"><SUP>2</SUP></A>.  Available formats
+are:
+<DL>
+<DT><STRONG>xxivtime</STRONG></DT>
+<DD>Twenty-four hour time in the form 22:28 (Default)
+</DD>
+<DT><STRONG>ampmtime</STRONG></DT>
+<DD>Twelve hour time in the form 10:28pm
+</DD>
+<DT><STRONG>oclock</STRONG></DT>
+<DD>Displays the current time as a string, e.g. 
+Twenty-Eight minutes past Ten in the afternoon.
+</DD>
+</DL>
+
+<P>
+New time formats can be defined using the command:
+<BR>
+<BR><TT>&#092;newtimeformat{</TT><EM>name</EM><TT>}{</TT><EM>format</EM><TT>}</TT>
+<BR>
+<BR>
+where <I>name</I> is the name of the new format (used in 
+<TT>&#092;settimeformat</TT>), and <I>format</I> is how to format the 
+time.  Within <I>format</I> you can use the counters 
+<TT>HOUR</TT> (number of hours after midnight), <TT>MINUTE</TT> 
+(number of minutes past the hour), <TT>HOURXII</TT> (number of 
+hours after midnight/midday), <TT>TOHOUR</TT> (the next hour) and
+<TT>TOMINUTE</TT> (number of minutes to the next hour), and the
+corresponding commands: <TT>&#092;THEHOUR</TT>, <TT>&#092;THEMINUTE</TT>,
+<TT>&#092;THEHOURXII</TT>, <TT>&#092;THETOHOUR</TT> and <TT>&#092;THETOMINUTE</TT>.
+
+<P>
+For example, to define a new time format that uses a dot instead of a
+colon:
+<PRE>
+\newtimeformat{dottime}{\twodigit{\THEHOUR}.\twodigit{\THEMINUTE}}
+</PRE>
+You then need to switch to this new format before you can use it:
+<PRE>
+\settimeformat{dottime}
+\currenttime
+</PRE>
+
+<P>
+As from version 2.43, if you only want to change the separator, 
+you can simply redefine <TT>&#092;timeseparator</TT>
+instead of defining a new time format.  For example:
+<PRE>
+\renewcommand{\timeseparator}{.}
+</PRE>
+The <TT>xxivtime</TT> format will now work like the <TT>dottime</TT> 
+format defined above.
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000">
+Formating Dates</A>
+</H1>
+ 
+ The command <code>\pdfdate</code><A NAME="tex2html4"
+  HREF="#foot148"><SUP>3</SUP></A> prints the date in the format required for
+ PDF files, e.g. if the date is 1 May 2004 and time is
+ 22:02, <code>\pdfdate</code> will print 20040501220200.  The reason 
+this date format is separate from all the others is because the 
+other form doesn't get properly expanded by PDFTeX. (This 
+command is defined regardless of whether the package option 
+<TT>nodate</TT> is called.)
+Example:
+<PRE>
+\pdfinfo{
+   /Author (Me)
+   /Title (A Sample Document)
+   /CreationDate (D:20040501215500)
+   /ModDate (D:\pdfdate)
+}
+</PRE>
+
+<P>
+There are two commands that print the name of the current
+ month:
+ 
+ <code>\monthname</code> prints the current month name in full, 
+e.g. August, and 
+ 
+ <code>\shortmonthname</code> prints the abbreviated month name, 
+e.g. Aug.  Both <code>\monthname</code> and 
+<code>\shortmonthname</code> take an optional argument (a number from 
+1 to 12) if the name of a specific month is required.  For 
+example, <code>\monthname[6]</code> will produced the output: June.
+
+<P>
+The day of the week is computed using the algorithm documented at
+ <TT><A NAME="tex2html5"
+  HREF="http://userpages.wittenburg.edu/bshelburne/Comp150/DayOfWeek.htm">http://userpages.wittenburg.edu/bshelburne/Comp150/DayOfWeek.htm</A></TT>.
+ This algorithm works for any date between 1<SUP>st</SUP> 
+Jan, 1901 and 31<SUP>st</SUP> Dec, 2099.
+ The following macros display the day of week for a given date:
+
+<P>
+
+<TT>&#092;dayofweekname{</TT><EM>day</EM><TT>}{</TT><EM>month</EM><TT>}{</TT><EM>year</EM><TT>}</TT> prints the
+ day of week for the specified date.  For example, 
+<code>\dayofweekname{31}{10}{2002}</code>
+ will produce the output: Thursday.
+<BR> 
+<TT>&#092;shortdayofweekname</TT><I>day</I><TT>{</TT><EM>month</EM><TT>}{</TT><EM>year</EM><TT>}</TT> prints the 
+abbreviated name for the
+ day of week for the specified date.  For example
+<BR> <code>\shortdayofweekname{31}{10}{2002}</code>
+<BR>
+will produce the output: Thu.
+
+<P>
+The TeX conditional <code>\ifshowdow</code> can be used to determine
+ whether or not the option <TT>dayofweek</TT> has been passed to 
+the package.
+ For example:
+<PRE>
+\ifshowdow\dayofweekname{31}{10}{2002} \fi
+</PRE>
+ will only display the day of week if the <TT>dayofweek</TT> 
+option was passed to <TT>datetime</TT>.
+ Alternatively, you can use David&nbsp;Carlisle's <TT>ifthen</TT> 
+package:
+<PRE>
+\ifthenelse{\boolean{showdow}}{\dayofweekname{31}{10}{2002} }{}
+</PRE>
+
+<P>
+The command <TT>&#092;ordinaldate{</TT><EM>number</EM><TT>}</TT>
+displays <I>number</I> as a date-type ordinal.  If the
+current language is English, this will simply pass
+the argument to <TT>&#092;ordinalnum</TT> (defined in the 
+<TT>fmtcount</TT> package), 
+if the current language is Breton, Welsh or French, a superscript 
+will only be added if <I>number</I> is 1, otherwise only 
+<I>number</I> will be displayed.
+
+<P>
+The macro
+<TT>&#092;formatdate{</TT><EM>day</EM><TT>}{</TT><EM>month</EM><TT>}{</TT><EM>year</EM><TT>}</TT><A NAME="tex2html6"
+  HREF="#foot417"><SUP>4</SUP></A> formats the specified date according to
+the current format of <TT>&#092;today</TT><A NAME="tex2html7"
+  HREF="#foot421"><SUP>5</SUP></A>.
+(Arguments must all be integers.) For example, in combination with
+<code>\longdate</code>, the command
+<PRE>
+\formatdate{27}{9}{2004}
+</PRE>
+will produce the output: Monday 27<SUP>th</SUP> September,
+2004.
+
+<P>
+You can ensure that a number is displayed with at least two 
+digits by using the command 
+<TT>&#092;twodigit{</TT><EM>num</EM><TT>}</TT>.
+ This is of use if you want to define your own date or time 
+formats.
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000"></A><A NAME="sec:newdate"></A>
+<BR>
+Defining New Date Formats
+</H1>
+
+<P>
+New date formats can be defined using the command:
+<BR>
+<BR> <TT>&#092;newdateformat{</TT><EM>name</EM><TT>}{</TT><EM>format</EM><TT>}</TT>
+<BR>
+<BR>
+where <I>name</I> is the name of the new format, and
+ <I>format</I> is how to format the date.  Within the
+ argument <I>format</I> you can use the commands <TT>&#092;THEDAY</TT>, 
+<TT>&#092;THEMONTH</TT>
+ and <TT>&#092;THEYEAR</TT> to represent the relevant day, month and 
+year, or you can use the counters 
+ <TT>DAY</TT>, <TT>MONTH</TT> and <TT>YEAR</TT> if you want to 
+use <TT>&#092;ordinal</TT> etc. Once you have defined the
+ new date format, you can then switch to it using the declaration 
+<code>\</code><I>name</I>
+ (i.e. the name you specified preceded by a backslash), and 
+ subsequent calls to <TT>&#092;today</TT> and <TT>&#092;formatdate</TT> will 
+use your new format.
+
+<P>
+For example, suppose you want to define a new date format called,
+ say, <TT>mydate</TT>, that will typeset the date in the form: 
+8-3-2002,
+ then you can do:
+<PRE>
+\newdateformat{mydate}{\THEDAY-\THEMONTH-\THEYEAR}
+</PRE>
+<TT>&#092;newdateformat</TT> will then define the declaration 
+<TT>&#092;mydate</TT> which can be used to
+ switch to your new format. In the following example, 
+ two new date formats are defined, and they are then
+ selected to produce two different formats for the current date:
+<PRE>
+\newdateformat{dashdate}{%
+\twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR}
+
+\newdateformat{usvardate}{%
+\monthname[\THEMONTH] \ordinal{DAY}, \THEYEAR}
+
+Dash: \dashdate\today.
+US: \usvardate\today.
+</PRE>
+If the current date is, say, 8th March, 2002, the above code will 
+ produce the following:
+Dash: 08-03-2002.
+US: March 8<SUP>th</SUP>, 2002.
+
+<P>
+Note that <TT>&#092;THEDAY</TT> etc and <TT>DAY</TT> etc have no real 
+meaning outside <TT>&#092;newdateformat</TT> (this is why they 
+are in uppercase). Incidentally, the <TT>dashdate</TT> format
+is not really necessary, as you can achieve this format
+using:
+<PRE>
+\renewcommand{\dateseparator}{-}
+\ddmmyyyydate
+</PRE>
+
+<P>
+Another note: in the above code, <TT>&#092;ordinal</TT> was
+used to illustrate the use of the <TT>DAY</TT> counter.  It
+is better to use <TT>&#092;ordinaldate</TT> instead:
+<PRE>
+\newdateformat{usvardate}{%
+\monthname[\THEMONTH] \ordinaldate{\THEDAY}, \THEYEAR}
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000">
+Saving Dates</A>
+</H1>
+
+<P>
+It is possible to save a date for later use using the command:
+<A NAME="tex2html8"
+  HREF="#foot244"><SUP>6</SUP></A>
+<P>
+
+<TT>&#092;newdate{</TT><EM>name</EM><TT>}{</TT><EM>day</EM><TT>}{</TT><EM>month</EM><TT>}{</TT><EM>year</EM><TT>}</TT>
+
+<P>
+This date can later be displayed using the same format as that
+used by <TT>&#092;formatdate</TT> using the command:
+<P>
+
+<TT>&#092;displaydate{</TT><EM>name</EM><TT>}</TT>
+
+<P>
+Individual elements of the date can be extracted using the
+commands:
+<P>
+
+<TT>&#092;getdateday{</TT><EM>name</EM><TT>}</TT>
+<P>
+
+<TT>&#092;getdatemonth{</TT><EM>name</EM><TT>}</TT>
+<P>
+
+<TT>&#092;getdateyear{</TT><EM>name</EM><TT>}</TT>
+
+<P>
+
+<H1><A NAME="SECTION00080000000000000000">
+Predefined Names</A>
+</H1>
+
+<P>
+The following commands are defined by the <TT>datetime</TT> 
+package:
+
+<P>
+<TABLE CELLPADDING=3>
+<TR><TH ALIGN="LEFT"><B>Command Name </B></TH>
+<TH ALIGN="LEFT"><B>Default Value</B></TH>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;dateseparator</TT></TD>
+<TD ALIGN="LEFT"><code>/</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;timeseparator</TT></TD>
+<TD ALIGN="LEFT"><code>:</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;amname</TT></TD>
+<TD ALIGN="LEFT"><TT>am</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;pmname</TT></TD>
+<TD ALIGN="LEFT"><TT>pm</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;amorpmname</TT></TD>
+<TD ALIGN="LEFT"><TT>&#092;amname</TT> if morning, otherwise <TT>&#092;pmname</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;amstring</TT></TD>
+<TD ALIGN="LEFT"><TT>in the morning</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;pmstring</TT></TD>
+<TD ALIGN="LEFT"><TT>in the afternoon</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;amorpmstring</TT></TD>
+<TD ALIGN="LEFT"><TT>&#092;amstring</TT> if morning, otherwise 
+<TT>&#092;pmstring</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;halfpast</TT></TD>
+<TD ALIGN="LEFT"><TT>Half past</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;quarterpast</TT></TD>
+<TD ALIGN="LEFT"><TT>Quarter past</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;quarterto</TT></TD>
+<TD ALIGN="LEFT"><TT>Quarter to</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;noon</TT></TD>
+<TD ALIGN="LEFT"><TT>Noon</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;midnight</TT></TD>
+<TD ALIGN="LEFT"><TT>Midnight</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>&#092;oclockstring</TT></TD>
+<TD ALIGN="LEFT"><TT>O'Clock</TT></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION00090000000000000000">
+Package Options</A>
+</H1>
+
+<P>
+The following options may be passed to this package:
+<BR>
+<BR> <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">long     </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce long date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">short    </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce short date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">ddmmyyyy </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce DD/MM/YYYY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">dmyyyy   </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce D/M/YYYY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">ddmmyy   </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce DD/MM/YY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">dmyy     </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce D/M/YY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">text     </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce text date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">us       </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce US style date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">mmddyyyy </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce MM/DD/YYYY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">mdyyyy   </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce M/D/YYYY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">mmddyy   </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce MM/DD/YY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">mdyy     </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;today</TT> produce M/D/YY date</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">raise    </TT></TD>
+<TD ALIGN="LEFT">make ordinal st,nd,rd,th appear as superscript</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">level    </TT></TD>
+<TD ALIGN="LEFT">make ordinal st,nd,rd,th appear level with rest of 
+text</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">dayofweek </TT></TD>
+<TD ALIGN="LEFT">make the day of week appear for <TT>&#092;longdate</TT>, 
+<TT>&#092;shortdate</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT"></TT></TD>
+<TD ALIGN="LEFT">or <TT>&#092;textdate</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">nodayofweek </TT></TD>
+<TD ALIGN="LEFT">don't display the day of week.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">24hr     </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;currenttime</TT> produce <TT>xxivtime</TT> 
+format</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">12hr     </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;currenttime</TT> produce <TT>ampmtime</TT> 
+format</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">oclock   </TT></TD>
+<TD ALIGN="LEFT">make <TT>&#092;currenttime</TT> produce <TT>oclock</TT> 
+format</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT">nodate   </TT></TD>
+<TD ALIGN="LEFT">Don't redefine <TT>&#092;today</TT> or define the month or 
+day of week commands</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT></TD><TD ALIGN="LEFT"></TT></TD>
+<TD ALIGN="LEFT">(useful if you only want the time commands or 
+<code>\pdfdate</code>)</TD>
+</TR>
+</TABLE>
+
+<P>
+The default options are: <TT>long</TT>, <TT>raise</TT>, 
+<TT>dayofweek</TT> and <TT>24hr</TT>.
+
+<P>
+
+<H1><A NAME="SECTION000100000000000000000">
+Multilingual Support</A>
+</H1>
+
+<P>
+If you want to use the <TT>babel</TT> package, you must load
+it <I>before</I> you load the <TT>datetime</TT> package. This
+is because the <TT>babel</TT> <TT>&#092;date</TT><I>lang</I> commands
+redefine <TT>&#092;today</TT>, whereas the <TT>datetime</TT> package
+redefines <TT>&#092;today</TT> to use <TT>&#092;formatdate</TT>, and the
+date formatting commands (such as <TT>&#092;longdate</TT>) redefine
+<TT>&#092;formatdate</TT> rather than <TT>&#092;today</TT>. This ensures 
+consistent formatting of the dates whether you use <TT>&#092;today</TT> or
+<TT>&#092;formatdate</TT>.  Therefore, the <TT>datetime</TT> package
+has to redefine all the <TT>&#092;date</TT><I>lang</I> commands accordingly.
+Thus the multilingual date support is mostly limited to that provided
+by <TT>babel</TT>. Additional support, such as the day of
+week names and abbreviations, are only supplied for those
+languages that I know, or that other people have been able to supply
+for me.
+
+<P>
+The commands <TT>&#092;monthname</TT> and <TT>&#092;shortmonthname</TT>,
+will produce the month name in the current language.
+If you want the month name in a specific language, you
+can use the command <TT>&#092;monthname</TT><I>lang</I>.
+For example, <code>\monthnamefrench[6]</code> will produce the output: 
+juin. Note that <TT>&#092;textdate</TT> is formatted for English dates,
+and won't look right if used with another language setting. If you
+want a textual date, the <TT>fmtcount</TT> package (which is 
+loaded by <TT>datetime</TT>) defines some commands which display
+a number or ordinal as a word, but it only has very limited 
+multilingual support. See the <TT>fmtcount</TT> documentation 
+for further details.
+
+<P>
+There is currently only <I>limited</I> multilingual support for 
+<TT>&#092;dayofweekname</TT> and <TT>&#092;shortdayofweekname</TT> (just
+English, French, Portuguese, Spanish and German<A NAME="tex2html9"
+  HREF="#foot358"><SUP>7</SUP></A>). You can add support 
+for other languages by defining the commands
+<TT>&#092;dayofweeknameid</TT><I>lang</I> and 
+<TT>&#092;shortdayofweeknameid</TT><I>lang</I>. Note that these
+commands only take <I>one</I> argument which should be
+a number from 1 to 7 indicating the day of the week.
+
+<P>
+You can use the following as templates.  Replace
+<TT>english</TT> with the name of your language (as given
+by <TT>&#092;languagename</TT>) and replace <TT>Sunday</TT>
+etc as appropriate:
+<PRE>
+\providecommand*{\dayofweeknameidenglish}[1]{%
+\ifcase#1\relax
+\or Sunday%
+\or Monday%
+\or Tuesday%
+\or Wednesday%
+\or Thursday%
+\or Friday%
+\or Saturday%
+\fi}
+                                                          
+\providecommand*{\shortdayofweeknameidenglish}[1]{%
+\ifcase#1\relax
+\or Sun%
+\or Mon%
+\or Tue%
+\or Wed%
+\or Thu%
+\or Fri%
+\or Sat%
+\fi}
+</PRE>
+If you want them added to future versions of 
+<TT>datetime</TT>, please email me the code.
+
+<P>
+
+<H1><A NAME="SECTION000110000000000000000">
+Configuration File</A>
+</H1>
+
+<P>
+As from Version 2.4, the <TT>datetime</TT> package will read in settings
+from the configuration file <TT>datetime.cfg</TT>, if it exists,
+which will override the default package options.  For example,
+suppose you prefer a short date without the day of week by default,
+you will need to create a file called <TT>datetime.cfg</TT> that
+contains the line:
+<PRE>
+\shortdate\showdowfalse
+</PRE>
+The file <TT>datetime.cfg</TT> should then go somewhere on the 
+TeX path.  Now all you need to do is:
+<PRE>
+\usepackage{datetime}
+</PRE>
+without having to specify the <TT>short</TT> and 
+<TT>nodayofweek</TT> options.
+
+<P>
+You can also use this file to define and set your own date 
+styles.  For example, you could create
+a configuration file that has the following lines:
+<PRE>
+\newdateformat{dashdate}{\twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR}
+\dashdate
+</PRE>
+Whenever you use the <TT>datetime</TT> package, it will now 
+use this format by default.
+
+<P>
+
+<H1><A NAME="SECTION000120000000000000000">
+LaTeX2HTML styles</A>
+</H1>
+
+<P>
+Version 2.43 and above of the <TT>datetime</TT> bundle 
+supplies the LaTeX2HTML style file <TT>datetime.perl</TT>.  
+This file should be placed in a 
+directory searched by LaTeX2HTML.  The following limitations 
+apply to the LaTeX2HTML styles:
+
+<P>
+
+<UL>
+<LI>The configuration file <TT>datetime.cfg</TT>
+is currently ignored. (This is because
+I can't work out the correct code to do this.  If you
+know how to do this, please let me know.)  You can however
+do:
+<PRE>
+\usepackage{datetime}
+\html{\input{datetime.cfg}}
+</PRE>
+This, I agree, is an unpleasant cludge.
+
+<P>
+</LI>
+<LI>The commands <TT>&#092;monthname</TT><I>language</I> are not 
+implemented.
+
+<P>
+</LI>
+<LI>Some of the languages are not implemented.
+
+<P>
+</LI>
+<LI>The package option <TT>nodate</TT> is not implemented.
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION000130000000000000000">
+Troubleshooting</A>
+</H1>
+
+<P>
+There is a <TT>datetime</TT> FAQ available at:
+<TT><A NAME="tex2html10"
+  HREF="http://theoval.cmp.uea.ac.uk/~nlct/latex/packages/faq/">http://theoval.cmp.uea.ac.uk/~nlct/latex/packages/faq/</A></TT>
+<P>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot411">...
+selected</A><A
+ HREF="manual.html#tex2html2"><SUP>1</SUP></A></DT>
+<DD>in fact, you may get an error from the
+<TT>fmtcount</TT> package if you are using a language that it
+doesn't support.
+
+</DD>
+<DT><A NAME="foot416">...
+format</A><A
+ HREF="manual.html#tex2html3"><SUP>2</SUP></A></DT>
+<DD>Note that the commands <TT>&#092;xxivtime</TT>, <TT>&#092;ampmtime</TT>
+and <TT>&#092;oclock</TT> are still available, <TT>&#092;settimeformat</TT> redefines
+<TT>&#092;currenttime</TT> to the command given by placing a backslash in front
+of <I>style</I>.  So <TT>&#092;settimeformat{xxivtime}</TT> sets
+<TT>&#092;currenttime</TT> to <TT>&#092;xxivtime</TT> and so on.
+
+</DD>
+<DT><A NAME="foot148">... <code>\pdfdate</code></A><A
+ HREF="manual.html#tex2html4"><SUP>3</SUP></A></DT>
+<DD>thanks to Ulrich Dirr for 
+asking about this
+
+</DD>
+<DT><A NAME="foot417">...year</A><A
+ HREF="manual.html#tex2html6"><SUP>4</SUP></A></DT>
+<DD>Note the
+name change since version 1.1.  The command name was changed from
+<TT>&#092;thedate</TT> to <TT>&#092;formatdate</TT> to avoid a name clash when using the
+<TT>seminar</TT> class file.
+
+</DD>
+<DT><A NAME="foot421">...today</A><A
+ HREF="manual.html#tex2html7"><SUP>5</SUP></A></DT>
+<DD>To be more precise,
+<TT>&#092;today</TT> is defined to be
+<TT>&#092;formatdate{<TT>&#092;day</TT>}{<TT>&#092;month</TT>}{<TT>&#092;year</TT>}</TT> where
+<TT>&#092;longdate</TT> etc change the definition of <TT>&#092;formatdate</TT>
+
+</DD>
+<DT><A NAME="foot244">... command:</A><A
+ HREF="manual.html#tex2html8"><SUP>6</SUP></A></DT>
+<DD>Thanks to Denis Bitouz&#233; for asking about this
+
+</DD>
+<DT><A NAME="foot358">... German</A><A
+ HREF="manual.html#tex2html9"><SUP>7</SUP></A></DT>
+<DD>thanks
+to Uwe Bieling for supplying the German names
+
+</DD>
+</DL>
+<BR><HR>
+<ADDRESS>
+<A href=http://theoval.cmp.uea.ac.uk/~nlct/>Nicola L. C. Talbot</A>. 
+<A HREF=http://www.cmp.uea.ac.uk/>School of Computing Sciences</A>. 
+<A HREF=http://www.uea.ac.uk/>University of East Anglia.</A> 
+Last Modified: 2007-08-20
+</ADDRESS>
+</BODY>
+</HTML>

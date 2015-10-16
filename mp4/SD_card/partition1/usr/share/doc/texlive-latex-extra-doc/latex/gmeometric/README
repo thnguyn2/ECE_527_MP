@@ -1,0 +1,73 @@
+The gmeometric.zip package
+is a work of Grzegorz Murzynowski,
+<natror at o2 dot pl>
+
+   
+1. Copyright 2006 by Grzegorz `Natror' Murzynowski
+
+This program is subject to the LaTeX Project Public License. 
+See http://www.ctan.org/tex-archive/help/Catalogue/licenses.lppl.html
+for the details of that license.
+
+
+2. Introduction
+
+This package loads the `geometry' package by Hideo Umeki 
+and lets you to use its main command, \geometry, 
+not only in the preamble.
+
+This package requires the `gmutils' package.
+
+
+3. Installation
+
+Just put the gmeometric.sty somewhere in the texmf/tex/latex branch.
+Creating a /texmf/tex/latex/gm directory may be advisable if you
+consider using other packages written by me.
+
+Then you should refresh your TeX distribution's files'
+database most probably.
+
+
+4. Contents
+
+The distribution of this package consists of the following three files.
+
+gmeometric.sty
+README
+gmeometric.pdf
+
+
+5. Documentation
+
+The last of the above files (the .pdf) is a documentation compiled
+from the .sty file by running LaTeX on the gmeometric.sty file twice:
+xelatex gmeometric.sty
+ in the directory you wish the documentation to be in, 
+you don't have copy the .sty file  there---TeX will find it.,
+then MakeIndex on the gmeometric.glo file, and then LaTeX
+on gmeometricDoc.tex twice again.
+
+MakeIndex shell commands:
+  makeindex -r -s gmglo.ist -o gmeometricDoc.gls gmeometricDoc.glo 
+The -r switch is to forbid MakeIndex make implicit ranges since the
+(code line) numbers will be hyperlinks.
+The -s switch makes MakeIndex use the style file instead of the
+default settings and the -o switch declares the not-default name of
+the output file
+
+Compiling of the documentation requires the packages gmdoc.sty (with
+the gmdocc.cls class), gmverb.sty, gmutils.sty, gmiflink.sty and also
+some standard packages: hyperref.sty, color.sty, geometry.sty,
+multicol.sty, lmodern.sty, fontenc.sty that should be installed on
+your computer by default.
+
+The gmglo.ist file, a MakeIndex style for the changes' history, is
+provided on CTAN in the gmdoc .zip archive and should 
+be put into some texmf/makeindex directory.
+
+If you have not installed the mwcls classes (available on CTAN and
+present in TeX Lives e.g.), the result of your compilation may differ
+a bit from the .pdf provided in this .zip archive in formattings: If
+you have not installed mwcls, the standard article.cls will be
+used.

@@ -1,0 +1,58 @@
+%%
+%% This is file `modroman.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% modroman.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2003, 2004, 2008 by Yvon Henel,
+%% dit «le TeXnicien de surface» <le.texnicien.de.surface@wanadoo.fr>
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.2 of this license
+%% or (at your option) any later version.  The latest version of this
+%% license is in:
+%% 
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.2 or later is part of all distributions of LaTeX version
+%% 1999/12/01 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\def\fileversion{v0.4}
+\def\filedate{2008/05/03}
+\def\fileinfo{fichier modroman.dtx par Le TeXnicien de surface}
+\ProvidesPackage{modroman}
+   [\filedate\space\fileversion\space\fileinfo]
+\DeclareOption{vpourv}{%
+  \@ifdefinable\modrom@actuelV{\def\modrom@actuelV{v}}
+}
+\DeclareOption{upourv}{\def\modrom@actuelV{u}}
+\ExecuteOptions{vpourv}
+\ProcessOptions\relax
+\@ifdefinable\romt@mp{\newcount\romt@mp}
+\@ifdefinable\modromannumeral{%
+  \def\modromannumeral{\afterassignment\modrom@naux \romt@mp=}}
+\@ifdefinable\modrom@naux{%
+  \def\modrom@naux{\ifnum\romt@mp<10
+    \modrom@ni{\romt@mp}\else\modrom@nii{\romt@mp}\fi\relax}}
+\@ifdefinable\modrom@ni{%
+  \def\modrom@ni#1{\ifcase#1 \or i\or ij\or iij\or i\modrom@actuelV\or
+    \modrom@actuelV\or \modrom@actuelV j\or \modrom@actuelV ij\or
+    \modrom@actuelV iij\or ix\fi\relax}}%
+\@ifdefinable\modrom@nii{%
+  \def\modrom@nii#1{{\count0 =#1\count1 =\count0 %
+      \divide\count0 by 10 \multiply\count0 by 10 %
+      \advance \count1 by -\count0 %
+      \romannumeral\count0\modrom@nij{\count1}}}}
+\@ifdefinable\modrom@nij{%
+  \def\modrom@nij#1{\ifcase#1 \or j\or ij\or iij\or i\modrom@actuelV\or
+    \modrom@actuelV\or \modrom@actuelV j\or \modrom@actuelV ij\or
+    \modrom@actuelV iij\or ix\fi\relax}}
+\newcommand{\modroman}[1]{\expandafter\modromannumeral\value{#1}}
+\endinput
+%%
+%% End of file `modroman.sty'.

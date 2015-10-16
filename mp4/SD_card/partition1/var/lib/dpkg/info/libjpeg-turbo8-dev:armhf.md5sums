@@ -1,0 +1,13 @@
+c332bb15fdf0fc16fd04aae23092230a  usr/include/arm-linux-gnueabihf/jconfig.h
+d98ec1fe249d099804a98005be9762b9  usr/include/jerror.h
+18ca9c4b784d4477a50ca2a78d4a9169  usr/include/jmorecfg.h
+fd82e5ccc74d1fa9064d6d298785ea46  usr/include/jpegint.h
+e5c51e34eb8773db0928c2d2dfe92026  usr/include/jpeglib.h
+4b5bf45411371e5b4f30be2ed5608952  usr/include/turbojpeg.h
+4d846bdb64136b0f695f308972cb626b  usr/lib/arm-linux-gnueabihf/libjpeg.a
+0e7351fcb55a4a6440d11a6b9fa27f1d  usr/lib/arm-linux-gnueabihf/libturbojpeg.a
+4c7a10f44d532e58a6df90d52773b0d0  usr/share/doc/libjpeg-turbo8-dev/README-turbo.txt.gz
+ed75b42475c41afdb4e80c44e8f6a7e5  usr/share/doc/libjpeg-turbo8-dev/README.gz
+69fc38c4967984a60f941971f888105b  usr/share/doc/libjpeg-turbo8-dev/copyright
+d10fa677bdbd4b93904b6477663dab34  usr/share/doc/libjpeg-turbo8-dev/libjpeg.txt.gz
+cd96fa5c6b0c6356613237aa5a4bc9bf  usr/share/doc/libjpeg-turbo8-dev/structure.txt.gz

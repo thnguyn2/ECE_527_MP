@@ -2,92 +2,14 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Sun Oct  4 19:17:14 2015
-# Process ID: 25439
+# Start of session at: Fri Oct 16 07:36:57 2015
+# Process ID: 5160
 # Log file: /home/parallels/source_code/ECE_527_MP/vivado.log
 # Journal file: /home/parallels/source_code/ECE_527_MP/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-open_bd_design {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/partC.bd}
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-open_run synth_1 -name synth_1
-launch_runs impl_1
+source {/home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/xillydemo-vivado.tcl}
+open_bd_design {/home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system.bd}
+launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
-set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-close_design
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-open_run synth_1 -name synth_1
-set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-report_utilization -name utilization_1
-close_design
 open_run impl_1
-set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-update_compile_order -fileset sources_1
-set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-archive_project /home/parallels/source_code/ECE_527_MP/mp2/partC.xpr.zip -force
-archive_project /home/parallels/source_code/ECE_527_MP/mp2/partC.xpr.zip -force

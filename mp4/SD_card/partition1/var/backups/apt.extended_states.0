@@ -1,0 +1,384 @@
+Package: libnl-3-200
+Architecture: armhf
+Auto-Installed: 0
+
+Package: libglib2.0-bin
+Architecture: armhf
+Auto-Installed: 0
+
+Package: iw
+Architecture: armhf
+Auto-Installed: 1
+
+Package: crda
+Architecture: armhf
+Auto-Installed: 1
+
+Package: devio
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libglib2.0-data
+Architecture: armhf
+Auto-Installed: 0
+
+Package: wireless-regdb
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libnl-genl-3-200
+Architecture: armhf
+Auto-Installed: 0
+
+Package: flash-kernel
+Architecture: armhf
+Auto-Installed: 1
+
+Package: gir1.2-json-1.0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: realpath
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libdmraid1.0.0.rc16
+Architecture: armhf
+Auto-Installed: 1
+
+Package: gir1.2-timezonemap-1.0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: uboot-mkimage
+Architecture: armhf
+Auto-Installed: 1
+
+Package: kpartx-boot
+Architecture: armhf
+Auto-Installed: 1
+
+Package: archdetect-deb
+Architecture: armhf
+Auto-Installed: 1
+
+Package: python-pyicu
+Architecture: armhf
+Auto-Installed: 1
+
+Package: redboot-tools
+Architecture: armhf
+Auto-Installed: 1
+
+Package: ubiquity
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libdebian-installer4
+Architecture: armhf
+Auto-Installed: 1
+
+Package: ubiquity-casper
+Architecture: armhf
+Auto-Installed: 1
+
+Package: kpartx
+Architecture: armhf
+Auto-Installed: 1
+
+Package: u-boot-tools
+Architecture: armhf
+Auto-Installed: 1
+
+Package: cryptsetup
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libecryptfs0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: reiserfsprogs
+Architecture: armhf
+Auto-Installed: 1
+
+Package: rdate
+Architecture: armhf
+Auto-Installed: 1
+
+Package: uboot-envtools
+Architecture: armhf
+Auto-Installed: 1
+
+Package: btrfs-tools
+Architecture: armhf
+Auto-Installed: 1
+
+Package: apt-clone
+Architecture: armhf
+Auto-Installed: 1
+
+Package: os-prober
+Architecture: armhf
+Auto-Installed: 1
+
+Package: gir1.2-xkl-1.0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: oem-config
+Architecture: armhf
+Auto-Installed: 1
+
+Package: ecryptfs-utils
+Architecture: armhf
+Auto-Installed: 1
+
+Package: ubiquity-ubuntu-artwork
+Architecture: armhf
+Auto-Installed: 1
+
+Package: dpkg-repack
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libdebconfclient0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: dmraid
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libnss3-1d
+Architecture: armhf
+Auto-Installed: 1
+
+Package: keyutils
+Architecture: armhf
+Auto-Installed: 1
+
+Package: vim-runtime
+Architecture: armhf
+Auto-Installed: 1
+
+Package: g++-4.6
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libstdc++6-4.6-dev
+Architecture: armhf
+Auto-Installed: 1
+
+Package: cmake-data
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libxmlrpc-core-c3
+Architecture: armhf
+Auto-Installed: 1
+
+Package: emacsen-common
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libswscale2
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libavutil51
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libdc1394-22
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libav-tools
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libpostproc52
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libavformat53
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libschroedinger-1.0-0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libvpx1
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libavfilter2
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libgsm1
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libavcodec53
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libva1
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libavdevice53
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-extra-utils
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-base
+Architecture: armhf
+Auto-Installed: 1
+
+Package: intltool-debian
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-pictures-doc
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-pstricks-doc
+Architecture: armhf
+Auto-Installed: 1
+
+Package: lmodern
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-common
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-latex-extra-doc
+Architecture: armhf
+Auto-Installed: 1
+
+Package: po-debconf
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-pstricks
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libgettextpo0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: luatex
+Architecture: armhf
+Auto-Installed: 1
+
+Package: preview-latex-style
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libmail-sendmail-perl
+Architecture: armhf
+Auto-Installed: 1
+
+Package: gettext
+Architecture: armhf
+Auto-Installed: 1
+
+Package: prosper
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-latex-recommended-doc
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-latex-base-doc
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-latex-extra
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-binaries
+Architecture: armhf
+Auto-Installed: 1
+
+Package: pgf
+Architecture: armhf
+Auto-Installed: 1
+
+Package: doxygen-latex
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-latex-recommended
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-generic-recommended
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-latex-base
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libunistring0
+Architecture: armhf
+Auto-Installed: 1
+
+Package: ps2eps
+Architecture: armhf
+Auto-Installed: 1
+
+Package: latex-beamer
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-luatex
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-font-utils
+Architecture: armhf
+Auto-Installed: 1
+
+Package: latex-xcolor
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-doc-base
+Architecture: armhf
+Auto-Installed: 1
+
+Package: tex-common
+Architecture: armhf
+Auto-Installed: 1
+
+Package: lacheck
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libsys-hostname-long-perl
+Architecture: armhf
+Auto-Installed: 1
+
+Package: texlive-pictures
+Architecture: armhf
+Auto-Installed: 1
+
+Package: libav-dbg
+Architecture: armhf
+Auto-Installed: 1
+

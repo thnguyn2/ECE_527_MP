@@ -1,0 +1,87 @@
+\section {Affiner un solide}
+
+Nous désignerons par \textsl{affinage de rapport $k$} l'opération qui,
+pour une face donnée de centre $G$, consiste à effectuer sur cette
+face une homothétie de rapport $k$ et de centre $G$, puis à diviser la
+face originelle en utilisant cette nouvelle face.
+
+Par exemple, voici un cube ayant subi un affinage de rapport $0,8$ sur
+sa face supérieure~:
+\begin{center}
+\psset{unit=0.5}
+\psset{lightsrc=10 0 10,viewpoint=50 -20 30 rtp2xyz,Decran=50}
+\begin{pspicture*}(-4,-4)(4,4)
+\psframe(-4,-4)(4,4)
+\psSolid[object=cube,
+   fillcolor=red,
+   affinagerm,
+   fcolor=Yellow,
+   affinage=0]
+\end{pspicture*}
+\end{center}
+
+L'option \verb+affinage+ permet d'affiner les faces soit globalement, soit
+individuellement. Cette option utilise l'argument \verb+affinagecoeff+
+(valeur $0, 8$ par défaut) qui indique le rapport $k$ utiliser pour
+l'affinage ($0<k<1$).
+%
+\begin{itemize}
+ \item \Cadre{[affinage=all]} affine toutes les faces ;
+ \item \Cadre{[affinage=0 1 2 3]} affine les faces \texttt{[0,1,2 et 3]} ;
+\end{itemize}
+
+Lorsqu'un face se trouve affinée, le comportement par défaut supprime la
+face centrale obtenue. Toutefois, l'option \verb+affinagerm+ permet de
+conserver cette face centrale.
+
+Si on conserve la face centrale, elle est par défaut de la couleur de
+la face originelle. L'option \verb+fcolor+ permet de spécifier une
+couleur de remplacement.
+
+%\newpage
+\begin{multicols}{2}
+\psset{unit=0.5}
+\setlength{\columnseprule}{1pt}
+\psset{lightsrc=10 0 10,viewpoint=50 -20 30 rtp2xyz,Decran=50}
+\begin{pspicture*}(-5,-4)(6,5)
+\psframe(-5,-4)(6,5)
+\psSolid[object=cube,
+   fillcolor=cyan,
+   incolor=red,
+   hollow,
+   affinage=0]
+\end{pspicture*}
+\begin{verbatim}
+\psSolid[object=cube,
+   fillcolor=cyan,
+   incolor=red,
+   hollow,
+   affinage=0]
+\end{verbatim}
+%
+\columnbreak
+%
+\centerline{
+\begin{pspicture*}(-5,-4)(6,5)
+\psset{lightsrc=10 0 10,viewpoint=50 -20 30 rtp2xyz,Decran=50}
+\psframe(-5,-4)(6,5)
+\psSolid[object=cube,
+   fillcolor=cyan,
+   affinagecoeff=.5,
+   affinagerm,
+   fcolor=.5 setfillopacity Yellow,
+   hollow,
+   affinage=all]
+\end{pspicture*}}
+\begin{verbatim}
+\psSolid[object=cube,
+   fillcolor=cyan,
+   affinagecoeff=.5,
+   affinagerm,
+   fcolor=.5 setfillopacity Yellow,
+   hollow,
+   affinage=all]
+\end{verbatim}
+\end{multicols}
+
+

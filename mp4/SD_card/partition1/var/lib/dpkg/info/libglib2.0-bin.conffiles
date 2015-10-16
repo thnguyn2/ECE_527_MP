@@ -1,0 +1,3 @@
+/etc/bash_completion.d/gdbus
+/etc/bash_completion.d/gsettings
+/etc/bash_completion.d/gresource

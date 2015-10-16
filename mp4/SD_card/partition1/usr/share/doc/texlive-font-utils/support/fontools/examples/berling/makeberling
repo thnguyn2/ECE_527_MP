@@ -1,0 +1,70 @@
+#!/bin/sh
+
+TEXMF="./"
+
+mkdir -p "${TEXMF}fonts/afm/monotype/berling/"
+mkdir -p "${TEXMF}fonts/enc/dvips/berling/"
+mkdir -p "${TEXMF}fonts/map/dvips/berling/"
+mkdir -p "${TEXMF}fonts/tfm/monotype/berling/"
+mkdir -p "${TEXMF}fonts/truetype/monotype/berling/"
+mkdir -p "${TEXMF}fonts/vf/monotype/berling/"
+mkdir -p "${TEXMF}tex/latex/monotype/berling/"
+
+#
+#	By default, Monotype Berling uses oldstyle figures; 
+#	`berling.sub' replaces these with normal (lining) figures.
+#	
+#	In the second line, we specify `-f onum' (even though Berling doesn't
+#	support features)  to force the output files to have a `j' appended
+#	to their filenames; otherwise they would clobber the output of the
+#	first call to `cmap2enc'.
+#
+cmap2enc -x berling.sub berling.ttf t1.enc
+cmap2enc -f onum berling.ttf t1.enc
+cmap2enc berling.ttf ts1.enc
+
+for TTF in *.ttf
+do
+	font2afm "$TTF"
+done
+
+rm berling.map
+afm2afm -e t1-berling.enc -o rmbrr9e.afm berling.afm >>berling.map
+afm2afm -e t1-berling.enc -o rmbrri9e.afm berlingi.afm >>berling.map
+afm2afm -e t1-berling.enc -o rmbrb9e.afm berlingb.afm >>berling.map
+afm2afm -e t1-berling.enc -o rmbrbi9e.afm berlingz.afm >>berling.map
+
+afm2afm -e t1j-berling.enc -o rmbrrj9d.afm berling.afm >>berling.map
+afm2afm -e t1j-berling.enc -o rmbrrij9d.afm berlingi.afm >>berling.map
+afm2afm -e t1j-berling.enc -o rmbrbj9d.afm berlingb.afm >>berling.map
+afm2afm -e t1j-berling.enc -o rmbrbij9d.afm berlingz.afm >>berling.map
+
+afm2afm -e ts1-berling.enc -o rmbrr9c.afm berling.afm >>berling.map
+afm2afm -e ts1-berling.enc -o rmbrri9c.afm berlingi.afm >>berling.map
+afm2afm -e ts1-berling.enc -o rmbrb9c.afm berlingb.afm >>berling.map
+afm2afm -e ts1-berling.enc -o rmbrbi9c.afm berlingz.afm >>berling.map
+
+tex mbr_fnst.tex
+
+for PL in *.pl
+do
+    pltotf "$PL"
+done
+
+for VPL in *.vpl
+do
+    vptovf "$VPL"
+done
+
+rm *.pl *.vpl rmbr*.afm rmbr*.mtx resetberling-*.mtx
+
+mv *.afm "${TEXMF}/fonts/afm/monotype/berling/"                   
+mv *.enc "${TEXMF}/fonts/enc/dvips/berling/"                      
+mv *.map "${TEXMF}/fonts/map/dvips/berling/"                      
+mv *.tfm "${TEXMF}/fonts/tfm/monotype/berling/"                   
+cp *.ttf "${TEXMF}/fonts/truetype/monotype/berling/"              
+mv *.vf	 "${TEXMF}/fonts/vf/monotype/berling/"                    
+mv *.fd  "${TEXMF}/tex/latex/monotype/berling/"
+cp *.sty "${TEXMF}/tex/latex/monotype/berling/"
+
+texhash ${TEXMF}

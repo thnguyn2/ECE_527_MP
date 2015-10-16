@@ -1,0 +1,70 @@
+\documentclass{article}
+
+
+\usepackage[display]{texpower}
+\usepackage[pdftex,designiii]{web}
+
+\usepackage[filename=tooltipy,movetips]{fancytooltips}
+
+
+\let\rmdefault\sfdefault
+
+\usepackage[czech]{babel}
+\usepackage[IL2]{fontenc}
+
+\usepackage{amsmath}
+\usepackage[shadein]{shadethm}
+
+\newshadetheorem{definice}{Definition}
+
+\usepackage{graphicx}
+
+\definecolor{bkg}{rgb}{1,0.9,0.9}
+\def\Message#1{\colorbox{bkg}{
+      \begin{minipage}{1\linewidth}
+        \smallskip
+      #1
+        \smallskip
+      \end{minipage}
+ }}
+\begin{document}
+
+
+\parindent 0 pt
+
+\Message{
+\begin{itemize}
+\item Use Acrobat Reader or Adobe Acrobat and View--Page
+  Layout--Single page to view this file, please.
+\item The blue text is active button. If you \textbf{click} one of
+  these buttons, tooltip appears. If you move your mouse out or if you
+  close the page, the tooltip disappears.
+\item The first links are tooltips, the fifth one is animated tooltip.
+\item The tooltips appears with the left down corner at the mouse
+  cursor, or at least as close as possible. Click on different
+  positions of the same button and have a fun.
+\end{itemize}
+}
+
+\begin{definice}
+  This is definition of  \tooltip{rank}{2}. bla bla bla.
+\end{definice}
+
+\pause
+\begin{definice}
+  This is \tooltip{definition}3 of \tooltip{derivative}{1}\hfill
+  \tooltip{derivative}{1}.
+\end{definice}
+
+\pause
+This is a geometric \tooltipanim{idea}{4}{28} which is behind the
+definition of derivative.
+
+
+\pause
+\vfill 
+\begin{definice}
+  This is \tooltip{definition}3 of \tooltip{derivative}{1}\hfill
+  \tooltip{derivative}{1}.
+\end{definice}
+\end{document}

@@ -1,0 +1,12 @@
+Document: pgf
+Section: Text
+Title: Title: User Guide to the PGF Package, Version 2.10
+Author: Till Tantau <tantau@cs.tu-berlin.de>
+Abstract: This is a comprehensive and high quality manual for PGF and
+ TikZ, including several tutorials and a detailed reference. It
+ discusses both the more accessible frontend subsystems such as TikZ,
+ and more low-level and powerful functionality that may not be needed
+ by the average user.
+
+Format: pdf
+Files: /usr/share/doc/texmf/pgf/pgfmanual.pdf.gz

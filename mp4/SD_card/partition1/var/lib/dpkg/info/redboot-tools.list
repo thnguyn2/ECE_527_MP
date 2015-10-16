@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/bin
+/usr/bin/fis
+/usr/bin/redboot-install
+/usr/bin/redboot-cmdline
+/usr/bin/fconfig
+/usr/share
+/usr/share/doc
+/usr/share/doc/redboot-tools
+/usr/share/doc/redboot-tools/copyright
+/usr/share/doc/redboot-tools/changelog.gz

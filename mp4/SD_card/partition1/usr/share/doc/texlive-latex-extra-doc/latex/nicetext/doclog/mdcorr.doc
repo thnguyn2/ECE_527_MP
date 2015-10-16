@@ -1,0 +1,25 @@
+\ProvidesFile{mdcorr.doc}[2009/04/16 automatically generated with makedoc.sty]
+\begin{packagecode}
+\ProvidesFile{mdcorr.cfg}[2009/04/15
+                     local typographical corrections with makedoc.sty]
+\end{packagecode}
+Also demonstrates 'niceverb.sty'.
+\begin{packagecode}
+\renewcommand*{\PatternCodes}{\MakeOther\\\MakeOther\ }
+\renewcommand*{\MakeDocCorrectHook}[1]{\ProcessStringWith{#1}{dots}}
+\end{packagecode}
+|\MakeExpandableAllReplacer{<id>}{<find>}{<replace>}{<id-next>}|%
+\footnote{Yes,
+&\MakeExpandableAllReplacer{<id>}{<find>}{<replace>}{<id-next>}.}
+\begin{packagecode}
+\MakeExpandableAllReplacer{dots}{...}{$\dots$}{cf}
+\MakeExpandableAllReplacer{cf}{cf.}{cf.\ }{etc}
+\MakeExpandableAllReplacer{etc}{etc. }{etc.\ }{LEAVE}
+\end{packagecode}
+So you can keep inter-sentence space after `etc.'
+by a code line break
+\begin{packagecode}
+\renewcommand*{\PatternCodes}{\fdPatternCodes}
+\end{packagecode}
+$\dots$ restores 'fifinddo' default.
+

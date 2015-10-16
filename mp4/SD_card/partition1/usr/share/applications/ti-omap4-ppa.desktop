@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Install OMAP4 addons
+Exec=xdg-open apt:ubuntu-omap4-extras?channel=ti-omap4-ppa
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=ti-ppa
+Categories=Favorites;
+StartupNotify=true

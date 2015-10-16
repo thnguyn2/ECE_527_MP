@@ -1,0 +1,5 @@
+a8d474325807ebd0eef8656baf061928  usr/lib/u-boot/omap4_panda/MLO
+de600589de9e479c9a5b42adf006f909  usr/lib/u-boot/omap4_panda/u-boot.bin
+ae425792be91df387b2e088c7ae49b35  usr/lib/u-boot/omap4_panda/u-boot.img
+f75f408c84e133958321464a6d87e93f  usr/share/doc/u-boot-linaro-omap4-panda/changelog.Debian.gz
+e4f835f4c630264a6ec59615ba91872d  usr/share/doc/u-boot-linaro-omap4-panda/copyright

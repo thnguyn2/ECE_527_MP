@@ -1,0 +1,85 @@
+\section {Cercles}
+
+\subsection {Définition directe}
+
+L'objet \Cadre{cercle} permet de définir et tracer un cercle. 
+Dans \verb+pst-solides3d+, un cercle en $2$d est définie par la
+donnée de son centre et de son rayon.
+
+Sous la forme la plus simple, on utilise l'argument l'argument \verb+args+
+pour spécifier le centre et le rayon de la droite considérée. On peut
+utiliser les coordonnées ou des variables nommées.
+
+L'argument \Cadre{[range=$t_{\rm min}$ $t_{\rm max}$]} permet de
+spécifier l'intervalle de tracé du cercle considéré.
+
+Comme pour les autres objets, on peut sauvegarder la
+donnée d'un cercle en utilisant l'option \Cadre{name}.
+
+\begin{multicols}{2}
+%
+\begin{pspicture}(-3,-3)(4,3.5)%
+\psframe*[linecolor=blue!50](-3,-3)(4,3.5)
+\psset{viewpoint=50 30 15,Decran=60}
+\psset{solidmemory}
+%% definition du plan de projection
+\psSolid[object=plan,
+   definition=equation,
+   args={[1 0 0 0] 90},
+   planmarks,
+   name=monplan,
+]
+\psset{plan=monplan}
+%% definition du point A
+\psProjection[object=point,
+   name=A,
+   text=A,
+   pos=ur,
+](-2,1.25)
+\psProjection[object=cercle,
+   args=A 1,
+   range=0 360,
+]
+\psProjection[object=cercle,
+   args=1 1 .5,linecolor=blue,
+   range=0 180,
+]
+\composeSolid
+\end{pspicture}
+%
+\columnbreak
+%
+\begin{gbar}
+\begin{verbatim}
+\psset{solidmemory}
+...
+\psProjection[object=point,
+   name=A,text=A,pos=ur,
+](-2,1.25)
+\psProjection[object=cercle,
+   args=A 1,range=0 360,]
+\psProjection[object=cercle,
+   args=1 1 .5,linecolor=blue,
+   range=0 180,]
+\composeSolid
+\end{verbatim}
+\end{gbar}
+%
+\end{multicols}
+
+\subsection {Autres définitions}
+
+Il existe d'autres méthodes pour définir un cercle 2d. L'argument
+\Cadre{definition}, couplé à l'argument \Cadre{args} permet d'utiliser
+les différentes méthodes supportées~:
+
+\begin{itemize}
+
+\item \Cadre {[definition=ABcercle]} ; 
+\verb+args=+ $A$ $B$ $C$. Le cercle passant par les points non alignés
+$A$, $B$ et $C$.
+
+\item \Cadre {[definition=diamcercle]} ; 
+\verb+args=+ $A$ $B$. Le cercle de diamètre $[AB]$.
+
+\end{itemize}

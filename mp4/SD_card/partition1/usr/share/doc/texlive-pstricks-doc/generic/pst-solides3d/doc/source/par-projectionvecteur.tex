@@ -1,0 +1,95 @@
+\section {Vecteurs}
+
+\subsection {Définition directe}
+
+L'objet \Cadre{vecteur} permet de définir et tracer un vecteur. Sous
+sa forme la plus simple, on utilise l'argument l'argument \verb+args+
+pour définir ses coordonnées $(X,Y)$ et on spécifie le point d'origine
+où tracer le vecteur en utilisant les valeurs $(x,y)$ dans la commande
+\verb+\psProjection+ (ou éventuellement un point nommé).
+
+Comme pour les points, on peut sauvegarder les coordonnées d'un
+vecteur en utilisant l'option \Cadre{name}.
+
+\begin{multicols}{2}
+
+\begin{pspicture}(-3,-3)(4,3.5)%
+\psframe*[linecolor=blue!50](-3,-3)(4,3.5)
+\psset{viewpoint=50 30 15,Decran=60}
+\psset{solidmemory}
+%% definition du plan de projection
+\psSolid[object=plan,
+   definition=equation,
+   args={[1 0 0 0] 90},
+   planmarks,
+   name=monplan,
+]
+\psset{plan=monplan}
+%% definition du point A
+\psProjection[object=point,
+   args=-2 0.75,
+   name=A,
+   text=A,
+   pos=dl,
+]
+\psProjection[object=vecteur,
+   linecolor=red,
+   args=1 1,
+   name=U,
+](1,0)
+\psProjection[object=vecteur,
+   args=U,
+   linecolor=blue,
+](A)
+\composeSolid
+\axesIIID(4,2,2)(5,4,3)
+\end{pspicture}
+
+\columnbreak
+
+\begin{gbar}
+\begin{verbatim}
+\psProjection[object=point,
+   args=-2 0.75,name=A,
+   text=A,pos=dl,]
+\psProjection[object=vecteur,
+   linecolor=red,
+   args=1 1,name=U,
+](1,0)
+\psProjection[object=vecteur,
+   args=U,
+   linecolor=blue,
+](A)
+\end{verbatim}
+\end{gbar}
+
+\end{multicols}
+
+\subsection {Autres définitions}
+
+Il existe d'autres méthodes pour définir un vecteur 2d. L'argument
+\Cadre{definition}, couplé à l'argument \Cadre{args} permet d'utiliser
+les différentes méthodes supportées~:
+
+\begin{itemize}
+
+\item \Cadre {[definition=vecteur]} ; 
+\verb+args=+ $A$ $B$. Le vecteur $\overrightarrow {AB}$ 
+
+\item \Cadre {[definition=orthovecteur]} ; 
+\verb+args=+ $u$. Un vecteur orthogonal à $\vec u$ et de même norme. 
+
+\item \Cadre {[definition=normalize]} ; 
+\verb+args=+ $u$. Le vecteur $\Vert \vec u \Vert ^{-1} \vec u$ si $\vec
+u \neq \vec 0$, et $\vec 0$ sinon.
+
+\item \Cadre {[definition=addv]} ; 
+\verb+args=+ $u$ $v$. Le vecteur $\vec u + \vec v$
+
+\item \Cadre {[definition=subv]} ; 
+\verb+args=+ $u$ $v$. Le vecteur $\vec u - \vec v$
+
+\item \Cadre {[definition=mulv]} ; 
+\verb+args=+ $u$ $\alpha $. Le vecteur $\alpha \vec u$
+
+\end{itemize}

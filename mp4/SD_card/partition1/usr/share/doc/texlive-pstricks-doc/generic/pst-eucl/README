@@ -1,0 +1,115 @@
+			Geometry and  PsTricks
+			 the pst-eucl package
+
+
+VERSION   1.3
+DATE      September 2004
+
+LICENCE
+-------
+
+This program can be redistributed and/or modified under the terms
+of the LaTeX Project Public License Distributed from CTAN
+archives in directory macros/latex/base/lppl.txt.
+
+However, you MUST send me an Email with a small commentary!
+
+Then you should consider making a donation:
+
+    1. directly to the LaTeX3 team;
+    2. and/or to me for the support of this package (choose one of the three)
+	a. $1 or 1 euro (or more),
+	b. some beautiful stamps (cancelled or not) of your country
+           (for my children),
+	c. a beautiful postcard with a beautiful stamp on it.
+
+       my address:
+			    Les Galinières
+		    07460 Saint André de Cruzières
+				FRANCE
+
+INSTALLATION
+------------
+
+   for teTeX :
+   -----------
+
+   If you want to just test it quickly, keep the files:
+
+	pst-eucl.pro, pst-eucl.tex and pst-eucl.sty
+
+   in the directory where you work.
+
+   For a good integration:
+
+   copy pst-eucl.pro to your local texmf directory :
+
+	/usr/local/texmf.local/dvips/pstricks (for example)
+
+   	pst-eucl.tex and pst-eucl.sty to a directory referenced
+        by the TEXCONFIG shell global variable, or in the local texmf
+	directory :
+
+	/usr/local/texmf.local/tex/generic/pstricks
+
+   run `texhash`
+
+   if you don't have a local texmf directory, you can create it or ask
+   the root to create it by modifying the file:
+
+	$(TEXMF)/web2c/texmf.cnf
+
+	remove the original for the first line:
+
+% original texmf.cnf -- runtime path configuration file for kpathsea.
+  ^^^^^^^^
+
+	uncomment the line for declaring the local directory and
+        choose where to store it:
+
+TEXMFLOCAL = /usr/local/texmf.local
+
+	add this directory to the TEXMF directory list:
+
+TEXMF = {$TEXMFLOCAL,!!$TEXMFMAIN}
+
+	normally it should work now!
+
+	create the complete directory structure you want to use:
+
+mkdir /usr/local/texmf.local
+mkdir /usr/local/texmf.local/tex
+mkdir /usr/local/texmf.local/tex/generic
+mkdir /usr/local/texmf.local/tex/generic/pstricks
+mkdir /usr/local/texmf.local/dvips
+mkdir /usr/local/texmf.local/dvips/pstricks
+
+   for Window$ : Ooops (I don't know)
+   -----------
+
+	If you use fpTeX, it should be similar as teTeX, look for the
+        texmf.local directory at the root of the texmf directory.
+
+	anyway, the simplest is to keep these three files in the
+        directory where you work!
+
+DOCUMENTATION
+-------------
+
+    a ps and a dvi files are provided. In order to build them, just
+    run LaTeX on euclide.tex (latex euclide). Depending of your TeX
+    engine you may run out of memory...
+
+EXAMPLES
+--------
+
+    The directory Exemples contains all the exemples of the
+    documentation. Each example is divided in two files:
+
+	o <exemple>.tex which contains the pspicture declaration and an
+          include to the second file,
+	o <exemple>_in.tex which contains the exemple.
+
+    In order to use them, you can merge both files and include
+    them in a LaTeX file.
+

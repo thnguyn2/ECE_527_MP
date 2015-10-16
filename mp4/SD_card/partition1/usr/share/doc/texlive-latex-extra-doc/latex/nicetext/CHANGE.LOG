@@ -1,0 +1,33 @@
+______________________________________________________________________
+nicetext RELEASE  0.2   2009/04/15   add `fifinddo' and `makedoc' for 
+                                     txt -> latex preprocessing
+
+-    README             2009/04/15   updated
+     CHANGE.LOG         2009/04/15   new
+
+-  fifinddo.sty  v0.3   2009/04/15   first CTAN release
+   fifinddo.pdf         2009/04/15
+    mkfddoc.tex         2009/04/15
+
+-   makedoc.sty  v0.2   2009/04/13   first CTAN release 
+    makedoc.pdf         2009/04/15
+    makedoc.cfg         2009/04/15
+     mdcorr.cfg         2009/04/15
+
+-  niceverb.sty  v0.2   2009/04/15   strengthened \SimpleVerb, 
+                                     \sf detection after `(', 
+                                     more for \niceverbNoVerList
+   niceverb.pdf         2009/04/15   adjusted to new doc generation 
+                                     method, mentioning it, 
+                                     motivation extended,
+                                     more examples
+
+______________________________________________________________________
+nicetext RELEASE  0.1   2009/02/23:  first CTAN releases of 
+                                     `niceverb' and `wiki'
+
+-  niceverb.sty  v0.1   2009/02/21
+   niceverb.pdf         2009/02/23
+
+-      wiki.sty  v0.2   2008/07/02 
+  wikicheat.pdf         2009/01/17

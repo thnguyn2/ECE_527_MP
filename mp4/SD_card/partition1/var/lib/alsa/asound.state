@@ -1,0 +1,26 @@
+state.VF0790 {
+	control.1 {
+		iface MIXER
+		name 'Mic Capture Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Mic Capture Volume'
+		value 17
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 24'
+			dbmin -1200
+			dbmax 1200
+			dbvalue.0 500
+		}
+	}
+}

@@ -1,0 +1,4 @@
+texlive-extra-utils: zero-byte-file-in-doc-directory
+texlive-extra-utils: extra-license-file
+texlive-extra-utils: script-not-executable
+texlive-extra-utils: wrong-name-for-upstream-changelog

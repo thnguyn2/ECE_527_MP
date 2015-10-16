@@ -1,0 +1,92 @@
+
+Start-Date: 1969-12-31  18:09:51
+Commandline: apt-get -f install
+Upgrade: librhythmbox-core5:armhf (2.96-0ubuntu4, 2.96-0ubuntu4.3)
+End-Date: 1969-12-31  18:10:04
+
+Start-Date: 1969-12-31  18:16:39
+Commandline: apt-get install libjpeg8-dev
+Install: libjpeg-turbo8-dev:armhf (1.1.90+svn733-0ubuntu4.4, automatic), libjpeg8-dev:armhf (8c-2ubuntu7)
+Upgrade: libjpeg-turbo8:armhf (1.1.90+svn733-0ubuntu4, 1.1.90+svn733-0ubuntu4.4)
+End-Date: 1969-12-31  18:16:47
+
+Start-Date: 1969-12-31  18:21:49
+Commandline: apt-get install libtiff4-dev
+Install: libtiff4-dev:armhf (3.9.5-2ubuntu1.8), libtiffxx0c2:armhf (3.9.5-2ubuntu1.8, automatic)
+End-Date: 1969-12-31  18:22:18
+
+Start-Date: 1969-12-31  18:29:10
+Commandline: apt-get install libpng12-dev
+Install: libpng12-dev:armhf (1.2.46-3ubuntu4)
+End-Date: 1969-12-31  18:29:27
+
+Start-Date: 1969-12-31  18:37:39
+Commandline: apt-get install libavl-dev
+Install: libavl1:armhf (0.3.5-3, automatic), libavl-dev:armhf (0.3.5-3)
+End-Date: 1969-12-31  18:37:46
+
+Start-Date: 1969-12-31  18:41:55
+Commandline: apt-get install libavdevice-dev
+Install: libavdevice-dev:armhf (0.8.17-0ubuntu0.12.04.1), libavformat-dev:armhf (0.8.17-0ubuntu0.12.04.1, automatic), libavcodec-dev:armhf (0.8.17-0ubuntu0.12.04.1, automatic), libavutil-dev:armhf (0.8.17-0ubuntu0.12.04.1, automatic)
+End-Date: 1969-12-31  18:42:10
+
+Start-Date: 1969-12-31  18:46:46
+Commandline: apt-get install libavahi-glib-dev
+Install: libglib2.0-dev:armhf (2.32.4-0ubuntu1, automatic), libpcre3-dev:armhf (8.12-4, automatic), libpcrecpp0:armhf (8.12-4, automatic), libavahi-glib-dev:armhf (0.6.30-5ubuntu2.1), libavahi-common-dev:armhf (0.6.30-5ubuntu2.1, automatic)
+Upgrade: libavahi-glib1:armhf (0.6.30-5ubuntu2, 0.6.30-5ubuntu2.1)
+End-Date: 1969-12-31  18:47:36
+
+Start-Date: 1969-12-31  18:55:17
+Commandline: apt-get install ffmpeg2theora
+Install: liboggkate1:armhf (0.4.1-1, automatic), ffmpeg2theora:armhf (0.27-1.1ubuntu1), libkate1:armhf (0.4.1-1, automatic)
+End-Date: 1969-12-31  18:55:32
+
+Start-Date: 1969-12-31  18:59:56
+Commandline: apt-get install libgphoto2-2-dev
+Install: libexif-dev:armhf (0.6.20-2ubuntu0.1, automatic), libgphoto2-2-dev:armhf (2.4.13-1ubuntu1.2), libusb-dev:armhf (0.1.12-20, automatic)
+Upgrade: libgphoto2-2:armhf (2.4.13-1ubuntu1, 2.4.13-1ubuntu1.2), libgphoto2-l10n:armhf (2.4.13-1ubuntu1, 2.4.13-1ubuntu1.2), libexif12:armhf (0.6.20-2, 0.6.20-2ubuntu0.1)
+End-Date: 1969-12-31  19:00:37
+
+Start-Date: 1969-12-31  18:11:27
+Commandline: apt-get remove firefox
+Remove: firefox-globalmenu:armhf (11.0+build1-0ubuntu4), firefox:armhf (11.0+build1-0ubuntu4), firefox-gnome-support:armhf (11.0+build1-0ubuntu4)
+End-Date: 1969-12-31  18:11:51
+
+Start-Date: 1969-12-31  18:23:46
+Commandline: apt-get install chromium-bsu
+Install: libopenal1:armhf (1.13-4ubuntu3, automatic), chromium-bsu:armhf (0.9.15-1), libglewmx1.5:armhf (1.5.7.is.1.5.2-1ubuntu4, automatic), fonts-uralic:armhf (0.0.20040829-3, automatic), libalut0:armhf (1.1.0-3, automatic), ttf-uralic:armhf (0.0.20040829-3, automatic), chromium-bsu-data:armhf (0.9.15-1, automatic), libglc0:armhf (0.7.2-5, automatic), libopenal-data:armhf (1.13-4ubuntu3, automatic), libsdl-image1.2:armhf (1.2.10-3, automatic)
+End-Date: 1969-12-31  18:24:37
+
+Start-Date: 1969-12-31  18:03:05
+Commandline: apt-get remove chromium-bsu
+Remove: chromium-bsu:armhf (0.9.15-1)
+End-Date: 1969-12-31  18:03:19
+
+Start-Date: 1969-12-31  18:04:49
+Commandline: apt-get autoremove
+Remove: libopenal1:armhf (1.13-4ubuntu3), libglewmx1.5:armhf (1.5.7.is.1.5.2-1ubuntu4), fonts-uralic:armhf (0.0.20040829-3), libalut0:armhf (1.1.0-3), ttf-uralic:armhf (0.0.20040829-3), chromium-bsu-data:armhf (0.9.15-1), libglc0:armhf (0.7.2-5), libopenal-data:armhf (1.13-4ubuntu3), libsdl-image1.2:armhf (1.2.10-3)
+End-Date: 1969-12-31  18:05:08
+
+Start-Date: 1969-12-31  18:09:51
+Commandline: apt-get install firefox
+Install: firefox:armhf (39.0+build5-0ubuntu0.12.04.2)
+End-Date: 1969-12-31  18:10:36
+
+Start-Date: 1969-12-31  22:08:40
+Commandline: apt-get install libcv2.3 libcv-dev
+Install: libsm-dev:armhf (1.2.0-2build1, automatic), libopencv-highgui2.3:armhf (2
+Start-Date: 1969-12-31  22:11:53
+Commandline: apt-get install libcv2.3 libcv-dev
+Install: libsm-dev:armhf (1.2.0-2build1, automatic), libopencv-highgui2.3:armhf (2.3.1-7, automatic), libopencv-features2d2.3:armhf (2.3.1-7, automatic), libalgorithm-diff-perl:armhf (1.19.02-2, automatic), libice-dev:armhf (1.0.7-2build1, automatic), fakeroot:armhf (1.18.2-1, automatic), libopencv-ml-dev:armhf (2.3.1-7, automatic), x11proto-xext-dev:armhf (7.3.0-1~precise2, automatic), libopencv-flann-dev:armhf (2.3.1-7, automatic), libatk1.0-dev:armhf (2.4.0-0ubuntu1, automatic), debhelper:armhf (9.20120115ubuntu3, automatic), x11proto-kb-dev:armhf (1.0.5-2, automatic), libopencv-legacy-dev:armhf (2.3.1-7, automatic), libilmbase6:armhf (1.0.1-3build2, automatic), libjasper-dev:armhf (1.900.1-13ubuntu0.2, automatic), libxcb-shm0-dev:armhf (1.8.1-1ubuntu0.2, automatic), x11proto-xinerama-dev:armhf (1.2.1-2, automatic), libpango1.0-dev:armhf (1.30.0-0ubuntu3.1, automatic), libopencv-legacy2.3:armhf (2.3.1-7, automatic), libalgorithm-diff-xs-perl:armhf (0.04-2build2, automatic), x11proto-render-dev:armhf (0.11.1-2, automatic), libopencv-imgproc2.3:armhf (2.3.1-7, automatic), libdc1394-22-dev:armhf (2.2.0-2, automatic), libopencv-calib3d-dev:armhf (2.3.1-7, automatic), libxi-dev:armhf (1.7.1.901-1ubuntu1~precise3, automatic), dh-apparmor:armhf (2.7.102-0ubuntu3.10, automatic), libxrender-dev:armhf (0.9.6-2ubuntu0.2, automatic), libcairo2-dev:armhf (1.10.2-6.1ubuntu3, automatic), libopencv-calib3d2.3:armhf (2.3.1-7, automatic), libxdmcp-dev:armhf (1.1.0-4, automatic), libopencv-video2.3:armhf (2.3.1-7, automatic), libopencv-video-dev:armhf (2.3.1-7, automatic), libdpkg-perl:armhf (1.16.1.2ubuntu7.6, automatic), libfontconfig1-dev:armhf (2.8.0-3ubuntu9.1, automatic), libopencv-objdetect2.3:armhf (2.3.1-7, automatic), x11proto-composite-dev:armhf (0.4.2-2, automatic), xtrans-dev:armhf (1.2.6-2, automatic), x11proto-core-dev:armhf (7.0.22-1ubuntu0.2, automatic), libxcursor-dev:armhf (1.1.12-1ubuntu0.1, automatic), libopencv-features2d-dev:armhf (2.3.1-7, automatic), libopencv-flann2.3:armhf (2.3.1-7, automatic), libcairo-script-interpreter2:armhf (1.10.2-6.1ubuntu3, automatic), libalgorithm-merge-perl:armhf (0.08-2, automatic), x11proto-randr-dev:armhf (1.4.0+git20120101.is.really.1.4.0-0ubuntu1~precise2, automatic), x11proto-damage-dev:armhf (1.2.1-2, automatic), xorg-sgml-doctools:armhf (1.10-1, automatic), libgtk2.0-dev:armhf (2.24.10-0ubuntu6.1, automatic), libxext-dev:armhf (1.3.0-3ubuntu0.2, automatic), libopenexr6:armhf (1.6.1-4.1, automatic), libopencv-core2.3:armhf (2.3.1-7, automatic), libopencv-core-dev:armhf (2.3.1-7, automatic), libxdamage-dev:armhf (1.1.3-2build1, automatic), libraw1394-dev:armhf (2.0.7-1ubuntu1, automatic), x11proto-input-dev:armhf (2.3-1~precise2, automatic), libfreetype6-dev:armhf (2.4.8-1ubuntu2.2, automatic), x11proto-fixes-dev:armhf (5.0-2ubuntu1, automatic), libcv2.3:armhf (2.3.1-7), libpthread-stubs0-dev:armhf (0.3-3, automatic), libtimedate-perl:armhf (1.2000-1, automatic), libxau-dev:armhf (1.0.6-4, automatic), dpkg-dev:armhf (1.16.1.2ubuntu7.6, automatic), libpthread-stubs0:armhf (0.3-3, automatic), libxcomposite-dev:armhf (0.4.3-2build1, automatic), libxrandr-dev:armhf (1.3.2-2ubuntu0.3, automatic), libopencv-ml2.3:armhf (2.3.1-7, automatic), libexpat1-dev:armhf (2.0.1-7.2ubuntu1.1, automatic), libopencv-objdetect-dev:armhf (2.3.1-7, automatic), libopencv-imgproc-dev:armhf (2.3.1-7, automatic), html2text:armhf (1.3.2a-15, automatic), libpixman-1-dev:armhf (0.30.2-1ubuntu0.0.0.0.2, automatic), libxft-dev:armhf (2.2.0-3ubuntu2, automatic), libx11-dev:armhf (1.4.99.1-0ubuntu2.3, automatic), libopencv-highgui-dev:armhf (2.3.1-7, automatic), libxml2-utils:armhf (2.7.8.dfsg-5.1ubuntu4.11, automatic), libcv-dev:armhf (2.3.1-7), libx11-doc:armhf (1.4.99.1-0ubuntu2.3, automatic), patch:armhf (2.6.1-3ubuntu0.1, automatic), libopenexr-dev:armhf (1.6.1-4.1, automatic), libopencv-gpu2.3:armhf (2.3.1-7, automatic), libxcb-render0-dev:armhf (1.8.1-1ubuntu0.2, automatic), libxfixes-dev:armhf (5.0-4ubuntu4.4, automatic), libxcb1-dev:armhf (1.8.1-1ubuntu0.2, automatic), libxinerama-dev:armhf (1.1.1-3ubuntu0.1, automatic), libgdk-pixbuf2.0-dev:armhf (2.26.1-1ubuntu1.1, automatic), libswscale-dev:armhf (0.8.17-0ubuntu0.12.04.1, automatic), libilmbase-dev:armhf (1.0.1-3build2, automatic), build-essential:armhf (11.5ubuntu2.1, automatic)
+Upgrade: libcairo-gobject2:armhf (1.10.2-6.1ubuntu2, 1.10.2-6.1ubuntu3)
+End-Date: 1969-12-31  22:14:51
+
+Start-Date: 1969-12-31  22:27:58
+Commandline: apt-get install opencv-doc
+Install: opencv-doc:armhf (2.3.1-7)
+End-Date: 1969-12-31  22:28:12
+
+Start-Date: 1969-12-31  22:40:53
+Commandline: apt-get install libcvaux2.3 libcvaux-dev libhighgui2.3 libhighgui-dev
+Install: libhighgui2.3:armhf (2.3.1-7), libcvaux2.3:armhf (2.3.1-7), libcvaux-dev:armhf (2.3.1-7), libhighgui-dev:armhf (2.3.1-7), libopencv-contrib2.3:armhf (2.3.1-7, automatic), libopencv-contrib-dev:armhf (2.3.1-7, automatic)
+End-Date: 1969-12-31  22:41:01

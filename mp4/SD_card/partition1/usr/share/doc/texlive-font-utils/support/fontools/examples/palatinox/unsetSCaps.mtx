@@ -1,0 +1,32 @@
+\relax
+\metrics
+\needsfontinstversion{1.926}
+
+\setcommand\deleteGlyph#1{
+    \ifisglyph{#1}\then
+	\unsetglyph{#1}
+	\noleftrightkerning{#1}
+    \fi
+}
+
+\deleteGlyph{ff}
+\deleteGlyph{fi}
+\deleteGlyph{fl}
+\deleteGlyph{ffi}
+\deleteGlyph{ffl}
+
+\deleteGlyph{dotlessi}
+\setglyph{dotlessi}
+    \glyph{i}{1000}
+\endsetglyph
+\setleftrightkerning{dotlessi}{i}{1000}
+
+\deleteGlyph{germandbls}
+\setglyph{germandbls}
+    \glyph{s}{1000}
+    \movert{\kerning{s}{s}}
+    \glyph{s}{1000}
+\endsetglyph
+\setleftrightkerning{germandbls}{s}{1000}
+
+\endmetrics

@@ -1,0 +1,47 @@
+\setupdocument{
+  nofooter,fold2,autograph=1,dutch,
+  company         = The Shiva Shakti Foundation,
+  who             = Wybo Dekker,
+  street          = Deilsedijk 60,
+  city            = Deil,
+  zip             = 4158 CH,
+  country         = The Netherlands,
+  countrycode     = IN,
+  areacode        = 31,
+  phone           = {87-87\,48\,496},
+  cellphone       = {6-15\,49\,20\,70},
+  fax             = {},
+  website         = www.servalys.nl,
+  email           = wybo@servalys.nl,
+  accountno       = {3040\,46221},
+  iban            = nl61pstb0006238747,
+  bic             = pstbnl21,
+  addresscenter   = 70,
+  rightaddress
+}
+\autograph{2}{.20}{75bp}{47bp}{238bp}{261bp}{signblue}
+
+\definecolor{shivablue}{rgb}{.14,.33,.43}
+\definecolor{shivaback}{rgb}{.78,.89,.68}
+\pdfmapfile{=chopinsc.map}
+\newcommand{\chopinscript}{\fontfamily{chopinscript}\selectfont}
+\DeclareFontFamily{T1}{chopinscript}{}
+\DeclareFontShape{T1}{chopinscript}{m}{n}{ <-> chopinsc}{}
+\graphicspath{{./graphics/}}
+
+\renewcommand{\logo}{
+  \pagecolor{shivaback}
+  \begin{textblock}{105}(88,15)
+    \begin{center}
+      \chopinscript{%
+        \Huge\noindent\textcolor{shivablue}{The Shiva Shakti Foundation}
+      }\\[2ex]
+      Main Building\quad 567\textsuperscript{th} floor\quad Room 123\quad Bangkok
+    \end{center}
+  \end{textblock}
+  \begin{textblock}{2}(10,13)
+    \includegraphics[scale=.3]{shiva_shakti.jpg}
+  \end{textblock}
+}
+\endinput
+$Id: logostyle.sty,v 1.4 2007-09-02 09:35:59 wybo Exp $

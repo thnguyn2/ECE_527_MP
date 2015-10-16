@@ -1,0 +1,9 @@
+35435a59dee5f3bfe5b43f3956f34373  bin/keyctl
+5dbbae31dd6b020d0bc5e0c80f0bfd20  sbin/key.dns_resolver
+a01dc2a3bf51477f411c04be65f3fbb8  sbin/request-key
+46382b6b5b674f9eb3dd46514e509f09  usr/share/doc/keyutils/copyright
+738c1d4c2c763040c6e47e5b19861292  usr/share/keyutils/request-key-debug.sh
+e03bfe146a181f6481101b767aa084a9  usr/share/man/man1/keyctl.1.gz
+8f0229c545b883c2f54121c920a4543d  usr/share/man/man5/request-key.conf.5.gz
+6c29a83d99cd214cb478bdbd6c5db7c0  usr/share/man/man8/key.dns_resolver.8.gz
+d5b81a28da50725d2b69b9f943577f49  usr/share/man/man8/request-key.8.gz

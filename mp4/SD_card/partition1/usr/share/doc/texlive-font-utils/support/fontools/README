@@ -1,0 +1,82 @@
+FONTOOLS: some tools for handling fonts with LaTeX and fontinst
+===============================================================
+
+This package provides a few tools to simplify using fonts (especially
+TrueType/OpenType ones) with LaTeX.
+
+The most important tool in this bundle is
+
+AUTOINST - a wrapper script around Eddie Kohler's LCDF TypeTools for 
+installing OpenType fonts in LaTeX. It also creates .fd and .sty files.
+
+The other tools in this bundle were created before I knew of the
+TypeTools' existence. They clumsily implement a subset of the 
+functionality of the TypeTools and should be considered more or less
+deprecated. Personally, I haven't used them in years (and I'm not sure
+I still understand how the code exactly works), but they're still
+included in case someone needs them. Just be aware that I may not
+be able to fix any problems you may encounter.
+
+AFM2AFM - reencode .afm files; designed to replace fontinst's
+\reencodefont for big .afm files.
+
+AUTOINST - a wrapper script around otftotfm for installing
+OpenType fonts in LaTeX. It also creates .fd and .sty files.
+
+CMAP2ENC - convert glyph indices in TrueType fonts without glyph names
+(such as Linotype Palatino) to Adobe glyph names.
+
+FONT2AFM - create font metrics for just about any font file; wrapper
+around tools such as pf2afm, ttf2afm, pfm2kpx and ot2kpx.
+
+OT2KPX - extract all kerning pairs from OpenType fonts.
+
+PFM2KPX - extract the correct kerning pairs from buggy .pfm files
+(where pf2afm complains `.notdef character occurred among kern pairs').
+
+SHOWGLYPHS - create a pdf file that shows all glyphs in a font.
+
+
+Please see the documentation of the individual programs for more info.
+
+
+Prerequisites
+-------------
+
+All programs have been written in Perl; they require Perl version 5.6 or later. 
+Some programs also need pf2afm (distributed with GhostScript), ttf2afm
+(distributed with pdfTeX) or Eddie Kohler's TypeTools (see
+http://www.lcdf.org/type/)
+
+Most tools can also use kpsewhich or findtexmf (if available) for searching 
+their input files. If neither tool is present, input files are searched 
+in the current working directory.
+
+The SHOWGLYPHS script uses several standard Unix/Linux commands; 
+it probably won't work on other platforms. It also needs a working,
+TDS-compliant TeX installation.
+
+The encoding files in the `share/' directory are meant to be used with 
+Eddie Kohler's otftotfm (either directly or via the AUTOINST wrapper script);
+place these files somewhere where otftotfm can find them.
+
+
+License
+-------
+
+This software is copyright (c) 2005-2009 Marc Penninga. It is released under 
+the terms of the GNU General Public Licence. See the file GPLv2.txt for 
+the license conditions.
+
+
+Examples
+--------
+
+A few detailed examples of the use of some of these tools (mainly CMAP2ENC)
+can be found in the directory `examples/': this contains everything you need
+(except the fonts themselves, of course) to use the TrueType versions of
+Linotype Palatino, Monotype Berling and Linotype Frutiger that come with
+some Microsoft products.
+
+
+                                            Marc Penninga, 2009/04/09

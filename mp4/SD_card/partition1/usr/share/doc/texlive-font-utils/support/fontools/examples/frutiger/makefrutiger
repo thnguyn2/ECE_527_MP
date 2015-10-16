@@ -1,0 +1,70 @@
+#!/bin/sh
+
+TEXMF="./"
+
+mkdir -p "${TEXMF}fonts/afm/linotype/frutiger/"
+mkdir -p "${TEXMF}fonts/enc/dvips/frutiger/"
+mkdir -p "${TEXMF}fonts/map/dvips/frutiger/"
+mkdir -p "${TEXMF}fonts/tfm/linotype/frutiger/"
+mkdir -p "${TEXMF}fonts/truetype/linotype/frutiger/"
+mkdir -p "${TEXMF}fonts/vf/linotype/frutiger/"
+mkdir -p "${TEXMF}tex/latex/linotype/frutiger/"
+
+#
+#	By default, Linotype Frutiger uses oldstyle figures; 
+#	`berling.sub' replaces these with normal (lining) figures.
+#	
+#	In the second line, we specify `-f onum' (even though Frutiger doesn't
+#	support features)  to force the output files to have a `j' appended
+#	to their filenames; otherwise they would clobber the output of the
+#	first call to `cmap2enc'.
+#
+cmap2enc -xfrutiger.sub frutiger.ttf t1.enc
+cmap2enc -f onum frutiger.ttf t1.enc
+cmap2enc frutiger.ttf ts1.enc
+
+for TTF in *.ttf
+do
+	font2afm "$TTF"
+done
+
+rm frutiger.map
+afm2afm -e t1-tlf-frutiger.enc -o rlfrr9e.afm frutiger.afm >>frutiger.map
+afm2afm -e t1-tlf-frutiger.enc -o rlfrri9e.afm frutit.afm >>frutiger.map
+afm2afm -e t1-tlf-frutiger.enc -o rlfrb9e.afm frutbd.afm >>frutiger.map
+afm2afm -e t1-tlf-frutiger.enc -o rlfrbi9e.afm frutz.afm >>frutiger.map
+
+afm2afm -e t1-tosf-frutiger.enc -o rlfrrj9d.afm frutiger.afm >>frutiger.map
+afm2afm -e t1-tosf-frutiger.enc -o rlfrrij9d.afm frutit.afm >>frutiger.map
+afm2afm -e t1-tosf-frutiger.enc -o rlfrbj9d.afm frutbd.afm >>frutiger.map
+afm2afm -e t1-tosf-frutiger.enc -o rlfrbij9d.afm frutz.afm >>frutiger.map
+
+afm2afm -e ts1-tlf-frutiger.enc -o rlfrr9c.afm frutiger.afm >>frutiger.map
+afm2afm -e ts1-tlf-frutiger.enc -o rlfrri9c.afm frutit.afm >>frutiger.map
+afm2afm -e ts1-tlf-frutiger.enc -o rlfrb9c.afm frutbd.afm >>frutiger.map
+afm2afm -e ts1-tlf-frutiger.enc -o rlfrbi9c.afm frutz.afm >>frutiger.map
+
+tex lfr_fnst.tex
+
+for PL in *.pl
+do
+    pltotf "$PL"
+done
+
+for VPL in *.vpl
+do
+    vptovf "$VPL"
+done
+
+rm *.pl *.vpl rlfr*.afm rlfr*.mtx resetfrutiger-*.mtx
+
+mv *.afm "${TEXMF}/fonts/afm/linotype/frutiger/"                   
+mv *.enc "${TEXMF}/fonts/enc/dvips/frutiger/"                      
+mv *.map "${TEXMF}/fonts/map/dvips/frutiger/"                      
+mv *.tfm "${TEXMF}/fonts/tfm/linotype/frutiger/"                   
+cp *.ttf "${TEXMF}/fonts/truetype/linotype/frutiger/"              
+mv *.vf	 "${TEXMF}/fonts/vf/linotype/frutiger/"                    
+mv *.fd  "${TEXMF}/tex/latex/linotype/frutiger/"
+cp *.sty "${TEXMF}/tex/latex/linotype/frutiger/"
+
+texhash ${TEXMF}

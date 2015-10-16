@@ -1,0 +1,4 @@
+5d30ffd7222aa4309e44be157ad1534c  usr/lib/arm-linux-gnueabihf/libavdevice.so.53.2.0
+197aab704ea42a806f7d3815009a5998  usr/lib/arm-linux-gnueabihf/neon/vfp/libavdevice.so.53.2.0
+adc97df5eedef35a42cc9e3c0be86124  usr/share/doc/libavdevice53/copyright
+bfcb876aaab6d9166a6225fdcd55a330  usr/share/lintian/overrides/libavdevice53

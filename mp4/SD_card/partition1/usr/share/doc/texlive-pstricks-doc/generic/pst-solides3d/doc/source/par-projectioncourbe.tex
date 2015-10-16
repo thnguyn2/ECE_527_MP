@@ -1,0 +1,158 @@
+\section {Courbes de fonction numériques et courbes paramétrées}
+
+\subsection {Courbe de fonction numérique}
+
+L'objet \Cadre{courbe} permet d'obtenir le tracé de la courbe d'une
+fonction numérique dont le nom est passée \textsl{via\/} l'argument
+\Cadre{function}. Cette fonction à valeurs dans \textbf{R} ayant été
+préalablement définie avec la macro \verb+\defFunction+ vue plus avant
+dans ce guide. 
+
+On pourra donc définir cette fonction, soit en notation algébrique
+avec l'option  \Cadre{[algebraic]}, soit en notation polonaise
+inversée (langage postscript), avec une variable quelconque
+$(x,u,t\ldots)$, par une expression de la forme suivant le cas~: 
+
+\begin{gbar}
+\begin{verbatim} 
+\defFunction[algebraic]{nom_fonction}(x){x*sin(x)}{}{}
+\end{verbatim}  
+\end{gbar}
+
+\begin{gbar}
+\begin{verbatim} 
+\defFunction{nom_fonction}(x){x dup sin mul}{}{}
+\end{verbatim}  
+\end{gbar}
+
+Cette expression dans doit être incluse dans l'environnement
+\Cadre{pspicture}.
+
+Les limites de la variable sont définies dans l'option
+\Cadre{range=$xmin$ $xmax$}, et l'option \Cadre{resolution=$n$} permet
+de préciser le nombre de points calculés pour le dessin de la courbe.
+
+\begin{multicols}{2}
+
+\begin{pspicture}(-3,-3)(4,3.5)%
+\psframe*[linecolor=blue!50](-3,-3)(4,3.5)
+\psset{lightsrc=50 20 20,viewpoint=50 30 15,Decran=60}
+\psset{solidmemory}
+\defFunction[algebraic]{1_sin}(x){2*sin(1/x)}{}{}
+\psSolid[object=grille,
+   base=-3 0 -3 3,
+   linewidth=0.5\pslinewidth,linecolor=gray,]
+%% definition du plan de projection
+\psSolid[object=plan,
+   definition=equation,
+   args={[1 0 0 0] 90},
+   base=-3.2 3.2 -2.2 2.2,
+   planmarks,
+   showBase,
+   name=monplan,
+]
+\psset{plan=monplan}
+\psSolid[object=plan,
+   args=monplan,
+   linecolor=gray!40,
+   plangrid,
+   action=none,
+]
+\psProjection[object=courbe,
+   linecolor=red,
+   range=-3 3,resolution=720,
+   function=1_sin,
+]
+\composeSolid
+\axesIIID(4,2,2)(5,4,3)
+\end{pspicture}
+
+\columnbreak
+
+\begin{gbar}
+\begin{verbatim}
+\defFunction[algebraic]{1_sin}(x)
+   {2*sin(1/x)}{}{}
+\psset{plan=monplan}
+...
+\psProjection[object=courbe,linecolor=red,
+   range=-3 3,resolution=720,function=1_sin]
+\end{verbatim}
+\end{gbar}
+\vskip -10mm
+
+\end{multicols}
+
+
+\subsection {Courbes paramétrées}
+
+La technique est analogue, à la différence près que la fonction
+évoquée est à valeurs dans $R^2$, et que l'objet passé en paramètre à
+\verb+\psProjection+ est \Cadre{courbeR2}.
+
+Pour dessiner un cercle de rayon $3$, on  écrira :
+
+\begin{gbar}
+\begin{verbatim} 
+\defFunction[algebraic]{cercle}(t){3*cos(t)}{3*sin(t)}{}
+\end{verbatim}  
+\end{gbar}
+
+Autre exemple : les courbes de Lissajous.
+
+
+\begin{multicols}{2}
+
+\begin{pspicture}(-3,-3)(4,3.5)%
+\psframe*[linecolor=blue!50](-3,-3)(4,3.5)
+\psset{lightsrc=50 20 20,viewpoint=50 30 15,Decran=60}
+\psset{solidmemory}
+\defFunction[algebraic]{F}(t){2*sin(0.57735*t)}{2*sin(0.707*t)}{}
+\psSolid[object=grille,
+   base=-3 0 -3 3,
+   linewidth=0.5\pslinewidth,linecolor=gray,]
+%% definition du plan de projection
+\psSolid[object=plan,
+   definition=equation,
+   args={[1 0 0 0] 90},
+   base=-3.2 3.2 -2.2 2.2,
+   name=monplan,
+   planmarks,
+   showBase,
+]
+\psset{plan=monplan}
+\psSolid[object=plan,
+   args=monplan,
+   linecolor=gray!40,
+   plangrid,
+   action=none,
+]
+\psProjection[object=courbeR2,
+   range=-25.12 25.12,resolution=720,
+   normal=1 1 2,linecolor=red,
+   function=F,
+]
+\composeSolid
+\axesIIID(4,2,2)(5,4,3)
+\end{pspicture}
+
+\columnbreak
+
+\begin{gbar}
+\begin{verbatim}
+\defFunction[algebraic]{F}(t)
+   {2*sin(0.57735*t)}
+   {2*sin(0.707*t)}
+   {}
+\psset{plan=monplan}
+...
+\psProjection[object=courbeR2,
+   range=-25.12 25.12,resolution=720,
+   normal=1 1 2,linecolor=red,
+   function=F,
+]
+\end{verbatim}
+\end{gbar}
+
+\end{multicols}
+

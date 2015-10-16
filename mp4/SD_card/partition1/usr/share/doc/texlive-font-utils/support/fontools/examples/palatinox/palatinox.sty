@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{palatinox}
+    [2006/10/16 v3.0  Style file for Palatino Linotype.]
+
+\IfFileExists{fontaxes.sty}{
+    \RequirePackage{fontaxes}
+
+    \fa@naming@exception{figures}{{superior}{proportional}}{Sup}
+    \fa@naming@exception{figures}{{superior}{tabular}}{Sup}
+    \def\sufigures{\@nomath\sufigures
+      \fontfigurestyle{superior}\selectfont}
+    \DeclareTextFontCommand{\textsu}{\sufigures}
+    \let\textsuperior\textsu
+}{}
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage{textcomp}
+\DeclareOption{lining}{\edef\f@figure@style{LF}}
+\DeclareOption{tabular}{\edef\f@figure@align{T}}
+\DeclareOption{oldstyle}{\edef\f@figure@style{OsF}}
+\DeclareOption{proportional}{\edef\f@figure@align{}}
+
+\ExecuteOptions{oldstyle,proportional}
+\ProcessOptions\relax
+
+\renewcommand*
+    {\rmdefault}
+    {Palatino-\f@figure@align\f@figure@style}
+\renewcommand*{\familydefault}{\rmdefault}
+\renewcommand*{\bfdefault}{b}
+
+\normalfont
+
+\endinput
+%%
+%% End of file 'palatinox.sty'

@@ -1,0 +1,5 @@
+
+VERSION='0.2.8'
+CODENAME='precise'
+DISTRO='Ubuntu'
+RELEASE='12.04'

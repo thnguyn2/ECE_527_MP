@@ -1,0 +1,90 @@
+#!/bin/sh
+#
+# redboot-cmdline
+# - a tool to easily edit the kernel cmdline in fconfig
+#
+# Copyright (c) 2009 Canonical
+# Author: Oliver Grawert <ogra@canonical.com>
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License as
+#  published by the Free Software Foundation; either version 2 of the
+#  License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software Foundation,
+#  Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+set -e
+
+DEV="/dev/mmcblk0"
+OFST="0x5F000"
+DO_READ=""
+CMDLINE=""
+
+
+usage()
+{
+	echo "usage: $(basename $0) -r|-w \"<newcmdline>\""
+	echo
+	echo "	-r read existing cmdline"
+	echo "	-w \"<newcmdline>\" write \"<newcmdline>\" to fis"
+	echo "	-d <device> write to <device> or image"
+	echo "	-o <hex offset> override <hex offset> to config data"
+	echo
+	exit 0
+}
+
+checkparm()
+{
+    if [ "$(echo $1|grep ^'\-')" ] || [ -z "$1" ];then
+        echo "E: Need an argument"
+        usage
+    fi
+}
+
+while [ ! -z "$1" ]; do
+    case $1 in
+        -h|--help)
+            usage
+            ;;
+        -d|--device)
+            checkparm $2
+            DEV="$2"
+            ;;
+        -o|--offset)
+            checkparm $2
+            OFST="$2"
+            ;;
+        -r|--read)
+            DO_READ="True"
+            ;;
+        -w|--write)
+            checkparm $2
+            CMDLINE="$2"
+    esac
+    shift
+done
+
+if [ ! -e "${DEV}" ] || [ ! -w "${DEV}" ];then
+    echo "E: cannot access $DEV (does $DEV exist ?)"
+    exit 0
+fi
+
+CMD="fconfig -s -r -d ${DEV} -o ${OFST} -n boot_script_data"
+
+if [ -n "${DO_READ}" ];then
+	echo $(echo $(${CMD})|sed -e 's/^.*\"\(.*\)\".*$/\1/')
+	exit 0
+fi
+
+if [ -n "${CMDLINE}" ];then
+	NEWSCRIPT="$(echo "$(${CMD})"|sed s/\"[^]]*\"/\""${CMDLINE}"\"/g)\\"
+	fconfig -s -w -d ${DEV} -o ${OFST} -n boot_script_data -x "${NEWSCRIPT}"
+	exit 0
+fi

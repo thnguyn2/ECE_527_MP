@@ -1,0 +1,7 @@
+3e6f365b0081e8186f43af9a21ca8017  usr/sbin/flash-kernel
+2d247d5b08f6e61f980822edee82f9e5  usr/share/doc/flash-kernel/NEWS.Debian.gz
+6da52b7797c520ca4f2d2e71278ca3df  usr/share/doc/flash-kernel/README
+eaeede6c6ff880a3a047740bd713fc10  usr/share/doc/flash-kernel/changelog.gz
+f8bccc3c410eb2c0164c685e8e289e38  usr/share/doc/flash-kernel/copyright
+86793b9171983ae61abacdfafe669d25  usr/share/initramfs-tools/hooks/flash_kernel_set_root
+2c2eefcf491801cb352d1279a2b1ff4e  usr/share/man/man8/flash-kernel.8.gz

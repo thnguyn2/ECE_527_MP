@@ -1,0 +1,8 @@
+d9c9db27e5db315eb95f2aa784892187  usr/bin/lacheck
+e4467593dd76f73a799be3ee48195c9e  usr/share/bug/lacheck/presubj
+2cf5e4b2521f5db5c46d2055d8a7b6c6  usr/share/doc-base/lacheck
+7e08427cf75ff100dc3a268336b49e2d  usr/share/doc/lacheck/README.Debian
+8bcacadff8ede732e802eaeb196916ef  usr/share/doc/lacheck/changelog.Debian.gz
+0fee4f8583459d5022c45413f4bab69b  usr/share/doc/lacheck/copyright
+2e35df0cc8437ca39141516a30796294  usr/share/doc/lacheck/lacheck.hlp
+649534435839e42147abf8603ceaded3  usr/share/man/man1/lacheck.1.gz

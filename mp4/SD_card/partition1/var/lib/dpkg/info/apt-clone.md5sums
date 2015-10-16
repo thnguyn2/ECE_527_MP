@@ -1,0 +1,6 @@
+5a46c8335fa7b8f7bb4281af7b436a5e  usr/bin/apt-clone
+6be712391a1ca69b671ad91b8e79ac82  usr/share/doc/apt-clone/changelog.gz
+e0262e0d6ff04785eebe47d007d0b3ed  usr/share/doc/apt-clone/copyright
+af98bb28dd0af2b8a743f48c81717a57  usr/share/man/man8/apt-clone.8.gz
+9afe604ec35f786fa9ece410da110751  usr/share/pyshared/apt_clone-0.2.1.egg-info
+b94e8b4a597370c3c8d407431728c2fe  usr/share/pyshared/apt_clone.py

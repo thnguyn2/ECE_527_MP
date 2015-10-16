@@ -1,0 +1,12 @@
+pdfmarginpar provides the \pdfmarginpar command which is
+similar in spirit to \marginpar. How-
+ever, it creates pdf-annotations which can be viewed with
+Adobe Reader instead of normal text margins:
+small icons indicate the in-text position where the message
+originates, popups provide detailed messages.
+The advantage over \marginpar is that bugﬁxes and
+communication is clearly visible together with its
+text source and the document as such is not obscured.
+
+Author's name: Christian Feuersänger
+License type: lppl

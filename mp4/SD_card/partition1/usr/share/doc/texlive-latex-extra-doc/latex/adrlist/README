@@ -1,0 +1,12 @@
+AdrList - Using Adresslists in LaTeX
+------------------------------------
+
+To produce the adrlist.sty macro file, just run
+	latex adrlist.ins
+
+To obtain the documentation, say
+	latex adrlist.dtx
+
+Any comments, bug reports or suggestions how to improve
+the macro, please send to:
+Tobias.Spribille@studbox.uni-stuttgart.de

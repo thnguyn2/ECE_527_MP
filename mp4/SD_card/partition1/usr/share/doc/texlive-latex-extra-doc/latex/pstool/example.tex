@@ -1,0 +1,21 @@
+
+\documentclass[a5paper,12pt]{memoir}
+\usepackage{color}
+\usepackage{pstool}
+\input macros.tex
+\EndPreamble
+\begin{document}
+
+External macros: \a, \b, \c
+
+\psfragfig*[mode=nonstop]{trial}{%
+  \color{red}
+  \tiny
+  \psfrag{[Mp]}{$M_\a$!}%
+}
+
+\psfragfig[angle=45]{subdir/trial2}{%
+  \psfrag{[Mp]}{$Z_\b$}%
+}
+
+\end{document}

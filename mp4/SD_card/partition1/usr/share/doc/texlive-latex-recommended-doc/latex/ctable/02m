@@ -1,0 +1,5 @@
+\ctable[
+  caption = Right,
+     right
+]{c}{}{\FL Table's first row\LL}
+$Id: 02m,v 1.1 2007-07-22 15:30:56 wybo Exp $

@@ -1,0 +1,6 @@
+1e896388e2a49bc0069d7a36a42e652c  usr/lib/libQtBamf.so.1.0.0
+c226b97d65af7af6c3291350b29d6e70  usr/lib/qt4/imports/bamf/libQtBamfQml.so
+f1b273d58231f6266b90b3f1972c3abb  usr/lib/qt4/imports/bamf/qmldir
+3d3a7823f3f33c228a2ce6d9deb8c136  usr/share/doc/libqtbamf1/README
+f35e149ba9c2335208aa039c65e46e82  usr/share/doc/libqtbamf1/changelog.Debian.gz
+0aa9b6c56b5a3f2f68186a0387e86721  usr/share/doc/libqtbamf1/copyright

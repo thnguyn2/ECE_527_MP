@@ -1,0 +1,219 @@
+#!/bin/sh -e
+
+PREREQ=""
+
+# Output pre-requisites
+prereqs()
+{
+        echo "$PREREQ"
+}
+
+case "$1" in
+    prereqs)
+        prereqs
+        exit 0
+        ;;
+esac
+
+LOGFILE=/dev/.initramfs/jasper.log
+# If we are already confiugured we dont want to run again
+[ -e /root/etc/flash-kernel.conf ] && exit 0
+
+MYECHO="echo "
+
+if [ -x /bin/plymouth ] && plymouth --ping; then
+        MYECHO="plymouth message --text="
+fi
+
+# jasper_growroot should have exported this, if not, fall
+# back to a hardcoded value
+[ -n "${ROOTDEV}" ] || ROOTDEV="mmcblk0p"
+ROOTPART="${ROOTDEV}2"
+
+#iMX53 has rootfs on part 3
+grep MX53 /proc/cpuinfo >/dev/null && ROOTPART="${ROOTDEV}"3
+
+FSTYPE=$(blkid -o value -s TYPE "/dev/${ROOTPART}")
+
+DISKTYPE=$(echo $ROOTDEV|sed 's/blk[0-9]p//')
+
+if echo "$root" | grep -q '^UUID='; then
+    VOLID=$root
+else
+    if echo $root| grep -q ^/;then
+        ROOTPART=$(basename $root)
+    fi
+    VOLID=$(blkid |grep ${ROOTPART}|awk '{print $2}'|tr -d [\"])
+fi
+
+machine=$(grep "^Hardware" /proc/cpuinfo | sed 's/Hardware\s*:\s*//')
+
+UBOOT_PART="/dev/mmcblk0p1"
+TMPDIR="/dev/.initramfs/jasper-tmp"
+BOOT_SCRIPT="/boot/boot.script"
+BOARD_OPTS="ro" 
+
+if [ "${DISKTYPE}" = "mmc" ];then
+	BOARD_OPTS="${BOARD_OPTS} elevator=noop" 
+fi
+
+# make sure FS is writable
+mount -o remount,rw /root
+
+if [ -e /root/preseed.cfg ]; then
+        chroot /root debconf-set-selections /preseed.cfg
+fi
+
+for x in $(cat /proc/cmdline); do
+    case ${x} in
+        preseed/file=*)
+            locations="${x#preseed/file=} $locations"
+            ;;
+        file=*)
+            locations="${x#file=} $locations"
+            ;;
+        console=tty[A-Z]*)
+            $MYECHO"Enabling serial console login"
+            cp /root/usr/share/jasper-initramfs/init/serial.conf /root/etc/init/
+            BOARD_OPTS="${BOARD_OPTS} ${x}"
+            ;;
+        root=*)
+            BOARD_OPTS="${BOARD_OPTS} root=${VOLID}"
+            ;;
+        debian-installer/language=*)
+            language=${x#debian-installer/language=}
+            locale="$(lang2locale "$language")"
+            set_locale="true"
+            ;;
+        debian-installer/locale=*)
+            locale=${x#debian-installer/locale=}
+            set_locale="true"
+            ;;
+        locale=*)
+            locale=${x#locale=}
+            set_locale="true"
+            ;;
+        */*=*)
+            # handle preseeding options
+            opt=${x%=*}
+            val=${x#*=}
+            pkg=${opt%/*}
+            if [ $pkg = "debian-installer" ]; then
+                pkg="oem-config"
+            fi
+            echo "set ${opt} ${val}" | chroot /root debconf-communicate ${pkg} >>$LOGFILE 2>&1 || true
+            ;;
+        *)
+            BOARD_OPTS="${BOARD_OPTS} ${x}"
+            ;;
+    esac
+done
+
+if [ "$locations" ]; then
+        for item in $locations; do
+                cp $item /root/tmp
+                chroot /root debconf-set-selections /tmp/$item
+                rm /root/tmp/$item
+        done
+fi
+
+if [ -z "${locale}" ]; then
+    # Set a default locale
+    locale=en_US.UTF-8
+    set_locale="true"
+fi
+
+if [ "${set_locale}" ]; then
+    LANG=$(grep "^${locale}" /root/usr/share/i18n/SUPPORTED | grep UTF-8 |sed -e 's, .*,,' -e q)
+    printf 'LANG="%s"\n' "${LANG}" >> /root/etc/default/locale
+    printf 'LANG="%s"\n' "${LANG}" >> /root/etc/environment
+    printf '%s UTF-8\n' "${LANG}" > /root/etc/locale.gen
+    chroot /root /usr/sbin/locale-gen "${LANG}" >>$LOGFILE 2>&1 || true
+fi
+
+# create fstab in /root, we only support ext3 partitions atm
+$MYECHO"Setting up fstab"
+if grep -q 'UNCONFIGURED FSTAB' /root/etc/fstab; then
+cat > /root/etc/fstab <<-EOF
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+EOF
+fi
+if ! cat /root/etc/fstab | grep -v '^#' | awk '{print $3}' | grep -q ^proc; then
+  echo "proc /proc proc nodev,noexec,nosuid 0 0" >>/root/etc/fstab
+fi
+if ! grep -q ${VOLID} /root/etc/fstab; then
+  echo "${VOLID} / ${FSTYPE} defaults,noatime,errors=remount-ro 0 1" >>/root/etc/fstab
+fi
+$MYECHO"Setting up swap"
+if ! grep -q swap /root/etc/fstab; then
+    if [ -e /root/SWAP.swap ]; then
+    	echo "/SWAP.swap  none  swap  sw  0 0" >>/root/etc/fstab
+    fi
+fi
+
+$MYECHO"Enabling oem-config"
+# switch oem-config on
+mkdir -p /root/var/lib/oem-config
+touch /root/var/lib/oem-config/run
+
+MMCPART="0:1"
+KERNELADDR=0x80000000
+INITRDADDR=0x81600000
+
+case "$machine" in
+        "OMAP4430 4430SDP board")
+            UBOOT_PART="/dev/mmcblk1p1"
+        ;;
+        "Freescale MX53 LOCO Board")
+            UBOOT_PART="/dev/mmcblk0p2"
+            MMCPART="0:2"
+            KERNELADDR=0x70000000
+            INITRDADDR=0x72000000
+        ;;
+esac
+
+$MYECHO"Writing flash-kernel configuration"
+# create flash-kernel setup
+echo "UBOOT_PART=${UBOOT_PART}" >/root/etc/flash-kernel.conf
+echo "ROOT=${VOLID}" >>/root/etc/flash-kernel.conf
+
+# create new boot.scr file
+$MYECHO"Creating bootloader configuration"
+cat >"/root${BOOT_SCRIPT}" <<EOF
+        fatload mmc ${MMCPART} ${KERNELADDR} uImage
+        fatload mmc ${MMCPART} ${INITRDADDR} uInitrd
+        setenv bootargs ${BOARD_OPTS}
+        bootm ${KERNELADDR} ${INITRDADDR}
+EOF
+mkdir -p ${TMPDIR}
+mount ${UBOOT_PART} ${TMPDIR}
+/root/usr/bin/mkimage -A arm -T script -C none -n "Ubuntu boot script" -d /root${BOOT_SCRIPT} ${TMPDIR}/boot.scr >>$LOGFILE 2>&1
+umount ${TMPDIR}
+rm -rf ${TMPDIR}
+
+if [ "${DISKTYPE}" = "mmc" ];then
+	cp /root/usr/share/jasper-initramfs/sysctl/30-jasper-root-on-sd.conf /root/etc/sysctl.d/ >>$LOGFILE 2>&1
+fi
+
+# for bug 746137
+cp /root/usr/share/jasper-initramfs/sysctl/30-jasper-smsc-min-free-kbytes.conf /root/etc/sysctl.d/ >>$LOGFILE 2>&1
+
+chroot /root /usr/share/jasper-initramfs/apt/enable_additional_repos.py >>$LOGFILE 2>&1
+
+# move jasper.log to root filesystem
+mv $LOGFILE /root/var/log/
+
+# remount readonly
+mount -o remount,ro /root
+
+if [ -e /dev/.initramfs/jasper-reboot ];then
+    $MYECHO"Rebooting into configuration session"
+    sleep 3
+    reboot
+fi

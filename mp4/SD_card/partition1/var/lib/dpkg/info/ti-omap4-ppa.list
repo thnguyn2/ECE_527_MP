@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/app-install
+/usr/share/app-install/channels
+/usr/share/app-install/channels/ti-omap4-ppa.list
+/usr/share/app-install/channels/ti-omap4-ppa.eula
+/usr/share/app-install/channels/ti-omap4-ppa.key
+/usr/share/doc
+/usr/share/doc/ti-omap4-ppa
+/usr/share/doc/ti-omap4-ppa/copyright
+/usr/share/doc/ti-omap4-ppa/changelog.gz
+/usr/share/ti-omap4-ppa
+/usr/share/ti-omap4-ppa/ti-omap4-ppa.desktop
+/usr/share/pixmaps
+/usr/share/pixmaps/ti-ppa.svg

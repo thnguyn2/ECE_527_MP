@@ -1,0 +1,12 @@
+The unroman package - From Roman numerals to Arabic numbers
+
+----------------------------------------------------------------
+Maintained by Joseph A. Wright
+E-mail: joseph.wright@morningstar2.co.uk
+Released under the GNU General Public License
+See http://www.gnu.org/licenses/gpl.txt
+----------------------------------------------------------------
+
+The unroman package provides a number of functions to convert
+from Roman numerals to Arabic numbers.  The set of functions is
+designed to cover a range of applications.

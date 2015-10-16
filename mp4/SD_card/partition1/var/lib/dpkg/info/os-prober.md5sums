@@ -1,0 +1,14 @@
+0108197959fc499ab621c499c8ade83d  usr/bin/linux-boot-prober
+f15fbe5223a5838544a573301f173836  usr/bin/os-prober
+41e1fced1ea90cfe90a6d35fa23127a7  usr/lib/linux-boot-probes/50mounted-tests
+fc337e0003f2e5ec6774cfef133da9e4  usr/lib/linux-boot-probes/mounted/40grub2
+da6bb6d46844835b1cf42d3837d27128  usr/lib/linux-boot-probes/mounted/90fallback
+0b5d0e81a880e43d02caf50b9c140c1f  usr/lib/os-prober/newns
+8f5ede63a340d77687ed51cffc607d20  usr/lib/os-probes/50mounted-tests
+646a2cdbee7fda007a9106ea1f2e5c97  usr/lib/os-probes/init/10filesystems
+72389091860deecc2a22f43afaf82b9a  usr/lib/os-probes/mounted/40lsb
+5df97fa68fa8c9489abeaacf812b6609  usr/lib/os-probes/mounted/90bsd-distro
+5b9b22713cbed4b532f4da9e5595a972  usr/lib/os-probes/mounted/90linux-distro
+4f881a3bdf29032efa8e3a0ee233be3d  usr/share/doc/os-prober/changelog.gz
+6d065c8b02a36a7cfb561b2b0636f442  usr/share/doc/os-prober/copyright
+f53aacb4439b86a1166943c6895902c9  usr/share/os-prober/common.sh

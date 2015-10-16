@@ -1,0 +1,300 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Sun Oct  4 19:17:14 2015
+# Process ID: 25439
+# Log file: /home/parallels/source_code/ECE_527_MP/vivado.log
+# Journal file: /home/parallels/source_code/ECE_527_MP/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 5775.418 ; gain = 142.156 ; free physical = 3939 ; free virtual = 6688
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+open_bd_design {/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/partC.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <partC> from BD file </home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/partC.bd>
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/Four_bit_adder.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/Four_bit_adder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/adder4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/adder4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/and1.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/and1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/and4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/and4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/and4input.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/and4input.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_look_ahead_adder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_ripple_adder.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_ripple_adder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_select4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_select4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_skip4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_skip4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_skip_adder.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/carry_skip_adder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/cary_select_adder.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/cary_select_adder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/full_adder.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/full_adder.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/mux1.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/mux1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/mux4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/mux4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/not1.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/not1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/or1.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/or1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/imports/hdl/partC_wrapper.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_comp.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_comp.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_group4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_group4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_i_plus_3_to_i.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/pg_i_plus_3_to_i.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/xor1.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/xor1.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/xor4.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/new/xor4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v" into library work [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/hdl/partC.v:1]
+[Sun Oct  4 20:28:28 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xdc] for cell 'partC_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xdc] for cell 'partC_i/processing_system7_0/inst'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0_board.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0_board.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0_board.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0_board.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0_board.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0_board.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 6230.902 ; gain = 349.324 ; free physical = 3498 ; free virtual = 6213
+launch_runs impl_1
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.10 . Memory (MB): peak = 6556.941 ; gain = 0.000 ; free physical = 3230 ; free virtual = 5937
+[Sun Oct  4 20:31:14 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Oct  4 20:35:56 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 20:35:56 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Oct  4 20:39:54 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 20:39:54 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Oct  4 20:43:49 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 20:43:49 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+close_design
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 20:48:09 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 20:48:09 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xdc] for cell 'partC_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_processing_system7_0_0/partC_processing_system7_0_0.xdc] for cell 'partC_i/processing_system7_0/inst'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0_board.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0_board.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_0_0/partC_axi_gpio_0_0.xdc] for cell 'partC_i/axi_gpio_0/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0_board.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0_board.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_axi_gpio_1_0/partC_axi_gpio_1_0.xdc] for cell 'partC_i/axi_gpio_1/U0'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0_board.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0_board.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/mp2/partC/partC.srcs/sources_1/bd/partC/ip/partC_rst_processing_system7_0_100M_0/partC_rst_processing_system7_0_100M_0.xdc] for cell 'partC_i/rst_processing_system7_0_100M'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6567.004 ; gain = 0.000 ; free physical = 3657 ; free virtual = 6382
+set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Oct  4 20:52:28 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 20:52:28 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.71 . Memory (MB): peak = 6567.004 ; gain = 0.000 ; free physical = 3413 ; free virtual = 6295
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/parallels/source_code/ECE_527_MP/.Xil/Vivado-25439-ubuntu/dcp/partC_wrapper_early.xdc]
+Finished Parsing XDC File [/home/parallels/source_code/ECE_527_MP/.Xil/Vivado-25439-ubuntu/dcp/partC_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.26 . Memory (MB): peak = 6567.004 ; gain = 0.000 ; free physical = 3360 ; free virtual = 6290
+Restored from archive | CPU: 0.250000 secs | Memory: 2.127892 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.26 . Memory (MB): peak = 6567.004 ; gain = 0.000 ; free physical = 3360 ; free virtual = 6290
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6567.004 ; gain = 0.000 ; free physical = 3361 ; free virtual = 6290
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 20:57:17 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 20:57:17 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:01:12 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:01:12 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:04:47 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:04:47 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:08:59 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:08:59 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:12:46 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:12:46 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:16:46 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:16:46 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:20:41 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:20:41 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:24:15 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:24:15 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:28:09 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:28:09 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:31:54 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:31:54 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+[Sun Oct  4 21:36:09 2015] Launched synth_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/synth_1/runme.log
+[Sun Oct  4 21:36:09 2015] Launched impl_1...
+Run output will be captured here: /home/parallels/source_code/ECE_527_MP/mp2/partC/partC.runs/impl_1/runme.log
+archive_project /home/parallels/source_code/ECE_527_MP/mp2/partC.xpr.zip -force
+INFO: [Coretcl 2-137] starting archive...
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/parallels/source_code/ECE_527_MP/.Xil/Vivado-25439-ubuntu/PrjAr/_X_/partC.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/parallels/source_code/ECE_527_MP/.Xil/Vivado-25439-ubuntu/PrjAr/_X_/partC.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Sun Oct  4 21:39:51 2015. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct  4 21:39:51 2015...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (/home/parallels/source_code/ECE_527_MP/mp2/partC.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
+archive_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6581.441 ; gain = 2.020 ; free physical = 2866 ; free virtual = 6124
+archive_project /home/parallels/source_code/ECE_527_MP/mp2/partC.xpr.zip -force
+INFO: [Coretcl 2-137] starting archive...
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (/home/parallels/source_code/ECE_527_MP/mp2/partC.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.

@@ -1,0 +1,101 @@
+\section {Point}
+
+\subsection {Définition à partir des coordonnées}
+ 
+L'objet \Cadre{point} permet de définir un point. Sous sa forme la
+plus simple, on utilise l'argument \Cadre{[args=$x$ $y$ $z$]} pour
+en spécifier les coordonnées. Si on a précédemment nommé $M$ un point
+$(x, y, z)$ (voir chapitre \textsl{Utilisation avancée\/}), on peut
+utiliser l'argument \Cadre{[args=$M$]}.
+
+\subsection {Autres modes de définition}
+
+Il existe d'autres possibilités pour définir un point. Voici une
+liste des définitions possibles avec les arguments correspondant~:
+
+\begin{itemize}
+
+\item \Cadre {[definition=solidgetsommet]} ; 
+\verb+args=+ $solik$ $k$.
+Le sommet d'indice $k$ du solid $solid$.
+
+\item \Cadre {[definition=solidcentreface]} ; 
+\verb+args=+ $solik$ $k$.
+Le centre de la face d'indice $k$ du solid $solid$.
+
+\item
+\Cadre {[definition=isobarycentre3d]}
+\verb+args=+
+   {\{$[$ $A_0$ $\ldots $ $A_{n}$ $]$\}}    
+   {le barycentre du système $[(A_0, 1) ;
+   \ldots ; (A_n, 1)]$}
+
+\item
+\Cadre {[definition=barycentre3d]}
+\verb+args=+
+   {\{$[$ $A$ $a$ $B$ $b$ $]$\}}    
+   {le barycentre du système $[(A, a) ; (B, b)]$}
+
+\item
+\Cadre {[definition=hompoint3d]}
+\verb+args=+
+   {$M$ $A$ $\alpha $}
+   {l'image de $M$ par l'homothétie de centre $A$ et de
+   rapport $\alpha $}
+
+\item
+\Cadre {[definition=sympoint3d]}
+\verb+args=+
+   {$M$ $A$}
+   {l'image de $M$ par la symétrie de centre $A$}
+
+\item
+\Cadre {[definition=translatepoint3d]}
+\verb+args=+
+   {$M$ $u$}
+   {l'image de $M$ par la translation de vecteur $\vec u$}
+
+\item
+\Cadre {[definition=scaleOpoint3d]}
+\verb+args=+
+   {$x$ $y$ $z$  $k_1$ $k_2$ $k_3$}
+   {opère une \og dilatation\fg \ des coordonnées du point $M (x, y,
+   z)$ sur les axes $Ox$, $Oy$ et $Oz$ suivant les facteurs $k_1$,
+   $k_2$ et $k_3$}
+
+\item
+\Cadre {[definition=rotateOpoint3d]}
+\verb+args=+
+   {$M$ $\alpha_x$ $\alpha_y$ $\alpha_z$}
+   {l'image de $M$ par les rotations successives de centre $O$ et d'angles
+   respectifs $\alpha_x$ $\alpha_y$ $\alpha_z$ sur les axes $Ox$,
+   $Oy$, $Oz$}
+
+
+
+%% Projection orthogonale d'un point 3d sur un plan
+%% Mx My Mz (=le point a projeter) 
+%% Ax Ay Az (=un point du plan) 
+%% Vx Vy Vz (un vecteur normal au plan)
+\item
+\Cadre {[definition=orthoprojplane3d]}
+\verb+args=+
+   {$M$ $A$ $\vec v$}
+   {Le projeté du point $M$ sur le plan $P$ défini
+   par le point $A$ et le vecteur $\vec v$, normal à $P$.}
+
+\item
+\Cadre {[definition=milieu3d]}
+\verb+args=+
+   {$A$ $B$}
+   {Le milieu de $[AB]$}
+
+\item
+\Cadre {[definition=addv3d]}
+\verb+args=+
+   {$A$ $u$}
+   {Le point $B$ tel que $\overrightarrow {AB} = \vec u$}
+
+\end{itemize}
+
+

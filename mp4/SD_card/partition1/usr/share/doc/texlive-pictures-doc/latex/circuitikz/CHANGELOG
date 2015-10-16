@@ -1,0 +1,22 @@
+CircuiTikz - Changelog
+
+* Version 0.2.2 - 20090520
+        - Added the shape for lamps.
+	- Added options \texttt{europeanresistor}, \texttt{europeaninductor}, \texttt{americanresistor} and \texttt{americaninductor}, with corresponding styles.
+	- FIXED: error in transistor arrow positioning and direction under negative \texttt{xscale} and \texttt{yscale}.
+* Version 0.2.1 - 20090503
+	- Op-amps added
+	- added options arrowmos and noarrowmos, to add arrows to pmos and nmos
+* Version 0.2 - 20090417
+First public release on CTAN
+   	- *Backward incompatibility*: labels ending with \texttt{:}\textit{angle} are not parsed for positioning anymore.
+	- Full use of \TikZ\ keyval features.
+	- White background is not filled anymore: now the network can be drawn on a background picture as well.
+	- Several new components added (logical ports, transistors, double bipoles, \ldots).
+	- Color support.
+	- Integration with {\ttfamily siunitx}.
+	- Voltage, american style.
+	- Better code, perhaps. General cleanup at the very least.
+
+* Version 0.1 - 2007-10-29
+First public release

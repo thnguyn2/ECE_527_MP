@@ -1,0 +1,35 @@
+\documentclass[11pt,twoside]{isodoc}
+\usepackage{logostyle}
+\setupdocument{
+    ourref = 1029,
+yourletter = 12 mei,
+   yourref = MAPS \#34,
+      date = 20050813,
+   closing = Met vriendelijke groet,
+ signature = Wybo Dekker,
+enclosures = Isodoc documentatie,
+   subject = Voorbeeldbrief met de isodoc class,
+ autograph = 2,
+}
+\newcommand{\letterbody}{%
+  Dit is een voorbeeld van een brief gemaakt met de isodoc class.
+  Het plaatje in het logo werd ontworpen door Pieter Weltevrede.
+  De tekst bestaat uit wat bijelkaar geraapte
+  teksten\footnote{opgevist uit een van de voorbeeld-teksten uit
+  de \TeX-distributie} om een lange brief te krijgen.
+  \par\input{typo}
+}
+
+\begin{document}
+\letter[to = Wybo Dekker\\
+             Deilsedijk 60\\
+             4158 CH Deil, 
+             opening = Beste Wybo
+       ]{\letterbody}
+\letter[to = MAPS redactie\\
+             Spuiboulevard 269\\
+             3311 GP Dordrecht, 
+             opening = Beste Taco
+       ]{\letterbody}
+\end{document}
+$Id: logoletter.tex,v 1.3 2006-11-05 15:49:21 wybo Exp $

@@ -1,0 +1,7 @@
+latex-xcolor for Debian
+-----------------------
+
+ - xcolor is fully documented under /usr/share/doc/texmf/latex-xcolor. 
+  To read documentations, use texdoc command.  Run `texdoc xcolor'.
+
+ -- OHURA Makoto <ohura@debian.org>, Fri, 22 Jun 2007 00:24:16 +0900

@@ -1,0 +1,10 @@
+Document: latex-xcolor
+Title: Extending LATEX s color facilities: the xcolor package
+Author: Dr. Uwe Kern <u.kern@web.de>
+Abstract: This manual describes what latex-xcolor is
+ and how it can be used to
+ manage online manuals on Debian systems.
+Section: Text
+
+Format: pdf
+Files: /usr/share/doc/texmf/latex-xcolor/xcolor.pdf.gz

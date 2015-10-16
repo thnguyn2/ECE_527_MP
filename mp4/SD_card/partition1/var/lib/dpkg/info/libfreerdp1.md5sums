@@ -1,0 +1,10 @@
+f53866240211ff2bf5a8b8faca08b4eb  usr/lib/libfreerdp-cache.so.1.0.1
+4fede9fde063991ac9f5e4c9fbd8ea83  usr/lib/libfreerdp-channels.so.1.0.1
+5511ca030336c8f274f978df58d3b692  usr/lib/libfreerdp-codec.so.1.0.1
+e742c3bcd08df2ff0f83bcf8f00ed961  usr/lib/libfreerdp-core.so.1.0.1
+b4052547035526fd28e570d0f538cb02  usr/lib/libfreerdp-gdi.so.1.0.1
+df638b8a64c8594839abd5a5565af83f  usr/lib/libfreerdp-kbd.so.1.0.1
+1d104e3dd141281eac0df40f67399dc6  usr/lib/libfreerdp-rail.so.1.0.1
+763d9f99e4cbc9657c7b66946aa894fa  usr/lib/libfreerdp-utils.so.1.0.1
+6d8be22bb3f904677b27db8aaa132d38  usr/share/doc/libfreerdp1/changelog.Debian.gz
+d6822f1456be01ad8ade8775fb88b4dc  usr/share/doc/libfreerdp1/copyright

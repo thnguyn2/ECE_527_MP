@@ -1,0 +1,125 @@
+#!/bin/sh -e
+
+PREREQ="fixrtc"
+
+# Output pre-requisites
+prereqs()
+{
+        echo "$PREREQ"
+}
+
+case "$1" in
+    prereqs)
+        prereqs
+        exit 0
+        ;;
+esac
+
+DISK=mmcblk0
+SEP="p"
+
+LOG=/dev/.initramfs/jasper.log
+CACHE=/dev/.initramfs/jasper-vfat
+
+touch ${LOG}
+mkdir -p ${CACHE}
+
+BOOTPATH=""
+PARTITION=""
+MYECHO="echo "
+
+if [ -x /bin/plymouth ] && plymouth --ping; then
+	MYECHO="plymouth message --text="
+fi
+
+# we only handle mmc and sdX disk types atm if a UUID is already set we dont want
+# to do any action since we assume the system was configured before
+[ -z "`grep root=UUID /proc/cmdline`" ] || exit 0
+for arg in $(cat /proc/cmdline)
+do
+    case $arg in
+        root=*)
+            BOOTPATH=${arg#root=}
+            PARTITION=${BOOTPATH#/dev/}
+            case $PARTITION in
+                mmcblk*)
+                    DISK=$(echo ${PARTITION}|sed -e 's/p[0-9]*$//')
+                    ;;
+                sd*)
+                    DISK=$(echo ${PARTITION}|sed -e 's/[0-9]*$//')
+                    SEP=""
+                    ;;
+                *)
+                    $MYECHO"E: Jasper error, can not handle this disk type"
+                    exit 1
+                    ;;
+            esac
+            ;;
+    esac
+done
+
+export ROOTDEV="/dev/${DISK}${SEP}"
+
+# The actual resizing function
+resize_partitions()
+{
+    HEADS=128
+    SPT=32
+    DISKSIZE=`LANG=C /sbin/fdisk -l /dev/${DISK} | grep Disk | awk '{print $5}' | tr -d '\n'`
+    CYLS=$(($DISKSIZE/$HEADS/$SPT/512))
+    sync
+    # Enlarge the EXT3 partition to fill the rest of the disk.
+    # Use sfdisk to dump out current layout then feed it back to sfdisk with the size field of
+    # the EXT3 partition empty, which means as large as possible
+    /sbin/sfdisk -H $HEADS -S $SPT -C $CYLS -uS -d /dev/$DISK |
+    sed '/Id=83/ s/size=.*,/size=,/' |
+    /sbin/sfdisk -H $HEADS -S $SPT -C $CYLS --no-reread -uS -D --force /dev/$DISK
+}
+
+$MYECHO"Resizing root partition ..."
+echo "Resizing root partition ..." >>${LOG}
+resize_partitions
+
+# Give some info to the user TODO: create plymouth output
+$MYECHO"Resizing root filesystem. Please wait, this will take a moment ..."
+echo "Resizing root filesystem ..." >>${LOG}
+
+export ROOTPART=`/sbin/sfdisk -H $HEADS -S $SPT -d /dev/$DISK | grep 'Id=83' | awk '{print $1}'`
+export VFATPART=`/sbin/sfdisk -H $HEADS -S $SPT -d /dev/$DISK | grep 'Id= c' | awk '{print $1}'`
+
+# little workaround for wrong clocks
+mount ${ROOTPART} /root >>${LOG} 2>&1
+umount /root >>${LOG} 2>&1
+
+$MYECHO"Checking filesystem before resizing..."
+/sbin/e2fsck -fy ${ROOTPART} >>${LOG} 2>&1 || true
+$MYECHO"Resizing, please wait..."
+pass=1
+iter=0
+LANG=C /sbin/resize2fs -p ${ROOTPART} 2>&1 | while read -n 1 input; do
+    char=$(echo $input|sed 's/[)(]//')
+    if [ "${char}" = "X" ];then
+        if [ "${iter}" = "100.0" ];then
+            iter=0
+            pass=$(($pass+1))
+            echo >>${LOG}
+        fi  
+        iter=$(echo $iter+2.5|bc)
+        printf "\rResizing, pass: %i [%3.0f/100]" $pass $iter
+    fi  
+    if [ -z "${char}" ]; then
+        echo -n " " >>${LOG}
+    else
+        echo -n "${char}" >>${LOG}
+    fi  
+done
+echo >>${LOG}
+echo 1>/dev/.initramfs/jasper-reboot
+
+# Set a new UUID to make sure we're unique in the world
+/sbin/tune2fs -U $(uuidgen) ${ROOTPART} >>${LOG} 2>&1
+
+# Set the label on the vfat partition so it's invisible to the desktop
+/sbin/dosfslabel ${VFATPART} SERVICEV001 >>${LOG} 2>&1
+
+rm -rf ${CACHE}

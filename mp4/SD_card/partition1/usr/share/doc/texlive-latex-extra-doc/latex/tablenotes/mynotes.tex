@@ -1,0 +1,18 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{array,longtable,mynotes}
+\usepackage[utf-8]{inputenc}
+\title{Mynotes}
+\author{Matthias Borck-Elsner}
+\begin{document} \begin{huge} $ \sqrt{Mynotes}$ \end{huge} \hrule \vspace{1mm}\hrule\vspace{1cm} 
+\begin{longtable}{p{3.5cm}|p{8cm}} \caption{Mynotes} \\  \endfirsthead \endhead  \endfoot \endlastfoot 
+\\Name of contribution:&\bf{Mynotes} \\ 
+  Version number:& Sun Sep  6 00:25:59 2009
+ \\ 
+ Author's name:& Matthias Borck-Elsner \\ 
+ Author's email:& matthias@kleinesnetzwerk.net \\ 
+ Location on CTAN:& / \\ 
+ Summary description:& Flexible Notes in tables and documents, like footnotes and endnotes. \\ 
+ License type:& lppl \\ 
+ Announcement text:& sty. file to place notes in tables and list them, \\& similar toendnotes and footnotes \\ \hrule&\hrule \\ 
+ 
+\\ Deutsch & \textbf{Mynotes}  \nonote{hallo}setzt beliebige Anmerkungen im Text und führt diese später zusammen.  Dabei können Noten anderer Bearbeiter zusammengefasst und ein- und ausgeblendet werden.\\  &Ein bekannter Fehler, den ich noch nicht beseitigen konnte ist, dass eine Fehlermeldung produziert wird, wenn keine \texttt{\char47 mynote} eingegeben ist und trotzdem der Schlussbefehl  \texttt{\char47 themynotes} eingegeben wurde.\\ \\  Beispiel: & Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat, sed diam voluptua. Atvero eos et accusam et justo duodolores et ea rebum. Stet clita kasd gubergren, no seatakimata sanctus est Lorem ipsum dolor sit \mynote*{\texttt{Im normalen Text}} \mynote{Im normalen Text }amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam. Das Zusatzpaket \char47 nonotes (in \texttt{\char47mynotes} enhalten) erlaubt es, alle anderen (Fußnoten Endnoten etc) zusammenzufassen und gesondert anzuzeigen, d.h. sie werden im Text unterdrückt. Dazu gibt man in der Präambel \texttt{\char47 let \char47 endnotes=\char47 nonotes} ein\end{longtable} \themynotes \end{document}

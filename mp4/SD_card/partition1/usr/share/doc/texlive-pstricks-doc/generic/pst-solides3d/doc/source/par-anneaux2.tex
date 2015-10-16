@@ -1,0 +1,92 @@
+\subsection{Bobine vide}
+
+
+\begin{minipage}{0.45\linewidth}
+\begin{verbatim}
+\newcommand\SectionBobine{
+   r h 2 div % 1
+   r h 2 div neg % 2
+   R h 2 div neg % 3
+   R h 3 div neg % 4
+   R h 4 div sub h 3 div neg % 5
+   R h 4 div sub h 3 div % 6
+   R h 3 div % 7
+   R h 2 div % 8
+}
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\begin{pspicture}(-2,-2)(5,2)
+\pnode(!2 3 2 div){S1}
+\pnode(!2 3 2 div neg){S2}
+\pnode(!4 3 2 div neg){S3}
+\pnode(!4 3 3 div neg){S4}
+\pnode(!4 3 4 div sub 3 3 div neg){S5}
+\pnode(!4 3 4 div sub 3 3 div){S6}
+\pnode(!4 3 3 div){S7}
+\pnode(!4 3 2 div){S8}
+\def\pneuSection{\pspolygon[fillstyle=vlines,linewidth=2\pslinewidth]%
+ (S1)(S2)(S3)(S4)(S5)(S6)(S7)(S8)}
+\rput(0,0){\pneuSection}\rput{180}{\pspolygon[fillstyle=vlines,linewidth=1.5pt]%
+ (!2 3 2 div)(!2 3 2 div neg)(!4 3 2 div neg)
+ (!4 3 3 div neg)(!4 3 4 div sub 3 3 div neg)
+ (!4 3 4 div sub 3 3 div)(!4 3 3 div)(!4 3 2 div)}
+\psline(-3,1.5)(3,1.5)\psline(-3,-1.5)(3,-1.5)
+\psline[linestyle=dashed,dash=1 0.2 0.05 0.2]{->}(0,-3)(0,3)
+\uput[u](0,3){$z$}\uput[r](4.1,0){$y$}\uput[dl](0,0){$O$}
+\psline[linestyle=dashed](2,-1)(2,1.5)
+\psline[linestyle=dashed](4,-1)(4,2.5)
+\psline[linestyle=dashed](-4,-1)(4,-1)
+\psline[linestyle=dashed](-4,1)(4,1)
+\psline[linestyle=dashed]{->}(-4,0)(4.2,0)
+\psline{->}(0,1.8)(2,1.8)\uput[u](1,1.8){$r$}
+\psline{->}(0,2.5)(4,2.5)\uput[u](2,2.5){$R$}
+\psline{<->}(5,-1.5)(5,1.5)\uput[r](5,0){$h$}
+\uput[u](S1){1}
+\uput[d](S2){2}
+\uput[d](S3){3}
+\uput[r](S4){4}
+\uput[ur](S5){5}
+\uput[dr](S6){6}
+\uput[r](S7){7}
+\uput[r](S8){8}
+\psdots[linecolor=red](S1)(S2)(S3)(S4)(S5)(S6)(S7)(S8)
+\end{pspicture}
+\end{minipage}
+
+
+\begin{center}
+\begin{pspicture}(-5,-6)(5,5)
+\def\SectionBobine{
+   r h 2 div % 1
+   r h 2 div neg % 2
+   R h 2 div neg % 3
+   R h 3 div neg % 4
+   R h 4 div sub h 3 div neg % 5
+   R h 4 div sub h 3 div % 6
+   R h 3 div % 7
+   R h 2 div % 8
+}
+\psframe*[linecolor=blue!50](-5,-5)(5,4)
+\psset{viewpoint=70 40 10 rtp2xyz,Decran=25,lightsrc=0 30 100}
+\psSolid[object=grille,base=-15 15 -15 15,fillcolor=yellow!30!black!10](0,0,-8)
+%\psSolid[object=prisme,h=2,base=-15 1 -15 -1 15 -1 15 1](0,0,-8)
+\psSolid[object=anneau,section=\SectionBobine,fillcolor=gray!50,h=6,R=8,r=4,RotX=90,linecolor=gray]%
+\end{pspicture}
+\end{center}
+
+
+\begin{lstlisting}[basicstyle=\small\ttfamily]
+\psSolid[object=grille,base=-15 15 -15 15,fillcolor=yellow!30](0,0,-8)
+\psSolid[object=anneau,section=\SectionBobine,fillcolor=gray!50,h=6,R=8,r=4,RotX=90,linecolor=gray]%
+\end{lstlisting}
+
+
+\subsection{D'autres anneaux}
+Trois autres exemples sont disponibles sur la page :
+
+\url{http://syracuse.eu.org/lab/bpst/pst-solides3d/anneaux}
+
+
+\endinput

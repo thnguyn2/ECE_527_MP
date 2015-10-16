@@ -1,0 +1,13 @@
+Curve2e.sty
+version 1.0 
+filedate 27 nov. 2006
+
+This file is an extension of the package pict2e.sty which extends the standard  picture LaTeX environment accordine to what Leslie Lamport specified in the second edition of the LaTeX manual.
+
+This further extension allows to draw lines and vectors with any non integer slope parameters, to draw arcs and curved vectors, to draw curves where just the interpolating nodes are specified together with the slopes at the nodes.
+
+I you specify
+
+\usepackage[<pict2e options>]{curve2e}
+
+The package pict2e is automatically invoked with the specified options.    

@@ -1,0 +1,4 @@
+0779bc75f0844c70b99bc07bc23f807a  usr/share/dbus-1/system-services/org.freedesktop.PackageKit.service
+ee700499e31fefc770dbf0ce3d20cb98  usr/share/doc/python-aptdaemon.pkcompat/README.PackageKit
+951656b1ecb3192363f39497d3fb4743  usr/share/doc/python-aptdaemon.pkcompat/copyright
+f86a3c643c21e36aecec416b0c11d203  usr/share/pyshared/aptdaemon/pkcompat.py

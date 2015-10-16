@@ -1,0 +1,9 @@
+libavl for Debian
+-----------------
+
+Please note that this library is made by Wessel Dankers, and is not related to
+the GNU AVL library by Ben Pfaff.  There are a lot of AVL libraries around, all
+with different feature sets. If other AVL libraries are packaged for Debian
+then the name of this package and the library it contains might change.
+
+ -- Guus Sliepen <guus@sliepen.warande.net>, Mon,  6 Aug 2001 18:24:26 +0200

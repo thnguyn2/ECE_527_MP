@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[fleqn]{amsmath}
+\usepackage[pointsonleft,nototals,forpaper,nosolutions,useforms]{eqexam}
+%\usepackage[pointsonleft,nototals,nosummarytotals,forpaper,useforms,solutionsonly,pdf]{eqexam}
+
+\subject[CA]{College Algebra}
+\title[T1]{Test 1}
+\author{Dr.\ D. P. Story}
+\date{\thisterm, \the\year}
+\duedate{10/01/09}
+\keywords{MAC 1105, Exam \nExam, {\thisterm} semester, \theduedate, at NWFSC}
+
+
+%
+% Compile with the nosolutions option to create the .sol auxiliary file
+% that contains a listing of all the solutions, then compile with the
+% solutionsonly option.
+%
+\encloseProblemsWith{theseproblems}
+
+\begin{document}
+
+\maketitle
+
+\begin{exam}{myProblems}
+
+\ifsolutionsonly
+\begin{instructions}[Solutions:]
+The solutions to the test.
+\end{instructions}
+\else
+\begin{instructions}[Instructions:]
+Solve each problem and box in your final $\boxed{\text{answer}}$.
+\end{instructions}
+\fi
+
+\begin{theseproblems}
+
+\begin{problem}[5]
+This is question 1
+\begin{solution}
+This is the solution to question 1
+\end{solution}
+\end{problem}
+
+\begin{problem}[5]
+This is question 2
+\begin{solution}
+This is the solution to question 2
+\end{solution}
+\end{problem}
+
+\end{theseproblems}
+\includeexersolutions
+\end{exam}
+\end{document}

@@ -1,0 +1,110 @@
+\section {Droites}
+
+\subsection {Définition directe}
+
+L'objet \Cadre{droite} permet de définir et tracer une droite. 
+Dans \verb+pst-solides3d+, une droite en $2$d est définie par la
+donnée de $2$ de ses points.
+
+Sous la forme la plus simple, on utilise l'argument l'argument \verb+args+
+pour spécifier $2$ points de la droite considérée. On peut utiliser
+les coordonnées ou des points nommés.
+
+Comme pour les points et les vecteurs, on peut sauvegarder la
+donnée d'une droite en utilisant l'option \Cadre{name}.
+
+\begin{multicols}{2}
+%
+\begin{pspicture}(-3,-3)(4,3.5)%
+\psframe*[linecolor=blue!50](-3,-3)(4,3.5)
+\psset{viewpoint=50 30 15,Decran=60}
+\psset{solidmemory}
+%% definition du plan de projection
+\psSolid[object=plan,
+   definition=equation,
+   args={[1 0 0 0] 90},
+   planmarks,
+   name=monplan,
+]
+\psset{plan=monplan}
+%% definition du point A
+\psProjection[object=point,
+   name=A,
+   text=A,
+   pos=ur,
+](-2,1.25)
+\psProjection[object=point,
+   name=B,
+   text=B,
+   pos=ur,
+](1,.75)
+\psProjection[object=droite,
+   linecolor=blue,
+   args=0 0 1 .5,
+]
+\psProjection[object=droite,
+   linecolor=orange,
+   args=A B,
+]
+\composeSolid
+\end{pspicture}
+%
+\columnbreak
+%
+\begin{gbar}
+\begin{verbatim}
+\psProjection[object=point,
+   name=A,text=A,pos=ur,](-2,1.25)
+\psProjection[object=point,
+   name=B,text=B,pos=ur,](1,.75)
+\psProjection[object=droite,
+   linecolor=blue,args=0 0 1 .5,]
+\psProjection[object=droite,
+   linecolor=orange,args=A B,]
+\end{verbatim}
+\end{gbar}
+%
+\end{multicols}
+
+\subsection {Autres définitions}
+
+Il existe d'autres méthodes pour définir une droite 2d. L'argument
+\Cadre{definition}, couplé à l'argument \Cadre{args} permet d'utiliser
+les différentes méthodes supportées~:
+
+\begin{itemize}
+
+\item \Cadre {[definition=horizontale]} ; 
+\verb+args=+ $b$. La droite d'équation $y=b$.
+
+\item \Cadre {[definition=verticale]} ; 
+\verb+args=+ $a$. La droite d'équation $x=a$.
+
+\item \Cadre {[definition=paral]} ; 
+\verb+args=+ $d$ $A$. La droite parallèle à la droite $d$ passant par
+le point $A$.
+
+\item \Cadre {[definition=perp]} ; 
+\verb+args=+ $d$ $A$. La droite perpendiculaire à la droite $d$ passant par
+le point $A$.
+
+\item \Cadre {[definition=mediatrice]} ; 
+\verb+args=+ $A$ $B$. La droite médiatrice du segment $[AB]$.
+
+\item \Cadre {[definition=bissectrice]} ; 
+\verb+args=+ $A$ $B$ $C$. La droite bissectrice de l'angle $\widehat
+{ABC}$. 
+
+\item \Cadre {[definition=axesymdroite]} ; 
+\verb+args=+$d$ $D$. Symétrique de la droite $d$ par rapport à la
+droite $D$.
+
+\item \Cadre {[definition=rotatedroite]} ; 
+\verb+args=+$d$ $I$ $r$. Image de la droite $d$ par la rotation de
+centre $I$ et d'angle $r$ (en degrés)
+
+\item \Cadre {[definition=translatedroite]} ; 
+\verb+args=+$d$ $u$. Image de la droite $d$ par la translation de
+vecteur $\vec u$.
+
+\end{itemize}

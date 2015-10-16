@@ -1,0 +1,27 @@
+From 50d74d5b983f701f8bf499c2d09e2b9cd7bb20dd Mon Sep 17 00:00:00 2001
+From: Eli Billauer <eli.billauer@gmail.com>
+Date: Sun, 23 Feb 2014 22:17:57 +0200
+Subject: [PATCH 3/3] zynq_common.h: One second delay instead of 3
+
+
+Signed-off-by: Eli Billauer <eli.billauer@gmail.com>
+---
+ include/configs/zynq_common.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/include/configs/zynq_common.h b/include/configs/zynq_common.h
+index f70ef5b..fc45f35 100644
+--- a/include/configs/zynq_common.h
++++ b/include/configs/zynq_common.h
+@@ -294,7 +294,7 @@
+ 
+ /* default boot is according to the bootmode switch settings */
+ #define CONFIG_BOOTCOMMAND		"run $modeboot"
+-#define CONFIG_BOOTDELAY		3 /* -1 to Disable autoboot */
++#define CONFIG_BOOTDELAY		1 /* -1 to Disable autoboot */
+ #define CONFIG_SYS_LOAD_ADDR		0 /* default? */
+ 
+ #define CONFIG_CMD_CACHE
+-- 
+1.7.2.3
+

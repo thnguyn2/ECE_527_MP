@@ -1,0 +1,4 @@
+4be326fd96f0638577a1a26258cdccce  usr/include/libavdevice/avdevice.h
+f4b88e2d18d1a70d402c20b627d2424c  usr/lib/arm-linux-gnueabihf/libavdevice.a
+f147ddc3f32a0e5e3b7b5f23524f62ae  usr/lib/arm-linux-gnueabihf/pkgconfig/libavdevice.pc
+adc97df5eedef35a42cc9e3c0be86124  usr/share/doc/libavdevice-dev/copyright

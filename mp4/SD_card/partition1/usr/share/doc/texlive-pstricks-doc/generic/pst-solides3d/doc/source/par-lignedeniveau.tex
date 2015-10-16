@@ -1,0 +1,66 @@
+\section {Tracés d'intersections planes}
+
+Pour chaque objet de type \textsl {solid}, il est possible de tracer
+l'intersection du solide considéré avec un ou plusieurs plans.
+
+L'argument numérique \Cadre{[intersectiontype=$k$]} (valeur $-1$ par
+défaut) détermine s'il y a ou non demande de tracé
+d'intersection. Positionné à $0$, il y a tracé des intersections.
+
+Restent $3$ paramètres à régler~:
+
+\begin{itemize}
+
+\item \Cadre{[intersectionplan=\{$eq_1$ ... $eq_n$\}]}
+définit la liste des équations $e_i$ des plans de coupe. Les $e_i$
+peuvent être également des objets de type plan.
+
+\item \Cadre{[intersectionlinewidth=$w_1$ ... $w_n$]}
+définit la liste des épaisseurs en picas $w_i$ pour chacune des 
+coupes.
+
+\item \Cadre{[intersectioncolor=$str_1$ ... $str_n$]}
+définit la liste des couleurs des différents traits de coupe.
+
+\end{itemize}
+
+\begin{multicols}{2}
+
+%\begin{center}
+\bgroup
+\psset{unit=0.5}
+\psset{lightsrc=20 -20 10,viewpoint=50 -20 10 rtp2xyz,Decran=50}
+\begin{pspicture*}(-5,-4)(5,5)
+\psframe(-5,-4)(5,5)
+\psSolid[object=cube,
+   intersectiontype=0,
+   intersectionplan={[1 0 .5 2] [1 0 .5 -1]},
+   intersectionlinewidth=1 2,
+   intersectioncolor=(bleu) (rouge),
+   RotX=20,
+   RotY=90,
+   RotZ=30,
+   a=6,
+   action=draw*,
+]
+\end{pspicture*}
+\egroup
+%\end{center}
+
+\columnbreak
+
+\begin{verbatim}
+\psSolid[object=cube,
+   intersectiontype=0,
+   intersectionplan={[1 0 .5 2] [1 0 .5 -1]},
+   intersectionlinewidth=1 2,
+   intersectioncolor=(bleu) (rouge),
+   RotX=20,RotY=90,RotZ=30,
+   a=6,
+   action=draw*,
+]
+\end{verbatim}
+
+\end {multicols}
+
+

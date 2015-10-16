@@ -1,0 +1,10 @@
+Document: latex-beamer
+Title: User's Guide to the Beamer Class
+Author: Till Tantau <tantau@users.sourceforge.net>
+Abstract: This manual describes what latex-beamer is
+ and how it can be used to
+ manage online manuals on Debian systems.
+Section: Tex
+
+Format: pdf
+Files: /usr/share/doc/latex-beamer/beameruserguide.pdf.gz

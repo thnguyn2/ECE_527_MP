@@ -1,0 +1,7 @@
+\addtocounter{table}{1} % remove for source
+\ctable[
+  caption = Caption,
+  mincapwidth = 50mm,
+  continued
+]{c}{}{\FL Table's first row\LL}
+$Id: 13b,v 1.1 2008-04-30 13:13:16 wybo Exp $

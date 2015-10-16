@@ -1,0 +1,22 @@
+2009-04-29 Stéphane GALLAND <galland@arakhne.org>
+	* upmethodology-fmt.sty: Include package pifont (texlive distribution)
+
+2007-08-12 Stéphane GALLAND <galland@arakhne.org>
+	* Split the sources to extract the extentions
+          inside another tarball.
+
+2007-07-07 Stéphane GALLAND <galland@arakhne.org>
+	* Provide commands to change the bibliography style
+
+2007-07-06 Stéphane GALLAND <galland@arakhne.org>
+	* Bug fix: use varioref for the footnote references.
+
+2007-07-05 Stéphane GALLAND <galland@arakhne.org>
+	* Add people name formatting function.
+
+2007-07-04 Stéphane GALLAND <galland@arakhne.org>
+	* Bug fix: front page layout
+
+2007-07-03 Stéphane GALLAND <galland@arakhne.org>
+	* First public release
+

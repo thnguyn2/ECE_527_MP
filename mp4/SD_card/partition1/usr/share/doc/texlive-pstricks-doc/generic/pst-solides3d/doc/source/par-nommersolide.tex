@@ -1,0 +1,82 @@
+\section {Nommer un solide}
+
+Pour certaines utilisations, on a besoin de stocker un solide en
+mémoire afin de pouvoir y faire référence par la suite. Pour ce faire
+on dispose du booléen \verb+solidmemory+, qui permet la transmission
+d'une variable tout au long de la scène.
+
+En revanche, l'activation de ce booléen désactive le dessin immédiat
+des macros \verb+\psSolid+, \verb+\psSurface+ et
+\verb+\psProjection+. Pour obtenir ce dessin, on utilise la macro
+\verb+\composeSolid+ à la fin de la scène.
+
+Lorsque l'activation \Cadre{$\backslash $psset\{solidmemory\}} est faite, on peut
+alors utiliser l'option \Cadre{[name=...]} de la macro \verb+\psSolid+.
+
+Dans l'exemple ci-dessous, on construit un solide coloré, que l'on
+sauvagarde sous le nom $A1$. On le dessine ensuite, après coup, en
+utilisant l'objet \Cadre{[object=load]} avec le paramètre
+\Cadre{[load=$name$]}. 
+
+\`A noter que l'instruction \verb+linecolor=blue+ utilisée lors de la
+construction de notre cube n'a pas d'impact sur le dessin~: seule la
+structure du solide a été sauvegardé (sommets, faces, couleurs des
+faces), pas l'épaisseur de la ligne de tracé ou sa couleur ou la
+position de la source lumineuse. C'est au moment du dessin du solide
+considéré qu'il faut régler ces paramètres.
+
+Enfin, on remarquera l'utilisation de l'option
+\Cadre{[deactivatecolor]} qui permet au cube de garder sa couleur
+rouge d'origine (sinon les couleurs par défaut auraient repris le
+dessus dans l'objet \verb+load+).
+
+\begin{multicols}{2}
+\bgroup
+\psset{unit=0.75}
+\psset{lightsrc=10 0 10,viewpoint=50 -20 10 rtp2xyz,Decran=50}
+\begin{pspicture*}(-4,-4)(5,4)
+\psframe(-4,-4)(5,4)
+\psset{solidmemory}
+\psSolid[object=cube,
+      linecolor=blue,
+      a=4,fillcolor=red!50,
+      ngrid=3,
+      action=none,
+      name=A,
+      ](0,0,0)
+\psSolid[object=load,
+   deactivatecolor,
+   load=A]
+\composeSolid
+\end{pspicture*}
+\egroup
+
+\columnbreak
+
+\begin{verbatim}
+\psset{solidmemory}
+\psSolid[object=cube,
+      linecolor=blue,
+      a=4,fillcolor=red!50,
+      ngrid=3,
+      action=none,
+      name=A,
+      ](0,0,0)
+\psSolid[object=load,
+   deactivatecolor,
+   load=A]
+\composeSolid
+\end{verbatim}
+\end{multicols}
+
+
+\llap {\dbend } 
+Avec l'option \verb+solidmemory+, les noms de variables sont
+relativement bien encapsulés, et il n'y a pas de conflit avec les
+variables de dvips par exemple. Il reste par contre le risque de
+surcharge des noms utilisés par \verb+solides.pro+. On peut utiliser
+tous les noms de variables à un seul carctère alphabétique, mais il
+faut éviter d'utiliser des noms comme 
+\verb+vecteur+,
+\verb+distance+,
+\verb+droite+, etc\dots qui sont déjà définis par le package.

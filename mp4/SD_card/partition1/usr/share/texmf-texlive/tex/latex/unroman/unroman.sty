@@ -1,0 +1,200 @@
+%%
+%% This is file `unroman.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% unroman.dtx  (with options: `package')
+%%  ----------------------------------------------------------------
+%%  The unroman package - From Roman numerals to Arabic numbers
+%%  Maintained by Joseph Wright
+%%  E-mail: joseph.wright@morningstar2.co.uk
+%%  Released under the GNU General Public License
+%%  See http://www.gnu.org/licenses/gpl.txt
+%%  ----------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{unroman}%
+  [2007/06/11 v1.0 From Roman numerals to Arabic numbers]
+\RequirePackage{coolstr}
+\newcounter{urm@counta}
+\newcounter{urm@countb}
+\newcounter{urm@value}
+\newcounter{urm@stringlength}
+\newif\ifurm@tailerror
+\def\urm@numtoint#1{%
+  \if#1i%
+    1%
+  \else%
+    \if#1v%
+      5%
+    \else%
+      \if#1x%
+        10%
+      \else%
+        \if#1l%
+          50%
+        \else%
+          \if#1c%
+            100%
+          \else%
+            \if#1d%
+              500%
+            \else%
+              \if#1m%
+                1000%
+              \else%
+                \if#1I%
+                  1%
+                \else
+                  \if#1V%
+                    5%
+                  \else%
+                    \if#1X%
+                      10%
+                    \else%
+                      \if#1L%
+                        50%
+                      \else%
+                        \if#1C%
+                          100%
+                        \else%
+                          \if#1D%
+                            500%
+                          \else%
+                            \if#1M%
+                              1000%
+                            \else%
+                              -1%
+  \fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi%
+}
+\def\urm@calc#1#2\end{%
+  \setcounter{urm@counta}{\urm@numtoint{#1}}%
+  \ifnum\the\value{urm@counta}>\z@%
+    \ifnum\the\value{urm@counta}<\the\value{urm@countb}%
+      \setcounter{urm@counta}{-\the\value{urm@counta}}%
+    \fi%
+    \addtocounter{urm@value}{\the\value{urm@counta}}%
+    \setcounter{urm@countb}{\the\value{urm@counta}}%
+    \def\urm@string@a{#2}%
+  \else%
+    \ifurm@tailerror%
+      \PackageInfo{unroman}%
+        {Invalid character in string --- returning value 0}%
+      \setcounter{urm@value}{0}%
+    \fi%
+    \def\urm@string@a{}%
+  \fi%
+}
+\def\urm@reverse@string#1#2\end{%
+  \edef\urm@string@b{#1\urm@string@b}%
+  \def\urm@string@c{#2}%
+}
+\def\urm@reversestring#1{%
+  \def\urm@string@c{#1}%
+  \strlenstore{#1}{urm@stringlength}%
+  \def\urm@string@b{}%
+  \@whilenum\the\value{urm@stringlength}>\z@\do%
+    {\expandafter\urm@reverse@string\urm@string@c\end%
+     \strlenstore{\urm@string@c}{urm@stringlength}%
+    }%
+}
+\def\urm@roman@length#1#2\end{%
+  \setcounter{urm@counta}{\urm@numtoint{#1}}%
+  \ifnum\the\value{urm@counta}>\z@%
+    \addtocounter{urm@value}{1}%
+    \def\urm@string@a{#2}%
+  \else%
+    \def\urm@string@a{}%
+  \fi%
+}
+\def\urm@romanlength#1{%
+  \setcounter{urm@value}{0}%
+  \strlenstore{#1}{urm@stringlength}%
+  \def\urm@string@a{#1}%
+  \@whilenum\the\value{urm@stringlength}>\z@\do%
+    {\expandafter\urm@roman@length\urm@string@a\end%
+     \strlenstore{\urm@string@a}{urm@stringlength}%
+    }%
+}
+\def\urm@make@head#1#2\end{%
+  \setcounter{urm@counta}{\urm@numtoint{#1}}%
+  \ifnum\the\value{urm@counta}>\z@%
+    \edef\urm@string@b{\urm@string@b#1}%
+    \def\urm@string@a{#2}%
+  \else%
+    \def\urm@string@a{}%
+  \fi%
+}
+\def\urm@makehead#1{%
+  \strlenstore{#1}{urm@stringlength}%
+  \def\urm@string@a{#1}%
+  \def\urm@string@b{}%
+  \@whilenum\the\value{urm@stringlength}>\z@\do%
+    {\expandafter\urm@make@head\urm@string@a\end%
+     \strlenstore{\urm@string@a}{urm@stringlength}%
+    }%
+}
+\newcommand*{\urm@unroman}[1]{%
+  \setcounter{urm@value}{0}%
+  \setcounter{urm@countb}{0}%
+  \urm@reversestring{#1}%
+  \let\urm@string@a\urm@string@b%
+  \strlenstore{\urm@string@a}{urm@stringlength}%
+  \@whilenum\the\value{urm@stringlength}>\z@\do%
+    {\expandafter\urm@calc\urm@string@a\end%
+     \strlenstore{\urm@string@a}{urm@stringlength}%
+    }%
+}
+\DeclareRobustCommand*{\reversestr}[1]{%
+  \urm@reversestring{#1}%
+  \urm@string@b%
+}
+\newcommand*{\unroman}[1]{%
+  \urm@tailerrortrue%
+  \urm@unroman{#1}%
+  \the\value{urm@value}%
+}
+\newcommand*{\unromanstore}[2]{%
+  \urm@tailerrortrue%
+  \urm@unroman{#1}%
+  \setcounter{#2}{\the\value{urm@value}}%
+}
+\newcommand*{\unromantail}[1]{%
+  \urm@tailerrorfalse%
+  \urm@unroman{#1}%
+  \the\value{urm@value}%
+}
+\newcommand*{\unromantailstore}[2]{%
+  \urm@tailerrorfalse%
+  \urm@unroman{#1}%
+  \setcounter{#2}{\the\value{urm@value}}%
+}
+\newcommand*{\unromanhead}[1]{%
+  \urm@makehead{#1}%
+  \expandafter\unroman\expandafter{\urm@string@b}%
+}
+\newcommand*{\unromanheadstore}[2]{%
+  \urm@makehead{#1}%
+  \expandafter\unromanstore\expandafter{\urm@string@b}{#2}%
+}
+\newcommand*{\romanheadlen}[1]{%
+  \urm@romanlength{#1}%
+  \the\value{urm@value}%
+}
+\newcommand*{\romanheadlenstore}[2]{%
+  \urm@romanlength{#1}%
+  \setcounter{#2}{\the\value{urm@value}}%
+}
+\newcommand*{\romantaillen}[1]{%
+  \urm@reversestring{#1}%
+  \expandafter\urm@romanlength\expandafter{\urm@string@b}%
+  \the\value{urm@value}%
+}
+\newcommand*{\romantaillenstore}[2]{%
+  \urm@reversestring{#1}%
+  \expandafter\urm@romanlength\expandafter{\urm@string@b}%
+  \setcounter{#2}{\the\value{urm@value}}%
+}
+\endinput
+%%
+%% End of file `unroman.sty'.

@@ -1,0 +1,14 @@
+{chletter}[2008/07/29 v1.0 Swiss Letter document class]
+
+A class for typesetting letters or small documents according to the swiss rules. No assumption is made about the language used.
+
+This class is based on the standard LaTeX classes and is mostly "source compatible" with the LaTeX letter class. Unlike the letter class, this one places the addresses fields according to the specifications of the swiss C6/5 or C5 envelopes, windowed or not. The labels generation mecanism is somewhat different.
+
+Provided files:
+chletter.dtx       code and documentation
+chletter.ins       install script
+chletterdoc.pdf    user documentation in french
+sampleletter.ltx   a sample letter
+
+Copyright 2008 Boris Oriet
+The licence is LPPL.

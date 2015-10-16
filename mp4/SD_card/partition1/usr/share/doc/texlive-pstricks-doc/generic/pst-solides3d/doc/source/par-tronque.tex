@@ -1,0 +1,53 @@
+\section {Tronquer les sommets d'un solide}
+
+L'option \Cadre{[trunc]} permet de tronquer les sommets soit
+globalement, soit individuellement. Cette option utilise l'argument
+\Cadre{[trunccoeff]} (valeur $0,25$ par défaut) qui indique le rapport
+$k$ utiliser pour la troncature ($0<k\leq 0,5$).
+%
+\begin{itemize}
+  \item \Cadre{[trunc=all]} tronque tous les sommets ;
+  \item \Cadre{[trunc=0 1 2 3]} tronque les sommets \texttt{[0,1,2 et 3]} ;
+\end{itemize}
+%
+\begin{multicols}{2}
+\psset{unit=0.5}
+\setlength{\columnseprule}{1pt}
+\centerline{
+\begin{pspicture}(-5,-5)(5,5)
+\psframe(-5,-5)(5,5)
+\psset{Decran=20}
+\psSolid[
+   action=draw,
+   object=cube,
+   RotZ=30,
+   trunccoeff=.2,trunc=all,
+]%
+\end{pspicture}}
+\begin{verbatim}
+\psSolid[object=cube,
+   action=draw,RotZ=30,
+   trunccoeff=.2,trunc=all,
+]%
+\end{verbatim}
+\columnbreak
+\centerline{
+\begin{pspicture}(-5,-5)(5,5)
+\psframe(-5,-5)(5,5)
+\psset{Decran=20}
+\psSolid[action=draw,
+   object=cube,
+   RotZ=30,
+   trunccoeff=.2,
+   trunc=0 1 2 3,
+]%
+\end{pspicture}}
+\begin{verbatim}
+\psSolid[object=cube,
+   RotZ=30,action=draw,
+   trunccoeff=.2,
+   trunc=0 1 2 3,
+]%
+\end{verbatim}
+\end{multicols}
+%\newpage

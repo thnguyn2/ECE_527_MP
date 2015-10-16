@@ -1,0 +1,28 @@
+This is version 0.6 of the isodoc class
+
+The isodoc class can be used for the preparation of letters,
+invoices, and, in the future, similar documents. Documents are set
+up with options, thus making the class easily adaptable to user’s
+wishes and extensible for other document types.
+Victor Eijkhout’s NTG brief class, which implements the NEN1026
+standard, was the starting point.
+
+License: LPPL
+
+major changes of v0.6 relative to v0.5)
+- moved all documentation files in subdirectory doc,
+  because files appeared to be wrongly placed on the 
+  TeX Collection DVD
+- Some minor corrections
+
+major changes of v0.5 relative to v0.4)
+- norwegian translations added (thanks Sveinung Heggen)
+- misplacement of text in subject-less letters corrected
+
+major changes of v0.4 relative to v0.3)
+- norwegian translations added (thanks Sveinung Heggen)
+- option shift: shift all output on the page
+- option currency added: changes euro into other
+- option cityzip added: put zip behind city instead of before
+
+$Id: README,v 1.2 2008-07-12 10:02:10 wybo Exp $

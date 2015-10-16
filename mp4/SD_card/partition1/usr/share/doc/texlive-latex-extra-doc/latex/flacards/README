@@ -1,0 +1,23 @@
+flacards class
+
+V 0.1
+====================
+
+
+Class for typesetting flashcards. It will produce several user-defined 
+cards per page with front- and backside. You can put associated pieces 
+of information on each side like vocabularies.
+
+
+Changelog:
+
+V 0.1: File creation
+
+User Manual:
+
+see flacards.pdf
+
+Licence:
+
+See COPYING for License.
+

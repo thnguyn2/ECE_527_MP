@@ -1,0 +1,1 @@
+libwayland0: package-name-doesnt-match-sonames libwayland-client0 libwayland-server0

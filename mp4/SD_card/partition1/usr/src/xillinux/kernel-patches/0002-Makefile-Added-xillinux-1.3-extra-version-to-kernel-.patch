@@ -1,0 +1,27 @@
+From f877ca2f3984eb386d1cf0ea6be9798d43f73a62 Mon Sep 17 00:00:00 2001
+From: Eli Billauer <eli.billauer@gmail.com>
+Date: Mon, 17 Feb 2014 16:47:44 +0200
+Subject: [PATCH 2/8] Makefile: Added "xillinux-1.3" extra version to kernel name
+
+
+Signed-off-by: Eli Billauer <eli.billauer@gmail.com>
+---
+ Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 67077ad..0fd8005 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,7 @@
+ VERSION = 3
+ PATCHLEVEL = 12
+ SUBLEVEL = 0
+-EXTRAVERSION =
++EXTRAVERSION =-xillinux-1.3
+ NAME = One Giant Leap for Frogkind
+ 
+ # *DOCUMENTATION*
+-- 
+1.7.2.3
+

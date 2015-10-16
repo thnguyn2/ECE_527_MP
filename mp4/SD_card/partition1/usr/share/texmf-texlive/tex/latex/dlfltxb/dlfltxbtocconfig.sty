@@ -1,0 +1,397 @@
+\ProvidesPackage{dlfltxbtocconfig}[2008/08/05 v0.65 by Lars Madsen]
+
+% This package be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%% 
+%% This work has the LPPL maintenance status "maintained".
+%% 
+%% The Current Maintainer of this work is Lars Madsen (daleif@imf.au.dk).
+%%
+
+
+% HISTORY
+%
+% 20071227 a few internal macros changed to reflect changes in
+%          mempatch 4.9
+% 20080122 made the toc titlenames configurable (\contentsname and \shortcontentsname)
+% 20080131 bugfix, the \ToCSubsectionIndentsPullBack and
+%          \ToCSubsectionIndentsBackToNormal should also set toc
+%          levels, otherwise hyperref bookmarks comes out wrong.
+% 20080207 bugfix, \spart renamed to \specialpart, end the bookmark
+%          for it is removed
+% 20080708 small cosmetic changes
+
+
+% we need to be running under the memoir class
+\@ifclassloaded{memoir}{}{%
+  \PackageError{dlfltxbtoconfig}{This package is build to run under
+    the memoir class, no other class will work}{}}
+
+% test for features present in mempatch 4.9
+\@ifundefined{cftinsertcode}{
+  \PackageError{dlfltxbtoconfig}{Macro \string\cftinsertcode is missing.
+    We need features from mempatch version 4.9 or newer, please
+    upgrade memoir and mempatch.}{}
+}{}
+
+
+% add a \par to the end of the TOC
+\AtEndDocument{\addtocontents{toc}{\par}}
+
+% we will use a special specialpart in the short ToC only the short ToC uses
+% this so we define it to do nothing
+\providecommand\l@specialpart[2]{}
+% similar to \part but only adds something to the ToC
+\newcommand\specialpart[1]{\cleartorecto\phantomsection\addcontentsline{toc}{specialpart}{\protect\partnumberline{}#1}}
+% apparently a bookmark level of 100 removes it from the list of book marks
+\newcommand\toclevel@specialpart{100}%
+
+% this is now directly included in memoir
+% % the command inserted into the ToC holding the hook
+% \newcommand\cftdlfinsert[1]{\@nameuse{cftdlfinsert#1}}
+% % creates a hook to be executed in the ToC, since we use \@nameuse it
+% % does not matter if the hook does not exist
+% \newcommand\cftdlfinsertcode[2]{\@namedef{cftdlfinsert#1}{#2}}
+% % inserts a hook into the ToC file
+% \newcommand\cftdlfinserthook[1]{\addtocontents{toc}{\protect\cftdlfinsert\protect{#1\protect}}}
+
+
+
+% used for calculating the widest section and sunsection numbers
+% we reset them back to zero in the ToC preprocessor
+\newlength\secwidest
+\settowidth\secwidest{99.99}
+\newlength\subsecwidest
+\settowidth\subsecwidest{99.99}
+
+% the name of the ToC file, just such that one can use it on sample
+% data by just redefining this macro
+\def\feline@includetocfile{\@starttoc{toc}}
+
+%\PackageWarning{dlfltxbtocconfig}{ToCfile: \feline@tocfile}
+
+% LoT and LoF handling
+\cftsetindents{figure}       {0em}   {3.0em}
+\cftsetindents{table}        {0em}   {3.0em}
+\renewcommand{\cftfiguredotsep}       {\cftnodots}
+\renewcommand{\cfttabledotsep}        {\cftnodots}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%                %%
+%%  MakeShortToC  %%
+%%                %%
+%%%%%%%%%%%%%%%%%%%%
+
+\providecommand\shortcontentsname{Kort oversigt}
+
+% This macro is used to print the two ToCs
+\newcommand\MakeShortToC{
+  \begingroup
+  \renewcommand{\contentsname}{\shortcontentsname}
+  \setcounter{tocdepth}{0}
+  % no precis'
+  \renewcommand\precistoctext[1]{}
+  % mess with internal command
+  \renewcommand\changetocdepth[1]{}
+  \renewcommand\cftchapterfont{\normalfont\itshape}
+  \renewcommand\cftchapterpagefont{\normalfont\itshape}
+  \renewcommand\cftchapterleader{\enspace\textperiodcentered\enspace}
+  % no part numbers
+  \renewcommand\partnumberline[1]{}
+  % no parts
+  \renewcommand\l@part[2]{}
+  % we will use specialpart ToC entries and ignore parts
+  \renewcommand\l@specialpart[2]{%
+    \noindent
+%    \qquad\qquad\hrulefill\par%
+    \vskip5pt\par
+    \noindent%
+%    \raisebox{-3pt}[0pt][0pt]{\qquad\qquad\parbox[t]{0.35\textwidth}{\itshape\bfseries ##1}}%
+%    \raisebox{-4pt}[0pt][0pt]{\qquad\qquad\parbox[t]{0.35\textwidth}{##1}}%
+    \raisebox{-4pt}[0pt][0pt]{\parbox[t]{0.35\textwidth}{\raggedleft##1} \qquad\qquad}%
+    \vskip-\baselineskip
+    \par
+  }
+  % no chapternumbers
+  \renewcommand\chapternumberline[1]{}
+  % reconfigure the way chapters and appendices are presented
+  \renewcommand*{\l@chapapp}[3]{%
+    \ifnum \c@tocdepth >\m@ne
+    \cftchapterbreak
+    \vskip \cftbeforechapterskip
+    {
+%      \leftskip -10pt%\cftchapterindent\relax
+%      \rightskip 0\textwidth%\@tocrmarg
+      \leftskip \fill
+      \rightskip 0pt
+      \parfillskip 0pt%-\rightskip
+      \parindent 0pt
+     \@afterindenttrue
+      \interlinepenalty\@M
+      \leavevmode
+     \def\@chapapp@head{##3}%
+     {\cftchapterpagefont ##2}\nobreak%
+     \cftchapterfillnum%
+     {##1}%
+   }%
+   \fi}
+ % it is best not have have long chapter title, but in case  they are
+ % long, we will put them into a box
+ \renewcommand*\cftchapterfillnum[1]{%
+    {\cftchapterleader}\nobreak
+    {\parbox[t]{0.5\textwidth}{\raggedright\cftchapterfont ##1}}\par
+  }    
+  % set the distance between chapters
+  \setlength\cftbeforechapterskip{4pt}
+  % set the title of the short ToC
+  \@nameuse{@tocmaketitle}
+  % add the short ToC to the ToC
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\contentsname}
+  % reag in the ToC
+  \makeatletter
+%  \input\feline@tocfile
+\feline@includetocfile
+  \endgroup
+  \cleartorecto
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%                 %%
+%%  MakeNormalToC  %%
+%%                 %%
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand\cftdlfsubsubseccomma{%
+  \@ifundefined{aldinesmall}{%
+    , \hskip .5em plus 3pt minus 3pt%
+  }{%
+  \hskip .5em plus 3pt minus 3pt\aldinesmall\nolinebreak%
+  \hskip .5em plus 3pt minus 3pt\nopagebreak%
+  }}
+
+
+% This macro is used to print the two ToCs
+\newcommand\MakeNormalToC{
+  \begingroup
+
+  \newcommand\feline@partToCtext[1]{%
+    \begingroup%
+    \fboxsep=2pt%
+    {\parbox{\linewidth-2\fboxsep-2\fboxrule}%
+%      {\itshape\LARGE \strut\hfill {##1} \hfill\strut}}%
+      {\scshape\Large \strut\hfill {##1} \hfill\strut}}%
+    \endgroup%
+  }
+
+
+  % no pagenumbers for part
+  \cftpagenumbersoff{part}
+
+  \DeclareRobustCommand\precistoctext[1]{%
+    {\nopagebreak\leftskip0pt\relax
+      % \advance\leftskip\cftchapternumwidth\relax
+      \rightskip\@tocrmarg plus 4em \relax
+      \noindent\parbox{\linewidth-2em-\@tocrmarg}%
+      {\precistocfont\raggedright\footnotesize ##1}\par}\vskip5pt}
+
+  % reconfiguring the way parts will appear
+  \renewcommand*{\l@part}[2]{%
+    \ifnum \c@tocdepth >-2\relax
+    \cftpartbreak%
+    \vskip\cftbeforepartskip
+    \begingroup
+      {
+        \leftskip 0pt%\cftpartindent\relax
+        \rightskip 0pt%\@tocrmarg
+        \parfillskip -0pt%\rightskip
+        \parindent 0pt\relax\@afterindenttrue
+        \interlinepenalty\@M
+        \leavevmode
+        \feline@partToCtext{##1}
+        \par
+      }\nopagebreak
+      \global\@nobreaktrue
+        \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+    \fi}
+  % it is good to break begore a part instead of having a part at the
+  % bottom of a page
+  \renewcommand\cftpartbreak{\par\addpenalty{-\@highpenalty}
+    \if@nobreak\else
+    \vskip\z@\@plus\bottomsectionskip
+    \penalty\z@
+    \vskip\z@\@plus -\bottomsectionskip
+    \fi
+  }
+  % no part numbers
+  \renewcommand\partnumberline[1]{}
+
+
+  % need more space for ToC page numbers
+  \setpnumwidth{2.55em}
+  \setrmarg{3.55em}
+  % need more space for ToC section numbers, we will use calculated numbers
+  \cftsetindents{section}      {0em}                         {\secwidest+0.5em}
+  \cftsetindents{subsection}   {\secwidest+0.5em}            {\subsecwidest+0.5em}
+  \cftsetindents{subsubsection}{\secwidest+\subsecwidest+1em}{0em}
+%   % need more space for LoF & LoT numbers
+  %remove the dotted leaders
+  \renewcommand{\cftsectiondotsep}      {\cftnodots}
+  \renewcommand{\cftsubsectiondotsep}   {\cftnodots}
+  \renewcommand{\cftsubsubsectiondotsep}{\cftnodots}
+  \renewcommand{\cftparagraphdotsep}    {\cftnodots}
+  \renewcommand{\cftsubparagraphdotsep} {\cftnodots}
+
+  % if someone wrote \bfseries or similar in the title of a
+  % subsubsection, we will remove it
+  \let\feline@oldnumberline\numberline
+  \let\oldbfseries=\bfseries
+  \let\oldem=\em
+  \let\oldttfamily=\ttfamily
+  \renewcommand{\cftsubsubsectionfont}{\small\itshape}
+  \renewcommand{\cftsubsubsectionpagefont}{\footnotesize\itshape\scshape}
+  % reconfigure the way subsubsectins are displayed
+  \renewcommand{\l@subsubsection}[2]{%
+    \ifnum \c@tocdepth > 2\relax%
+    \let\bfseries\relax%
+    \let\em\relax%
+    \let\ttfamily\relax%
+    % \def\numberline##1{\textit{##1}~}% % numbers
+    \def\numberline####1{}% % no numbers
+    \leftskip=\cftsubsubsectionindent%
+    \settowidth\@tempdima{\textbf{999999}}%
+    \rightskip=\@tempdima plus 4em
+%    \parfillskip=\fill%
+    \parfillskip=2em plus 1fil
+    \nopagebreak% added 20060713
+    % instead of using a comma to separate entries we will use a leaf
+    % (requires the fourier package
+    \ifhmode \cftdlfsubsubseccomma\else\noindent\fi%
+%    \noindent
+    \ignorespaces%
+   {\cftsubsubsectionfont ##1}~~{\cftsubsubsectionpagefont ##2}% 
+    \let\numberline\feline@oldnumberline\ignorespaces%
+     \let\bfseries\oldbfseries\ignorespaces%
+     \let\em\oldem\ignorespaces%
+     \let\ttfamily\oldttfamily\ignorespaces%
+    \fi%
+  }
+  
+  % getting chapternames and appendix names into the ToC
+  \renewcommand\cftchaptername{\chaptername~~}
+  \renewcommand\cftappendixname{\appendixname~~}
+
+%  \renewcommand{\contentsname}{Indholdsfortegnelse}
+  \setcounter{tocdepth}{3} % subsections
+  \addtodef{\cftchapterbreak}{\par}{}
+  \renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}
+
+%  \setlength\cftbeforechapterskip{2.5em  plus 1em minus 0.5em}
+  \setlength\cftbeforepartskip{2.5em plus 1em minus 1.5em}
+
+  % handle some added hooks
+  \cftinsertcode{A}{
+    \renewcommand\cftchapterfont{\normalfont} 
+    \renewcommand\cftchapterpagefont{\normalfont}
+    \setlength\cftbeforechapterskip{0pt} 
+  }
+
+  \cftinsertcode{B}{
+    \renewcommand\cftchapterfont{\bfseries}
+    \renewcommand\cftchapterpagefont{\bfseries}
+    \addtolength\cftbeforechapterskip{1.25em plus 0.7em minus 1em} 
+  }
+
+  \cftinsertcode{C}{\setlength\cftbeforechapterskip{0pt}}
+
+
+  % set the title of the short ToC
+  \@nameuse{@tocmaketitle}
+  % add the short ToC to the ToC
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\contentsname}
+  % reag in the ToC
+  \makeatletter
+%  \input\feline@tocfile
+\feline@includetocfile
+  \endgroup
+  \cleartorecto
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    %%
+%%  ToC preprocessor  %%
+%%                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% this macro preprocesses the ToC and figures out which section and
+% subsection numbers are the widest, these will be saved into 
+%\secwidest and \subsecwidest
+\newcommand\preprocessToC{
+  \begingroup
+%  \newif\ifshortToC
+  \makeatletter
+  \let\l@part=\@gobbletwo
+  \let\l@chapapp=\@gobbletwo
+  \let\l@subsubsection=\@gobbletwo
+
+  \setlength{\global\secwidest}{0pt}
+  \setlength{\global\subsecwidest}{0pt}
+
+  \def\PARSER##1##2##3##4\END{%\typeout{##2}
+    \settowidth\unitlength{##3}%
+    \ifdim\unitlength>##1%
+    \settowidth{\global##1}{##3}%
+    \fi%
+  }
+  \renewcommand\l@section[2]{%
+    \PARSER\secwidest##1\END%
+  }
+  \renewcommand\l@subsection[2]{%
+    \PARSER\subsecwidest##1\END%
+  }
+  \let\precistoctext\@gobble
+
+%  \input\feline@tocfile
+  \feline@includetocfile
+  \typeout{widest section: \the\secwidest}
+  \typeout{widest subsection: \the\subsecwidest}
+  \endgroup
+}
+
+
+% the internal macros tha lives inside the ToC file
+\def\cftSubsectionIndentsBackToNormal{%
+  \cftsetindents{subsubsection}{\secwidest+\subsecwidest+1em}{0em}%
+}
+\def\cftSubsectionIndentsPullBack{%
+  \cftsetindents{subsubsection}{\secwidest+0.5em}{0em}%
+}
+
+\newcommand\ToCSubsectionIndentsPullBack{%
+  \addtocontents{toc}{\protect\cftSubsectionIndentsPullBack}%
+  \renewcommand\toclevel@subsubsection{2}%
+}
+
+\newcommand\ToCSubsectionIndentsBackToNormal{%
+  \addtocontents{toc}{\protect\cftSubsectionIndentsBackToNormal}%
+  \renewcommand\toclevel@subsubsection{3}%
+}
+
+% preserving some old syntax
+\let\RedofelineEmulSubSubSec\ToCSubsectionIndentsBackToNormal
+\let\felineEmulSubSubSec\ToCSubsectionIndentsPullBack
+

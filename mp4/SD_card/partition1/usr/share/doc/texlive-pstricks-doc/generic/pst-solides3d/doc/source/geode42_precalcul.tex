@@ -1,0 +1,10 @@
+\documentclass[a4paper]{article}
+\usepackage{pst-solides3d}
+\pagestyle{empty}
+\begin{document}
+\psset{lightsrc=80 30 30,viewpoint=40 40 20 rtp2xyz,Decran=100,linewidth=1.5pt}
+\begin{pspicture}(-4,-4)(4,4)
+\psframe(-4,-4)(4,4)
+\psSolid[object=datfile,file=geodedual42]
+\end{pspicture}
+\end{document} 

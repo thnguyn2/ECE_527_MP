@@ -1,0 +1,4 @@
+/etc/firefox/syspref.js
+/etc/apport/native-origins.d/firefox
+/etc/apport/blacklist.d/firefox
+/etc/apparmor.d/usr.bin.firefox

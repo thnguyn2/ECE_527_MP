@@ -1,0 +1,1 @@
+../../../texlive-latex-recommended-doc/fonts/ec/00readme.txt

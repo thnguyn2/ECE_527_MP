@@ -1,0 +1,25 @@
+'fifinddo' & 'makedoc' -- string substitution and "txt->TeX" by LaTeX
+======================================================================
+The NICETEXT bundle offers ``minimal'' markup syntax for restricted
+kinds of text: There should not be much more characters typed than 
+printed! (though keeping LaTeX quality.) No more backslashes, 
+technical terms, and curly braces! (so clumsy on PC keyboards) ...
+
+Main focus now is easy *documentation of LaTeX packages*. 
+Preprocessing by 'Perl' or so is replaced by TeX macros 
+(reviving/generalizing the 'docstrip' idea). 
+
+'fifinddo.sty' provides setup for txt -> TeX preprocessing macros 
+including *expandable* sequences of safe, correct string substitions. 
+'fifinddo.pdf' mathematically characterizes wrong substring 
+detection by 'substr.sty' as well as by LaTeX's internal `\in@'. 
+
+There is a script language for detecting package code and 
+documentation and for supplying plain text with typographical markup 
+('makedoc.sty', 'mdcorr.cfg').
+______________________________________________________________________
+CATALOGUE: These packages might be compared with:
+- easylatex, txt2latex, txt2tex 
+  (typographical and TeX input enhancement); 
+- doc, gmdoc, lineno (\DocInput); 
+- substr, datatool, xstring, stringstrings, makematch, ... (parsing)

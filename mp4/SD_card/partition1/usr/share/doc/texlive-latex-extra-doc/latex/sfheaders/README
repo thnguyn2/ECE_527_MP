@@ -1,0 +1,6 @@
+This style file  (for LaTeX-2e)  borrows some definitions  from the
+standard article/report/book classes; and modifies them in order to
+print the part(*), chapter(*), section, subsection ... headers with
+the Sans-Serif variant of the current font.
+
+(*) Some standard classes do not have these headers

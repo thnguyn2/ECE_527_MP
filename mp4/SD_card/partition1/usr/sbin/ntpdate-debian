@@ -1,0 +1,36 @@
+#!/bin/sh
+
+set -e
+
+if [ -r /etc/default/ntpdate ]; then
+	. /etc/default/ntpdate
+fi
+
+if [ "$NTPDATE_USE_NTP_CONF" = yes ]; then
+	for f in /var/lib/ntp/ntp.conf.dhcp /etc/ntp.conf /etc/openntpd/ntpd.conf; do
+		if [ -r "$f" ] && [ -s "$f" ]; then
+			file=$f
+			break
+		fi
+	done
+	if [ -n "$file" ]; then
+		NTPSERVERS=$(sed -rne 's/^(servers?|peer) ([-_.:[:alnum:]]+).*$/\2/p' "$file" | grep -v '^127\.127\.') || [ $? -le 1 ]
+	fi
+elif [ -r /var/lib/ntpdate/default.dhcp ]; then
+	. /var/lib/ntpdate/default.dhcp
+fi
+
+# Measure the time (in seconds since the epoch) before and after calling
+# ntpdate. If the jump is more than 10 minutes, we better kill the DHCP
+# client, to prevent it from becoming confused and force a new IP address.
+# Such a time jump is usually more than 40 years, from a nearly zero epoch
+# time (no RTC used) to the one acquired from the internet.
+
+before=$(/bin/date +%s)
+maxafter=$((before + 600))
+
+/usr/sbin/ntpdate $NTPOPTIONS "$@" $NTPSERVERS
+
+after=$(/bin/date +%s)
+
+[ "$after" -gt "$maxafter" ] && killall dhclient

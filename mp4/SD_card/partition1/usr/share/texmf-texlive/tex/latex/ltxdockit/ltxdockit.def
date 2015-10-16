@@ -1,0 +1,34 @@
+% $Id: ltxdockit.def,v 1.2 2009/05/24 19:10:45 lehman stable $
+
+\ProvidesFile{ltxdockit.def}[2009/05/24 v1.2 ltxdockit pre-configuration (dfsg-free)]
+\RequirePackage{etoolbox}
+
+\PassOptionsToClass{11pt,a4paper,DIV9,liststotoc,listsleft}{scrartcl}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrartcl}}
+\ProcessOptions*
+\LoadClass{scrartcl}
+
+% patches
+
+\newcommand*{\AtBeginToc}{\g@addto@macro\@begintochook}
+\newcommand*{\AtEndToc}{\g@addto@macro\@endtochook}
+\newcommand*{\@begintochook}{}
+\newcommand*{\@endtochook}{}
+\@onlypreamble\AtBeginToc
+\@onlypreamble\AtEndToc
+\newcommand*{\AtBeginLot}{\g@addto@macro\@beginlothook}
+\newcommand*{\AtEndLot}{\g@addto@macro\@endlothook}
+\newcommand*{\@beginlothook}{}
+\newcommand*{\@endlothook}{}
+\@onlypreamble\AtBeginLot
+\@onlypreamble\AtEndLot
+
+\pretocmd\@starttoc{\csuse{@begin#1hook}}{}{}
+\apptocmd\@starttoc{\csuse{@end#1hook}}{}{}
+
+\AtBeginToc{\multicolsep\z@\begin{multicols}{2}}
+\AtEndToc{\end{multicols}}
+\AtBeginLot{\multicolsep\z@\begin{multicols}{2}}
+\AtEndLot{\end{multicols}}
+
+\endinput

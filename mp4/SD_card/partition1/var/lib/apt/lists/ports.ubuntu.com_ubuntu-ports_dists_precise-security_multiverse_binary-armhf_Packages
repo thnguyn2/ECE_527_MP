@@ -1,0 +1,109 @@
+Package: redeclipse
+Priority: optional
+Section: multiverse/games
+Installed-Size: 2749
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Version: 1.2-2ubuntu0.1
+Depends: redeclipse-data (>= 1.2), libc6 (>= 2.15-0ubuntu8), libenet1a, libgcc1 (>= 1:4.4.0), libgl1-mesa-glx | libgl1, libsdl-image1.2 (>= 1.2.10), libsdl-mixer1.2, libsdl1.2debian (>= 1.2.10-1), libstdc++6 (>= 4.4.0), libx11-6, zlib1g (>= 1:1.2.0)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse_1.2-2ubuntu0.1_armhf.deb
+Size: 1259286
+MD5sum: 891fbb0e9d6b477a08e25b3cb39af328
+SHA1: 1162d63f910de9583485294f35cf24de1e36a745
+SHA256: ec9a7f2f23859701256d04012a3467417e08e5409609d6181a232bc191480c99
+Description: single-player and multi-player first-person ego-shooter
+Homepage: http://www.redeclipse.net
+Description-md5: 5c2008bbe98e70a350dc2e5ff41c2edb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: redeclipse-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 13813
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: redeclipse
+Version: 1.2-2ubuntu0.1
+Depends: redeclipse (= 1.2-2ubuntu0.1)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse-dbg_1.2-2ubuntu0.1_armhf.deb
+Size: 3625580
+MD5sum: d81f8dde5febcb9b7c2cafd9a93c2cdb
+SHA1: 851c0c1e1b466e1ade13d15b839d614200f508be
+SHA256: 6b6c25fc06057305de03ac6e6e73c7ed8dbef40301eca3eeafce1e0fcae9f54b
+Description: debug symbols for the Red Eclipse FPS game
+Homepage: http://www.redeclipse.net
+Description-md5: 472a3994437308850b2d85085b11423f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: redeclipse-server
+Priority: optional
+Section: multiverse/games
+Installed-Size: 583
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: redeclipse
+Version: 1.2-2ubuntu0.1
+Depends: libc6 (>= 2.15-0ubuntu8), libenet1a, libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse-server_1.2-2ubuntu0.1_armhf.deb
+Size: 228878
+MD5sum: b5b3c317fc7fbee69e73ef67daab765b
+SHA1: 8b7432ba6b1b8f0bae8a14b1096d9434efeb0bb1
+SHA256: b139a6bedb30321c0b4e73058ebd2ca11274e205e719c29345b9396297975faf
+Description: server for the Red Eclipse FPS game
+Homepage: http://www.redeclipse.net
+Description-md5: 315338a2439def5a06eb51a250e84e31
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: redeclipse-server-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 1960
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: redeclipse
+Version: 1.2-2ubuntu0.1
+Depends: redeclipse-server (= 1.2-2ubuntu0.1)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse-server-dbg_1.2-2ubuntu0.1_armhf.deb
+Size: 537820
+MD5sum: 3d7fb546ac26ba2c3877ae7a5b415871
+SHA1: 7cfc0114ffe1c6eba9968335f0f2b08061023c90
+SHA256: 2332d965a03e75f46e0e09613537612ae5773dd1a4c4847d741ade46478dd262
+Description: debug symbols for the Red Eclipse dedicated server
+Homepage: http://www.redeclipse.net
+Description-md5: 845a03d775cde2c92ef0a0d918bdbf50
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unrar
+Priority: optional
+Section: multiverse/utils
+Installed-Size: 165
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Martin Meredith <mez@debian.org>
+Architecture: armhf
+Source: unrar-nonfree
+Version: 1:4.0.3-1ubuntu0.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Conflicts: rar (<= 2.60-1)
+Filename: pool/multiverse/u/unrar-nonfree/unrar_4.0.3-1ubuntu0.1_armhf.deb
+Size: 91448
+MD5sum: 5276093be6c76f738ee0eab0ddd1540d
+SHA1: 30bf93fc12f16abc51b3bb3f615c5f75a05e8df3
+SHA256: cdf8ef9d2f78fcf2a4131878afc49c8bad01fca3bef25a650ca0ce78b26f6a50
+Description: Unarchiver for .rar files (non-free version)
+Homepage: http://www.rarlabs.com/
+Description-md5: 363f696bb115028ffafb265ccc9f32fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+

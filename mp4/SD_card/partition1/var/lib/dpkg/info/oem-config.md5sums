@@ -1,0 +1,12 @@
+40d3b59853f0d550e9db9e4c7c13e90f  usr/lib/oem-config/post-install/ubi-reload-keyboard
+014173d182d0cb08119730e9bf8d06c1  usr/lib/ubiquity/debian-installer-utils/register-module.post-base-installer-oem
+c7e7a2d51f2117e8295c0564b5c86025  usr/lib/ubiquity/tzsetup/post-base-installer-oem
+d1dea53b9c245223238b4f7bdbb6ff1f  usr/sbin/oem-config-firstboot
+c2af232d1416cb41ad13d1a523db9bfe  usr/sbin/oem-config-prepare
+aa3f060fffbe28ab668c532c7ba588b6  usr/sbin/oem-config-remove
+e87d82c8ea4d091695282c0c1058f18c  usr/sbin/oem-config-wrapper
+897f4c54eeee2ac90eb11eeedb702c2f  usr/share/doc/oem-config/changelog.gz
+1e4c3da430ddf93fcdf37f6306df43f2  usr/share/doc/oem-config/copyright
+6cd07683c500787099f07fe3889bd74e  usr/share/lintian/overrides/oem-config
+cc8c91c26e1f29dfe8e92366fcb6afac  usr/share/man/man8/oem-config-firstboot.8.gz
+bdd52e7765f497efd345d77687d8753c  usr/share/man/man8/oem-config-prepare.8.gz

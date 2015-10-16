@@ -1,0 +1,138 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+%\usepackage{pamathx}
+\usepackage{mathpazo}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{pstricks}
+\usepackage{pst-fun}
+\let\pstFunFV\fileversion
+\usepackage{pstricks-add}% for the alg parser
+\usepackage{showexpl}
+\lstset{pos=t,wide=true}
+%
+\usepackage{xspace}
+\def\PS{PostScript\xspace}
+\def\CMD#1{{\ttfamily\textbackslash #1}}
+%
+\def\pshlabel#1{\footnotesize#1}
+\def\psvlabel#1{\footnotesize#1}
+\usepackage[colorlinks,linktocpage]{hyperref}
+%
+\begin{document}
+\title{\texttt{pst-fun}\\funny macros\\
+		  \small v.\pstFunFV}
+\author{%
+    \tabular[t]{c}Manuel Luque\\[3pt]
+    \url{ml@PSTricks.de}
+    \endtabular   \and 
+    \tabular[t]{c}Herbert Vo\ss\\[3pt]
+    \url{hv@PSTricks.de}\endtabular%
+} 
+\date{\today}
+
+\maketitle
+
+%\tableofcontents
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](-5,-4)(4,8) % needs pstricks-add
+  \psBill
+  \psHomothetie[linecolor=blue](4,-3){2}{\psBill}
+  \psdots[dotsize=3pt,linecolor=red](4,-3)
+  \pstVerb{ /m -3 -0.85 sub 4 0.6 sub div def }
+  \psplot[linestyle=dashed,linecolor=red]{-5}{4}{ m x mul m 4 mul sub 3 sub }
+  \psHomothetie[linecolor=green](4,-3){0.5}{\psBill}
+  \psHomothetie[linecolor=magenta](4,-3){-0.25}{\psBill}
+\end{pspicture}
+\end{LTXexample}
+%$
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](0,-0.5)(12,4)
+ \psFish
+ \rput(6,0){\psFish[fillstyle=slope]}
+\end{pspicture}
+\end{LTXexample}
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](-2,-2.4)(6,2)
+  \psLouisXIII
+  \rput(4,0){\psLouisXIII[linecolor=red]}
+\end{pspicture}
+\end{LTXexample}
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](0,-0.4)(11,6)
+  \psPulpo \rput(10,0.5){\psscalebox{0.15}{\psPulpo[fillcolor=yellow,fillstyle=solid]}}
+\end{pspicture}
+\end{LTXexample}
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](0,-1.2)(12,3)
+  \psBird \rput(4,0){\psBird} \rput{-60}(8,2){\psBird}
+\end{pspicture}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](0,-1.3)(10,3)
+  \psBird[Branch] \rput{-20}(4,1.8){\psBird}
+\end{pspicture}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](0,-0.3)(8,10)
+  \psLuke
+  \rput(6.5,1){\psscalebox{0.15}{\psLuke}}
+\end{pspicture}
+\end{LTXexample}
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](-5,-5)(5,5)
+  \psAnt
+  \rput(-3,3){\psAnt[fillcolor=red!50]}
+  \rput{30}(3,-3){\psAnt[fillcolor=blue!50]}
+  \rput{-60}(-3,-3){\psAnt[fillcolor=blue!20]}
+  \rput(2.5,3){\psscalebox{0.15}{\psAnt}}
+\end{pspicture}
+\end{LTXexample}
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](6,7)
+  \psParrot{1}
+  \psParrot{0.2}\rput(4,5){\psParrot{0.2}}
+\end{pspicture}
+\end{LTXexample}
+
+
+\begin{LTXexample}
+\begin{pspicture}[showgrid=true](8,7)
+  \psKangaroo{1}
+  \multido{\iA=2+1}{5}{\rput[lb](1,\iA){\psKangaroo[fillcolor=red]{1}}}
+  \rput(4,0){\psKangaroo[fillcolor=red!30]{5}}
+  \rput(5,1){\psKangaroo[fillcolor=blue!30,opacity=0.5]{5}}
+\end{pspicture}
+\end{LTXexample}
+
+
+%\section{Credits}
+%Manuel Luque 
+
+\bgroup
+\raggedright
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{pst-fun-doc}
+\egroup
+\end{document}
+
+

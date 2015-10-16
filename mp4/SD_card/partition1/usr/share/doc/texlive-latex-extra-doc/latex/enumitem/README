@@ -1,0 +1,35 @@
+Enumitem
+~~~~~~~~
+
+A package to customize the three basic lists (enumerate,
+itemize and description) by means of a set of parameters,
+and to clone them to define new "logical" lists.
+It provides most of the flexibility you may want to
+design your own lists:
+- fancy labels and fancy refs,
+- leftmargin, labelsep and labelwidth automatically set,
+- changes applied globally or only in one of the three
+  types or even in a single list (including topsep) by
+  means of a sort of "inheritance",
+- several description styles (which fix some bad
+  spacing, too),
+- starting value and counter resuming,
+- trivlists properly formatted,
+- control on page breaking
+
+Recent changes
+~~~~~~~~~~~~~~
+2.1 fixes a bug in resume* -- now it ignores the start key given
+in the previous list, since we want to continue it, not to restart
+it.
+
+2.2 fixes a bug in some description styles, which didn't empty the
+box containing the labels.
+
+_________________________________________________________________
+Javier Bezos                    | http://www.tex-tipografia.com
+.................................................................
+2009-05-18
+
+
+

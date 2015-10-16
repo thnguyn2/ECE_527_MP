@@ -1,0 +1,1 @@
+../../../texlive-latex-base-doc/latex/graphics/00readme.txt

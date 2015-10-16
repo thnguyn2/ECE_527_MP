@@ -1,0 +1,4881 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002 (1.67)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Creating Flow Frames for Posters, Brochures or Magazines using flowfram.sty v 1.11</TITLE>
+<META NAME="description" CONTENT="Creating Flow Frames for Posters, Brochures or Magazines using flowfram.sty v 1.11">
+<META NAME="keywords" CONTENT="LaTeX; text frames; posters; brochures; magazines; newspapers">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+<A NAME="top"></A>
+
+<P>
+
+<P>
+
+<H1 ALIGN=CENTER>Creating Flow Frames for Posters, Brochures or 
+Magazines using flowfram.sty v 1.11</H1>
+<P ALIGN=CENTER><STRONG>Nicola L. C. Talbot</STRONG></P>
+<BR><P ALIGN=CENTER><I>Date:</I> 28th June 2008</P>
+<P ALIGN=LEFT></P>
+<BR><P><P ALIGN=LEFT><FONT SIZE=-1>Key words and phrases: LaTeX; text frames; posters; brochures; magazines; newspapers</FONT></P>
+
+<P>
+
+<P>
+Dr Nicola Talbot
+<BR>
+School of Computing Sciences
+<BR>
+University of East Anglia
+<BR>
+Norwich. Norfolk. NR4 7TJ.
+<BR>
+United Kingdom
+<BR><TT><A NAME="tex2html1"
+  HREF="http://theoval.cmp.uea.ac.uk/~nlct/">http://theoval.cmp.uea.ac.uk/~nlct/</A></TT>
+<P>
+
+<P>
+
+<BR>
+
+<H2><A NAME="SECTION0010000000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html268"
+  HREF="ffuserguide.html#SECTION0020000000000000000000">1. Introduction</A>
+<UL>
+<LI><A NAME="tex2html269"
+  HREF="ffuserguide.html#SECTION0021000000000000000000">1.1 Draft Option</A>
+<LI><A NAME="tex2html270"
+  HREF="ffuserguide.html#SECTION0022000000000000000000">1.2 Frame Stacking Order</A>
+<LI><A NAME="tex2html271"
+  HREF="ffuserguide.html#SECTION0023000000000000000000">1.3 HTML</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html272"
+  HREF="ffuserguide.html#SECTION0030000000000000000000">2. Defining New Frames</A>
+<UL>
+<LI><A NAME="tex2html273"
+  HREF="ffuserguide.html#SECTION0031000000000000000000">2.1 Flow Frames</A>
+<UL>
+<LI><A NAME="tex2html274"
+  HREF="ffuserguide.html#SECTION0031100000000000000000">2.1.1 Prematurely Ending a Flow Frame</A>
+</UL>
+<LI><A NAME="tex2html275"
+  HREF="ffuserguide.html#SECTION0032000000000000000000">2.2 Static Frames</A>
+<UL>
+<LI><A NAME="tex2html276"
+  HREF="ffuserguide.html#SECTION0032100000000000000000">2.2.1 Important Notes</A>
+</UL>
+<LI><A NAME="tex2html277"
+  HREF="ffuserguide.html#SECTION0033000000000000000000">2.3 Dynamic Frames</A>
+<UL>
+<LI><A NAME="tex2html278"
+  HREF="ffuserguide.html#SECTION0033100000000000000000">2.3.1 Important Notes</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html279"
+  HREF="ffuserguide.html#SECTION0040000000000000000000">3. Modifying Frame Attributes</A>
+<UL>
+<LI><A NAME="tex2html280"
+  HREF="ffuserguide.html#SECTION0041000000000000000000">3.1 Non-Rectangular Frames</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html281"
+  HREF="ffuserguide.html#SECTION0050000000000000000000">4. Locations and Dimensions</A>
+<UL>
+<LI><A NAME="tex2html282"
+  HREF="ffuserguide.html#SECTION0051000000000000000000">4.1 Determining the Location of the Typeblock</A>
+<LI><A NAME="tex2html283"
+  HREF="ffuserguide.html#SECTION0052000000000000000000">4.2 Determining the Dimensions and Locations of Frames</A>
+<LI><A NAME="tex2html284"
+  HREF="ffuserguide.html#SECTION0053000000000000000000">4.3 Relative Locations</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html285"
+  HREF="ffuserguide.html#SECTION0060000000000000000000">5. Predefined Layouts</A>
+<UL>
+<LI><A NAME="tex2html286"
+  HREF="ffuserguide.html#SECTION0061000000000000000000">5.1 Column Styles</A>
+<LI><A NAME="tex2html287"
+  HREF="ffuserguide.html#SECTION0062000000000000000000">5.2 Column Styles with an Additional Frame</A>
+<LI><A NAME="tex2html288"
+  HREF="ffuserguide.html#SECTION0063000000000000000000">5.3 Backdrop Effects</A>
+<UL>
+<LI><A NAME="tex2html289"
+  HREF="ffuserguide.html#SECTION0063100000000000000000">5.3.1 Vertical stripe effects</A>
+<LI><A NAME="tex2html290"
+  HREF="ffuserguide.html#SECTION0063200000000000000000">5.3.2 Horizontal stripe effect</A>
+<LI><A NAME="tex2html291"
+  HREF="ffuserguide.html#SECTION0063300000000000000000">5.3.3 Background Frame</A>
+<LI><A NAME="tex2html292"
+  HREF="ffuserguide.html#SECTION0063400000000000000000">5.3.4 Vertical and Horizontal Rules</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html293"
+  HREF="ffuserguide.html#SECTION0070000000000000000000">6. Thumbtabs and Minitocs</A>
+<UL>
+<LI><A NAME="tex2html294"
+  HREF="ffuserguide.html#SECTION0071000000000000000000">6.1 Thumbtabs</A>
+<LI><A NAME="tex2html295"
+  HREF="ffuserguide.html#SECTION0072000000000000000000">6.2 Minitocs</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html296"
+  HREF="ffuserguide.html#SECTION0080000000000000000000">7. Global Settings</A>
+<UL>
+<LI><A NAME="tex2html297"
+  HREF="ffuserguide.html#SECTION0081000000000000000000">7.1 Macros</A>
+<LI><A NAME="tex2html298"
+  HREF="ffuserguide.html#SECTION0082000000000000000000">7.2 Lengths</A>
+<LI><A NAME="tex2html299"
+  HREF="ffuserguide.html#SECTION0083000000000000000000">7.3 Counters</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html300"
+  HREF="ffuserguide.html#SECTION0090000000000000000000">8. Troubleshooting</A>
+<UL>
+<LI><A NAME="tex2html301"
+  HREF="ffuserguide.html#SECTION0091000000000000000000">8.1 General Queries</A>
+<LI><A NAME="tex2html302"
+  HREF="ffuserguide.html#SECTION0092000000000000000000">8.2 Unexpected Output</A>
+<LI><A NAME="tex2html303"
+  HREF="ffuserguide.html#SECTION0093000000000000000000">8.3 Error Messages</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html304"
+  HREF="ffuserguide.html#SECTION00100000000000000000000">Glossary</A>
+<LI><A NAME="tex2html305"
+  HREF="ffuserguide.html#SECTION00110000000000000000000">Index</A>
+</UL>
+<!--End of Table of Contents-->
+<P>
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION0020000000000000000000">
+1. Introduction</A>
+</H1>
+
+<P>
+
+<I>This chapter provides a brief overview of the package, 
+the package options and the various frame types.</I>
+<P>
+
+<P>
+The <TT>flowfram</TT> package is a LaTeX2e package designed to 
+enable you to create text <A HREF=ffuserguide.html#gls:frame NAME="11380">frames</A> in a document such that 
+the contents of the <TT>document</TT><A NAME="3569"></A> environment flow from one 
+frame to the next in the order that they were defined.  
+This is useful for creating posters
+or magazines or any other form of document that does not 
+conform to the standard one or two column layout.
+
+<P>
+The <TT>flowfram</TT> package provides three types of frame:
+<A HREF=ffuserguide.html#gls:flow NAME="11395">flow frames</A>, <A HREF=ffuserguide.html#gls:static NAME="11402">static frames</A> and <A HREF=ffuserguide.html#gls:dynamic NAME="11409">dynamic frames</A> with dimensions and 
+positions specified by the 
+user<A NAME="tex2html2"
+  HREF="#foot3502"><SUP>1.1</SUP></A>.
+The main contents of the document environment flow from
+one flow frame to the next in the order of definition,
+whereas the contents of the static and dynamic frames
+are set explicitly using commands described in 
+<A HREF="ffuserguide.html#sec:modattr">Modifying Frame 
+Attributes</A>. Note that
+unless otherwise stated, all co-ordinates are relative to the
+bottom left hand corner of the <A HREF=ffuserguide.html#gls:typeblock NAME="11420">typeblock</A>. If you have
+a two-sided document, the absolute position of the typeblock may vary depending on the values of <TT>&#92;oddsidemargin</TT><A NAME="3572"></A> 
+and <TT>&#92;evensidemargin</TT><A NAME="3577"></A>, and all the frames will shift
+accordingly unless otherwise indicated.
+
+<P>
+Since floats (such as figures and tables) can only go in 
+flow frames, this package provides
+the additional environments:
+<TT>staticfigure</TT><A NAME="3582"></A> and 
+<TT>statictable</TT><A NAME="3585"></A> which can be used in static frames and dynamic frames. Unlike their <TT>figure</TT><A NAME="3588"></A> and
+<TT>table</TT><A NAME="3591"></A> counterparts, they are fixed in place, and
+so do not take an optional placement specifier. The 
+<TT>&#92;caption</TT><A NAME="3594"></A> and <TT>&#92;label</TT><A NAME="3599"></A> commands can 
+be used within <TT>staticfigure</TT><A NAME="3604"></A> and <TT>statictable</TT><A NAME="3607"></A> as
+usual, but remember that if the frame is displayed on multiple
+pages, you may end up with multiply defined labels.
+
+<P>
+The standard <TT>figure</TT><A NAME="3610"></A> and <TT>table</TT><A NAME="3613"></A> commands will 
+behave as usual in the flow frames, but their starred versions,
+<TT>figure*</TT><A NAME="3616"></A> and <TT>table*</TT><A NAME="3619"></A> behave no differently
+from <TT>figure</TT><A NAME="3622"></A> and <TT>table</TT><A NAME="3625"></A><A NAME="tex2html3"
+  HREF="#foot404"><SUP>1.2</SUP></A>.
+
+<P>
+This package has only been tested with a limited number of
+class files and packages. Since it modifies the output routine,
+it is likely to conflict with any other package which also
+does this.  
+
+<P>
+You should load <TT>flowfram</TT> <I>after</I> <TT>hyperref</TT><A NAME="3628"></A> and any 
+colour package (e.g. <TT>color</TT><A NAME="3631"></A>).
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0021000000000000000000">
+1.1 Draft Option</A>
+</H1>
+
+<P>
+The <TT>flowfram</TT> package has the package option <TT>draft</TT><A NAME="3638"></A> 
+which will draw the <A HREF=ffuserguide.html#gls:bbox NAME="11490">bounding boxes</A> for
+each <A HREF=ffuserguide.html#gls:frame NAME="11497">frame</A> that has been defined.  At the bottom right of each
+bounding box (except for the bounding box denoting the 
+<A HREF=ffuserguide.html#gls:typeblock NAME="11512">typeblock</A>), a marker will be shown in the form:
+[<I>T</I>:<I>idn</I>;<I>idl</I>], where <I>T</I> is a single
+letter denoting the frame type, <I>idn</I> is the <A HREF=ffuserguide.html#gls:idn NAME="11523">identification number (IDN)</A> for the frame and <I>idl</I> is the <A HREF=ffuserguide.html#gls:idl NAME="11534">identification label (IDL)</A> for that
+frame. Values of <I>T</I> are: <TT>F</TT> (<A HREF=ffuserguide.html#gls:flow NAME="11545">flow frame</A>),
+<TT>S</TT> (<A HREF=ffuserguide.html#gls:static NAME="11552">static frame</A>) or <TT>D</TT> (<A HREF=ffuserguide.html#gls:dynamic NAME="11559">dynamic frame</A>).
+Markers of the form: [M:<I>idn</I>] indicate that the
+bounding box is the area taken up by the margin for flow frame with IDN <I>idn</I>. Note that even if a frame has been rotated, the bounding box will not be rotated.
+
+<P>
+If you want to show or hide specific types of bounding
+boxes, you can use one of the following commands:
+
+<UL>
+<LI><TT>&#92;showtypeblocktrue</TT><A NAME="3641"></A> Display the bounding box for the typeblock.
+
+<P>
+</LI>
+<LI><TT>&#92;showtypeblockfalse</TT><A NAME="3646"></A> Do not display the bounding box for the typeblock.
+
+<P>
+</LI>
+<LI><TT>&#92;showmarginstrue</TT><A NAME="3651"></A> Display the bounding box for the margins.
+
+<P>
+</LI>
+<LI><TT>&#92;showmarginsfalse</TT><A NAME="3656"></A> Do not display the bounding box for the margins.
+
+<P>
+</LI>
+<LI><TT>&#92;showframebboxtrue</TT><A NAME="3661"></A> Display the bounding box for the frames.
+
+<P>
+</LI>
+<LI><TT>&#92;showframebboxfalse</TT><A NAME="3666"></A> Do not display the bounding box for the frames.
+
+<P>
+</LI>
+</UL>
+
+<P>
+You can see the layout for the current page (irrespective of
+whether or not the <TT>draft</TT><A NAME="3671"></A> option has been set) using
+the command:
+
+<P>
+<TT>&#92;flowframeshowlayout</TT><A NAME="3674"></A>
+<P>
+
+<P>
+The <TT>flowfram</TT> package also has the options <TT>nocolor</TT><A NAME="3679"></A> 
+and <TT>norotate</TT><A NAME="3682"></A> for previewers that can not process
+colour or rotating specials. (Otherwise you may end up with
+large black rectangles obscuring your text, instead of
+the pale background colour you were hoping for.)
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0022000000000000000000"></A>
+<A NAME="sec:stacking"></A>
+<BR>
+1.2 Frame Stacking Order
+</H1>
+
+<P>
+The material on each page is placed in the following order:
+
+<OL>
+<LI>Each <A HREF=ffuserguide.html#gls:static NAME="11633">static frame</A> defined for that page in ascending
+order of <A HREF=ffuserguide.html#gls:idn NAME="11640">IDN</A>.
+
+<P>
+</LI>
+<LI>Each <A HREF=ffuserguide.html#gls:flow NAME="11647">flow frame</A> defined for that page in ascending
+order of <A HREF=ffuserguide.html#gls:idn NAME="11654">IDN</A>.
+
+<P>
+</LI>
+<LI>Each <A HREF=ffuserguide.html#gls:dynamic NAME="11661">dynamic frame</A> defined for that page in ascending
+order of <A HREF=ffuserguide.html#gls:idn NAME="11668">IDN</A>.
+
+<P>
+</LI>
+<LI><A HREF=ffuserguide.html#gls:bbox NAME="11675">Bounding boxes</A> if the <TT>draft</TT><A NAME="3689"></A> 
+package option has been used.
+</LI>
+</OL>
+
+<P>
+This ordering can be used to determine if you want something
+to overlay or underlay everything else on the page.
+Note that the <A HREF=ffuserguide.html#gls:frame NAME="11682">frames</A> do not interact with each other. If
+you have two or more overlapping frames, the text in each 
+frame will not attempt to wrap around the other 
+frames, but will simply overwrite 
+them.<A NAME="tex2html17"
+  HREF="#foot3503"><SUP>1.3</SUP></A>
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0023000000000000000000">
+1.3 HTML</A>
+</H1>
+
+<P>
+The <TT>flowfram</TT> package now comes with a LaTeX2HTML style
+file <TT>flowfram.perl</TT>. However this style file is not meant
+to emulate the <TT>flowfram</TT> package, but is provided to facilitate
+creating a plain HTML document from the LaTeX source. All 
+<A HREF=ffuserguide.html#gls:frame NAME="11710">frame</A>-related information is ignored. By default, the contents
+of any <A HREF=ffuserguide.html#gls:static NAME="11713">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="11716">dynamic</A> frames are ignored, but this can be changed using
+<PRE>
+\HTMLset{showstaticcontents}{1}
+</PRE>
+to show the contents of the static frames or
+<PRE>
+\HTMLset{showdynamiccontents}{1}
+</PRE>
+to show the contents of the dynamic frames (where <code>\HTMLset</code>
+is defined in the <TT>html</TT><A NAME="3700"></A> package). Note that this places the
+text at the point in the document where the contents are set.
+This style file does not create HTML frames. It can therefore be
+used to create an accessible version of the PDF document
+such as this document.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0030000000000000000000">
+2. Defining New Frames</A>
+</H1>
+
+<P>
+
+<I>This chapter describes how to define new frames, and how to 
+identify and set frame contents. See also 
+<A HREF="ffuserguide.html#sec:layouts">Predefined 
+Layouts</A>.</I>
+<P>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0031000000000000000000">
+2.1 Flow Frames</A>
+</H1>
+
+<P>
+The <A HREF=ffuserguide.html#gls:flow NAME="11793">flow frame</A> is the principle type of <A HREF=ffuserguide.html#gls:frame NAME="11800">frame</A>.
+The text of the <TT>document</TT><A NAME="3711"></A> environment will flow from 
+one frame to the next in order of definition. Each 
+flow frame has an associated width, height, 
+position on the page and optionally a border. To define
+a new flow frame use:
+
+<P>
+<TT>&#92;newflowframe</TT><A NAME="3714"></A><TT>[<I>page list</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;[<I>label</I>]</TT>
+<P>
+where <I>width</I> is the width of the frame, <I>height</I> is 
+the height of the frame, (<I>x</I>,<I>y</I>) is the
+position of the bottom left hand corner of the frame relative to the bottom left hand corner of the 
+<A HREF=ffuserguide.html#gls:typeblock NAME="11831">typeblock</A><A NAME="tex2html29"
+  HREF="#foot3505"><SUP>2.1</SUP></A>.
+The first optional argument, <I>page list</I>, indicates the 
+list of pages for which this frame is defined. 
+
+<P>
+A <A HREF=ffuserguide.html#gls:pglist NAME="11842">page list</A> can either be specified by the keywords: 
+<TT>all</TT>, <TT>odd</TT>, <TT>even</TT> or <TT>none</TT>, or 
+by a comma-separated list of either individual page numbers or 
+<A HREF=ffuserguide.html#gls:pgrange NAME="11849">page ranges</A>. If <I>page list</I> is
+omitted, <TT>all</TT> is assumed.  
+A page range can be a closed
+range (e.g. <code>2-8</code>) or an open range (e.g. 
+<code>&lt;10</code> or <code>&gt;5</code>). For example: <code>&lt;3,5,7-11,&gt;15</code>
+indicates pages 1, 2, 5, 7, 8, 9, 10, 11 and all pages 
+greater than page 15. These page numbers refer to the value of
+the page counter<A NAME="tex2html30"
+  HREF="#foot3506"><SUP>2.2</SUP></A>, 
+so if you have a page&nbsp;i and a page&nbsp;1, they
+will both have the same layout (unless you change the
+page list setting somewhere between the two pages).
+
+<P>
+Each frame has its own unique <A HREF=ffuserguide.html#gls:idn NAME="11864">IDN</A>, 
+corresponding to the order in which it was defined. So the first 
+flow frame to be defined has IDN&nbsp;1, 
+the second has IDN&nbsp;2, and so on. This number can then
+be used to identify the frame when you want to modify its
+settings. Alternatively, you can assign a unique <A HREF=ffuserguide.html#gls:idl NAME="11887">IDL</A> to the 
+frame using the final optional argument <I>label</I>.
+
+<P>
+You can retrieve the IDL for a given flow frame from its IDN using:
+
+<P>
+<TT>&#92;getflowlabel</TT><A NAME="3731"></A><TT>&#123;<I>idn</I>&#125;</TT>
+<P>
+Conversely, you can retrieve the IDN for a given flow frame from its IDL using:
+
+<P>
+<TT>&#92;getflowid</TT><A NAME="3738"></A><TT>&#123;<I>cmd</I>&#125;&#123;<I>idl</I>&#125;</TT>
+<P>
+where <I>cmd</I> is a control sequence which will be used to
+store the frame's IDN.
+For example:
+<PRE>
+The label for the first flow frame is ``\getflowlabel{1}''.
+The flow frame labelled ``main'' has IDN \getflowid{\myid}{main}\myid.
+</PRE>
+ (See also 
+<A HREF="ffuserguide.html#sec:counters">Counters</A>.)
+
+<P>
+Note that <TT>&#92;getflowlabel</TT><A NAME="3747"></A> doesn't perform any check to
+determine whether the supplied IDN is valid, but
+<TT>&#92;getflowid</TT><A NAME="3752"></A> will generate an error if the supplied
+IDL is undefined.
+
+<P>
+By default, the flow frame will not have a border, but the 
+starred form 
+
+<P>
+<TT>&#92;newflowframe*</TT><A NAME="3757"></A><TT>[<I>page list</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;[<I>label</I>]</TT>
+<P>
+will place a plain border around the flow frame.
+(See <A HREF="ffuserguide.html#sec:modattr">Modifying frame
+attributes</A> if you want a different border.)
+
+<P>
+Note that if the document continues beyond the last
+defined flow frame (for example, the flow frames have only
+been defined on pages&nbsp;1 to&nbsp;10, but the document contains 11 
+pages) then a single flow frame will be defined, 
+emulating one column mode for all subsequent pages.
+
+<P>
+In the PDF version of this document, 
+I used the command
+<PRE>
+\newflowframe{0.6\textwidth}{\textheight}{0pt}{0pt}[main]
+</PRE>
+to define the main flow frame<A NAME="tex2html31"
+  HREF="#foot3507"><SUP>2.3</SUP></A>.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0031100000000000000000"></A>
+<A NAME="sec:framebreak"></A>
+<BR>
+2.1.1 Prematurely Ending a Flow Frame
+</H2>
+
+<P>
+You can force text to move immediately to the next defined
+<A HREF=ffuserguide.html#gls:flow NAME="11959">flow frame</A> using one of the commands: <TT>&#92;newpage</TT><A NAME="3783"></A>,
+<TT>&#92;pagebreak</TT><A NAME="3788"></A> or <TT>&#92;framebreak</TT><A NAME="3793"></A>.
+The first two work in an analogous way to the way they
+work in standard two column mode. The last one, 
+<TT>&#92;framebreak</TT><A NAME="3798"></A>, is required
+when a paragraph spans two flow frames of different widths, as TeX's output routine does not 
+adjust to the new value of <TT>&#92;hsize</TT><A NAME="3803"></A> until the last 
+paragraph of the previous <A HREF=ffuserguide.html#gls:frame NAME="11970">frame</A> has ended. As a 
+result, the end of the paragraph at the beginning of the new
+flow frame retains the width of the previous flow frame.
+
+<P>
+If you want to start a new page, rather than simply move to the 
+next frame, use the command <TT>&#92;clearpage</TT><A NAME="3808"></A>, 
+or for two-sided documents, to start on the next odd page
+do <TT>&#92;cleardoublepage</TT><A NAME="3813"></A>.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0032000000000000000000"></A>
+<A NAME="sec:static"></A>
+<BR>
+2.2 Static Frames
+</H1>
+
+<P>
+A <A HREF=ffuserguide.html#gls:static NAME="12084">static frame</A> is a rectangular area in which text neither
+flows into nor flows out of.<A NAME="tex2html41"
+  HREF="#foot2877"><SUP>2.4</SUP></A>  
+The contents must be set explicitly, and once set, the contents 
+of the static frame will remain the same on each page until it is 
+explicitly changed.  Thus, a static frame can be used, for 
+example, to make a company logo appear in the same place on every 
+page.
+
+<P>
+As from version 1.03 it is now possible to have
+static frames with non-rectangular contents, see
+<A HREF="ffuserguide.html#sec:parshape">Non-Rectangular 
+Frames</A> for further details.
+
+<P>
+A new static frame is defined using the command:
+
+<P>
+<TT>&#92;newstaticframe</TT><A NAME="3822"></A><TT>[<I>page list</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;[<I>label</I>]</TT>
+<P>
+where, as with <TT>&#92;newflowframe</TT><A NAME="3839"></A>, <I>width</I> is the width of 
+the frame, <I>height</I> is the height of the frame,
+(<I>x</I>,<I>y</I>) is the position of the bottom left hand 
+corner of the frame relative to the bottom left hand 
+corner of the <A HREF=ffuserguide.html#gls:typeblock NAME="12119">typeblock</A>. The first optional argument,
+<I>page list</I>, indicates the <A HREF=ffuserguide.html#gls:pglist NAME="12126">page list</A> for which this
+static frame should appear, and the final optional argument,
+<I>label</I> is a unique textual <A HREF=ffuserguide.html#gls:idl NAME="12137">IDL</A> which you can use to
+identify this frame.  If no label is specified, you
+can refer to this frame by its unique <A HREF=ffuserguide.html#gls:idn NAME="12152">IDN</A>.
+The first static frame to be defined has IDN&nbsp;1, the second
+has IDN&nbsp;2, and so on.
+
+<P>
+You can retrieve the IDL for a given static frame from its IDN using:
+
+<P>
+<TT>&#92;getstaticlabel</TT><A NAME="3844"></A><TT>&#123;<I>idn</I>&#125;</TT>
+<P>
+Conversely, you can retrieve the IDN for a given static frame from its IDL using:
+
+<P>
+<TT>&#92;getstaticid</TT><A NAME="3851"></A><TT>&#123;<I>cmd</I>&#125;&#123;<I>idl</I>&#125;</TT>
+<P>
+where <I>cmd</I> is a control sequence which will be used to
+store the frame's IDN.
+For example:
+<PRE>
+The label for the first static frame is ``\getstaticlabel{1}''.
+The static frame labelled ``backleft'' has IDN
+\getstaticid{\myid}{backleft}\myid.
+</PRE>
+
+<P>
+Note that <TT>&#92;getstaticlabel</TT><A NAME="3860"></A> doesn't perform any check to
+determine whether the supplied IDN is valid, but
+<TT>&#92;getstaticid</TT><A NAME="3865"></A> will generate an error if the supplied
+IDL is undefined.
+
+<P>
+As with <TT>&#92;newflowframe</TT><A NAME="3870"></A>, there is a starred version 
+
+<P>
+<TT>&#92;newstaticframe*</TT><A NAME="3875"></A><TT>[<I>page list</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;[<I>label</I>]</TT>
+<P>
+which will place a border around that static frame.
+
+<P>
+To set the contents of a particular static frame, you can
+either use the <TT>staticcontents</TT><A NAME="3892"></A> environment:
+
+<P>
+<code>\begin{staticcontents}</code><TT>&#123;<I>IDN</I>&#125;</TT>
+<BR><I>contents</I>
+<BR><code>\end{staticcontents}</code>
+<P>
+where <I>IDN</I> is the unique IDN associated with
+that static frame and <I>contents</I> is the contents of the
+static frame, or you can use the 
+command:
+
+<P>
+<TT>&#92;setstaticcontents</TT><A NAME="3897"></A><TT>&#123;<I>IDN</I>&#125;&#123;<I>contents</I>&#125;</TT>
+<P>
+which will do the same thing.
+
+<P>
+There are starred versions available for both the environment
+and the command to enable you to identify the static frame by its associated IDL rather than its IDN:
+
+<P>
+<code>\begin{staticcontents*}</code><TT>&#123;<I>IDL</I>&#125;</TT>
+<BR><I>contents</I>
+<BR><code>\end{staticcontents*}</code>
+<P>
+or the equivalent:
+
+<P>
+<TT>&#92;setstaticcontents*</TT><A NAME="3908"></A><TT>&#123;<I>IDL</I>&#125;&#123;<I>contents</I>&#125;</TT>
+<P>
+
+<P>
+In the body of <TT>staticcontents</TT><A NAME="3917"></A> or <TT>staticcontents*</TT><A NAME="3920"></A>,
+or in the second argument of <TT>&#92;setstaticcontents</TT><A NAME="3923"></A> 
+or <TT>&#92;setstaticcontents*</TT><A NAME="3928"></A>, you can move onto another 
+static frame using:
+
+<P>
+<TT>&#92;continueonframe</TT><A NAME="3933"></A><TT>[<I>continuation text</I>]&#123;<I>id</I>&#125;</TT>
+<P>
+If <TT>staticcontents*</TT><A NAME="3942"></A> or <TT>&#92;setstaticcontents*</TT><A NAME="3945"></A> are 
+being used, <I>id</I> refers to the IDL of the next 
+static frame, otherwise <I>id</I> refers to the IDN of the 
+next static frame.
+The optional argument specifies some continuation text to place
+at the end of the first static frame. For example, suppose I have
+defined two static frames labelled "frame1" and "frame2", then
+<PRE>
+\begin{staticcontents*}{frame1}
+Some text in the first frame. (Let's
+assume this frame is somewhere on the
+left half of the page.)
+\continueonframe[Continued on the right]{frame2}
+This is some text in the second frame. (Let's
+assume this frame is somewhere on the
+right half of the same page.)
+\end{staticcontents*}
+</PRE>
+is equivalent to:
+<PRE>
+\begin{staticcontents*}{frame1}
+Some text in the first frame. (Let's
+assume this frame is somewhere on the
+left half of the page.)
+\ffcontinuedtextlayout{Continued on the right}
+\end{staticcontents*}
+\begin{staticcontents*}{frame2}\par\noindent
+This is some text in the second frame. (Let's
+assume this frame is somewhere on the
+right half of the same page.)
+\end{staticcontents*}
+</PRE>
+where
+
+<P>
+<TT>&#92;ffcontinuedtextlayout</TT><A NAME="3950"></A><TT>&#123;<I>text</I>&#125;</TT>
+<P>
+governs how the continuation text should be displayed. The font used
+to display the continuation text is given by 
+
+<P>
+<TT>&#92;ffcontinuedtextfont</TT><A NAME="3957"></A><TT>&#123;<I>text</I>&#125;</TT>
+<P>
+
+<P>
+Note that this assumes that it should appear that no paragraph
+break occurs in the transition between the two frames. If you 
+want a paragraph break you need to explicitly put one before
+and after <TT>&#92;continueonframe</TT><A NAME="3964"></A>. For example:
+<PRE>
+\begin{staticcontents*}{frame1}
+Some text in the first frame. (Let's
+assume this frame is somewhere on the
+left half of the page.)
+
+\continueonframe[Continued on the right]{frame2}
+
+This is some text in the second frame. (Let's
+assume this frame is somewhere on the
+right half of the same page.)
+\end{staticcontents*}
+</PRE>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0032100000000000000000">
+2.2.1 Important Notes</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>When you set the contents of a <A HREF=ffuserguide.html#gls:static NAME="12272">static frame</A>, the contents are 
+immediately typeset and stored in a box until it is time to put
+the contents on the page. This means that if you use any information 
+that varies throughout the document (such as the page number) the
+value that is current when you set the static frame's contents
+will be the value used.
+
+<P>
+</LI>
+<LI>However, if <TT>&#92;label</TT><A NAME="3973"></A> is used inside a static frame,
+the label information will be written to the auxiliary file each 
+time the static frame is displayed until the contents of that
+frame have been changed. This means that you may
+end up with multiply defined labels.
+</LI>
+</UL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0033000000000000000000"></A>
+<A NAME="sec:dynamic"></A>
+<BR>
+2.3 Dynamic Frames
+</H1>
+
+<P>
+A <A HREF=ffuserguide.html#gls:dynamic NAME="12406">dynamic frame</A> is similar to a <A HREF=ffuserguide.html#gls:static NAME="12413">static frame</A> except that its contents
+are re-typeset on each page. (A static frame stores its 
+contents in a savebox, whereas a dynamic frame stores its
+contents in a macro.<A NAME="tex2html48"
+  HREF="#foot3508"><SUP>2.5</SUP></A>)
+
+<P>
+As from version 1.03 it is now possible to have
+dynamic frames with non-rectangular contents, see
+<A HREF="ffuserguide.html#sec:parshape">Non-Rectangular 
+Frames</A> for further details.
+
+<P>
+To create a new dynamic frame, use the command:
+
+<P>
+<TT>&#92;newdynamicframe</TT><A NAME="3989"></A><TT>[<I>page list</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;[<I>label</I>]</TT>
+<P>
+The parameters are exactly the same as for <TT>&#92;newflowframe</TT><A NAME="4006"></A> 
+and <TT>&#92;newstaticframe</TT><A NAME="4011"></A>.
+Again, each dynamic frame has an associated unique <A HREF=ffuserguide.html#gls:idn NAME="12440">IDN</A>,
+starting from 1 for the first dynamic frame to be defined, and
+a unique <A HREF=ffuserguide.html#gls:idl NAME="12451">IDL</A> can also be set using the final optional
+argument <I>label</I>.
+
+<P>
+You can retrieve the IDL for a given dynamic frame from its IDN using:
+
+<P>
+<TT>&#92;getdynamiclabel</TT><A NAME="4016"></A><TT>&#123;<I>idn</I>&#125;</TT>
+<P>
+Conversely, you can retrieve the IDN for a given dynamic frame from its IDL using:
+
+<P>
+<TT>&#92;getdynamicid</TT><A NAME="4023"></A><TT>&#123;<I>cmd</I>&#125;&#123;<I>idl</I>&#125;</TT>
+<P>
+where <I>cmd</I> is a control sequence which will be used to
+store the frame's IDN.
+
+<P>
+For example:
+<PRE>
+The label for the first dynamic frame is ``\getdynamiclabel{1}''.
+The dynamic frame labelled ``chaphead'' has IDN
+\getdynamicid{\myid}{chaphead}\myid.
+</PRE>
+
+<P>
+Note that <TT>&#92;getdynamiclabel</TT><A NAME="4032"></A> doesn't perform any check to
+determine whether the supplied IDN is valid, but
+<TT>&#92;getdynamicid</TT><A NAME="4037"></A> will generate an error if the supplied
+IDL is undefined.
+
+<P>
+As with the other <A HREF=ffuserguide.html#gls:frame NAME="12494">frame</A> types, there is also a starred 
+version
+
+<P>
+<TT>&#92;newdynamicframe*</TT><A NAME="4042"></A><TT>[<I>page list</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;[<I>label</I>]</TT>
+<P>
+which will place a plain border around the dynamic frame.
+For example, in the PDF version
+of this document I  used the command
+<PRE>
+\newdynamicframe{0.38\textwidth}{\textheight}{0.62\textwidth}{0pt}[chaphead]
+</PRE>
+which created a frame on the 
+right on odd pages and on the left on even pages. (The
+position for the even pages is set using <TT>&#92;setdynamicframe</TT><A NAME="4059"></A> 
+defined in <A HREF="ffuserguide.html#sec:modattr">Modifying
+Frame Attributes</A>.)
+
+<P>
+The contents of a dynamic frame are set using the command:
+
+<P>
+<TT>&#92;setdynamiccontents</TT><A NAME="4064"></A><TT>&#123;<I>id</I>&#125;&#123;<I>contents</I>&#125;</TT>
+<P>
+where <I>id</I> is the unique IDN associated with that
+dynamic frame, and <I>contents</I> is the contents of the
+dynamic frame. Alternatively, if you have assigned an IDL, 
+<I>label</I>, to the dynamic frame, you can use the starred 
+version:
+
+<P>
+<TT>&#92;setdynamiccontents*</TT><A NAME="4073"></A><TT>&#123;<I>label</I>&#125;&#123;<I>contents</I>&#125;</TT>
+<P>
+As with most LaTeX commands, you can't use verbatim text<A NAME="4081"></A> in
+<I>contents</I>.
+
+<P>
+As from version 1.09, the contents can also be set using the 
+<TT>dynamiccontents</TT><A NAME="4083"></A> environment:
+
+<P>
+<code>\begin{dynamiccontents}</code><TT>&#123;<I>id</I>&#125;</TT>
+<BR><I>contents</I>
+<BR><code>\end{dynamiccontents}</code>
+<P>
+or the <TT>dynamiccontents*</TT><A NAME="4088"></A> environment:
+
+<P>
+<code>\begin{dynamiccontents*}</code><TT>&#123;label&#125;</TT>
+<BR><I>contents</I>
+<BR><code>\end{dynamiccontents*}</code>
+<P>
+<A NAME="pg:verb"></A>Note that you can't use verbatim text<A NAME="4091"></A> within the 
+<TT>dynamiccontents</TT><A NAME="4093"></A> or <TT>dynamiccontents*</TT><A NAME="4096"></A> environments.
+
+<P>
+You can additionally append text to a dynamic frame using
+either:
+
+<P>
+<TT>&#92;appenddynamiccontents</TT><A NAME="4099"></A><TT>&#123;<I>id</I>&#125;&#123;<I>contents</I>&#125;</TT>
+<P>
+or:
+
+<P>
+<TT>&#92;appenddynamiccontents*</TT><A NAME="4108"></A><TT>&#123;<I>label</I>&#125;&#123;<I>contents</I>&#125;</TT>
+<P>
+
+<P>
+If <TT>&#92;chapter</TT><A NAME="4117"></A> is defined, you can make the chapter titles 
+appear in a dynamic frame using the command
+
+<P>
+<TT>&#92;dfchaphead</TT><A NAME="4122"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+<P>
+where <I>IDN</I> is the <A HREF=ffuserguide.html#gls:idn NAME="12537">IDN</A> of the dynamic frame. There is
+also a starred version of this command if you want to
+use the <A HREF=ffuserguide.html#gls:idl NAME="12544">IDL</A> instead of the IDN. For example, in 
+the PDF version of this document, I used the command:
+<PRE>
+\dfchaphead*{chaphead}
+</PRE>
+
+<P>
+The headers and footers can be turned into dynamic frames using the command
+
+<P>
+<TT>&#92;makedfheaderfooter</TT><A NAME="4129"></A>
+<P>
+This will create two dynamic frames with IDLs <TT>header</TT> and <TT>footer</TT>.  The page style will be used as 
+usual, but you can then move or resize the header and footer using
+<TT>&#92;setdynamicframe</TT><A NAME="4134"></A> (described <A HREF="ffuserguide.html#sec:modattr">later</A>).
+
+<P>
+In the body of <TT>dynamiccontents</TT><A NAME="4139"></A> or <TT>dynamiccontents*</TT><A NAME="4142"></A>, 
+you can move onto another dynamic frame using:
+
+<P>
+<TT>&#92;continueonframe</TT><A NAME="4145"></A><TT>[<I>continuation text</I>]&#123;id&#125;</TT>
+<P>
+If this command occurs within <TT>dynamiccontents*</TT><A NAME="4153"></A>, <I>id</I> 
+refers to the IDL of the new frame, otherwise it refers
+to the IDN of the new frame.
+The optional argument specifies some continuation text to place
+at the end of the first dynamic frame. For example, suppose I have
+defined two dynamic frames labelled "frame1" and "frame2", then
+<PRE>
+\begin{dynamiccontents*}{frame1}
+Some text in the first frame. (Let's
+assume this frame is somewhere on the
+left half of the page.)
+\continueonframe[Continued on the right]{frame2}
+This is some text in the second frame. (Let's
+assume this frame is somewhere on the
+right half of the same page.)
+\end{dynamiccontents*}
+</PRE>
+is equivalent to:
+<PRE>
+\begin{dynamiccontents*}{frame1}
+Some text in the first frame. (Let's
+assume this frame is somewhere on the
+left half of the page.)
+\ffcontinuedtextlayout{Continued on the right}
+\end{dynamiccontents*}
+\begin{dynamiccontents*}{frame2}\par\noindent
+This is some text in the second frame. (Let's
+assume this frame is somewhere on the
+right half of the same page.)
+\end{dynamiccontents*}
+</PRE>
+where
+
+<P>
+<TT>&#92;ffcontinuedtextlayout</TT><A NAME="4156"></A><TT>&#123;<I>text</I>&#125;</TT>
+<P>
+governs how the continuation text should be displayed. The font used
+to display the continuation text is given by 
+
+<P>
+<TT>&#92;ffcontinuedtextfont</TT><A NAME="4163"></A><TT>&#123;<I>text</I>&#125;</TT>
+<P>
+
+<P>
+Note that this assumes that it should appear that no paragraph
+break occurs in the transition between the two frames. If you 
+want a paragraph break you need to explicitly put one before
+and after <TT>&#92;continueonframe</TT><A NAME="4170"></A>. For example:
+<PRE>
+\begin{dynamiccontents*}{frame1}
+Some text in the first frame. (Let's
+assume this frame is somewhere on the
+left half of the page.)
+
+\continueonframe[Continued on the right]{frame2}
+
+This is some text in the second frame. (Let's
+assume this frame is somewhere on the
+right half of the same page.)
+\end{dynamiccontents*}
+</PRE>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0033100000000000000000">
+2.3.1 Important Notes</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Verbatim text<A NAME="960"></A> can't be used in a 
+<A HREF=ffuserguide.html#gls:dynamic NAME="12596">dynamic frame</A>. This includes
+the body of the <TT>dynamiccontents</TT><A NAME="4179"></A> and <TT>dynamiccontents*</TT><A NAME="4182"></A> 
+environments.
+
+<P>
+</LI>
+<LI><TT>&#92;continueonframe</TT><A NAME="4185"></A> can't be used in the
+argument of any of the commands that set the contents of a 
+dynamic frame, such as <TT>&#92;setdynamiccontents</TT><A NAME="4190"></A>.
+
+<P>
+</LI>
+<LI>Dynamic frames are painted on the page after all the
+static and flow <A HREF=ffuserguide.html#gls:frame NAME="12611">frames</A>. If the location of a dynamic frame overlaps the location of any static or flow frames, the contents
+of the dynamic frame will obscure the contents of the overlapping
+frames.
+</LI>
+</UL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0040000000000000000000"></A>
+<A NAME="sec:modattr"></A>
+<BR>
+3. Modifying Frame Attributes
+</H1>
+
+<P>
+
+<I>This chapter describes how to modify frame attributes,
+such as the size and location.</I>
+<P>
+
+<P>
+Once you have defined the <A HREF=ffuserguide.html#gls:flow NAME="12760">flow frames</A>, <A HREF=ffuserguide.html#gls:static NAME="12767">static frames</A> and
+<A HREF=ffuserguide.html#gls:dynamic NAME="12774">dynamic frames</A>, their attributes can be changed. The three types of
+<A HREF=ffuserguide.html#gls:frame NAME="12781">frame</A> mostly have the same set of attributes, but some are
+specific to a certain type.
+
+<P>
+Flow frame attributes are modified using 
+either the command:
+
+<P>
+<TT>&#92;setflowframe</TT><A NAME="4199"></A><TT>&#123;<I>idn list</I>&#125;&#123;<I>key-val list</I>&#125;</TT>
+<P>
+or the starred version:
+
+<P>
+<TT>&#92;setflowframe*</TT><A NAME="4208"></A><TT>&#123;<I>label list</I>&#125;&#123;<I>key-val list</I>&#125;</TT>
+<P>
+or the attributes for all flow frames can be set using:
+
+<P>
+<TT>&#92;setallflowframes</TT><A NAME="4217"></A><TT>&#123;<I>key-val list</I>&#125;</TT>
+<P>
+Static frame attributes are modified using either the command:
+
+<P>
+<TT>&#92;setstaticframe</TT><A NAME="4224"></A><TT>&#123;<I>idn list</I>&#125;&#123;<I>key-val list</I>&#125;</TT>
+<P>
+or the starred version:
+
+<P>
+<TT>&#92;setstaticframe*</TT><A NAME="4233"></A><TT>&#123;<I>label list</I>&#125;&#123;<I>key-val list</I>&#125;</TT>
+<P>
+or the attributes for all static frames can be set using:
+
+<P>
+<TT>&#92;setallstaticframes</TT><A NAME="4242"></A><TT>&#123;<I>key-val list</I>&#125;</TT>
+<P>
+Dynamic frame attributes are modified using either the command:
+
+<P>
+<TT>&#92;setdynamicframe</TT><A NAME="4249"></A><TT>&#123;<I>idn list</I>&#125;&#123;<I>key-val list</I>&#125;</TT>
+<P>
+or the starred version:
+
+<P>
+<TT>&#92;setdynamicframe*</TT><A NAME="4258"></A><TT>&#123;<I>label list</I>&#125;&#123;<I>key-val list</I>&#125;</TT>
+<P>
+or the attributes for all dynamic frames can be set using:
+
+<P>
+<TT>&#92;setalldynamicframes</TT><A NAME="4267"></A><TT>&#123;<I>key-val list</I>&#125;</TT>
+<P>
+
+<P>
+In each of the above, <I>idn list</I> can either be one of the
+keywords: <TT>all</TT>, <TT>odd</TT> or <TT>even</TT> (indicating
+all frames of that type, frames of that type whose 
+<A HREF=ffuserguide.html#gls:idn NAME="12820">IDN</A> is odd or frames of that type whose IDN is even) or it can be a comma-separated list of ID numbers, or 
+IDN ranges.
+
+<P>
+For the starred versions, <I>label list</I> should be
+a comma-separated list of <A HREF=ffuserguide.html#gls:idl NAME="12839">IDLs</A>. Note that you can't use the 
+above keywords or have ranges in <I>label list</I>.
+
+<P>
+The <I>key-val list</I> argument must be a comma-separated
+list of <I>key</I>=<I>value</I> pairs, indicating which
+attributes to modify. The available values are as follows:
+
+<P>
+<DL>
+<DT><STRONG>width<A NAME="4273"></A>=<I>length</I></STRONG></DT>
+<DD>The width of the frame.
+
+<P>
+</DD>
+<DT><STRONG>height<A NAME="4274"></A>=<I>length</I></STRONG></DT>
+<DD>The height of the frame.
+
+<P>
+</DD>
+<DT><STRONG>x<A NAME="4275"></A>=<I>length</I></STRONG></DT>
+<DD>The x-coordinate of the frame for all pages on which it is defined.
+
+<P>
+</DD>
+<DT><STRONG>y<A NAME="4276"></A>=<I>length</I></STRONG></DT>
+<DD>The y-coordinate of the frame for all pages on which it is defined.
+
+<P>
+</DD>
+<DT><STRONG>evenx<A NAME="4277"></A>=<I>length</I></STRONG></DT>
+<DD>The x-coordinate of the 
+frame for all even pages on which it is defined, but only if
+the document is a two-sided document.
+
+<P>
+For example, in the PDF version of
+this document, I used the commands
+<PRE>
+\setflowframe*{main}{evenx=0.4\textwidth}
+\setdynamicframe*{chaphead}{evenx=0pt}
+</PRE>
+to switch the positions of the flow frame and dynamic frame containing the document text and chapter headings, respectively,
+on even pages.
+
+<P>
+You can swap the odd and even values using the commands:
+
+<P>
+<TT>&#92;ffswapoddeven</TT><A NAME="4279"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+<P>
+(for flow frames)
+
+<P>
+<TT>&#92;sfswapoddeven</TT><A NAME="4286"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+<P>
+(for static frames) or 
+
+<P>
+<TT>&#92;dfswapoddeven</TT><A NAME="4293"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+<P>
+(for dynamic frames). These
+commands all have starred versions which take the frame's
+IDL instead of its IDN.
+
+<P>
+</DD>
+<DT><STRONG>eveny<A NAME="4299"></A>=<I>length</I></STRONG></DT>
+<DD>The y-coordinate of the 
+frame for all even pages on which it is defined, but only if
+the document is a two-sided document.
+
+<P>
+</DD>
+<DT><STRONG>oddx<A NAME="4300"></A>=<I>length</I></STRONG></DT>
+<DD>The x-coordinate of the 
+frame for all odd pages on which it is defined, if the
+document is two-sided.
+
+<P>
+</DD>
+<DT><STRONG>oddy<A NAME="4301"></A>=<I>length</I></STRONG></DT>
+<DD>The y-coordinate of the 
+frame for all odd pages on which it is defined,
+if the document is two-sided.
+
+<P>
+</DD>
+<DT><STRONG>valign<A NAME="4302"></A>=<I>pos</I></STRONG></DT>
+<DD>Change the vertical alignment
+of material inside a static or dynamic frame. The value <I>pos</I> 
+may be one of: <TT>c</TT>, <TT>t</TT> or <TT>b</TT>.
+The default for static frames is <TT>c</TT>, the default
+for dynamic frames is <TT>t</TT>.
+This key is not available for flow frames.
+
+<P>
+</DD>
+<DT><STRONG>label<A NAME="4303"></A>=<I>text</I></STRONG></DT>
+<DD>Assign an IDL to the frame.
+(If you do not specify a label when you first define a frame it will be given a label identical to its IDN.) This key is
+provided to allow the user to label frames that have been 
+generated by certain predefined layout commands described
+in <A HREF="ffuserguide.html#sec:layouts">Predefined 
+Layouts</A>.
+
+<P>
+</DD>
+<DT><STRONG>border<A NAME="4304"></A>=<I>style</I></STRONG></DT>
+<DD>The style of the border around the 
+frame, this can take the values: <TT>none</TT> (no border),
+<TT>plain</TT> (plain border) or the name of a LaTeX 
+<A HREF=ffuserguide.html#gls:fcmd NAME="12938">frame making command</A> without the preceding backslash. (I admit
+the notation is a little confusing, a frame making command is a command that places some kind of border around its 
+argument, such as <TT>&#92;fbox</TT><A NAME="4306"></A>, or if you are using the
+<TT>fancybox</TT><A NAME="4311"></A> package: <TT>&#92;doublebox</TT><A NAME="4314"></A>, <TT>&#92;ovalbox</TT><A NAME="4319"></A>,
+<TT>&#92;Ovalbox</TT><A NAME="4324"></A> and <TT>&#92;shadowbox</TT><A NAME="4329"></A>.) 
+The value <TT>fbox</TT> is equivalent to <TT>plain</TT>.
+
+<P>
+For example, to make the first static frame have an oval border:
+<PRE>
+\setstaticframe{1}{border=ovalbox}
+</PRE>
+Or you can define your own border:
+<PRE>
+\newcommand{\greenyellowbox}[1]{\fcolorbox{green}{yellow}{#1}}
+\setstaticframe{1}{border=greenyellowbox}
+</PRE>
+
+<P>
+This next example uses the <TT>tikz</TT><A NAME="4334"></A> package to define a fancy
+frame, so you need to use:
+<PRE>
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+</PRE>
+The border command is defined as follows:
+<PRE>
+\newlength\fancywidth
+\newlength\fancyheight
+\newlength\fancydepth
+
+\newcommand{\fancyborder}[1]{%
+\settowidth{\fancywidth}{#1}%
+\settoheight{\fancyheight}{#1}%
+\settodepth{\fancydepth}{#1}%
+\addtolength{\fancyheight}{\fancydepth}%
+\hspace{-\flowframesep}%
+\tikz[baseline=0pt]{%
+\draw[snake=bumps,raise snake=\flowframesep,
+      line width=\flowframerule]
+  (0pt,0pt) rectangle (\fancywidth,\fancyheight);
+}}
+</PRE>
+This makes a bumpy border, but it uses <TT>&#92;flowframesep</TT><A NAME="4337"></A> to 
+determine the gap between the border and the text and uses
+<TT>&#92;flowframerule</TT><A NAME="4342"></A> to set the line width. This ensures that
+the offset (see below) is correctly computed.
+
+<P>
+This new border can now be applied to a frame:
+<PRE>
+\setstaticframe{1}{border=fancyborder}
+</PRE>
+
+<P>
+</DD>
+<DT><STRONG>offset<A NAME="4346"></A>=<I>offset</I></STRONG></DT>
+<DD>The border offset, if it is a 
+user-defined border.  This is the distance from the outer
+edge of the left hand border to the left edge of the
+<A HREF=ffuserguide.html#gls:bbox NAME="12953">bounding box</A> of the text inside the border.  The <TT>flowfram</TT> 
+package is able to compute the border for the following
+known frame making commands: <TT>&#92;fbox</TT><A NAME="4348"></A>, <TT>&#92;ovalbox</TT><A NAME="4353"></A>,
+<TT>&#92;Ovalbox</TT><A NAME="4358"></A>, <TT>&#92;doublebox</TT><A NAME="4363"></A> and <TT>&#92;shadowbox</TT><A NAME="4368"></A>. 
+For all other borders, the offset is assumed to be
+<TT>-&#92;flowframesep-&#92;flowframerule</TT>.
+If you define your own frame making command, you may need to 
+specify the offset explicitly, or the flow/static/dynamic frames 
+may end up shifted to the right or left.
+
+<P>
+The above examples can compute their own offsets, however,
+if you were to do, for example:
+<PRE>
+\newcommand{\thickgreenyellowbox}[1]{%
+{\setlength{\fboxsep}{5pt}\setlength{\fboxrule}{6pt}%
+\fcolorbox{green}{yellow}{#1}}}
+</PRE>
+Then you would have to specify the offset.  In this example,
+the offset is -5pt-6pt=-11pt,
+so you would need to do:
+<PRE>
+\setstaticframe{1}{border=thickgreenyellowbox,offset=-11pt}
+</PRE>
+
+<P>
+</DD>
+<DT><STRONG>bordercolor<A NAME="4372"></A>=<I>colour</I></STRONG></DT>
+<DD>The colour of the border
+if you are using a standard frame making command.
+The colour can either be specified as, e.g. <TT>green</TT>,
+or including the colour model, e.g. <code>[rgb]{0,1,0}</code>.
+For example:
+<PRE>
+\setallflowframes{border=doublebox,bordercolor=[rgb]{1,0,0.5}}
+</PRE>
+
+<P>
+</DD>
+<DT><STRONG>textcolor<A NAME="4373"></A>=<I>colour</I></STRONG></DT>
+<DD>The text colour for that 
+frame. Again, the colour can either be specified as, 
+e.g. <TT>green</TT>, or including the colour model, 
+e.g. <code>[rgb]{0,1,0}</code>.
+
+<P>
+</DD>
+<DT><STRONG>backcolor<A NAME="4374"></A>=<I>colour</I></STRONG></DT>
+<DD>The background colour for 
+that frame. Again, the colour can either be specified as, 
+e.g. <TT>green</TT>, or including the colour model, 
+e.g. <code>[rgb]{0,1,0}</code>. Note that the background colour
+only extends as far as the bounding box, not the border.
+If you want it to extend as far as the border, you
+will need to define your own border type (see above).
+
+<P>
+</DD>
+<DT><STRONG>pages<A NAME="4375"></A>=<I>page list</I></STRONG></DT>
+<DD>The <A HREF=ffuserguide.html#gls:pglist NAME="12980">list of 
+pages</A> for which the frame should appear. This can either have 
+the values: <TT>all</TT>, <TT>even</TT>, <TT>odd</TT> or <TT>none</TT> 
+(the latter removes the frame from that point on--useful if you
+have multiple pages with the same number), or it can be a 
+comma-separated list of single pages, or 
+<A HREF=ffuserguide.html#gls:pgrange NAME="12995">page ranges</A>.
+For example:
+<PRE>
+\setdynamicframe{1}{pages=1,5,8-10}
+</PRE>
+
+<P>
+</DD>
+<DT><STRONG>margin<A NAME="4376"></A>=<I>side</I></STRONG></DT>
+<DD>The side of
+the flow frame that its corresponding margin should go on. This
+can take the values <TT>left</TT>, <TT>right</TT>, 
+<TT>inner</TT> or <TT>outer</TT>. This setting is only available
+for flow frames.
+
+<P>
+</DD>
+<DT><STRONG>clear<A NAME="4377"></A>=<I>boolean</I></STRONG></DT>
+<DD>If this value is set, the static or dynamic frame will be 
+cleared at the start of the
+next page, otherwise it will only be cleared on the next
+occurrence of <TT>&#92;setstaticcontents</TT><A NAME="4379"></A> or the 
+<TT>staticcontents</TT><A NAME="4384"></A> environment, or the 
+<TT>&#92;setdynamiccontents</TT><A NAME="4387"></A>, depending on the frame type.
+This value is not set by default. This setting is not 
+available for flow frames.
+
+<P>
+For example, in the PDF version of this document, I
+prevented the chapter heading reappearing on every page using 
+the command:
+<PRE>
+\setdynamicframe*{chaphead}{clear}
+</PRE>
+
+<P>
+If you want to put <TT>&#92;label</TT><A NAME="4392"></A> in a static or dynamic frame, you
+should use the clear<A NAME="4396"></A> key to prevent the label from being 
+multiply defined.
+
+<P>
+</DD>
+<DT><STRONG>style<A NAME="4397"></A>=<I>cmd</I></STRONG></DT>
+<DD>This should be
+the name of a command <I>without</I> the preceding backslash, 
+to be applied to the contents of the specified dynamic frame. 
+The command may either be a declaration, for example:
+<PRE>
+\setalldynamicframes{style=large}
+</PRE>
+which will set the contents of all the dynamic frames in a
+large font, or it can be a command that takes a single argument,
+for example:
+<PRE>
+\setalldynamicframes{style=textbf}
+</PRE>
+which will make the text for all the dynamic frames come out in 
+bold.  To unset a style, do <code>style=none</code>.
+This setting is only available for dynamic frames.
+
+<P>
+</DD>
+<DT><STRONG>angle<A NAME="4398"></A>=<I>n</I></STRONG></DT>
+<DD>Rotate the contents of the
+frame by <I>n</I> degrees (new to 
+version 1.02). Note that the <A HREF=ffuserguide.html#gls:bbox NAME="13034">bounding boxes</A> will not 
+appear rotated.
+
+<P>
+</DD>
+<DT><STRONG>shape<A NAME="4399"></A>=<I>shape command</I></STRONG></DT>
+<DD>Define a shape for
+the contents of a static frame or dynamic frame (new
+to version 1.03). If <I>shape command</I> is <TT>&#92;relax</TT><A NAME="4401"></A>, no
+paragraph shape will be applied. See 
+<A HREF="ffuserguide.html#sec:parshape">Non-Rectangular 
+Frames</A> for further details.
+</DD>
+</DL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0041000000000000000000"></A>
+<A NAME="sec:parshape"></A>
+<BR>
+3.1 Non-Rectangular Frames
+</H1>
+
+<P>
+As from version 1.03, it is now possible to specify 
+non-rectangular <A HREF=ffuserguide.html#gls:static NAME="13106">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="13109">dynamic</A> frames (but not <A HREF=ffuserguide.html#gls:flow NAME="13116">flow frames</A>).  Note 
+that the
+<A HREF=ffuserguide.html#gls:bbox NAME="13123">bounding box</A> will still appear as a rectangle despite the
+<A HREF=ffuserguide.html#gls:frame NAME="13130">frame's</A> shape setting. You may use either TeX's 
+<TT>&#92;parshape</TT><A NAME="4414"></A> command, or the <TT>&#92;shapepar</TT><A NAME="4419"></A>
+command defined in Donald&nbsp;Arseneau's <TT>shapepar</TT><A NAME="4424"></A> 
+package (if using <TT>&#92;shapepar</TT><A NAME="4427"></A>, remember to include
+the <TT>shapepar</TT><A NAME="4432"></A> package.)
+
+<P>
+Note that it is better to use <TT>&#92;parshape</TT><A NAME="4435"></A> instead
+of <TT>&#92;shapepar</TT><A NAME="4440"></A> as the latter is more restrictive and
+requires more processing.  However, <TT>&#92;shapepar</TT><A NAME="4445"></A> provides
+greater flexibility in the type of shape that can be used.
+<DL>
+<DT><STRONG><TT>&#92;parshape</TT><A NAME="4450"></A></STRONG></DT>
+<DD>With <TT>&#92;parshape</TT><A NAME="4455"></A> you can not have cut-outs in the middle, 
+top or bottom of a frame, however it is possible to have cut-outs 
+in the left or right side of the frame. When used with the 
+shape<A NAME="4459"></A> key for static or dynamic frames, the effects of 
+<TT>&#92;par</TT><A NAME="4461"></A> and the sectioning commands are modified to allow 
+the paragraph shape to extend beyond a single paragraph, and
+to allow sectioning commands (but not <TT>&#92;chapter</TT><A NAME="4466"></A> 
+or <TT>&#92;part</TT><A NAME="4471"></A>).
+
+<P>
+</DD>
+<DT><STRONG><TT>&#92;shapepar</TT><A NAME="4476"></A></STRONG></DT>
+<DD>With <TT>&#92;shapepar</TT><A NAME="4481"></A> you may
+have cut-outs, but you may not have any sectioning commands, 
+paragraph breaks, vertical spacing or mathematics. You can
+simulate a paragraph break using <TT>&#92;simpar</TT><A NAME="4486"></A>, but this
+is not recommended. The size of the shape depends on the
+amount of text, so the shape will expand or contract as you
+add or delete text. See the <TT>shapepar</TT><A NAME="4491"></A> documentation for
+more details.
+</DD>
+</DL>
+
+<P>
+To restore a frame to its default rectangular setting use 
+shape<A NAME="4493"></A>=<TT>&#92;relax</TT><A NAME="4495"></A>.
+
+<P>
+For those unfamiliar with TeX's <TT>&#92;parshape</TT><A NAME="4500"></A> command,
+the syntax is as follows:
+<BR>
+<BR><TT>&#92;parshape</TT><A NAME="4505"></A>=<I>n</I> <I>i<SUB>1</SUB></I> <I>l<SUB>1</SUB></I> 
+<I>i<SUB>2</SUB></I> <I>l<SUB>2</SUB></I> ... 
+<I>i<SUB>n</SUB></I> <I>l<SUB>n</SUB></I>
+<BR>
+<BR>
+where <I>n</I> is the number of (<I>i<SUB>j</SUB></I> <I>l<SUB>j</SUB></I>) pairs and
+<I>i<SUB>j</SUB></I> specifies the left 
+indentation for the jth line and 
+<I>l<SUB>j</SUB></I> specifies the length of 
+the jth line.
+
+<P>
+For example, to create a 
+zigzag shaped static frame (whose IDN is <TT>shapedt</TT>):
+
+<PRE>
+\setstaticframe*{shapedt}{shape={\parshape=20 
+0.6\linewidth 0.4\linewidth 0.5\linewidth 0.4\linewidth
+0.4\linewidth 0.4\linewidth 0.3\linewidth 0.4\linewidth
+0.2\linewidth 0.4\linewidth 0.1\linewidth 0.4\linewidth
+0pt 0.4\linewidth 0.1\linewidth 0.4\linewidth
+0.2\linewidth 0.4\linewidth 0.3\linewidth 0.4\linewidth
+0.4\linewidth 0.4\linewidth 0.5\linewidth 0.4\linewidth
+0.6\linewidth 0.4\linewidth 0.5\linewidth 0.4\linewidth
+0.4\linewidth 0.4\linewidth 0.3\linewidth 0.4\linewidth
+0.2\linewidth 0.4\linewidth 0.1\linewidth 0.4\linewidth
+0pt 0.4\linewidth 0.1\linewidth 0.4\linewidth
+}}
+</PRE>
+
+<P>
+
+<P>
+The syntax for <TT>&#92;shapepar</TT><A NAME="4530"></A> is more complicated, see
+the <TT>shapepar</TT><A NAME="4535"></A> documentation for more details. In general:
+<BR>
+<BR><TT>&#92;shapepar</TT><A NAME="4538"></A>{<I>shape specs</I>}
+<BR>
+<BR>
+The <TT>shapepar</TT><A NAME="4543"></A> package has four predefined shapes:
+<TT>&#92;squareshape</TT><A NAME="4546"></A>, <TT>&#92;diamondshape</TT><A NAME="4551"></A>, 
+<TT>&#92;heartshape</TT><A NAME="4556"></A> and <TT>&#92;nutshape</TT><A NAME="4561"></A>. 
+
+<P>
+For example, to assign
+a heart shape to the static frame whose IDL is <TT>shapedb</TT>:
+<PRE>
+\setstaticframe*{shapedb}{shape={\shapepar\heartshape}}
+</PRE>
+To reset the frame back to its original rectangular shape
+do:
+<PRE>
+\setstaticframe*{shapedb}{shape=\relax}
+</PRE>
+
+<P>
+
+
+<P>
+The <TT>flowfram</TT> package currently does not support any other
+paragraph shape making commands. Any other commands would
+have to be used explicitly within the contents of the frame.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0050000000000000000000">
+4. Locations and Dimensions</A>
+</H1>
+
+<P>
+
+<I>This chapter describes some of the commands provided to
+determine the locations and dimensions of frames.</I>
+<P>
+
+<P>
+This chapter describes some of the commands available that can
+be used to determine the locations and dimensions of <A HREF=ffuserguide.html#gls:frame NAME="13156">frames</A>.
+See the accompanying document <TT>flowfram.pdf</TT> for more details of 
+these commands or for other commands not listed here.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0051000000000000000000"></A>
+<A NAME="sec:typeblockloc"></A>
+<BR>
+4.1 Determining the Location of the Typeblock
+</H1>
+
+<P>
+As mentioned earlier, when you create new <A HREF=ffuserguide.html#gls:frame NAME="13188">frames</A>,
+you must specify their location relative to the <A HREF=ffuserguide.html#gls:typeblock NAME="13195">typeblock</A>, but
+what if you want to position a frame a set distance from the
+edge of the paper? The <TT>flowfram</TT> package provides the following
+commands that compute the distance from the typeblock to the
+paper boundary:
+
+<P>
+
+<P>
+<TT>&#92;computeleftedgeodd</TT><A NAME="4592"></A><TT>&#123;<I>length</I>&#125;</TT>
+<P>
+This computes the position of the left edge of the (odd) page, relative 
+to the left side of the typeblock, and stores the result in 
+<I>length</I>.
+
+<P>
+
+<P>
+<TT>&#92;computeleftedgeeven</TT><A NAME="4599"></A><TT>&#123;<I>length</I>&#125;</TT>
+<P>
+As above, but for even pages.
+
+<P>
+
+<P>
+<TT>&#92;computetopedge</TT><A NAME="4606"></A><TT>&#123;<I>length</I>&#125;</TT>
+<P>
+This computes the top edge of the page, relative to the bottom of the
+typeblock, and stores the result in <I>length</I>.
+
+<P>
+
+<P>
+<TT>&#92;computebottomedge</TT><A NAME="4613"></A><TT>&#123;<I>length</I>&#125;</TT>
+<P>
+This computes the bottom edge of the page, relative to the bottom of the
+typeblock, and stores the result in <I>length</I>.
+
+<P>
+
+<P>
+<TT>&#92;computerightedgeodd</TT><A NAME="4620"></A><TT>&#123;<I>length</I>&#125;</TT>
+<P>
+This computes the position of the right edge of the (odd) page, 
+relative to the left side of the typeblock, and store the result 
+in <I>length</I>.
+
+<P>
+
+<P>
+<TT>&#92;computerightedgeeven</TT><A NAME="4627"></A><TT>&#123;<I>length</I>&#125;</TT>
+<P>
+As above, but for even pages.
+
+<P>
+Note that in all cases <I>length</I> must be a LaTeX length
+command.
+
+<P>
+For example, if you want to create a frame whose bottom
+left corner is one inch from the left edge of the page
+and half an inch from the bottom edge of the page (this
+assumes odd and even pages have the same margins):
+<PRE>
+% define two new lengths to represent the x and y coords
+\newlength{\myX}
+\newlength{\myY}
+% compute the distance from the typeblock to the paper edge
+\computeleftedgeodd{\myX}
+\computebottomedge{\myY}
+% Add the absolute co-ordinates to get co-ordinates
+% relative to the typeblock
+\addtolength{\myX}{1in}
+\addtolength{\myY}{0.5in}
+</PRE>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0052000000000000000000">
+4.2 Determining the Dimensions and Locations of Frames</A>
+</H1>
+
+<P>
+It is possible to determine the dimensions and locations
+of a <A HREF=ffuserguide.html#gls:frame NAME="13239">frame</A> using one of the following commands:
+
+<P>
+
+<UL>
+<LI><TT>&#92;getstaticbounds</TT><A NAME="4638"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+</LI>
+<LI><TT>&#92;getstaticbounds*</TT><A NAME="4645"></A><TT>&#123;<I>IDL</I>&#125;</TT>
+</LI>
+<LI><TT>&#92;getflowbounds</TT><A NAME="4652"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+</LI>
+<LI><TT>&#92;getflowbounds*</TT><A NAME="4659"></A><TT>&#123;<I>IDL</I>&#125;</TT>
+</LI>
+<LI><TT>&#92;getdynamicbounds</TT><A NAME="4666"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+</LI>
+<LI><TT>&#92;getdynamicbounds*</TT><A NAME="4673"></A><TT>&#123;<I>IDL</I>&#125;</TT>
+</LI>
+</UL>
+
+<P>
+For each command, the starred version takes an <A HREF=ffuserguide.html#gls:idl NAME="13246">IDL</A> as the
+argument, and the unstarred version takes an <A HREF=ffuserguide.html#gls:idn NAME="13253">IDN</A> as the
+argument.  Each command stores the relevant information in the
+lengths <TT>&#92;ffareawidth</TT><A NAME="4680"></A>, <TT>&#92;ffareaheight</TT><A NAME="4685"></A>,
+<TT>&#92;ffareax</TT><A NAME="4690"></A> and <TT>&#92;ffareay</TT><A NAME="4695"></A>.
+
+<P>
+For other related commands, see the section "Determining Dimensions
+and Locations" in the accompanying document 
+<TT>flowfram.pdf</TT>.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0053000000000000000000">
+4.3 Relative Locations</A>
+</H1>
+
+<P>
+To print the relative location of one <A HREF=ffuserguide.html#gls:frame NAME="13313">frame</A> from another do:
+
+<P>
+<TT>&#92;relativeframelocation</TT><A NAME="4704"></A><TT>&#123;<I>type1</I>&#125;&#123;<I>idn1</I>&#125;&#123;<I>type2</I>&#125;&#123;<I>idn2</I>&#125;</TT>
+<P>
+where <I>type1</I> and <I>idn1</I> indicate the type and <A HREF=ffuserguide.html#gls:idn NAME="13320">IDN</A> of
+the first frame, and <I>type2</I> and <I>idn2</I> indicate the type
+and <A HREF=ffuserguide.html#gls:idn NAME="13327">IDN</A> of the second frame. There is also a starred version:
+
+<P>
+<TT>&#92;relativeframelocation*</TT><A NAME="4717"></A><TT>&#123;<I>type1</I>&#125;&#123;<I>idl1</I>&#125;&#123;<I>type2</I>&#125;&#123;<I>idll</I>&#125;</TT>
+<P>
+where <I>idl1</I> and <I>idl2</I> indicate the <A HREF=ffuserguide.html#gls:idl NAME="13334">IDL</A> of the
+first and second frames, respectively. Both the above commands will
+print one of the following:
+
+<P>
+
+<UL>
+<LI><TT>&#92;FFaboveleft</TT><A NAME="4730"></A> if the first frame is above left of the
+second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFaboveright</TT><A NAME="4735"></A> if the first frame is above right of the
+second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFabove</TT><A NAME="4740"></A> if the first frame is above the second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFbelowleft</TT><A NAME="4745"></A> if the first frame is below left of the
+second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFbelowright</TT><A NAME="4750"></A> if the first frame is below right of the
+second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFbelow</TT><A NAME="4755"></A> if the first frame is below the second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFleft</TT><A NAME="4760"></A> if the first frame is to the left of the 
+second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFright</TT><A NAME="4765"></A> if the first frame is to the right of the
+second frame.
+
+<P>
+</LI>
+<LI><TT>&#92;FFoverlap</TT><A NAME="4770"></A> if both frames overlap.
+</LI>
+</UL>
+
+<P>
+A frame is considered to be above another frame if the bottom edge
+of the first frame is higher than the top edge of the second frame. 
+
+<P>
+A frame is considered to be below another frame if the top edge
+of the first frame is lower than the bottom edge of the second frame.
+
+<P>
+A frame is considered to be to the left of another frame if the right 
+edge of the first frame is to the left of the left edge of the second
+frame.
+
+<P>
+A frame is considered to be to the right of another frame if the left
+edge of the first frame is to the right of the right edge of the
+second frame.
+
+<P>
+Note that the relative locations are taken for the current page,
+regardless of whether either of the two frames are displayed on that
+page. If the current page is odd, then the frame settings for odd pages
+will be compared, otherwise the frame settings for even pages will
+be compared. However remember that the first paragraph of each page
+retains the settings in place at the start of the paragraph, so if the
+frames have different locations for odd and even pages, then
+<TT>&#92;relativeframelocation</TT><A NAME="4775"></A> may use the wrong page settings if it
+is used at the start of the page.
+
+<P>
+For example, the PDF version of this document defined a 
+<A HREF=ffuserguide.html#gls:flow NAME="13341">flow frame</A> labelled <TT>main</TT>  and a 
+<A HREF=ffuserguide.html#gls:dynamic NAME="13348">dynamic frame</A> labelled <TT>chaphead</TT> which is
+used to display the chapter headings. The following code
+<PRE>
+The dynamic frame is 
+\relativeframelocation*{dynamic}{chaphead}{flow}{main}
+of the flow frame.
+</PRE>
+produces:
+The dynamic frame is 
+on
+the left of the flow frame.
+
+<P>
+There are some short cut commands for frames of the
+same type:
+
+<P>
+<TT>&#92;reldynamicloc</TT><A NAME="4780"></A><TT>&#123;<I>idn1</I>&#125;&#123;<I>idn2</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<BR><TT>&#92;relativeframelocation</TT><A NAME="4789"></A><TT>&#123;dynamic&#125;&#123;<I>idn1</I>&#125;&#123;dynamic&#125;&#123;<I>idn2</I>&#125;</TT>
+
+<P>
+<TT>&#92;relstaticloc</TT><A NAME="4800"></A><TT>&#123;<I>idn1</I>&#125;&#123;<I>idn2</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<BR><TT>&#92;relativeframelocation</TT><A NAME="4809"></A><TT>&#123;static&#125;&#123;<I>idn1</I>&#125;&#123;static&#125;&#123;<I>idn2</I>&#125;</TT>
+
+<P>
+<TT>&#92;relflowloc</TT><A NAME="4820"></A><TT>&#123;<I>idn1</I>&#125;&#123;<I>idn2</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<BR><TT>&#92;relativeframelocation</TT><A NAME="4829"></A><TT>&#123;flow&#125;&#123;<I>idn1</I>&#125;&#123;flow&#125;&#123;<I>idn2</I>&#125;</TT>
+<BR>
+<BR>
+Each of the above commands also has a starred version that uses the
+<A HREF=ffuserguide.html#gls:idl NAME="13359">IDL</A> instead of the <A HREF=ffuserguide.html#gls:idn NAME="13366">IDN</A>.
+
+<P>
+These commands may be used in the optional argument of 
+<TT>&#92;continueonframe</TT><A NAME="4840"></A> for frames that are on the same page.
+For example:
+<PRE>
+\begin{dynamiccontents}{1}
+Some text in the first dynamic frame that goes on for 
+quite a bit longer than this example.
+\continueonframe[continued \reldynamicloc{2}{1}]{2}
+This text is in the second dynamic frame which is 
+somewhere on the same page.
+\end{dynamiccontents}
+</PRE>
+
+<P>
+For additional commands that determine the relative location of one
+frame from another, see the section "Determining the relative 
+location of one frame from another" in the accompanying document 
+<TT>flowfram.pdf</TT>.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0060000000000000000000"></A>
+<A NAME="sec:layouts"></A>
+<BR>
+5. Predefined Layouts
+</H1>
+
+<P>
+
+<I>This chapter describes commands that create frames 
+arranged in a predefined layout.</I>
+<P>
+
+<P>
+The <TT>flowfram</TT> package has a number of commands which 
+create <A HREF=ffuserguide.html#gls:frame NAME="13378">frames</A> in a predefined layout. These commands
+may only be used in the preamble.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0061000000000000000000">
+5.1 Column Styles</A>
+</H1>
+
+<P>
+The standard LaTeX commands <TT>&#92;onecolumn</TT><A NAME="4853"></A> and
+<TT>&#92;twocolumn</TT><A NAME="4858"></A> are redefined to create one or two
+<A HREF=ffuserguide.html#gls:flow NAME="13426">flow frames</A> that fill the entire <A HREF=ffuserguide.html#gls:typeblock NAME="13433">typeblock</A> separated
+from each other (in the case of <TT>&#92;twocolumn</TT><A NAME="4863"></A>) by a
+gap of width <TT>&#92;columnsep</TT><A NAME="4868"></A>. The height of these
+flow frames may not be exactly as high as the typeblock,
+as their height is adjusted to make them an integer
+multiple of <TT>&#92;baselineskip</TT><A NAME="4873"></A>. You can switch off this
+automatic adjustment using the command:
+
+<P>
+<TT>&#92;ffvadjustfalse</TT><A NAME="4878"></A>
+<P>
+
+<P>
+The <TT>&#92;onecolumn</TT><A NAME="4883"></A> and <TT>&#92;twocolumn</TT><A NAME="4888"></A> commands
+also take an optional argument which is the <A HREF=ffuserguide.html#gls:pglist NAME="13448">page list</A> for which those flow frames are defined. In addition
+to <TT>&#92;onecolumn</TT><A NAME="4893"></A> and <TT>&#92;twocolumn</TT><A NAME="4898"></A>, the 
+following commands are also defined:
+
+<P>
+
+<P>
+<TT>&#92;Ncolumn</TT><A NAME="4903"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;</TT>
+<P>
+This creates <I>n</I> column flow frames each separated by a 
+distance of <TT>&#92;columnsep</TT><A NAME="4912"></A>.
+
+<P>
+
+<P>
+<TT>&#92;onecolumninarea</TT><A NAME="4917"></A><TT>[<I>pages</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates a single flow frame to fill the given area,
+adjusting the height so that it is an integer multiple of
+<TT>&#92;baselineskip</TT><A NAME="4932"></A>.
+
+<P>
+
+<P>
+<TT>&#92;twocolumninarea</TT><A NAME="4937"></A><TT>[<I>pages</I>]&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates two column flow frames separated by a distance
+of <TT>&#92;columnsep</TT><A NAME="4952"></A> filling the entire area specified, again
+adjusting the height so that it is an integer multiple of
+<TT>&#92;baselineskip</TT><A NAME="4957"></A>. The columns are separated by a gap of
+<TT>&#92;columnsep</TT><A NAME="4962"></A>.
+
+<P>
+
+<P>
+<TT>&#92;Ncolumninarea</TT><A NAME="4967"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is a more general form of <TT>&#92;twocolumninarea</TT><A NAME="4984"></A> making 
+<I>n</I> flow frames instead of two.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0062000000000000000000">
+5.2 Column Styles with an Additional Frame</A>
+</H1>
+
+<P>
+As well as the column-style <A HREF=ffuserguide.html#gls:flow NAME="14060">flow frames</A> defined 
+above, it is also possible to define
+<I>n</I> columns with an additional <A HREF=ffuserguide.html#gls:frame NAME="14067">frame</A> spanning either 
+above or below them. There will be a vertical gap of 
+approximately<A NAME="tex2html92"
+  HREF="#foot3036"><SUP>5.1</SUP></A> 
+<TT>&#92;vcolumnsep</TT><A NAME="4998"></A> between the columns
+and the extra frame. In each of the following definitions,
+the argument <I>pages</I> is the <A HREF=ffuserguide.html#gls:pglist NAME="14074">page list</A> for which
+the frames are defined, <I>n</I> is the number of
+columns required, <I>type</I> is the type of frame to go
+above or below the columns (this may be one of: <TT>flow</TT>,
+<TT>static</TT> or <TT>dynamic</TT>). The area in which the
+new frames should fill is defined by <I>width</I>, <I>height</I> 
+(the width and height of the area) and <I>x</I>, <I>y</I> 
+(the position of the bottom left hand corner of the area
+relative to the bottom left hand corner of the <A HREF=ffuserguide.html#gls:typeblock NAME="14085">typeblock</A>.)
+
+<P>
+The height of the additional frame at the top or bottom of
+the columns is given by <I>H</I>.
+
+<P>
+
+<P>
+<TT>&#92;onecolumntopinarea</TT><A NAME="5003"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates one flow frame with a <I>type</I> frame above it, filling
+the area specified.
+
+<P>
+
+<P>
+<TT>&#92;twocolumntopinarea</TT><A NAME="5022"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates two column-style flow frames with a <I>type</I> frame 
+above them, filling the area specified.
+
+<P>
+
+<P>
+<TT>&#92;Ncolumntopinarea</TT><A NAME="5041"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates <I>n</I> column-style flow frames with a <I>type</I>  
+frame above them, filling the area specified.
+
+<P>
+
+<P>
+<TT>&#92;onecolumnbottominarea</TT><A NAME="5062"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates one flow frame with a <I>type</I> frame underneath it, 
+filling the area specified.
+
+<P>
+
+<P>
+<TT>&#92;twocolumnbottominarea</TT><A NAME="5081"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates two column-style flow frames with a <I>type</I> frame 
+below them, filling the area specified.
+
+<P>
+
+<P>
+<TT>&#92;Ncolumnbottominarea</TT><A NAME="5100"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This creates <I>n</I> column-style flow frames with a <I>type</I> 
+frame below them, filling the area specified.
+
+<P>
+The following commands are special cases of the above:
+
+<P>
+
+<P>
+<TT>&#92;onecolumnStopinarea</TT><A NAME="5121"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;onecolumntopinarea</TT><A NAME="5138"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumnDtopinarea</TT><A NAME="5156"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;onecolumntopinarea</TT><A NAME="5173"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumntop</TT><A NAME="5191"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+As <TT>&#92;onecolumntopinarea</TT><A NAME="5202"></A> where the area is the entire
+typeblock.
+
+<P>
+
+<P>
+<TT>&#92;onecolumnStop</TT><A NAME="5207"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to: 
+<TT>&#92;onecolumntop</TT><A NAME="5216"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumnDtop</TT><A NAME="5226"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to: 
+<TT>&#92;onecolumntop</TT><A NAME="5235"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnStopinarea</TT><A NAME="5245"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;twocolumntopinarea</TT><A NAME="5262"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnDtopinarea</TT><A NAME="5280"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;twocolumntopinarea</TT><A NAME="5297"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumntop</TT><A NAME="5315"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+As <TT>&#92;twocolumntopinarea</TT><A NAME="5326"></A> where the area is the entire
+typeblock.
+
+<P>
+
+<P>
+<TT>&#92;twocolumnStop</TT><A NAME="5331"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;twocolumntop</TT><A NAME="5340"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnDtop</TT><A NAME="5350"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;twocolumntop</TT><A NAME="5359"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;NcolumnStopinarea</TT><A NAME="5369"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;Ncolumntopinarea</TT><A NAME="5388"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;NcolumnDtopinarea</TT><A NAME="5408"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;Ncolumntopinarea</TT><A NAME="5427"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;Ncolumntop</TT><A NAME="5447"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+As <TT>&#92;Ncolumntopinarea</TT><A NAME="5460"></A> where the area is the entire
+typeblock.
+
+<P>
+
+<P>
+<TT>&#92;NcolumnStop</TT><A NAME="5465"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;Ncolumntop</TT><A NAME="5476"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;NcolumnDtop</TT><A NAME="5488"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;Ncolumntop</TT><A NAME="5499"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumnSbottominarea</TT><A NAME="5511"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;onecolumnbottominarea</TT><A NAME="5528"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumnDbottominarea</TT><A NAME="5546"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;onecolumnbottominarea</TT><A NAME="5563"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumnbottom</TT><A NAME="5581"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+As <TT>&#92;onecolumnbottominarea</TT><A NAME="5592"></A> where the area is the entire
+typeblock.
+
+<P>
+
+<P>
+<TT>&#92;onecolumnSbottom</TT><A NAME="5597"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;onecolumnbottom</TT><A NAME="5606"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;onecolumnDbottom</TT><A NAME="5616"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;onecolumnbottom</TT><A NAME="5625"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnSbottominarea</TT><A NAME="5635"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;twocolumnbottominarea</TT><A NAME="5652"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnDbottominarea</TT><A NAME="5670"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;twocolumnbottominarea</TT><A NAME="5687"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnbottom</TT><A NAME="5705"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+As <TT>&#92;twocolumnbottominarea</TT><A NAME="5716"></A> where the area is the entire
+typeblock.
+
+<P>
+
+<P>
+<TT>&#92;twocolumnSbottom</TT><A NAME="5721"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;twocolumnbottom</TT><A NAME="5730"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;twocolumnDbottom</TT><A NAME="5740"></A><TT>[<I>pages</I>]&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;twocolumnbottom</TT><A NAME="5749"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;NcolumnSbottominarea</TT><A NAME="5759"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;Ncolumnbottominarea</TT><A NAME="5778"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;NcolumnDbottominarea</TT><A NAME="5798"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+<P>
+This is equivalent to:
+<BR>
+<TT>&#92;Ncolumnbottominarea</TT><A NAME="5817"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;&#123;<I>width</I>&#125;&#123;<I>height</I>&#125;&#123;<I>x</I>&#125;&#123;<I>y</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;Ncolumnbottom</TT><A NAME="5837"></A><TT>[<I>pages</I>]&#123;<I>type</I>&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+As <TT>&#92;Ncolumnbottominarea</TT><A NAME="5850"></A> where the area is the entire
+typeblock.
+
+<P>
+
+<P>
+<TT>&#92;NcolumnSbottom</TT><A NAME="5855"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;Ncolumnbottom</TT><A NAME="5866"></A><TT>[<I>pages</I>]&#123;static&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+
+<P>
+<TT>&#92;NcolumnDbottom</TT><A NAME="5878"></A><TT>[<I>pages</I>]&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+<P>
+This is equivalent to:
+<TT>&#92;Ncolumnbottom</TT><A NAME="5889"></A><TT>[<I>pages</I>]&#123;dynamic&#125;&#123;<I>n</I>&#125;&#123;<I>H</I>&#125;</TT>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0063000000000000000000">
+5.3 Backdrop Effects</A>
+</H1>
+
+<P>
+<A HREF=ffuserguide.html#gls:static NAME="14175">Static frames</A> can be used to produce a 
+backdrop. There are a number of commands which create
+static frames that can be used as a backdrop. In the
+following definitions, <I>pages</I> is the <A HREF=ffuserguide.html#gls:pglist NAME="14186">page list</A> for
+which those static frames are defined (<TT>all</TT> is the default). 
+For the vertical strips:
+<I>xoffset</I> is the amount by which the frames should be
+shifted horizontally (0pt by default), <I>W1</I> is the width of the first frame,
+with colour specified by <I>C1</I> and <A HREF=ffuserguide.html#gls:idl NAME="14197">IDL</A> <I>L1</I>,
+and so on up to <I>Wn</I> the width of the <I>n</I>th frame
+with colour specified by <I>Cn</I> and IDL <I>Ln</I>.
+For the vertical strips:
+<I>yoffset</I> is the amount by which the frames should be
+shifted vertically (0pt by default), <I>H1</I> is the height of the first frame,
+with colour specified by <I>C1</I> and IDL <I>L1</I>,
+and so on up to <I>Hn</I> the height of the <I>n</I>th frame
+with colour specified by <I>Cn</I> and IDL <I>Ln</I>.
+
+<P>
+<B>NOTE:</B> unlike the earlier commands, these commands
+are all relative to the actual page, not the <A HREF=ffuserguide.html#gls:typeblock NAME="14216">typeblock</A>.
+So an x offset of 0pt indicates the first vertical 
+frame is flush with the left hand edge of the page, and a 
+y offset of 0pt indicates the first horizontal frame 
+is flush with the bottom edge of the page. This is because backdrops 
+tend to span the entire page, not just the typeblock.
+
+<P>
+The colour specification must be completely enclosed in braces,
+for example <code>{[rgb]{1,0,1}}</code> not <code>[rgb]{1,0,1}</code>.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0063100000000000000000">
+5.3.1 Vertical stripe effects</A>
+</H2>
+
+<P>
+
+<P>
+<TT>&#92;vtwotone</TT><A NAME="5909"></A><TT>[<I>pages</I>][<I>xoffset</I>]&#123;<I>W1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;&#123;<I>W2</I>&#125;&#123;<I>C2</I>&#125;&#123;<I>L2</I>&#125;</TT>
+<P>
+Defines two <A HREF=ffuserguide.html#gls:static NAME="14348">static frames</A> to create a two tone vertical strip effect. 
+(This command was
+used to create the coloured background on the title page
+of the PDF version of this document.)
+
+<P>
+
+<P>
+<TT>&#92;vNtone</TT><A NAME="5930"></A><TT>[<I>pages</I>][<I>xoffset</I>]&#123;<I>n</I>&#125;&#123;<I>W1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;</TT>...<TT>&#123;<I>Wn</I>&#125;&#123;<I>Cn</I>&#125;&#123;<I>Ln</I>&#125;</TT>
+<P>
+This is similar to <TT>&#92;vtwotone</TT><A NAME="5953"></A> but with <I>n</I> static frames instead of two.
+
+<P>
+
+<P>
+<TT>&#92;vtwotonebottom</TT><A NAME="5958"></A><TT>[<I>pages</I>][<I>xoffset</I>]&#123;<I>H</I>&#125;&#123;<I>W1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;&#123;<I>W2</I>&#125;&#123;<I>C2</I>&#125;&#123;<I>L2</I>&#125;</TT>
+<P>
+This is similar to <TT>&#92;vtwotone</TT><A NAME="5981"></A> but the static frames are only
+<I>H</I> high, instead of the entire height of the page.
+The frames are aligned along the bottom edge of the page.
+
+<P>
+
+<P>
+<TT>&#92;vtwotonetop</TT><A NAME="5986"></A><TT>[<I>pages</I>][<I>xoffset</I>]&#123;<I>H</I>&#125;&#123;<I>W1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;&#123;<I>W2</I>&#125;&#123;<I>C2</I>&#125;</TT>
+<BR><TT>&#123;<I>L2</I>&#125;</TT>
+<P>
+This is similar to <TT>&#92;vtwotone</TT><A NAME="6009"></A> but the static frames are only
+<I>H</I> high, instead of the entire height of the page.
+The frames are aligned along the top edge of the page.
+(This command was used to create the border effect along
+the top of every page in the PDF version of this document. 
+Two <TT>&#92;vtwotonetop</TT><A NAME="6014"></A>
+commands were used, one for the even pages, and the other
+for the odd pages.)
+
+<P>
+
+<P>
+<TT>&#92;vNtonebottom</TT><A NAME="6019"></A><TT>[<I>pages</I>][<I>xoffset</I>]&#123;<I>H</I>&#125;&#123;<I>n</I>&#125;&#123;<I>W1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;</TT>...
+<TT>&#123;<I>Wn</I>&#125;&#123;<I>Cn</I>&#125;&#123;<I>Ln</I>&#125;</TT>
+<P>
+This is a general version of <TT>&#92;vtwotonebottom</TT><A NAME="6044"></A> for
+<I>n</I> frames instead of two.
+
+<P>
+
+<P>
+<TT>&#92;vNtonetop</TT><A NAME="6049"></A><TT>[<I>pages</I>][<I>xoffset</I>]&#123;<I>H</I>&#125;&#123;<I>n</I>&#125;&#123;<I>W1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;</TT>...
+<TT>&#123;<I>Wn</I>&#125;&#123;<I>Cn</I>&#125;&#123;<I>Ln</I>&#125;</TT>
+<P>
+This is a general version of <TT>&#92;vtwotonetop</TT><A NAME="6074"></A> for
+<I>n</I> frames instead of two.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0063200000000000000000">
+5.3.2 Horizontal stripe effect</A>
+</H2>
+
+<P>
+
+<P>
+<TT>&#92;htwotone</TT><A NAME="6083"></A><TT>[<I>pages</I>][<I>yoffset</I>]&#123;<I>H1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;&#123;<I>H2</I>&#125;&#123;<I>C2</I>&#125;&#123;<I>L2</I>&#125;</TT>
+<P>
+This defines two <A HREF=ffuserguide.html#gls:static NAME="14488">static frames</A> to create a two tone horizontal strip 
+effect.
+
+<P>
+
+<P>
+<TT>&#92;hNtone</TT><A NAME="6104"></A><TT>[<I>pages</I>][<I>yoffset</I>]&#123;<I>n</I>&#125;&#123;<I>H1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;</TT>...
+<TT>&#123;<I>Hn</I>&#125;&#123;<I>Cn</I>&#125;&#123;<I>Ln</I>&#125;</TT>
+<P>
+This is similar to <TT>&#92;htwotone</TT><A NAME="6127"></A> but with <I>n</I> static frames instead of two.
+
+<P>
+
+<P>
+<TT>&#92;htwotoneleft</TT><A NAME="6132"></A><TT>[<I>pages</I>][<I>yoffset</I>]&#123;<I>W</I>&#125;&#123;<I>H1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;&#123;<I>H2</I>&#125;&#123;<I>C2</I>&#125;&#123;<I>L2</I>&#125;</TT>
+<P>
+This is similar to <TT>&#92;htwotone</TT><A NAME="6155"></A> but the static frames are only
+<I>W</I> wide, instead of the entire width of the page.
+The frames are aligned along the left edge of the page.
+
+<P>
+
+<P>
+<TT>&#92;htwotoneright</TT><A NAME="6160"></A><TT>[<I>pages</I>][<I>yoffset</I>]&#123;<I>W</I>&#125;&#123;<I>H1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;&#123;<I>H2</I>&#125;&#123;<I>C2</I>&#125;&#123;<I>L2</I>&#125;</TT>
+<P>
+This is similar to <TT>&#92;htwotone</TT><A NAME="6183"></A> but the static frames are only
+<I>W</I> wide, instead of the entire width of the page.
+The frames are aligned along the right edge of the page.
+
+<P>
+
+<P>
+<TT>&#92;hNtoneleft</TT><A NAME="6188"></A><TT>[<I>pages</I>][<I>yoffset</I>]&#123;<I>W</I>&#125;&#123;<I>n</I>&#125;&#123;<I>H1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;</TT>...
+<TT>&#123;<I>Hn</I>&#125;&#123;<I>Cn</I>&#125;&#123;<I>Ln</I>&#125;</TT>
+<P>
+This is a general version of <TT>&#92;htwotoneleft</TT><A NAME="6213"></A> for
+<I>n</I> frames instead of two.
+
+<P>
+
+<P>
+<TT>&#92;hNtoneright</TT><A NAME="6218"></A><TT>[<I>pages</I>][<I>yoffset</I>]&#123;<I>W</I>&#125;&#123;<I>n</I>&#125;&#123;<I>H1</I>&#125;&#123;<I>C1</I>&#125;&#123;<I>L1</I>&#125;</TT>...
+<TT>&#123;<I>Hn</I>&#125;&#123;<I>Cn</I>&#125;&#123;<I>Ln</I>&#125;</TT>
+<P>
+This is a general version of <TT>&#92;htwotoneright</TT><A NAME="6243"></A> for
+<I>n</I> frames instead of two.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0063300000000000000000">
+5.3.3 Background Frame</A>
+</H2>
+
+<P>
+To make a single <A HREF=ffuserguide.html#gls:static NAME="14512">static frame</A> covering the entire page, use:
+
+<P>
+<TT>&#92;makebackgroundframe</TT><A NAME="6252"></A><TT>[<I>pages</I>][<I>IDL</I>]</TT>
+<P>
+Note that this frame should be created before any other
+static frame as it will obscure all other static frames created 
+before it if it is given a background colour.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H2><A NAME="SECTION0063400000000000000000"></A>
+<A NAME="sec:insertrule"></A>
+<BR>
+5.3.4 Vertical and Horizontal Rules
+</H2>
+
+<P>
+You can create vertical or horizontal rules between two
+<A HREF=ffuserguide.html#gls:frame NAME="14588">frames</A> using the commands:
+
+<P>
+
+<P>
+<TT>&#92;insertvrule</TT><A NAME="6265"></A><TT>[<I>y top</I>][<I>y bottom</I>]&#123;<I>T1</I>&#125;&#123;<I>IDN1</I>&#125;&#123;<I>T2</I>&#125;&#123;<I>IDN2</I>&#125;</TT>
+<P>
+This creates a new <A HREF=ffuserguide.html#gls:static NAME="14595">static frame</A> which fits between <I>T1</I> 
+frame with <A HREF=ffuserguide.html#gls:idn NAME="14606">IDN</A> <I>IDN1</I> and <I>T2</I> frame with IDN <I>IDN2</I>, and places a vertical rule in it
+extending from the highest point of the highest frame to
+the lowest point of the lowest frame. The first optional
+argument <I>y top</I> (default 0pt) extends the rule by that 
+much above the highest point, and the second optional argument
+<I>y bottom</I> (default 0pt) extends the rule by that much 
+below the lowest point. If either of the optional arguments
+are negative, the rule will be shortened instead of extended.
+The width of the rule is given by
+
+<P>
+<TT>&#92;ffcolumnseprule</TT><A NAME="6282"></A>
+<P>
+<B>Note</B> that this has changed as from version 1.09: versions
+prior to 1.09 used <TT>&#92;columnseprule</TT><A NAME="6287"></A>.
+
+<P>
+The vertical rule drawn by <TT>&#92;insertvrule</TT><A NAME="6292"></A> is created using 
+the command:
+
+<P>
+<TT>&#92;ffvrule</TT><A NAME="6297"></A><TT>&#123;offset&#125;&#123;width&#125;&#123;height&#125;</TT>
+<P>
+This can be redefined if a more ornate rule is required
+(see below).
+
+<P>
+
+<P>
+<TT>&#92;inserthrule</TT><A NAME="6305"></A><TT>[<I>x left</I>][<I>x right</I>]&#123;<I>T1</I>&#125;&#123;<I>IDN1</I>&#125;&#123;<I>T2</I>&#125;&#123;<I>IDN2</I>&#125;</TT>
+<P>
+This creates a new <A HREF=ffuserguide.html#gls:static NAME="14621">static frame</A> which fits between <I>T1</I> 
+frame with <A HREF=ffuserguide.html#gls:idn NAME="14632">IDN</A> <I>IDN1</I> and <I>T2</I> frame with IDN <I>IDN2</I>, and places a horizontal rule in it
+extending from the leftmost point of the left frame to
+the rightmost point of the right frame. The first optional
+argument <I>x left</I> (default 0pt) extends the rule by that 
+much before the leftmost point, and the second optional argument
+<I>x right</I> (default 0pt) extends the rule by that much 
+beyond the rightmost point. If either of the optional arguments
+are negative, the rule will be shortened instead of extended.
+The height of the rule is given by
+
+<P>
+<TT>&#92;ffcolumnseprule</TT><A NAME="6322"></A>
+<P>
+
+<P>
+The horizontal rule drawn by <TT>&#92;inserthrule</TT><A NAME="6327"></A> is created using 
+the command:
+
+<P>
+<TT>&#92;ffhrule</TT><A NAME="6332"></A><TT>&#123;offset&#125;&#123;width&#125;&#123;height&#125;</TT>
+<P>
+This can be redefined if a more ornate rule is required (see below).
+
+<P>
+The default value for <TT>&#92;ffcolumnseprule</TT><A NAME="6340"></A> is 2pt.  Both
+<TT>&#92;insertvrule</TT><A NAME="6345"></A> and <TT>&#92;inserthrule</TT><A NAME="6350"></A> have starred versions
+which allow you to identify the frame by <A HREF=ffuserguide.html#gls:idl NAME="14651">IDL</A> instead of
+IDN.  The frame types, <I>T1</I> and <I>T2</I> can be one
+of the following keywords: <TT>flow</TT>, <TT>static</TT> or
+<TT>dynamic</TT>.
+
+<P>
+The command
+
+<P>
+<TT>&#92;ffruledeclarations</TT><A NAME="6355"></A>
+<P>
+can be redefined to set declarations that affect how the rule is drawn. 
+The most likely use of this command is to set the rule colour. 
+For example:
+<PRE>
+\twocolumnStop{2in}
+
+\renewcommand{\ffruledeclarations}{\color{red}}
+\insertvrule{flow}{1}{flow}{2}
+
+\renewcommand{\ffruledeclarations}{\color{blue}}
+\inserthrule{static}{1}{flow}{1}
+</PRE>
+This will create a layout with two columns (<A HREF=ffuserguide.html#gls:flow NAME="14666">flow frames</A>&nbsp;1 and&nbsp;2) 
+with a <A HREF=ffuserguide.html#gls:static NAME="14673">static frame</A> above. A red vertical rule is placed in a 
+static frame between flow frames&nbsp;1 and&nbsp;2, and a blue horizontal
+rule is placed between the static frame and the first 
+flow frame. (However the horizontal rule will span both 
+flow frames since that is the width of the static frame.)
+
+<P>
+In the following example, the rules have been redefined
+to use a zigzag pattern (which is obtained using the <TT>tikz</TT><A NAME="6360"></A> 
+package):
+<PRE>
+\usepackage{flowfram}
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+
+\twocolumnStop
+
+\renewcommand{\ffvrule}[3]{%
+\hfill
+\tikz{\draw[snake=zigzag,line width=#2,yshift=-#1] (0,0) -- (0pt,#3);}%
+\hfill\mbox{}}
+
+\insertvrule{flow}{1}{flow}{2}
+
+\renewcommand{\ffhrule}[3]{%
+\tikz{\draw[snake=zigzag,line width=#3,xshift=-#1] (0,0) -- (#2,0pt);}}
+
+\inserthrule{static}{1}{flow}{1}
+</PRE>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0070000000000000000000">
+6. Thumbtabs and Minitocs</A>
+</H1>
+
+<P>
+
+<I>This chapter describes how to create thumbtabs and minitocs,
+such as those used in the PDF version of this document.</I>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION0071000000000000000000">
+6.1 Thumbtabs</A>
+</H1>
+
+<P>
+On the right hand side of the odd pages 
+and on the left hand side of the even pages in the
+PDF version of this document, there is a blue rectangle
+with the chapter number in it. This is a thumbtab, and it gives
+you a rough idea whereabouts in the document you are when you
+quickly flick through the pages. Each thumbtab is in fact
+a dynamic frame, and you can control whether to make the
+number and/or title appear in the thumbtab by using one or
+more of the package options: <TT>ttbtitle</TT><A NAME="6367"></A> (show 
+title--default), <TT>ttbnotitle</TT><A NAME="6370"></A> (don't show the title), 
+<TT>ttbnum</TT><A NAME="6373"></A> (show the number) and <TT>ttbnonum</TT><A NAME="6376"></A> 
+(don't show the number--default).
+
+<P>
+If you want thumbtabs in your document, you need to use
+the command
+
+<P>
+<TT>&#92;makethumbtabs</TT><A NAME="6379"></A><TT>[<I>y offset</I>]&#123;<I>height</I>&#125;[<I>section type</I>]</TT>
+<P>
+in the document
+preamble. By default, the topmost thumbtab is level with the
+top of the <A HREF=ffuserguide.html#gls:typeblock NAME="14770">typeblock</A>, but can be shifted vertically
+using the first optional argument <I>y offset</I>. Each
+thumbtab will be <I>height</I> high, and will correspond to the
+sectioning type <I>section type</I>. If <I>section type</I> 
+is omitted, chapters will be used if the <TT>&#92;chapter</TT><A NAME="6390"></A> 
+command is defined, otherwise sections will be used.
+The width of the thumbtabs is given by the length 
+
+<P>
+<TT>&#92;thumbtabwidth</TT><A NAME="6395"></A>
+<P>
+which is 1cm by default.
+The command
+
+<P>
+<TT>&#92;thumbtabindex</TT><A NAME="6400"></A>
+<P>
+will display the thumbtab index (all thumbtabs) on the current page. 
+You then need to use
+
+<P>
+<TT>&#92;enablethumbtabs</TT><A NAME="6405"></A>
+<P>
+to start the individual thumbtabs and
+
+<P>
+<TT>&#92;disablethumbtabs</TT><A NAME="6410"></A>
+<P>
+to make them go away.
+You can align the table of contents with the thumbtabs<A NAME="tex2html112"
+  HREF="#foot2391"><SUP>6.1</SUP></A> using
+the command
+
+<P>
+<TT>&#92;tocandthumbtabindex</TT><A NAME="6415"></A>
+<P>
+instead of
+the commands <TT>&#92;tableofcontents</TT><A NAME="6420"></A> and 
+<TT>&#92;thumbtabindex</TT><A NAME="6425"></A>. If you are using the <TT>hyperref</TT><A NAME="6430"></A> 
+package, the text on the thumbtab index will be a hyperlink
+to the corresponding part of the document. Note that when using
+<TT>&#92;tocandthumbtabindex</TT><A NAME="6433"></A> you may
+need to shift the thumbtabs vertically up or down to make
+sure that they align correctly with the table of contents.
+
+<P>
+The format of the text on the thumbtabs is given by the command
+
+<P>
+<TT>&#92;thumbtabindexformat</TT><A NAME="6438"></A>
+<P>
+for the thumbtab index entries, and
+
+<P>
+<TT>&#92;thumbtabformat</TT><A NAME="6443"></A>
+<P>
+for the individual thumbtabs. By
+default the text on the thumbtabs will be rotated, but as
+rotating is not implemented by some previewers, the package option
+<TT>norotate</TT><A NAME="6448"></A> is provided, which will stack the letters 
+vertically. This does not look as good as the rotated text.
+Note also that some previewers do not put the hyperlink in the
+correct place when the link has been rotated, so this may
+also cause a problem.
+
+<P>
+The thumbtab attributes can be changed using 
+
+<P>
+<TT>&#92;setthumbtab</TT><A NAME="6451"></A><TT>&#123;<I>n</I>&#125;&#123;<I>key value list</I>&#125;</TT>
+<P>
+where <I>n</I> is the thumbtab number starting
+from 1 (for the top thumbtab) to the value given by the counter
+<TT>maxthumbtabs</TT><A NAME="6460"></A>
+(for the bottom thumbtab). Note that these numbers are not
+related to the associated frame <A HREF=ffuserguide.html#gls:idn NAME="14781">IDN</A>.
+
+<P>
+To just change the settings for the thumbtab index, use
+
+<P>
+<TT>&#92;setthumbtabindex</TT><A NAME="6463"></A><TT>&#123;<I>n</I>&#125;&#123;<I>key value list</I>&#125;</TT>
+<P>
+The <I>key value list</I> for both these commands is the same as that
+for <TT>&#92;setdynamicframe</TT><A NAME="6472"></A>.
+
+<P>
+By default, the thumbtabs have a grey background. In the PDF
+version of this document, I used:
+<PRE>
+\setthumbtab{1}{backcolor=[rgb]{0.15,0.15,1}}
+\setthumbtab{2}{backcolor=[rgb]{0.2,0.2,1}}
+\setthumbtab{3}{backcolor=[rgb]{0.25,0.25,1}}
+\setthumbtab{4}{backcolor=[rgb]{0.3,0.3,1}}
+\setthumbtab{5}{backcolor=[rgb]{0.35,0.35,1}}
+\setthumbtab{6}{backcolor=[rgb]{0.4,0.4,1}}
+\setthumbtab{7}{backcolor=[rgb]{0.45,0.45,1}}
+\setthumbtab{8}{backcolor=[rgb]{0.5,0.5,1}}
+</PRE>
+to change the thumbtab background colour to shades of blue.
+
+<P>
+I also changed the style of the thumbtab text using:
+<PRE>
+\newcommand{\thumbtabstyle}[1]{{\hypersetup{linkcolor=white}%
+\textbf{\large\sffamily #1}}}
+\setthumbtab{all}{style=thumbtabstyle,textcolor=white}
+</PRE>
+Note that the style uses <TT>&#92;hypersetup</TT><A NAME="6477"></A><A NAME="tex2html113"
+  HREF="#foot3441"><SUP>6.2</SUP></A> to change the colour of the hyperlink text,
+since the hyperlink overrides the text colour.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0072000000000000000000">
+6.2 Minitocs</A>
+</H1>
+
+<P>
+In the PDF version of this document, after each chapter heading, 
+there is a mini table of contents for that chapter. To enable minitocs,
+use the command 
+
+<P>
+<TT>&#92;enableminitoc</TT><A NAME="6489"></A><TT>[<I>section type</I>]</TT>
+<P>
+The default <I>section type</I> is the same as that used by 
+the thumbtabs.
+
+<P>
+If you want the minitocs to appear in a <A HREF=ffuserguide.html#gls:dynamic NAME="14799">dynamic frame</A>, you
+can use
+
+<P>
+<TT>&#92;appenddfminitoc</TT><A NAME="6496"></A><TT>&#123;<I>IDN</I>&#125;</TT>
+<P>
+where <I>IDN</I> is the <A HREF=ffuserguide.html#gls:idn NAME="14806">IDN</A> of the appropriate dynamic frame.
+There is also a starred version available if you want to 
+use the <A HREF=ffuserguide.html#gls:idl NAME="14817">IDL</A> instead of the IDN.
+
+<P>
+For example, in the PDF version of this document I 
+used the command:
+<PRE>
+\appenddfminitoc*{chaphead}
+</PRE>
+in the preamble, which appended the minitocs to the
+dynamic frame with IDL <TT>chaphead</TT>.
+
+<P>
+The style of the minitoc text is given by the command
+
+<P>
+<TT>&#92;minitocstyle</TT><A NAME="6503"></A><TT>&#123;<I>contents</I>&#125;</TT>
+<P>
+where the argument is the contents
+of the minitoc. This command may be redefined if you want
+to change the minitoc style. The gap before the minitoc
+is given by the length
+
+<P>
+<TT>&#92;beforeminitocskip</TT><A NAME="6510"></A>
+<P>
+and the gap after the minitoc is given by the length 
+
+<P>
+<TT>&#92;afterminitocskip</TT><A NAME="6515"></A>
+<P>
+These lengths may be changed using <TT>&#92;setlength</TT><A NAME="6520"></A>.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0080000000000000000000">
+7. Global Settings</A>
+</H1>
+
+<P>
+
+<I>This section describes style macros, lengths and counters used
+by the <TT>flowfram</TT> package.</I>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION0081000000000000000000">
+7.1 Macros</A>
+</H1>
+The following macros can be changed using <TT>&#92;renewcommand</TT><A NAME="6529"></A>:
+
+<P>
+
+<UL>
+<LI><TT>&#92;setffdraftcolor</TT><A NAME="6534"></A> 
+
+<P>
+This sets the colour of the <A HREF=ffuserguide.html#gls:bbox NAME="14849">bounding box</A> when it is displayed in draft mode.  The default value is:
+<code>\color[gray]{0.8}</code>. For example, if you want a darker grey,
+do:
+<PRE>
+\renewcommand{\setffdraftcolor}{\color[gray]{0.3}}
+</PRE>
+
+<P>
+</LI>
+<LI><TT>&#92;setffdrafttypeblockcolor</TT><A NAME="6539"></A>
+
+<P>
+This sets the colour of
+the <A HREF=ffuserguide.html#gls:bbox NAME="14856">bounding box</A> of the <A HREF=ffuserguide.html#gls:typeblock NAME="14863">typeblock</A> when it is displayed
+in draft mode.  The default value is: <code>\color[gray]{0.9}</code>.
+For example, if you want a medium grey, do:
+<PRE>
+\renewcommand{\setffdrafttypeblockcolor}{\color[gray]{0.5}}
+</PRE>
+
+<P>
+</LI>
+<LI><TT>&#92;fflabelfont</TT><A NAME="6544"></A>
+
+<P>
+This sets the font size for the <A HREF=ffuserguide.html#gls:bbox NAME="14870">bounding box</A> markers in 
+draft mode. The default value is: <code>\small\sffamily</code>.
+For example, if you want a larger font, do:
+<PRE>
+\renewcommand{\fflabelfont}{\large\sffamily}
+</PRE>
+
+<P>
+</LI>
+<LI><TT>&#92;ffruledeclarations</TT><A NAME="6549"></A>
+
+<P>
+This sets the declarations that affect the rules created using
+<TT>&#92;insertvrule</TT><A NAME="6554"></A> and <TT>&#92;inserthrule</TT><A NAME="6559"></A>. The default
+definition does nothing.
+See <A HREF="ffuserguide.html#sec:insertrule">Vertical and
+Horizontal Rules</A> for further details.
+
+<P>
+</LI>
+<LI><TT>&#92;ffcontinuedtextfont</TT><A NAME="6564"></A><TT>&#123;<I>text</I>&#125;</TT>
+
+<P>
+This sets <I>text</I> in the continuation font. The default definition
+does <code>\emph{\small </code><I>text</I><code>}</code>. See
+<A HREF="ffuserguide.html#sec:static">Static Frames</A> 
+and <A HREF="ffuserguide.html#sec:dynamic">Dynamic 
+Frames</A> for further details.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0082000000000000000000">
+7.2 Lengths</A>
+</H1>
+The following are lengths, which can be changed using
+<TT>&#92;setlength</TT><A NAME="6575"></A>:
+
+<P>
+
+<UL>
+<LI><TT>&#92;fflabelsep</TT><A NAME="6580"></A>
+
+<P>
+This is the distance from the right hand side of the
+<A HREF=ffuserguide.html#gls:bbox NAME="14878">bounding box</A> at which to place the <A HREF=ffuserguide.html#gls:bbox NAME="14885">bounding box</A> marker. The
+default value is: <TT>1pt</TT>
+
+<P>
+</LI>
+<LI><TT>&#92;flowframesep</TT><A NAME="6585"></A>
+
+<P>
+This is the gap between the text of the <A HREF=ffuserguide.html#gls:frame NAME="14892">frame</A> and
+its border, for the standard border types. 
+
+<P>
+</LI>
+<LI><TT>&#92;flowframerule</TT><A NAME="6590"></A>
+
+<P>
+This is the width of the <A HREF=ffuserguide.html#gls:frame NAME="14899">frame's</A> border, if using
+a border given by a <A HREF=ffuserguide.html#gls:fcmd NAME="14906">frame making command</A> that uses <TT>&#92;fboxsep</TT><A NAME="6595"></A>
+to set its border width (e.g. <TT>&#92;fbox</TT><A NAME="6600"></A>).
+
+<P>
+</LI>
+<LI><TT>&#92;sdfparindent</TT><A NAME="6605"></A>
+
+<P>
+This is the paragraph indentation within <A HREF=ffuserguide.html#gls:static NAME="14909">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="14912">dynamic</A> frames.
+The default value is 0pt.
+
+<P>
+</LI>
+<LI><TT>&#92;vcolumnsep</TT><A NAME="6614"></A>
+
+<P>
+This is the approximate vertical distance between the top frame 
+and the column frames when using <TT>&#92;Ncolumntop</TT><A NAME="6619"></A> etc.
+(The height of the <A HREF=ffuserguide.html#gls:flow NAME="14919">flow frame</A> may be adjusted to make it
+an integer multiple of <TT>&#92;baselineskip</TT><A NAME="6624"></A>.)
+
+<P>
+</LI>
+<LI><TT>&#92;columnsep</TT><A NAME="6629"></A>
+
+<P>
+This is the horizontal distance between the column frames
+when using <TT>&#92;Ncolumn</TT><A NAME="6634"></A> or <TT>&#92;Ncolumntop</TT><A NAME="6639"></A> etc
+
+<P>
+</LI>
+<LI><TT>&#92;ffcolumnseprule</TT><A NAME="6644"></A>
+
+<P>
+This is the width of vertical rules created using 
+<TT>&#92;insertvrule</TT><A NAME="6649"></A> or the height of horizontal rules created
+using <TT>&#92;inserthrule</TT><A NAME="6654"></A>.
+
+<P>
+</LI>
+<LI><TT>&#92;beforeminitocskip</TT><A NAME="6659"></A>
+
+<P>
+This is the vertical distance before the minitoc.
+
+<P>
+</LI>
+<LI><TT>&#92;afterminitocskip</TT><A NAME="6664"></A>
+
+<P>
+This is the vertical distance after the minitoc.
+</LI>
+</UL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0083000000000000000000"></A>
+<A NAME="sec:counters"></A>
+<BR>
+7.3 Counters
+</H1>
+The following are counters that can be accessed via 
+<TT>&#92;value</TT><A NAME="6673"></A><TT>&#123;<I>counter name</I>&#125;</TT> or via
+<code>\the</code><I>counter name</I>. However the value of these counters 
+should not be modified.
+
+<P>
+<DL>
+<DT><STRONG><TT>maxflow</TT><A NAME="6680"></A></STRONG></DT>
+<DD>The total number of <A HREF=ffuserguide.html#gls:flow NAME="14969">flow frames</A> that have
+been defined so far.
+
+<P>
+</DD>
+<DT><STRONG><TT>thisframe</TT><A NAME="6683"></A></STRONG></DT>
+<DD>Stores the <A HREF=ffuserguide.html#gls:idn NAME="14976">IDN</A> of the current
+flow frame. You can label and reference the <A HREF=ffuserguide.html#gls:idn NAME="14987">IDN</A> using
+
+<P>
+<TT>&#92;labelflowid</TT><A NAME="6686"></A><TT>&#123;<I>label</I>&#125;</TT>
+<P>
+This is analogous to the standard <TT>&#92;label</TT><A NAME="6693"></A> command, but will
+always refer to the IDN of the current flow frame. It can
+then be referenced using <TT>&#92;ref</TT><A NAME="6698"></A><TT>&#123;<I>label</I>&#125;</TT>. Note that
+this will always refer to the current flow frame even when used
+in the contents of a <A HREF=ffuserguide.html#gls:static NAME="15002">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15005">dynamic</A> frame.
+
+<P>
+Don't use more than one instance of <TT>&#92;labelflowid</TT><A NAME="6709"></A> in a given
+flow frame for a given page or you will get a "multiply defined 
+references" warning.
+
+<P>
+</DD>
+<DT><STRONG><TT>displayedframe</TT><A NAME="6714"></A></STRONG></DT>
+<DD>Stores the index of the currently 
+displayed <A HREF=ffuserguide.html#gls:flow NAME="15016">flow frame</A>. This will be the same as the <A HREF=ffuserguide.html#gls:idn NAME="15023">IDN</A> if all
+flow frames are displayed on the current page, but if some are
+hidden, the values may be different. You can label this counter 
+using
+
+<P>
+<TT>&#92;labelflow</TT><A NAME="6717"></A><TT>&#123;<I>label</I>&#125;</TT>
+<P>
+and reference it elsewhere in the document using 
+<TT>&#92;ref</TT><A NAME="6724"></A><TT>&#123;<I>label</I>&#125;</TT>. For example, if you are using
+a column layout, you might want to do something like:
+<PRE>
+This text is about hippos\labelflow{hippos}.
+
+% Somewhere else in the document
+See column~\ref{hippos} on page~\pageref{hippos}
+for information on hippos.
+</PRE>
+Don't use more than one instance of <TT>&#92;labelflow</TT><A NAME="6731"></A> in a given
+flow frame for a given page or you will get a "multiply defined 
+references" warning.  Note that
+<TT>&#92;labelflow</TT><A NAME="6736"></A> will always refer to the current flow frame even when used in the contents of a static or dynamic <A HREF=ffuserguide.html#gls:frame NAME="15042">frame</A>.
+
+<P>
+</DD>
+<DT><STRONG><TT>maxstatic</TT><A NAME="6741"></A></STRONG></DT>
+<DD>The total number of <A HREF=ffuserguide.html#gls:static NAME="15049">static frames</A> that have
+been defined so far.
+
+<P>
+</DD>
+<DT><STRONG><TT>maxdynamic</TT><A NAME="6744"></A></STRONG></DT>
+<DD>The total number of <A HREF=ffuserguide.html#gls:dynamic NAME="15056">dynamic frames</A> that
+have been defined so far.
+
+<P>
+</DD>
+<DT><STRONG><TT>maxthumbtabs</TT><A NAME="6747"></A></STRONG></DT>
+<DD>The total number of thumbtabs.
+</DD>
+</DL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0090000000000000000000">
+8. Troubleshooting</A>
+</H1>
+
+<P>
+
+<I>This chapter should be consulted if you experience any
+problems using the <TT>flowfram</TT> package.</I>
+<P>
+
+<P>
+For an up-to-date list of frequently asked questions, see
+the <A NAME="tex2html141"
+  HREF="http://theoval.cmp.uea.ac.uk/~nlct/latex/packages/faq/flowframfaq.html">flowfram FAQ</A>.
+If you have a query that is not addressed here, please try there
+before contacting me.
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0091000000000000000000">
+8.1 General Queries</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>If all my <A HREF=ffuserguide.html#gls:flow NAME="15080">flow frames</A> are only defined on, say, 
+pages 1-10, what happens if I then add some extra text so that
+the document exceeds 10 pages?
+
+<P>
+The output routine will create a new <A HREF=ffuserguide.html#gls:flow NAME="15087">flow frame</A> the size 
+of the <A HREF=ffuserguide.html#gls:typeblock NAME="15094">typeblock</A> and use that.
+
+<P>
+</LI>
+<LI>Can I use the formatted page number in <A HREF=ffuserguide.html#gls:pglist NAME="15101">page lists</A>?
+
+<P>
+No.
+
+<P>
+</LI>
+<LI><A NAME="itm:whynot"></A> Why not?
+
+<P>
+When the output routine finishes with one <A HREF=ffuserguide.html#gls:flow NAME="15108">flow frame</A> it looks for the
+next <A HREF=ffuserguide.html#gls:flow NAME="15115">flow frame</A> defined on that page. If there are none left, it then
+searches through the <A HREF=ffuserguide.html#gls:pglist NAME="15122">page list</A> of all the defined <A HREF=ffuserguide.html#gls:flow NAME="15129">flow frames</A> to
+see if the next page lies in that range. If there are none defined on
+that page, it ships out that page, and tries the next page.  This gives
+rise to two problems:
+
+<P>
+
+<OL>
+<LI>LaTeX is not clairvoyant. If it is currently
+on page 14, and on the next page the page numbering changes
+to A, it has no way of knowing this until it has reached
+that point, which it hasn't yet. So it is looking for a 
+<A HREF=ffuserguide.html#gls:flow NAME="15136">flow frame</A> defined on page&nbsp;15, not on page&nbsp;A.
+
+<P>
+</LI>
+<LI>How does LaTeX tell if page C lies between 
+pages A and D? It would require an algorithm that can convert
+from a formatted number back to an integer. Given that there
+are many different ways of formatting the value of a counter
+(besides the standard Roman and alphabetical formats) it
+would be impossible to write an algorithm to do this
+for some arbitrary format.
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI>Can I have an arbitrarily shaped <A HREF=ffuserguide.html#gls:frame NAME="15143">frame</A>?
+<A NAME="itm:parshape"></A>
+<P>
+You can assign certain irregular shapes to <A HREF=ffuserguide.html#gls:static NAME="15146">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15149">dynamic</A> frames, 
+using the shape<A NAME="6761"></A> key (see 
+<A HREF="ffuserguide.html#sec:parshape">Non-Rectangular 
+Frames</A>).
+Note that the <A HREF=ffuserguide.html#gls:bbox NAME="15156">bounding box</A> will still appear as a rectangle with
+the dimensions of the given <A HREF=ffuserguide.html#gls:frame NAME="15163">frame</A> which may not correspond
+to the assigned shape.
+This function is not available for <A HREF=ffuserguide.html#gls:flow NAME="15170">flow frames</A>.
+
+<P>
+</LI>
+<LI>Why has the text from my <A HREF=ffuserguide.html#gls:flow NAME="15177">flow frame</A> appeared in a
+<A HREF=ffuserguide.html#gls:static NAME="15184">static frame</A> or <A HREF=ffuserguide.html#gls:dynamic NAME="15191">dynamic frame</A>?
+
+<P>
+Assuming you haven't inadvertently set that text as the contents
+of the <A HREF=ffuserguide.html#gls:static NAME="15194">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15197">dynamic</A> frame, the frames are most likely 
+overlapping (see <A HREF="ffuserguide.html#sec:stacking">Frame
+Stacking Order</A>).
+In an attempt to clarify what's going on, suppose you have 
+defined a <A HREF=ffuserguide.html#gls:static NAME="15204">static frame</A>, a <A HREF=ffuserguide.html#gls:dynamic NAME="15211">dynamic frame</A> and two <A HREF=ffuserguide.html#gls:flow NAME="15218">flow frames</A>. The 
+following is an approximate<A NAME="tex2html142"
+  HREF="#foot2618"><SUP>8.1</SUP></A> analogy: TeX has a sheet of 
+paper on the table, and has pencilled<A NAME="tex2html143"
+  HREF="#foot2619"><SUP>8.2</SUP></A> in a 
+rectangle denoting the <A HREF=ffuserguide.html#gls:typeblock NAME="15225">typeblock</A>.  The paper is put to one 
+side for now.  TeX also has four rectangular sheets
+of transparent paper. The first (which I shall call sheet&nbsp;1)
+represents the <A HREF=ffuserguide.html#gls:static NAME="15232">static frame</A>, the next two (which I shall call
+sheets&nbsp;2 and&nbsp;3) represent the <A HREF=ffuserguide.html#gls:flow NAME="15239">flow frames</A>, and the last one
+(which I shall call sheet&nbsp;4) represents the <A HREF=ffuserguide.html#gls:dynamic NAME="15246">dynamic frame</A>.
+TeX starts work on filling sheet&nbsp;2 with the document text.
+Once it has put as much text on that sheet as it considers 
+possible (according to its views on aesthetics), it puts sheet&nbsp;2
+into the "in tray", and then continues on sheet&nbsp;3. While it's
+filling in sheets&nbsp;2 and&nbsp;3, if it encounters a command or 
+environment that tells it what to put in the <A HREF=ffuserguide.html#gls:static NAME="15253">static frame</A>, 
+it fills in sheet&nbsp;1 and then puts sheet&nbsp;1 into the "in tray" and
+resumes where it left off on sheet&nbsp;2 or&nbsp;3. Similarly, if
+it encounters a command that tells it what to put in the
+<A HREF=ffuserguide.html#gls:dynamic NAME="15260">dynamic frame</A>, it stops what it's doing, fills in sheet&nbsp;4, then
+puts sheet&nbsp;4 into the "in tray", and resumes where it left off.
+Only when it has finished sheet&nbsp;3 (the last <A HREF=ffuserguide.html#gls:flow NAME="15267">flow frame</A> defined
+on that page), will it gather together all
+the transparent sheets, and fix them onto the page starting
+with sheet&nbsp;1 through to sheet&nbsp;4, measuring the bottom left hand 
+corner of each transparent sheet relative to the bottom left hand 
+corner of the <A HREF=ffuserguide.html#gls:typeblock NAME="15274">typeblock</A>.  TeX will then put that page 
+aside, and start work on the next page. If two or more of the
+transparent sheets overlap, you will see through the top one into
+the one below (unless of course the top one has been painted
+over, either by setting a background colour, or by adding an
+image that has a non-transparent background.)
+
+<P>
+Note that it's also possible that the overlap is caused by an 
+overfull hbox that's causing the text to poke out the side of the 
+<A HREF=ffuserguide.html#gls:flow NAME="15281">flow frame</A> into a neighbouring <A HREF=ffuserguide.html#gls:frame NAME="15288">frame</A>. Check the log file for
+warnings or use the <TT>draft</TT> option to the document class
+which will place a filled rectangle on the end of overfull lines.
+
+<P>
+</LI>
+<LI>Why do I get lots of overfull hbox messages?
+
+<P>
+Probably because you have narrow <A HREF=ffuserguide.html#gls:frame NAME="15295">frames</A>. It's better to use
+ragged right formatting when the frames are narrow.
+
+<P>
+</LI>
+<LI>Why do I keep getting multiply-defined warnings?
+
+<P>
+Probably because you have used <TT>&#92;label</TT><A NAME="6767"></A> in a <A HREF=ffuserguide.html#gls:static NAME="15298">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15301">dynamic</A> frame that is displayed on more than one page. Try using the clear<A NAME="6775"></A> 
+key to ensure that the frame is always cleared at the end of each
+page.
+
+<P>
+</LI>
+<LI>What happens if I use a command or environment
+that switches to two-column mode (e.g. <TT>theindex</TT><A NAME="6777"></A>)?
+
+<P>
+As from version 1.01, any <TT>&#92;onecolumn</TT><A NAME="6780"></A> or 
+<TT>&#92;twocolumn</TT><A NAME="6785"></A> commands that occur outside of the
+preamble will print the contents of the optional argument,
+and issue a warning. It is recommended that you set up
+your own frames for use in the index. See the source code of this
+document, <TT>ffuserguide.tex</TT>, for an example.
+
+<P>
+</LI>
+<LI>How do I change the vertical alignment
+of material inside a <A HREF=ffuserguide.html#gls:static NAME="15304">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15307">dynamic</A> frame?
+
+<P>
+Use the valign<A NAME="6793"></A> key in  <TT>&#92;setstaticframe</TT><A NAME="6795"></A> or 
+<TT>&#92;setdynamicframe</TT><A NAME="6800"></A> (new to version 1.03).
+
+<P>
+</LI>
+<LI><A NAME="itm:absval"></A> How do I compute the distance from the edge
+of the page instead of the <A HREF=ffuserguide.html#gls:typeblock NAME="15314">typeblock</A>?
+
+<P>
+See <A HREF="ffuserguide.html#sec:typeblockloc">Determining the 
+Location of the Typeblock</A>.
+
+<P>
+</LI>
+<LI>Is there a GUI I can use to make it easier to create the
+<A HREF=ffuserguide.html#gls:frame NAME="15321">frames</A>?
+
+<P>
+Yes, Jpgfdraw which can be downloaded from:
+<TT><A NAME="tex2html144"
+  HREF="http://theoval.cmp.uea.ac.uk/~nlct/jpgfdraw/">http://theoval.cmp.uea.ac.uk/~nlct/jpgfdraw/</A></TT>
+</LI>
+</OL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0092000000000000000000">
+8.2 Unexpected Output</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>The lines at the beginning of my <A HREF=ffuserguide.html#gls:flow NAME="15331">flow frames</A> are the
+wrong width.
+
+<P>
+This is a problem that will occur if you have <A HREF=ffuserguide.html#gls:flow NAME="15338">flow frames</A> with different widths, as the change in <TT>&#92;hsize</TT><A NAME="6809"></A> 
+does not come into effect until a paragraph break. So if
+you have a paragraph that spans two <A HREF=ffuserguide.html#gls:flow NAME="15345">flow frames</A>, the end
+of the paragraph at the beginning of the second <A HREF=ffuserguide.html#gls:flow NAME="15352">flow frame</A> will retain the width it had at the start of the 
+paragraph at the bottom of the previous <A HREF=ffuserguide.html#gls:flow NAME="15359">flow frame</A>. You can
+fix the problem by inserting <TT>&#92;framebreak</TT><A NAME="6814"></A> at the
+point where the <A HREF=ffuserguide.html#gls:frame NAME="15366">frame</A> break occurs 
+(see <A HREF="ffuserguide.html#sec:framebreak">Prematurely Ending a 
+Flow Frame</A>).
+
+<P>
+</LI>
+<LI>My <A HREF=ffuserguide.html#gls:frame NAME="15373">frames</A> shift to the right when I add a border.
+
+<P>
+This may occur if you use a border that is not recognised
+by the <TT>flowfram</TT> package. You will need to set the
+offset using the <TT>offset</TT> key (see 
+<A HREF="ffuserguide.html#sec:modattr">Modifying Frame 
+Attributes</A>).
+
+<P>
+</LI>
+<LI>I have a vertical white strip along the right hand side
+of every page.
+
+<P>
+This can happen if you have, say, an A4 document, and 
+<TT>ghostscript</TT><A NAME="6819"></A> has letter as the default paper size. You can 
+change the default paper size by editing the file <code>gs_init.ps</code>. 
+Change:
+<PRE>
+% Optionally choose a default paper size other than U.S. letter.
+% (a4)
+</PRE>
+to:
+<PRE>
+% Optionally choose a default paper size other than U.S. letter.
+(a4)
+</PRE>
+
+<P>
+</LI>
+<LI>I don't have any output.
+
+<P>
+All your <A HREF=ffuserguide.html#gls:flow NAME="15380">flow frames</A> are empty. TeX doesn't put the
+frames onto the page until it has finished putting text
+into the flow frames. So if there is no text to go in the
+flow frames it won't output the page. If you only want the
+<A HREF=ffuserguide.html#gls:static NAME="15395">static frames</A> or <A HREF=ffuserguide.html#gls:dynamic NAME="15402">dynamic frames</A> filled in, and nothing 
+outside of them, just do <code>\mbox{}\clearpage</code>. 
+This will put
+an invisible something with zero area into your
+flow frame, but it's enough to convince TeX that the
+document contains some text.
+
+<P>
+</LI>
+<LI>The last page hasn't appeared.
+
+<P>
+See the previous answer.
+
+<P>
+</LI>
+<LI>There is no paragraph indentation inside my 
+<A HREF=ffuserguide.html#gls:static NAME="15409">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15412">dynamic</A> frames.
+
+<P>
+The paragraph indentation in <A HREF=ffuserguide.html#gls:static NAME="15415">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15418">dynamic</A> frames is governed
+by the length <TT>&#92;sdfparindent</TT><A NAME="6830"></A> which is set to 0pt by
+default. To make the indentation the same as that used by 
+<A HREF=ffuserguide.html#gls:flow NAME="15425">flow frames</A> place the following in the preamble:
+<PRE>
+\setlength{\sdfparindent}{\parindent}
+</PRE>
+
+<P>
+</LI>
+<LI>My section numbering is in the wrong order.
+
+<P>
+Remember that the contents of the <A HREF=ffuserguide.html#gls:dynamic NAME="15432">dynamic frames</A> are not set
+until the page is shipped out, and the contents will be set
+in the order of <A HREF=ffuserguide.html#gls:idn NAME="15439">IDN</A>, so if you have any sectioning commands
+occuring within dynamic frames, they may not be set in the same
+order as they are in your input file.
+
+<P>
+</LI>
+<LI>The contents of my <A HREF=ffuserguide.html#gls:static NAME="15446">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15449">dynamic</A> frame have shifted
+to the left when I used <TT>&#92;parshape</TT><A NAME="6839"></A>.
+
+<P>
+This will happen if your <TT>&#92;parshape</TT><A NAME="6844"></A> specification
+exceeds the linewidth. For example:
+<PRE>
+\parshape=1 0.4\linewidth 0.7\linewidth
+</PRE>
+This specifies a line with overall length 
+<code>1.1\linewidth</code> which is too long.
+
+<P>
+</LI>
+</OL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<H1><A NAME="SECTION0093000000000000000000">
+8.3 Error Messages</A>
+</H1>
+
+<P>
+
+<OL>
+<LI><code>Illegal unit of measure (pt inserted)</code>
+
+<P>
+All lengths must have units. Remember to include the
+units when defining new <A HREF=ffuserguide.html#gls:frame NAME="15491">frames</A>. The following
+keys require lengths: <TT>width</TT>, <TT>height</TT>,
+<TT>x</TT>, <TT>y</TT> and <TT>offset</TT><A NAME="tex2html204"
+  HREF="#foot3471"><SUP>8.3</SUP></A>.
+
+<P>
+</LI>
+<LI><code>Missing number, treated as zero</code>
+
+<P>
+LaTeX is expecting a number. There are a number of 
+possible causes:
+
+<P>
+
+<OL>
+<LI>You have used an <A HREF=ffuserguide.html#gls:idl NAME="15498">IDL</A> instead of an <A HREF=ffuserguide.html#gls:idn NAME="15505">IDN</A>. If you
+want to refer to a frame by its label, you need to remember
+to use the starred versions of the 
+<code>\set</code><I>type</I><code>frame</code> commands, or when setting
+the contents of <A HREF=ffuserguide.html#gls:static NAME="15512">static frames</A> or <A HREF=ffuserguide.html#gls:dynamic NAME="15519">dynamic frames</A>.
+
+<P>
+</LI>
+<LI>When specifying page lists, you have mixed keywords
+with page ranges. For example: <TT>1,even</TT> is invalid.
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI><code>Flow frame IDL '</code><I>label</I><code>' already defined</code>
+
+<P>
+All <A HREF=ffuserguide.html#gls:idl NAME="15526">IDLs</A> within each <A HREF=ffuserguide.html#gls:frame NAME="15533">frame</A> type must be
+unique. There are similar error messages for duplicate 
+IDLs for <A HREF=ffuserguide.html#gls:static NAME="15544">static frames</A> and <A HREF=ffuserguide.html#gls:dynamic NAME="15551">dynamic frames</A>.
+
+<P>
+</LI>
+<LI><code>Can't find flow frame id</code>
+
+<P>
+You have specified a non-existent flow frame <A HREF=ffuserguide.html#gls:idl NAME="15562">IDL</A>. There are
+similar error messages for <A HREF=ffuserguide.html#gls:static NAME="15569">static frames</A> and <A HREF=ffuserguide.html#gls:dynamic NAME="15576">dynamic frames</A>.
+Check to make sure you have spelt the label correctly, and
+check you are using the correct <A HREF=ffuserguide.html#gls:frame NAME="15583">frame</A> type command.
+(For example, if a static frame has the IDL <TT>mylabel</TT>,
+and you attempt to do 
+<TT>&#92;setflowframe*</TT><A NAME="6853"></A><TT>&#123;mylabel&#125;&#123;<I>options</I>&#125;</TT>, 
+then you will get this error, because <TT>mylabel</TT> refers
+to a static frame not a <A HREF=ffuserguide.html#gls:flow NAME="15602">flow frame</A>.)
+
+<P>
+</LI>
+<LI><code>Key 'clear' is boolean</code>
+
+<P>
+The <TT>clear</TT> key can only have the values <TT>true</TT> 
+or <TT>false</TT>.
+
+<P>
+</LI>
+<LI><code>Key 'clear' not available</code>
+
+<P>
+The <TT>clear</TT> key is only available for <A HREF=ffuserguide.html#gls:static NAME="15605">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15608">dynamic</A> frames.
+
+<P>
+</LI>
+<LI><code>Key 'style' not available</code>
+
+<P>
+The <TT>style</TT> key is only available for <A HREF=ffuserguide.html#gls:dynamic NAME="15615">dynamic frames</A>.
+
+<P>
+</LI>
+<LI><code>Key 'margin' not available</code>
+
+<P>
+The <TT>margin</TT> key is only available for <A HREF=ffuserguide.html#gls:flow NAME="15622">flow frames</A>.
+
+<P>
+</LI>
+<LI><code>Key 'shape' not available</code>
+
+<P>
+The <TT>shape</TT> key is only available for <A HREF=ffuserguide.html#gls:static NAME="15625">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15628">dynamic</A> frames.
+
+<P>
+</LI>
+<LI><code>Dynamic frame style '</code><I>style</I><code>' not defined</code>
+
+<P>
+The specified style <I>style</I> must be the name of a command
+without the preceding backslash.  It is possible that you have
+mis-spelt the name, or you have forgotten to define the command.
+
+<P>
+</LI>
+<LI><code>Argument of \fbox has an extra }</code>
+
+<P>
+This error will occur if you do, say, <code>border=\fbox</code>
+instead of <code>border=fbox</code>. Remember not to include
+the initial backslash.
+
+<P>
+</LI>
+<LI><code>Not in outer par mode</code>
+
+<P>
+You can not have floats (such as figures, tables or marginal
+notes) in <A HREF=ffuserguide.html#gls:static NAME="15631">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15634">dynamic</A> frames. If you want
+a figure or table within a <A HREF=ffuserguide.html#gls:static NAME="15637">static</A> or 
+<A HREF=ffuserguide.html#gls:dynamic NAME="15640">dynamic</A> frame 
+use <TT>staticfigure</TT><A NAME="6877"></A> or <TT>statictable</TT><A NAME="6880"></A>.
+
+<P>
+</LI>
+<LI><code>Somethings wrong---maybe missing \item</code>
+
+<P>
+Assuming that all your list type of environments start
+with <TT>&#92;item</TT><A NAME="6883"></A>, this may be caused by something going
+wrong with the toc (table of contents), ttb (thumbtab)
+or aux (auxiliary) files in the previous run. Try deleting
+them, and try again.
+
+<P>
+</LI>
+<LI><code>No room for a new \skip</code>
+
+<P>
+You have exceeded TeX's 256 register limit. Use the <TT>etex</TT><A NAME="6888"></A> 
+package.
+
+<P>
+</LI>
+<LI><code>\verb illegal in command argument</code>
+
+<P>
+As a general rule, you can't use verbatim text<A NAME="6890"></A> in a command 
+argument. 
+This rule applies to all the commands defined by the <TT>flowfram</TT> 
+package.  See also below.
+
+<P>
+</LI>
+<LI>I get <code>\verb illegal in command argument</code> when using
+verbatim text<A NAME="6891"></A> inside the <TT>dynamiccontents</TT><A NAME="6893"></A> environment.
+
+<P>
+You can not use verbatim text<A NAME="6895"></A> inside either the starred or
+unstarred version of the <TT>dynamiccontents</TT><A NAME="6897"></A> environment.
+(See <A HREF="ffuserguide.html#pg:verb">earlier</A>.)
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+</LI>
+</OL>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00100000000000000000000">
+Glossary</A>
+</H2>
+<DL COMPACT>
+<DT><A NAME="gls:bbox"><B>bounding box</B></A><DD>The bounding box of a frame is the area allocated for the 
+contents of that frame. However the text may not completely fill that 
+area, and it is possible that the text may overflow that area. <A NAME="tex2html9"
+ HREF="ffuserguide.html#11490"> 1.1 Draft Option</A>
+, <A NAME="tex2html24"
+ HREF="ffuserguide.html#11675"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html65"
+ HREF="ffuserguide.html#12953"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html68"
+ HREF="ffuserguide.html#13034"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html72"
+ HREF="ffuserguide.html#13123"> 3.1 Non-Rectangular Frames</A>
+, <A NAME="tex2html119"
+ HREF="ffuserguide.html#14849"> 7.1 Macros</A>
+, <A NAME="tex2html120"
+ HREF="ffuserguide.html#14856"> 7.1 Macros</A>
+, <A NAME="tex2html122"
+ HREF="ffuserguide.html#14870"> 7.1 Macros</A>
+, <A NAME="tex2html123"
+ HREF="ffuserguide.html#14878"> 7.2 Lengths</A>
+, <A NAME="tex2html124"
+ HREF="ffuserguide.html#14885"> 7.2 Lengths</A>
+, <A NAME="tex2html157"
+ HREF="ffuserguide.html#15156"> 8.1 General Queries</A>
+<DT><A NAME="gls:dynamic"><B>dynamic frame</B></A><DD>Frames
+in which text is fixed in place, but the contents are re-typeset
+each time the frame is displayed. <A NAME="tex2html7"
+ HREF="ffuserguide.html#11409"> 1. Introduction</A>
+, <A NAME="tex2html16"
+ HREF="ffuserguide.html#11559"> 1.1 Draft Option</A>
+, <A NAME="tex2html22"
+ HREF="ffuserguide.html#11661"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html28"
+ HREF="ffuserguide.html#11716"> 1.3 HTML</A>
+, <A NAME="tex2html49"
+ HREF="ffuserguide.html#12406"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html56"
+ HREF="ffuserguide.html#12596"> 2.3.1 Important Notes</A>
+, <A NAME="tex2html60"
+ HREF="ffuserguide.html#12774"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html70"
+ HREF="ffuserguide.html#13109"> 3.1 Non-Rectangular Frames</A>
+, <A NAME="tex2html85"
+ HREF="ffuserguide.html#13348"> 4.3 Relative Locations</A>
+, <A NAME="tex2html116"
+ HREF="ffuserguide.html#14799"> 6.2 Minitocs</A>
+, <A NAME="tex2html129"
+ HREF="ffuserguide.html#14912"> 7.2 Lengths</A>
+, <A NAME="tex2html135"
+ HREF="ffuserguide.html#15005"> 7.3 Counters</A>
+, <A NAME="tex2html140"
+ HREF="ffuserguide.html#15056"> 7.3 Counters</A>
+, <A NAME="tex2html156"
+ HREF="ffuserguide.html#15149"> 8.1 General Queries</A>
+, <A NAME="tex2html162"
+ HREF="ffuserguide.html#15191"> 8.1 General Queries</A>
+, <A NAME="tex2html164"
+ HREF="ffuserguide.html#15197"> 8.1 General Queries</A>
+, <A NAME="tex2html166"
+ HREF="ffuserguide.html#15211"> 8.1 General Queries</A>
+, <A NAME="tex2html171"
+ HREF="ffuserguide.html#15246"> 8.1 General Queries</A>
+, <A NAME="tex2html173"
+ HREF="ffuserguide.html#15260"> 8.1 General Queries</A>
+, <A NAME="tex2html180"
+ HREF="ffuserguide.html#15301"> 8.1 General Queries</A>
+, <A NAME="tex2html182"
+ HREF="ffuserguide.html#15307"> 8.1 General Queries</A>
+, <A NAME="tex2html194"
+ HREF="ffuserguide.html#15402"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html196"
+ HREF="ffuserguide.html#15412"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html198"
+ HREF="ffuserguide.html#15418"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html200"
+ HREF="ffuserguide.html#15432"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html203"
+ HREF="ffuserguide.html#15449"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html209"
+ HREF="ffuserguide.html#15519"> 8.3 Error Messages</A>
+, <A NAME="tex2html213"
+ HREF="ffuserguide.html#15551"> 8.3 Error Messages</A>
+, <A NAME="tex2html216"
+ HREF="ffuserguide.html#15576"> 8.3 Error Messages</A>
+, <A NAME="tex2html220"
+ HREF="ffuserguide.html#15608"> 8.3 Error Messages</A>
+, <A NAME="tex2html221"
+ HREF="ffuserguide.html#15615"> 8.3 Error Messages</A>
+, <A NAME="tex2html224"
+ HREF="ffuserguide.html#15628"> 8.3 Error Messages</A>
+, <A NAME="tex2html226"
+ HREF="ffuserguide.html#15634"> 8.3 Error Messages</A>
+, <A NAME="tex2html228"
+ HREF="ffuserguide.html#15640"> 8.3 Error Messages</A>
+<DT><A NAME="gls:flow"><B>flow frame</B></A><DD>The frames in a document such that the contents of the 
+<TT>document</TT><A NAME="3542"></A> environment flow from one frame to the next in 
+the order that they were defined. There must be at least one flow frame 
+on every page. <A NAME="tex2html5"
+ HREF="ffuserguide.html#11395"> 1. Introduction</A>
+, <A NAME="tex2html14"
+ HREF="ffuserguide.html#11545"> 1.1 Draft Option</A>
+, <A NAME="tex2html20"
+ HREF="ffuserguide.html#11647"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html32"
+ HREF="ffuserguide.html#11793"> 2.1 Flow Frames</A>
+, <A NAME="tex2html39"
+ HREF="ffuserguide.html#11959"> 2.1.1 Prematurely Ending a Flow Frame</A>
+, <A NAME="tex2html58"
+ HREF="ffuserguide.html#12760"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html71"
+ HREF="ffuserguide.html#13116"> 3.1 Non-Rectangular Frames</A>
+, <A NAME="tex2html84"
+ HREF="ffuserguide.html#13341"> 4.3 Relative Locations</A>
+, <A NAME="tex2html89"
+ HREF="ffuserguide.html#13426"> 5.1 Column Styles</A>
+, <A NAME="tex2html93"
+ HREF="ffuserguide.html#14060"> 5.2 Column Styles with an Additional Frame</A>
+, <A NAME="tex2html110"
+ HREF="ffuserguide.html#14666"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html130"
+ HREF="ffuserguide.html#14919"> 7.2 Lengths</A>
+, <A NAME="tex2html131"
+ HREF="ffuserguide.html#14969"> 7.3 Counters</A>
+, <A NAME="tex2html136"
+ HREF="ffuserguide.html#15016"> 7.3 Counters</A>
+, <A NAME="tex2html145"
+ HREF="ffuserguide.html#15080"> 8.1 General Queries</A>
+, <A NAME="tex2html146"
+ HREF="ffuserguide.html#15087"> 8.1 General Queries</A>
+, <A NAME="tex2html149"
+ HREF="ffuserguide.html#15108"> 8.1 General Queries</A>
+, <A NAME="tex2html150"
+ HREF="ffuserguide.html#15115"> 8.1 General Queries</A>
+, <A NAME="tex2html152"
+ HREF="ffuserguide.html#15129"> 8.1 General Queries</A>
+, <A NAME="tex2html153"
+ HREF="ffuserguide.html#15136"> 8.1 General Queries</A>
+, <A NAME="tex2html159"
+ HREF="ffuserguide.html#15170"> 8.1 General Queries</A>
+, <A NAME="tex2html160"
+ HREF="ffuserguide.html#15177"> 8.1 General Queries</A>
+, <A NAME="tex2html167"
+ HREF="ffuserguide.html#15218"> 8.1 General Queries</A>
+, <A NAME="tex2html170"
+ HREF="ffuserguide.html#15239"> 8.1 General Queries</A>
+, <A NAME="tex2html174"
+ HREF="ffuserguide.html#15267"> 8.1 General Queries</A>
+, <A NAME="tex2html176"
+ HREF="ffuserguide.html#15281"> 8.1 General Queries</A>
+, <A NAME="tex2html185"
+ HREF="ffuserguide.html#15331"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html186"
+ HREF="ffuserguide.html#15338"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html187"
+ HREF="ffuserguide.html#15345"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html188"
+ HREF="ffuserguide.html#15352"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html189"
+ HREF="ffuserguide.html#15359"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html192"
+ HREF="ffuserguide.html#15380"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html199"
+ HREF="ffuserguide.html#15425"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html218"
+ HREF="ffuserguide.html#15602"> 8.3 Error Messages</A>
+, <A NAME="tex2html222"
+ HREF="ffuserguide.html#15622"> 8.3 Error Messages</A>
+<DT><A NAME="gls:frame"><B>frame</B></A><DD>A rectangular
+area of the page in which text can be placed (not to be
+confused with a frame making command). There are three types:
+flow, static and dynamic. <A NAME="tex2html4"
+ HREF="ffuserguide.html#11380"> 1. Introduction</A>
+, <A NAME="tex2html10"
+ HREF="ffuserguide.html#11497"> 1.1 Draft Option</A>
+, <A NAME="tex2html25"
+ HREF="ffuserguide.html#11682"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html26"
+ HREF="ffuserguide.html#11710"> 1.3 HTML</A>
+, <A NAME="tex2html33"
+ HREF="ffuserguide.html#11800"> 2.1 Flow Frames</A>
+, <A NAME="tex2html40"
+ HREF="ffuserguide.html#11970"> 2.1.1 Prematurely Ending a Flow Frame</A>
+, <A NAME="tex2html53"
+ HREF="ffuserguide.html#12494"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html57"
+ HREF="ffuserguide.html#12611"> 2.3.1 Important Notes</A>
+, <A NAME="tex2html61"
+ HREF="ffuserguide.html#12781"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html73"
+ HREF="ffuserguide.html#13130"> 3.1 Non-Rectangular Frames</A>
+, <A NAME="tex2html74"
+ HREF="ffuserguide.html#13156"> 4. Locations and Dimensions</A>
+, <A NAME="tex2html75"
+ HREF="ffuserguide.html#13188"> 4.1 Determining the Location of the Typeblock</A>
+, <A NAME="tex2html77"
+ HREF="ffuserguide.html#13239"> 4.2 Determining the Dimensions and Locations of Frames</A>
+, <A NAME="tex2html80"
+ HREF="ffuserguide.html#13313"> 4.3 Relative Locations</A>
+, <A NAME="tex2html88"
+ HREF="ffuserguide.html#13378"> 5. Predefined Layouts</A>
+, <A NAME="tex2html94"
+ HREF="ffuserguide.html#14067"> 5.2 Column Styles with an Additional Frame</A>
+, <A NAME="tex2html104"
+ HREF="ffuserguide.html#14588"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html125"
+ HREF="ffuserguide.html#14892"> 7.2 Lengths</A>
+, <A NAME="tex2html126"
+ HREF="ffuserguide.html#14899"> 7.2 Lengths</A>
+, <A NAME="tex2html138"
+ HREF="ffuserguide.html#15042"> 7.3 Counters</A>
+, <A NAME="tex2html154"
+ HREF="ffuserguide.html#15143"> 8.1 General Queries</A>
+, <A NAME="tex2html158"
+ HREF="ffuserguide.html#15163"> 8.1 General Queries</A>
+, <A NAME="tex2html177"
+ HREF="ffuserguide.html#15288"> 8.1 General Queries</A>
+, <A NAME="tex2html178"
+ HREF="ffuserguide.html#15295"> 8.1 General Queries</A>
+, <A NAME="tex2html184"
+ HREF="ffuserguide.html#15321"> 8.1 General Queries</A>
+, <A NAME="tex2html190"
+ HREF="ffuserguide.html#15366"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html191"
+ HREF="ffuserguide.html#15373"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html205"
+ HREF="ffuserguide.html#15491"> 8.3 Error Messages</A>
+, <A NAME="tex2html211"
+ HREF="ffuserguide.html#15533"> 8.3 Error Messages</A>
+, <A NAME="tex2html217"
+ HREF="ffuserguide.html#15583"> 8.3 Error Messages</A>
+<DT><A NAME="gls:fcmd"><B>frame making command</B></A><DD>A
+LaTeX command which places some kind of border around its
+argument. For example: <TT>&#92;fbox</TT><A NAME="3555"></A>. <A NAME="tex2html64"
+ HREF="ffuserguide.html#12938"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html127"
+ HREF="ffuserguide.html#14906"> 7.2 Lengths</A>
+<DT><A NAME="gls:idl"><B>identification label 
+(IDL)</B></A><DD>A unique
+label which can be assigned to a frame, enabling you to
+refer to the frame by label instead of by its 
+IDN. <A NAME="tex2html13"
+ HREF="ffuserguide.html#11534"> 1.1 Draft Option</A>
+, <A NAME="tex2html38"
+ HREF="ffuserguide.html#11887"> 2.1 Flow Frames</A>
+, <A NAME="tex2html45"
+ HREF="ffuserguide.html#12137"> 2.2 Static Frames</A>
+, <A NAME="tex2html52"
+ HREF="ffuserguide.html#12451"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html55"
+ HREF="ffuserguide.html#12544"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html63"
+ HREF="ffuserguide.html#12839"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html78"
+ HREF="ffuserguide.html#13246"> 4.2 Determining the Dimensions and Locations of Frames</A>
+, <A NAME="tex2html83"
+ HREF="ffuserguide.html#13334"> 4.3 Relative Locations</A>
+, <A NAME="tex2html86"
+ HREF="ffuserguide.html#13359"> 4.3 Relative Locations</A>
+, <A NAME="tex2html99"
+ HREF="ffuserguide.html#14197"> 5.3 Backdrop Effects</A>
+, <A NAME="tex2html109"
+ HREF="ffuserguide.html#14651"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html118"
+ HREF="ffuserguide.html#14817"> 6.2 Minitocs</A>
+, <A NAME="tex2html206"
+ HREF="ffuserguide.html#15498"> 8.3 Error Messages</A>
+, <A NAME="tex2html210"
+ HREF="ffuserguide.html#15526"> 8.3 Error Messages</A>
+, <A NAME="tex2html214"
+ HREF="ffuserguide.html#15562"> 8.3 Error Messages</A>
+<DT><A NAME="gls:idn"><B>identification number 
+(IDN)</B></A><DD>A unique
+number assigned to each frame, which you can use to identify
+the frame when modifying its appearance. Example: if you
+have defined 3 flow frames, 2 static frames and 1 dynamic
+frame, the flow frames will have IDNs 1, 2 and 3, the static
+frames will have IDNs 1 and 2, and the dynamic frame will
+have IDN 1. <A NAME="tex2html12"
+ HREF="ffuserguide.html#11523"> 1.1 Draft Option</A>
+, <A NAME="tex2html19"
+ HREF="ffuserguide.html#11640"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html21"
+ HREF="ffuserguide.html#11654"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html23"
+ HREF="ffuserguide.html#11668"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html37"
+ HREF="ffuserguide.html#11864"> 2.1 Flow Frames</A>
+, <A NAME="tex2html46"
+ HREF="ffuserguide.html#12152"> 2.2 Static Frames</A>
+, <A NAME="tex2html51"
+ HREF="ffuserguide.html#12440"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html54"
+ HREF="ffuserguide.html#12537"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html62"
+ HREF="ffuserguide.html#12820"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html79"
+ HREF="ffuserguide.html#13253"> 4.2 Determining the Dimensions and Locations of Frames</A>
+, <A NAME="tex2html81"
+ HREF="ffuserguide.html#13320"> 4.3 Relative Locations</A>
+, <A NAME="tex2html82"
+ HREF="ffuserguide.html#13327"> 4.3 Relative Locations</A>
+, <A NAME="tex2html87"
+ HREF="ffuserguide.html#13366"> 4.3 Relative Locations</A>
+, <A NAME="tex2html106"
+ HREF="ffuserguide.html#14606"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html108"
+ HREF="ffuserguide.html#14632"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html115"
+ HREF="ffuserguide.html#14781"> 6.1 Thumbtabs</A>
+, <A NAME="tex2html117"
+ HREF="ffuserguide.html#14806"> 6.2 Minitocs</A>
+, <A NAME="tex2html132"
+ HREF="ffuserguide.html#14976"> 7.3 Counters</A>
+, <A NAME="tex2html133"
+ HREF="ffuserguide.html#14987"> 7.3 Counters</A>
+, <A NAME="tex2html137"
+ HREF="ffuserguide.html#15023"> 7.3 Counters</A>
+, <A NAME="tex2html201"
+ HREF="ffuserguide.html#15439"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html207"
+ HREF="ffuserguide.html#15505"> 8.3 Error Messages</A>
+<DT><A NAME="gls:pglist"><B>page list</B></A><DD>A list of
+pages. This can either be a single keyword: <TT>all</TT>,
+<TT>odd</TT>, <TT>even</TT> or <TT>none</TT>, or it can
+be a comma-separated list of individual page numbers or
+page ranges. For example: <TT>&lt;3,5,7-11,&gt;15</TT>
+indicates pages 1,2,5,7,8,9,10,11 and all pages after page 15.
+Note that these numbers refer to the actual value of the
+page counter, not the absolute physical page number. <A NAME="tex2html35"
+ HREF="ffuserguide.html#11842"> 2.1 Flow Frames</A>
+, <A NAME="tex2html44"
+ HREF="ffuserguide.html#12126"> 2.2 Static Frames</A>
+, <A NAME="tex2html66"
+ HREF="ffuserguide.html#12980"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html91"
+ HREF="ffuserguide.html#13448"> 5.1 Column Styles</A>
+, <A NAME="tex2html95"
+ HREF="ffuserguide.html#14074"> 5.2 Column Styles with an Additional Frame</A>
+, <A NAME="tex2html98"
+ HREF="ffuserguide.html#14186"> 5.3 Backdrop Effects</A>
+, <A NAME="tex2html148"
+ HREF="ffuserguide.html#15101"> 8.1 General Queries</A>
+, <A NAME="tex2html151"
+ HREF="ffuserguide.html#15122"> 8.1 General Queries</A>
+<DT><A NAME="gls:pgrange"><B>page range</B></A><DD>Page
+ranges can be closed, e.g. <TT>5-10</TT>, or open, e.g.
+<TT>&lt;7</TT> or <TT>&gt;9</TT>. <A NAME="tex2html36"
+ HREF="ffuserguide.html#11849"> 2.1 Flow Frames</A>
+, <A NAME="tex2html67"
+ HREF="ffuserguide.html#12995"> 3. Modifying Frame Attributes</A>
+<DT><A NAME="gls:static"><B>static frame</B></A><DD>Frames in which text is fixed in place.  The contents are fixed until
+explicitly changed or cleared via the <TT>&#92;clear</TT><A NAME="3545"></A> key
+in <TT>&#92;setstaticcontents</TT><A NAME="3550"></A>. <A NAME="tex2html6"
+ HREF="ffuserguide.html#11402"> 1. Introduction</A>
+, <A NAME="tex2html15"
+ HREF="ffuserguide.html#11552"> 1.1 Draft Option</A>
+, <A NAME="tex2html18"
+ HREF="ffuserguide.html#11633"> 1.2 Frame Stacking Order</A>
+, <A NAME="tex2html27"
+ HREF="ffuserguide.html#11713"> 1.3 HTML</A>
+, <A NAME="tex2html42"
+ HREF="ffuserguide.html#12084"> 2.2 Static Frames</A>
+, <A NAME="tex2html47"
+ HREF="ffuserguide.html#12272"> 2.2.1 Important Notes</A>
+, <A NAME="tex2html50"
+ HREF="ffuserguide.html#12413"> 2.3 Dynamic Frames</A>
+, <A NAME="tex2html59"
+ HREF="ffuserguide.html#12767"> 3. Modifying Frame Attributes</A>
+, <A NAME="tex2html69"
+ HREF="ffuserguide.html#13106"> 3.1 Non-Rectangular Frames</A>
+, <A NAME="tex2html97"
+ HREF="ffuserguide.html#14175"> 5.3 Backdrop Effects</A>
+, <A NAME="tex2html101"
+ HREF="ffuserguide.html#14348"> 5.3.1 Vertical stripe effects</A>
+, <A NAME="tex2html102"
+ HREF="ffuserguide.html#14488"> 5.3.2 Horizontal stripe effect</A>
+, <A NAME="tex2html103"
+ HREF="ffuserguide.html#14512"> 5.3.3 Background Frame</A>
+, <A NAME="tex2html105"
+ HREF="ffuserguide.html#14595"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html107"
+ HREF="ffuserguide.html#14621"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html111"
+ HREF="ffuserguide.html#14673"> 5.3.4 Vertical and Horizontal Rules</A>
+, <A NAME="tex2html128"
+ HREF="ffuserguide.html#14909"> 7.2 Lengths</A>
+, <A NAME="tex2html134"
+ HREF="ffuserguide.html#15002"> 7.3 Counters</A>
+, <A NAME="tex2html139"
+ HREF="ffuserguide.html#15049"> 7.3 Counters</A>
+, <A NAME="tex2html155"
+ HREF="ffuserguide.html#15146"> 8.1 General Queries</A>
+, <A NAME="tex2html161"
+ HREF="ffuserguide.html#15184"> 8.1 General Queries</A>
+, <A NAME="tex2html163"
+ HREF="ffuserguide.html#15194"> 8.1 General Queries</A>
+, <A NAME="tex2html165"
+ HREF="ffuserguide.html#15204"> 8.1 General Queries</A>
+, <A NAME="tex2html169"
+ HREF="ffuserguide.html#15232"> 8.1 General Queries</A>
+, <A NAME="tex2html172"
+ HREF="ffuserguide.html#15253"> 8.1 General Queries</A>
+, <A NAME="tex2html179"
+ HREF="ffuserguide.html#15298"> 8.1 General Queries</A>
+, <A NAME="tex2html181"
+ HREF="ffuserguide.html#15304"> 8.1 General Queries</A>
+, <A NAME="tex2html193"
+ HREF="ffuserguide.html#15395"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html195"
+ HREF="ffuserguide.html#15409"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html197"
+ HREF="ffuserguide.html#15415"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html202"
+ HREF="ffuserguide.html#15446"> 8.2 Unexpected Output</A>
+, <A NAME="tex2html208"
+ HREF="ffuserguide.html#15512"> 8.3 Error Messages</A>
+, <A NAME="tex2html212"
+ HREF="ffuserguide.html#15544"> 8.3 Error Messages</A>
+, <A NAME="tex2html215"
+ HREF="ffuserguide.html#15569"> 8.3 Error Messages</A>
+, <A NAME="tex2html219"
+ HREF="ffuserguide.html#15605"> 8.3 Error Messages</A>
+, <A NAME="tex2html223"
+ HREF="ffuserguide.html#15625"> 8.3 Error Messages</A>
+, <A NAME="tex2html225"
+ HREF="ffuserguide.html#15631"> 8.3 Error Messages</A>
+, <A NAME="tex2html227"
+ HREF="ffuserguide.html#15637"> 8.3 Error Messages</A>
+<DT><A NAME="gls:typeblock"><B>typeblock</B></A><DD>The area of the page where the main body of the text goes.
+The width and height of this area are given by 
+<TT>&#92;textwidth</TT><A NAME="3532"></A> and <TT>&#92;textheight</TT><A NAME="3537"></A>. <A NAME="tex2html8"
+ HREF="ffuserguide.html#11420"> 1. Introduction</A>
+, <A NAME="tex2html11"
+ HREF="ffuserguide.html#11512"> 1.1 Draft Option</A>
+, <A NAME="tex2html34"
+ HREF="ffuserguide.html#11831"> 2.1 Flow Frames</A>
+, <A NAME="tex2html43"
+ HREF="ffuserguide.html#12119"> 2.2 Static Frames</A>
+, <A NAME="tex2html76"
+ HREF="ffuserguide.html#13195"> 4.1 Determining the Location of the Typeblock</A>
+, <A NAME="tex2html90"
+ HREF="ffuserguide.html#13433"> 5.1 Column Styles</A>
+, <A NAME="tex2html96"
+ HREF="ffuserguide.html#14085"> 5.2 Column Styles with an Additional Frame</A>
+, <A NAME="tex2html100"
+ HREF="ffuserguide.html#14216"> 5.3 Backdrop Effects</A>
+, <A NAME="tex2html114"
+ HREF="ffuserguide.html#14770"> 6.1 Thumbtabs</A>
+, <A NAME="tex2html121"
+ HREF="ffuserguide.html#14863"> 7.1 Macros</A>
+, <A NAME="tex2html147"
+ HREF="ffuserguide.html#15094"> 8.1 General Queries</A>
+, <A NAME="tex2html168"
+ HREF="ffuserguide.html#15225"> 8.1 General Queries</A>
+, <A NAME="tex2html175"
+ HREF="ffuserguide.html#15274"> 8.1 General Queries</A>
+, <A NAME="tex2html183"
+ HREF="ffuserguide.html#15314"> 8.1 General Queries</A>
+</DL>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+<A NAME="index"></A>
+<BR>
+
+<H2><A NAME="SECTION00110000000000000000000">
+Index</A>
+</H2><DL COMPACT>
+<DT><STRONG><TT>&#92;afterminitocskip</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6515">6.2</A>
+ | <A HREF="ffuserguide.html#6664">7.2</A>
+<DT><STRONG><TT>&#92;appenddfminitoc</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6496">6.2</A>
+<DT><STRONG><TT>&#92;appenddynamiccontents</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4099">2.3</A>
+<DT><STRONG><TT>&#92;appenddynamiccontents*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4108">2.3</A>
+<DT><STRONG><TT>&#92;baselineskip</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4873">5.1</A>
+ | <A HREF="ffuserguide.html#4932">5.1</A>
+ | <A HREF="ffuserguide.html#4957">5.1</A>
+ | <A HREF="ffuserguide.html#4993">5.2</A>
+ | <A HREF="ffuserguide.html#6624">7.2</A>
+<DT><STRONG><TT>&#92;beforeminitocskip</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6510">6.2</A>
+ | <A HREF="ffuserguide.html#6659">7.2</A>
+<DT><STRONG><TT>&#92;caption</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3594">1.</A>
+<DT><STRONG><TT>&#92;chapter</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4117">2.3</A>
+ | <A HREF="ffuserguide.html#4466">3.1</A>
+ | <A HREF="ffuserguide.html#6390">6.1</A>
+<DT><STRONG><TT>&#92;clear</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3545">ffuserguide</A>
+<DT><STRONG><TT>&#92;cleardoublepage</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3813">2.1.1</A>
+<DT><STRONG><TT>&#92;clearpage</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3808">2.1.1</A>
+<DT><STRONG><TT>color</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#3631">1.</A>
+<DT><STRONG><TT>&#92;columnsep</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4868">5.1</A>
+ | <A HREF="ffuserguide.html#4912">5.1</A>
+ | <A HREF="ffuserguide.html#4952">5.1</A>
+ | <A HREF="ffuserguide.html#4962">5.1</A>
+ | <A HREF="ffuserguide.html#6629">7.2</A>
+<DT><STRONG><TT>&#92;columnseprule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6287">5.3.4</A>
+<DT><STRONG><TT>&#92;computebottomedge</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4613">4.1</A>
+<DT><STRONG><TT>&#92;computeleftedgeeven</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4599">4.1</A>
+<DT><STRONG><TT>&#92;computeleftedgeodd</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4592">4.1</A>
+<DT><STRONG><TT>&#92;computerightedgeeven</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4627">4.1</A>
+<DT><STRONG><TT>&#92;computerightedgeodd</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4620">4.1</A>
+<DT><STRONG><TT>&#92;computetopedge</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4606">4.1</A>
+<DT><STRONG><TT>&#92;continueonframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3933">2.2</A>
+ | <A HREF="ffuserguide.html#3964">2.2</A>
+ | <A HREF="ffuserguide.html#4145">2.3</A>
+ | <A HREF="ffuserguide.html#4170">2.3</A>
+ | <A HREF="ffuserguide.html#4185">2.3.1</A>
+ | <A HREF="ffuserguide.html#4840">4.3</A>
+<DT><STRONG><TT>&#92;dfchaphead</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4122">2.3</A>
+<DT><STRONG><TT>&#92;dfswapoddeven</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4293">3.</A>
+<DT><STRONG><TT>&#92;diamondshape</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4551">3.1</A>
+<DT><STRONG><TT>&#92;disablethumbtabs</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6410">6.1</A>
+<DT><STRONG><TT>displayedframe</TT> counter</STRONG>
+<DD><A HREF="ffuserguide.html#6714">7.3</A>
+<DT><STRONG><TT>document</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3542">ffuserguide</A>
+ | <A HREF="ffuserguide.html#3569">1.</A>
+ | <A HREF="ffuserguide.html#3711">2.1</A>
+<DT><STRONG><TT>&#92;doublebox</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4314">3.</A>
+ | <A HREF="ffuserguide.html#4363">3.</A>
+<DT><STRONG><TT>draft</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#3638">1.1</A>
+ | <A HREF="ffuserguide.html#3671">1.1</A>
+ | <A HREF="ffuserguide.html#3689">1.2</A>
+<DT><STRONG><TT>dynamiccontents</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3986">2.3</A>
+ | <A HREF="ffuserguide.html#4083">2.3</A>
+ | <A HREF="ffuserguide.html#4093">2.3</A>
+ | <A HREF="ffuserguide.html#4139">2.3</A>
+ | <A HREF="ffuserguide.html#4179">2.3.1</A>
+ | <A HREF="ffuserguide.html#6893">8.3</A>
+ | <A HREF="ffuserguide.html#6897">8.3</A>
+<DT><STRONG><TT>dynamiccontents*</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#4088">2.3</A>
+ | <A HREF="ffuserguide.html#4096">2.3</A>
+ | <A HREF="ffuserguide.html#4142">2.3</A>
+ | <A HREF="ffuserguide.html#4153">2.3</A>
+ | <A HREF="ffuserguide.html#4182">2.3.1</A>
+<DT><STRONG><TT>&#92;enableminitoc</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6489">6.2</A>
+<DT><STRONG><TT>&#92;enablethumbtabs</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6405">6.1</A>
+<DT><STRONG><TT>etex</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#6888">8.3</A>
+<DT><STRONG><TT>&#92;evensidemargin</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3577">1.</A>
+<DT><STRONG><TT>fancybox</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#4311">3.</A>
+<DT><STRONG><TT>&#92;fbox</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3555">ffuserguide</A>
+ | <A HREF="ffuserguide.html#4306">3.</A>
+ | <A HREF="ffuserguide.html#4348">3.</A>
+ | <A HREF="ffuserguide.html#6600">7.2</A>
+<DT><STRONG><TT>&#92;fboxsep</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6595">7.2</A>
+<DT><STRONG><TT>&#92;FFabove</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4740">4.3</A>
+<DT><STRONG><TT>&#92;FFaboveleft</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4730">4.3</A>
+<DT><STRONG><TT>&#92;FFaboveright</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4735">4.3</A>
+<DT><STRONG><TT>&#92;ffareaheight</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4685">4.2</A>
+<DT><STRONG><TT>&#92;ffareawidth</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4680">4.2</A>
+<DT><STRONG><TT>&#92;ffareax</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4690">4.2</A>
+<DT><STRONG><TT>&#92;ffareay</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4695">4.2</A>
+<DT><STRONG><TT>&#92;FFbelow</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4755">4.3</A>
+<DT><STRONG><TT>&#92;FFbelowleft</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4745">4.3</A>
+<DT><STRONG><TT>&#92;FFbelowright</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4750">4.3</A>
+<DT><STRONG><TT>&#92;ffcolumnseprule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6282">5.3.4</A>
+ | <A HREF="ffuserguide.html#6322">5.3.4</A>
+ | <A HREF="ffuserguide.html#6340">5.3.4</A>
+ | <A HREF="ffuserguide.html#6644">7.2</A>
+<DT><STRONG><TT>&#92;ffcontinuedtextfont</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3957">2.2</A>
+ | <A HREF="ffuserguide.html#4163">2.3</A>
+ | <A HREF="ffuserguide.html#6564">7.1</A>
+<DT><STRONG><TT>&#92;ffcontinuedtextlayout</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3950">2.2</A>
+ | <A HREF="ffuserguide.html#4156">2.3</A>
+<DT><STRONG><TT>&#92;ffhrule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6332">5.3.4</A>
+<DT><STRONG><TT>&#92;fflabelfont</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6544">7.1</A>
+<DT><STRONG><TT>&#92;fflabelsep</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6580">7.2</A>
+<DT><STRONG><TT>&#92;FFleft</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4760">4.3</A>
+<DT><STRONG><TT>&#92;FFoverlap</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4770">4.3</A>
+<DT><STRONG><TT>&#92;FFright</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4765">4.3</A>
+<DT><STRONG><TT>&#92;ffruledeclarations</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6355">5.3.4</A>
+ | <A HREF="ffuserguide.html#6549">7.1</A>
+<DT><STRONG><TT>&#92;ffswapoddeven</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4279">3.</A>
+<DT><STRONG><TT>&#92;ffvadjustfalse</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4878">5.1</A>
+<DT><STRONG><TT>&#92;ffvrule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6297">5.3.4</A>
+<DT><STRONG><TT>figure</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3588">1.</A>
+ | <A HREF="ffuserguide.html#3610">1.</A>
+ | <A HREF="ffuserguide.html#3622">1.</A>
+<DT><STRONG><TT>figure*</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3616">1.</A>
+<DT><STRONG><TT>&#92;flowframerule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4342">3.</A>
+ | <A HREF="ffuserguide.html#6590">7.2</A>
+<DT><STRONG><TT>&#92;flowframesep</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4337">3.</A>
+ | <A HREF="ffuserguide.html#6585">7.2</A>
+<DT><STRONG><TT>&#92;flowframeshowlayout</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3674">1.1</A>
+<DT><STRONG>frame settings</STRONG>
+<DD><DL COMPACT>
+<DT><STRONG>angle</STRONG>
+<DD><A HREF="ffuserguide.html#4398">3.</A>
+<DT><STRONG>backcolor</STRONG>
+<DD><A HREF="ffuserguide.html#4374">3.</A>
+<DT><STRONG>border</STRONG>
+<DD><A HREF="ffuserguide.html#4304">3.</A>
+<DT><STRONG>bordercolor</STRONG>
+<DD><A HREF="ffuserguide.html#4372">3.</A>
+<DT><STRONG>clear</STRONG>
+<DD><A HREF="ffuserguide.html#4377">3.</A>
+ | <A HREF="ffuserguide.html#4396">3.</A>
+ | <A HREF="ffuserguide.html#6775">8.1</A>
+<DT><STRONG>evenx</STRONG>
+<DD><A HREF="ffuserguide.html#4277">3.</A>
+<DT><STRONG>eveny</STRONG>
+<DD><A HREF="ffuserguide.html#4299">3.</A>
+<DT><STRONG>height</STRONG>
+<DD><A HREF="ffuserguide.html#4274">3.</A>
+<DT><STRONG>label</STRONG>
+<DD><A HREF="ffuserguide.html#4303">3.</A>
+<DT><STRONG>margin</STRONG>
+<DD><A HREF="ffuserguide.html#4376">3.</A>
+<DT><STRONG>oddx</STRONG>
+<DD><A HREF="ffuserguide.html#4300">3.</A>
+<DT><STRONG>oddy</STRONG>
+<DD><A HREF="ffuserguide.html#4301">3.</A>
+<DT><STRONG>offset</STRONG>
+<DD><A HREF="ffuserguide.html#4346">3.</A>
+<DT><STRONG>pages</STRONG>
+<DD><A HREF="ffuserguide.html#4375">3.</A>
+<DT><STRONG>shape</STRONG>
+<DD><A HREF="ffuserguide.html#4399">3.</A>
+ | <A HREF="ffuserguide.html#4459">3.1</A>
+ | <A HREF="ffuserguide.html#4493">3.1</A>
+ | <A HREF="ffuserguide.html#6761">8.1</A>
+<DT><STRONG>style</STRONG>
+<DD><A HREF="ffuserguide.html#4397">3.</A>
+<DT><STRONG>textcolor</STRONG>
+<DD><A HREF="ffuserguide.html#4373">3.</A>
+<DT><STRONG>valign</STRONG>
+<DD><A HREF="ffuserguide.html#4302">3.</A>
+ | <A HREF="ffuserguide.html#6793">8.1</A>
+<DT><STRONG>width</STRONG>
+<DD><A HREF="ffuserguide.html#4273">3.</A>
+<DT><STRONG>x</STRONG>
+<DD><A HREF="ffuserguide.html#4275">3.</A>
+<DT><STRONG>y</STRONG>
+<DD><A HREF="ffuserguide.html#4276">3.</A>
+</DL>
+<DT><STRONG><TT>&#92;framebreak</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3793">2.1.1</A>
+ | <A HREF="ffuserguide.html#3798">2.1.1</A>
+ | <A HREF="ffuserguide.html#6814">8.2</A>
+<DT><STRONG><TT>&#92;getdynamicbounds</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4666">4.2</A>
+<DT><STRONG><TT>&#92;getdynamicbounds*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4673">4.2</A>
+<DT><STRONG><TT>&#92;getdynamicid</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4023">2.3</A>
+ | <A HREF="ffuserguide.html#4037">2.3</A>
+<DT><STRONG><TT>&#92;getdynamiclabel</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4016">2.3</A>
+ | <A HREF="ffuserguide.html#4032">2.3</A>
+<DT><STRONG><TT>&#92;getflowbounds</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4652">4.2</A>
+<DT><STRONG><TT>&#92;getflowbounds*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4659">4.2</A>
+<DT><STRONG><TT>&#92;getflowid</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3738">2.1</A>
+ | <A HREF="ffuserguide.html#3752">2.1</A>
+<DT><STRONG><TT>&#92;getflowlabel</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3731">2.1</A>
+ | <A HREF="ffuserguide.html#3747">2.1</A>
+<DT><STRONG><TT>&#92;getstaticbounds</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4638">4.2</A>
+<DT><STRONG><TT>&#92;getstaticbounds*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4645">4.2</A>
+<DT><STRONG><TT>&#92;getstaticid</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3851">2.2</A>
+ | <A HREF="ffuserguide.html#3865">2.2</A>
+<DT><STRONG><TT>&#92;getstaticlabel</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3844">2.2</A>
+ | <A HREF="ffuserguide.html#3860">2.2</A>
+<DT><STRONG><TT>ghostscript</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6819">8.2</A>
+<DT><STRONG><TT>&#92;heartshape</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4556">3.1</A>
+<DT><STRONG><TT>&#92;hNtone</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6104">5.3.2</A>
+<DT><STRONG><TT>&#92;hNtoneleft</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6188">5.3.2</A>
+<DT><STRONG><TT>&#92;hNtoneright</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6218">5.3.2</A>
+<DT><STRONG><TT>&#92;hsize</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3803">2.1.1</A>
+ | <A HREF="ffuserguide.html#6809">8.2</A>
+<DT><STRONG><TT>html</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#3700">1.3</A>
+<DT><STRONG><TT>&#92;htwotone</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6083">5.3.2</A>
+ | <A HREF="ffuserguide.html#6127">5.3.2</A>
+ | <A HREF="ffuserguide.html#6155">5.3.2</A>
+ | <A HREF="ffuserguide.html#6183">5.3.2</A>
+<DT><STRONG><TT>&#92;htwotoneleft</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6132">5.3.2</A>
+ | <A HREF="ffuserguide.html#6213">5.3.2</A>
+<DT><STRONG><TT>&#92;htwotoneright</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6160">5.3.2</A>
+ | <A HREF="ffuserguide.html#6243">5.3.2</A>
+<DT><STRONG><TT>hyperref</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#3628">1.</A>
+ | <A HREF="ffuserguide.html#6482">6.1</A>
+ | <A HREF="ffuserguide.html#6430">6.1</A>
+<DT><STRONG><TT>&#92;hypersetup</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6477">6.1</A>
+<DT><STRONG><TT>&#92;inserthrule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6305">5.3.4</A>
+ | <A HREF="ffuserguide.html#6327">5.3.4</A>
+ | <A HREF="ffuserguide.html#6350">5.3.4</A>
+ | <A HREF="ffuserguide.html#6559">7.1</A>
+ | <A HREF="ffuserguide.html#6654">7.2</A>
+<DT><STRONG><TT>&#92;insertvrule</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6265">5.3.4</A>
+ | <A HREF="ffuserguide.html#6292">5.3.4</A>
+ | <A HREF="ffuserguide.html#6345">5.3.4</A>
+ | <A HREF="ffuserguide.html#6554">7.1</A>
+ | <A HREF="ffuserguide.html#6649">7.2</A>
+<DT><STRONG><TT>&#92;item</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6883">8.3</A>
+<DT><STRONG><TT>&#92;label</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3599">1.</A>
+ | <A HREF="ffuserguide.html#3973">2.2.1</A>
+ | <A HREF="ffuserguide.html#4392">3.</A>
+ | <A HREF="ffuserguide.html#6693">7.3</A>
+ | <A HREF="ffuserguide.html#6767">8.1</A>
+<DT><STRONG><TT>&#92;labelflow</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6717">7.3</A>
+ | <A HREF="ffuserguide.html#6731">7.3</A>
+ | <A HREF="ffuserguide.html#6736">7.3</A>
+<DT><STRONG><TT>&#92;labelflowid</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6686">7.3</A>
+ | <A HREF="ffuserguide.html#6709">7.3</A>
+<DT><STRONG><TT>&#92;makebackgroundframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6252">5.3.3</A>
+<DT><STRONG><TT>&#92;makedfheaderfooter</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4129">2.3</A>
+<DT><STRONG><TT>&#92;makethumbtabs</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6379">6.1</A>
+<DT><STRONG><TT>maxdynamic</TT> counter</STRONG>
+<DD><A HREF="ffuserguide.html#6744">7.3</A>
+<DT><STRONG><TT>maxflow</TT> counter</STRONG>
+<DD><A HREF="ffuserguide.html#6680">7.3</A>
+<DT><STRONG><TT>maxstatic</TT> counter</STRONG>
+<DD><A HREF="ffuserguide.html#6741">7.3</A>
+<DT><STRONG><TT>maxthumbtabs</TT> counter</STRONG>
+<DD><A HREF="ffuserguide.html#6460">6.1</A>
+ | <A HREF="ffuserguide.html#6747">7.3</A>
+<DT><STRONG><TT>&#92;minitocstyle</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6503">6.2</A>
+<DT><STRONG><TT>&#92;Ncolumn</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4903">5.1</A>
+ | <A HREF="ffuserguide.html#6634">7.2</A>
+<DT><STRONG><TT>&#92;Ncolumnbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5837">5.2</A>
+ | <A HREF="ffuserguide.html#5866">5.2</A>
+ | <A HREF="ffuserguide.html#5889">5.2</A>
+<DT><STRONG><TT>&#92;Ncolumnbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5100">5.2</A>
+ | <A HREF="ffuserguide.html#5778">5.2</A>
+ | <A HREF="ffuserguide.html#5817">5.2</A>
+ | <A HREF="ffuserguide.html#5850">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnDbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5878">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnDbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5798">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnDtop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5488">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnDtopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5408">5.2</A>
+<DT><STRONG><TT>&#92;Ncolumninarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4967">5.1</A>
+<DT><STRONG><TT>&#92;NcolumnSbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5855">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnSbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5759">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnStop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5465">5.2</A>
+<DT><STRONG><TT>&#92;NcolumnStopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5369">5.2</A>
+<DT><STRONG><TT>&#92;Ncolumntop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5447">5.2</A>
+ | <A HREF="ffuserguide.html#5476">5.2</A>
+ | <A HREF="ffuserguide.html#5499">5.2</A>
+ | <A HREF="ffuserguide.html#6619">7.2</A>
+ | <A HREF="ffuserguide.html#6639">7.2</A>
+<DT><STRONG><TT>&#92;Ncolumntopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5041">5.2</A>
+ | <A HREF="ffuserguide.html#5388">5.2</A>
+ | <A HREF="ffuserguide.html#5427">5.2</A>
+ | <A HREF="ffuserguide.html#5460">5.2</A>
+<DT><STRONG><TT>&#92;newdynamicframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3989">2.3</A>
+<DT><STRONG><TT>&#92;newdynamicframe*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4042">2.3</A>
+<DT><STRONG><TT>&#92;newflowframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3714">2.1</A>
+ | <A HREF="ffuserguide.html#3839">2.2</A>
+ | <A HREF="ffuserguide.html#3870">2.2</A>
+ | <A HREF="ffuserguide.html#4006">2.3</A>
+<DT><STRONG><TT>&#92;newflowframe*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3757">2.1</A>
+<DT><STRONG><TT>&#92;newpage</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3783">2.1.1</A>
+<DT><STRONG><TT>&#92;newstaticframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3822">2.2</A>
+ | <A HREF="ffuserguide.html#4011">2.3</A>
+<DT><STRONG><TT>&#92;newstaticframe*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3875">2.2</A>
+<DT><STRONG><TT>nocolor</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#3679">1.1</A>
+<DT><STRONG><TT>norotate</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#3682">1.1</A>
+ | <A HREF="ffuserguide.html#6448">6.1</A>
+<DT><STRONG><TT>&#92;nutshape</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4561">3.1</A>
+<DT><STRONG><TT>&#92;oddsidemargin</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3572">1.</A>
+<DT><STRONG><TT>&#92;onecolumn</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4853">5.1</A>
+ | <A HREF="ffuserguide.html#4883">5.1</A>
+ | <A HREF="ffuserguide.html#4893">5.1</A>
+ | <A HREF="ffuserguide.html#6780">8.1</A>
+<DT><STRONG><TT>&#92;onecolumnbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5581">5.2</A>
+ | <A HREF="ffuserguide.html#5606">5.2</A>
+ | <A HREF="ffuserguide.html#5625">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5062">5.2</A>
+ | <A HREF="ffuserguide.html#5528">5.2</A>
+ | <A HREF="ffuserguide.html#5563">5.2</A>
+ | <A HREF="ffuserguide.html#5592">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnDbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5616">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnDbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5546">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnDtop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5226">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnDtopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5156">5.2</A>
+<DT><STRONG><TT>&#92;onecolumninarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4917">5.1</A>
+<DT><STRONG><TT>&#92;onecolumnSbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5597">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnSbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5511">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnStop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5207">5.2</A>
+<DT><STRONG><TT>&#92;onecolumnStopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5121">5.2</A>
+<DT><STRONG><TT>&#92;onecolumntop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5191">5.2</A>
+ | <A HREF="ffuserguide.html#5216">5.2</A>
+ | <A HREF="ffuserguide.html#5235">5.2</A>
+<DT><STRONG><TT>&#92;onecolumntopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5003">5.2</A>
+ | <A HREF="ffuserguide.html#5138">5.2</A>
+ | <A HREF="ffuserguide.html#5173">5.2</A>
+ | <A HREF="ffuserguide.html#5202">5.2</A>
+<DT><STRONG><TT>&#92;Ovalbox</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4319">3.</A>
+ | <A HREF="ffuserguide.html#4324">3.</A>
+ | <A HREF="ffuserguide.html#4353">3.</A>
+ | <A HREF="ffuserguide.html#4358">3.</A>
+<DT><STRONG><TT>&#92;pagebreak</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3788">2.1.1</A>
+<DT><STRONG><TT>&#92;par</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4461">3.1</A>
+<DT><STRONG><TT>&#92;parshape</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4450">3.1</A>
+ | <A HREF="ffuserguide.html#4414">3.1</A>
+ | <A HREF="ffuserguide.html#4435">3.1</A>
+ | <A HREF="ffuserguide.html#4455">3.1</A>
+ | <A HREF="ffuserguide.html#4500">3.1</A>
+ | <A HREF="ffuserguide.html#4505">3.1</A>
+ | <A HREF="ffuserguide.html#6839">8.2</A>
+ | <A HREF="ffuserguide.html#6844">8.2</A>
+<DT><STRONG><TT>&#92;part</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4471">3.1</A>
+<DT><STRONG><TT>&#92;ref</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6698">7.3</A>
+ | <A HREF="ffuserguide.html#6724">7.3</A>
+<DT><STRONG><TT>&#92;relativeframelocation</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4704">4.3</A>
+ | <A HREF="ffuserguide.html#4775">4.3</A>
+ | <A HREF="ffuserguide.html#4789">4.3</A>
+ | <A HREF="ffuserguide.html#4809">4.3</A>
+ | <A HREF="ffuserguide.html#4829">4.3</A>
+<DT><STRONG><TT>&#92;relativeframelocation*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4717">4.3</A>
+<DT><STRONG><TT>&#92;relax</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4401">3.</A>
+ | <A HREF="ffuserguide.html#4495">3.1</A>
+<DT><STRONG><TT>&#92;reldynamicloc</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4780">4.3</A>
+<DT><STRONG><TT>&#92;relflowloc</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4820">4.3</A>
+<DT><STRONG><TT>&#92;relstaticloc</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4800">4.3</A>
+<DT><STRONG><TT>&#92;renewcommand</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6529">7.1</A>
+<DT><STRONG><TT>&#92;sdfparindent</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6605">7.2</A>
+ | <A HREF="ffuserguide.html#6830">8.2</A>
+<DT><STRONG><TT>&#92;setalldynamicframes</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4267">3.</A>
+<DT><STRONG><TT>&#92;setallflowframes</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4217">3.</A>
+<DT><STRONG><TT>&#92;setallstaticframes</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4242">3.</A>
+<DT><STRONG><TT>&#92;setdynamiccontents</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4064">2.3</A>
+ | <A HREF="ffuserguide.html#4190">2.3.1</A>
+ | <A HREF="ffuserguide.html#4387">3.</A>
+<DT><STRONG><TT>&#92;setdynamiccontents*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4073">2.3</A>
+<DT><STRONG><TT>&#92;setdynamicframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4059">2.3</A>
+ | <A HREF="ffuserguide.html#4134">2.3</A>
+ | <A HREF="ffuserguide.html#4249">3.</A>
+ | <A HREF="ffuserguide.html#6472">6.1</A>
+ | <A HREF="ffuserguide.html#6800">8.1</A>
+<DT><STRONG><TT>&#92;setdynamicframe*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4258">3.</A>
+<DT><STRONG><TT>&#92;setffdraftcolor</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6534">7.1</A>
+<DT><STRONG><TT>&#92;setffdrafttypeblockcolor</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6539">7.1</A>
+<DT><STRONG><TT>&#92;setflowframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3774">2.1</A>
+ | <A HREF="ffuserguide.html#4199">3.</A>
+<DT><STRONG><TT>&#92;setflowframe*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4208">3.</A>
+ | <A HREF="ffuserguide.html#6853">8.3</A>
+<DT><STRONG><TT>&#92;setlength</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6520">6.2</A>
+ | <A HREF="ffuserguide.html#6575">7.2</A>
+<DT><STRONG><TT>&#92;setstaticcontents</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3550">ffuserguide</A>
+ | <A HREF="ffuserguide.html#3897">2.2</A>
+ | <A HREF="ffuserguide.html#3923">2.2</A>
+ | <A HREF="ffuserguide.html#4379">3.</A>
+<DT><STRONG><TT>&#92;setstaticcontents*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3908">2.2</A>
+ | <A HREF="ffuserguide.html#3928">2.2</A>
+ | <A HREF="ffuserguide.html#3945">2.2</A>
+<DT><STRONG><TT>&#92;setstaticframe</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4224">3.</A>
+ | <A HREF="ffuserguide.html#6795">8.1</A>
+<DT><STRONG><TT>&#92;setstaticframe*</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4233">3.</A>
+<DT><STRONG><TT>&#92;setthumbtab</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6451">6.1</A>
+<DT><STRONG><TT>&#92;setthumbtabindex</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6463">6.1</A>
+<DT><STRONG><TT>&#92;sfswapoddeven</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4286">3.</A>
+<DT><STRONG><TT>&#92;shadowbox</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4329">3.</A>
+ | <A HREF="ffuserguide.html#4368">3.</A>
+<DT><STRONG><TT>shapepar</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#4476">3.1</A>
+ | <A HREF="ffuserguide.html#4419">3.1</A>
+ | <A HREF="ffuserguide.html#4424">3.1</A>
+ | <A HREF="ffuserguide.html#4427">3.1</A>
+ | <A HREF="ffuserguide.html#4432">3.1</A>
+ | <A HREF="ffuserguide.html#4440">3.1</A>
+ | <A HREF="ffuserguide.html#4445">3.1</A>
+ | <A HREF="ffuserguide.html#4481">3.1</A>
+ | <A HREF="ffuserguide.html#4491">3.1</A>
+ | <A HREF="ffuserguide.html#4530">3.1</A>
+ | <A HREF="ffuserguide.html#4535">3.1</A>
+ | <A HREF="ffuserguide.html#4538">3.1</A>
+ | <A HREF="ffuserguide.html#4543">3.1</A>
+<DT><STRONG><TT>&#92;showframebboxfalse</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3666">1.1</A>
+<DT><STRONG><TT>&#92;showframebboxtrue</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3661">1.1</A>
+<DT><STRONG><TT>&#92;showmarginsfalse</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3656">1.1</A>
+<DT><STRONG><TT>&#92;showmarginstrue</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3651">1.1</A>
+<DT><STRONG><TT>&#92;showtypeblockfalse</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3646">1.1</A>
+<DT><STRONG><TT>&#92;showtypeblocktrue</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3641">1.1</A>
+<DT><STRONG><TT>&#92;simpar</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4486">3.1</A>
+<DT><STRONG><TT>&#92;squareshape</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4546">3.1</A>
+<DT><STRONG><TT>staticcontents</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3892">2.2</A>
+ | <A HREF="ffuserguide.html#3917">2.2</A>
+ | <A HREF="ffuserguide.html#3983">2.3</A>
+ | <A HREF="ffuserguide.html#4384">3.</A>
+<DT><STRONG><TT>staticcontents*</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3920">2.2</A>
+ | <A HREF="ffuserguide.html#3942">2.2</A>
+<DT><STRONG><TT>staticfigure</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3582">1.</A>
+ | <A HREF="ffuserguide.html#3604">1.</A>
+ | <A HREF="ffuserguide.html#6877">8.3</A>
+<DT><STRONG><TT>statictable</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3585">1.</A>
+ | <A HREF="ffuserguide.html#3607">1.</A>
+ | <A HREF="ffuserguide.html#6880">8.3</A>
+<DT><STRONG><TT>table</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3591">1.</A>
+ | <A HREF="ffuserguide.html#3613">1.</A>
+ | <A HREF="ffuserguide.html#3625">1.</A>
+<DT><STRONG><TT>table*</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#3619">1.</A>
+<DT><STRONG><TT>&#92;tableofcontents</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6420">6.1</A>
+<DT><STRONG><TT>&#92;textheight</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3537">ffuserguide</A>
+<DT><STRONG><TT>&#92;textwidth</TT></STRONG>
+<DD><A HREF="ffuserguide.html#3532">ffuserguide</A>
+<DT><STRONG><TT>theindex</TT> environment</STRONG>
+<DD><A HREF="ffuserguide.html#6777">8.1</A>
+<DT><STRONG><TT>thisframe</TT> counter</STRONG>
+<DD><A HREF="ffuserguide.html#6683">7.3</A>
+<DT><STRONG><TT>&#92;thumbtabformat</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6443">6.1</A>
+<DT><STRONG><TT>&#92;thumbtabindex</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6400">6.1</A>
+ | <A HREF="ffuserguide.html#6425">6.1</A>
+<DT><STRONG><TT>&#92;thumbtabindexformat</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6438">6.1</A>
+<DT><STRONG><TT>&#92;thumbtabwidth</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6395">6.1</A>
+<DT><STRONG><TT>tikz</TT> package</STRONG>
+<DD><A HREF="ffuserguide.html#4334">3.</A>
+ | <A HREF="ffuserguide.html#6360">5.3.4</A>
+<DT><STRONG><TT>&#92;tocandthumbtabindex</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6415">6.1</A>
+ | <A HREF="ffuserguide.html#6433">6.1</A>
+<DT><STRONG><TT>ttbnonum</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#6376">6.1</A>
+<DT><STRONG><TT>ttbnotitle</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#6370">6.1</A>
+<DT><STRONG><TT>ttbnum</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#6373">6.1</A>
+<DT><STRONG><TT>ttbtitle</TT> option</STRONG>
+<DD><A HREF="ffuserguide.html#6367">6.1</A>
+<DT><STRONG><TT>&#92;twocolumn</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4858">5.1</A>
+ | <A HREF="ffuserguide.html#4863">5.1</A>
+ | <A HREF="ffuserguide.html#4888">5.1</A>
+ | <A HREF="ffuserguide.html#4898">5.1</A>
+ | <A HREF="ffuserguide.html#6785">8.1</A>
+<DT><STRONG><TT>&#92;twocolumnbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5705">5.2</A>
+ | <A HREF="ffuserguide.html#5730">5.2</A>
+ | <A HREF="ffuserguide.html#5749">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5081">5.2</A>
+ | <A HREF="ffuserguide.html#5652">5.2</A>
+ | <A HREF="ffuserguide.html#5687">5.2</A>
+ | <A HREF="ffuserguide.html#5716">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnDbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5740">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnDbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5670">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnDtop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5350">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnDtopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5280">5.2</A>
+<DT><STRONG><TT>&#92;twocolumninarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4937">5.1</A>
+ | <A HREF="ffuserguide.html#4984">5.1</A>
+<DT><STRONG><TT>&#92;twocolumnSbottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5721">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnSbottominarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5635">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnStop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5331">5.2</A>
+<DT><STRONG><TT>&#92;twocolumnStopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5245">5.2</A>
+<DT><STRONG><TT>&#92;twocolumntop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5315">5.2</A>
+ | <A HREF="ffuserguide.html#5340">5.2</A>
+ | <A HREF="ffuserguide.html#5359">5.2</A>
+<DT><STRONG><TT>&#92;twocolumntopinarea</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5022">5.2</A>
+ | <A HREF="ffuserguide.html#5262">5.2</A>
+ | <A HREF="ffuserguide.html#5297">5.2</A>
+ | <A HREF="ffuserguide.html#5326">5.2</A>
+<DT><STRONG><TT>&#92;value</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6673">7.3</A>
+<DT><STRONG><TT>&#92;vcolumnsep</TT></STRONG>
+<DD><A HREF="ffuserguide.html#4998">5.2</A>
+ | <A HREF="ffuserguide.html#6614">7.2</A>
+<DT><STRONG>verbatim text</STRONG>
+<DD><A HREF="ffuserguide.html#3981">2.3</A>
+ | <A HREF="ffuserguide.html#4081">2.3</A>
+ | <A HREF="ffuserguide.html#4091">2.3</A>
+ | <A HREF="ffuserguide.html#960">2.3.1</A>
+ | <A HREF="ffuserguide.html#6890">8.3</A>
+ | <A HREF="ffuserguide.html#6891">8.3</A>
+ | <A HREF="ffuserguide.html#6895">8.3</A>
+<DT><STRONG><TT>&#92;vNtone</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5930">5.3.1</A>
+<DT><STRONG><TT>&#92;vNtonebottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6019">5.3.1</A>
+<DT><STRONG><TT>&#92;vNtonetop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#6049">5.3.1</A>
+<DT><STRONG><TT>&#92;vtwotone</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5909">5.3.1</A>
+ | <A HREF="ffuserguide.html#5953">5.3.1</A>
+ | <A HREF="ffuserguide.html#5981">5.3.1</A>
+ | <A HREF="ffuserguide.html#6009">5.3.1</A>
+<DT><STRONG><TT>&#92;vtwotonebottom</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5958">5.3.1</A>
+ | <A HREF="ffuserguide.html#6044">5.3.1</A>
+<DT><STRONG><TT>&#92;vtwotonetop</TT></STRONG>
+<DD><A HREF="ffuserguide.html#5986">5.3.1</A>
+ | <A HREF="ffuserguide.html#6014">5.3.1</A>
+ | <A HREF="ffuserguide.html#6074">5.3.1</A>
+
+</DL>
+
+<P>
+
+<P>
+<A HREF="ffuserguide.html#top">Top</A>&nbsp;|&nbsp;<A HREF="ffuserguide.html#index">Index</A>
+
+<P>
+
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot3502">...
+user</A><A
+ HREF="ffuserguide.html#tex2html2"><SUP>1.1</SUP></A></DT>
+<DD>Can I have arbitrary shaped frames? See 
+<A HREF="ffuserguide.html#sec:parshape">Non-Rectangular Frames</A>
+
+</DD>
+<DT><A NAME="foot404">... environment</A><A
+ HREF="ffuserguide.html#tex2html3"><SUP>1.2</SUP></A></DT>
+<DD>This is because
+of the arbitrary layout of the flow frames.
+
+</DD>
+<DT><A NAME="foot3503">...
+them.</A><A
+ HREF="ffuserguide.html#tex2html17"><SUP>1.3</SUP></A></DT>
+<DD>Can I have arbitrary
+shaped frames? See 
+<A HREF="ffuserguide.html#sec:parshape">Non-Rectangular
+Frames</A>.
+
+</DD>
+<DT><A NAME="foot3505">...typeblock</A><A
+ HREF="ffuserguide.html#tex2html29"><SUP>2.1</SUP></A></DT>
+<DD>See <A HREF="ffuserguide.html#itm:absval">converting from absolute to relative page 
+co-ordinates</A>
+
+</DD>
+<DT><A NAME="foot3506">... counter</A><A
+ HREF="ffuserguide.html#tex2html30"><SUP>2.2</SUP></A></DT>
+<DD>why can't I use the page number format?
+See query&nbsp;<A HREF="ffuserguide.html#itm:whynot">3</A>
+
+</DD>
+<DT><A NAME="foot3507">...flow</A><A
+ HREF="ffuserguide.html#tex2html31"><SUP>2.3</SUP></A></DT>
+<DD>the
+position for the even pages is set using <TT>&#92;setflowframe</TT><A NAME="3774"></A> 
+defined in <A HREF="ffuserguide.html#sec:modattr">Modifying
+Frame Attributes</A>
+
+</DD>
+<DT><A NAME="foot2877">... of.</A><A
+ HREF="ffuserguide.html#tex2html41"><SUP>2.4</SUP></A></DT>
+<DD>By "neither flows into nor 
+flows out of" I mean you have to explicitly set the contents of 
+this frame. Note that it may appear to contain text if another 
+frame overlaps it, but this text belongs to the other frame.
+
+</DD>
+<DT><A NAME="foot3508">... macro.</A><A
+ HREF="ffuserguide.html#tex2html48"><SUP>2.5</SUP></A></DT>
+<DD>which means that you can have
+verbatim text<A NAME="3981"></A> in the body of the <TT>staticcontents</TT><A NAME="3983"></A> environment
+but not in the body of the <TT>dynamiccontents</TT><A NAME="3986"></A> environment
+
+</DD>
+<DT><A NAME="foot3036">...
+approximately</A><A
+ HREF="ffuserguide.html#tex2html92"><SUP>5.1</SUP></A></DT>
+<DD>It may not be exact, as the flow frames are adjusted so that their height is an integer multiple
+of <TT>&#92;baselineskip</TT><A NAME="4993"></A>, which may increase the gap.
+
+</DD>
+<DT><A NAME="foot2391">... thumbtabs</A><A
+ HREF="ffuserguide.html#tex2html112"><SUP>6.1</SUP></A></DT>
+<DD>but
+only do this if there is enough room on the page!
+
+</DD>
+<DT><A NAME="foot3441">...hypersetup@<TT>&#92;hypersetup</TT></A><A
+ HREF="ffuserguide.html#tex2html113"><SUP>6.2</SUP></A></DT>
+<DD>defined by the
+<TT>hyperref</TT><A NAME="6482"></A> package
+
+</DD>
+<DT><A NAME="foot2618">... approximate</A><A
+ HREF="ffuserguide.html#tex2html142"><SUP>8.1</SUP></A></DT>
+<DD>The pedantic may point out 
+that TeX may make several attempts to fill in the flow frames 
+depending on penalties and so on.
+
+</DD>
+<DT><A NAME="foot2619">... pencilled</A><A
+ HREF="ffuserguide.html#tex2html143"><SUP>8.2</SUP></A></DT>
+<DD>actually it hasn't
+drawn anything really, but it has in its mind's eye.
+
+</DD>
+<DT><A NAME="foot3471">...offset</A><A
+ HREF="ffuserguide.html#tex2html204"><SUP>8.3</SUP></A></DT>
+<DD><TT>offset</TT> can also have the value <TT>compute</TT>
+
+</DD>
+</DL>
+<BR><HR>
+
+</BODY>
+</HTML>

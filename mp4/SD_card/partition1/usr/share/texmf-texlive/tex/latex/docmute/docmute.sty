@@ -1,0 +1,38 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{docmute}[2009/10/08 v1.1 Input standalone documents]
+\def\docmute@docenv{document}
+\long\def\docmute@gobblepreamble#1\begin#2{%
+  \def\docmute@thisenv{#2}%
+  \ifx\docmute@thisenv\docmute@docenv
+    \docmute@afterpreamble
+  \else
+    \expandafter\docmute@gobblepreamble
+  \fi
+}
+\def\docmute@afterpreamble{%
+  \docmute@atbegindoc
+  \def\enddocument{%
+    \docmute@atenddoc
+    \aftergroup\ignorespaces
+    \endinput
+  }%
+  \ignorespaces
+}
+\let\docmute@document=\document
+\let\docmute@enddocument=\enddocument
+\let\docmute@atbegindoc=\relax
+\def\docmute@atenddoc{%
+  \let\enddocument=\docmute@enddocument
+  \begingroup
+}
+\let\docmute=\docmute@gobblepreamble
+\def\document{%
+  \docmute@document
+  \let\documentclass=\docmute
+  \ignorespaces
+}
+\DeclareOption{nested}{%
+  \let\docmute@atbegindoc=\begingroup
+  \let\docmute@atenddoc=\relax
+}
+\ProcessOptions

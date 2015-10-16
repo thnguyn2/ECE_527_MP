@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[myconfig,forpaper,pointsonleft,nosolutions]{eqexam}
+
+\examNum{2}
+\forVersion a
+\VersionAtext{Quiz~\nExam--003}
+\VersionBtext{Quiz~\nExam--007}
+\shortVersionAtext{Q{\nExam}s3}
+\shortVersionBtext{Q{\nExam}s7}
+
+\title[\sExam]{\bfseries\Exam}
+\author{D. P. Story}
+\subject[C1]{Calculus I}
+\date{Spring \the\year}
+\keywords{Test~\nExam, Section \ifAB{003}{007}}
+\email{dpstory@uakron.edu}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\maketitle
+
+\begin{exam}{Part1}
+
+\begin{instructions}[Instructions:]
+Do as well as you can under the circumstances.
+\end{instructions}
+
+\begin{problem*}[3ea]
+Do each of the following without error.
+\begin{multicols}{2}
+    \begin{parts}
+        \item This this problem.
+        \begin{solution}[2in]\end{solution}
+
+        \item This this problem.
+        \begin{solution}[2in]\end{solution}
+\pushProblem
+\end{multicols}
+\par\noindent
+\makebox[\linewidth][c]{\rule{.67\linewidth}{.4pt}}
+\popProblem
+        \item Do this harder problem.
+        \begin{solution}[1in]\end{solution}
+    \end{parts}
+\end{problem*}
+
+\begin{problem*}[\auto]
+Do each of the following without error.
+    \begin{parts}
+        \item\PTs{3} This this problem.
+        \begin{solution}[1in]\end{solution}
+\pushProblem
+\begin{multicols}{2}
+\popProblem
+        \item\PTs{4} This is a hard problem.
+        \begin{solution}[2in]\end{solution}
+        \item\PTs{4} Do this harder problem.
+        \begin{solution}[2in]\end{solution}
+    \end{parts}
+\end{multicols}
+\end{problem*}
+
+\end{exam}
+\end{document}

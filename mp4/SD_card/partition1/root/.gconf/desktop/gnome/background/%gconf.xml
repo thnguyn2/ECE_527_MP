@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="picture_filename" mtime="366" type="string">
+		<stringvalue>file:///root/Pictures/xillinux-wallpaper.png</stringvalue>
+	</entry>
+</gconf>

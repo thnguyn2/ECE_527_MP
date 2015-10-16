@@ -1,0 +1,14 @@
+565b75300248e1daa3e2edebbb97f652  usr/bin/totem
+4b526a7c33ce16c26d10f58adfe0ded2  usr/bin/totem-audio-preview
+37fa84b52032552a6b5daaafc89a65c2  usr/bin/totem-video-indexer
+94a821d5bcbb7abf8d1087426e46ce72  usr/bin/totem-video-thumbnailer
+5b0ec876795e81ef6440b164182d54cb  usr/lib/nautilus/extensions-3.0/libtotem-properties-page.so
+716184d9050e5db5f6284690a3419b85  usr/lib/totem/totem-plugin-viewer
+aaa554852c824beb544961fcbfe516d8  usr/lib/totem/totem/totem-bugreport.py
+c8fe0c8a0ba120d09c67e8bb3c743967  usr/share/applications/totem.desktop
+94966dfd107c79d38dc9f7c7c1e2e9c6  usr/share/bug/totem/control
+f69e1e4c3db9f7adb5efcf6d4dcc9285  usr/share/doc/totem/README.Debian
+895062c3f6b7fb6b09b39fca8cbaacab  usr/share/doc/totem/copyright
+8c4d1e68184098a236965b6320c2f5ea  usr/share/lintian/overrides/totem
+3fa43afa23f09a2c06773195d554c910  usr/share/menu/totem
+17e8cd2b663d36fbe8a40d260bd40510  usr/share/python/runtime.d/totem.rtupdate

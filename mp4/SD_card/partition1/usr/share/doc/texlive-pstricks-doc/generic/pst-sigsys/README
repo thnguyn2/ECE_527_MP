@@ -1,0 +1,24 @@
+pst-sigsys package  2009/04/01 v1.1
+----------------------------------
+The pst-sigsys is a collection of useful macros for disciplines related to signal processing. It defines macros for plotting a sequence of numbers, drawing the pole-zero diagram of a system, shading the region of convergence, creating an adder or a multiplier node, placing a framed node at a given coordinate, creating an up-sampler or a down-sampler node, and connecting a list of nodes using any node-connecting macro.
+
+Copyright (C) 2009, by Farshid Delgosha <fdelgosha@gmail.com>
+
+CTAN: graphics/pstricks/contrib/pst-sigsys
+
+Files:
+ * README               - this file
+ * pst-sigsys.sty       - the package
+ * pst-sigsys-doc.tex   - the tex file of the package documentation
+ * pst-sigsys-doc.pdf   - the pdf file of the package documentation
+ * pstricks.bib         - some citations
+
+
+License:
+  This work may be distributed and/or modified under the conditions of
+  the LaTeX Project Public License, either version 1.3c of this license
+  or (at your option) any later version. The latest version of this
+  license is in
+     http://www.latex-project.org/lppl.txt
+  and version 1.3c or later is part of all distributions of LaTeX
+  version 2005/12/01 or later.

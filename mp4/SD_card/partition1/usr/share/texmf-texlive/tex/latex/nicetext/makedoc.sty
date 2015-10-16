@@ -1,0 +1,367 @@
+%% Macro package `makedoc.sty' for LaTeX2e, 
+%% copyright (C) 2009 Uwe L\"uck, 
+%%   http://www.contact-ednotes.sty.de.vu 
+%% -- author-maintained in the sense of LPPL below -- 
+%% for preparing documentations from packages.
+
+\def\fileversion{0.2} \def\filedate{2009/04/13} 
+
+%% This file can be redistributed and/or modified under 
+%% the terms of the LaTeX Project Public License; either 
+%% version 1.3a of the License, or any later version.
+%% The latest version of this license is in
+%%     http://www.latex-project.org/lppl.txt
+%% We did our best to help you, but there is NO WARRANTY. 
+%%
+%% Please report bugs, problems, and suggestions via 
+%% 
+%%   http://www.contact-ednotes.sty.de.vu 
+%% 
+\NeedsTeXFormat{LaTeX2e}[1994/12/01] 
+% 1994/12/01: \newcommand* etc. 
+\ProvidesPackage{makedoc}[\filedate\space v\fileversion\space
+                          TeX input from *.sty (UL)] 
+%%
+%% |\PackageCodeTrue| and |\PackageCodeFalse| set `\ifPackageCode' 
+%% globally, so redefinition of `~' may be kept local. Note the 
+%% capital `T' and `F'!
+\newcommand*{\PackageCodeTrue} {\global\let\ifPackageCode\iftrue}
+\newcommand*{\PackageCodeFalse}{\global\let\ifPackageCode\iffalse}
+%% |\ifPackageCode| is used to determine whether a listing environment 
+%% must be `\beg'un or `\end'ed. You may also want to suppress empty 
+%% code lines, while empty lines should issue a `\par' break in 
+%% ``comment'' mode.
+%%
+%% Since `\newif' is not used, `\ifPackageCode' must be declared 
+%% explicitly. Declaration of new `\if's must be early in case 
+%% they occur in code that is skipped by another `\if'\dots
+\PackageCodeFalse
+%%
+%% 'makedoc' is an extension of 'fifinddo' on which it depends.
+\RequirePackage{fifinddo}[2009/04/13]
+%% Both 'fifinddo' and 'makedoc' use the ``underscore'' as ``private 
+%% letter'' and make it ``other'' at their end (functionality as with 
+%% ``at'' and `\RequirePackage' is missing here). So after loading 
+%% 'fifinddo', I must restore the new private letter. 
+\catcode`\_=11 %% underscore used in control words
+%%
+%% \subsection{&\MakeDocCorrectHook}
+%% |\MakeDocCorrectHook| is predefined to leave its argument without 
+%% the enclosing braces, otherwise unchanged:
+\let\MakeDocCorrectHook\@firstofone
+%% Less efficiently, the same could have been set up as 
+% \newcommand*{\MakeDocCorrectHook}[1]{\ProcessStringWith{#1}{LEAVE}}
+%% according to 'fifinddo'. 
+%%
+%% It may be \emph{redefined} in a \emph{configuration} file like 
+%% 'makedoc.cfg' or the 'makedoc' script file applying to a single 
+%% package file in order to, e.g., converting plain text to \TeX\ input 
+%% conforming to typographical conventions, making `$\dots$' from 
+%% `...', e.g. 
+%% Replace `LEAVE' in the previous suggestion by an identifier 
+%% whose job you have defined before, and use `\renewcommand' 
+%% in place of `\newcommand'. 
+%% See an example in 'makedoc.cfg'.
+%%
+%% You can \emph{test} your own `\MakeDocCorrectHook' by 
+%% \[`\typeout{\MakeDocCorrectHook{<test-string>}}'\]
+%% ... provided (sometimes) `\MakeOther\ ' ...
+%% You can even change it using `\IfInputLine' from 'fifinddo' in the 
+%% midst of preprocessing a package documentation. 
+%%
+%% \subsection{Distinguish package code from comments}%% <- wiki style breaks in self-doc. 
+%% Use of comment marks is a matter of personal style. Only lines 
+%% starting with the sequence `%% ' are typeset in \TeX\ quality 
+%% under the present release. Lines just containing `%%' 
+%% (without the space) are used to suppress empty code lines 
+%% preceding section titles (while keeping some visual space 
+%% in the package file). There is a preferable way to do this, 
+%% however not in the present release \dots
+%%
+%% The parsing macros must be set up reading `%' and ` ' as ``other'' 
+%% characters. Using the optional arguments for this creates 
+%% difficulties that can be somewhat avoided by redefining 
+%% |\PatternCodes|.
+\renewcommand*{\PatternCodes}{\MakeOther\%\MakeOther\ }%% 2009/04/02 
+%% Look here: the line became too long and could not be broken. 
+%% Must we really introduce new comment marks? 
+% \MakeSetupSubstringCondition{comment}[\MakeOther\%\MakeOther\ ] 
+%% The next line sets the ``sandbox'' for the detecting macro, as it 
+%% is coined in the documentation of 'fifinddo', with ``identifier'' 
+%% |PPScomment|.
+\MakeSetupSubstringCondition{PPScomment}{%% }{{#1}} 
+%% The last argument stores the expanded input line for reference by 
+%% macros called. The next line is a test whether the setup works. 
+%  \expandafter \show \csname \setup_substr_cond PPScomment\endcsname 
+%% Here comes the definition of the corresponding testing macro. 
+%% #3 is the expanded input line from above. The `\If'\dots commands, 
+%% `\fdInputLine', `\fdInputLine', and `\RemoveDummyPatternArg' 
+%% are from 'fifinddo'. 
+% \MakeSubstringConditional{comment}[\MakeOther\%\MakeOther\ ]
+\MakeSubstringConditional{PPScomment}{%% }#3{%% #3 entire test string
+  \IfFDinputEmpty{\OnEmptyInputLine}{%
+%% The empty line test comes early to offer control with 
+%% `\OnEmptyInputLine' both code and comment mode. 
+%% Maybe it should always? %% TODO 2009/04/13
+    \IfFDempty{#1}%% 
+              {\TreatAsComment{%
+                 \RemoveDummyPatternArg\MakeDocCorrectHook{#2}}}%
+              {\ifx\fdInputLine\PPstring 
+                 \ifPackageCode\else \WriteResult{}\fi%% 2009/04/05 
+                 %% <- allow paragraphs in comments 
+               \else \TreatAsCode{#3}\fi}}}
+%  \expandafter \show \csname \substr_cond PPScomment\endcsname
+%% |\PPstring| stores the line suppressing empty code lines. 
+\newcommand*{\PPstring}{} \xdef\PPstring{\PercentChar\PercentChar}
+%% |comment| will be a ``generic'' identifier to call a comment line 
+%% detector. It might be predefined to issue an ``undifined'' error; 
+%% however this release predefines it to behave like `PPScomment'. 
+\CopyFDconditionFromTo{PPScomment}{comment}
+%% Alternative still to be considered: 
+% \@namedef{\setup_substr_cond comment}{%
+%   \PackageError{makedoc}{Job `comment' not defined}%
+%   {Use \string\CopyFDconditionFromTo{comment}}}
+%%
+%% \subsection{Dealing with comments}
+%% |\TreatAsComment{<text>}| writes <text> to the documentation 
+%% file. If we had ``package code'' (were in ``code mode'') so far, 
+%% the listing environment is ended first. 
+\newcommand*{\TreatAsComment}[1]{%
+  \ifPackageCode
+    \WriteResult{\string\end{packagecode\@empty}}%
+%% The `\@empty' here is a lazy trick to save self-documentation 
+%% fighting 'verbatim''s ``highlight'' of finding ends of listings 
+%% (to be improved). %% 
+%%
+%% We always use `\string' to prevent macro expansion in `\write'ing 
+%% in place of \LaTeX's `\protect', 
+%% as long as 'fifinddo' simply uses the primitive `\write' in place 
+%% of \LaTeX's `\proteced@write' \dots %% todo 2009/04/08
+    \PackageCodeFalse 
+    \EveryComment
+%     \_empty_code_lines_false
+  \fi
+  \WriteResult{#1}}
+%% Here, |\EveryComment| is a macro hook for inserting material that should 
+%% not appear in a listing environment. 
+\global\let\EveryComment\relax %% should be changed globally.
+%%
+%% \subsection{Sectioning}
+%% \label{sec:secparsers}
+%% We provide a facility from 'wiki.sty' that imitates the sectioning 
+%% syntax used in editing \emph{Wikipedia} pages, in a different 
+%% implementation (better compatibility) and in a more general way. 
+%% On Wikipedia, `== Definition ==' works similar as 
+%% `\section{Definition}' does with \LaTeX. With the present 
+%% implementation, you can type, e.g.,
+%% \[`%%%%%%%%%%%%%%%%%%%%%% == Definition == %%%%%%%%%%%%%%%%%%%%%%'\] 
+%% to get a similar result. The number of `%' characters doesn't 
+%% matter, and there can be other stuff, however: additional `=' 
+%% symbols may harm. Three sectioning levels are supported, through 
+%% `==<text>==', `===<text>===', and `====<text>====' (deepest). 
+%%
+%% There are three detector macros made for programmers. 
+%% The most general one is 
+%% In the following definitions, there is a single tilde to prevent 
+%% `=' symbols being gobbled by the test (realized by accident). 
+%% %% 2009/04/13
+%% |\SectionLevelThreeParseInput|:
+\newcommand*{\SectionLevelThreeParseInput}{%
+  \expandafter \test_sec_level_iii \fdInputLine ~========&}
+%% |\SectionLevelTwoParseInput| 
+\newcommand*{\SectionLevelTwoParseInput}{%
+  \expandafter \test_sec_level_ii \fdInputLine    ~======&}
+%% and |\SectionLevelOneParseInput| 
+\newcommand*{\SectionLevelOneParseInput}{%
+  \expandafter \test_sec_level_i \fdInputLine       ~====&}
+%% allow skipping deeper levels for efficiency. 
+%% % TODO in fifinddo: setup for 2 strings in 1 line 2009/04/13
+%%
+%% In the terminology of the 'fifinddo' documentation, the previous 
+%% three commands are ``sandbox builders.'' The following three 
+%% commands are the corresponding ``substring conditionals.''
+%% However, 'fifinddo' so far %% todo 2009/04/08
+%% only deals with \emph{single} substrings, while here we are 
+%% dealing with \emph{pairs} of substrings. We are not using 
+%% general setup macros, but define the parsing macros ``manually,''
+%% as it is typical in many other macros in 'latex.ltx' and other 
+%% \LaTeX\ packages. You can fool our macros easily, there is 
+%% no syntax check. %% todo 2009/04/08
+\def\test_sec_level_iii#1====#2====#3&{%
+  \IfFDempty{#2}%
+            {\test_sec_level_ii #1======&}%
+            {\WriteSection\mdSectionLevelThree{#2}}}
+\def\test_sec_level_ii#1===#2===#3&{%
+  \IfFDempty{#2}%
+            {\test_sec_level_i    #1====&}%
+            {\WriteSection\mdSectionLevelTwo{#2}}} 
+\def\test_sec_level_i#1==#2==#3&{%
+  \IfFDempty{#2}%
+            {\RemoveTildeArg \ProcessStringWith{#1}{comment}}%
+            {\WriteSection\mdSectionLevelOne{#2}}} 
+%% `\ProcessStringWith' here passes the expanded `\fdInputLine' 
+%% to the general comment detector.
+%%
+%% |\WriteSection{<command>}{<text>}| replaces an input line 
+%% with a line \[`<command>{\hspace{1sp}\ignorespaces <text>\unskip }'\] 
+%% in the documentation file and switches into ``comment mode.''
+%% `\hspace{1sp}' ensures that 'niceverb''s package name feature works. 
+%% `\ignorespaces' and `\unskip' undo the spaces between title text and 
+%% the `=' symbols that usually are typed for readability.
+\newcommand*{\WriteSection}[2]{%
+  \TreatAsComment{% 
+    ^^J#1{\string\hspace{1sp}\ignorespaces 
+          \MakeDocCorrectHook{#2}\unskip}^^J}} 
+%% We insert `\section' using |\mdSectionLevelOne| etc.\
+%% which the programmer can redefine, e.g., when the 
+%% documentation is part of a `\section' (or even deeper) 
+%% according to the ``documentation driver'' file. 
+\newcommand*\mdSectionLevelOne  {\string\section}
+\newcommand*\mdSectionLevelTwo  {\string\subsection}
+\newcommand*\mdSectionLevelThree{\string\subsubsection}
+%%
+%% This sectioning feature is not used in 'makedoc.sty' since the 
+%% \emph{definitions} of the parsing macros fool the same macros \dots 
+%%
+%% \subsection{Commented code}
+%% |\TreatAsCode{<text>}| is the opposite to `\TreatAsComment{<text>}':
+\newcommand*{\TreatAsCode}[1]{%
+  \ifPackageCode
+%     \_empty_code_lines_true
+  \else
+    \WriteResult{\string\begin{packagecode}}%
+    \PackageCodeTrue
+  \fi
+  \WriteResult{#1}%
+%   \WriteResult{\maybe_result_empty_line #1}%
+%   \let\maybe_result_empty_line\empty
+}
+%%
+%% \subsection{Dealing with empty input lines} 
+%% |\OnEmptyInputLine| is a default setting (or hook) for what to do 
+%% with empty lines in the input file. The default is to insert an 
+%% empty line in the output file: 
+\newcommand*{\OnEmptyInputLine}{\WriteResult{}}
+%% |\NoEmptyCodeLines| changes the setting to suppressing empty code 
+%% lines, while in ``comment mode'' an empty input line \emph{does} 
+%% insert an empty line, for starting a new paragraph: 
+\newcommand*{\NoEmptyCodeLines}{%% suppress empty code lines
+  \renewcommand*{\OnEmptyInputLine}{%
+    \ifPackageCode \else \WriteResult{}\fi}}
+%% There is a better policy---didn't work so far \dots
+%%
+%% \subsection{Bundling typical things: script commands}
+%% \label{sec:script}
+%% First practical experiences suggest the following shorthands.
+%% They should simplify matters so much that the 'makedoc' script 
+%% for a single package really should need about five lines only, 
+%% %% <- TODO check 2009/04/08 
+%% and even \emph{they} should be so simple that you should hardly 
+%% spend a minute about them. 
+%%
+%% |\LaTeXresultFile{<output>}| saves you the extra line for inserting 
+%% the `\ProvidesFile' line ... no, actually it is 'makedoc'
+%% that wants to be mentioned with `\ProvidesFile' ... 
+%% (otherwise copied from 'fifinddo') \dots 
+\newcommand*{\LaTeXresultFile}[1]{% 
+  \ResultFile{#1}%%% \WriteProvides}
+  \WriteResult{%
+    \string\ProvidesFile{\result_file_name}% 
+      [\the\year/\two@digits\month/\two@digits\day\space 
+       automatically generated with makedoc.sty]}}%
+%% |\MakeDoc{<input>}| preprocesses <input> to render input for 
+%% \LaTeX, considering what is typical for a \LaTeX\ package as the 
+%% <input> one here:
+\newcommand*{\MakeDoc}[1]{%
+%% In case of a ``header'' (see below) we change into ``code mode'':
+  \ifnum\header_lines>\z@
+        \WriteResult{\string\begin{packagecode}}%
+        \PackageCodeTrue %% TODO both lines makedoc command!? 
+                         %%      2009/04/08
+  \else \PackageCodeFalse \fi
+%% The loop follows. There is a placeholder `\makd_doc_line_body' 
+%% that is predefined below and can be changed while processing the 
+%% <input> file. 
+  \ProcessFileWith{#1}{%
+    \CountInputLines %% stepping line counter is standard
+    \make_doc_line_body
+    \process_line_message}%
+%% Currently the ``VERSION HISTORY'' is typeset verbatim 
+%% (for ``tabbing''), we then must leave ``code mode'' here:
+  \ifPackageCode
+    \WriteResult{\string\end{packagecode\@empty}}%% self-doc-trick
+    \PackageCodeFalse %% TODO both lines makedoc command!? 2009/04/08 
+  \fi
+%% When the <input> file has been processed, certain default settings 
+%% might be restored---in case another <input> file is processed for the 
+%% same documentation document: 
+%   \HeaderLines{0}% 
+%   \MainDocParser{\SectionLevelThreeParseInput}%% TODO!? 2009/04/08
+}
+%% \subsubsection{File preamble}
+%% A \LaTeX\ package typically has a ``header'' or ``preamble'' 
+%% (automatically inserted by 'docstrip') with very scarce information 
+%% on which file it is and what it provides, and with much more Legalese. 
+%% Typesetting it in \TeX\ quality may be more misleading than 
+%% typesetting it \emph{verbatim}. So we typeset it \emph{verbatim}. 
+%% Now: where does the ``header'' end? 
+%% `\NeedsTeXFormat' might be considered the border.---Yet it seems 
+%% to be more simple and reliable just to act in terms of the 
+%% \emph{number of lines} 
+%% that the header should be long. This length <how-many-lines> is declared by 
+%% |\HeaderLines{<how-many-lines>}|: 
+\newcommand*{\HeaderLines}{\def\header_lines}
+\HeaderLines{0}
+%% So the default is that there aren't any header lines, unless 
+%% another `\HeaderLines' is issued before some `\MakeDoc'.
+%% The way input is parsed after the ``header'' is set by 
+%% |\MainDocParser{<parsing-command>}|. 
+\newcommand*{\MainDocParser}{\def\main_doc_parser}
+%% `\SectionLevelThreeParseInput' from section~\ref{sec:secparsers}
+%% is the default, two alternatives are defined there, another one is 
+%% `\ProcessInputWith{comment}' from 'fifinddo'. 
+\MainDocParser{\SectionLevelThreeParseInput}
+%% Here is how `\HeaderLines' and `\MainDocParser' act: 
+\def\make_doc_line_body{%
+  \IfInputLine{>\header_lines}%
+              {\let\make_doc_line_body\main_doc_parser
+                   \make_doc_line_body}%    %% switch to deciding
+              {\TreatAsCode{\fdInputLine}}} %% header verbatim
+%% |\ProcessLineMessage{<command>}| is designed to define a screen 
+%% (or log) message <command>. 
+%% % A simple setting may be \[`\ProcessLineMessage{\message{.}}'\] with 
+%% `\ProcessLineMessage{\message{.}}' has a result like with 'docstrip'. 
+%% You just get one dot on screen per input line 
+%% as a simple confirmation that 
+%% the program is not hung up. %% TODO phrase!? 2009/04/08
+%% However, the message may slow down a run considerably 
+%% (if so, choose `\ProcessLineMessage{}' in the script). 
+%% % , you really have to 
+%% % wait about a second while you hardly notice the 'makedoc' run 
+%% % without screen messages. Therefore, the default is \emph{not} 
+%% % to issue any screen message.%% TODO more complex procedures!? 2009/04/08 
+%% %---No! 
+%% But it is better for beginner users of the package, 
+%% so made default. %% 2009/04/09 
+\newcommand*{\ProcessLineMessage}{\def\process_line_message}
+% % \ProcessLineMessage{} %% no, still more efficient: 
+% \let\process_line_message\relax
+\ProcessLineMessage{\message{.}}
+%%
+%% \subsection{Leave the package}
+\catcode`\_=8   %% restores underscore use for subscripts
+
+\endinput 
+%%
+%% \subsection{VERSION HISTORY}
+
+v0.1   2009/04/03   very first version, tested on morgan.sty
+v0.2   2009/04/05   \OnEmptyInputLine, \NoEmptyCodeLines
+                    comment -> PPScomment, \IfFDinputEmpty, 
+                    \EveryComment, \PPstring may be par break 
+       2009/04/08   \InputString -> \fdInputLine, 
+                    \section -> \subsection; documentation!
+       2009/04/08f. \MakeDoc
+       2009/04/12   ``line too long'' w/o redefining \PatternCodes;
+                    \MakeDocCorrectHook
+       2009/04/13   tilde with sectioning 

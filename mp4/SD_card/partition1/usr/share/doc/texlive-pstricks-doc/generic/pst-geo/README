@@ -1,0 +1,8 @@
+All decumentations are created with the script pst2pdf
+which extracts all psapicture or postscript environments
+from the documents, run them as stand alone documents
+with the same preamble as the main document, and creates
+png images to decrease the size of the pdf document.
+
+For more information see pst2pdf.
+

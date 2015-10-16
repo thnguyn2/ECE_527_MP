@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<link rel="stylesheet" href="default.css" type="text/css"/>
+
+<title>Epspdf and epspdftk</title>
+
+</head><body>
+
+<h1 class="display">Epspdf and epspdftk</h1>
+
+<p class="display">A multiplatform GUI- and command-line converter
+for [e]ps and pdf.</p>
+
+<p class="display"><i>Siep Kroonenberg,<br/><tt>siepo at cybercomm
+dot nl</tt></i></p>
+
+<p><a href="http://tex.aanhet.net/epspdf/">Current online version of
+this page</a></p>
+
+<h2>Table of Contents</h2>
+
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#install">Installation</a></li>
+<li><a href="#preview">Preview programs</a></li>
+<li><a href="#files">Files</a></li>
+<li><a href="#releases">Releases</a></li>
+<li><a href="epspdf.pdf">User Manual</a></li>
+</ul>
+
+<h2><a name="features"/>Features</h2>
+
+<ul>
+<li>Distiller</li>
+<li>Works both for documents and for graphics</li>
+<li>Single-page selection</li>
+<li>Also converts from pdf back to PostScript and eps</li>
+<li>Removal of preview headers from eps files</li>
+<li>Cropping extra whitespace</li>
+<li>Grayscaling (sometimes)</li>
+<li>GUI- and command-line version</li>
+<li>GUI-configurable preferences</li>
+<li>Multiplatform: works unchanged on Windows, Unix/Linux and Mac OS
+X</li>
+<li>Support for TeX Live and MiKTeX</li>
+</ul>
+
+<p>Epspdf has been created with TeX in mind. For TeX and its
+derivatives, eps and pdf are the preferred graphics formats.</p>
+
+<p>Ghostscript can convert PostScript to pdf. However, few people
+are prepared to deal with the ghostscript command-line. Several
+command-line utilities try to help out, e.g. epstopdf, a2ping, and
+the convert utility from ImageMagick. But for most users this is
+still not good enough.</p>
+
+<p>Epspdftk adds a GUI, with buttons to select options and with
+dialogs for opening and saving files.</p>
+
+<p>A lot more can be done if you can round-trip between PostScript
+and pdf. Although Ghostscript can go from pdf to PostScript, pdftops
+does a much better job converting text back to PostScript. This
+opens several new possibilities: grayscaling and computing a better
+boundingbox for either eps- or pdf graphics, and page selection from
+multipage PostScript- and pdf documents. Epspdf will use pdftops if
+it can find it, and silently does whatever back-and-forth
+conversions are necessary.</p>
+
+<p>The command-line program epspdf is written in Ruby. Epspdftk,
+its GUI companion, in Ruby/Tk.</p>
+
+<p>Starting with the 2008 edition, epspdf is included in TeX Live as
+an optional package, complete with wrapper scripts epspdf and
+epspdftk which can be called from the command-line without further
+ado.</p>
+
+<h2><a name="prerequisites"/>Prerequisites</h2>
+
+<p>These are the required and optional prerequisites, which will be
+checked for when epspdf starts:</p>
+<ul>
+<li>Ghostscript</li>
+<li>pdftops from the xpdf suite, strongly recommended for better
+  pdf to PostScript conversions</li>
+<li>Ruby 1.8.<i>x</i></li>
+<li>Tcl/Tk is only required for the GUI interface. Only version 8.4
+  has been tested.</li>
+<li>Optional: viewers for PostScript and pdf</li>
+</ul>
+
+<p>You may not have to install all of these yourself.</p>
+
+<h3>Linux</h3>
+
+<p>On a current Linux distribution you can almost certainly install
+everything from your distribution's package repositories. You may
+have to install Ruby's Tk bindings, in addition to Ruby and Tcl/Tk
+themselves. The name of such a package might be
+e.g. libtcltk-ruby. As to PostScript- and pdf viewers: epspdf tests
+for several popular viewers, but the configuration screen also lets
+you specify viewers manually.</p>
+
+<h3>Mac OS X (Tiger and later)</h3>
+
+<p><b>Warning!</b> Epspdf has not yet been tested with Snow
+  Leopard. There is a report that epspdftk fails under Snow
+  Leopard.</p>
+
+<p>Ruby and Tcl/Tk are already part of the operating
+system. Ghostscript is included in MacTeX, but is also available via
+e.g. MacPorts. You can get pdftops from MacPorts as part of either
+Poppler or xpdf. Another source is <a
+href="http://users.phg-online.de/tk/MOSXS/">http://users.phg-online.de/tk/MOSXS/</a>.</p>
+
+<p>If you want to compile xpdf it yourself, which is not hard, you
+can ignore warnings about X, Motif or FreeType not being found since
+these missing libraries won't affect the compilation of pdftops.</p>
+
+<h3>Windows (Windows 2000 and later)</h3>
+
+<p>By itself, Windows lacks any of the prerequisites of
+epspdf. However, a TeX installation may fill some of the gaps, and
+there is a special Windows installer which includes a partial Ruby
+installation. See the table below:</p>
+
+<table id="prereq">
+
+  <thead><tr><th class="fcol">TeX
+  distribution</th><th>Installer</th><th>Zipfile</th></tr></thead>
+
+  <tfoot>
+  <tr><td colspan="3"><b><a name="tlnote"
+  class="fineprint"> (1)</a></b> MikTeX and TeX Live 2008 include a
+  hidden Ghostscript which is always installed, and which epspdf
+  knows how to find. Caveat: although older versions of TeX Live
+  include a Ghostscript installer, it is not impossible to install an
+  older TeX Live without Ghostscript, in which case you have to
+  provide a Ghostscript yourself.</td></tr>
+
+  <tr><td colspan="3"><b><a name="tlzipnote"
+  class="fineprint"> (2)</a></b> With TeX Live &ge; 2008, you are
+  better off installing the TeX Live package, which also gives you
+  wrapper batchfiles epspdf.bat and epspdftk.bat. You still need to
+  install Ruby and Tcl/Tk.</td></tr>
+  </tfoot>
+
+  <tr><th class="fcol">TeX Live<a href="#tlnote">(1)</a></th><td>No additional
+  requirements</td> <td>Ruby, Tcl/Tk<a href="#tlzipnote">(2)</a></td></tr>
+
+  <tr><th class="fcol">MiKTeX</th><td>Pdftops (optional)</td> <td>Pdftops
+  (optional); Ruby, Tcl/Tk(optional)</td></tr>
+
+  <tr><th class="fcol">Other/None</th><td>Ghostscript, pdftops (optional)</td>
+  <td>Ghostscript; pdftops(optional), Ruby, Tcl/Tk
+  (optional)</td></tr>
+
+
+</table>
+
+<h3>URLs for the prerequisites</h3>
+
+<dl>
+
+<dt>Ghostscript and GSview (<a
+ href="http://pages.cs.wisc.edu/~ghost/">http://pages.cs.wisc.edu/~ghost/</a>)</dt>
+ <dd>Contains sources and Windows binaries. The Windows binaries
+ come with standard GUI Windows setup programs.</dd>
+
+<dt>XPDF (<a
+ href="http://www.foolabs.com/xpdf/">http://www.foolabs.com/xpdf/</a>)</dt>
+ <dd> Sources and Windows binaries. The Windows binaries are
+ packaged into a zipfile, which has to be manually unpacked. The
+ Configure screen of epspdftk lets you browse for the chosen
+ location. You have to do this only once. </dd>
+
+<dt>XPDF, Mac OS X binaries (<a
+  href="http://users.phg-online.de/tk/MOSXS/">http://users.phg-online.de/tk/MOSXS/</a>)</dt>
+  <dd>These are universal binaries.</dd>
+
+<dt>TeX Live (<a
+  href="http://www.tug.org/texlive/">http://www.tug.org/texlive/</a>)</dt>
+  <dd>TeX Live 2008 includes epspdf as an optional install. For
+  Windows, this version doesn't require external copies of pdftops
+  or Ghostscript but does not include Ruby or Tcl/Tk.</dd>
+
+<dt>MacTeX (<a
+  href="http://www.tug.org/mactex/">http://www.tug.org/mactex/</a>)</dt>
+  <dd>MacTeX is based on TeX Live. Its set of add-ons includes
+  Ghostscript, and can be downloaded separately.</dd>
+
+<dt>The MacPorts Project (<a
+  href="http://www.macports.org/">http://www.macports.org/</a>)</dt>
+  <dd>MacTeX has Poppler- and xpdf packages either of which include
+  pdftops.</dd>
+
+<dt>Ruby one-click installer for Windows (<a
+  href="http://rubyforge.org/projects/rubyinstaller/">
+  http://rubyforge.org/projects/rubyinstaller/</a>)</dt> <dd>Current
+  versions (1.8.4 and later) require Tcl/Tk to be separately
+  installed.</dd>
+
+<dt>Old releases of Ruby one-click installer (<a
+  href="http://rubyforge.org/frs/?group_id=167">
+  http://rubyforge.org/frs/?group_id=167</a>)</dt> <dd>Versions
+  prior to 1.8.4 include Tcl/Tk.</dd>
+
+<dt>Ruby source code (<a
+  href="http://www.ruby-lang.org/en/downloads/">http://www.ruby-lang.org/en/downloads/</a>)</dt><dd>For
+  those people who prefer to roll their own...</dd>
+
+<dt>ActiveTcl from ActiveState (<a
+  href="http://activestate.com/Products/ActiveTcl/">
+  http://activestate.com/Products/ActiveTcl/</a></dt> <dd> Get
+  version 8.4, not 8.5.</dd>
+
+</dl>
+
+
+<h2><a name="install"/>Installation</h2>
+
+<p>First make sure that the prerequisites are met. Then:</p>
+
+<h3>TeX Live 2008</h3>
+
+<p>Use TeX Live's package manager tlmgr for installation.</p>
+
+<h3>Windows setup program</h3>
+
+<p>Download the <a href="epspdf.0.4.2.exe">epspdftk setup
+program.</a> You can run it in the usual way, by double-clicking. The
+setup program will create entries in your start menu for epspdftk
+and for the user manual.</p>
+
+<h3>Windows zipfile</h3>
+
+<p>Download the <a href="epspdf.0.4.2.zip">epspdf zip file</a>,
+unpack it somewhere and create a shortcut for epspdftk.rbw. If you
+plan to use the command-line version, put a batchfile in a directory
+on your path with the line</p>
+
+<pre>
+"&lt;path_to_ruby.exe&gt;" "&lt;path_to_epspdf.rb&gt;" %*
+</pre>
+
+<p>With such a batchfile, the caller has to take care of quoting:</p>
+<pre>
+epspdf "my file.eps" "my file.pdf"
+</pre>
+
+<p>Epspdf[tk] has been tested with Windows 2000, Windows XP and
+Windows Vista.</p>
+
+<h3>Unix/Linux</h3>
+
+<p>Download the <a href="epspdf.0.4.2.tgz">tar.gz archive</a> and
+unpack it in some directory. All files should be in the same
+directory; that is how they find each other. If you plan to use
+epspdf.rb from the command-line, then create a shell script
+<tt>epspdf</tt> such as</p>
+
+<pre>
+#!/bin/sh
+&lt;path_to_epspdf&gt;/epspdf.rb "$@"
+</pre>
+
+<p>and put it somewhere on your path.</p>
+
+<p>You can do the same for epspdftk. The first command-line
+parameter will be interpreted as startup directory for the file
+browser.</p>
+
+<h3>Mac OS X</h3>
+
+<p>You can install as for Unix/Linux. Here, too, all files should be
+in the same directory.</p>
+
+<p>There is also a compressed disk image epspdf.x.x.x.dmg.gz which
+wraps epspdftk into a Max OS X <q>app</q>. Double-click once to
+expand, a second time to mount, then drag epspdftk.app to the
+Applications folder.</p>
+
+<p>Epspdf mostly duplicates functionality of Preview. But having an
+alternate conversion engine means that you can have another shot at
+problem files.</p>
+
+<h2><a name="preview"/>Preview programs</h2>
+
+<h3>Windows</h3>
+
+<p>Epspdftk will use the default Windows programs for PostScript and
+pdf. If you have TeX Live 2008 or later then you can assign &lt;TeX
+Live root&gt;\bin\win32\psv.bat as previewer for .ps- and .eps
+files. For Windows only, there is an additional <q>View
+with...</q> button to select a viewer yourself.</p>
+
+<h3>Unix/Linux</h3>
+
+<p>Supported PostScript viewers include evince, gv, gsview and
+okular. These are also listed as pdf viewers. Additional pdf viewers
+are xpdf, gpdf, epdfview and acroread/Adobe Reader. You can also
+specify a previewer manually in the configuration screen; see the <a
+href="epspdf.pdf"> user manual.</a>.</p>
+
+<h3>Mac OS X</h3>
+
+<p>Epspdftk will always use the default pdf viewer under OS X,
+usually Preview or Adobe Reader.</p>
+
+<h2><a name="files"/>Files</h2>
+
+<ul>
+<li><a href="epspdf.0.4.2.tgz">epspdf.0.4.2.tgz</a> preferred for Unix
+and Mac OS X</li>
+
+<li><a href="epspdf.0.4.2.zip">epspdf.0.4.2.zip</a> preferred for
+Windows</li>
+
+<li><a href="epspdf.0.4.2.exe">epspdf.0.4.2.exe</a> Windows setup
+  program, including Ruby/Tk subset</li>
+
+<li><a href="epspdftk.0.4.2.dmg.gz">epspdftk.0.4.2.dmg.gz</a>
+  compressed disk image with epspdftk wrapped into a Mac OS X <q>app</q></li>
+</ul>
+
+<h3>Older releases</h3>
+<ul>
+<li><a href="epspdf.0.3.0.tgz">epspdf.0.3.0.tgz</a> for Unix
+and Mac OS X</li>
+<li><a href="epspdf.0.3.0.zip">epspdf.0.3.0.zip</a> for
+Windows</li>
+<li><a href="epspdf.0.3.0.exe">epspdf.0.3.0.exe</a> Windows setup
+  program</li>
+<li><a href="epspdf.0.2.12.tgz">epspdf.0.2.12.tgz</a> for Unix
+and Mac OS X</li>
+<li><a href="epspdf.0.2.12.zip">epspdf.0.2.12.zip</a> for
+Windows</li>
+<li><a href="epspdf.0.2.12.exe">epspdf.0.2.12.exe</a> Windows setup
+  program</li>
+<li><a href="epspdf.0.2.11.tgz">epspdf.0.2.11.tgz</a> for Unix
+and Mac OS X</li>
+<li><a href="epspdf.0.2.11.zip">epspdf.0.2.11.zip</a> for
+Windows</li>
+<li><a href="epspdf.0.2.11.exe">epspdf.0.2.11.exe</a> Windows setup
+  program</li>
+<li><a href="epspdf.0.2.01.tgz">epspdf.0.2.01.tgz</a> for Unix
+ and Mac OS X</li>
+<li><a href="epspdf.0.2.01.zip">epspdf.0.2.01.zip</a> for
+ Windows</li>
+<li><a href="epspdf.0.2.exe">epspdf.0.2.exe</a>, Windows setup
+ program</li>
+
+<li><a href="epspdf_app.0.2.01.zip">epspdf_app.0.2.01.zip</a> Mac OS X
+applet for starting epspdftk.rb</li>
+</ul>
+
+<h2><a name="releases"/>Releases</h2>
+
+<dl><dt>0.4.2</dt><dd>Current version. More liberal documentation
+  license. Slight documentation updates.</dd>
+
+<dt>0.4.1</dt><dd>Documentation: added section on
+  bitmaps. Windows setup program: added missing Tcl/Tk
+  licenses. Mac: double-clickable epspdftk.app with included
+  epspdftk replaces double-clickable epspdf.app add-on.</dd>
+
+<dt>0.4.0</dt><dd>Optionally uses hires boundingbox. Faster startup
+  due to simpler testing of prerequisites. Grayscaling: support for
+  HSB color model, although I yet have to encounter a PostScript
+  file using this. Manual converted to texinfo format. Windows: new
+  <q>View with...</q> button; support for MikTeX's built-in
+  Ghostscript; streamlined Ruby subset, with Tcl/Tk compiled from
+  source.</dd>
+
+<dt>0.3.0</dt><dd>Under Windows, now recognizes whether it is
+  embedded in TeX Live 2008 and then can use ghostscript/pdftops
+  from TeX Live. Also added TeX Live wrapper scripts. Uninstaller
+  for Windows setup program. Bug fixes: now accepts non-numerical
+  version strings for pdftops. No longer checks for viewers under
+  Mac OS X.</dd>
+
+<dt>0.2.12</dt><dd>Bug fixes: log rotation now works. Under Windows,
+  sometimes boundingboxes couldn't be calculated. This was caused by
+  double quotes within backquotes. This is now avoided by using
+  short filenames within backquotes. Minor changes in user
+  guide.</dd>
+
+<dt>0.2.11</dt><dd> Minor fixes. Changes in documentation.</dd>
+
+<dt>0.2.10</dt><dd>A computed boundingbox is now expanded by one
+  point in all directions. This should prevent too-tight
+  cropping. There is no interface for changing this amount; it can
+  only be changed by hand-editing the bb_spread option in the
+  .epspdfrc file or in the HKCU\software\epspdf registry key.</dd>
+  <dd>The File Open dialog remembers the last directory visited
+  (between calls, not between program sessions).</dd><dd>Changes in
+  documentation.</dd>
+
+<dt>0.2.01</dt><dd>Fixes to the Applescript applet epspdf.app for
+  starting up epspdftk under Mac OS X. It picks up the terminal
+  search path and no longer requires correct settings in
+  $HOME/.MacOSX/environment.plist. Epspdf.app is now packaged
+  separately, under Mac OS X, and now has an intact resource
+  fork. It has been removed from the other archives.</dd>
+
+<dt>0.2</dt><dd>Original release</dd>
+</dl>
+
+<hr/>
+
+<p class="fineprint">Last revised: September 11, 2009</p>
+</body></html>

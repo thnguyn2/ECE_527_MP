@@ -1,0 +1,953 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002 (1.67)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Upgrading from the glossary package to the glossaries
+package</TITLE>
+<META NAME="description" CONTENT="Upgrading from the glossary package to the glossaries
+package">
+<META NAME="keywords" CONTENT="glossary2glossaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+<H1 ALIGN="CENTER">Upgrading from the glossary package to the glossaries
+package</H1>
+<P ALIGN="CENTER"><STRONG>Nicola L.C. Talbot</STRONG></P>
+<P ALIGN="CENTER"><STRONG>14th January 2009</STRONG></P>
+<BR>
+
+<H2><A NAME="SECTION00010000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html29"
+  HREF="glossary2glossaries.html#SECTION00020000000000000000">1 Why the Need for a New Package?</A>
+<LI><A NAME="tex2html30"
+  HREF="glossary2glossaries.html#SECTION00030000000000000000">2 Package Options</A>
+<LI><A NAME="tex2html31"
+  HREF="glossary2glossaries.html#SECTION00040000000000000000">3 Defining new glossary types</A>
+<LI><A NAME="tex2html32"
+  HREF="glossary2glossaries.html#SECTION00050000000000000000">4 &#92;make&lt;glossary name&gt;</A>
+<LI><A NAME="tex2html33"
+  HREF="glossary2glossaries.html#SECTION00060000000000000000">5 Storing glossary information</A>
+<LI><A NAME="tex2html34"
+  HREF="glossary2glossaries.html#SECTION00070000000000000000">6 Adding an entry to the glossary</A>
+<UL>
+<LI><A NAME="tex2html35"
+  HREF="glossary2glossaries.html#SECTION00071000000000000000">6.1 &#92;useglosentry</A>
+<LI><A NAME="tex2html36"
+  HREF="glossary2glossaries.html#SECTION00072000000000000000">6.2 &#92;useGlosentry</A>
+<LI><A NAME="tex2html37"
+  HREF="glossary2glossaries.html#SECTION00073000000000000000">6.3 &#92;gls</A>
+<LI><A NAME="tex2html38"
+  HREF="glossary2glossaries.html#SECTION00074000000000000000">6.4 &#92;glossary</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html39"
+  HREF="glossary2glossaries.html#SECTION00080000000000000000">7 Acronyms</A>
+<UL>
+<LI><A NAME="tex2html40"
+  HREF="glossary2glossaries.html#SECTION00081000000000000000">7.1 &#92;acrln and &#92;acrsh</A>
+<LI><A NAME="tex2html41"
+  HREF="glossary2glossaries.html#SECTION00082000000000000000">7.2 &#92;ifacronymfirstuse</A>
+<LI><A NAME="tex2html42"
+  HREF="glossary2glossaries.html#SECTION00083000000000000000">7.3 &#92;resetacronym and &#92;unsetacronym</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html43"
+  HREF="glossary2glossaries.html#SECTION00090000000000000000">8 Displaying the glossary</A>
+<LI><A NAME="tex2html44"
+  HREF="glossary2glossaries.html#SECTION000100000000000000000">9 Processing Your Document</A>
+<LI><A NAME="tex2html45"
+  HREF="glossary2glossaries.html#SECTION000110000000000000000">10 Troubleshooting</A>
+</UL>
+<!--End of Table of Contents-->
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+The purpose of this document is to provide advice if you want
+to convert a LaTeX document from using the obsolete 
+<TT>glossary</TT> package to the replacement <TT>glossaries</TT> package.
+</DIV>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000"></A>
+<A NAME="whyglossaries"></A>
+<BR>
+1 Why the Need for a New Package?
+</H1>
+
+<P>
+The <TT>glossary</TT> package started out as an example in a tutorial,
+but I decided that I may as well package it up and upload it to CTAN.
+Unfortunately it was fairly rigid and unable to adapt well to the
+wide variation in glossary styles. Users began making requests for
+enhancements, but with each enhancement the code became more
+complicated and bugs crept in. Each fix in one place seemed to cause
+another problem elsewhere. In the end, it was taking up too much
+of my time to maintain, so I decided to replace it with a much
+better designed package. With the new <TT>glossaries</TT> package:
+
+<P>
+
+<UL>
+<LI>you can define irregular plurals;
+
+<P>
+</LI>
+<LI>glossary terms can have an associated symbol in addition
+to the name and description;
+
+<P>
+</LI>
+<LI>new glossary styles are much easier to design;
+
+<P>
+</LI>
+<LI>you can add dictionaries to supply translations for the
+fixed names used in headings and by some of the glossary styles;
+
+<P>
+</LI>
+<LI>you can choose<A NAME="tex2html1"
+  HREF="#foot582"><SUP>1</SUP></A> between using
+<TT>makeindex</TT> or <TT>xindy</TT> to sort the glossary. Using
+<TT>xindy</TT> means that:
+
+<P>
+
+<UL>
+<LI>there is much better support for terms containing accented 
+  or non-Latin characters;
+
+<P>
+</LI>
+<LI>there is support for non-standard location numbers;
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>you don't need to remember to escape <TT>makeindex</TT>'s
+special characters as this is done internally;
+
+<P>
+</LI>
+<LI>hierarchical entries and homographs are supported;<A NAME="tex2html2"
+  HREF="#foot88"><SUP>2</SUP></A>
+<P>
+</LI>
+<LI>there is better support for cross-referencing glossary entries;
+
+<P>
+</LI>
+<LI>acronyms are just another glossary term which helps to
+maintain consistency;
+
+<P>
+</LI>
+<LI>different acronym styles are supported.
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+2 Package Options</A>
+</H1>
+
+<P>
+When converting a document that currently uses the obsolete
+<TT>glossary</TT> package to the replacement <TT>glossaries</TT> package,
+it should be fairly obvious that the first thing you need to do is
+replace <code>\usepackage{glossary}</code> with
+<code>\usepackage{glossaries}</code>, however some of the package options
+are different, so you may need to change those as well.
+Table&nbsp;<A HREF="glossary2glossaries.html#tab:pkgopt">1</A> shows the mappings from the <TT>glossary</TT> 
+to the <TT>glossaries</TT> package options.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<A NAME="tab:pkgopt"></A>
+<DIV ALIGN="CENTER">
+<A NAME="583"></A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Table 1:</STRONG>
+Mappings from <TT>glossary</TT> to <TT>glossaries</TT> 
+package options</CAPTION>
+<TR><TH ALIGN="LEFT"><B><TT>glossary</TT> option </B></TH>
+<TH ALIGN="LEFT"><B><TT>glossaries</TT> option</B></TH>
+</TR>
+<TR><TD ALIGN="LEFT">style=list</TD>
+<TD ALIGN="LEFT">style=list</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=altlist</TD>
+<TD ALIGN="LEFT">style=altlist</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=none,border=none,cols=2</TD>
+<TD ALIGN="LEFT">style=long</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=plain,border=none,cols=2</TD>
+<TD ALIGN="LEFT">style=longheader</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=none,border=plain,cols=2</TD>
+<TD ALIGN="LEFT">style=longborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=plain,border=plain,cols=2</TD>
+<TD ALIGN="LEFT">style=longheaderborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=none,border=none,cols=3</TD>
+<TD ALIGN="LEFT">style=long3col</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=plain,border=none,cols=3</TD>
+<TD ALIGN="LEFT">style=long3colheader</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=none,border=plain,cols=3</TD>
+<TD ALIGN="LEFT">style=long3colborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=long,header=plain,border=plain,cols=3</TD>
+<TD ALIGN="LEFT">style=long3colheaderborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=none,border=none,cols=2</TD>
+<TD ALIGN="LEFT">style=super</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=plain,border=none,cols=2</TD>
+<TD ALIGN="LEFT">style=superheader</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=none,border=plain,cols=2</TD>
+<TD ALIGN="LEFT">style=superborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=plain,border=plain,cols=2</TD>
+<TD ALIGN="LEFT">style=superheaderborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=none,border=none,cols=3</TD>
+<TD ALIGN="LEFT">style=super3col</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=plain,border=none,cols=3</TD>
+<TD ALIGN="LEFT">style=super3colheader</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=none,border=plain,cols=3</TD>
+<TD ALIGN="LEFT">style=super3colborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">style=super,header=plain,border=plain,cols=3</TD>
+<TD ALIGN="LEFT">style=super3colheaderborder</TD>
+</TR>
+<TR><TD ALIGN="LEFT">number=none</TD>
+<TD ALIGN="LEFT">nonumberlist</TD>
+</TR>
+<TR><TD ALIGN="LEFT">number=&lt;<I>counter name</I>&gt;</TD>
+<TD ALIGN="LEFT">counter=&lt;<I>counter name</I>&gt;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">toc</TD>
+<TD ALIGN="LEFT">toc</TD>
+</TR>
+<TR><TD ALIGN="LEFT">hypertoc</TD>
+<TD ALIGN="LEFT">toc</TD>
+</TR>
+<TR><TD ALIGN="LEFT">hyper</TD>
+<TD ALIGN="LEFT"><I>no corresponding option</I></TD>
+</TR>
+<TR><TD ALIGN="LEFT">section=true</TD>
+<TD ALIGN="LEFT">section</TD>
+</TR>
+<TR><TD ALIGN="LEFT">section=false</TD>
+<TD ALIGN="LEFT"><I>no corresponding option</I></TD>
+</TR>
+<TR><TD ALIGN="LEFT">acronym</TD>
+<TD ALIGN="LEFT">acronym</TD>
+</TR>
+<TR><TD ALIGN="LEFT">global</TD>
+<TD ALIGN="LEFT"><I>no corresponding option</I></TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<BR>
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+3 Defining new glossary types</A>
+</H1>
+
+<P>
+If you have created new glossary types, you will need to 
+replace all instances of
+
+<P>
+<TT><TT>&#92;newglossarytype[&lt;<I>log-ext</I>&gt;]&#123;&lt;<I>type</I>&gt;&#125;&#123;&lt;<I>out-ext</I>&gt;&#125;&#123;&lt;<I>in-ext</I>&gt;&#125;[&lt;<I>old style list</I>&gt;]</TT>
+<BR>
+<TT>&#92;newcommand</TT><code>{\</code>&lt;<I>type</I>&gt;name<code>}</code><TT>&#123;&lt;<I>title</I>&gt;&#125;</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;newglossary[&lt;<I>log-ext</I>&gt;]&#123;&lt;<I>type</I>&gt;&#125;&#123;&lt;<I>out-ext</I>&gt;&#125;&#123;&lt;<I>in-ext</I>&gt;&#125;&#123;&lt;<I>title</I>&gt;&#125;</TT></TT>
+<P>
+in the preamble, and, if the new glossary requires a different style
+to the main (default) glossary, you will also need to put
+
+<P>
+<TT><TT>&#92;glossarystyle&#123;&lt;<I>new style</I>&gt;&#125;</TT></TT>
+<P>
+immediately before the glossary is displayed, or you can specify
+the style when you display the glossary using <TT>&#92;printglossary</TT>
+(see below). 
+
+<P>
+The &lt;<I>old style list</I>&gt; optional argument can be converted to
+&lt;<I>new style</I>&gt; using the same mapping given in 
+Table&nbsp;<A HREF="glossary2glossaries.html#tab:pkgopt">1</A>.
+
+<P>
+For example, if your document contains the following:
+<PRE>
+\newglossarytype[nlg]{notation}{not}{ntn}[style=long,header]
+\newcommand{\notationname}{Index of Notation}
+</PRE>
+You will need to replace the above two lines with:
+<PRE>
+\newglossary[nlg]{notation}{not}{ntn}{Index of Notation}
+</PRE>
+in the preamble and 
+<PRE>
+\glossarystyle{longheader}
+</PRE>
+immediately prior to displaying this glossary.
+Alternatively, you can specify the style using the <TT>style</TT>
+key in the optional argument of <TT>&#92;printglossary</TT>. For example:
+<PRE>
+\printglossary[type=notation,style=longheader]
+</PRE>
+
+<P>
+Note that the glossary title is no longer specified using 
+<TT>&#92;</TT>&lt;<I>glossary-type</I>&gt;<TT>name</TT> (except for <TT>&#92;glossaryname</TT>
+and <TT>&#92;acronymname</TT>) but is instead specified in the &lt;<I>title</I>&gt;
+argument of <TT>&#92;newglossary</TT>. The short title which is specified
+in the <TT>glossary</TT> package by the command 
+<TT>&#92;short</TT>&lt;<I>glossary-name</I>&gt;<TT>name</TT> is now specified
+using the <TT>toctitle</TT> key in the optional argument to
+<TT>&#92;printglossary</TT>.
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000">
+4 <TT>&#92;make</TT>&lt;<I>glossary name</I>&gt;</A>
+</H1>
+
+<P>
+All instances of <TT>&#92;make</TT>&lt;<I>glossary name</I>&gt; (e.g. 
+<TT>&#92;makeglossary</TT> and <TT>&#92;makeacronym</TT>) should be replaced
+by the single command <TT>&#92;makeglossaries</TT>. For example, if
+your document contained the following:
+<PRE>
+\makeglossary
+\makeacronym
+</PRE>
+then you should replace both lines with the single line:
+<PRE>
+\makeglossaries
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000">
+5 Storing glossary information</A>
+</H1>
+
+<P>
+With the old <TT>glossary</TT> package you could optionally store
+glossary information for later use, or you could simply use
+<TT>&#92;glossary</TT> whenever you wanted to add information to the glossary.
+With the new <TT>glossaries</TT> package, the latter option is no longer
+available.<A NAME="tex2html4"
+  HREF="#foot585"><SUP>3</SUP></A>  If
+you have stored all the glossary information using
+<TT>&#92;storeglosentry</TT>, then you will need to convert these commands
+into the equivalent <TT>&#92;newglossaryentry</TT>. If you have only
+used <TT>&#92;glossary</TT>, then see 
+<A HREF="glossary2glossaries.html#sec:csglossary">later</A>.
+
+<P>
+Substitute all instances of
+
+<P>
+<TT><TT>&#92;storeglosentry&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>gls-entry</I>&gt;&#125;</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;newglossaryentry&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>gls-entry</I>&gt;&#125;</TT></TT>
+<P>
+This should be fairly easy to do using the search and replace
+facility in your editor (but see notes below).
+
+<P>
+If you have used the optional argument of <TT>&#92;storeglosentry</TT>
+(i.e. you have multiple glossaries) then you will need to
+substitute
+
+<P>
+<TT><TT>&#92;storeglosentry[&lt;<I>gls-type</I>&gt;]&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>gls-entry</I>&gt;&#125;</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;newglossaryentry&#123;&lt;<I>label</I>&gt;&#125;</TT><code>{</code>&lt;<I>gls-entry</I>&gt;,type=&lt;<I>gls-type</I>&gt;<code>}</code></TT>
+<P>
+
+<P>
+The glossary entry information &lt;<I>gls-entry</I>&gt; may also need 
+changing. If &lt;<I>gls-entry</I>&gt; contains any of <TT>makeindex</TT>'s 
+special characters (i.e. <TT>@</TT> <TT>!</TT> <code>"</code> or
+<code>|</code>) then they should no longer be escaped with <code>"</code>
+since the <TT>glossaries</TT> package deals with these characters
+internally. For example, if your document contains the following:
+<PRE>
+\storeglosentry{card}{name={$"|\mathcal{S}"|$},
+description={The cardinality of the set $\mathcal{S}$}}
+</PRE>
+then you will need to replace it with:
+<PRE>
+\newglossaryentry{card}{name={$|\mathcal{S}|$},
+description={The cardinality of the set $\mathcal{S}$}}
+</PRE>
+
+<P>
+The <TT>format</TT> and <TT>number</TT> keys available in
+<TT>&#92;storeglosentry</TT> are not available with <TT>&#92;newglossaryentry</TT>.
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000">
+6 Adding an entry to the glossary</A>
+</H1>
+
+<P>
+The <TT>glossary</TT> package provided two basic means to add
+information to the glossary: firstly, the term was defined
+using <TT>&#92;storeglosentry</TT> and the entries for that term were
+added using <TT>&#92;useglosentry</TT>, <TT>&#92;useGlosentry</TT> and <TT>&#92;gls</TT>.
+Secondly, the term was added to the glossary using <TT>&#92;glossary</TT>.
+This second approach is unavailable with the <TT>glossaries</TT>
+package.
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000"></A>
+<A NAME="sec:useglosentry"></A>
+<BR>
+6.1 <TT>&#92;useglosentry</TT>
+</H2>
+
+<P>
+The <TT>glossary</TT> package allows you to add information to the
+glossary for a predefined term without producing any text
+in the document using
+
+<P>
+<TT><TT>&#92;useglosentry[&lt;<I>old options</I>&gt;]&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+Any occurrences of this command will need to be replaced with
+
+<P>
+<TT><TT>&#92;glsadd[&lt;<I>new options</I>&gt;]&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+The <TT>format</TT> key in &lt;<I>old options</I>&gt; remains the same
+in &lt;<I>new options</I>&gt;. However the <TT>number=</TT>&lt;<I>counter
+name</I>&gt; key in &lt;<I>old options</I>&gt; should be replaced with
+<TT>counter=</TT>&lt;<I>counter name</I>&gt; in &lt;<I>new options</I>&gt;.
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+6.2 <TT>&#92;useGlosentry</TT></A>
+</H2>
+
+<P>
+The <TT>glossary</TT> package allows you to add information to the
+glossary for a predefined term with the given text using
+
+<P>
+<TT><TT>&#92;useGlosentry[&lt;<I>old options</I>&gt;]&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>text</I>&gt;&#125;</TT></TT>
+<P>
+Any occurrences of this command will need to be replaced with
+
+<P>
+<TT><TT>&#92;glslink[&lt;<I>new options</I>&gt;]&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>text</I>&gt;&#125;</TT></TT>
+<P>
+The mapping from &lt;<I>old options</I>&gt; to &lt;<I>new options</I>&gt; is
+the same as that given <A HREF="glossary2glossaries.html#sec:useglosentry">above</A>.
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+6.3 <TT>&#92;gls</TT></A>
+</H2>
+
+<P>
+Both the <TT>glossary</TT> and the <TT>glossaries</TT> packages define
+the command <TT>&#92;gls</TT>. In this case, the only thing you need to
+change is the <TT>number</TT> key in the optional argument
+to <TT>counter</TT>. Note that the new form of <TT>&#92;gls</TT> also takes
+a final optional argument which can be used to insert text into the
+automatically generated text.
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000"></A>
+<A NAME="sec:csglossary"></A>
+<BR>
+6.4 <TT>&#92;glossary</TT>
+</H2>
+
+<P>
+When using the <TT>glossaries</TT> package, you should not use
+<TT>&#92;glossary</TT> directly.<A NAME="tex2html5"
+  HREF="#foot594"><SUP>4</SUP></A>  If, with the old package, you have opted to
+explicitly use <TT>&#92;glossary</TT> instead of storing the glossary
+information with <TT>&#92;storeglosentry</TT>, then converting from
+<TT>glossary</TT> to <TT>glossaries</TT> will be more time-consuming,
+although in the end, I hope you will see the benefits.<A NAME="tex2html6"
+  HREF="#foot595"><SUP>5</SUP></A>  If you have
+used <TT>&#92;glossary</TT> with the old glossary package, you will instead
+need to define the relevant glossary terms using
+<TT>&#92;newglossaryentry</TT> and reference the terms using
+<TT>&#92;glsadd</TT>, <TT>&#92;glslink</TT>, <TT>&#92;gls</TT> etc.
+
+<P>
+If you don't like the idea of continually scrolling back to the
+preamble to type all your <TT>&#92;newglossaryentry</TT> commands, you may
+prefer to create a new file, in which to store all these commands,
+and then input that file in your document's preamble. Most text
+editors and front-ends allow you to have multiple files open, and
+you can tab back and forth between them.
+
+<P>
+
+<H1><A NAME="SECTION00080000000000000000">
+7 Acronyms</A>
+</H1>
+
+<P>
+In the <TT>glossary</TT> package, acronyms were treated differently
+to glossary entries. This resulted in inconsistencies and sprawling
+unmaintainable code. The new <TT>glossaries</TT> package treats
+acronyms in exactly the same way as normal glossary terms. In fact,
+in the <TT>glossaries</TT> package, the default definition of:
+
+<P>
+<TT><TT>&#92;newacronym[&lt;<I>options</I>&gt;]&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>abbrv</I>&gt;&#125;&#123;&lt;<I>long</I>&gt;&#125;</TT></TT>
+<P>
+is a shortcut for:
+
+<P>
+<TT><TT>&#92;newglossaryentry&#123;&lt;<I>label</I>&gt;&#125;</TT>{type=<TT>&#92;acronymtype</TT>,
+name=<TT>&#123;&lt;<I>abbrv</I>&gt;&#125;</TT>,
+description=<TT>&#123;&lt;<I>long</I>&gt;&#125;</TT>,
+text=<TT>&#123;&lt;<I>abbrv</I>&gt;&#125;</TT>,
+first={&lt;<I>long</I>&gt; (&lt;<I>abbrv</I>&gt;)},
+plural={&lt;<I>abbrv</I>&gt;s},
+firstplural={&lt;<I>long</I>&gt;s (&lt;<I>abbrv</I>&gt;s)},
+&lt;<I>options</I>&gt;}</TT>
+<P>
+
+<P>
+This is different to the <TT>glossary</TT> package which set the
+<TT>name</TT> key to &lt;<I>long</I>&gt; (&lt;<I>abbrv</I>&gt;) and allowed you
+to set a description using the <TT>description</TT> key. If you
+still want to do this, you can use the <TT>description</TT> package
+option, and use the <TT>description</TT> key in the
+optional argument of <TT>&#92;newacronym</TT>.
+
+<P>
+For example, if your document originally had the following:
+<PRE>
+\newacronym{SVM}{Support Vector Machine}{description=Statistical
+pattern recognition technique}
+</PRE>
+Then you would need to load the <TT>glossaries</TT> package using the
+<TT>description</TT> package option, for example:
+<PRE>
+\usepackage[description]{glossaries}
+</PRE>
+and change the acronym definition to:
+<PRE>
+\newacronym[description=Statistical pattern recognition 
+technique]{svm}{SVM}{Support Vector Machine}
+</PRE>
+You can then reference the acronym using any of the new referencing
+commands, such as <TT>&#92;gls</TT> or <TT>&#92;glsadd</TT>.
+
+<P>
+With the old <TT>glossary</TT> package, when you defined an
+acronym, it also defined a command <TT>&#92;</TT>&lt;<I>acr-name</I>&gt; which
+could be used to display the acronym in the text. So the
+above SVM example would create the command <TT>&#92;SVM</TT> with the old
+package. In the new <TT>glossaries</TT> package, the acronyms are just
+another type of glossary entry, so they are displayed using
+<TT>&#92;gls&#123;&lt;<I>label</I>&gt;&#125;</TT>.  Therefore, in the above example, you will
+also need to replace all occurrences of <TT>&#92;SVM</TT> with
+<code>\gls{svm}</code>.
+
+<P>
+If you have used <TT>&#92;useacronym</TT> instead of <TT>&#92;</TT>&lt;<I>acr-name</I>&gt;,
+then you will need to replace all occurrences of
+
+<P>
+<TT><TT>&#92;useacronym[&lt;<I>insert</I>&gt;]&#123;&lt;<I>acr-name</I>&gt;&#125;</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;gls&#123;&lt;<I>label</I>&gt;&#125;[&lt;<I>insert</I>&gt;]</TT></TT>
+<P>
+Note that the starred versions of <TT>&#92;useacronym</TT> and
+<TT>&#92;</TT>&lt;<I>acr-name</I>&gt; (which make the first letter uppercase) should
+be replaced with <TT>&#92;Gls&#123;&lt;<I>label</I>&gt;&#125;</TT>.  
+
+<P>
+Alternatively (as from v1.18 of the <TT>glossaries</TT> package),
+you can use <TT>&#92;oldacronym</TT> which uses the same syntax as
+the old <TT>glossary</TT> package's <TT>&#92;newacronym</TT> and also 
+defines <TT>&#92;</TT>&lt;<I>acr-name</I>&gt;.
+For example, if your document originally had the following:
+
+<P><PRE>
+\newacronym{SVM}{Support Vector Machine}{description=Statistical
+pattern recognition technique}
+</PRE>
+<P>
+then you can change this to:
+
+<P><PRE>
+\oldacronym{SVM}{Support Vector Machine}{description=Statistical
+pattern recognition technique}
+</PRE>
+<P>
+You can then continue to use <TT>&#92;SVM</TT>. However, remember that
+LaTeX generally ignores spaces after command names that consist of
+alphabetical characters. You will therefore need to force a space
+after <TT>&#92;</TT>&lt;<I>acr-name</I>&gt;, unless you also load the <TT>xspace</TT>
+package. (See the
+<A NAME="tex2html7"
+  HREF="glossaries-manual.html#sec:acronyms">Acronyms</A>
+section of the <TT>glossaries</TT> documentation for further
+details.) Note that <TT>&#92;oldacronym</TT> uses its first argument to
+define the acronym's label (as used by commands like <TT>&#92;gls</TT>), so
+in the above example, with the new <TT>glossaries</TT> package,
+<TT>&#92;SVM</TT> becomes a shortcut for <code>\gls{SVM}</code> and <TT>&#92;SVM*</TT>
+becomes a shortcut for <code>\Gls{SVM}</code>.
+
+<P>
+
+<H2><A NAME="SECTION00081000000000000000">
+7.1 <TT>&#92;acrln</TT> and <TT>&#92;acrsh</TT></A>
+</H2>
+
+<P>
+In the <TT>glossary</TT> package, it is possible to produce the
+long and short forms of an acronym without adding an entry to
+the glossary using <TT>&#92;acrln</TT> and <TT>&#92;acrsh</TT>. With the 
+<TT>glossaries</TT> package (provided you defined the acronym using
+<TT>&#92;newacronym</TT> or <TT>&#92;oldacronym</TT> and provided you haven't redefined <TT>&#92;newacronym</TT>) 
+you can replace
+
+<P>
+<TT><TT>&#92;acrsh&#123;&lt;<I>acr-name</I>&gt;&#125;</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;acrshort&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+and you can replace
+
+<P>
+<TT><TT>&#92;acrln&#123;&lt;<I>acr-name</I>&gt;&#125;</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;acrlong&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+The <TT>glossaries</TT> package also provides the related commands
+<TT>&#92;acrshortpl</TT> (plural short form) and <TT>&#92;acrlongpl</TT> (plural long
+form) as well as upper case variations. If you use the 
+<TT>glossaries</TT> "shortcuts" package option, you can use
+<TT>&#92;acs</TT> in place of <TT>&#92;acrshort</TT> and <TT>&#92;acl</TT> in place of
+<TT>&#92;acrlong</TT>.
+
+<P>
+See the 
+<A NAME="tex2html8"
+  HREF="glossaries-manual.html#sec:acronyms">Acronyms</A>
+section of the <TT>glossaries</TT> manual for further details of
+how to use these commands.
+
+<P>
+
+<H2><A NAME="SECTION00082000000000000000">
+7.2 <TT>&#92;ifacronymfirstuse</TT></A>
+</H2>
+
+<P>
+The <TT>glossary</TT> package command
+
+<P>
+<TT><TT>&#92;ifacronymfirstuse&#123;&lt;<I>acr-name</I>&gt;&#125;&#123;&lt;<I>text1</I>&gt;&#125;&#123;&lt;<I>text2</I>&gt;&#125;</TT></TT>
+<P>
+can be replaced by the <TT>glossaries</TT> command:
+
+<P>
+<TT><TT>&#92;ifglsused&#123;&lt;<I>label</I>&gt;&#125;&#123;&lt;<I>text2</I>&gt;&#125;&#123;&lt;<I>text1</I>&gt;&#125;</TT></TT>
+<P>
+Note that <TT>&#92;ifglsused</TT> evaluates the opposite condition to
+that of <TT>&#92;ifacronymfirstuse</TT> which is why the last two arguments
+have been reversed.
+
+<P>
+
+<H2><A NAME="SECTION00083000000000000000">
+7.3 <TT>&#92;resetacronym</TT> and <TT>&#92;unsetacronym</TT></A>
+</H2>
+
+<P>
+The <TT>glossary</TT> package allows you to reset and unset the
+acronym flag which is used to determine whether the acronym has
+been used in the document. The <TT>glossaries</TT> package also
+provides a means to do this on either a local or a global level.
+To reset an acronym, you will need to replace:
+
+<P>
+<TT><TT>&#92;resetacronym&#123;&lt;<I>acr-name</I>&gt;&#125;</TT></TT>
+<P>
+with either
+
+<P>
+<TT><TT>&#92;glsreset&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+or
+
+<P>
+<TT><TT>&#92;glslocalreset&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+
+<P>
+To unset an acronym, you will need to replace:
+
+<P>
+<TT><TT>&#92;unsetacronym&#123;&lt;<I>acr-name</I>&gt;&#125;</TT></TT>
+<P>
+with either
+
+<P>
+<TT><TT>&#92;glsunset&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+or
+
+<P>
+<TT><TT>&#92;glslocalunset&#123;&lt;<I>label</I>&gt;&#125;</TT></TT>
+<P>
+
+<P>
+To reset all acronyms, you will need to replace:
+
+<P>
+<TT><TT>&#92;resetallacronyms</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;glsresetall</TT>[<TT>&#92;acronymtype</TT>]</TT>
+<P>
+or
+
+<P>
+<TT><TT>&#92;glslocalresetall</TT>[<TT>&#92;acronymtype</TT>]</TT>
+<P>
+To unset all acronyms, you will need to replace:
+
+<P>
+<TT><TT>&#92;unsetallacronyms</TT></TT>
+<P>
+with
+
+<P>
+<TT><TT>&#92;glsunsetall</TT>[<TT>&#92;acronymtype</TT>]</TT>
+<P>
+or
+
+<P>
+<TT><TT>&#92;glslocalunsetall</TT>[<TT>&#92;acronymtype</TT>]</TT>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00090000000000000000">
+8 Displaying the glossary</A>
+</H1>
+
+<P>
+The <TT>glossary</TT> package provides the command <TT>&#92;printglossary</TT>
+(or <TT>&#92;print</TT>&lt;<I>type</I>&gt; for other glossary types) which
+can be used to print individual glossaries. The <TT>glossaries</TT>
+package provides the command <TT>&#92;printglossaries</TT> which 
+will print all the glossaries which have been defined, or
+<TT>&#92;printglossary[&lt;<I>options</I>&gt;]</TT> to print individual glossaries.
+So if you just have <TT>&#92;printglossary</TT>, then you can leave it as
+it is, but if you have, say:
+<PRE>
+\printglossary
+\printglossary[acronym]
+</PRE>
+or
+<PRE>
+\printglossary
+\printacronym
+</PRE>
+then you will need to replace this with either
+<PRE>
+\printglossaries
+</PRE>
+or 
+<PRE>
+\printglossary
+\printglossary[type=\acronymtype]
+</PRE>
+
+<P>
+The <TT>glossary</TT> package allows you to specify a short title
+(for the table of contents and page header) by defining a command
+of the form <TT>&#92;short</TT>&lt;<I>glossary-type</I>&gt;<TT>name</TT>. The
+<TT>glossaries</TT> package doesn't do this, but instead provides
+the <TT>toctitle</TT> key which can be used in the optional
+argument to <TT>&#92;printglossary</TT>. For example, if you have created
+a new glossary type called <TT>notation</TT>, and you had
+defined
+<PRE>
+\newcommand{\shortnotationname}{Notation}
+</PRE>
+then you would need to use the <TT>toctitle</TT> key:
+<PRE>
+\printglossary[type=notation,toctitle=Notation]
+</PRE>
+The <TT>glossaries</TT> package will ignore <TT>&#92;shortnotationname</TT>,
+so unless you have used it elsewhere in the document, you may
+as well remove the definition.
+
+<P>
+
+<H1><A NAME="SECTION000100000000000000000">
+9 Processing Your Document</A>
+</H1>
+
+<P>
+If you convert your document from using the <TT>glossary</TT> package
+to the <TT>glossaries</TT> package, you will need to delete any of
+the additional files, such as the <TT>.glo</TT> file, that were
+created by the <TT>glossary</TT> package, as the <TT>glossaries</TT>
+package uses a different format. 
+Remember also, that if you used the <TT>makeglos</TT> Perl script,
+you will need to use the <TT>makeglossaries</TT> Perl script 
+instead. As from v1.17, the <TT>glossaries</TT> package can be
+used with either <TT>makeindex</TT> or <TT>xindy</TT>. Since
+<TT>xindy</TT> was designed to be multilingual, the 
+new <TT>glossaries</TT> package is a much better option for 
+non-English documents.
+
+<P>
+For further information on using <TT>makeglossaries</TT>,
+<TT>makeindex</TT> or <TT>xindy</TT> to create your glossaries, see
+the
+<A NAME="tex2html9"
+  HREF="glossaries-manual.html#sec:makeglossaries">Generating the Associated Glossary
+Files</A>
+section of the
+<TT>glossaries</TT> documentation.
+
+<P>
+
+<H1><A NAME="SECTION000110000000000000000">
+10 Troubleshooting</A>
+</H1>
+
+<P>
+Please check the <A NAME="tex2html10"
+  HREF="http://theoval.cmp.uea.ac.uk/~nlct/latex/packages/faq/glossariesfaq.html">FAQ</A>
+for the <TT>glossaries</TT> package if you have any
+problems.
+
+<P>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot582">... choose</A><A
+ HREF="glossary2glossaries.html#tex2html1"><SUP>1</SUP></A></DT>
+<DD>as from v1.17. Previous versions
+were designed to be used with <TT>makeindex</TT> only
+
+</DD>
+<DT><A NAME="foot88">... supported;</A><A
+ HREF="glossary2glossaries.html#tex2html2"><SUP>2</SUP></A></DT>
+<DD>as
+from v1.17
+
+</DD>
+<DT><A NAME="foot585">...
+available.</A><A
+ HREF="glossary2glossaries.html#tex2html4"><SUP>3</SUP></A></DT>
+<DD>mainly because having a key value list in
+<TT>&#92;glossary</TT> caused problems, but it also helps consistency.
+
+</DD>
+<DT><A NAME="foot594">... directly.</A><A
+ HREF="glossary2glossaries.html#tex2html5"><SUP>4</SUP></A></DT>
+<DD>This is because <TT>&#92;glossary</TT>
+requires the argument to be in a specific format and doesn't use the
+&lt;<I>key</I>&gt;=&lt;<I>value</I>&gt; format that the old glossary package used.
+The new package's internal commands set this format, as well as
+escaping any of <TT>makeindex</TT>'s or <TT>xindy</TT>'s special
+characters. What's more, the format has changed as from v1.17 to
+allow the new package to be used with either <TT>makeindex</TT> or
+<TT>xindy</TT>.
+
+</DD>
+<DT><A NAME="foot595">... benefits.</A><A
+ HREF="glossary2glossaries.html#tex2html6"><SUP>5</SUP></A></DT>
+<DD>From
+the user's point of view, using <TT>&#92;glossary</TT> throughout the
+document is time consuming, and if you use it more than once for the
+same term, there's a chance extra spaces may creep in which will
+cause <TT>makeindex</TT> to treat the two entries as different
+terms, even though they look the same in the document.
+
+</DD>
+</DL>
+<BR><HR>
+
+</BODY>
+</HTML>

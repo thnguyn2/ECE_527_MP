@@ -1,0 +1,11 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{berling}
+    [2005/08/08 v1.1 Style file for Monotype Berling]
+\RequirePackage[T1]{fontenc}
+\RequirePackage{textcomp}
+\DeclareOption{lining}{\renewcommand*{\rmdefault}{mbrx}}
+\DeclareOption{oldstyle}{\renewcommand*{\rmdefault}{mbrj}}
+\ExecuteOptions{oldstyle}
+\ProcessOptions\relax
+%%
+%% End of file 'berling.sty'

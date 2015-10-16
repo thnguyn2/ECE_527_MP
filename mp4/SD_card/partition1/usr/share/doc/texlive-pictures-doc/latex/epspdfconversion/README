@@ -1,0 +1,9 @@
+This package facilitates the use of the epspdf tools (on
+CTAN in pub/tex/support) from within PDFLaTeX. EPS graphic
+files are converted "on the fly". It is similar to and based
+on the epstopdf package and allows to pass several options
+such as grayscale, prepress, pdfversion etc. to the epspdf
+conversion-command.
+
+This material is subject to the LaTeX Project Public License 
+in its most recent version.

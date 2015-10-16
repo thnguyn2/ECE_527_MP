@@ -1,0 +1,1104 @@
+modem-manager[1141]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1141]: <info>  Loaded plugin ZTE
+modem-manager[1141]: <info>  Loaded plugin MotoC
+modem-manager[1141]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1141]: <info>  Loaded plugin Gobi
+modem-manager[1141]: <info>  Loaded plugin Generic
+modem-manager[1141]: <info>  Loaded plugin Novatel
+modem-manager[1141]: <info>  Loaded plugin Linktop
+modem-manager[1141]: <info>  Loaded plugin Wavecom
+modem-manager[1141]: <info>  Loaded plugin Option
+modem-manager[1141]: <info>  Loaded plugin Longcheer
+modem-manager[1141]: <info>  Loaded plugin Sierra
+modem-manager[1141]: <info>  Loaded plugin AnyData
+modem-manager[1141]: <info>  Loaded plugin Huawei
+modem-manager[1141]: <info>  Loaded plugin X22X
+modem-manager[1141]: <info>  Loaded plugin Option High-Speed
+modem-manager[1141]: <info>  Loaded plugin SimTech
+modem-manager[1141]: <info>  Loaded plugin Nokia
+modem-manager[1141]: <info>  Loaded plugin Samsung
+modem-manager[1105]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1105]: <info>  Loaded plugin ZTE
+modem-manager[1105]: <info>  Loaded plugin MotoC
+modem-manager[1105]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1105]: <info>  Loaded plugin Gobi
+modem-manager[1105]: <info>  Loaded plugin Generic
+modem-manager[1105]: <info>  Loaded plugin Novatel
+modem-manager[1105]: <info>  Loaded plugin Linktop
+modem-manager[1105]: <info>  Loaded plugin Wavecom
+modem-manager[1105]: <info>  Loaded plugin Option
+modem-manager[1105]: <info>  Loaded plugin Longcheer
+modem-manager[1105]: <info>  Loaded plugin Sierra
+modem-manager[1105]: <info>  Loaded plugin AnyData
+modem-manager[1105]: <info>  Loaded plugin Huawei
+modem-manager[1105]: <info>  Loaded plugin X22X
+modem-manager[1105]: <info>  Loaded plugin Option High-Speed
+modem-manager[1105]: <info>  Loaded plugin SimTech
+modem-manager[1105]: <info>  Loaded plugin Nokia
+modem-manager[1105]: <info>  Loaded plugin Samsung
+modem-manager[1143]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1143]: <info>  Loaded plugin ZTE
+modem-manager[1143]: <info>  Loaded plugin MotoC
+modem-manager[1143]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1143]: <info>  Loaded plugin Gobi
+modem-manager[1143]: <info>  Loaded plugin Generic
+modem-manager[1143]: <info>  Loaded plugin Novatel
+modem-manager[1143]: <info>  Loaded plugin Linktop
+modem-manager[1143]: <info>  Loaded plugin Wavecom
+modem-manager[1143]: <info>  Loaded plugin Option
+modem-manager[1143]: <info>  Loaded plugin Longcheer
+modem-manager[1143]: <info>  Loaded plugin Sierra
+modem-manager[1143]: <info>  Loaded plugin AnyData
+modem-manager[1143]: <info>  Loaded plugin Huawei
+modem-manager[1143]: <info>  Loaded plugin X22X
+modem-manager[1143]: <info>  Loaded plugin Option High-Speed
+modem-manager[1143]: <info>  Loaded plugin SimTech
+modem-manager[1143]: <info>  Loaded plugin Nokia
+modem-manager[1143]: <info>  Loaded plugin Samsung
+modem-manager[1108]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1108]: <info>  Loaded plugin ZTE
+modem-manager[1108]: <info>  Loaded plugin MotoC
+modem-manager[1108]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1108]: <info>  Loaded plugin Gobi
+modem-manager[1108]: <info>  Loaded plugin Generic
+modem-manager[1108]: <info>  Loaded plugin Novatel
+modem-manager[1108]: <info>  Loaded plugin Linktop
+modem-manager[1108]: <info>  Loaded plugin Wavecom
+modem-manager[1108]: <info>  Loaded plugin Option
+modem-manager[1108]: <info>  Loaded plugin Longcheer
+modem-manager[1108]: <info>  Loaded plugin Sierra
+modem-manager[1108]: <info>  Loaded plugin AnyData
+modem-manager[1108]: <info>  Loaded plugin Huawei
+modem-manager[1108]: <info>  Loaded plugin X22X
+modem-manager[1108]: <info>  Loaded plugin Option High-Speed
+modem-manager[1108]: <info>  Loaded plugin SimTech
+modem-manager[1108]: <info>  Loaded plugin Nokia
+modem-manager[1108]: <info>  Loaded plugin Samsung
+modem-manager[1105]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1105]: <info>  Loaded plugin ZTE
+modem-manager[1105]: <info>  Loaded plugin MotoC
+modem-manager[1105]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1105]: <info>  Loaded plugin Gobi
+modem-manager[1105]: <info>  Loaded plugin Generic
+modem-manager[1105]: <info>  Loaded plugin Novatel
+modem-manager[1105]: <info>  Loaded plugin Linktop
+modem-manager[1105]: <info>  Loaded plugin Wavecom
+modem-manager[1105]: <info>  Loaded plugin Option
+modem-manager[1105]: <info>  Loaded plugin Longcheer
+modem-manager[1105]: <info>  Loaded plugin Sierra
+modem-manager[1105]: <info>  Loaded plugin AnyData
+modem-manager[1105]: <info>  Loaded plugin Huawei
+modem-manager[1105]: <info>  Loaded plugin X22X
+modem-manager[1105]: <info>  Loaded plugin Option High-Speed
+modem-manager[1105]: <info>  Loaded plugin SimTech
+modem-manager[1105]: <info>  Loaded plugin Nokia
+modem-manager[1105]: <info>  Loaded plugin Samsung
+modem-manager[1090]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1090]: <info>  Loaded plugin ZTE
+modem-manager[1090]: <info>  Loaded plugin MotoC
+modem-manager[1090]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1090]: <info>  Loaded plugin Gobi
+modem-manager[1090]: <info>  Loaded plugin Generic
+modem-manager[1090]: <info>  Loaded plugin Novatel
+modem-manager[1090]: <info>  Loaded plugin Linktop
+modem-manager[1090]: <info>  Loaded plugin Wavecom
+modem-manager[1090]: <info>  Loaded plugin Option
+modem-manager[1090]: <info>  Loaded plugin Longcheer
+modem-manager[1090]: <info>  Loaded plugin Sierra
+modem-manager[1090]: <info>  Loaded plugin AnyData
+modem-manager[1090]: <info>  Loaded plugin Huawei
+modem-manager[1090]: <info>  Loaded plugin X22X
+modem-manager[1090]: <info>  Loaded plugin Option High-Speed
+modem-manager[1090]: <info>  Loaded plugin SimTech
+modem-manager[1090]: <info>  Loaded plugin Nokia
+modem-manager[1090]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1146]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1146]: <info>  Loaded plugin ZTE
+modem-manager[1146]: <info>  Loaded plugin MotoC
+modem-manager[1146]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1146]: <info>  Loaded plugin Gobi
+modem-manager[1146]: <info>  Loaded plugin Generic
+modem-manager[1146]: <info>  Loaded plugin Novatel
+modem-manager[1146]: <info>  Loaded plugin Linktop
+modem-manager[1146]: <info>  Loaded plugin Wavecom
+modem-manager[1146]: <info>  Loaded plugin Option
+modem-manager[1146]: <info>  Loaded plugin Longcheer
+modem-manager[1146]: <info>  Loaded plugin Sierra
+modem-manager[1146]: <info>  Loaded plugin AnyData
+modem-manager[1146]: <info>  Loaded plugin Huawei
+modem-manager[1146]: <info>  Loaded plugin X22X
+modem-manager[1146]: <info>  Loaded plugin Option High-Speed
+modem-manager[1146]: <info>  Loaded plugin SimTech
+modem-manager[1146]: <info>  Loaded plugin Nokia
+modem-manager[1146]: <info>  Loaded plugin Samsung
+modem-manager[1175]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1175]: <info>  Loaded plugin ZTE
+modem-manager[1175]: <info>  Loaded plugin MotoC
+modem-manager[1175]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1175]: <info>  Loaded plugin Gobi
+modem-manager[1175]: <info>  Loaded plugin Generic
+modem-manager[1175]: <info>  Loaded plugin Novatel
+modem-manager[1175]: <info>  Loaded plugin Linktop
+modem-manager[1175]: <info>  Loaded plugin Wavecom
+modem-manager[1175]: <info>  Loaded plugin Option
+modem-manager[1175]: <info>  Loaded plugin Longcheer
+modem-manager[1175]: <info>  Loaded plugin Sierra
+modem-manager[1175]: <info>  Loaded plugin AnyData
+modem-manager[1175]: <info>  Loaded plugin Huawei
+modem-manager[1175]: <info>  Loaded plugin X22X
+modem-manager[1175]: <info>  Loaded plugin Option High-Speed
+modem-manager[1175]: <info>  Loaded plugin SimTech
+modem-manager[1175]: <info>  Loaded plugin Nokia
+modem-manager[1175]: <info>  Loaded plugin Samsung
+modem-manager[1109]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1109]: <info>  Loaded plugin ZTE
+modem-manager[1109]: <info>  Loaded plugin MotoC
+modem-manager[1109]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1109]: <info>  Loaded plugin Gobi
+modem-manager[1109]: <info>  Loaded plugin Generic
+modem-manager[1109]: <info>  Loaded plugin Novatel
+modem-manager[1109]: <info>  Loaded plugin Linktop
+modem-manager[1109]: <info>  Loaded plugin Wavecom
+modem-manager[1109]: <info>  Loaded plugin Option
+modem-manager[1109]: <info>  Loaded plugin Longcheer
+modem-manager[1109]: <info>  Loaded plugin Sierra
+modem-manager[1109]: <info>  Loaded plugin AnyData
+modem-manager[1109]: <info>  Loaded plugin Huawei
+modem-manager[1109]: <info>  Loaded plugin X22X
+modem-manager[1109]: <info>  Loaded plugin Option High-Speed
+modem-manager[1109]: <info>  Loaded plugin SimTech
+modem-manager[1109]: <info>  Loaded plugin Nokia
+modem-manager[1109]: <info>  Loaded plugin Samsung
+modem-manager[873]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[873]: <info>  Loaded plugin ZTE
+modem-manager[873]: <info>  Loaded plugin MotoC
+modem-manager[873]: <info>  Loaded plugin Ericsson MBM
+modem-manager[873]: <info>  Loaded plugin Gobi
+modem-manager[873]: <info>  Loaded plugin Generic
+modem-manager[873]: <info>  Loaded plugin Novatel
+modem-manager[873]: <info>  Loaded plugin Linktop
+modem-manager[873]: <info>  Loaded plugin Wavecom
+modem-manager[873]: <info>  Loaded plugin Option
+modem-manager[873]: <info>  Loaded plugin Longcheer
+modem-manager[873]: <info>  Loaded plugin Sierra
+modem-manager[873]: <info>  Loaded plugin AnyData
+modem-manager[873]: <info>  Loaded plugin Huawei
+modem-manager[873]: <info>  Loaded plugin X22X
+modem-manager[873]: <info>  Loaded plugin Option High-Speed
+modem-manager[873]: <info>  Loaded plugin SimTech
+modem-manager[873]: <info>  Loaded plugin Nokia
+modem-manager[873]: <info>  Loaded plugin Samsung
+modem-manager[961]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[961]: <info>  Loaded plugin ZTE
+modem-manager[961]: <info>  Loaded plugin MotoC
+modem-manager[961]: <info>  Loaded plugin Ericsson MBM
+modem-manager[961]: <info>  Loaded plugin Gobi
+modem-manager[961]: <info>  Loaded plugin Generic
+modem-manager[961]: <info>  Loaded plugin Novatel
+modem-manager[961]: <info>  Loaded plugin Linktop
+modem-manager[961]: <info>  Loaded plugin Wavecom
+modem-manager[961]: <info>  Loaded plugin Option
+modem-manager[961]: <info>  Loaded plugin Longcheer
+modem-manager[961]: <info>  Loaded plugin Sierra
+modem-manager[961]: <info>  Loaded plugin AnyData
+modem-manager[961]: <info>  Loaded plugin Huawei
+modem-manager[961]: <info>  Loaded plugin X22X
+modem-manager[961]: <info>  Loaded plugin Option High-Speed
+modem-manager[961]: <info>  Loaded plugin SimTech
+modem-manager[961]: <info>  Loaded plugin Nokia
+modem-manager[961]: <info>  Loaded plugin Samsung
+modem-manager[827]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[827]: <info>  Loaded plugin ZTE
+modem-manager[827]: <info>  Loaded plugin MotoC
+modem-manager[827]: <info>  Loaded plugin Ericsson MBM
+modem-manager[827]: <info>  Loaded plugin Gobi
+modem-manager[827]: <info>  Loaded plugin Generic
+modem-manager[827]: <info>  Loaded plugin Novatel
+modem-manager[827]: <info>  Loaded plugin Linktop
+modem-manager[827]: <info>  Loaded plugin Wavecom
+modem-manager[827]: <info>  Loaded plugin Option
+modem-manager[827]: <info>  Loaded plugin Longcheer
+modem-manager[827]: <info>  Loaded plugin Sierra
+modem-manager[827]: <info>  Loaded plugin AnyData
+modem-manager[827]: <info>  Loaded plugin Huawei
+modem-manager[827]: <info>  Loaded plugin X22X
+modem-manager[827]: <info>  Loaded plugin Option High-Speed
+modem-manager[827]: <info>  Loaded plugin SimTech
+modem-manager[827]: <info>  Loaded plugin Nokia
+modem-manager[827]: <info>  Loaded plugin Samsung
+modem-manager[1100]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1100]: <info>  Loaded plugin ZTE
+modem-manager[1100]: <info>  Loaded plugin MotoC
+modem-manager[1100]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1100]: <info>  Loaded plugin Gobi
+modem-manager[1100]: <info>  Loaded plugin Generic
+modem-manager[1100]: <info>  Loaded plugin Novatel
+modem-manager[1100]: <info>  Loaded plugin Linktop
+modem-manager[1100]: <info>  Loaded plugin Wavecom
+modem-manager[1100]: <info>  Loaded plugin Option
+modem-manager[1100]: <info>  Loaded plugin Longcheer
+modem-manager[1100]: <info>  Loaded plugin Sierra
+modem-manager[1100]: <info>  Loaded plugin AnyData
+modem-manager[1100]: <info>  Loaded plugin Huawei
+modem-manager[1100]: <info>  Loaded plugin X22X
+modem-manager[1100]: <info>  Loaded plugin Option High-Speed
+modem-manager[1100]: <info>  Loaded plugin SimTech
+modem-manager[1100]: <info>  Loaded plugin Nokia
+modem-manager[1100]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1107]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1107]: <info>  Loaded plugin ZTE
+modem-manager[1107]: <info>  Loaded plugin MotoC
+modem-manager[1107]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1107]: <info>  Loaded plugin Gobi
+modem-manager[1107]: <info>  Loaded plugin Generic
+modem-manager[1107]: <info>  Loaded plugin Novatel
+modem-manager[1107]: <info>  Loaded plugin Linktop
+modem-manager[1107]: <info>  Loaded plugin Wavecom
+modem-manager[1107]: <info>  Loaded plugin Option
+modem-manager[1107]: <info>  Loaded plugin Longcheer
+modem-manager[1107]: <info>  Loaded plugin Sierra
+modem-manager[1107]: <info>  Loaded plugin AnyData
+modem-manager[1107]: <info>  Loaded plugin Huawei
+modem-manager[1107]: <info>  Loaded plugin X22X
+modem-manager[1107]: <info>  Loaded plugin Option High-Speed
+modem-manager[1107]: <info>  Loaded plugin SimTech
+modem-manager[1107]: <info>  Loaded plugin Nokia
+modem-manager[1107]: <info>  Loaded plugin Samsung
+modem-manager[1143]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1143]: <info>  Loaded plugin ZTE
+modem-manager[1143]: <info>  Loaded plugin MotoC
+modem-manager[1143]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1143]: <info>  Loaded plugin Gobi
+modem-manager[1143]: <info>  Loaded plugin Generic
+modem-manager[1143]: <info>  Loaded plugin Novatel
+modem-manager[1143]: <info>  Loaded plugin Linktop
+modem-manager[1143]: <info>  Loaded plugin Wavecom
+modem-manager[1143]: <info>  Loaded plugin Option
+modem-manager[1143]: <info>  Loaded plugin Longcheer
+modem-manager[1143]: <info>  Loaded plugin Sierra
+modem-manager[1143]: <info>  Loaded plugin AnyData
+modem-manager[1143]: <info>  Loaded plugin Huawei
+modem-manager[1143]: <info>  Loaded plugin X22X
+modem-manager[1143]: <info>  Loaded plugin Option High-Speed
+modem-manager[1143]: <info>  Loaded plugin SimTech
+modem-manager[1143]: <info>  Loaded plugin Nokia
+modem-manager[1143]: <info>  Loaded plugin Samsung
+modem-manager[1144]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1144]: <info>  Loaded plugin ZTE
+modem-manager[1144]: <info>  Loaded plugin MotoC
+modem-manager[1144]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1144]: <info>  Loaded plugin Gobi
+modem-manager[1144]: <info>  Loaded plugin Generic
+modem-manager[1144]: <info>  Loaded plugin Novatel
+modem-manager[1144]: <info>  Loaded plugin Linktop
+modem-manager[1144]: <info>  Loaded plugin Wavecom
+modem-manager[1144]: <info>  Loaded plugin Option
+modem-manager[1144]: <info>  Loaded plugin Longcheer
+modem-manager[1144]: <info>  Loaded plugin Sierra
+modem-manager[1144]: <info>  Loaded plugin AnyData
+modem-manager[1144]: <info>  Loaded plugin Huawei
+modem-manager[1144]: <info>  Loaded plugin X22X
+modem-manager[1144]: <info>  Loaded plugin Option High-Speed
+modem-manager[1144]: <info>  Loaded plugin SimTech
+modem-manager[1144]: <info>  Loaded plugin Nokia
+modem-manager[1144]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1134]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1134]: <info>  Loaded plugin ZTE
+modem-manager[1134]: <info>  Loaded plugin MotoC
+modem-manager[1134]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1134]: <info>  Loaded plugin Gobi
+modem-manager[1134]: <info>  Loaded plugin Generic
+modem-manager[1134]: <info>  Loaded plugin Novatel
+modem-manager[1134]: <info>  Loaded plugin Linktop
+modem-manager[1134]: <info>  Loaded plugin Wavecom
+modem-manager[1134]: <info>  Loaded plugin Option
+modem-manager[1134]: <info>  Loaded plugin Longcheer
+modem-manager[1134]: <info>  Loaded plugin Sierra
+modem-manager[1134]: <info>  Loaded plugin AnyData
+modem-manager[1134]: <info>  Loaded plugin Huawei
+modem-manager[1134]: <info>  Loaded plugin X22X
+modem-manager[1134]: <info>  Loaded plugin Option High-Speed
+modem-manager[1134]: <info>  Loaded plugin SimTech
+modem-manager[1134]: <info>  Loaded plugin Nokia
+modem-manager[1134]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1107]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1107]: <info>  Loaded plugin ZTE
+modem-manager[1107]: <info>  Loaded plugin MotoC
+modem-manager[1107]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1107]: <info>  Loaded plugin Gobi
+modem-manager[1107]: <info>  Loaded plugin Generic
+modem-manager[1107]: <info>  Loaded plugin Novatel
+modem-manager[1107]: <info>  Loaded plugin Linktop
+modem-manager[1107]: <info>  Loaded plugin Wavecom
+modem-manager[1107]: <info>  Loaded plugin Option
+modem-manager[1107]: <info>  Loaded plugin Longcheer
+modem-manager[1107]: <info>  Loaded plugin Sierra
+modem-manager[1107]: <info>  Loaded plugin AnyData
+modem-manager[1107]: <info>  Loaded plugin Huawei
+modem-manager[1107]: <info>  Loaded plugin X22X
+modem-manager[1107]: <info>  Loaded plugin Option High-Speed
+modem-manager[1107]: <info>  Loaded plugin SimTech
+modem-manager[1107]: <info>  Loaded plugin Nokia
+modem-manager[1107]: <info>  Loaded plugin Samsung
+modem-manager[1108]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1108]: <info>  Loaded plugin ZTE
+modem-manager[1108]: <info>  Loaded plugin MotoC
+modem-manager[1108]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1108]: <info>  Loaded plugin Gobi
+modem-manager[1108]: <info>  Loaded plugin Generic
+modem-manager[1108]: <info>  Loaded plugin Novatel
+modem-manager[1108]: <info>  Loaded plugin Linktop
+modem-manager[1108]: <info>  Loaded plugin Wavecom
+modem-manager[1108]: <info>  Loaded plugin Option
+modem-manager[1108]: <info>  Loaded plugin Longcheer
+modem-manager[1108]: <info>  Loaded plugin Sierra
+modem-manager[1108]: <info>  Loaded plugin AnyData
+modem-manager[1108]: <info>  Loaded plugin Huawei
+modem-manager[1108]: <info>  Loaded plugin X22X
+modem-manager[1108]: <info>  Loaded plugin Option High-Speed
+modem-manager[1108]: <info>  Loaded plugin SimTech
+modem-manager[1108]: <info>  Loaded plugin Nokia
+modem-manager[1108]: <info>  Loaded plugin Samsung
+modem-manager[1126]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1126]: <info>  Loaded plugin ZTE
+modem-manager[1126]: <info>  Loaded plugin MotoC
+modem-manager[1126]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1126]: <info>  Loaded plugin Gobi
+modem-manager[1126]: <info>  Loaded plugin Generic
+modem-manager[1126]: <info>  Loaded plugin Novatel
+modem-manager[1126]: <info>  Loaded plugin Linktop
+modem-manager[1126]: <info>  Loaded plugin Wavecom
+modem-manager[1126]: <info>  Loaded plugin Option
+modem-manager[1126]: <info>  Loaded plugin Longcheer
+modem-manager[1126]: <info>  Loaded plugin Sierra
+modem-manager[1126]: <info>  Loaded plugin AnyData
+modem-manager[1126]: <info>  Loaded plugin Huawei
+modem-manager[1126]: <info>  Loaded plugin X22X
+modem-manager[1126]: <info>  Loaded plugin Option High-Speed
+modem-manager[1126]: <info>  Loaded plugin SimTech
+modem-manager[1126]: <info>  Loaded plugin Nokia
+modem-manager[1126]: <info>  Loaded plugin Samsung
+modem-manager[1120]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1120]: <info>  Loaded plugin ZTE
+modem-manager[1120]: <info>  Loaded plugin MotoC
+modem-manager[1120]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1120]: <info>  Loaded plugin Gobi
+modem-manager[1120]: <info>  Loaded plugin Generic
+modem-manager[1120]: <info>  Loaded plugin Novatel
+modem-manager[1120]: <info>  Loaded plugin Linktop
+modem-manager[1120]: <info>  Loaded plugin Wavecom
+modem-manager[1120]: <info>  Loaded plugin Option
+modem-manager[1120]: <info>  Loaded plugin Longcheer
+modem-manager[1120]: <info>  Loaded plugin Sierra
+modem-manager[1120]: <info>  Loaded plugin AnyData
+modem-manager[1120]: <info>  Loaded plugin Huawei
+modem-manager[1120]: <info>  Loaded plugin X22X
+modem-manager[1120]: <info>  Loaded plugin Option High-Speed
+modem-manager[1120]: <info>  Loaded plugin SimTech
+modem-manager[1120]: <info>  Loaded plugin Nokia
+modem-manager[1120]: <info>  Loaded plugin Samsung
+modem-manager[1157]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1157]: <info>  Loaded plugin ZTE
+modem-manager[1157]: <info>  Loaded plugin MotoC
+modem-manager[1157]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1157]: <info>  Loaded plugin Gobi
+modem-manager[1157]: <info>  Loaded plugin Generic
+modem-manager[1157]: <info>  Loaded plugin Novatel
+modem-manager[1157]: <info>  Loaded plugin Linktop
+modem-manager[1157]: <info>  Loaded plugin Wavecom
+modem-manager[1157]: <info>  Loaded plugin Option
+modem-manager[1157]: <info>  Loaded plugin Longcheer
+modem-manager[1157]: <info>  Loaded plugin Sierra
+modem-manager[1157]: <info>  Loaded plugin AnyData
+modem-manager[1157]: <info>  Loaded plugin Huawei
+modem-manager[1157]: <info>  Loaded plugin X22X
+modem-manager[1157]: <info>  Loaded plugin Option High-Speed
+modem-manager[1157]: <info>  Loaded plugin SimTech
+modem-manager[1157]: <info>  Loaded plugin Nokia
+modem-manager[1157]: <info>  Loaded plugin Samsung
+modem-manager[1142]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1142]: <info>  Loaded plugin ZTE
+modem-manager[1142]: <info>  Loaded plugin MotoC
+modem-manager[1142]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1142]: <info>  Loaded plugin Gobi
+modem-manager[1142]: <info>  Loaded plugin Generic
+modem-manager[1142]: <info>  Loaded plugin Novatel
+modem-manager[1142]: <info>  Loaded plugin Linktop
+modem-manager[1142]: <info>  Loaded plugin Wavecom
+modem-manager[1142]: <info>  Loaded plugin Option
+modem-manager[1142]: <info>  Loaded plugin Longcheer
+modem-manager[1142]: <info>  Loaded plugin Sierra
+modem-manager[1142]: <info>  Loaded plugin AnyData
+modem-manager[1142]: <info>  Loaded plugin Huawei
+modem-manager[1142]: <info>  Loaded plugin X22X
+modem-manager[1142]: <info>  Loaded plugin Option High-Speed
+modem-manager[1142]: <info>  Loaded plugin SimTech
+modem-manager[1142]: <info>  Loaded plugin Nokia
+modem-manager[1142]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1131]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1131]: <info>  Loaded plugin ZTE
+modem-manager[1131]: <info>  Loaded plugin MotoC
+modem-manager[1131]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1131]: <info>  Loaded plugin Gobi
+modem-manager[1131]: <info>  Loaded plugin Generic
+modem-manager[1131]: <info>  Loaded plugin Novatel
+modem-manager[1131]: <info>  Loaded plugin Linktop
+modem-manager[1131]: <info>  Loaded plugin Wavecom
+modem-manager[1131]: <info>  Loaded plugin Option
+modem-manager[1131]: <info>  Loaded plugin Longcheer
+modem-manager[1131]: <info>  Loaded plugin Sierra
+modem-manager[1131]: <info>  Loaded plugin AnyData
+modem-manager[1131]: <info>  Loaded plugin Huawei
+modem-manager[1131]: <info>  Loaded plugin X22X
+modem-manager[1131]: <info>  Loaded plugin Option High-Speed
+modem-manager[1131]: <info>  Loaded plugin SimTech
+modem-manager[1131]: <info>  Loaded plugin Nokia
+modem-manager[1131]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1137]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1137]: <info>  Loaded plugin ZTE
+modem-manager[1137]: <info>  Loaded plugin MotoC
+modem-manager[1137]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1137]: <info>  Loaded plugin Gobi
+modem-manager[1137]: <info>  Loaded plugin Generic
+modem-manager[1137]: <info>  Loaded plugin Novatel
+modem-manager[1137]: <info>  Loaded plugin Linktop
+modem-manager[1137]: <info>  Loaded plugin Wavecom
+modem-manager[1137]: <info>  Loaded plugin Option
+modem-manager[1137]: <info>  Loaded plugin Longcheer
+modem-manager[1137]: <info>  Loaded plugin Sierra
+modem-manager[1137]: <info>  Loaded plugin AnyData
+modem-manager[1137]: <info>  Loaded plugin Huawei
+modem-manager[1137]: <info>  Loaded plugin X22X
+modem-manager[1137]: <info>  Loaded plugin Option High-Speed
+modem-manager[1137]: <info>  Loaded plugin SimTech
+modem-manager[1137]: <info>  Loaded plugin Nokia
+modem-manager[1137]: <info>  Loaded plugin Samsung
+modem-manager[1144]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1144]: <info>  Loaded plugin ZTE
+modem-manager[1144]: <info>  Loaded plugin MotoC
+modem-manager[1144]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1144]: <info>  Loaded plugin Gobi
+modem-manager[1144]: <info>  Loaded plugin Generic
+modem-manager[1144]: <info>  Loaded plugin Novatel
+modem-manager[1144]: <info>  Loaded plugin Linktop
+modem-manager[1144]: <info>  Loaded plugin Wavecom
+modem-manager[1144]: <info>  Loaded plugin Option
+modem-manager[1144]: <info>  Loaded plugin Longcheer
+modem-manager[1144]: <info>  Loaded plugin Sierra
+modem-manager[1144]: <info>  Loaded plugin AnyData
+modem-manager[1144]: <info>  Loaded plugin Huawei
+modem-manager[1144]: <info>  Loaded plugin X22X
+modem-manager[1144]: <info>  Loaded plugin Option High-Speed
+modem-manager[1144]: <info>  Loaded plugin SimTech
+modem-manager[1144]: <info>  Loaded plugin Nokia
+modem-manager[1144]: <info>  Loaded plugin Samsung
+modem-manager[1102]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1102]: <info>  Loaded plugin ZTE
+modem-manager[1102]: <info>  Loaded plugin MotoC
+modem-manager[1102]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1102]: <info>  Loaded plugin Gobi
+modem-manager[1102]: <info>  Loaded plugin Generic
+modem-manager[1102]: <info>  Loaded plugin Novatel
+modem-manager[1102]: <info>  Loaded plugin Linktop
+modem-manager[1102]: <info>  Loaded plugin Wavecom
+modem-manager[1102]: <info>  Loaded plugin Option
+modem-manager[1102]: <info>  Loaded plugin Longcheer
+modem-manager[1102]: <info>  Loaded plugin Sierra
+modem-manager[1102]: <info>  Loaded plugin AnyData
+modem-manager[1102]: <info>  Loaded plugin Huawei
+modem-manager[1102]: <info>  Loaded plugin X22X
+modem-manager[1102]: <info>  Loaded plugin Option High-Speed
+modem-manager[1102]: <info>  Loaded plugin SimTech
+modem-manager[1102]: <info>  Loaded plugin Nokia
+modem-manager[1102]: <info>  Loaded plugin Samsung
+modem-manager[1153]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1153]: <info>  Loaded plugin ZTE
+modem-manager[1153]: <info>  Loaded plugin MotoC
+modem-manager[1153]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1153]: <info>  Loaded plugin Gobi
+modem-manager[1153]: <info>  Loaded plugin Generic
+modem-manager[1153]: <info>  Loaded plugin Novatel
+modem-manager[1153]: <info>  Loaded plugin Linktop
+modem-manager[1153]: <info>  Loaded plugin Wavecom
+modem-manager[1153]: <info>  Loaded plugin Option
+modem-manager[1153]: <info>  Loaded plugin Longcheer
+modem-manager[1153]: <info>  Loaded plugin Sierra
+modem-manager[1153]: <info>  Loaded plugin AnyData
+modem-manager[1153]: <info>  Loaded plugin Huawei
+modem-manager[1153]: <info>  Loaded plugin X22X
+modem-manager[1153]: <info>  Loaded plugin Option High-Speed
+modem-manager[1153]: <info>  Loaded plugin SimTech
+modem-manager[1153]: <info>  Loaded plugin Nokia
+modem-manager[1153]: <info>  Loaded plugin Samsung
+modem-manager[1100]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1100]: <info>  Loaded plugin ZTE
+modem-manager[1100]: <info>  Loaded plugin MotoC
+modem-manager[1100]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1100]: <info>  Loaded plugin Gobi
+modem-manager[1100]: <info>  Loaded plugin Generic
+modem-manager[1100]: <info>  Loaded plugin Novatel
+modem-manager[1100]: <info>  Loaded plugin Linktop
+modem-manager[1100]: <info>  Loaded plugin Wavecom
+modem-manager[1100]: <info>  Loaded plugin Option
+modem-manager[1100]: <info>  Loaded plugin Longcheer
+modem-manager[1100]: <info>  Loaded plugin Sierra
+modem-manager[1100]: <info>  Loaded plugin AnyData
+modem-manager[1100]: <info>  Loaded plugin Huawei
+modem-manager[1100]: <info>  Loaded plugin X22X
+modem-manager[1100]: <info>  Loaded plugin Option High-Speed
+modem-manager[1100]: <info>  Loaded plugin SimTech
+modem-manager[1100]: <info>  Loaded plugin Nokia
+modem-manager[1100]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  Caught signal 15, shutting down...
+modem-manager[1153]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1153]: <info>  Loaded plugin ZTE
+modem-manager[1153]: <info>  Loaded plugin MotoC
+modem-manager[1153]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1153]: <info>  Loaded plugin Gobi
+modem-manager[1153]: <info>  Loaded plugin Generic
+modem-manager[1153]: <info>  Loaded plugin Novatel
+modem-manager[1153]: <info>  Loaded plugin Linktop
+modem-manager[1153]: <info>  Loaded plugin Wavecom
+modem-manager[1153]: <info>  Loaded plugin Option
+modem-manager[1153]: <info>  Loaded plugin Longcheer
+modem-manager[1153]: <info>  Loaded plugin Sierra
+modem-manager[1153]: <info>  Loaded plugin AnyData
+modem-manager[1153]: <info>  Loaded plugin Huawei
+modem-manager[1153]: <info>  Loaded plugin X22X
+modem-manager[1153]: <info>  Loaded plugin Option High-Speed
+modem-manager[1153]: <info>  Loaded plugin SimTech
+modem-manager[1153]: <info>  Loaded plugin Nokia
+modem-manager[1153]: <info>  Loaded plugin Samsung
+modem-manager[1141]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1141]: <info>  Loaded plugin ZTE
+modem-manager[1141]: <info>  Loaded plugin MotoC
+modem-manager[1141]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1141]: <info>  Loaded plugin Gobi
+modem-manager[1141]: <info>  Loaded plugin Generic
+modem-manager[1141]: <info>  Loaded plugin Novatel
+modem-manager[1141]: <info>  Loaded plugin Linktop
+modem-manager[1141]: <info>  Loaded plugin Wavecom
+modem-manager[1141]: <info>  Loaded plugin Option
+modem-manager[1141]: <info>  Loaded plugin Longcheer
+modem-manager[1141]: <info>  Loaded plugin Sierra
+modem-manager[1141]: <info>  Loaded plugin AnyData
+modem-manager[1141]: <info>  Loaded plugin Huawei
+modem-manager[1141]: <info>  Loaded plugin X22X
+modem-manager[1141]: <info>  Loaded plugin Option High-Speed
+modem-manager[1141]: <info>  Loaded plugin SimTech
+modem-manager[1141]: <info>  Loaded plugin Nokia
+modem-manager[1141]: <info>  Loaded plugin Samsung
+modem-manager[1145]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1145]: <info>  Loaded plugin ZTE
+modem-manager[1145]: <info>  Loaded plugin MotoC
+modem-manager[1145]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1145]: <info>  Loaded plugin Gobi
+modem-manager[1145]: <info>  Loaded plugin Generic
+modem-manager[1145]: <info>  Loaded plugin Novatel
+modem-manager[1145]: <info>  Loaded plugin Linktop
+modem-manager[1145]: <info>  Loaded plugin Wavecom
+modem-manager[1145]: <info>  Loaded plugin Option
+modem-manager[1145]: <info>  Loaded plugin Longcheer
+modem-manager[1145]: <info>  Loaded plugin Sierra
+modem-manager[1145]: <info>  Loaded plugin AnyData
+modem-manager[1145]: <info>  Loaded plugin Huawei
+modem-manager[1145]: <info>  Loaded plugin X22X
+modem-manager[1145]: <info>  Loaded plugin Option High-Speed
+modem-manager[1145]: <info>  Loaded plugin SimTech
+modem-manager[1145]: <info>  Loaded plugin Nokia
+modem-manager[1145]: <info>  Loaded plugin Samsung
+modem-manager[1145]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1145]: <info>  Loaded plugin ZTE
+modem-manager[1145]: <info>  Loaded plugin MotoC
+modem-manager[1145]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1145]: <info>  Loaded plugin Gobi
+modem-manager[1145]: <info>  Loaded plugin Generic
+modem-manager[1145]: <info>  Loaded plugin Novatel
+modem-manager[1145]: <info>  Loaded plugin Linktop
+modem-manager[1145]: <info>  Loaded plugin Wavecom
+modem-manager[1145]: <info>  Loaded plugin Option
+modem-manager[1145]: <info>  Loaded plugin Longcheer
+modem-manager[1145]: <info>  Loaded plugin Sierra
+modem-manager[1145]: <info>  Loaded plugin AnyData
+modem-manager[1145]: <info>  Loaded plugin Huawei
+modem-manager[1145]: <info>  Loaded plugin X22X
+modem-manager[1145]: <info>  Loaded plugin Option High-Speed
+modem-manager[1145]: <info>  Loaded plugin SimTech
+modem-manager[1145]: <info>  Loaded plugin Nokia
+modem-manager[1145]: <info>  Loaded plugin Samsung
+modem-manager[1141]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1141]: <info>  Loaded plugin ZTE
+modem-manager[1141]: <info>  Loaded plugin MotoC
+modem-manager[1141]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1141]: <info>  Loaded plugin Gobi
+modem-manager[1141]: <info>  Loaded plugin Generic
+modem-manager[1141]: <info>  Loaded plugin Novatel
+modem-manager[1141]: <info>  Loaded plugin Linktop
+modem-manager[1141]: <info>  Loaded plugin Wavecom
+modem-manager[1141]: <info>  Loaded plugin Option
+modem-manager[1141]: <info>  Loaded plugin Longcheer
+modem-manager[1141]: <info>  Loaded plugin Sierra
+modem-manager[1141]: <info>  Loaded plugin AnyData
+modem-manager[1141]: <info>  Loaded plugin Huawei
+modem-manager[1141]: <info>  Loaded plugin X22X
+modem-manager[1141]: <info>  Loaded plugin Option High-Speed
+modem-manager[1141]: <info>  Loaded plugin SimTech
+modem-manager[1141]: <info>  Loaded plugin Nokia
+modem-manager[1141]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1150]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1150]: <info>  Loaded plugin ZTE
+modem-manager[1150]: <info>  Loaded plugin MotoC
+modem-manager[1150]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1150]: <info>  Loaded plugin Gobi
+modem-manager[1150]: <info>  Loaded plugin Generic
+modem-manager[1150]: <info>  Loaded plugin Novatel
+modem-manager[1150]: <info>  Loaded plugin Linktop
+modem-manager[1150]: <info>  Loaded plugin Wavecom
+modem-manager[1150]: <info>  Loaded plugin Option
+modem-manager[1150]: <info>  Loaded plugin Longcheer
+modem-manager[1150]: <info>  Loaded plugin Sierra
+modem-manager[1150]: <info>  Loaded plugin AnyData
+modem-manager[1150]: <info>  Loaded plugin Huawei
+modem-manager[1150]: <info>  Loaded plugin X22X
+modem-manager[1150]: <info>  Loaded plugin Option High-Speed
+modem-manager[1150]: <info>  Loaded plugin SimTech
+modem-manager[1150]: <info>  Loaded plugin Nokia
+modem-manager[1150]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1142]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1142]: <info>  Loaded plugin ZTE
+modem-manager[1142]: <info>  Loaded plugin MotoC
+modem-manager[1142]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1142]: <info>  Loaded plugin Gobi
+modem-manager[1142]: <info>  Loaded plugin Generic
+modem-manager[1142]: <info>  Loaded plugin Novatel
+modem-manager[1142]: <info>  Loaded plugin Linktop
+modem-manager[1142]: <info>  Loaded plugin Wavecom
+modem-manager[1142]: <info>  Loaded plugin Option
+modem-manager[1142]: <info>  Loaded plugin Longcheer
+modem-manager[1142]: <info>  Loaded plugin Sierra
+modem-manager[1142]: <info>  Loaded plugin AnyData
+modem-manager[1142]: <info>  Loaded plugin Huawei
+modem-manager[1142]: <info>  Loaded plugin X22X
+modem-manager[1142]: <info>  Loaded plugin Option High-Speed
+modem-manager[1142]: <info>  Loaded plugin SimTech
+modem-manager[1142]: <info>  Loaded plugin Nokia
+modem-manager[1142]: <info>  Loaded plugin Samsung
+modem-manager[1149]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1149]: <info>  Loaded plugin ZTE
+modem-manager[1149]: <info>  Loaded plugin MotoC
+modem-manager[1149]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1149]: <info>  Loaded plugin Gobi
+modem-manager[1149]: <info>  Loaded plugin Generic
+modem-manager[1149]: <info>  Loaded plugin Novatel
+modem-manager[1149]: <info>  Loaded plugin Linktop
+modem-manager[1149]: <info>  Loaded plugin Wavecom
+modem-manager[1149]: <info>  Loaded plugin Option
+modem-manager[1149]: <info>  Loaded plugin Longcheer
+modem-manager[1149]: <info>  Loaded plugin Sierra
+modem-manager[1149]: <info>  Loaded plugin AnyData
+modem-manager[1149]: <info>  Loaded plugin Huawei
+modem-manager[1149]: <info>  Loaded plugin X22X
+modem-manager[1149]: <info>  Loaded plugin Option High-Speed
+modem-manager[1149]: <info>  Loaded plugin SimTech
+modem-manager[1149]: <info>  Loaded plugin Nokia
+modem-manager[1149]: <info>  Loaded plugin Samsung
+modem-manager[1154]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1154]: <info>  Loaded plugin ZTE
+modem-manager[1154]: <info>  Loaded plugin MotoC
+modem-manager[1154]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1154]: <info>  Loaded plugin Gobi
+modem-manager[1154]: <info>  Loaded plugin Generic
+modem-manager[1154]: <info>  Loaded plugin Novatel
+modem-manager[1154]: <info>  Loaded plugin Linktop
+modem-manager[1154]: <info>  Loaded plugin Wavecom
+modem-manager[1154]: <info>  Loaded plugin Option
+modem-manager[1154]: <info>  Loaded plugin Longcheer
+modem-manager[1154]: <info>  Loaded plugin Sierra
+modem-manager[1154]: <info>  Loaded plugin AnyData
+modem-manager[1154]: <info>  Loaded plugin Huawei
+modem-manager[1154]: <info>  Loaded plugin X22X
+modem-manager[1154]: <info>  Loaded plugin Option High-Speed
+modem-manager[1154]: <info>  Loaded plugin SimTech
+modem-manager[1154]: <info>  Loaded plugin Nokia
+modem-manager[1154]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1143]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1143]: <info>  Loaded plugin ZTE
+modem-manager[1143]: <info>  Loaded plugin MotoC
+modem-manager[1143]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1143]: <info>  Loaded plugin Gobi
+modem-manager[1143]: <info>  Loaded plugin Generic
+modem-manager[1143]: <info>  Loaded plugin Novatel
+modem-manager[1143]: <info>  Loaded plugin Linktop
+modem-manager[1143]: <info>  Loaded plugin Wavecom
+modem-manager[1143]: <info>  Loaded plugin Option
+modem-manager[1143]: <info>  Loaded plugin Longcheer
+modem-manager[1143]: <info>  Loaded plugin Sierra
+modem-manager[1143]: <info>  Loaded plugin AnyData
+modem-manager[1143]: <info>  Loaded plugin Huawei
+modem-manager[1143]: <info>  Loaded plugin X22X
+modem-manager[1143]: <info>  Loaded plugin Option High-Speed
+modem-manager[1143]: <info>  Loaded plugin SimTech
+modem-manager[1143]: <info>  Loaded plugin Nokia
+modem-manager[1143]: <info>  Loaded plugin Samsung
+modem-manager[1138]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1138]: <info>  Loaded plugin ZTE
+modem-manager[1138]: <info>  Loaded plugin MotoC
+modem-manager[1138]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1138]: <info>  Loaded plugin Gobi
+modem-manager[1138]: <info>  Loaded plugin Generic
+modem-manager[1138]: <info>  Loaded plugin Novatel
+modem-manager[1138]: <info>  Loaded plugin Linktop
+modem-manager[1138]: <info>  Loaded plugin Wavecom
+modem-manager[1138]: <info>  Loaded plugin Option
+modem-manager[1138]: <info>  Loaded plugin Longcheer
+modem-manager[1138]: <info>  Loaded plugin Sierra
+modem-manager[1138]: <info>  Loaded plugin AnyData
+modem-manager[1138]: <info>  Loaded plugin Huawei
+modem-manager[1138]: <info>  Loaded plugin X22X
+modem-manager[1138]: <info>  Loaded plugin Option High-Speed
+modem-manager[1138]: <info>  Loaded plugin SimTech
+modem-manager[1138]: <info>  Loaded plugin Nokia
+modem-manager[1138]: <info>  Loaded plugin Samsung
+modem-manager[1151]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1151]: <info>  Loaded plugin ZTE
+modem-manager[1151]: <info>  Loaded plugin MotoC
+modem-manager[1151]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1151]: <info>  Loaded plugin Gobi
+modem-manager[1151]: <info>  Loaded plugin Generic
+modem-manager[1151]: <info>  Loaded plugin Novatel
+modem-manager[1151]: <info>  Loaded plugin Linktop
+modem-manager[1151]: <info>  Loaded plugin Wavecom
+modem-manager[1151]: <info>  Loaded plugin Option
+modem-manager[1151]: <info>  Loaded plugin Longcheer
+modem-manager[1151]: <info>  Loaded plugin Sierra
+modem-manager[1151]: <info>  Loaded plugin AnyData
+modem-manager[1151]: <info>  Loaded plugin Huawei
+modem-manager[1151]: <info>  Loaded plugin X22X
+modem-manager[1151]: <info>  Loaded plugin Option High-Speed
+modem-manager[1151]: <info>  Loaded plugin SimTech
+modem-manager[1151]: <info>  Loaded plugin Nokia
+modem-manager[1151]: <info>  Loaded plugin Samsung
+modem-manager[884]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[884]: <info>  Loaded plugin ZTE
+modem-manager[884]: <info>  Loaded plugin MotoC
+modem-manager[884]: <info>  Loaded plugin Ericsson MBM
+modem-manager[884]: <info>  Loaded plugin Gobi
+modem-manager[884]: <info>  Loaded plugin Generic
+modem-manager[884]: <info>  Loaded plugin Novatel
+modem-manager[884]: <info>  Loaded plugin Linktop
+modem-manager[884]: <info>  Loaded plugin Wavecom
+modem-manager[884]: <info>  Loaded plugin Option
+modem-manager[884]: <info>  Loaded plugin Longcheer
+modem-manager[884]: <info>  Loaded plugin Sierra
+modem-manager[884]: <info>  Loaded plugin AnyData
+modem-manager[884]: <info>  Loaded plugin Huawei
+modem-manager[884]: <info>  Loaded plugin X22X
+modem-manager[884]: <info>  Loaded plugin Option High-Speed
+modem-manager[884]: <info>  Loaded plugin SimTech
+modem-manager[884]: <info>  Loaded plugin Nokia
+modem-manager[884]: <info>  Loaded plugin Samsung
+modem-manager[1142]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1142]: <info>  Loaded plugin ZTE
+modem-manager[1142]: <info>  Loaded plugin MotoC
+modem-manager[1142]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1142]: <info>  Loaded plugin Gobi
+modem-manager[1142]: <info>  Loaded plugin Generic
+modem-manager[1142]: <info>  Loaded plugin Novatel
+modem-manager[1142]: <info>  Loaded plugin Linktop
+modem-manager[1142]: <info>  Loaded plugin Wavecom
+modem-manager[1142]: <info>  Loaded plugin Option
+modem-manager[1142]: <info>  Loaded plugin Longcheer
+modem-manager[1142]: <info>  Loaded plugin Sierra
+modem-manager[1142]: <info>  Loaded plugin AnyData
+modem-manager[1142]: <info>  Loaded plugin Huawei
+modem-manager[1142]: <info>  Loaded plugin X22X
+modem-manager[1142]: <info>  Loaded plugin Option High-Speed
+modem-manager[1142]: <info>  Loaded plugin SimTech
+modem-manager[1142]: <info>  Loaded plugin Nokia
+modem-manager[1142]: <info>  Loaded plugin Samsung
+modem-manager[1129]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1129]: <info>  Loaded plugin ZTE
+modem-manager[1129]: <info>  Loaded plugin MotoC
+modem-manager[1129]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1129]: <info>  Loaded plugin Gobi
+modem-manager[1129]: <info>  Loaded plugin Generic
+modem-manager[1129]: <info>  Loaded plugin Novatel
+modem-manager[1129]: <info>  Loaded plugin Linktop
+modem-manager[1129]: <info>  Loaded plugin Wavecom
+modem-manager[1129]: <info>  Loaded plugin Option
+modem-manager[1129]: <info>  Loaded plugin Longcheer
+modem-manager[1129]: <info>  Loaded plugin Sierra
+modem-manager[1129]: <info>  Loaded plugin AnyData
+modem-manager[1129]: <info>  Loaded plugin Huawei
+modem-manager[1129]: <info>  Loaded plugin X22X
+modem-manager[1129]: <info>  Loaded plugin Option High-Speed
+modem-manager[1129]: <info>  Loaded plugin SimTech
+modem-manager[1129]: <info>  Loaded plugin Nokia
+modem-manager[1129]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+modem-manager[1133]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1133]: <info>  Loaded plugin ZTE
+modem-manager[1133]: <info>  Loaded plugin MotoC
+modem-manager[1133]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1133]: <info>  Loaded plugin Gobi
+modem-manager[1133]: <info>  Loaded plugin Generic
+modem-manager[1133]: <info>  Loaded plugin Novatel
+modem-manager[1133]: <info>  Loaded plugin Linktop
+modem-manager[1133]: <info>  Loaded plugin Wavecom
+modem-manager[1133]: <info>  Loaded plugin Option
+modem-manager[1133]: <info>  Loaded plugin Longcheer
+modem-manager[1133]: <info>  Loaded plugin Sierra
+modem-manager[1133]: <info>  Loaded plugin AnyData
+modem-manager[1133]: <info>  Loaded plugin Huawei
+modem-manager[1133]: <info>  Loaded plugin X22X
+modem-manager[1133]: <info>  Loaded plugin Option High-Speed
+modem-manager[1133]: <info>  Loaded plugin SimTech
+modem-manager[1133]: <info>  Loaded plugin Nokia
+modem-manager[1133]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1104]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1104]: <info>  Loaded plugin ZTE
+modem-manager[1104]: <info>  Loaded plugin MotoC
+modem-manager[1104]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1104]: <info>  Loaded plugin Gobi
+modem-manager[1104]: <info>  Loaded plugin Generic
+modem-manager[1104]: <info>  Loaded plugin Novatel
+modem-manager[1104]: <info>  Loaded plugin Linktop
+modem-manager[1104]: <info>  Loaded plugin Wavecom
+modem-manager[1104]: <info>  Loaded plugin Option
+modem-manager[1104]: <info>  Loaded plugin Longcheer
+modem-manager[1104]: <info>  Loaded plugin Sierra
+modem-manager[1104]: <info>  Loaded plugin AnyData
+modem-manager[1104]: <info>  Loaded plugin Huawei
+modem-manager[1104]: <info>  Loaded plugin X22X
+modem-manager[1104]: <info>  Loaded plugin Option High-Speed
+modem-manager[1104]: <info>  Loaded plugin SimTech
+modem-manager[1104]: <info>  Loaded plugin Nokia
+modem-manager[1104]: <info>  Loaded plugin Samsung
+modem-manager[1090]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1090]: <info>  Loaded plugin ZTE
+modem-manager[1090]: <info>  Loaded plugin MotoC
+modem-manager[1090]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1090]: <info>  Loaded plugin Gobi
+modem-manager[1090]: <info>  Loaded plugin Generic
+modem-manager[1090]: <info>  Loaded plugin Novatel
+modem-manager[1090]: <info>  Loaded plugin Linktop
+modem-manager[1090]: <info>  Loaded plugin Wavecom
+modem-manager[1090]: <info>  Loaded plugin Option
+modem-manager[1090]: <info>  Loaded plugin Longcheer
+modem-manager[1090]: <info>  Loaded plugin Sierra
+modem-manager[1090]: <info>  Loaded plugin AnyData
+modem-manager[1090]: <info>  Loaded plugin Huawei
+modem-manager[1090]: <info>  Loaded plugin X22X
+modem-manager[1090]: <info>  Loaded plugin Option High-Speed
+modem-manager[1090]: <info>  Loaded plugin SimTech
+modem-manager[1090]: <info>  Loaded plugin Nokia
+modem-manager[1090]: <info>  Loaded plugin Samsung
+modem-manager[1092]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1092]: <info>  Loaded plugin ZTE
+modem-manager[1092]: <info>  Loaded plugin MotoC
+modem-manager[1092]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1092]: <info>  Loaded plugin Gobi
+modem-manager[1092]: <info>  Loaded plugin Generic
+modem-manager[1092]: <info>  Loaded plugin Novatel
+modem-manager[1092]: <info>  Loaded plugin Linktop
+modem-manager[1092]: <info>  Loaded plugin Wavecom
+modem-manager[1092]: <info>  Loaded plugin Option
+modem-manager[1092]: <info>  Loaded plugin Longcheer
+modem-manager[1092]: <info>  Loaded plugin Sierra
+modem-manager[1092]: <info>  Loaded plugin AnyData
+modem-manager[1092]: <info>  Loaded plugin Huawei
+modem-manager[1092]: <info>  Loaded plugin X22X
+modem-manager[1092]: <info>  Loaded plugin Option High-Speed
+modem-manager[1092]: <info>  Loaded plugin SimTech
+modem-manager[1092]: <info>  Loaded plugin Nokia
+modem-manager[1092]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 modem-manager[1092]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1092]: <info>  Loaded plugin ZTE
+modem-manager[1092]: <info>  Loaded plugin MotoC
+modem-manager[1092]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1092]: <info>  Loaded plugin Gobi
+modem-manager[1092]: <info>  Loaded plugin Generic
+modem-manager[1092]: <info>  Loaded plugin Novatel
+modem-manager[1092]: <info>  Loaded plugin Linktop
+modem-manager[1092]: <info>  Loaded plugin Wavecom
+modem-manager[1092]: <info>  Loaded plugin Option
+modem-manager[1092]: <info>  Loaded plugin Longcheer
+modem-manager[1092]: <info>  Loaded plugin Sierra
+modem-manager[1092]: <info>  Loaded plugin AnyData
+modem-manager[1092]: <info>  Loaded plugin Huawei
+modem-manager[1092]: <info>  Loaded plugin X22X
+modem-manager[1092]: <info>  Loaded plugin Option High-Speed
+modem-manager[1092]: <info>  Loaded plugin SimTech
+modem-manager[1092]: <info>  Loaded plugin Nokia
+modem-manager[1092]: <info>  Loaded plugin Samsung
+modem-manager[1090]: <info>  ModemManager (version 0.5.2.0) starting...
+modem-manager[1090]: <info>  Loaded plugin ZTE
+modem-manager[1090]: <info>  Loaded plugin MotoC
+modem-manager[1090]: <info>  Loaded plugin Ericsson MBM
+modem-manager[1090]: <info>  Loaded plugin Gobi
+modem-manager[1090]: <info>  Loaded plugin Generic
+modem-manager[1090]: <info>  Loaded plugin Novatel
+modem-manager[1090]: <info>  Loaded plugin Linktop
+modem-manager[1090]: <info>  Loaded plugin Wavecom
+modem-manager[1090]: <info>  Loaded plugin Option
+modem-manager[1090]: <info>  Loaded plugin Longcheer
+modem-manager[1090]: <info>  Loaded plugin Sierra
+modem-manager[1090]: <info>  Loaded plugin AnyData
+modem-manager[1090]: <info>  Loaded plugin Huawei
+modem-manager[1090]: <info>  Loaded plugin X22X
+modem-manager[1090]: <info>  Loaded plugin Option High-Speed
+modem-manager[1090]: <info>  Loaded plugin SimTech
+modem-manager[1090]: <info>  Loaded plugin Nokia
+modem-manager[1090]: <info>  Loaded plugin Samsung
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

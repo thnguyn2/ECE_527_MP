@@ -1,0 +1,227 @@
+[    23.496] 
+X.Org X Server 1.11.3
+Release Date: 2011-12-16
+[    23.496] X Protocol Version 11, Revision 0
+[    23.497] Build Operating System: Linux 2.6.38-1209-omap4 armv7l Ubuntu
+[    23.497] Current Operating System: Linux localhost.localdomain 3.12.0-xillinux-1.3 #1 SMP PREEMPT Thu Mar 13 18:39:32 IST 2014 armv7l
+[    23.497] Kernel command line: console=ttyPS0,115200n8 consoleblank=0 root=/dev/mmcblk0p2 rw rootwait earlyprintk
+[    23.498] Build Date: 05 April 2012  12:04:28AM
+[    23.498] xorg-server 2:1.11.4-0ubuntu10 (For technical support please see http://www.ubuntu.com/support) 
+[    23.499] Current version of pixman: 0.30.2
+[    23.499] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    23.499] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    23.501] (==) Log file: "/var/log/Xorg.0.log", Time: Wed Dec 31 18:00:23 1969
+[    23.514] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    23.526] (==) No Layout section.  Using the first Screen section.
+[    23.527] (==) No screen section available. Using defaults.
+[    23.527] (**) |-->Screen "Default Screen Section" (0)
+[    23.527] (**) |   |-->Monitor "<default monitor>"
+[    23.528] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[    23.528] (==) Automatically adding devices
+[    23.528] (==) Automatically enabling devices
+[    23.556] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
+[    23.556] 	Entry deleted from font path.
+[    23.556] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
+[    23.556] 	Entry deleted from font path.
+[    23.556] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
+[    23.557] 	Entry deleted from font path.
+[    23.557] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[    23.557] 	Entry deleted from font path.
+[    23.557] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[    23.558] 	Entry deleted from font path.
+[    23.558] (WW) The directory "/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType" does not exist.
+[    23.558] 	Entry deleted from font path.
+[    23.558] (==) FontPath set to:
+	/usr/share/fonts/X11/misc,
+	/usr/share/fonts/X11/Type1,
+	built-ins
+[    23.558] (==) ModulePath set to "/usr/lib/arm-linux-gnueabihf/xorg/extra-modules,/usr/lib/xorg/extra-modules,/usr/lib/xorg/modules"
+[    23.558] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    23.558] (II) Loader magic: 0xb6f6bd00
+[    23.558] (II) Module ABI versions:
+[    23.558] 	X.Org ANSI C Emulation: 0.4
+[    23.558] 	X.Org Video Driver: 11.0
+[    23.558] 	X.Org XInput driver : 16.0
+[    23.558] 	X.Org Server Extension : 6.0
+[    23.558] (II) LoadModule: "extmod"
+[    23.563] (II) Loading /usr/lib/xorg/modules/extensions/libextmod.so
+[    23.568] (II) Module extmod: vendor="X.Org Foundation"
+[    23.568] 	compiled for 1.11.3, module version = 1.0.0
+[    23.569] 	Module class: X.Org Server Extension
+[    23.569] 	ABI class: X.Org Server Extension, version 6.0
+[    23.569] (II) Loading extension MIT-SCREEN-SAVER
+[    23.569] (II) Loading extension XFree86-VidModeExtension
+[    23.569] (II) Loading extension XFree86-DGA
+[    23.569] (II) Loading extension DPMS
+[    23.569] (II) Loading extension XVideo
+[    23.569] (II) Loading extension XVideo-MotionCompensation
+[    23.569] (II) Loading extension X-Resource
+[    23.569] (II) LoadModule: "dbe"
+[    23.570] (II) Loading /usr/lib/xorg/modules/extensions/libdbe.so
+[    23.571] (II) Module dbe: vendor="X.Org Foundation"
+[    23.572] 	compiled for 1.11.3, module version = 1.0.0
+[    23.572] 	Module class: X.Org Server Extension
+[    23.572] 	ABI class: X.Org Server Extension, version 6.0
+[    23.572] (II) Loading extension DOUBLE-BUFFER
+[    23.572] (II) LoadModule: "glx"
+[    23.572] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[    23.586] (II) Module glx: vendor="X.Org Foundation"
+[    23.586] 	compiled for 1.11.3, module version = 1.0.0
+[    23.586] 	ABI class: X.Org Server Extension, version 6.0
+[    23.587] (==) AIGLX enabled
+[    23.587] (II) Loading extension GLX
+[    23.587] (II) LoadModule: "record"
+[    23.588] (II) Loading /usr/lib/xorg/modules/extensions/librecord.so
+[    23.590] (II) Module record: vendor="X.Org Foundation"
+[    23.590] 	compiled for 1.11.3, module version = 1.13.0
+[    23.590] 	Module class: X.Org Server Extension
+[    23.590] 	ABI class: X.Org Server Extension, version 6.0
+[    23.590] (II) Loading extension RECORD
+[    23.591] (II) LoadModule: "dri"
+[    23.591] (II) Loading /usr/lib/xorg/modules/extensions/libdri.so
+[    23.595] (II) Module dri: vendor="X.Org Foundation"
+[    23.595] 	compiled for 1.11.3, module version = 1.0.0
+[    23.595] 	ABI class: X.Org Server Extension, version 6.0
+[    23.595] (II) Loading extension XFree86-DRI
+[    23.595] (II) LoadModule: "dri2"
+[    23.596] (II) Loading /usr/lib/xorg/modules/extensions/libdri2.so
+[    23.597] (II) Module dri2: vendor="X.Org Foundation"
+[    23.597] 	compiled for 1.11.3, module version = 1.2.0
+[    23.598] 	ABI class: X.Org Server Extension, version 6.0
+[    23.598] (II) Loading extension DRI2
+[    23.598] (==) Matched fbdev as autoconfigured driver 0
+[    23.598] (==) Assigned the driver to the xf86ConfigLayout
+[    23.598] (II) LoadModule: "fbdev"
+[    23.601] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[    23.603] (II) Module fbdev: vendor="X.Org Foundation"
+[    23.603] 	compiled for 1.11.3, module version = 0.4.2
+[    23.603] 	ABI class: X.Org Video Driver, version 11.0
+[    23.604] (II) FBDEV: driver for framebuffer: fbdev
+[    23.604] (--) using VT number 7
+
+[    23.620] (WW) Falling back to old probe method for fbdev
+[    23.620] (II) Loading sub module "fbdevhw"
+[    23.620] (II) LoadModule: "fbdevhw"
+[    23.621] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[    23.623] (II) Module fbdevhw: vendor="X.Org Foundation"
+[    23.623] 	compiled for 1.11.3, module version = 0.0.2
+[    23.623] 	ABI class: X.Org Video Driver, version 11.0
+[    23.623] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[    23.624] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[    23.624] (II) FBDEV(0): using default device
+[    23.624] (II) FBDEV(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[    23.624] (==) FBDEV(0): Depth 24, (==) framebuffer bpp 32
+[    23.624] (==) FBDEV(0): RGB weight 888
+[    23.624] (==) FBDEV(0): Default visual is TrueColor
+[    23.624] (==) FBDEV(0): Using gamma correction (1.0, 1.0, 1.0)
+[    23.625] (II) FBDEV(0): hardware: Xilinx (video memory: 3072kB)
+[    23.625] (II) FBDEV(0): checking modes against framebuffer device...
+[    23.625] (II) FBDEV(0): checking modes against monitor...
+[    23.625] (--) FBDEV(0): Virtual size is 1024x768 (pitch 1024)
+[    23.625] (**) FBDEV(0):  Built-in mode "current"
+[    23.625] (==) FBDEV(0): DPI set to (96, 96)
+[    23.625] (II) Loading sub module "fb"
+[    23.625] (II) LoadModule: "fb"
+[    23.626] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    23.633] (II) Module fb: vendor="X.Org Foundation"
+[    23.633] 	compiled for 1.11.3, module version = 1.0.0
+[    23.633] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    23.633] (**) FBDEV(0): using shadow framebuffer
+[    23.633] (II) Loading sub module "shadow"
+[    23.633] (II) LoadModule: "shadow"
+[    23.635] (II) Loading /usr/lib/xorg/modules/libshadow.so
+[    23.637] (II) Module shadow: vendor="X.Org Foundation"
+[    23.637] 	compiled for 1.11.3, module version = 1.1.0
+[    23.637] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    23.637] (==) Depth 24 pixmap format is 32 bpp
+[    23.643] (==) FBDEV(0): Backing store disabled
+[    23.645] (==) FBDEV(0): DPMS enabled
+[    23.645] (==) RandR enabled
+[    23.645] (II) Initializing built-in extension Generic Event Extension
+[    23.645] (II) Initializing built-in extension SHAPE
+[    23.645] (II) Initializing built-in extension MIT-SHM
+[    23.645] (II) Initializing built-in extension XInputExtension
+[    23.645] (II) Initializing built-in extension XTEST
+[    23.645] (II) Initializing built-in extension BIG-REQUESTS
+[    23.645] (II) Initializing built-in extension SYNC
+[    23.646] (II) Initializing built-in extension XKEYBOARD
+[    23.646] (II) Initializing built-in extension XC-MISC
+[    23.646] (II) Initializing built-in extension SECURITY
+[    23.646] (II) Initializing built-in extension XINERAMA
+[    23.646] (II) Initializing built-in extension XFIXES
+[    23.646] (II) Initializing built-in extension RENDER
+[    23.646] (II) Initializing built-in extension RANDR
+[    23.646] (II) Initializing built-in extension COMPOSITE
+[    23.646] (II) Initializing built-in extension DAMAGE
+[    23.691] (II) AIGLX: Screen 0 is not DRI2 capable
+[    23.691] (II) AIGLX: Screen 0 is not DRI capable
+[    23.759] (II) AIGLX: Loaded and initialized swrast
+[    23.759] (II) GLX: Initialized DRISWRAST GL provider for screen 0
+[    23.862] (II) XKB: reuse xkmfile /var/lib/xkb/server-B20D7FC79C7F597315E3E501AEF10E0D866E8E92.xkm
+[    23.879] (II) config/udev: Adding input device DELL DELL USB Laser Mouse (/dev/input/event0)
+[    23.879] (**) DELL DELL USB Laser Mouse: Applying InputClass "evdev pointer catchall"
+[    23.879] (II) LoadModule: "evdev"
+[    23.880] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[    23.886] (II) Module evdev: vendor="X.Org Foundation"
+[    23.886] 	compiled for 1.11.3, module version = 2.7.0
+[    23.886] 	Module class: X.Org XInput Driver
+[    23.886] 	ABI class: X.Org XInput driver, version 16.0
+[    23.886] (II) Using input driver 'evdev' for 'DELL DELL USB Laser Mouse'
+[    23.886] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[    23.886] (**) DELL DELL USB Laser Mouse: always reports core events
+[    23.886] (**) evdev: DELL DELL USB Laser Mouse: Device: "/dev/input/event0"
+[    23.887] (--) evdev: DELL DELL USB Laser Mouse: Vendor 0x46d Product 0xc063
+[    23.887] (--) evdev: DELL DELL USB Laser Mouse: Found 12 mouse buttons
+[    23.887] (--) evdev: DELL DELL USB Laser Mouse: Found scroll wheel(s)
+[    23.887] (--) evdev: DELL DELL USB Laser Mouse: Found relative axes
+[    23.887] (--) evdev: DELL DELL USB Laser Mouse: Found x and y relative axes
+[    23.887] (II) evdev: DELL DELL USB Laser Mouse: Configuring as mouse
+[    23.887] (II) evdev: DELL DELL USB Laser Mouse: Adding scrollwheel support
+[    23.887] (**) evdev: DELL DELL USB Laser Mouse: YAxisMapping: buttons 4 and 5
+[    23.887] (**) evdev: DELL DELL USB Laser Mouse: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[    23.887] (**) Option "config_info" "udev:/sys/devices/amba.0/e0002000.ps7-usb/xusbps-ehci.0/usb1/1-1/1-1.1/1-1.1:1.0/input/input0/event0"
+[    23.887] (II) XINPUT: Adding extended input device "DELL DELL USB Laser Mouse" (type: MOUSE, id 6)
+[    23.888] (II) evdev: DELL DELL USB Laser Mouse: initialized for relative axes.
+[    23.889] (**) DELL DELL USB Laser Mouse: (accel) keeping acceleration scheme 1
+[    23.889] (**) DELL DELL USB Laser Mouse: (accel) acceleration profile 0
+[    23.889] (**) DELL DELL USB Laser Mouse: (accel) acceleration factor: 2.000
+[    23.889] (**) DELL DELL USB Laser Mouse: (accel) acceleration threshold: 4
+[    23.890] (II) config/udev: Adding input device DELL DELL USB Laser Mouse (/dev/input/mouse0)
+[    23.890] (II) No input driver specified, ignoring this device.
+[    23.891] (II) This device may have been added with another device file.
+[    23.892] (II) config/udev: Adding input device Live! Cam Chat HD VF0790 (/dev/input/event2)
+[    23.892] (**) Live! Cam Chat HD VF0790: Applying InputClass "evdev keyboard catchall"
+[    23.892] (II) Using input driver 'evdev' for 'Live! Cam Chat HD VF0790'
+[    23.892] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[    23.893] (**) Live! Cam Chat HD VF0790: always reports core events
+[    23.893] (**) evdev: Live! Cam Chat HD VF0790: Device: "/dev/input/event2"
+[    23.893] (--) evdev: Live! Cam Chat HD VF0790: Vendor 0x41e Product 0x4097
+[    23.893] (--) evdev: Live! Cam Chat HD VF0790: Found keys
+[    23.893] (II) evdev: Live! Cam Chat HD VF0790: Configuring as keyboard
+[    23.893] (**) Option "config_info" "udev:/sys/devices/amba.0/e0002000.ps7-usb/xusbps-ehci.0/usb1/1-1/1-1.2/1-1.2:1.0/input/input2/event2"
+[    23.893] (II) XINPUT: Adding extended input device "Live! Cam Chat HD VF0790" (type: KEYBOARD, id 7)
+[    23.893] (**) Option "xkb_rules" "evdev"
+[    23.893] (**) Option "xkb_model" "pc105"
+[    23.893] (**) Option "xkb_layout" "us"
+[    23.896] (II) config/udev: Adding input device Logitech Logitech USB Keyboard (/dev/input/event1)
+[    23.897] (**) Logitech Logitech USB Keyboard: Applying InputClass "evdev keyboard catchall"
+[    23.897] (II) Using input driver 'evdev' for 'Logitech Logitech USB Keyboard'
+[    23.897] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[    23.897] (**) Logitech Logitech USB Keyboard: always reports core events
+[    23.897] (**) evdev: Logitech Logitech USB Keyboard: Device: "/dev/input/event1"
+[    23.897] (--) evdev: Logitech Logitech USB Keyboard: Vendor 0x46d Product 0xc315
+[    23.897] (--) evdev: Logitech Logitech USB Keyboard: Found keys
+[    23.897] (II) evdev: Logitech Logitech USB Keyboard: Configuring as keyboard
+[    23.897] (**) Option "config_info" "udev:/sys/devices/amba.0/e0002000.ps7-usb/xusbps-ehci.0/usb1/1-1/1-1.3/1-1.3:1.0/input/input1/event1"
+[    23.898] (II) XINPUT: Adding extended input device "Logitech Logitech USB Keyboard" (type: KEYBOARD, id 8)
+[    23.898] (**) Option "xkb_rules" "evdev"
+[    23.898] (**) Option "xkb_model" "pc105"
+[    23.898] (**) Option "xkb_layout" "us"
+[    29.194] (II) XKB: reuse xkmfile /var/lib/xkb/server-06D88AAF5356C6CF875D73CED515513D3FEA00ED.xkm
+[    47.759] (II) XKB: reuse xkmfile /var/lib/xkb/server-06D88AAF5356C6CF875D73CED515513D3FEA00ED.xkm

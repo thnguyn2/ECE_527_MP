@@ -1,0 +1,45 @@
+Instructions for using amsmidx.sty
+
+Put these commands in the preamble:
+
+     \usepackage{amsmidx}
+     \makeindex{<filename>}
+
+for example:
+
+     \makeindex{subject}
+     \makeindex{author}
+
+You may include as many indexes as you need using whatever file names
+make sense.  Each \makeindex command will initiate the creation of a
+<filename>.idx file.
+
+To identify the index entries in the text:
+
+     \index{<filename>}{index term}
+
+This will populate the .idx files.  Do not leave a space between the
+\index entry and the text being indexed; that leaves unsightly spaces
+in the output, and may also cause the page number for the index entry
+to be different from the page where the term actually appears.
+
+In the backmatter, insert \Printindex commands to print the indexes;
+the second argument gives the title to be printed at the top of the
+index:
+
+     \Printindex{<filename>}{First Index}
+     \Printindex{<filename>}{Second Index}
+
+When the file is processed, files of index terms, <filename>.idx,
+will be generated.  To sort the index terms, process the .idx files
+separately with Makeindex; this will create <filename>.ind files,
+which will in turn be input by \Printindex the next time the .tex file
+is processed.
+
+To include a paragraph of comments below the index title, insert the
+text as an \indexcomment before the relevant \Printindex:
+
+    \indexcomment{Text of comments}
+    \Printindex{<filename>}{...}
+
+The \indexcomment text will be cleared after use.

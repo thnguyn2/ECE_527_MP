@@ -1,0 +1,83 @@
+
+		 dtk: A Document Class and Style for
+		      ``Die TeXnische Komoedie''
+          the journal of the german speaking TeX users group
+
+   	   	         original written by
+			   Gerd Neugebauer
+		       gene@gerd-neugebauer.de
+
+
+dtk is a document  class and style file  which has been written  to be
+used for  the communications of  the German  speaking  TeX users group
+Dante e.V.: ``Die TeXnische Komoedie''.
+
+For changes from the previous versions see the end of this file.
+
+The  distribution consists of the  following  files (if one is missing
+then complain at the distributor of your version):
+
+dtk.dtx
+	This is the main distribution file. It contains the class and
+	style file. LaTeXing this file produces the English documentation. 
+dtk.ins
+	This is the driver file for the extraction procedure. You need
+	the doc utility to unpack it.
+dtk.bst
+	This is the BibTeX style file to be used for ``Die TeXnische
+	Komoedie''.
+ReadMe
+	This file.
+beipiel.tex
+	A short description example for dtk (in German).
+beispiel.ltx
+	The driver file for beispiel.tex. Run this file through LaTeX to
+	get the dvi file.
+beispiel.bib
+	The bibliography for beispiel.tex.
+
+
+INSTALLATION
+------------
+
+(0)	If  you  have obtained  the  unpacked  distribution, i.e.  you
+	already have cls and clo files, then continue with step (2).
+
+(1)	Run TeX or LaTeX on dtk.ins.
+
+	This should produce the files  dtk.cls, dtk.sty, dtklogos.sty,
+	dtk.ist, and some dtk*.clo files.
+
+	This might fail due to several reasons. In this case revert to
+	the  unpacked files  which  are  also distributed at the  same
+	place where you got the sources from.
+
+(2)	Move  dtk.cls  and the dtk*.clo  files to a place  where LaTeX
+	searches for class files.  Move dtk.sty to a place where LaTeX
+	searches for style files.
+
+	The  suggested  place  for  the  LaTeX files  in a TDS conform
+	installation is the directory
+
+		TEXMF/tex/latex/supported/dtk
+
+	where TEXMF is the root of the TDS installation tree.
+
+(3)	Run LaTeX  on  dtk.dtx to  produce the documentation.  LaTeX2e
+	is required for this step.
+
+	Usually the  documentation contains a  general part describing
+	the  use  of  the  class/style  and  the  description  of  the
+	implementation details. If you want to omit the implementation
+	description you  can create the file  dtk.dcf before compiling
+	the  documentation.  This file  should  contain the  following
+	lines:
+
+		\OnlyDescription
+		\endinput
+
+(4)	Run LaTeX, BibTeX, and LaTeX twice again on beispiel.ltx for a
+	short description and a sample in German.
+
+
+y

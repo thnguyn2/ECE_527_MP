@@ -1,0 +1,52 @@
+###############################################################################
+#
+#  MIME types and programs that process those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directory.  Entries included there will take
+#  precedence over those listed here.
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  User section follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE the
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Begins ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+text/plain; less '%s'; needsterminal
+text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+application/x-ogg; rhythmbox '%s'; description="Ogg Vorbis audio"; test=test -n "$DISPLAY"; nametemplate=%s.ogg
+application/ogg; rhythmbox '%s'; description="Ogg Media"; test=test -n "$DISPLAY"
+audio/x-mp3; rhythmbox '%s'; description="MP3 audio"; test=test -n "$DISPLAY"; nametemplate=%s.mp3
+audio/x-scpls; rhythmbox '%s'; description="MP3 ShoutCast playlist"; test=test -n "$DISPLAY"; nametemplate=%s.pls
+audio/x-mpeg; rhythmbox '%s'; description="MP3 audio"; test=test -n "$DISPLAY"
+audio/mpeg; rhythmbox '%s'; description="MP3 audio"; test=test -n "$DISPLAY"
+audio/x-mpegurl; rhythmbox '%s'; description="Playlist"; test=test -n "$DISPLAY"; nametemplate=%s.m3u
+application/x-flac; rhythmbox '%s'; description="FLAC audio"; test=test -n "$DISPLAY"; nametemplate=%s.flac
+application/x-tar; /bin/tar tvf -; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvzf -; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
+application/x-dvi; /usr/bin/xdvi '%s'; description=TeX DVI; test=test -n "$DISPLAY"; nametemplate=%s.dvi
+application/x-bittorrent; transmission-gtk '%s'; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
+application/zip; unzip -l '%s'; nametemplate=%s.zip; copiousoutput
+text/plain; more '%s'; needsterminal
+text/plain; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
+text/plain; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
+text/html; /usr/bin/html2text '%s'; copiousoutput; description=HTML Text
+text/*; less '%s'; needsterminal
+text/*; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
+text/*; more '%s'; needsterminal
+text/*; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
+application/x-debian-package; /usr/lib/mime/debian-view '%s'; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb

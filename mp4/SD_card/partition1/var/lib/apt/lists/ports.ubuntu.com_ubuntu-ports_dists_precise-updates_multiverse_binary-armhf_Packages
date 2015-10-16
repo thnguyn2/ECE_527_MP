@@ -1,0 +1,1009 @@
+Package: libmotif-dev
+Priority: extra
+Section: multiverse/devel
+Installed-Size: 5941
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Stefan Bauer <stefan.bauer@cubewerk.de>
+Architecture: armhf
+Source: openmotif
+Version: 2.3.3-5ubuntu1.12.04.2
+Depends: libmotif4 (= 2.3.3-5ubuntu1.12.04.2), libc6 (>= 2.15-0ubuntu8), libxt6, x11proto-print-dev
+Conflicts: lesstif-bin, lesstif-dev, lesstif-doc, lesstif2-dev
+Filename: pool/multiverse/o/openmotif/libmotif-dev_2.3.3-5ubuntu1.12.04.2_armhf.deb
+Size: 2801892
+MD5sum: 1f1db4b5a14d5d067aefd61849896ef9
+SHA1: 171e2a10059a898cd6f6cf63ba5a2148d57ede37
+SHA256: 4a99501dc5c55c63a248624e4096c98ff0b3704dc29bc98d9277dfff0305d336
+Description: Open Motif - development files
+Homepage: http://www.motifzone.net/
+Description-md5: b67510730f8a9ccc4aaff83f2c1adcd2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmotif3
+Priority: extra
+Section: multiverse/oldlibs
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Stefan Bauer <stefan.bauer@cubewerk.de>
+Architecture: armhf
+Source: openmotif
+Version: 2.3.3-5ubuntu1.12.04.2
+Depends: libmotif4 (>= 2.3.3-5ubuntu1.12.04.2)
+Filename: pool/multiverse/o/openmotif/libmotif3_2.3.3-5ubuntu1.12.04.2_armhf.deb
+Size: 2982
+MD5sum: 14d3caa121542eed19185d1f974813a1
+SHA1: 8219d0558086e1164e59c143f2e9530f51048603
+SHA256: af4439fffdc42f90cab24b8f4b12ad25e2d04c0516513514671005b3dfddd15d
+Description: Open Motif - shared libraries (transitional package)
+Multi-Arch: same
+Homepage: http://www.motifzone.net/
+Description-md5: e32e5ace2a0511d15d09ee6213ff7459
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmotif4
+Priority: extra
+Section: multiverse/libs
+Installed-Size: 2080
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Stefan Bauer <stefan.bauer@cubewerk.de>
+Architecture: armhf
+Source: openmotif
+Version: 2.3.3-5ubuntu1.12.04.2
+Replaces: libmotif3 (<< 2.3.3-2)
+Depends: libc6 (>= 2.15-0ubuntu8), libx11-6, libxext6, libxft2 (>> 2.1.1), libxmu6, libxp6, libxt6
+Pre-Depends: multiarch-support, x11-common (>= 1:7.0.0)
+Breaks: libmotif3 (<< 2.3.3-2)
+Filename: pool/multiverse/o/openmotif/libmotif4_2.3.3-5ubuntu1.12.04.2_armhf.deb
+Size: 1121598
+MD5sum: 8b3738c37a692fe2c6a0699afe1bf6ee
+SHA1: 0d8ffc4c088912041fb8444ba9a437a415cfbd3a
+SHA256: b818ee3d410dd86fd4472713dca81df8bad29774f5648e04beec284e397c6cf2
+Description: Open Motif - shared libraries
+Multi-Arch: same
+Homepage: http://www.motifzone.net/
+Description-md5: bfa9fe6024b03766c52e634f26e25427
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmotif4-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 9338
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Stefan Bauer <stefan.bauer@cubewerk.de>
+Architecture: armhf
+Source: openmotif
+Version: 2.3.3-5ubuntu1.12.04.2
+Depends: libmotif4 (= 2.3.3-5ubuntu1.12.04.2)
+Conflicts: lesstif2-dbg
+Filename: pool/multiverse/o/openmotif/libmotif4-dbg_2.3.3-5ubuntu1.12.04.2_armhf.deb
+Size: 3886138
+MD5sum: 541de08b746c86ecfdf18e1d8802be15
+SHA1: 59320b719ca1c8908be628c5be81983b878c3289
+SHA256: fa9b00cc89a6c3c6241b3f45caca3c0993f4e40a106f3dc7a4d15676517b4352
+Description: Open Motif - shared libraries
+Homepage: http://www.motifzone.net/
+Description-md5: 84f9b90288ac2bad8b068ef0bd9d55b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmyth-0.25-0
+Priority: optional
+Section: multiverse/libs
+Installed-Size: 19317
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: libmyth-0.23-0, libmyth-0.24-0, mythtv (<< 0.7-5)
+Depends: libasound2 (>= 1.0.23), libass4 (>= 0.9.11), libavahi-compat-libdnssd1 (>= 0.6.16), libavc1394-0 (>= 0.5.3), libc6 (>= 2.15-0ubuntu8), libfaac0, libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.4.0), libiec61883-0 (>= 1.2.0), libmp3lame0, libpulse0 (>= 1:0.99.1), libqt4-dbus (>= 4:4.5.3), libqt4-network (>= 4:4.5.3), libqt4-script (>= 4:4.5.3), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.8.0), libqtwebkit4 (>= 2.2~2011week36), libraw1394-11, libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.6), libvpx1 (>= 1.0.0), libx11-6 (>= 2:1.4.99.1), libx264-120, libxext6, libxinerama1, libxml2 (>= 2.7.4), libxrandr2 (>= 4.3), libxv1, libxvidcore4 (>= 1.2.2), libxxf86vm1, zlib1g (>= 1:1.1.4), libqt4-sql-mysql
+Conflicts: libmyth-0.23-0, libmyth-0.24-0, mythtv (<< 0.7-5)
+Filename: pool/multiverse/m/mythtv/libmyth-0.25-0_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 10978312
+MD5sum: 589903219653c84a7b7d17e75b1b7df0
+SHA1: 17c0b1d1b6c6adef5f01ef4f307a1aa38af22e53
+SHA256: e19ce0ff88c56f6826b5ab240a24e41e4503536e10dbdc769902cf71fd9dce8b
+Description: Common library code for MythTV and add-on modules (runtime)
+Homepage: http://www.mythtv.org
+Description-md5: 6233f3ed93adc17b7f228bed7bd3b300
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libmyth-dev
+Priority: optional
+Section: multiverse/libdevel
+Installed-Size: 2542
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Provides: libmyth-0.25-0-dev
+Depends: libmyth-0.25-0 (= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1)
+Conflicts: libmyth-0.25-0-dev
+Filename: pool/multiverse/m/mythtv/libmyth-dev_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 644624
+MD5sum: 3b71a87de8bd5138b1fd5444706657f6
+SHA1: e038ff5e07510d5783fb4e64ae69e62f5ce15970
+SHA256: c139f562fd20f4ed363920351f15e5eb9454a0cb6248a0a624317fbb349f537b
+Description: Common library code for MythTV and add-on modules (development)
+Homepage: http://www.mythtv.org
+Description-md5: cdf4db9954271d33355a9e9377695b78
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmyth-python
+Priority: optional
+Section: multiverse/libs
+Installed-Size: 1283
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv-common (<< 0.20.98)
+Depends: python-mysqldb, python-lxml, python-urlgrabber
+Conflicts: mythtv-common (<< 0.20.98)
+Filename: pool/multiverse/m/mythtv/libmyth-python_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 352670
+MD5sum: 7c51be0e8d1a388cfe1d42ea10595d13
+SHA1: f7f6e75dc59cf3464e36124518c0e0aa7ed96b3a
+SHA256: 8d51949caf869cad50431c45cb3fa0e6d7cf3346b85faae575be71074a59530b
+Description: A python library to access some MythTV features
+Homepage: http://www.mythtv.org
+Description-md5: 99e5b7fdac675ed6cfb57a0a42eb8400
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libmythtv-perl
+Priority: optional
+Section: multiverse/libs
+Installed-Size: 202
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: libmyth-perl, mythtv-common (<< 0.20.98)
+Depends: perl, libdbi-perl, libdbd-mysql-perl, libnet-upnp-perl, libio-socket-inet6-perl
+Conflicts: libmyth-perl, mythtv-common (<< 0.20.98)
+Filename: pool/multiverse/m/mythtv/libmythtv-perl_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 50386
+MD5sum: c1971c683d041296ebb00cf2e72d40a1
+SHA1: 7d7c1a6d9d60eed43de95b510645e2d655d318ec
+SHA256: ad356d6f108197aaf7e32da2ccddf248725e861a0b0cbdf981dee59cc79c7623
+Description: A PERL library to access some MythTV features
+Homepage: http://www.mythtv.org
+Description-md5: 47f252d2997e94bf2a23b14c005706fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libviennacl-dev
+Priority: extra
+Section: multiverse/libdevel
+Installed-Size: 1010
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: viennacl
+Version: 1.1.2-6ubuntu0.1
+Depends: opencl-headers, nvidia-current | libopencl1
+Suggests: libeigen2-dev, libboost-dev, libviennacl-doc
+Filename: pool/multiverse/v/viennacl/libviennacl-dev_1.1.2-6ubuntu0.1_all.deb
+Size: 105474
+MD5sum: 1bb6797f0b1f21827156203544011945
+SHA1: 51e5a3ef3382947d5ae3eddf1ac4b5d12570d7da
+SHA256: 9ce8fb5c4380faf485489a5dbbf3acb838f0825b18ff3c3e7780dfaeeeb1a98d
+Description: Scientific computing library written in C++ based on OpenCL
+Homepage: http://viennacl.sourceforge.net
+Description-md5: a27fa308bc2bf6d90a053f635ae4a276
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libviennacl-doc
+Priority: extra
+Section: multiverse/doc
+Installed-Size: 7795
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: viennacl
+Version: 1.1.2-6ubuntu0.1
+Suggests: libviennacl-dev
+Filename: pool/multiverse/v/viennacl/libviennacl-doc_1.1.2-6ubuntu0.1_all.deb
+Size: 1212260
+MD5sum: 944688c668103922b4f1aa1b71c5de15
+SHA1: ab33e9f22b6a5dc1034e3bdae6655ecbcb1899ae
+SHA256: d58fceae4f3570cc1cbf77f54453508d31a474161d969775a7745755e1c34bdc
+Description: ViennaCL API and user documentation
+Homepage: http://viennacl.sourceforge.net
+Description-md5: 4293ec3da7d14fb3b2a1c3f988fa1e7a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-firmware-nonfree
+Priority: optional
+Section: multiverse/kernel
+Installed-Size: 8056
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Version: 1.11ubuntu4
+Replaces: linux-firmware (<< 1.17)
+Conflicts: linux-firmware (<< 1.17)
+Filename: pool/multiverse/l/linux-firmware-nonfree/linux-firmware-nonfree_1.11ubuntu4_all.deb
+Size: 3555330
+MD5sum: 596441e3dfb9a437169af952364768b5
+SHA1: 828692b36a7520764d9005dbc013c17ea5f666c4
+SHA256: ba10b99a7bb90aa7ee39e86b6e271387231d0a620adb54bc3a4cd8d19e7060a1
+Description: Non-free firmware for Linux kernel drivers
+Description-md5: 856ad6fa1547f2b2a3005ee38911321a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: motif-clients
+Priority: extra
+Section: multiverse/x11
+Installed-Size: 303
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Stefan Bauer <stefan.bauer@cubewerk.de>
+Architecture: armhf
+Source: openmotif
+Version: 2.3.3-5ubuntu1.12.04.2
+Depends: menu, libc6 (>= 2.15-0ubuntu8), libmotif4, libx11-6, libxext6, libxt6
+Pre-Depends: x11-common (>= 1:7.0.0)
+Conflicts: lesstif-bin
+Filename: pool/multiverse/o/openmotif/motif-clients_2.3.3-5ubuntu1.12.04.2_armhf.deb
+Size: 153330
+MD5sum: 0941e942f9871331426e1cb329ce7d89
+SHA1: 7a7647f92ba320adef80f84801d5f55b0a6ba88c
+SHA256: 5ac22dcfa79af2cd8a3ac3ebac3ce5665774840369eaa03b0c956eb0e556f1e3
+Description: Open Motif - X11 clients (mwm, xmbind)
+Homepage: http://www.motifzone.net/
+Description-md5: 07593a41568e4216cf54490c84b57f60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mplayerthumbs
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 163
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: armhf
+Source: kdemultimedia
+Version: 4:4.8.5-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libkdecore5 (>= 4:4.8), libkdeui5 (>= 4:4.8), libkio5 (>= 4:4.8), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0), mplayer-nogui | mplayer
+Filename: pool/multiverse/k/kdemultimedia/mplayerthumbs_4.8.5-0ubuntu1_armhf.deb
+Size: 32864
+MD5sum: a958c14503d5060ba92a55a9ea3afe82
+SHA1: c72134eb8edd5ab7f132b87214b31b107ce12cfd
+SHA256: 82ec0cb411e3d53439bce9507db468e06b6a425cebd7494725a921bc24fb85a0
+Description: video thumbnail generator using mplayer
+Homepage: http://www.kde.org/
+Description-md5: 584f28c998e7d68ff598733efaa7664c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mytharchive
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 18036
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mytharchive-data
+Depends: mythtv-transcode-utils (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), mjpegtools, ffmpeg, dvdauthor, genisoimage, dvd+rw-tools, python, python-imaging, python-mysqldb, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
+Suggests: transcode, project-x
+Conflicts: mytharchive-data
+Filename: pool/multiverse/m/mythtv/mytharchive_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 13992672
+MD5sum: 85da81616409f13b333704ed5346eff4
+SHA1: 5aeb7958558aa5743f68247c43e3e2e56a859563
+SHA256: 89ecdd204edffed34d3dcbdec684caf0583e7831d8bb20b27fc6fff6c0b60ef1
+Description: create and burn DVD's from MythTV - binary file
+Homepage: http://www.mythtv.org
+Description-md5: e5e7e6b2e6a78544ce0f8630283b7970
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythbrowser
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 362
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0)
+Filename: pool/multiverse/m/mythtv/mythbrowser_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 84814
+MD5sum: e422de98cdf3c03e95c7be0c26c7ed8b
+SHA1: d63f264f4520a56ba2f78635de780915dc1faf27
+SHA256: 794cf2de49f5e07d900bbf7ce210795e839e4ca1a912923dbdcdbb28fab68467
+Description: A web browser for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 778c569445bd55a1342d53b833894a61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythgallery
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 704
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), libc6 (>= 2.15-0ubuntu8), libexif12, libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0)
+Filename: pool/multiverse/m/mythtv/mythgallery_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 219714
+MD5sum: 6201ac67c058de61a58b344f2dfaa90f
+SHA1: 8c62beb3ef7b327fb4199c30493613204612aae2
+SHA256: 50a6159d5d1122a325791c6211644f2b7a60e8dc75439f176caf95a23456ac26
+Description: Image gallery/slideshow add-on module for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: fec0a2ce379068f827fb4f32126d4bd8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
+Package: mythgame
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 735
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), python, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
+Filename: pool/multiverse/m/mythtv/mythgame_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 219088
+MD5sum: a5fdb7127270650158082c40c5459165
+SHA1: d03e77df2ff85ad511c4e9097d90f991e136ecb2
+SHA256: 9fc95e97f0e52fe6c312a5c4b64cd11bd725de828bd89bcacc339c5a7dc53f45
+Description: Emulator & PC Game frontend module for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 651467626e6c8fb63c90ba608648de17
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythmusic
+Priority: extra
+Section: multiverse/sound
+Installed-Size: 2918
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), libc6 (>= 2.15-0ubuntu8), libcdio-cdda1, libcdio-paranoia1, libcdio13, libfftw3-3, libflac8 (>= 1.2.1), libgcc1 (>= 1:4.4.0), libmp3lame0, libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libogg0 (>= 1.0rc3), libqt4-network (>= 4:4.5.3), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.6), libtag1c2a (>= 1.6), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2)
+Filename: pool/multiverse/m/mythtv/mythmusic_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 1348888
+MD5sum: df4afeaf27d970d9adebf57b55df51da
+SHA1: 6c072dafc8ddc5411584a9d90e806aeaa3f7855e
+SHA256: 95e6c0894d685cf44e9fdd221e2e3c3102a768080a694f180ad596b175013135
+Description: Music add-on module for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 934232dd58c42a6e29a6f5e799fd49b5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
+Package: mythnetvision
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 16736
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), mythbrowser (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), python-feedparser, python-pycurl, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-network (>= 4:4.5.3), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0)
+Recommends: flashplugin-installer | adobe-flashplugin
+Filename: pool/multiverse/m/mythtv/mythnetvision_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 15697604
+MD5sum: 286f5dabfb7337e9b9fa0e024c1c88b7
+SHA1: ea9deee07a2dee8d1702500008b601c7bb97ab86
+SHA256: 55ebf748fa69fd7e59c49f6d6eb91c4fd4b6a7506423a8569ee4e71f5cfd38ac
+Description: A Internet Video Player plugin for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 45c60f5031add4d5409d92f660906d0d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythnews
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 444
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.4.0)
+Filename: pool/multiverse/m/mythtv/mythnews_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 115954
+MD5sum: b63a3d765124835662a7cc352f81524a
+SHA1: 337e0051d4c7d0fb828992a39f1557779623e5ea
+SHA256: b70fa21fc1bcf4d177b342e15b2d5ed0f655b5f780952a1f8e9185f5fd7c2365
+Description: An RSS feed news reader module for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 4768e7f8feaf7629b36031e4fccbb33b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythplugins
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 96
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythmovies
+Depends: mythgallery, mythgame, mythmusic, mythnews, mythweather, mythweb, mytharchive, mythbrowser, mythnetvision
+Conflicts: mythflix, mythmovies
+Filename: pool/multiverse/m/mythtv/mythplugins_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 2386
+MD5sum: cffecba8ae95a4f9b92b604da2cb9176
+SHA1: d09a8c219dab12f54ef10397aaaab5f2b53455ed
+SHA256: be5880df1780967eb51588a1038b6c2b28c930857af9a2d7a6b6a62e4398f255
+Description: Metapackage package for MythTV plugins
+Homepage: http://www.mythtv.org
+Description-md5: 0696eb742b526df2cc968b97eaf51c2f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythtv
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 99
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mysql-server, mythtv-database, mythtv-frontend, mythtv-backend, ntp | time-daemon | ntp-simple
+Suggests: mythtv-doc
+Filename: pool/multiverse/m/mythtv/mythtv_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 4348
+MD5sum: 4041fb78bae49be89b502ebe0cac27cb
+SHA1: 3fdbd8d05e78eddb28eac313f2afe845195a5cce
+SHA256: 83ff9fbedfdce858a1afc20a1be7043b755df2090a83fe90af6335d4e144b3dd
+Description: A personal video recorder application (client and server)
+Homepage: http://www.mythtv.org
+Description-md5: a07ce4e68f64b7be3dc1eabe20cfb822
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
+Package: mythtv-backend
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 3788
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv (<< 0.8-1), mythtv-frontend (<= 0.20-0.4)
+Depends: mythtv-common, mythtv-transcode-utils, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-network (>= 4:4.5.3), libqt4-script (>= 4:4.5.3), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.6), cron, wget, zenity | kdebase-bin, gksu | kdebase-bin, xterm, python, upstart-job
+Recommends: ntp | time-daemon | ntp-simple, logrotate, libmyth-python, libmythtv-perl
+Suggests: mythtv-frontend, mythweb, mythtv-database, xmltv-util
+Conflicts: mythtv (<< 0.8-1)
+Filename: pool/multiverse/m/mythtv/mythtv-backend_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 1533136
+MD5sum: cc26a86c29db22cfc39525b5395364b4
+SHA1: 4ea627f41fcacc01cfdeb55217749dc00613653b
+SHA256: 2e977ea6189b9bf2ad431318668c57ec844f5f15f134d82d897620e7960eb409
+Description: A personal video recorder application (server)
+Homepage: http://www.mythtv.org
+Description-md5: b0c2dc11f48f5be52a50ec181f3d5109
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mythtv-backend-master
+Priority: optional
+Section: multiverse/metapackages
+Installed-Size: 96
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mysql-server, ntp | time-daemon | ntp-simple, mythtv-database, mythtv-backend
+Recommends: mythweb
+Filename: pool/multiverse/m/mythtv/mythtv-backend-master_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 2580
+MD5sum: 575e6fb4e3f8ec2804c51441c66fae88
+SHA1: 2ef16d1c6aa418463771b840960f1ac90457409b
+SHA256: aa75cf73477e9a92934cc60ed30a4b90db30dbc89cdb821e1155bbaf2f54693f
+Description: Metapackage to setup and configure a "Master Backend" profile of MythTV.
+Homepage: http://www.mythtv.org
+Description-md5: 15418a8fc285e4bfbc2fc2b519a118fd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mythtv-common
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 18639
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythcontrols, mythmusic (<< 0.20.99+trunk14393), mythtv (<< 0.8-1), mythtv-backend (<< 1:0.24.0+fixes27252), mythtv-database (<< 0.24.0~trunk25638), mythtv-frontend (<< 0.23.0~trunk23548), mythtv-theme-gray-osd, mythtv-theme-isthmus, mythtv-theme-mythcenter, mythtv-theme-mythcenter-wide, mythvideo, mythweather (<< 0.20.99+trunk14393)
+Depends: pwgen, adduser, mysql-client, fonts-liberation | ttf-liberation, fonts-droid | ttf-droid, ttf-dejavu, python, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-network (>= 4:4.5.3), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libsdl1.2debian (>= 1.2.10-1), libstdc++6 (>= 4.4.0), debconf (>= 0.5) | debconf-2.0
+Suggests: mythtv-doc
+Conflicts: mythcontrols, mythmusic (<< 0.20.99+trunk14393), mythtv (<< 0.8-1), mythtv-theme-blootube, mythtv-theme-blootube-wide, mythtv-theme-blootubelite-wide, mythtv-theme-childish, mythtv-theme-glass-wide, mythtv-theme-gray-osd, mythtv-theme-isthmus, mythtv-theme-iulius, mythtv-theme-metallurgy, mythtv-theme-minimalist-wide, mythtv-theme-mythcenter, mythtv-theme-mythcenter-wide, mythtv-theme-neon-wide, mythtv-theme-proejctgrayhem-wide, mythtv-theme-projectgrayhem, mythtv-theme-retro, mythtv-theme-titivillus, mythtv-themes, mythweather (<< 0.20.99+trunk14393)
+Breaks: mythtv-backend (<< 1:0.24.0+fixes27252), mythvideo
+Filename: pool/multiverse/m/mythtv/mythtv-common_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 13378698
+MD5sum: b2e12d78bb20a4f2d976c889a74ddcab
+SHA1: 40c271cb4490b924f10dbdb8a929a21870240f81
+SHA256: 8f29eb9404fef21112e547f36d40cfac6563fe7c91d3e4c2ee0d0f4a0de72d98
+Description: A personal video recorder application (common data)
+Homepage: http://www.mythtv.org
+Description-md5: 9b0f0c7db2469a475fea68b417099898
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mythtv-database
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 353
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv (<< 0.8-1), mythtv-common (<< 0.8-2)
+Depends: mythtv-common, libdbd-mysql-perl, mysql-client, cron, debconf (>= 0.5) | debconf-2.0
+Recommends: update-notifier | update-notifier-kde
+Conflicts: mythtv (<< 0.8-1), mythtv-common (<< 0.8-2)
+Filename: pool/multiverse/m/mythtv/mythtv-database_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 41172
+MD5sum: a0255d14535f12bd6850bb5844532e23
+SHA1: c745c66caa29455c68a502b7d743569e34700a24
+SHA256: 8a350d5ef9ff082ebe671591d42644c2f801583776e470d46064201875280885
+Description: A personal video recorder application (database)
+Homepage: http://www.mythtv.org
+Description-md5: dd06002fc680d8ca1b30d73491183d51
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mythtv-dbg
+Priority: optional
+Section: multiverse/debug
+Installed-Size: 243485
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythplugins-dbg
+Depends: mythtv-backend (= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1) | mythtv-frontend (= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1)
+Recommends: libc6-dbg
+Conflicts: mythplugins-dbg
+Filename: pool/multiverse/m/mythtv/mythtv-dbg_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 93913110
+MD5sum: 1f17f628a1eff3b6368c06c72d797cb1
+SHA1: ea211cb347d903a5077454726eddd1039c35c49e
+SHA256: e8ff6e48da3837261903be744e641067ad76268eaae34d53bade21f3476897da
+Description: Debug symbols for mythtv packages
+Homepage: http://www.mythtv.org
+Description-md5: b75efe12f9262ea1392215c42915eaab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythtv-doc
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 109
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv (<< 0.8-1)
+Conflicts: mythtv (<< 0.8-1)
+Filename: pool/multiverse/m/mythtv/mythtv-doc_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 38374
+MD5sum: 51ffff8e6b533feee9808d9dfa8133f9
+SHA1: 17c4a8da010967ca3e5e09c113a282f11657dc54
+SHA256: bb63c63be01a51336f6944e65fd22a19ee9b67391df28a2390f60222f616c25b
+Description: A personal video recorder application (documentation)
+Homepage: http://www.mythtv.org
+Description-md5: fd631a093f62384996f3bef856e18c7e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythtv-frontend
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 13205
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythappearance (<< 0.21.0), mythtv (<< 0.8-1), mythvideo
+Depends: mythtv-common, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-dbus (>= 4:4.5.3), libqt4-network (>= 4:4.5.3), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.6), debconf (>= 0.5) | debconf-2.0, libnotify-bin, adduser, zenity | kdebase-bin, gksu | kdebase-bin, wmctrl, libxml-simple-perl, libwww-perl, libmyth-python, transcode, python, python-imdbpy
+Recommends: libmythtv-perl, python-imaging
+Suggests: mythtv-backend, mythmusic, mythweather, mythgallery, mythgame, ntp | time-daemon | ntp-simple
+Conflicts: mythappearance (<< 0.21.0), mythflix (<< 0.23.0), mythstream (<< 0.21.0), mythtv (<< 0.8-1)
+Breaks: mythvideo
+Filename: pool/multiverse/m/mythtv/mythtv-frontend_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 4513144
+MD5sum: 9f12a15e68fb2f6e04abb298df269aa3
+SHA1: 9765f434eb2b5a10d1567fd41d2c874a89a08d05
+SHA256: ae422c45f2629e5c5e841ab7d25b99feb50f71b6cac492d122058cc3fc00aaa2
+Description: A personal video recorder application (client)
+Homepage: http://www.mythtv.org
+Description-md5: d64b43121a804d22ffff974211339f08
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
+Package: mythtv-theme-mythbuntu
+Priority: optional
+Section: multiverse/x11
+Installed-Size: 10549
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv-common (<< 1:0.22.0~zrc1-0ubuntu1)
+Depends: mythtv-common, ttf-dejavu
+Filename: pool/multiverse/m/mythtv/mythtv-theme-mythbuntu_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 9006332
+MD5sum: 698cb5976cb8d17e4c9146d163828ed8
+SHA1: 2862b26871586072dc61636bee268e5b76fa67cb
+SHA256: b386e1ad89c3fe6ef11cb2d025ea27e76e3ddf586bb416880c0a4ee8f917e6bb
+Description: The mythbuntu MythTV Theme
+Homepage: http://www.mythtv.org
+Description-md5: dcafbe0ddc60ef9d4cd6528e6172ed6d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
+Package: mythtv-transcode-utils
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 432
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv-backend (<< 0.20.2-0ubuntu1)
+Depends: mythtv-common, libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libstdc++6 (>= 4.4.0)
+Suggests: mythtv-backend, mytharchive
+Conflicts: mythtv-backend (<< 0.20.2-0ubuntu1)
+Filename: pool/multiverse/m/mythtv/mythtv-transcode-utils_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 189054
+MD5sum: 08c60844b956597b87af412d5228f606
+SHA1: 9885e617de1f425b68b246b6c706043450c70767
+SHA256: 416d86639cb53e367d9bb4e4d8014a2d7ed52bf0d6c60055a4cc1167a210d282
+Description: Utilities used for transcoding MythTV tasks
+Homepage: http://www.mythtv.org
+Description-md5: 7e2f8e36412922b733817418892a44e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mythweather
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 3277
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Replaces: mythtv-common (<< 0.20.99)
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqt4-sql (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.4.0), perl, libimage-size-perl, perlmagick, libxml-parser-perl, libxml-sax-perl, libcarp-clan-perl, libsoap-lite-perl, libdate-manip-perl, libwww-perl, libxml-simple-perl, libdatetime-format-iso8601-perl, libjson-perl, libxml-xpath-perl
+Conflicts: mythtv-common (<< 0.20.99)
+Filename: pool/multiverse/m/mythtv/mythweather_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 834434
+MD5sum: 513a29974867ba0f017f91953836c7a3
+SHA1: 7a602b6deece8584377b87a1ccc7cccfb840921a
+SHA256: b8fa319dd365550fc188e5cb282bcc774e00980de13b85b74bc594d3d5335355
+Description: Weather add-on module for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 0ee3d1458b56866d56ec87dc37b10bef
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mythweb
+Priority: optional
+Section: multiverse/web
+Installed-Size: 3898
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-common (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), apache2-mpm-prefork | httpd, php5 | libapache2-mod-php5, php5-mysql, php-mythtv, debconf (>= 0.5) | debconf-2.0
+Recommends: libmath-round-perl
+Filename: pool/multiverse/m/mythtv/mythweb_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 1348658
+MD5sum: a1b43728af48718b7ec2f485ea1306da
+SHA1: 6647a4442ad351bb7ade9b674c4c9a2cac633c9b
+SHA256: 8091c9cd2ca92d65e0e8e3ece641d8ba0e36841431f86b367cddeadcb1ab9ac8
+Description: Web interface add-on module for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: 61dcb33693d887e60efd1242bb775a3f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mythzoneminder
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 569
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: armhf
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Depends: mythtv-frontend (>= 2:0.25.2+fixes.20120802.46cab93-0ubuntu1), libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libmysqlclient18 (>= 5.5.13-1), libmyth-0.25-0 (>= 2:0.25.2+fixes.20120802.46cab93), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.4.0)
+Suggests: zoneminder
+Filename: pool/multiverse/m/mythtv/mythzoneminder_0.25.2+fixes.20120802.46cab93-0ubuntu1_armhf.deb
+Size: 194328
+MD5sum: a364f74596ed6d4ccd8ce7d316fa4e73
+SHA1: 3f3e00015833c2cef08117cbafba78af2b71f6cf
+SHA256: b7931e9ecaf71150557f75ebe092107522c8d5aa452b989069a411235006675f
+Description: view status and display footage recorded with zoneminder
+Homepage: http://www.mythtv.org
+Description-md5: 8d9d41b817bbe7c1bae729f6473e40c3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nvidia-cuda-doc
+Priority: extra
+Section: multiverse/doc
+Installed-Size: 39449
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: all
+Source: nvidia-cuda-toolkit
+Version: 4.0.17-3ubuntu0.1
+Filename: pool/multiverse/n/nvidia-cuda-toolkit/nvidia-cuda-doc_4.0.17-3ubuntu0.1_all.deb
+Size: 33328712
+MD5sum: 8d8346fa464f693ef15a957f46de44cf
+SHA1: 83e5e1fcdd0df65ce2a42e9c8090f3e711fca54b
+SHA256: bce771c71c2a872ab6503e413d8a9c034c02bbbc195afa308facbfb0306e5e89
+Description: NVIDIA CUDA and OpenCL documentation
+Homepage: http://www.nvidia.com/CUDA
+Description-md5: 1ade4ee74357654b5ef0998d191b1349
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: open-vm-dkms
+Priority: extra
+Section: multiverse/admin
+Installed-Size: 5461
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: all
+Source: open-vm-tools
+Version: 2011.12.20-562307-0ubuntu1.1
+Depends: dkms, make
+Recommends: open-vm-tools
+Suggests: open-vm-toolbox
+Filename: pool/multiverse/o/open-vm-tools/open-vm-dkms_2011.12.20-562307-0ubuntu1.1_all.deb
+Size: 1134032
+MD5sum: 6316df8d28e43d210c74bcafc93e7ce5
+SHA1: e645456b5c1fc0b9e7728b2b44cacce49a1fd5b2
+SHA256: 36bfdb03e3af9efe312cfcaf3cb18021a5f059a57e2fb393b5edc50062aa69ed
+Description: Source for VMware guest systems driver (DKMS)
+Homepage: http://open-vm-tools.sourceforge.net/
+Description-md5: 8a2d753ada147c1a7cb97561da0092bf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: open-vm-source
+Priority: extra
+Section: multiverse/admin
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: all
+Source: open-vm-tools
+Version: 2011.12.20-562307-0ubuntu1.1
+Depends: open-vm-toolbox
+Filename: pool/multiverse/o/open-vm-tools/open-vm-source_2011.12.20-562307-0ubuntu1.1_all.deb
+Size: 3664
+MD5sum: 4911f0fe72156a67740eff9b34ebf39c
+SHA1: 461bdf3a2f74f2c9dd0296fe8e6c93e094beb4f9
+SHA256: 1970a6fa0992f8b4ed3fc396d87ccb453bde180c687b4ae84fa482a4dbd9e932
+Description: Transitional package for open-vm-source
+Homepage: http://open-vm-tools.sourceforge.net/
+Description-md5: be8b7a5af52682aff53ff0b4919bb9f4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: open-vm-tools-dev
+Priority: extra
+Section: multiverse/devel
+Installed-Size: 698
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: all
+Source: open-vm-tools
+Version: 2011.12.20-562307-0ubuntu1.1
+Filename: pool/multiverse/o/open-vm-tools/open-vm-tools-dev_2011.12.20-562307-0ubuntu1.1_all.deb
+Size: 121634
+MD5sum: 62e4424fce831f3b77f16ff591619141
+SHA1: 170e6cc6369f084ad9b910189b1b48fcc79cf665
+SHA256: b0e0780f85d977daab099075d489817e8836bca936e625b19117c05a5a591ee8
+Description: tools and components for VMware guest systems (development)
+Homepage: http://open-vm-tools.sourceforge.net/
+Description-md5: 216649bda1987378aefcc5b7b26e7585
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: php-mythtv
+Priority: optional
+Section: multiverse/graphics
+Installed-Size: 149
+Maintainer: MythTV Ubuntu Maintainers <ubuntu-mythtv@lists.ubuntu.com>
+Architecture: all
+Source: mythtv
+Version: 2:0.25.2+fixes.20120802.46cab93-0ubuntu1
+Filename: pool/multiverse/m/mythtv/php-mythtv_0.25.2+fixes.20120802.46cab93-0ubuntu1_all.deb
+Size: 39844
+MD5sum: f543a94c64c03ff0904277117ad74c71
+SHA1: 9ccf8aac0bfe0bae6645219bf5260551caa9f62b
+SHA256: 8155a0ad030a89b9b24fb06c54bcbdc5f3706e386bd63294b6ef240b7676b156
+Description: PHP Bindings for MythTV
+Homepage: http://www.mythtv.org
+Description-md5: cc74af3e7f32031e0ca3aeeac2981c9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: redeclipse
+Priority: optional
+Section: multiverse/games
+Installed-Size: 2749
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Version: 1.2-2ubuntu0.1
+Depends: redeclipse-data (>= 1.2), libc6 (>= 2.15-0ubuntu8), libenet1a, libgcc1 (>= 1:4.4.0), libgl1-mesa-glx | libgl1, libsdl-image1.2 (>= 1.2.10), libsdl-mixer1.2, libsdl1.2debian (>= 1.2.10-1), libstdc++6 (>= 4.4.0), libx11-6, zlib1g (>= 1:1.2.0)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse_1.2-2ubuntu0.1_armhf.deb
+Size: 1259286
+MD5sum: 891fbb0e9d6b477a08e25b3cb39af328
+SHA1: 1162d63f910de9583485294f35cf24de1e36a745
+SHA256: ec9a7f2f23859701256d04012a3467417e08e5409609d6181a232bc191480c99
+Description: single-player and multi-player first-person ego-shooter
+Homepage: http://www.redeclipse.net
+Description-md5: 5c2008bbe98e70a350dc2e5ff41c2edb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: redeclipse-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 13813
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: redeclipse
+Version: 1.2-2ubuntu0.1
+Depends: redeclipse (= 1.2-2ubuntu0.1)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse-dbg_1.2-2ubuntu0.1_armhf.deb
+Size: 3625580
+MD5sum: d81f8dde5febcb9b7c2cafd9a93c2cdb
+SHA1: 851c0c1e1b466e1ade13d15b839d614200f508be
+SHA256: 6b6c25fc06057305de03ac6e6e73c7ed8dbef40301eca3eeafce1e0fcae9f54b
+Description: debug symbols for the Red Eclipse FPS game
+Homepage: http://www.redeclipse.net
+Description-md5: 472a3994437308850b2d85085b11423f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: redeclipse-server
+Priority: optional
+Section: multiverse/games
+Installed-Size: 583
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: redeclipse
+Version: 1.2-2ubuntu0.1
+Depends: libc6 (>= 2.15-0ubuntu8), libenet1a, libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse-server_1.2-2ubuntu0.1_armhf.deb
+Size: 228878
+MD5sum: b5b3c317fc7fbee69e73ef67daab765b
+SHA1: 8b7432ba6b1b8f0bae8a14b1096d9434efeb0bb1
+SHA256: b139a6bedb30321c0b4e73058ebd2ca11274e205e719c29345b9396297975faf
+Description: server for the Red Eclipse FPS game
+Homepage: http://www.redeclipse.net
+Description-md5: 315338a2439def5a06eb51a250e84e31
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: redeclipse-server-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 1960
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: redeclipse
+Version: 1.2-2ubuntu0.1
+Depends: redeclipse-server (= 1.2-2ubuntu0.1)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/multiverse/r/redeclipse/redeclipse-server-dbg_1.2-2ubuntu0.1_armhf.deb
+Size: 537820
+MD5sum: 3d7fb546ac26ba2c3877ae7a5b415871
+SHA1: 7cfc0114ffe1c6eba9968335f0f2b08061023c90
+SHA256: 2332d965a03e75f46e0e09613537612ae5773dd1a4c4847d741ade46478dd262
+Description: debug symbols for the Red Eclipse dedicated server
+Homepage: http://www.redeclipse.net
+Description-md5: 845a03d775cde2c92ef0a0d918bdbf50
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sdlmame
+Priority: optional
+Section: multiverse/otherosfs
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Cesare Falco <cesare.falco@gmail.com>
+Architecture: all
+Source: mame
+Version: 0.145-0ubuntu2
+Depends: mame
+Filename: pool/multiverse/m/mame/sdlmame_0.145-0ubuntu2_all.deb
+Size: 6094
+MD5sum: 87dc3f339fd28c0e4694d1818c26e0a5
+SHA1: b7ffde8a37770d53b746a53e6fff0cbe68277a1e
+SHA256: 011f1d730be06ff36cfb56cbfd5966fad09e19400112fff3fc00258adcd277ce
+Description: Dummy package to ease transition to mame
+Homepage: http://mamedev.org
+Description-md5: 4ad0fe19b8225ba28b2843565c0877a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sdlmame-tools
+Priority: optional
+Section: multiverse/otherosfs
+Installed-Size: 56
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Cesare Falco <cesare.falco@gmail.com>
+Architecture: all
+Source: mame
+Version: 0.145-0ubuntu2
+Depends: mame-tools
+Filename: pool/multiverse/m/mame/sdlmame-tools_0.145-0ubuntu2_all.deb
+Size: 5370
+MD5sum: 20d3da80d90f935039515413bd0b4687
+SHA1: ceaaba63160335985fe26bcc056de45525465ee9
+SHA256: 17c295bbbe0f967898f3b3d2a8c5370c9c03b8eecc04cc3df7eaeb22e1fad811
+Description: Transitional dummy package to mame-tools
+Homepage: http://mamedev.org
+Description-md5: 43fe965441547d205471baea6094bb62
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unrar
+Priority: optional
+Section: multiverse/utils
+Installed-Size: 165
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Martin Meredith <mez@debian.org>
+Architecture: armhf
+Source: unrar-nonfree
+Version: 1:4.0.3-1ubuntu0.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Conflicts: rar (<= 2.60-1)
+Filename: pool/multiverse/u/unrar-nonfree/unrar_4.0.3-1ubuntu0.1_armhf.deb
+Size: 91448
+MD5sum: 5276093be6c76f738ee0eab0ddd1540d
+SHA1: 30bf93fc12f16abc51b3bb3f615c5f75a05e8df3
+SHA256: cdf8ef9d2f78fcf2a4131878afc49c8bad01fca3bef25a650ca0ce78b26f6a50
+Description: Unarchiver for .rar files (non-free version)
+Homepage: http://www.rarlabs.com/
+Description-md5: 363f696bb115028ffafb265ccc9f32fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+

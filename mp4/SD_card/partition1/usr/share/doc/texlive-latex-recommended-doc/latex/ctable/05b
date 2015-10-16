@@ -1,0 +1,5 @@
+\ctable[
+mincapwidth = 55mm,
+    caption = a lengthy caption
+]{c}{}{\FL row1\LL}
+$Id: 05b,v 1.2 2007-08-18 12:10:22 wybo Exp $

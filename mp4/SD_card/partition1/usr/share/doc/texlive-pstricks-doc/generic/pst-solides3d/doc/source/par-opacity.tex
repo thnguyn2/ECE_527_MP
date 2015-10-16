@@ -1,0 +1,13 @@
+\section {Gestion de la transparence}
+
+
+Le paramètre \Cadre{[opacity=$k$]} avec $k$ réel vérifiant $0\leq
+k\leq 1$, permet de définir le niveau d'opacité pour l'ensemble des
+tracés qui suivent. En code jps, on utilise l'instruction équivalente
+\Cadre{$k$ setfillopacity}. Cette dernière trouve notamment son
+application dans l'option \verb+fcol+. Par exemple, l'instruction
+\begin{verbatim}
+fcol=0 (.5 setfillopacity yellow)
+\end{verbatim}
+définit la face d'indice $0$ comme étant jaune, avec une opacité de
+$0, 5$.

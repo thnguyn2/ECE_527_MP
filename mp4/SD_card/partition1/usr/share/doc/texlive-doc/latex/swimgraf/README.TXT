@@ -1,0 +1,1 @@
+../../../texlive-pictures-doc/latex/swimgraf/README.TXT

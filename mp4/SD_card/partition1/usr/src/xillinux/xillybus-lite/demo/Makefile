@@ -1,0 +1,32 @@
+GNUPREFIX=
+
+CC=$(GNUPREFIX)gcc
+AR=$(GNUPREFIX)ar
+AS=$(GNUPREFIX)as
+CXX=$(GNUPREFIX)g++
+LD=$(GNUPREFIX)ld
+STRIP=$(GNUPREFIX)strip
+
+CFLAGS=-g -Wall -I. -O3
+
+APPLICATION=uiotest
+
+INTDEMO=intdemo
+
+OBJECTS=# core.o
+
+all: $(APPLICATION) $(INTDEMO)
+
+$(APPLICATION): $(OBJECTS) $(APPLICATION).o
+	$(CC)  $(CFLAGS) $(OBJECTS) $(APPLICATION).o -o $(APPLICATION)
+
+$(INTDEMO): $(OBJECTS) $(INTDEMO).o
+	$(CC)  $(CFLAGS) $(OBJECTS) $(INTDEMO).o -o $(INTDEMO)
+
+
+clean:
+	rm -f *~ $(APPLICATION)  $(INTDEMO) *.o
+
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+

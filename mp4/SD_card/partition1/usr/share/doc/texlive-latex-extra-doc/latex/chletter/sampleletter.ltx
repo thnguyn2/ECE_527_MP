@@ -1,0 +1,27 @@
+%
+% Copyright 2008 Boris Oriet
+% The licence is LPPL.
+%
+\documentclass{chletter}    % defaults: 11pt,a4paper,oneside
+\title{sampleletter}        % 
+\author{author}             % if no signature specified
+\name{fromname}             % to appear in the footer
+\signature{fromsig}         % to appear after valediction
+\location{office}           % to appear in the sender address zone
+\address{fromaddress}       % to appear at the upper left
+\return{returnaddress}      % to appear in the window
+\telephone{telephone}       % to appear under the address
+\date{place, \today}        % to alter the date string
+\makelabels                 % envelope page with return address
+\begin{document}            %
+  \begin{letter}{toname     % gets the recipient name and address
+               \\toaddress} % and creates the addresses zones
+    \conc[l]{subject}       % the letter's subject, left aligned
+    \opening[i]{salutation} % the salutation, text will be indented
+    text                    % the letter's main text
+    \closing{valediction}   % adds the signature
+    \ps{\emph{ps}}post      % creates a post scriptum
+    \cc{copies}             % creates a copies field
+    \encl{enclosures}       % creates an enclosures field
+  \end{letter}              %
+\end{document}              %

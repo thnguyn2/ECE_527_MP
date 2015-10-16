@@ -1,0 +1,50 @@
+                    DOCUMENTATION for PiCTeX
+
+1. The macro file pictex.tex (or pictexwd.tex) contains a sober yet 
+comprehensive documentation. (Something similar holds for contributions 
+from other authors.)
+
+2. Michael Wichura presented a description in TUGboat 9 (2), pp. 193-197 
+(1988), see 
+
+      http://www.tug.org/TUGboat/Articles/tb09-2/tb21wichura-pictex.pdf
+
+3. Michael Wichura's MANUAL -- today called `PiCTeX and Table Manual' -- 
+is distributed by PCTeX: 
+
+      http://www.pctex.com/books.html
+
+4. Other overviews have been presented at least in Helmut Kopka's GERMAN 
+books on LaTeX extensions in the 1990s. [Lazy, I know.]
+
+5. Another GERMAN reference list, a quite RECENT one, is Uwe Siart's PDF 
+on the web at
+
+      http://www.siart.de/typografie/pictex-referenz.pdf
+
+6. An early command summary has been Angus Duggan's PDF on the web at 
+
+      http://mirror.ctan.org/info/pictex/summary/pictexsum.pdf
+
+7. You may like short descriptions of pictex including HINTS concerning 
+basic problems with PiCTeX 
+
+-- in the TeX Catalogue: 
+
+      http://mirror.ctan.org/help/Catalogue/entries/pictex.html
+
+or in the TUG.org package information: 
+
+      http://ctan.tug.org/pkg/pictex
+
+-- in the UK TeX FAQ:
+
+      http://www.tex.ac.uk/cgi-bin/texfaq2html?label=usepictex
+
+      http://www.tex.ac.uk/cgi-bin/texfaq2html?label=docpictex
+
+
+______________________________________________________________________
+[This file by Uwe Lueck (the wrong author for an overview) 2008/08/15
+(based on web search 2008/02/15); add-ons/edits invited! To inform me 
+about lacunae etc.: http://contact-ednotes.sty.de.vu]

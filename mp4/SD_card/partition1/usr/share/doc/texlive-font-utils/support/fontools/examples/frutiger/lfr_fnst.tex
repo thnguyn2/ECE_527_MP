@@ -1,0 +1,68 @@
+\input fontinst.sty
+\needsfontinstversion{1.900}
+
+\installfonts
+
+
+\installfamily{T1}{lfrx}{\hyphenchar\font="7F}
+
+\installfont{lfrr9e}
+    {rlfrr9e,resetfrutiger-t1-tlf,newlatin}
+    {t1}{T1}{lfrx}{m}{n}{}
+\installfont{lfrri9e}
+    {rlfrri9e,resetfrutiger-t1-tlf,newlatin}
+    {t1}{T1}{lfrx}{m}{it}{}
+\installfont{lfrb9e}
+    {rlfrb9e,resetfrutiger-t1-tlf,newlatin}
+    {t1}{T1}{lfrx}{b}{n}{}
+\installfont{lfrbi9e}
+    {rlfrbi9e,resetfrutiger-t1-tlf,newlatin}
+    {t1}{T1}{lfrx}{b}{it}{}
+
+
+\installfamily{T1}{lfrj}{\hyphenchar\font="7F}
+
+\installfont{lfrrj9d}
+    {rlfrrj9d,resetfrutiger-t1-tosf,newlatin}
+    {t1}{T1}{lfrj}{m}{n}{}
+\installfont{lfrrij9d}
+    {rlfrrij9d,resetfrutiger-t1-tosf,newlatin}
+    {t1}{T1}{lfrj}{m}{it}{}
+\installfont{lfrbj9d}
+    {rlfrbj9d,resetfrutiger-t1-tosf,newlatin}
+    {t1}{T1}{lfrj}{b}{n}{}
+\installfont{lfrbij9d}
+    {rlfrbij9d,resetfrutiger-t1-tosf,newlatin}
+    {t1}{T1}{lfrj}{b}{it}{}
+
+
+\installfamily{TS1}{lfrx}{}
+
+\installfont{lfrr9c}
+    {rlfrr9c,resetfrutiger-ts1-tlf,%
+     rlfrrj9d,resetfrutiger-t1-tosf,resetosf,textcomp}
+    {ts1}{TS1}{lfrx}{m}{n}{}
+\installfont{lfrri9c}
+    {rlfrri9c,resetfrutiger-ts1-tlf,%
+     rlfrrij9d,resetfrutiger-t1-tosf,resetosf,textcomp}
+    {ts1}{TS1}{lfrx}{m}{it}{}
+\installfont{lfrb9c}
+    {rlfrb9c,resetfrutiger-ts1-tlf,%
+     rlfrbj9d,resetfrutiger-t1-tosf,resetosf,textcomp}
+    {ts1}{TS1}{lfrx}{b}{n}{}
+\installfont{lfrbi9c}
+    {rlfrbi9c,resetfrutiger-ts1-tlf,%
+     rlfrbij9d,resetfrutiger-t1-tosf,resetosf,textcomp}
+    {ts1}{TS1}{lfrx}{b}{it}{}
+	
+
+\installfamily{TS1}{lfrj}{}
+
+\installfontas{lfrr9c}{TS1}{lfrj}{m}{n}{}
+\installfontas{lfrri9c}{TS1}{lfrj}{m}{it}{}
+\installfontas{lfrb9c}{TS1}{lfrj}{b}{n}{}
+\installfontas{lfrbi9c}{TS1}{lfrj}{b}{it}{}
+
+\endinstallfonts
+
+\bye

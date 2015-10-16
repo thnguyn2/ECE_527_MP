@@ -1,0 +1,12 @@
+The description from TeX catalogue online:
+------------------------------------------
+
+The package was inspired by the cooltooltips package. In contrast to
+cooltooltips, fancytooltips allows inclusion of tooltips which contain
+arbitrary TeX material or a series of TeX materials (aminated
+graphics) from an external PDF file. To see the tooltips, you have to
+open the files in Adobe Reader. The links and JavaScripts are inserted
+using eforms package from the AcroTeX bundle.
+
+Some tips and Frequently Asked Questions to this package are at
+http://user.mendelu.cz/marik/latex/fancytooltips

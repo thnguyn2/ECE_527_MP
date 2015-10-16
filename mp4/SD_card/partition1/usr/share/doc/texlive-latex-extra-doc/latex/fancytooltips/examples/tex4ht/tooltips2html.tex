@@ -1,0 +1,57 @@
+% compile with the following command to get html:
+% htlatex tooltips2html.tex "xhtml,mouseover" 
+%
+% compile with the following command to get pdf:
+% pdflatex tooltips2html.tex && pdflatex tooltips2html.tex  
+%
+
+\documentclass{article}
+\usepackage{color}
+
+\ifx\ifHtml\undefined
+\usepackage[mouseover,movetips,filename=logo]{fancytooltips}
+\hypersetup{pdfborder=0 0 0}
+\else
+%%%%% here we define necessary macros for translatio into html
+\makeatletter
+\def\tooltipname#1#2{\expandafter\xdef\csname FancyToolTip@#1\endcsname{#2}}
+
+\def\FindTipNumber#1{\expandafter\ifx \csname FancyToolTip@#1\endcsname\relax
+  #1\else\csname FancyToolTip@#1\endcsname\fi}
+
+\def\checkTipNumber#1{\expandafter\ifx
+  \csname FancyToolTip@#1\endcsname\relax \PackageWarning{fancytooltips}{No
+    framenumber is assigned to keyword #1. I assume that #1 is the
+    number of the frame.}%
+  \fi}
+
+\makeatother
+
+\IfFileExists{fancytips.tex}{\input{fancytips.tex}}%
+  {\PackageWarning{fancytooltips}{No file fancytips.tex!
+      Your keywords for tooltips will not work!}}
+
+\newcount\tipnumbercount
+
+\def\tooltip#1#2{\edef\TipNumber{\FindTipNumber{#2}}
+\expandafter\tipnumbercount\TipNumber 
+\edef\temp{images/ttp-\the\tipnumbercount.jpg}
+\HCode{
+<a href="javascript:void(0);" onmouseover="picturettp='&lt;img src=\temp&gt;'; return overlib(picturettp, FULLHTML);" onmouseout="nd();">#1</a>
+}
+}
+%%%%%%
+\fi
+
+
+\begin{document}
+
+\title{Sample for conversion into html}
+\author{Robert Ma\v r\'\i k}
+\date{\today}
+\maketitle
+
+This is the sample document\footnote{just to show conversion into html}.
+
+Here we use small \tooltip{tooltip}{logo}.
+\end{document}

@@ -1,0 +1,17 @@
+%
+% AcroTeX Software Development Teams -- 2006
+% http://www.acrotex.net
+%
+% The following options combination of options are special to the
+% @EASE application. Do not change.
+%
+\DeclareOption{atbdbopts}{%
+    \ExecuteOptions{online}
+    \ExecuteOptions{forcolorpaper}
+    \ExecuteOptions{nosolutions}
+    \ExecuteOptions{nopoints}
+    \ExecuteOptions{nototals}
+    \ExecuteOptions{nospacetowork}
+    \ExecuteOptions{obeylocalversions}
+    \ExecuteOptions{myconfig}
+}

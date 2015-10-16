@@ -1,0 +1,738 @@
+ProblemType: Crash
+Date: Tue Jul 28 02:54:09 2015
+ExecutablePath: /usr/share/software-center/software-center
+ExecutableTimestamp: 1334341097
+InterpreterPath: /usr/bin/python2.7
+ProcCmdline: /usr/bin/python /usr/bin/software-center
+ProcCwd: /root
+ProcEnviron:
+ TERM=linux
+ SHELL=/bin/bash
+ProcMaps:
+ 00008000-001c3000 r-xp 00000000 b3:02 138256     /usr/bin/python2.7
+ 001ca000-001cb000 r--p 001ba000 b3:02 138256     /usr/bin/python2.7
+ 001cb000-0021a000 rw-p 001bb000 b3:02 138256     /usr/bin/python2.7
+ 0021a000-01e7d000 rw-p 00000000 00:00 0          [heap]
+ ae045000-ae337000 rw-p 00000000 00:00 0 
+ ae337000-ae3e7000 r--p 00000000 b3:02 86183      /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf
+ ae3e7000-ae439000 r--p 00000000 b3:02 86222      /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-B.ttf
+ ae439000-ae4ab000 rw-p 00000000 00:00 0 
+ ae4ab000-aec4b000 rw-p 00000000 b3:02 4643       /var/cache/apt/pkgcache.bin
+ aec4b000-aec7b000 r-xp 00000000 b3:02 21230      /usr/lib/arm-linux-gnueabihf/libibus-1.0.so.0.401.0
+ aec7b000-aec82000 ---p 00030000 b3:02 21230      /usr/lib/arm-linux-gnueabihf/libibus-1.0.so.0.401.0
+ aec82000-aec83000 r--p 0002f000 b3:02 21230      /usr/lib/arm-linux-gnueabihf/libibus-1.0.so.0.401.0
+ aec83000-aec84000 rw-p 00030000 b3:02 21230      /usr/lib/arm-linux-gnueabihf/libibus-1.0.so.0.401.0
+ aec8a000-aec8b000 r-xp 00000000 b3:02 16307      /usr/lib/python2.7/dist-packages/gi/_gi_cairo.so
+ aec8b000-aec92000 ---p 00001000 b3:02 16307      /usr/lib/python2.7/dist-packages/gi/_gi_cairo.so
+ aec92000-aec93000 r--p 00000000 b3:02 16307      /usr/lib/python2.7/dist-packages/gi/_gi_cairo.so
+ aec93000-aec94000 rw-p 00001000 b3:02 16307      /usr/lib/python2.7/dist-packages/gi/_gi_cairo.so
+ aec94000-aec96000 r-xp 00000000 b3:02 14885      /usr/lib/liblaunchpad-integration-3.0.so.1.0.0
+ aec96000-aec9d000 ---p 00002000 b3:02 14885      /usr/lib/liblaunchpad-integration-3.0.so.1.0.0
+ aec9d000-aec9e000 r--p 00001000 b3:02 14885      /usr/lib/liblaunchpad-integration-3.0.so.1.0.0
+ aec9e000-aec9f000 rw-p 00002000 b3:02 14885      /usr/lib/liblaunchpad-integration-3.0.so.1.0.0
+ aec9f000-aeca0000 ---p 00000000 00:00 0 
+ aeca0000-af49f000 rw-p 00000000 00:00 0          [stack:7521]
+ af49f000-af4c1000 r-xp 00000000 b3:02 21691      /usr/lib/arm-linux-gnueabihf/libcroco-0.6.so.3.0.1
+ af4c1000-af4c8000 ---p 00022000 b3:02 21691      /usr/lib/arm-linux-gnueabihf/libcroco-0.6.so.3.0.1
+ af4c8000-af4ca000 r--p 00021000 b3:02 21691      /usr/lib/arm-linux-gnueabihf/libcroco-0.6.so.3.0.1
+ af4ca000-af4cb000 rw-p 00023000 b3:02 21691      /usr/lib/arm-linux-gnueabihf/libcroco-0.6.so.3.0.1
+ af4cb000-af4ea000 r-xp 00000000 b3:02 20251      /usr/lib/arm-linux-gnueabihf/librsvg-2.so.2.36.1
+ af4ea000-af4f2000 ---p 0001f000 b3:02 20251      /usr/lib/arm-linux-gnueabihf/librsvg-2.so.2.36.1
+ af4f2000-af4f3000 r--p 0001f000 b3:02 20251      /usr/lib/arm-linux-gnueabihf/librsvg-2.so.2.36.1
+ af4f3000-af4f4000 rw-p 00020000 b3:02 20251      /usr/lib/arm-linux-gnueabihf/librsvg-2.so.2.36.1
+ af4f7000-af4fb000 r-xp 00000000 b3:02 20109      /usr/lib/arm-linux-gnueabihf/gtk-3.0/3.0.0/immodules/im-ibus.so
+ af4fb000-af502000 ---p 00004000 b3:02 20109      /usr/lib/arm-linux-gnueabihf/gtk-3.0/3.0.0/immodules/im-ibus.so
+ af502000-af503000 r--p 00003000 b3:02 20109      /usr/lib/arm-linux-gnueabihf/gtk-3.0/3.0.0/immodules/im-ibus.so
+ af503000-af504000 rw-p 00004000 b3:02 20109      /usr/lib/arm-linux-gnueabihf/gtk-3.0/3.0.0/immodules/im-ibus.so
+ af504000-af505000 r-xp 00000000 b3:02 20290      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+ af505000-af50c000 ---p 00001000 b3:02 20290      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+ af50c000-af50d000 r--p 00000000 b3:02 20290      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+ af50d000-af50e000 rw-p 00001000 b3:02 20290      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+ af50e000-afd01000 r--p 00000000 b3:02 112430     /usr/share/icons/hicolor/icon-theme.cache
+ afd01000-aff36000 r--p 00000000 b3:02 101831     /usr/share/icons/gnome/icon-theme.cache
+ aff36000-b001f000 r--p 00000000 b3:02 107024     /usr/share/icons/Humanity/icon-theme.cache
+ b001f000-b0042000 r--p 00000000 b3:02 110973     /usr/share/icons/ubuntu-mono-dark/icon-theme.cache
+ b0042000-b0094000 r--p 00000000 b3:02 86184      /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf
+ b0094000-b0095000 ---p 00000000 00:00 0 
+ b0095000-b0894000 rw-p 00000000 00:00 0          [stack:7538]
+ b0894000-b08a4000 r-xp 00000000 b3:02 20948      /usr/lib/arm-linux-gnueabihf/libdbusmenu-glib.so.4.0.12
+ b08a4000-b08ab000 ---p 00010000 b3:02 20948      /usr/lib/arm-linux-gnueabihf/libdbusmenu-glib.so.4.0.12
+ b08ab000-b08ac000 r--p 0000f000 b3:02 20948      /usr/lib/arm-linux-gnueabihf/libdbusmenu-glib.so.4.0.12
+ b08ac000-b08ad000 rw-p 00010000 b3:02 20948      /usr/lib/arm-linux-gnueabihf/libdbusmenu-glib.so.4.0.12
+ b08ad000-b08b8000 r-xp 00000000 b3:02 20982      /usr/lib/arm-linux-gnueabihf/libdbusmenu-gtk3.so.4.0.12
+ b08b8000-b08bf000 ---p 0000b000 b3:02 20982      /usr/lib/arm-linux-gnueabihf/libdbusmenu-gtk3.so.4.0.12
+ b08bf000-b08c0000 r--p 0000a000 b3:02 20982      /usr/lib/arm-linux-gnueabihf/libdbusmenu-gtk3.so.4.0.12
+ b08c0000-b08c1000 rw-p 0000b000 b3:02 20982      /usr/lib/arm-linux-gnueabihf/libdbusmenu-gtk3.so.4.0.12
+ b08c5000-b08c6000 r--p 00000000 b3:02 13660      /usr/lib/girepository-1.0/LaunchpadIntegration-3.0.typelib
+ b08c6000-b08d1000 r--p 00000000 b3:02 102590     /usr/share/icons/Humanity-Dark/icon-theme.cache
+ b08d1000-b08d4000 r-xp 00000000 b3:02 13635      /usr/lib/gtk-3.0/3.0.0/menuproxies/libappmenu.so
+ b08d4000-b08db000 ---p 00003000 b3:02 13635      /usr/lib/gtk-3.0/3.0.0/menuproxies/libappmenu.so
+ b08db000-b08dc000 r--p 00002000 b3:02 13635      /usr/lib/gtk-3.0/3.0.0/menuproxies/libappmenu.so
+ b08dc000-b08dd000 rw-p 00003000 b3:02 13635      /usr/lib/gtk-3.0/3.0.0/menuproxies/libappmenu.so
+ b08dd000-b08de000 r--p 00000000 b3:02 13673      /usr/lib/girepository-1.0/PangoFT2-1.0.typelib
+ b08de000-b08df000 r--p 00000000 b3:02 13669      /usr/lib/girepository-1.0/fontconfig-2.0.typelib
+ b08df000-b08e0000 r--p 00000000 b3:02 13659      /usr/lib/girepository-1.0/freetype2-2.0.typelib
+ b08e0000-b08e2000 r--p 00000000 b3:02 13667      /usr/lib/girepository-1.0/PangoCairo-1.0.typelib
+ b08e2000-b090b000 r--p 00000000 b3:02 13650      /usr/lib/girepository-1.0/Gst-0.10.typelib
+ b090b000-b0918000 r-xp 00000000 b3:02 18988      /usr/lib/python2.7/dist-packages/cairo/_cairo.so
+ b0918000-b091f000 ---p 0000d000 b3:02 18988      /usr/lib/python2.7/dist-packages/cairo/_cairo.so
+ b091f000-b0920000 r--p 0000c000 b3:02 18988      /usr/lib/python2.7/dist-packages/cairo/_cairo.so
+ b0920000-b0923000 rw-p 0000d000 b3:02 18988      /usr/lib/python2.7/dist-packages/cairo/_cairo.so
+ b0923000-b097a000 r--p 00000000 b3:02 86224      /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-R.ttf
+ b097a000-b097b000 r-xp 00000000 b3:02 20320      /usr/lib/arm-linux-gnueabihf/pango/1.6.0/modules/pango-basic-fc.so
+ b097b000-b0982000 ---p 00001000 b3:02 20320      /usr/lib/arm-linux-gnueabihf/pango/1.6.0/modules/pango-basic-fc.so
+ b0982000-b0983000 r--p 00000000 b3:02 20320      /usr/lib/arm-linux-gnueabihf/pango/1.6.0/modules/pango-basic-fc.so
+ b0983000-b0984000 rw-p 00001000 b3:02 20320      /usr/lib/arm-linux-gnueabihf/pango/1.6.0/modules/pango-basic-fc.so
+ b0984000-b098b000 r--s 00000000 b3:02 12830      /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d8.cache-3
+ b098b000-b098d000 r--s 00000000 b3:02 12835      /var/cache/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le32d8.cache-3
+ b098d000-b0992000 r--s 00000000 b3:02 12840      /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le32d8.cache-3
+ b0992000-b09a0000 r--s 00000000 b3:02 12837      /var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le32d8.cache-3
+ b09a0000-b0a7c000 r-xp 00000000 b3:02 21209      /usr/lib/arm-linux-gnueabihf/libdb-5.1.so
+ b0a7c000-b0a84000 ---p 000dc000 b3:02 21209      /usr/lib/arm-linux-gnueabihf/libdb-5.1.so
+ b0a84000-b0a87000 r--p 000dc000 b3:02 21209      /usr/lib/arm-linux-gnueabihf/libdb-5.1.so
+ b0a87000-b0a88000 rw-p 000df000 b3:02 21209      /usr/lib/arm-linux-gnueabihf/libdb-5.1.so
+ b0a88000-b0aa8000 r-xp 00000000 b3:02 19213      /usr/lib/python2.7/lib-dynload/_bsddb.so
+ b0aa8000-b0aaf000 ---p 00020000 b3:02 19213      /usr/lib/python2.7/lib-dynload/_bsddb.so
+ b0aaf000-b0ab0000 r--p 0001f000 b3:02 19213      /usr/lib/python2.7/lib-dynload/_bsddb.so
+ b0ab0000-b0ab2000 rw-p 00020000 b3:02 19213      /usr/lib/python2.7/lib-dynload/_bsddb.so
+ b0ab2000-b0ab3000 rw-p 00000000 00:00 0 
+ b0ab3000-b0ac9000 r-xp 00000000 b3:02 3814       /lib/arm-linux-gnueabihf/libtinfo.so.5.9
+ b0ac9000-b0ad1000 ---p 00016000 b3:02 3814       /lib/arm-linux-gnueabihf/libtinfo.so.5.9
+ b0ad1000-b0ad3000 r--p 00016000 b3:02 3814       /lib/arm-linux-gnueabihf/libtinfo.so.5.9
+ b0ad3000-b0ad4000 rw-p 00018000 b3:02 3814       /lib/arm-linux-gnueabihf/libtinfo.so.5.9
+ b0ad4000-b0b4e000 r-xp 00000000 b3:02 21772      /usr/lib/libvte2_90.so.9.3200.1
+ b0b4e000-b0b55000 ---p 0007a000 b3:02 21772      /usr/lib/libvte2_90.so.9.3200.1
+ b0b55000-b0b56000 r--p 00079000 b3:02 21772      /usr/lib/libvte2_90.so.9.3200.1
+ b0b56000-b0b58000 rw-p 0007a000 b3:02 21772      /usr/lib/libvte2_90.so.9.3200.1
+ b0b58000-b0b59000 rw-p 00000000 00:00 0 
+ b0b59000-b0b5a000 r--p 00000000 b3:02 13681      /usr/lib/girepository-1.0/libxml2-2.0.typelib
+ b0b5a000-b0b69000 r--s 00000000 b3:02 12824      /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d8.cache-3
+ b0b69000-b0b73000 r-xp 00000000 b3:02 21084      /usr/lib/arm-linux-gnueabihf/pkcs11/gnome-keyring-pkcs11.so
+ b0b73000-b0b7a000 ---p 0000a000 b3:02 21084      /usr/lib/arm-linux-gnueabihf/pkcs11/gnome-keyring-pkcs11.so
+ b0b7a000-b0b7b000 r--p 00009000 b3:02 21084      /usr/lib/arm-linux-gnueabihf/pkcs11/gnome-keyring-pkcs11.so
+ b0b7b000-b0b7c000 rw-p 0000a000 b3:02 21084      /usr/lib/arm-linux-gnueabihf/pkcs11/gnome-keyring-pkcs11.so
+ b0b7c000-b0b7f000 r-xp 00000000 b3:02 3842       /lib/arm-linux-gnueabihf/libgpg-error.so.0.8.0
+ b0b7f000-b0b86000 ---p 00003000 b3:02 3842       /lib/arm-linux-gnueabihf/libgpg-error.so.0.8.0
+ b0b86000-b0b87000 r--p 00002000 b3:02 3842       /lib/arm-linux-gnueabihf/libgpg-error.so.0.8.0
+ b0b87000-b0b88000 rw-p 00003000 b3:02 3842       /lib/arm-linux-gnueabihf/libgpg-error.so.0.8.0
+ b0b88000-b0be4000 r-xp 00000000 b3:02 3787       /lib/arm-linux-gnueabihf/libgcrypt.so.11.7.0
+ b0be4000-b0beb000 ---p 0005c000 b3:02 3787       /lib/arm-linux-gnueabihf/libgcrypt.so.11.7.0
+ b0beb000-b0bec000 r--p 0005b000 b3:02 3787       /lib/arm-linux-gnueabihf/libgcrypt.so.11.7.0
+ b0bec000-b0bee000 rw-p 0005c000 b3:02 3787       /lib/arm-linux-gnueabihf/libgcrypt.so.11.7.0
+ b0bee000-b0bf7000 r-xp 00000000 b3:02 20923      /usr/lib/arm-linux-gnueabihf/libtasn1.so.3.1.12
+ b0bf7000-b0bfe000 ---p 00009000 b3:02 20923      /usr/lib/arm-linux-gnueabihf/libtasn1.so.3.1.12
+ b0bfe000-b0bff000 r--p 00008000 b3:02 20923      /usr/lib/arm-linux-gnueabihf/libtasn1.so.3.1.12
+ b0bff000-b0c00000 rw-p 00009000 b3:02 20923      /usr/lib/arm-linux-gnueabihf/libtasn1.so.3.1.12
+ b0c00000-b0c21000 rw-p 00000000 00:00 0 
+ b0c21000-b0d00000 ---p 00000000 00:00 0 
+ b0d00000-b0d78000 r-xp 00000000 b3:02 21179      /usr/lib/arm-linux-gnueabihf/libgnutls.so.26.21.8
+ b0d78000-b0d7f000 ---p 00078000 b3:02 21179      /usr/lib/arm-linux-gnueabihf/libgnutls.so.26.21.8
+ b0d7f000-b0d83000 r--p 00077000 b3:02 21179      /usr/lib/arm-linux-gnueabihf/libgnutls.so.26.21.8
+ b0d83000-b0d84000 rw-p 0007b000 b3:02 21179      /usr/lib/arm-linux-gnueabihf/libgnutls.so.26.21.8
+ b0d84000-b0d8e000 r-xp 00000000 b3:02 20620      /usr/lib/arm-linux-gnueabihf/libp11-kit.so.0.0.0
+ b0d8e000-b0d95000 ---p 0000a000 b3:02 20620      /usr/lib/arm-linux-gnueabihf/libp11-kit.so.0.0.0
+ b0d95000-b0d96000 r--p 00009000 b3:02 20620      /usr/lib/arm-linux-gnueabihf/libp11-kit.so.0.0.0
+ b0d96000-b0d97000 rw-p 0000a000 b3:02 20620      /usr/lib/arm-linux-gnueabihf/libp11-kit.so.0.0.0
+ b0d97000-b0d9a000 r--s 00000000 b3:02 12833      /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le32d8.cache-3
+ b0d9a000-b0d9d000 r-xp 00000000 b3:02 19205      /usr/lib/python2.7/lib-dynload/termios.so
+ b0d9d000-b0da4000 ---p 00003000 b3:02 19205      /usr/lib/python2.7/lib-dynload/termios.so
+ b0da4000-b0da5000 r--p 00002000 b3:02 19205      /usr/lib/python2.7/lib-dynload/termios.so
+ b0da5000-b0da7000 rw-p 00003000 b3:02 19205      /usr/lib/python2.7/lib-dynload/termios.so
+ b0da7000-b0db6000 r-xp 00000000 b3:02 21766      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognutls.so
+ b0db6000-b0dbd000 ---p 0000f000 b3:02 21766      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognutls.so
+ b0dbd000-b0dbe000 r--p 0000e000 b3:02 21766      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognutls.so
+ b0dbe000-b0dbf000 rw-p 0000f000 b3:02 21766      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognutls.so
+ b0dbf000-b0dc2000 r-xp 00000000 b3:02 21764      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognomeproxy.so
+ b0dc2000-b0dc9000 ---p 00003000 b3:02 21764      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognomeproxy.so
+ b0dc9000-b0dca000 r--p 00002000 b3:02 21764      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognomeproxy.so
+ b0dca000-b0dcb000 rw-p 00003000 b3:02 21764      /usr/lib/arm-linux-gnueabihf/gio/modules/libgiognomeproxy.so
+ b0dcb000-b0dcc000 ---p 00000000 00:00 0 
+ b0dcc000-b16eb000 rw-p 00000000 00:00 0          [stack:7517]
+ b16eb000-b16ec000 ---p 00000000 00:00 0 
+ b16ec000-b1eeb000 rw-p 00000000 00:00 0          [stack:7516]
+ b1eeb000-b1ef9000 r-xp 00000000 b3:02 21207      /usr/lib/arm-linux-gnueabihf/libICE.so.6.3.0
+ b1ef9000-b1f00000 ---p 0000e000 b3:02 21207      /usr/lib/arm-linux-gnueabihf/libICE.so.6.3.0
+ b1f00000-b1f01000 r--p 0000d000 b3:02 21207      /usr/lib/arm-linux-gnueabihf/libICE.so.6.3.0
+ b1f01000-b1f02000 rw-p 0000e000 b3:02 21207      /usr/lib/arm-linux-gnueabihf/libICE.so.6.3.0
+ b1f02000-b1f04000 rw-p 00000000 00:00 0 
+ b1f04000-b1f09000 r-xp 00000000 b3:02 21174      /usr/lib/arm-linux-gnueabihf/libSM.so.6.0.1
+ b1f09000-b1f10000 ---p 00005000 b3:02 21174      /usr/lib/arm-linux-gnueabihf/libSM.so.6.0.1
+ b1f10000-b1f11000 r--p 00004000 b3:02 21174      /usr/lib/arm-linux-gnueabihf/libSM.so.6.0.1
+ b1f11000-b1f12000 rw-p 00005000 b3:02 21174      /usr/lib/arm-linux-gnueabihf/libSM.so.6.0.1
+ b1f12000-b3081000 r-xp 00000000 b3:02 19586      /usr/lib/libicudata.so.48.1.1
+ b3081000-b3088000 ---p 0116f000 b3:02 19586      /usr/lib/libicudata.so.48.1.1
+ b3088000-b3089000 r--p 0116e000 b3:02 19586      /usr/lib/libicudata.so.48.1.1
+ b3089000-b308a000 rw-p 0116f000 b3:02 19586      /usr/lib/libicudata.so.48.1.1
+ b308a000-b30d5000 r-xp 00000000 b3:02 20661      /usr/lib/arm-linux-gnueabihf/liborc-0.4.so.0.16.0
+ b30d5000-b30dd000 ---p 0004b000 b3:02 20661      /usr/lib/arm-linux-gnueabihf/liborc-0.4.so.0.16.0
+ b30dd000-b30de000 r--p 0004b000 b3:02 20661      /usr/lib/arm-linux-gnueabihf/liborc-0.4.so.0.16.0
+ b30de000-b30e2000 rw-p 0004c000 b3:02 20661      /usr/lib/arm-linux-gnueabihf/liborc-0.4.so.0.16.0
+ b30e2000-b3117000 r-xp 00000000 b3:02 21051      /usr/lib/arm-linux-gnueabihf/libXt.so.6.0.0
+ b3117000-b311e000 ---p 00035000 b3:02 21051      /usr/lib/arm-linux-gnueabihf/libXt.so.6.0.0
+ b311e000-b311f000 r--p 00034000 b3:02 21051      /usr/lib/arm-linux-gnueabihf/libXt.so.6.0.0
+ b311f000-b3122000 rw-p 00035000 b3:02 21051      /usr/lib/arm-linux-gnueabihf/libXt.so.6.0.0
+ b3122000-b31fd000 r-xp 00000000 b3:02 21955      /usr/lib/libicuuc.so.48.1.1
+ b31fd000-b3204000 ---p 000db000 b3:02 21955      /usr/lib/libicuuc.so.48.1.1
+ b3204000-b320d000 r--p 000da000 b3:02 21955      /usr/lib/libicuuc.so.48.1.1
+ b320d000-b320e000 rw-p 000e3000 b3:02 21955      /usr/lib/libicuuc.so.48.1.1
+ b320e000-b3212000 rw-p 00000000 00:00 0 
+ b3212000-b3320000 r-xp 00000000 b3:02 19994      /usr/lib/libicui18n.so.48.1.1
+ b3320000-b3327000 ---p 0010e000 b3:02 19994      /usr/lib/libicui18n.so.48.1.1
+ b3327000-b332d000 r--p 0010d000 b3:02 19994      /usr/lib/libicui18n.so.48.1.1
+ b332d000-b332e000 rw-p 00113000 b3:02 19994      /usr/lib/libicui18n.so.48.1.1
+ b332e000-b332f000 rw-p 00000000 00:00 0 
+ b332f000-b338b000 r-xp 00000000 b3:02 20717      /usr/lib/arm-linux-gnueabihf/libsqlite3.so.0.8.6
+ b338b000-b3393000 ---p 0005c000 b3:02 20717      /usr/lib/arm-linux-gnueabihf/libsqlite3.so.0.8.6
+ b3393000-b3394000 r--p 0005c000 b3:02 20717      /usr/lib/arm-linux-gnueabihf/libsqlite3.so.0.8.6
+ b3394000-b3395000 rw-p 0005d000 b3:02 20717      /usr/lib/arm-linux-gnueabihf/libsqlite3.so.0.8.6
+ b3395000-b3396000 rw-p 00000000 00:00 0 
+ b3396000-b33bc000 r-xp 00000000 b3:02 21074      /usr/lib/arm-linux-gnueabihf/libxslt.so.1.1.26
+ b33bc000-b33c3000 ---p 00026000 b3:02 21074      /usr/lib/arm-linux-gnueabihf/libxslt.so.1.1.26
+ b33c3000-b33c4000 r--p 00025000 b3:02 21074      /usr/lib/arm-linux-gnueabihf/libxslt.so.1.1.26
+ b33c4000-b33c5000 rw-p 00026000 b3:02 21074      /usr/lib/arm-linux-gnueabihf/libxslt.so.1.1.26
+ b33c5000-b33e6000 r-xp 00000000 b3:02 20177      /usr/lib/arm-linux-gnueabihf/libjpeg.so.8.0.2
+ b33e6000-b33ed000 ---p 00021000 b3:02 20177      /usr/lib/arm-linux-gnueabihf/libjpeg.so.8.0.2
+ b33ed000-b33ee000 r--p 00020000 b3:02 20177      /usr/lib/arm-linux-gnueabihf/libjpeg.so.8.0.2
+ b33ee000-b33ef000 rw-p 00021000 b3:02 20177      /usr/lib/arm-linux-gnueabihf/libjpeg.so.8.0.2
+ b33ef000-b33ff000 rw-p 00000000 00:00 0 
+ b33ff000-b3499000 r-xp 00000000 b3:02 20973      /usr/lib/arm-linux-gnueabihf/libgstreamer-0.10.so.0.30.0
+ b3499000-b34a1000 ---p 0009a000 b3:02 20973      /usr/lib/arm-linux-gnueabihf/libgstreamer-0.10.so.0.30.0
+ b34a1000-b34a3000 r--p 0009a000 b3:02 20973      /usr/lib/arm-linux-gnueabihf/libgstreamer-0.10.so.0.30.0
+ b34a3000-b34a5000 rw-p 0009c000 b3:02 20973      /usr/lib/arm-linux-gnueabihf/libgstreamer-0.10.so.0.30.0
+ b34a5000-b34e3000 r-xp 00000000 b3:02 20934      /usr/lib/arm-linux-gnueabihf/libgstbase-0.10.so.0.30.0
+ b34e3000-b34ea000 ---p 0003e000 b3:02 20934      /usr/lib/arm-linux-gnueabihf/libgstbase-0.10.so.0.30.0
+ b34ea000-b34eb000 r--p 0003d000 b3:02 20934      /usr/lib/arm-linux-gnueabihf/libgstbase-0.10.so.0.30.0
+ b34eb000-b34ec000 rw-p 0003e000 b3:02 20934      /usr/lib/arm-linux-gnueabihf/libgstbase-0.10.so.0.30.0
+ b34ec000-b34fe000 r-xp 00000000 b3:02 21211      /usr/lib/arm-linux-gnueabihf/libgstvideo-0.10.so.0.25.0
+ b34fe000-b3505000 ---p 00012000 b3:02 21211      /usr/lib/arm-linux-gnueabihf/libgstvideo-0.10.so.0.25.0
+ b3505000-b3506000 r--p 00011000 b3:02 21211      /usr/lib/arm-linux-gnueabihf/libgstvideo-0.10.so.0.25.0
+ b3506000-b3507000 rw-p 00012000 b3:02 21211      /usr/lib/arm-linux-gnueabihf/libgstvideo-0.10.so.0.25.0
+ b3507000-b351f000 r-xp 00000000 b3:02 20223      /usr/lib/arm-linux-gnueabihf/libgstpbutils-0.10.so.0.25.0
+ b351f000-b3520000 r--p 00018000 b3:02 20223      /usr/lib/arm-linux-gnueabihf/libgstpbutils-0.10.so.0.25.0
+ b3520000-b3521000 rw-p 00019000 b3:02 20223      /usr/lib/arm-linux-gnueabihf/libgstpbutils-0.10.so.0.25.0
+ b3521000-b352b000 r-xp 00000000 b3:02 20215      /usr/lib/arm-linux-gnueabihf/libgstinterfaces-0.10.so.0.25.0
+ b352b000-b3533000 ---p 0000a000 b3:02 20215      /usr/lib/arm-linux-gnueabihf/libgstinterfaces-0.10.so.0.25.0
+ b3533000-b3534000 r--p 0000a000 b3:02 20215      /usr/lib/arm-linux-gnueabihf/libgstinterfaces-0.10.so.0.25.0
+ b3534000-b3535000 rw-p 0000b000 b3:02 20215      /usr/lib/arm-linux-gnueabihf/libgstinterfaces-0.10.so.0.25.0
+ b3535000-b353d000 r-xp 00000000 b3:02 21013      /usr/lib/arm-linux-gnueabihf/libgstapp-0.10.so.0.25.0
+ b353d000-b3544000 ---p 00008000 b3:02 21013      /usr/lib/arm-linux-gnueabihf/libgstapp-0.10.so.0.25.0
+ b3544000-b3545000 r--p 00007000 b3:02 21013      /usr/lib/arm-linux-gnueabihf/libgstapp-0.10.so.0.25.0
+ b3545000-b3546000 rw-p 00008000 b3:02 21013      /usr/lib/arm-linux-gnueabihf/libgstapp-0.10.so.0.25.0
+ b3546000-b3552000 r-xp 00000000 b3:02 21832      /usr/lib/libgeoclue.so.0.0.0
+ b3552000-b3559000 ---p 0000c000 b3:02 21832      /usr/lib/libgeoclue.so.0.0.0
+ b3559000-b355a000 r--p 0000b000 b3:02 21832      /usr/lib/libgeoclue.so.0.0.0
+ b355a000-b355b000 rw-p 0000c000 b3:02 21832      /usr/lib/libgeoclue.so.0.0.0
+ b355b000-b3560000 r-xp 00000000 b3:02 20790      /usr/lib/arm-linux-gnueabihf/libgailutil-3.so.0.0.0
+ b3560000-b3567000 ---p 00005000 b3:02 20790      /usr/lib/arm-linux-gnueabihf/libgailutil-3.so.0.0.0
+ b3567000-b3568000 r--p 00004000 b3:02 20790      /usr/lib/arm-linux-gnueabihf/libgailutil-3.so.0.0.0
+ b3568000-b3569000 rw-p 00005000 b3:02 20790      /usr/lib/arm-linux-gnueabihf/libgailutil-3.so.0.0.0
+ b3569000-b356f000 r-xp 00000000 b3:02 13966      /usr/lib/libenchant.so.1.6.0
+ b356f000-b3576000 ---p 00006000 b3:02 13966      /usr/lib/libenchant.so.1.6.0
+ b3576000-b3577000 r--p 00005000 b3:02 13966      /usr/lib/libenchant.so.1.6.0
+ b3577000-b3578000 rw-p 00006000 b3:02 13966      /usr/lib/libenchant.so.1.6.0
+ b3578000-b3765000 r-xp 00000000 b3:02 19534      /usr/lib/libjavascriptcoregtk-3.0.so.0.13.1
+ b3765000-b376c000 ---p 001ed000 b3:02 19534      /usr/lib/libjavascriptcoregtk-3.0.so.0.13.1
+ b376c000-b3772000 r--p 001ec000 b3:02 19534      /usr/lib/libjavascriptcoregtk-3.0.so.0.13.1
+ b3772000-b3776000 rw-p 001f2000 b3:02 19534      /usr/lib/libjavascriptcoregtk-3.0.so.0.13.1
+ b3776000-b3787000 rw-p 00000000 00:00 0 
+ b3787000-b427b000 r-xp 00000000 b3:02 19519      /usr/lib/libwebkitgtk-3.0.so.0.13.1
+ b427b000-b4283000 ---p 00af4000 b3:02 19519      /usr/lib/libwebkitgtk-3.0.so.0.13.1
+ b4283000-b432a000 r--p 00af4000 b3:02 19519      /usr/lib/libwebkitgtk-3.0.so.0.13.1
+ b432a000-b4337000 rw-p 00b9b000 b3:02 19519      /usr/lib/libwebkitgtk-3.0.so.0.13.1
+ b4337000-b433c000 rw-p 00000000 00:00 0 
+ b433c000-b4404000 r-xp 00000000 b3:02 20337      /usr/lib/arm-linux-gnueabihf/libxml2.so.2.7.8
+ b4404000-b4408000 r--p 000c8000 b3:02 20337      /usr/lib/arm-linux-gnueabihf/libxml2.so.2.7.8
+ b4408000-b4409000 rw-p 000cc000 b3:02 20337      /usr/lib/arm-linux-gnueabihf/libxml2.so.2.7.8
+ b4409000-b440a000 rw-p 00000000 00:00 0 
+ b440a000-b4447000 r-xp 00000000 b3:02 20992      /usr/lib/arm-linux-gnueabihf/libsoup-2.4.so.1.5.0
+ b4447000-b444f000 ---p 0003d000 b3:02 20992      /usr/lib/arm-linux-gnueabihf/libsoup-2.4.so.1.5.0
+ b444f000-b4450000 r--p 0003d000 b3:02 20992      /usr/lib/arm-linux-gnueabihf/libsoup-2.4.so.1.5.0
+ b4450000-b4451000 rw-p 0003e000 b3:02 20992      /usr/lib/arm-linux-gnueabihf/libsoup-2.4.so.1.5.0
+ b4451000-b4452000 rw-p 00000000 00:00 0 
+ b4452000-b4464000 r--p 00000000 b3:02 13711      /usr/lib/girepository-1.0/Soup-2.4.typelib
+ b4464000-b449e000 r--p 00000000 b3:02 13699      /usr/lib/girepository-1.0/WebKit-3.0.typelib
+ b449e000-b44b4000 r-xp 00000000 b3:02 20949      /usr/lib/arm-linux-gnueabihf/libdbus-glib-1.so.2.2.2
+ b44b4000-b44bb000 ---p 00016000 b3:02 20949      /usr/lib/arm-linux-gnueabihf/libdbus-glib-1.so.2.2.2
+ b44bb000-b44bc000 r--p 00015000 b3:02 20949      /usr/lib/arm-linux-gnueabihf/libdbus-glib-1.so.2.2.2
+ b44bc000-b44bd000 rw-p 00016000 b3:02 20949      /usr/lib/arm-linux-gnueabihf/libdbus-glib-1.so.2.2.2
+ b44bd000-b44cd000 rw-p 00000000 00:00 0 
+ b44cd000-b4612000 r-xp 00000000 b3:02 21825      /usr/lib/libxapian.so.22.4.2
+ b4612000-b461a000 ---p 00145000 b3:02 21825      /usr/lib/libxapian.so.22.4.2
+ b461a000-b461e000 r--p 00145000 b3:02 21825      /usr/lib/libxapian.so.22.4.2
+ b461e000-b461f000 rw-p 00149000 b3:02 21825      /usr/lib/libxapian.so.22.4.2
+ b461f000-b46bf000 r-xp 00000000 b3:02 16693      /usr/lib/python2.7/dist-packages/xapian/_xapian.so
+ b46bf000-b46c6000 ---p 000a0000 b3:02 16693      /usr/lib/python2.7/dist-packages/xapian/_xapian.so
+ b46c6000-b46c7000 r--p 0009f000 b3:02 16693      /usr/lib/python2.7/dist-packages/xapian/_xapian.so
+ b46c7000-b46cc000 rw-p 000a0000 b3:02 16693      /usr/lib/python2.7/dist-packages/xapian/_xapian.so
+ b46cc000-b46d4000 r-xp 00000000 b3:02 19202      /usr/lib/python2.7/lib-dynload/_json.so
+ b46d4000-b46db000 ---p 00008000 b3:02 19202      /usr/lib/python2.7/lib-dynload/_json.so
+ b46db000-b46dc000 r--p 00007000 b3:02 19202      /usr/lib/python2.7/lib-dynload/_json.so
+ b46dc000-b46dd000 rw-p 00008000 b3:02 19202      /usr/lib/python2.7/lib-dynload/_json.so
+ b46dd000-b46f0000 r-xp 00000000 b3:02 19208      /usr/lib/python2.7/lib-dynload/_io.so
+ b46f0000-b46f7000 ---p 00013000 b3:02 19208      /usr/lib/python2.7/lib-dynload/_io.so
+ b46f7000-b46f8000 r--p 00012000 b3:02 19208      /usr/lib/python2.7/lib-dynload/_io.so
+ b46f8000-b46ff000 rw-p 00013000 b3:02 19208      /usr/lib/python2.7/lib-dynload/_io.so
+ b46ff000-b470c000 r-xp 00000000 b3:02 20709      /usr/lib/arm-linux-gnueabihf/libapt-inst.so.1.4.0
+ b470c000-b4713000 ---p 0000d000 b3:02 20709      /usr/lib/arm-linux-gnueabihf/libapt-inst.so.1.4.0
+ b4713000-b4714000 r--p 0000c000 b3:02 20709      /usr/lib/arm-linux-gnueabihf/libapt-inst.so.1.4.0
+ b4714000-b4715000 rw-p 0000d000 b3:02 20709      /usr/lib/arm-linux-gnueabihf/libapt-inst.so.1.4.0
+ b4715000-b4716000 rwxp 00000000 00:00 0 
+ b4716000-b4717000 r--s 00000000 b3:02 12844      /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le32d8.cache-3
+ b4717000-b4718000 r--s 00000000 b3:02 12838      /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le32d8.cache-3
+ b4718000-b471b000 r--s 00000000 b3:02 12839      /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d8.cache-3
+ b471b000-b471c000 r-xp 00000000 b3:02 18058      /usr/lib/python2.7/dist-packages/_dbus_glib_bindings.so
+ b471c000-b4723000 ---p 00001000 b3:02 18058      /usr/lib/python2.7/dist-packages/_dbus_glib_bindings.so
+ b4723000-b4724000 r--p 00000000 b3:02 18058      /usr/lib/python2.7/dist-packages/_dbus_glib_bindings.so
+ b4724000-b4725000 rw-p 00001000 b3:02 18058      /usr/lib/python2.7/dist-packages/_dbus_glib_bindings.so
+ b4725000-b47a7000 rw-p 00000000 00:00 0 
+ b47a7000-b4872000 r-xp 00000000 b3:02 20918      /usr/lib/arm-linux-gnueabihf/libapt-pkg.so.4.12.0
+ b4872000-b487a000 ---p 000cb000 b3:02 20918      /usr/lib/arm-linux-gnueabihf/libapt-pkg.so.4.12.0
+ b487a000-b487c000 r--p 000cb000 b3:02 20918      /usr/lib/arm-linux-gnueabihf/libapt-pkg.so.4.12.0
+ b487c000-b487d000 rw-p 000cd000 b3:02 20918      /usr/lib/arm-linux-gnueabihf/libapt-pkg.so.4.12.0
+ b487d000-b48b1000 r-xp 00000000 b3:02 18531      /usr/lib/python2.7/dist-packages/apt_pkg.so
+ b48b1000-b48b9000 ---p 00034000 b3:02 18531      /usr/lib/python2.7/dist-packages/apt_pkg.so
+ b48b9000-b48ba000 r--p 00034000 b3:02 18531      /usr/lib/python2.7/dist-packages/apt_pkg.so
+ b48ba000-b48be000 rw-p 00035000 b3:02 18531      /usr/lib/python2.7/dist-packages/apt_pkg.so
+ b48be000-b4900000 rw-p 00000000 00:00 0 
+ b4900000-b4921000 rw-p 00000000 00:00 0 
+ b4921000-b4a00000 ---p 00000000 00:00 0 
+ b4a00000-b4a03000 r-xp 00000000 b3:02 3947       /lib/arm-linux-gnueabihf/libuuid.so.1.3.0
+ b4a03000-b4a0a000 ---p 00003000 b3:02 3947       /lib/arm-linux-gnueabihf/libuuid.so.1.3.0
+ b4a0a000-b4a0b000 r--p 00002000 b3:02 3947       /lib/arm-linux-gnueabihf/libuuid.so.1.3.0
+ b4a0b000-b4a0c000 rw-p 00003000 b3:02 3947       /lib/arm-linux-gnueabihf/libuuid.so.1.3.0
+ b4a0c000-b4a15000 r-xp 00000000 b3:02 16329      /usr/lib/python2.7/dist-packages/apt_inst.so
+ b4a15000-b4a1c000 ---p 00009000 b3:02 16329      /usr/lib/python2.7/dist-packages/apt_inst.so
+ b4a1c000-b4a1d000 r--p 00008000 b3:02 16329      /usr/lib/python2.7/dist-packages/apt_inst.so
+ b4a1d000-b4a1e000 rw-p 00009000 b3:02 16329      /usr/lib/python2.7/dist-packages/apt_inst.so
+ b4a1e000-b4a5f000 rw-p 00000000 00:00 0 
+ b4a5f000-b4a67000 r-xp 00000000 b3:02 19192      /usr/lib/python2.7/lib-dynload/pyexpat.so
+ b4a67000-b4a6e000 ---p 00008000 b3:02 19192      /usr/lib/python2.7/lib-dynload/pyexpat.so
+ b4a6e000-b4a6f000 r--p 00007000 b3:02 19192      /usr/lib/python2.7/lib-dynload/pyexpat.so
+ b4a6f000-b4a70000 rw-p 00008000 b3:02 19192      /usr/lib/python2.7/lib-dynload/pyexpat.so
+ b4a70000-b4a80000 r-xp 00000000 b3:02 18135      /usr/lib/python2.7/dist-packages/_dbus_bindings.so
+ b4a80000-b4a87000 ---p 00010000 b3:02 18135      /usr/lib/python2.7/dist-packages/_dbus_bindings.so
+ b4a87000-b4a88000 r--p 0000f000 b3:02 18135      /usr/lib/python2.7/dist-packages/_dbus_bindings.so
+ b4a88000-b4a93000 rw-p 00010000 b3:02 18135      /usr/lib/python2.7/dist-packages/_dbus_bindings.so
+ b4a93000-b4a97000 r-xp 00000000 b3:02 20307      /usr/lib/arm-linux-gnueabihf/libogg.so.0.7.1
+ b4a97000-b4a9e000 ---p 00004000 b3:02 20307      /usr/lib/arm-linux-gnueabihf/libogg.so.0.7.1
+ b4a9e000-b4a9f000 r--p 00003000 b3:02 20307      /usr/lib/arm-linux-gnueabihf/libogg.so.0.7.1
+ b4a9f000-b4aa0000 rw-p 00004000 b3:02 20307      /usr/lib/arm-linux-gnueabihf/libogg.so.0.7.1
+ b4aa0000-b4ac1000 r-xp 00000000 b3:02 21672      /usr/lib/arm-linux-gnueabihf/libvorbis.so.0.4.5
+ b4ac1000-b4ac8000 ---p 00021000 b3:02 21672      /usr/lib/arm-linux-gnueabihf/libvorbis.so.0.4.5
+ b4ac8000-b4ac9000 r--p 00020000 b3:02 21672      /usr/lib/arm-linux-gnueabihf/libvorbis.so.0.4.5
+ b4ac9000-b4aca000 rw-p 00021000 b3:02 21672      /usr/lib/arm-linux-gnueabihf/libvorbis.so.0.4.5
+ b4aca000-b4acf000 r-xp 00000000 b3:02 21706      /usr/lib/arm-linux-gnueabihf/libltdl.so.7.3.0
+ b4acf000-b4ad6000 ---p 00005000 b3:02 21706      /usr/lib/arm-linux-gnueabihf/libltdl.so.7.3.0
+ b4ad6000-b4ad7000 r--p 00004000 b3:02 21706      /usr/lib/arm-linux-gnueabihf/libltdl.so.7.3.0
+ b4ad7000-b4ad8000 rw-p 00005000 b3:02 21706      /usr/lib/arm-linux-gnueabihf/libltdl.so.7.3.0
+ b4ad8000-b4ae2000 r-xp 00000000 b3:02 21235      /usr/lib/arm-linux-gnueabihf/libtdb.so.1.2.9
+ b4ae2000-b4ae9000 ---p 0000a000 b3:02 21235      /usr/lib/arm-linux-gnueabihf/libtdb.so.1.2.9
+ b4ae9000-b4aea000 r--p 00009000 b3:02 21235      /usr/lib/arm-linux-gnueabihf/libtdb.so.1.2.9
+ b4aea000-b4aeb000 rw-p 0000a000 b3:02 21235      /usr/lib/arm-linux-gnueabihf/libtdb.so.1.2.9
+ b4aeb000-b4af7000 r-xp 00000000 b3:02 21334      /usr/lib/arm-linux-gnueabihf/libcanberra.so.0.2.5
+ b4af7000-b4afe000 ---p 0000c000 b3:02 21334      /usr/lib/arm-linux-gnueabihf/libcanberra.so.0.2.5
+ b4afe000-b4aff000 r--p 0000b000 b3:02 21334      /usr/lib/arm-linux-gnueabihf/libcanberra.so.0.2.5
+ b4aff000-b4b00000 rw-p 0000c000 b3:02 21334      /usr/lib/arm-linux-gnueabihf/libcanberra.so.0.2.5
+ b4b00000-b4b01000 ---p 00000000 00:00 0 
+ b4b01000-b5300000 rw-p 00000000 00:00 0          [stack:7515]
+ b5300000-b5321000 rw-p 00000000 00:00 0 
+ b5321000-b5400000 ---p 00000000 00:00 0 
+ b5400000-b5403000 r--s 00000000 b3:02 12832      /var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le32d8.cache-3
+ b5403000-b5406000 r--s 00000000 b3:02 12834      /var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le32d8.cache-3
+ b5406000-b540b000 r-xp 00000000 b3:02 20685      /usr/lib/arm-linux-gnueabihf/libvorbisfile.so.3.3.4
+ b540b000-b5412000 ---p 00005000 b3:02 20685      /usr/lib/arm-linux-gnueabihf/libvorbisfile.so.3.3.4
+ b5412000-b5413000 r--p 00004000 b3:02 20685      /usr/lib/arm-linux-gnueabihf/libvorbisfile.so.3.3.4
+ b5413000-b5414000 rw-p 00005000 b3:02 20685      /usr/lib/arm-linux-gnueabihf/libvorbisfile.so.3.3.4
+ b5414000-b5417000 r-xp 00000000 b3:02 21743      /usr/lib/arm-linux-gnueabihf/libcanberra-gtk3.so.0.1.8
+ b5417000-b541e000 ---p 00003000 b3:02 21743      /usr/lib/arm-linux-gnueabihf/libcanberra-gtk3.so.0.1.8
+ b541e000-b541f000 r--p 00002000 b3:02 21743      /usr/lib/arm-linux-gnueabihf/libcanberra-gtk3.so.0.1.8
+ b541f000-b5420000 rw-p 00003000 b3:02 21743      /usr/lib/arm-linux-gnueabihf/libcanberra-gtk3.so.0.1.8
+ b5420000-b5424000 r--s 00000000 b3:02 12822      /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le32d8.cache-3
+ b5424000-b5426000 r-xp 00000000 b3:02 19232      /usr/lib/python2.7/lib-dynload/_heapq.so
+ b5426000-b542d000 ---p 00002000 b3:02 19232      /usr/lib/python2.7/lib-dynload/_heapq.so
+ b542d000-b542e000 r--p 00001000 b3:02 19232      /usr/lib/python2.7/lib-dynload/_heapq.so
+ b542e000-b5430000 rw-p 00002000 b3:02 19232      /usr/lib/python2.7/lib-dynload/_heapq.so
+ b5430000-b5434000 r-xp 00000000 b3:02 20106      /usr/lib/arm-linux-gnueabihf/gtk-3.0/modules/libcanberra-gtk3-module.so
+ b5434000-b543b000 ---p 00004000 b3:02 20106      /usr/lib/arm-linux-gnueabihf/gtk-3.0/modules/libcanberra-gtk3-module.so
+ b543b000-b543c000 r--p 00003000 b3:02 20106      /usr/lib/arm-linux-gnueabihf/gtk-3.0/modules/libcanberra-gtk3-module.so
+ b543c000-b543d000 rw-p 00004000 b3:02 20106      /usr/lib/arm-linux-gnueabihf/gtk-3.0/modules/libcanberra-gtk3-module.so
+ b543d000-b5458000 r--s 00000000 b3:02 22888      /usr/share/mime/mime.cache
+ b5458000-b5461000 r-xp 00000000 b3:02 13633      /usr/lib/gtk-3.0/3.0.0/theming-engines/libunico.so
+ b5461000-b5468000 ---p 00009000 b3:02 13633      /usr/lib/gtk-3.0/3.0.0/theming-engines/libunico.so
+ b5468000-b5469000 r--p 00008000 b3:02 13633      /usr/lib/gtk-3.0/3.0.0/theming-engines/libunico.so
+ b5469000-b546a000 rw-p 00009000 b3:02 13633      /usr/lib/gtk-3.0/3.0.0/theming-engines/libunico.so
+ b546a000-b546b000 ---p 00000000 00:00 0 
+ b546b000-b5c6a000 rw-p 00000000 00:00 0          [stack:7514]
+ b5c6a000-b5c72000 r-xp 00000000 b3:02 3879       /lib/arm-linux-gnueabihf/libnss_files-2.15.so
+ b5c72000-b5c79000 ---p 00008000 b3:02 3879       /lib/arm-linux-gnueabihf/libnss_files-2.15.so
+ b5c79000-b5c7a000 r--p 00007000 b3:02 3879       /lib/arm-linux-gnueabihf/libnss_files-2.15.so
+ b5c7a000-b5c7b000 rw-p 00008000 b3:02 3879       /lib/arm-linux-gnueabihf/libnss_files-2.15.so
+ b5c7b000-b5c82000 r-xp 00000000 b3:02 3824       /lib/arm-linux-gnueabihf/libnss_nis-2.15.so
+ b5c82000-b5c89000 ---p 00007000 b3:02 3824       /lib/arm-linux-gnueabihf/libnss_nis-2.15.so
+ b5c89000-b5c8a000 r--p 00006000 b3:02 3824       /lib/arm-linux-gnueabihf/libnss_nis-2.15.so
+ b5c8a000-b5c8b000 rw-p 00007000 b3:02 3824       /lib/arm-linux-gnueabihf/libnss_nis-2.15.so
+ b5c8b000-b5c98000 r-xp 00000000 b3:02 3799       /lib/arm-linux-gnueabihf/libnsl-2.15.so
+ b5c98000-b5c9f000 ---p 0000d000 b3:02 3799       /lib/arm-linux-gnueabihf/libnsl-2.15.so
+ b5c9f000-b5ca0000 r--p 0000c000 b3:02 3799       /lib/arm-linux-gnueabihf/libnsl-2.15.so
+ b5ca0000-b5ca1000 rw-p 0000d000 b3:02 3799       /lib/arm-linux-gnueabihf/libnsl-2.15.so
+ b5ca1000-b5ca3000 rw-p 00000000 00:00 0 
+ b5ca3000-b5ca8000 r-xp 00000000 b3:02 3780       /lib/arm-linux-gnueabihf/libnss_compat-2.15.so
+ b5ca8000-b5caf000 ---p 00005000 b3:02 3780       /lib/arm-linux-gnueabihf/libnss_compat-2.15.so
+ b5caf000-b5cb0000 r--p 00004000 b3:02 3780       /lib/arm-linux-gnueabihf/libnss_compat-2.15.so
+ b5cb0000-b5cb1000 rw-p 00005000 b3:02 3780       /lib/arm-linux-gnueabihf/libnss_compat-2.15.so
+ b5cb1000-b5d45000 r-xp 00000000 b3:02 20255      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.16
+ b5d45000-b5d4d000 ---p 00094000 b3:02 20255      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.16
+ b5d4d000-b5d50000 r--p 00094000 b3:02 20255      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.16
+ b5d50000-b5d52000 rw-p 00097000 b3:02 20255      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.16
+ b5d52000-b5d58000 rw-p 00000000 00:00 0 
+ b5d58000-b5d59000 r--s 00000000 b3:02 12825      /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le32d8.cache-3
+ b5d59000-b5d5d000 r--s 00000000 b3:02 12847      /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le32d8.cache-3
+ b5d5d000-b5d65000 r-xp 00000000 b3:02 3868       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+ b5d65000-b5d66000 r--p 00008000 b3:02 3868       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+ b5d66000-b5d67000 rw-p 00009000 b3:02 3868       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+ b5d67000-b5d7e000 r-xp 00000000 b3:02 21762      /usr/lib/arm-linux-gnueabihf/gio/modules/libgvfsdbus.so
+ b5d7e000-b5d85000 ---p 00017000 b3:02 21762      /usr/lib/arm-linux-gnueabihf/gio/modules/libgvfsdbus.so
+ b5d85000-b5d86000 r--p 00016000 b3:02 21762      /usr/lib/arm-linux-gnueabihf/gio/modules/libgvfsdbus.so
+ b5d86000-b5d87000 rw-p 00017000 b3:02 21762      /usr/lib/arm-linux-gnueabihf/gio/modules/libgvfsdbus.so
+ b5d87000-b5d94000 r-xp 00000000 b3:02 20269      /usr/lib/arm-linux-gnueabihf/gvfs/libgvfscommon.so
+ b5d94000-b5d9b000 ---p 0000d000 b3:02 20269      /usr/lib/arm-linux-gnueabihf/gvfs/libgvfscommon.so
+ b5d9b000-b5d9c000 r--p 0000c000 b3:02 20269      /usr/lib/arm-linux-gnueabihf/gvfs/libgvfscommon.so
+ b5d9c000-b5d9d000 rw-p 0000d000 b3:02 20269      /usr/lib/arm-linux-gnueabihf/gvfs/libgvfscommon.so
+ b5d9d000-b5dc4000 r-xp 00000000 b3:02 3852       /lib/arm-linux-gnueabihf/libdbus-1.so.3.5.8
+ b5dc4000-b5dcb000 ---p 00027000 b3:02 3852       /lib/arm-linux-gnueabihf/libdbus-1.so.3.5.8
+ b5dcb000-b5dcc000 r--p 00026000 b3:02 3852       /lib/arm-linux-gnueabihf/libdbus-1.so.3.5.8
+ b5dcc000-b5dcd000 rw-p 00027000 b3:02 3852       /lib/arm-linux-gnueabihf/libdbus-1.so.3.5.8
+ b5dcd000-b5dce000 r--s 00000000 b3:02 12827      /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le32d8.cache-3
+ b5dce000-b5dd1000 r--s 00000000 b3:02 138770     /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le32d8.cache-3
+ b5dd1000-b5dd4000 r-xp 00000000 b3:02 20288      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+ b5dd4000-b5ddb000 ---p 00003000 b3:02 20288      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+ b5ddb000-b5ddc000 r--p 00002000 b3:02 20288      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+ b5ddc000-b5ddd000 rw-p 00003000 b3:02 20288      /usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+ b5ddd000-b5de6000 r-xp 00000000 b3:02 21768      /usr/lib/arm-linux-gnueabihf/gio/modules/libgioremote-volume-monitor.so
+ b5de6000-b5ded000 ---p 00009000 b3:02 21768      /usr/lib/arm-linux-gnueabihf/gio/modules/libgioremote-volume-monitor.so
+ b5ded000-b5dee000 r--p 00008000 b3:02 21768      /usr/lib/arm-linux-gnueabihf/gio/modules/libgioremote-volume-monitor.so
+ b5dee000-b5def000 rw-p 00009000 b3:02 21768      /usr/lib/arm-linux-gnueabihf/gio/modules/libgioremote-volume-monitor.so
+ b5def000-b5df4000 r-xp 00000000 b3:02 21763      /usr/lib/arm-linux-gnueabihf/gio/modules/libdconfsettings.so
+ b5df4000-b5dfb000 ---p 00005000 b3:02 21763      /usr/lib/arm-linux-gnueabihf/gio/modules/libdconfsettings.so
+ b5dfb000-b5dfc000 r--p 00004000 b3:02 21763      /usr/lib/arm-linux-gnueabihf/gio/modules/libdconfsettings.so
+ b5dfc000-b5dfd000 rw-p 00005000 b3:02 21763      /usr/lib/arm-linux-gnueabihf/gio/modules/libdconfsettings.so
+ b5dfd000-b5e21000 r--p 00000000 b3:02 43078      /usr/share/glib-2.0/schemas/gschemas.compiled
+ b5e21000-b5e2b000 r-xp 00000000 b3:02 19975      /usr/lib/liboverlay-scrollbar3-0.2.so.0.0.16
+ b5e2b000-b5e32000 ---p 0000a000 b3:02 19975      /usr/lib/liboverlay-scrollbar3-0.2.so.0.0.16
+ b5e32000-b5e33000 r--p 00009000 b3:02 19975      /usr/lib/liboverlay-scrollbar3-0.2.so.0.0.16
+ b5e33000-b5e34000 rw-p 0000a000 b3:02 19975      /usr/lib/liboverlay-scrollbar3-0.2.so.0.0.16
+ b5e34000-b5ef7000 rw-p 00000000 00:00 0 
+ b5f57000-b5f99000 rw-p 00000000 00:00 0 
+ b5f99000-b5f9c000 r-xp 00000000 b3:02 20071      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+ b5f9c000-b5fa3000 ---p 00003000 b3:02 20071      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+ b5fa3000-b5fa4000 r--p 00002000 b3:02 20071      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+ b5fa4000-b5fa5000 rw-p 00003000 b3:02 20071      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+ b5fa5000-b5fa7000 r-xp 00000000 b3:02 21151      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+ b5fa7000-b5fae000 ---p 00002000 b3:02 21151      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+ b5fae000-b5faf000 r--p 00001000 b3:02 21151      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+ b5faf000-b5fb0000 rw-p 00002000 b3:02 21151      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+ b5fb0000-b5fc6000 r-xp 00000000 b3:02 3838       /lib/arm-linux-gnueabihf/libexpat.so.1.5.2
+ b5fc6000-b5fcd000 ---p 00016000 b3:02 3838       /lib/arm-linux-gnueabihf/libexpat.so.1.5.2
+ b5fcd000-b5fcf000 r--p 00015000 b3:02 3838       /lib/arm-linux-gnueabihf/libexpat.so.1.5.2
+ b5fcf000-b5fd0000 rw-p 00017000 b3:02 3838       /lib/arm-linux-gnueabihf/libexpat.so.1.5.2
+ b5fd0000-b5fd5000 r-xp 00000000 b3:02 21075      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+ b5fd5000-b5fdc000 ---p 00005000 b3:02 21075      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+ b5fdc000-b5fdd000 r--p 00004000 b3:02 21075      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+ b5fdd000-b5fde000 rw-p 00005000 b3:02 21075      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+ b5fde000-b5fe3000 r-xp 00000000 b3:02 21162      /usr/lib/arm-linux-gnueabihf/libxcb-render.so.0.0.0
+ b5fe3000-b5fea000 ---p 00005000 b3:02 21162      /usr/lib/arm-linux-gnueabihf/libxcb-render.so.0.0.0
+ b5fea000-b5feb000 r--p 00004000 b3:02 21162      /usr/lib/arm-linux-gnueabihf/libxcb-render.so.0.0.0
+ b5feb000-b5fec000 rw-p 00005000 b3:02 21162      /usr/lib/arm-linux-gnueabihf/libxcb-render.so.0.0.0
+ b5fec000-b5fed000 r-xp 00000000 b3:02 21076      /usr/lib/arm-linux-gnueabihf/libxcb-shm.so.0.0.0
+ b5fed000-b5ff4000 ---p 00001000 b3:02 21076      /usr/lib/arm-linux-gnueabihf/libxcb-shm.so.0.0.0
+ b5ff4000-b5ff5000 r--p 00000000 b3:02 21076      /usr/lib/arm-linux-gnueabihf/libxcb-shm.so.0.0.0
+ b5ff5000-b5ff6000 rw-p 00001000 b3:02 21076      /usr/lib/arm-linux-gnueabihf/libxcb-shm.so.0.0.0
+ b5ff6000-b600e000 r-xp 00000000 b3:02 3808       /lib/arm-linux-gnueabihf/libpng12.so.0.46.0
+ b600e000-b6015000 ---p 00018000 b3:02 3808       /lib/arm-linux-gnueabihf/libpng12.so.0.46.0
+ b6015000-b6016000 r--p 00017000 b3:02 3808       /lib/arm-linux-gnueabihf/libpng12.so.0.46.0
+ b6016000-b6017000 rw-p 00018000 b3:02 3808       /lib/arm-linux-gnueabihf/libpng12.so.0.46.0
+ b6017000-b607e000 r-xp 00000000 b3:02 20688      /usr/lib/arm-linux-gnueabihf/libpixman-1.so.0.24.4
+ b607e000-b6085000 ---p 00067000 b3:02 20688      /usr/lib/arm-linux-gnueabihf/libpixman-1.so.0.24.4
+ b6085000-b608a000 r--p 00066000 b3:02 20688      /usr/lib/arm-linux-gnueabihf/libpixman-1.so.0.24.4
+ b608a000-b608b000 rw-p 0006b000 b3:02 20688      /usr/lib/arm-linux-gnueabihf/libpixman-1.so.0.24.4
+ b608b000-b609b000 r-xp 00000000 b3:02 20277      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+ b609b000-b609c000 r--p 00010000 b3:02 20277      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+ b609c000-b609d000 rw-p 00011000 b3:02 20277      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+ b609d000-b60f2000 r-xp 00000000 b3:02 21276      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.0
+ b60f2000-b60fa000 ---p 00055000 b3:02 21276      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.0
+ b60fa000-b60fd000 r--p 00055000 b3:02 21276      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.0
+ b60fd000-b60fe000 rw-p 00058000 b3:02 21276      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.0
+ b60fe000-b60ff000 r-xp 00000000 b3:02 21052      /usr/lib/arm-linux-gnueabihf/libXdamage.so.1.1.0
+ b60ff000-b6106000 ---p 00001000 b3:02 21052      /usr/lib/arm-linux-gnueabihf/libXdamage.so.1.1.0
+ b6106000-b6107000 r--p 00000000 b3:02 21052      /usr/lib/arm-linux-gnueabihf/libXdamage.so.1.1.0
+ b6107000-b6108000 rw-p 00001000 b3:02 21052      /usr/lib/arm-linux-gnueabihf/libXdamage.so.1.1.0
+ b6108000-b6109000 r-xp 00000000 b3:02 20955      /usr/lib/arm-linux-gnueabihf/libXcomposite.so.1.0.0
+ b6109000-b6110000 ---p 00001000 b3:02 20955      /usr/lib/arm-linux-gnueabihf/libXcomposite.so.1.0.0
+ b6110000-b6111000 r--p 00000000 b3:02 20955      /usr/lib/arm-linux-gnueabihf/libXcomposite.so.1.0.0
+ b6111000-b6112000 rw-p 00001000 b3:02 20955      /usr/lib/arm-linux-gnueabihf/libXcomposite.so.1.0.0
+ b6112000-b6118000 r-xp 00000000 b3:02 20749      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+ b6118000-b611f000 ---p 00006000 b3:02 20749      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+ b611f000-b6120000 r--p 00005000 b3:02 20749      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+ b6120000-b6121000 rw-p 00006000 b3:02 20749      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+ b6121000-b6125000 r-xp 00000000 b3:02 21077      /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+ b6125000-b612d000 ---p 00004000 b3:02 21077      /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+ b612d000-b612e000 r--p 00004000 b3:02 21077      /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+ b612e000-b612f000 rw-p 00005000 b3:02 21077      /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+ b612f000-b6130000 r-xp 00000000 b3:02 20703      /usr/lib/arm-linux-gnueabihf/libXinerama.so.1.0.0
+ b6130000-b6137000 ---p 00001000 b3:02 20703      /usr/lib/arm-linux-gnueabihf/libXinerama.so.1.0.0
+ b6137000-b6138000 r--p 00000000 b3:02 20703      /usr/lib/arm-linux-gnueabihf/libXinerama.so.1.0.0
+ b6138000-b6139000 rw-p 00001000 b3:02 20703      /usr/lib/arm-linux-gnueabihf/libXinerama.so.1.0.0
+ b6139000-b6142000 r-xp 00000000 b3:02 21231      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+ b6142000-b6149000 ---p 00009000 b3:02 21231      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+ b6149000-b614a000 r--p 00008000 b3:02 21231      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+ b614a000-b614b000 rw-p 00009000 b3:02 21231      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+ b614b000-b616c000 r-xp 00000000 b3:02 21236      /usr/lib/arm-linux-gnueabihf/libfontconfig.so.1.4.4
+ b616c000-b6174000 ---p 00021000 b3:02 21236      /usr/lib/arm-linux-gnueabihf/libfontconfig.so.1.4.4
+ b6174000-b6175000 r--p 00021000 b3:02 21236      /usr/lib/arm-linux-gnueabihf/libfontconfig.so.1.4.4
+ b6175000-b6176000 rw-p 00022000 b3:02 21236      /usr/lib/arm-linux-gnueabihf/libfontconfig.so.1.4.4
+ b6176000-b61a8000 r-xp 00000000 b3:02 20332      /usr/lib/arm-linux-gnueabihf/libpango-1.0.so.0.3000.0
+ b61a8000-b61af000 ---p 00032000 b3:02 20332      /usr/lib/arm-linux-gnueabihf/libpango-1.0.so.0.3000.0
+ b61af000-b61b0000 r--p 00031000 b3:02 20332      /usr/lib/arm-linux-gnueabihf/libpango-1.0.so.0.3000.0
+ b61b0000-b61b1000 rw-p 00032000 b3:02 20332      /usr/lib/arm-linux-gnueabihf/libpango-1.0.so.0.3000.0
+ b61b1000-b61c9000 r-xp 00000000 b3:02 20276      /usr/lib/arm-linux-gnueabihf/libpangoft2-1.0.so.0.3000.0
+ b61c9000-b61d0000 ---p 00018000 b3:02 20276      /usr/lib/arm-linux-gnueabihf/libpangoft2-1.0.so.0.3000.0
+ b61d0000-b61d1000 r--p 00017000 b3:02 20276      /usr/lib/arm-linux-gnueabihf/libpangoft2-1.0.so.0.3000.0
+ b61d1000-b61d2000 rw-p 00018000 b3:02 20276      /usr/lib/arm-linux-gnueabihf/libpangoft2-1.0.so.0.3000.0
+ b61d2000-b61e6000 r-xp 00000000 b3:02 20741      /usr/lib/arm-linux-gnueabihf/libgdk_pixbuf-2.0.so.0.2600.1
+ b61e6000-b61ed000 ---p 00014000 b3:02 20741      /usr/lib/arm-linux-gnueabihf/libgdk_pixbuf-2.0.so.0.2600.1
+ b61ed000-b61ee000 r--p 00013000 b3:02 20741      /usr/lib/arm-linux-gnueabihf/libgdk_pixbuf-2.0.so.0.2600.1
+ b61ee000-b61ef000 rw-p 00014000 b3:02 20741      /usr/lib/arm-linux-gnueabihf/libgdk_pixbuf-2.0.so.0.2600.1
+ b61ef000-b625c000 r-xp 00000000 b3:02 21757      /usr/lib/arm-linux-gnueabihf/libcairo.so.2.11000.2
+ b625c000-b6264000 ---p 0006d000 b3:02 21757      /usr/lib/arm-linux-gnueabihf/libcairo.so.2.11000.2
+ b6264000-b6265000 r--p 0006d000 b3:02 21757      /usr/lib/arm-linux-gnueabihf/libcairo.so.2.11000.2
+ b6265000-b6266000 rw-p 0006e000 b3:02 21757      /usr/lib/arm-linux-gnueabihf/libcairo.so.2.11000.2
+ b6266000-b6268000 rw-p 00000000 00:00 0 
+ b6268000-b626c000 r-xp 00000000 b3:02 20169      /usr/lib/arm-linux-gnueabihf/libcairo-gobject.so.2.11000.2
+ b626c000-b6274000 ---p 00004000 b3:02 20169      /usr/lib/arm-linux-gnueabihf/libcairo-gobject.so.2.11000.2
+ b6274000-b6275000 r--p 00004000 b3:02 20169      /usr/lib/arm-linux-gnueabihf/libcairo-gobject.so.2.11000.2
+ b6275000-b6276000 rw-p 00005000 b3:02 20169      /usr/lib/arm-linux-gnueabihf/libcairo-gobject.so.2.11000.2
+ b6276000-b6289000 r-xp 00000000 b3:02 21329      /usr/lib/arm-linux-gnueabihf/libatk-1.0.so.0.20409.1
+ b6289000-b6291000 ---p 00013000 b3:02 21329      /usr/lib/arm-linux-gnueabihf/libatk-1.0.so.0.20409.1
+ b6291000-b6292000 r--p 00013000 b3:02 21329      /usr/lib/arm-linux-gnueabihf/libatk-1.0.so.0.20409.1
+ b6292000-b6293000 rw-p 00014000 b3:02 21329      /usr/lib/arm-linux-gnueabihf/libatk-1.0.so.0.20409.1
+ b6293000-b629b000 r-xp 00000000 b3:02 21748      /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+ b629b000-b62a2000 ---p 00008000 b3:02 21748      /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+ b62a2000-b62a3000 r--p 00007000 b3:02 21748      /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+ b62a3000-b62a4000 rw-p 00008000 b3:02 21748      /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+ b62a4000-b637d000 r-xp 00000000 b3:02 20273      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+ b637d000-b6385000 ---p 000d9000 b3:02 20273      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+ b6385000-b6386000 r--p 000d9000 b3:02 20273      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+ b6386000-b6388000 rw-p 000da000 b3:02 20273      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+ b6388000-b6389000 rw-p 00000000 00:00 0 
+ b6389000-b6390000 r-xp 00000000 b3:02 20647      /usr/lib/arm-linux-gnueabihf/libpangocairo-1.0.so.0.3000.0
+ b6390000-b6397000 ---p 00007000 b3:02 20647      /usr/lib/arm-linux-gnueabihf/libpangocairo-1.0.so.0.3000.0
+ b6397000-b6398000 r--p 00006000 b3:02 20647      /usr/lib/arm-linux-gnueabihf/libpangocairo-1.0.so.0.3000.0
+ b6398000-b6399000 rw-p 00007000 b3:02 20647      /usr/lib/arm-linux-gnueabihf/libpangocairo-1.0.so.0.3000.0
+ b6399000-b63e0000 r-xp 00000000 b3:02 20214      /usr/lib/arm-linux-gnueabihf/libgdk-3.so.0.400.1
+ b63e0000-b63e8000 ---p 00047000 b3:02 20214      /usr/lib/arm-linux-gnueabihf/libgdk-3.so.0.400.1
+ b63e8000-b63ea000 r--p 00047000 b3:02 20214      /usr/lib/arm-linux-gnueabihf/libgdk-3.so.0.400.1
+ b63ea000-b63eb000 rw-p 00049000 b3:02 20214      /usr/lib/arm-linux-gnueabihf/libgdk-3.so.0.400.1
+ b63eb000-b66c6000 r-xp 00000000 b3:02 20164      /usr/lib/arm-linux-gnueabihf/libgtk-3.so.0.400.1
+ b66c6000-b66ce000 ---p 002db000 b3:02 20164      /usr/lib/arm-linux-gnueabihf/libgtk-3.so.0.400.1
+ b66ce000-b66d1000 r--p 002db000 b3:02 20164      /usr/lib/arm-linux-gnueabihf/libgtk-3.so.0.400.1
+ b66d1000-b66d4000 rw-p 002de000 b3:02 20164      /usr/lib/arm-linux-gnueabihf/libgtk-3.so.0.400.1
+ b66d4000-b66d5000 rw-p 00000000 00:00 0 
+ b66d5000-b66d7000 r--s 00000000 b3:02 138769     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d8.cache-3
+ b66d7000-b66dc000 r--p 00000000 b3:02 13680      /usr/lib/girepository-1.0/Vte-2.90.typelib
+ b66dc000-b66dd000 rw-p 00000000 00:00 0 
+ b66dd000-b66de000 r--p 00000000 b3:02 13697      /usr/lib/girepository-1.0/JSCore-3.0.typelib
+ b66de000-b66e5000 r--s 00000000 b3:02 21551      /usr/lib/arm-linux-gnueabihf/gconv/gconv-modules.cache
+ b66e5000-b66f5000 r--p 00000000 b3:02 13702      /usr/lib/girepository-1.0/Atk-1.0.typelib
+ b66f5000-b6729000 r--p 00000000 b3:02 13705      /usr/lib/girepository-1.0/Gdk-3.0.typelib
+ b6729000-b67b3000 r--p 00000000 b3:02 13656      /usr/lib/girepository-1.0/Gtk-3.0.typelib
+ b67b3000-b67b4000 rw-p 00000000 00:00 0 
+ b67b4000-b67b5000 r--p 00000000 b3:02 52         /root/.config/dconf/user
+ b67b5000-b67b8000 r-xp 00000000 b3:02 21202      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+ b67b8000-b67bf000 ---p 00003000 b3:02 21202      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+ b67bf000-b67c0000 r--p 00002000 b3:02 21202      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+ b67c0000-b67c1000 rw-p 00003000 b3:02 21202      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+ b67c1000-b67c5000 r--p 00000000 b3:02 13645      /usr/lib/girepository-1.0/GdkPixbuf-2.0.typelib
+ b67c5000-b680d000 r--p 00000000 b3:02 13683      /usr/lib/girepository-1.0/Gio-2.0.typelib
+ b680d000-b6835000 r--p 00000000 b3:02 13691      /usr/lib/girepository-1.0/GLib-2.0.typelib
+ b6835000-b6842000 r--p 00000000 b3:02 13661      /usr/lib/girepository-1.0/GObject-2.0.typelib
+ b6842000-b6883000 rw-p 00000000 00:00 0 
+ b6883000-b6890000 r-xp 00000000 b3:02 19211      /usr/lib/python2.7/lib-dynload/datetime.so
+ b6890000-b6897000 ---p 0000d000 b3:02 19211      /usr/lib/python2.7/lib-dynload/datetime.so
+ b6897000-b6898000 r--p 0000c000 b3:02 19211      /usr/lib/python2.7/lib-dynload/datetime.so
+ b6898000-b689b000 rw-p 0000d000 b3:02 19211      /usr/lib/python2.7/lib-dynload/datetime.so
+ b689b000-b68af000 r-xp 00000000 b3:02 16316      /usr/lib/python2.7/dist-packages/gi/_gobject/_gobject.so
+ b68af000-b68b6000 ---p 00014000 b3:02 16316      /usr/lib/python2.7/dist-packages/gi/_gobject/_gobject.so
+ b68b6000-b68b7000 r--p 00013000 b3:02 16316      /usr/lib/python2.7/dist-packages/gi/_gobject/_gobject.so
+ b68b7000-b68b9000 rw-p 00014000 b3:02 16316      /usr/lib/python2.7/dist-packages/gi/_gobject/_gobject.so
+ b68b9000-b68c3000 r-xp 00000000 b3:02 16313      /usr/lib/python2.7/dist-packages/gi/_glib/_glib.so
+ b68c3000-b68cb000 ---p 0000a000 b3:02 16313      /usr/lib/python2.7/dist-packages/gi/_glib/_glib.so
+ b68cb000-b68cc000 r--p 0000a000 b3:02 16313      /usr/lib/python2.7/dist-packages/gi/_glib/_glib.so
+ b68cc000-b68ce000 rw-p 0000b000 b3:02 16313      /usr/lib/python2.7/dist-packages/gi/_glib/_glib.so
+ b68ce000-b68db000 r-xp 00000000 b3:02 3779       /lib/arm-linux-gnueabihf/libresolv-2.15.so
+ b68db000-b68e2000 ---p 0000d000 b3:02 3779       /lib/arm-linux-gnueabihf/libresolv-2.15.so
+ b68e2000-b68e3000 r--p 0000c000 b3:02 3779       /lib/arm-linux-gnueabihf/libresolv-2.15.so
+ b68e3000-b68e4000 rw-p 0000d000 b3:02 3779       /lib/arm-linux-gnueabihf/libresolv-2.15.so
+ b68e4000-b68e6000 rw-p 00000000 00:00 0 
+ b68e6000-b68f8000 r-xp 00000000 b3:02 3837       /lib/arm-linux-gnueabihf/libselinux.so.1
+ b68f8000-b68ff000 ---p 00012000 b3:02 3837       /lib/arm-linux-gnueabihf/libselinux.so.1
+ b68ff000-b6900000 r--p 00011000 b3:02 3837       /lib/arm-linux-gnueabihf/libselinux.so.1
+ b6900000-b6901000 rw-p 00012000 b3:02 3837       /lib/arm-linux-gnueabihf/libselinux.so.1
+ b6901000-b6906000 r-xp 00000000 b3:02 3883       /lib/arm-linux-gnueabihf/librt-2.15.so
+ b6906000-b690d000 ---p 00005000 b3:02 3883       /lib/arm-linux-gnueabihf/librt-2.15.so
+ b690d000-b690e000 r--p 00004000 b3:02 3883       /lib/arm-linux-gnueabihf/librt-2.15.so
+ b690e000-b690f000 rw-p 00005000 b3:02 3883       /lib/arm-linux-gnueabihf/librt-2.15.so
+ b690f000-b693c000 r-xp 00000000 b3:02 3807       /lib/arm-linux-gnueabihf/libpcre.so.3.12.1
+ b693c000-b6943000 ---p 0002d000 b3:02 3807       /lib/arm-linux-gnueabihf/libpcre.so.3.12.1
+ b6943000-b6944000 r--p 0002c000 b3:02 3807       /lib/arm-linux-gnueabihf/libpcre.so.3.12.1
+ b6944000-b6945000 rw-p 0002d000 b3:02 3807       /lib/arm-linux-gnueabihf/libpcre.so.3.12.1
+ b6945000-b694a000 r-xp 00000000 b3:02 21713      /usr/lib/arm-linux-gnueabihf/libffi.so.6.0.0
+ b694a000-b6951000 ---p 00005000 b3:02 21713      /usr/lib/arm-linux-gnueabihf/libffi.so.6.0.0
+ b6951000-b6952000 r--p 00004000 b3:02 21713      /usr/lib/arm-linux-gnueabihf/libffi.so.6.0.0
+ b6952000-b6953000 rw-p 00005000 b3:02 21713      /usr/lib/arm-linux-gnueabihf/libffi.so.6.0.0
+ b6953000-b6a1b000 r-xp 00000000 b3:02 20984      /usr/lib/arm-linux-gnueabihf/libgio-2.0.so.0.3200.1
+ b6a1b000-b6a1d000 r--p 000c8000 b3:02 20984      /usr/lib/arm-linux-gnueabihf/libgio-2.0.so.0.3200.1
+ b6a1d000-b6a1e000 rw-p 000ca000 b3:02 20984      /usr/lib/arm-linux-gnueabihf/libgio-2.0.so.0.3200.1
+ b6a1e000-b6a1f000 rw-p 00000000 00:00 0 
+ b6a1f000-b6a21000 r-xp 00000000 b3:02 20280      /usr/lib/arm-linux-gnueabihf/libgmodule-2.0.so.0.3200.1
+ b6a21000-b6a28000 ---p 00002000 b3:02 20280      /usr/lib/arm-linux-gnueabihf/libgmodule-2.0.so.0.3200.1
+ b6a28000-b6a29000 r--p 00001000 b3:02 20280      /usr/lib/arm-linux-gnueabihf/libgmodule-2.0.so.0.3200.1
+ b6a29000-b6a2a000 rw-p 00002000 b3:02 20280      /usr/lib/arm-linux-gnueabihf/libgmodule-2.0.so.0.3200.1
+ b6a2a000-b6a2c000 r-xp 00000000 b3:02 15710      /usr/lib/libpyglib-gi-2.0-python2.7.so.0.0.0
+ b6a2c000-b6a34000 ---p 00002000 b3:02 15710      /usr/lib/libpyglib-gi-2.0-python2.7.so.0.0.0
+ b6a34000-b6a35000 r--p 00002000 b3:02 15710      /usr/lib/libpyglib-gi-2.0-python2.7.so.0.0.0
+ b6a35000-b6a36000 rw-p 00003000 b3:02 15710      /usr/lib/libpyglib-gi-2.0-python2.7.so.0.0.0
+ b6a36000-b6ae7000 r-xp 00000000 b3:02 3889       /lib/arm-linux-gnueabihf/libglib-2.0.so.0.3200.1
+ b6ae7000-b6aee000 ---p 000b1000 b3:02 3889       /lib/arm-linux-gnueabihf/libglib-2.0.so.0.3200.1
+ b6aee000-b6aef000 r--p 000b0000 b3:02 3889       /lib/arm-linux-gnueabihf/libglib-2.0.so.0.3200.1
+ b6aef000-b6af0000 rw-p 000b1000 b3:02 3889       /lib/arm-linux-gnueabihf/libglib-2.0.so.0.3200.1
+ b6af0000-b6b23000 r-xp 00000000 b3:02 21078      /usr/lib/arm-linux-gnueabihf/libgobject-2.0.so.0.3200.1
+ b6b23000-b6b2a000 ---p 00033000 b3:02 21078      /usr/lib/arm-linux-gnueabihf/libgobject-2.0.so.0.3200.1
+ b6b2a000-b6b2b000 r--p 00032000 b3:02 21078      /usr/lib/arm-linux-gnueabihf/libgobject-2.0.so.0.3200.1
+ b6b2b000-b6b2c000 rw-p 00033000 b3:02 21078      /usr/lib/arm-linux-gnueabihf/libgobject-2.0.so.0.3200.1
+ b6b2c000-b6b4b000 r-xp 00000000 b3:02 14320      /usr/lib/libgirepository-1.0.so.1.0.0
+ b6b4b000-b6b52000 ---p 0001f000 b3:02 14320      /usr/lib/libgirepository-1.0.so.1.0.0
+ b6b52000-b6b53000 r--p 0001e000 b3:02 14320      /usr/lib/libgirepository-1.0.so.1.0.0
+ b6b53000-b6b54000 rw-p 0001f000 b3:02 14320      /usr/lib/libgirepository-1.0.so.1.0.0
+ b6b54000-b6b67000 r-xp 00000000 b3:02 16302      /usr/lib/python2.7/dist-packages/gi/_gi.so
+ b6b67000-b6b6e000 ---p 00013000 b3:02 16302      /usr/lib/python2.7/dist-packages/gi/_gi.so
+ b6b6e000-b6b6f000 r--p 00012000 b3:02 16302      /usr/lib/python2.7/dist-packages/gi/_gi.so
+ b6b6f000-b6b71000 rw-p 00013000 b3:02 16302      /usr/lib/python2.7/dist-packages/gi/_gi.so
+ b6b71000-b6c75000 rw-p 00000000 00:00 0 
+ b6c75000-b6c7d000 r-xp 00000000 b3:02 3890       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+ b6c7d000-b6c84000 ---p 00008000 b3:02 3890       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+ b6c84000-b6c85000 r--p 00007000 b3:02 3890       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+ b6c85000-b6c86000 rw-p 00008000 b3:02 3890       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+ b6c86000-b6d5a000 r-xp 00000000 b3:02 3784       /lib/arm-linux-gnueabihf/libc-2.15.so
+ b6d5a000-b6d62000 ---p 000d4000 b3:02 3784       /lib/arm-linux-gnueabihf/libc-2.15.so
+ b6d62000-b6d64000 r--p 000d4000 b3:02 3784       /lib/arm-linux-gnueabihf/libc-2.15.so
+ b6d64000-b6d65000 rw-p 000d6000 b3:02 3784       /lib/arm-linux-gnueabihf/libc-2.15.so
+ b6d65000-b6d68000 rw-p 00000000 00:00 0 
+ b6d68000-b6dc9000 r-xp 00000000 b3:02 3862       /lib/arm-linux-gnueabihf/libm-2.15.so
+ b6dc9000-b6dd0000 ---p 00061000 b3:02 3862       /lib/arm-linux-gnueabihf/libm-2.15.so
+ b6dd0000-b6dd1000 r--p 00060000 b3:02 3862       /lib/arm-linux-gnueabihf/libm-2.15.so
+ b6dd1000-b6dd2000 rw-p 00061000 b3:02 3862       /lib/arm-linux-gnueabihf/libm-2.15.so
+ b6dd2000-b6de1000 r-xp 00000000 b3:02 3783       /lib/arm-linux-gnueabihf/libz.so.1.2.3.4
+ b6de1000-b6de8000 ---p 0000f000 b3:02 3783       /lib/arm-linux-gnueabihf/libz.so.1.2.3.4
+ b6de8000-b6de9000 r--p 0000e000 b3:02 3783       /lib/arm-linux-gnueabihf/libz.so.1.2.3.4
+ b6de9000-b6dea000 rw-p 0000f000 b3:02 3783       /lib/arm-linux-gnueabihf/libz.so.1.2.3.4
+ b6dea000-b6ede000 r-xp 00000000 b3:02 3834       /lib/arm-linux-gnueabihf/libcrypto.so.1.0.0
+ b6ede000-b6ee6000 ---p 000f4000 b3:02 3834       /lib/arm-linux-gnueabihf/libcrypto.so.1.0.0
+ b6ee6000-b6ef3000 r--p 000f4000 b3:02 3834       /lib/arm-linux-gnueabihf/libcrypto.so.1.0.0
+ b6ef3000-b6efa000 rw-p 00101000 b3:02 3834       /lib/arm-linux-gnueabihf/libcrypto.so.1.0.0
+ b6efa000-b6efd000 rw-p 00000000 00:00 0 
+ b6efd000-b6f2d000 r-xp 00000000 b3:02 3835       /lib/arm-linux-gnueabihf/libssl.so.1.0.0
+ b6f2d000-b6f34000 ---p 00030000 b3:02 3835       /lib/arm-linux-gnueabihf/libssl.so.1.0.0
+ b6f34000-b6f36000 r--p 0002f000 b3:02 3835       /lib/arm-linux-gnueabihf/libssl.so.1.0.0
+ b6f36000-b6f3a000 rw-p 00031000 b3:02 3835       /lib/arm-linux-gnueabihf/libssl.so.1.0.0
+ b6f3a000-b6f3c000 r-xp 00000000 b3:02 3869       /lib/arm-linux-gnueabihf/libutil-2.15.so
+ b6f3c000-b6f43000 ---p 00002000 b3:02 3869       /lib/arm-linux-gnueabihf/libutil-2.15.so
+ b6f43000-b6f44000 r--p 00001000 b3:02 3869       /lib/arm-linux-gnueabihf/libutil-2.15.so
+ b6f44000-b6f45000 rw-p 00002000 b3:02 3869       /lib/arm-linux-gnueabihf/libutil-2.15.so
+ b6f45000-b6f47000 r-xp 00000000 b3:02 3893       /lib/arm-linux-gnueabihf/libdl-2.15.so
+ b6f47000-b6f4e000 ---p 00002000 b3:02 3893       /lib/arm-linux-gnueabihf/libdl-2.15.so
+ b6f4e000-b6f4f000 r--p 00001000 b3:02 3893       /lib/arm-linux-gnueabihf/libdl-2.15.so
+ b6f4f000-b6f50000 rw-p 00002000 b3:02 3893       /lib/arm-linux-gnueabihf/libdl-2.15.so
+ b6f50000-b6f60000 r-xp 00000000 b3:02 3774       /lib/arm-linux-gnueabihf/libpthread-2.15.so
+ b6f60000-b6f67000 ---p 00010000 b3:02 3774       /lib/arm-linux-gnueabihf/libpthread-2.15.so
+ b6f67000-b6f68000 r--p 0000f000 b3:02 3774       /lib/arm-linux-gnueabihf/libpthread-2.15.so
+ b6f68000-b6f69000 rw-p 00010000 b3:02 3774       /lib/arm-linux-gnueabihf/libpthread-2.15.so
+ b6f69000-b6f6b000 rw-p 00000000 00:00 0 
+ b6f6b000-b6f6c000 r--s 00000000 b3:02 12873      /root/.cache/dconf/user
+ b6f6c000-b6f6d000 r--p 00000000 b3:02 13685      /usr/lib/girepository-1.0/GModule-2.0.typelib
+ b6f6d000-b6f7a000 r--p 00000000 b3:02 13678      /usr/lib/girepository-1.0/Pango-1.0.typelib
+ b6f7a000-b6f7b000 r--p 00000000 b3:02 13654      /usr/lib/girepository-1.0/cairo-1.0.typelib
+ b6f7b000-b6f92000 r-xp 00000000 b3:02 3798       /lib/arm-linux-gnueabihf/ld-2.15.so
+ b6f92000-b6f93000 r--p 00000000 b3:02 13641      /usr/lib/girepository-1.0/xlib-2.0.typelib
+ b6f93000-b6f98000 rw-p 00000000 00:00 0 
+ b6f98000-b6f99000 r-xp 00000000 00:00 0          [sigpage]
+ b6f99000-b6f9a000 r--p 00016000 b3:02 3798       /lib/arm-linux-gnueabihf/ld-2.15.so
+ b6f9a000-b6f9b000 rw-p 00017000 b3:02 3798       /lib/arm-linux-gnueabihf/ld-2.15.so
+ befd2000-beff7000 rw-p 00000000 00:00 0          [stack]
+ ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+ProcStatus:
+ Name:	software-center
+ State:	R (running)
+ Tgid:	7511
+ Pid:	7511
+ PPid:	1
+ TracerPid:	0
+ Uid:	0	0	0	0
+ Gid:	0	0	0	0
+ FDSize:	256
+ Groups:	0 
+ VmPeak:	  177784 kB
+ VmSize:	  177652 kB
+ VmLck:	       0 kB
+ VmPin:	       0 kB
+ VmHWM:	   68012 kB
+ VmRSS:	   67992 kB
+ VmData:	   89696 kB
+ VmStk:	     152 kB
+ VmExe:	    1772 kB
+ VmLib:	   56096 kB
+ VmPTE:	     124 kB
+ VmSwap:	       0 kB
+ Threads:	7
+ SigQ:	0/3996
+ SigPnd:	0000000000000000
+ ShdPnd:	0000000000000000
+ SigBlk:	0000000000000000
+ SigIgn:	0000000001001000
+ SigCgt:	0000000180010002
+ CapInh:	0000000000000000
+ CapPrm:	0000001fffffffff
+ CapEff:	0000001fffffffff
+ CapBnd:	0000001fffffffff
+ Cpus_allowed:	3
+ Cpus_allowed_list:	0-1
+ Mems_allowed:	1
+ Mems_allowed_list:	0
+ voluntary_ctxt_switches:	1405
+ nonvoluntary_ctxt_switches:	1801
+PythonArgs: ['/usr/bin/software-center']
+Traceback:
+ Traceback (most recent call last):
+   File "/usr/share/software-center/softwarecenter/ui/gtk3/panes/viewswitcher.py", line 149, in config_view
+     pane = vm.set_active_view(view_id)
+   File "/usr/share/software-center/softwarecenter/ui/gtk3/session/viewmanager.py", line 149, in set_active_view
+     view_widget.init_view()
+   File "/usr/share/software-center/softwarecenter/ui/gtk3/panes/installedpane.py", line 145, in init_view
+     self.oneconf_handler = get_oneconf_handler(self.oneconf_viewpickler)
+   File "/usr/share/software-center/softwarecenter/backend/oneconfhandler/__init__.py", line 32, in get_oneconf_handler
+     oneconf_handler = OneConfHandler(oneconfviewpickler)
+   File "/usr/share/software-center/softwarecenter/backend/oneconfhandler/core.py", line 56, in __init__
+     self.oneconf = DbusConnect()
+   File "/usr/lib/python2.7/dist-packages/oneconf/dbusconnect.py", line 142, in __init__
+     HOSTS_OBJECT_NAME)
+   File "/usr/lib/python2.7/dist-packages/dbus/bus.py", line 241, in get_object
+     follow_name_owner_changes=follow_name_owner_changes)
+   File "/usr/lib/python2.7/dist-packages/dbus/proxies.py", line 248, in __init__
+     self._named_service = conn.activate_name_owner(bus_name)
+   File "/usr/lib/python2.7/dist-packages/dbus/bus.py", line 180, in activate_name_owner
+     self.start_service_by_name(bus_name)
+   File "/usr/lib/python2.7/dist-packages/dbus/bus.py", line 278, in start_service_by_name
+     'su', (bus_name, flags)))
+   File "/usr/lib/python2.7/dist-packages/dbus/connection.py", line 651, in call_blocking
+     message, timeout)
+ DBusException: org.freedesktop.DBus.Error.Spawn.ChildExited: Process /usr/share/oneconf/oneconf-service exited with status 1
+UserGroups: 

@@ -1,0 +1,53 @@
+Titlesec package
+~~~~~~~~~~~~~~~~
+This package allows to change the sectioning titles.  Amongst its many 
+features it provides margin titles, different format in left and right 
+pages, rules above and below the title, etc.
+
+Current version is 2.8.
+
+Titletoc package
+~~~~~~~~~~~~~~~~
+For toc entries formatting, providing the possibility of changing
+the format in the middle of a document, grouping the entries
+in a single paragraph, pretty free-forms entries, partial tocs, etc.
+ 
+The titletoc.sty file is not part of the titlesec package; it's
+an independent package, but it's described in titlesec.tex.
+
+Installation
+~~~~~~~~~~~~
+No .ins/.dtx preinstalation is required.  Move the files to a place 
+where LaTeX can find them and typeset titlesec.tex.  All of files in 
+this directory are necessary for titlesec.sty to work, except the 
+manual titlesec.tex (and this 'readme' file). The manual requires
+titlesec.sty and titletoc.sty, and hence all the .tss and .def 
+files as well.
+
+Files with extension .new (titlesec.new and titletoc.new) 
+used to be patch files, ie, files with bug fixes, which were
+loaded automatically. Since titlesec 2.7 (titletoc 1.6), these
+files do not exist any more and should be removed (however,
+they will be ignored if present).
+
+Web site, manual in PDF format and info
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+More details are available on
+
+   http://www.tex-tipografia.com/titlesec.html
+
+Contact
+~~~~~~~
+Please, for suggestions, bug reports, etc., go to
+
+   http://www.tex-tipografia.com/contact.html
+
+Known problems
+~~~~~~~~~~
+Some language styles (for babel) add the indentation
+after a section in a so radical way that titlesec (which
+uses the internal LaTeX macros) cannot supress it again.
+For example, spanish (fixed in version 5.0) and frenchb.
+
+2007/08/12
+

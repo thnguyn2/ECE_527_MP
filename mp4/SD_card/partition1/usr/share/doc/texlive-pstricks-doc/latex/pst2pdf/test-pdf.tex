@@ -1,0 +1,41 @@
+\RequirePackage{graphicx}
+\RequirePackage[pdftex]{xcolor}
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\usepackage{pst-3dplot}
+\usepackage{pst-calendar}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\begin{document}
+
+foo\includegraphics[scale=1]{images/./test-tmp-0.pdf}bar
+
+foo
+\includegraphics[scale=1]{images/./test-tmp-1.pdf}
+bar
+
+foo
+\includegraphics[scale=1]{images/./test-tmp-2.pdf}
+bar
+
+\clearpage
+foo
+\includegraphics[scale=1]{images/./test-tmp-3.pdf}
+bar
+
+\includegraphics{tux}% a jpg image
+
+\clearpage
+
+foo bar baz foo bar baz
+ 
+\includegraphics[scale=1]{images/./test-tmp-4.pdf}
+
+foo bar baz
+
+\includegraphics[scale=1]{images/./test-tmp-5.pdf}
+
+\end{document}

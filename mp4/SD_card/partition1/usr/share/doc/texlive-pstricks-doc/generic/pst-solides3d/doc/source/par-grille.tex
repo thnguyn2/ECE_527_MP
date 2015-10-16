@@ -1,0 +1,78 @@
+\section {La grille}
+
+L'objet \Cadre{grille} permet d'obtenir un solide plan.
+Le paramètre \Cadre{base=$x{min}$ ${x{max}}$ ${y{min}}$
+${y{max}}$]} permet de spécifier la taille de la grille.
+
+\begin{multicols}{2}
+\psset{viewpoint=50 50 20 rtp2xyz,Decran=30}
+\begin{pspicture}(-4.5,-1.5)(2.5,2.5)
+\psframe(-3.5,-1.5)(2.5,2.5)
+\psSolid[object=grille,
+   base=0 4 -3 3,
+   linecolor=gray](0,0,0)
+\axesIIID(0,0,0)(4,3,3)
+\end{pspicture}
+
+\columnbreak
+
+\begin{verbatim}
+\psSolid[object=grille,
+   base=0 4 -3 3,
+   linecolor=gray](0,0,0)
+\end{verbatim}
+\end{multicols}
+
+Le paramètre \Cadre{[ngrid=$n_1$ $n_2$]} permet de spécifier le
+maillage de la grille. Si $n_2$ est absent, on considère que $n_2 =
+n_1$.
+
+Si $n_1$ est entier, il représente le nombre de mailles sur l'axe
+$Ox$. S'il est réel, il représente le pas de maillage sur l'axe
+$Ox$. Par exemple, le nombre codé \verb+1+ est entier, alors que celui
+codé \verb+1.+ est réel (noter le point).
+
+
+\begin{multicols}{2}
+\psset{viewpoint=50 50 20 rtp2xyz,Decran=30}
+\begin{pspicture}(-4.5,-1.5)(2.5,2.5)
+\psframe(-3.5,-1.5)(2.5,2.5)
+\psSolid[object=grille,
+   ngrid=1,
+   base=0 4 -3 3,
+   linecolor=gray](0,0,0)
+\axesIIID(0,0,0)(3,3,3)
+\end{pspicture}
+
+\columnbreak
+
+\begin{verbatim}
+\psSolid[object=grille,
+   ngrid=1,
+   base=0 4 -3 3,
+   linecolor=gray](0,0,0)
+\end{verbatim}
+\end{multicols}
+
+\begin{multicols}{2}
+\psset{viewpoint=50 50 20 rtp2xyz,Decran=30}
+\begin{pspicture}(-4.5,-1.5)(2.5,2.5)
+\psframe(-3.5,-1.5)(2.5,2.5)
+\psSolid[object=grille,
+   ngrid=1. 1,
+   base=0 4 -3 3,
+   linecolor=gray](0,0,0)
+\axesIIID(0,0,0)(3,3,3)
+\end{pspicture}
+
+\columnbreak
+
+\begin{verbatim}
+\psSolid[object=grille,
+   ngrid=1. 1,
+   base=0 4 -3 3,
+   linecolor=gray](0,0,0)
+\end{verbatim}
+\end{multicols}
+
+

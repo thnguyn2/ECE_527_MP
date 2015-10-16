@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/share
+/usr/share/applications
+/usr/share/ubiquity
+/usr/share/ubiquity/desktop
+/usr/share/ubiquity/desktop/oem-config-prepare-gtk.desktop
+/usr/share/doc
+/usr/share/doc/oem-config-gtk
+/usr/share/doc/oem-config-gtk/copyright
+/usr/sbin
+/usr/sbin/oem-config-remove-gtk
+/usr/share/doc/oem-config-gtk/changelog.gz

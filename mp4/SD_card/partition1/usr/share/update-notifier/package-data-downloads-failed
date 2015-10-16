@@ -1,0 +1,15 @@
+Name: Failure to download extra data filesName-ar.UTF-8: فشل تنزيل ملفات البيانات الإضافيةName-ast.UTF-8: Fallu al descargar ficheros de datos estraName-bn.UTF-8: অতিরিক্ত ডাটা ফাইল ডাউনলোড করতে ব্যর্থ হয়েছেName-bs.UTF-8: Neuspjelo učitavanje dodatnih datoteka  s podacimaName-ca.UTF-8: Ha fallat la baixada dels fitxers de dades addicionalsName-da.UTF-8: Kunne ikke hente ekstra datafilerName-de.UTF-8: Herunterladen von zusätzlichen Datendateien schlug fehlName-el.UTF-8: Αποτυχία λήψης επιπλέον αρχείων δεδομένωνName-en_AU.UTF-8: Failure to download extra data filesName-en_GB.UTF-8: Failure to download extra data filesName-eo.UTF-8: Fiasko dum elŝutado de pliaj datumdosierojName-es.UTF-8: Fallo al descargar archivos de datos extraName-fi.UTF-8: Ylimääräisten tiedostojen lataus epäonnistuiName-fr.UTF-8: Échec du téléchargement des données supplémentairesName-gd.UTF-8: Dh'fhàillig luchdadh a-nuas faidhlichean dàta a bharrachdName-gl.UTF-8: Fallo na descarga de ficheiros extra de datosName-he.UTF-8: הורדת קובצי נתוני נוספים נכשלהName-hr.UTF-8: Greška pri preuzimanju dodatnih podatkovnih datotekaName-hu.UTF-8: Nem sikerült letölteni az extra adatfájlokatName-id.UTF-8: Gagal mengunduh berkas data ekstraName-it.UTF-8: Scaricamento file dati extra non riuscitoName-ja.UTF-8: 追加データのダウンロードに失敗Name-km.UTF-8: បាន​បរាជ័យ​ក្នុង​ការ​ទាញយក​ឯកសារ​ទិន្នន័យ​បន្ថែមName-lt.UTF-8: Nepavyko atsiųsti papildomų duomenų failųName-lv.UTF-8: Neizdevās lejupielādēt papildus datu failusName-ms.UTF-8: Gagal memuat turun fail data tambahanName-nl.UTF-8: Downloaden van extra gegevensbestanden is misluktName-oc.UTF-8: Fracàs del telecargament de las donadas suplementàriasName-pt_BR.UTF-8: Falha ao baixar arquivos de dados adicionaisName-ro.UTF-8: Eșec la descărcarea fișierelor cu date suplimentareName-ru.UTF-8: Ошибка загрузки дополнительных файлов данныхName-sk.UTF-8: Zlyhalo stiahnutie ďalších dátových súborovName-sl.UTF-8: Napaka med prejemom dodatnih podatkovnih datotekName-sq.UTF-8: Dështoi shkarkimi i skedarëve të të dhënave ekstraName-sv.UTF-8: Misslyckades med att hämta extra datafilerName-tr.UTF-8: Fazladan veri dosyalarını indirme başarısızName-ug.UTF-8: قوشۇمچە سانلىق-مەلۇمات ھۆججەتلىرىنى چۈشۈرۈش مەغلۇپ بولدىName-uk.UTF-8: Не вдалось завантажити додаткові файли данихName-vi.UTF-8: Lỗi khi tải các tập tin dữ liệu bổ sung xuốngName-zh_CN.UTF-8: 下载额外数据文件失败Name-zh_TW.UTF-8: 下載額外資料檔案失敗
+Priority: High
+Terminal: True
+Command: gksudo /usr/lib/update-notifier/package-data-downloader
+Description: 
+ The following packages requested additional data downloads after package
+ installation, but the data could not be downloaded or could not be
+ processed.
+ .
+ .
+   $packages
+ .
+ .
+ The download will be attempted again later, or you can try the download
+ again now.  Running this command requires an active Internet connection.

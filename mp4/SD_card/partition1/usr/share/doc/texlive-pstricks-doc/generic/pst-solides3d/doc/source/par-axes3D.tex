@@ -1,0 +1,44 @@
+\section{Les axes en 3D}
+
+la commande \Cadre{\textbackslash axesIIID[options](x1,y1,z1)(x2,y2,z2)} trace les axes $Ox$,
+$Oy$ et $Oz$ en pointillés de $O$ respectivement, jusqu'au point de coordonnées
+$(x_1,0,0)$ pour l'axe des $x$, $(0,y_1,0)$ pour l'axe des $y$ et
+$(0,0,z_1)$ pour l'axe des $z$ et ensuite en trait continu jusqu'aux
+points $(x_2,0,0)$, $(0,y_2,0)$ et $(0,0,z_2)$.
+
+Les options sont les suivantes :
+\begin{itemize}
+    \item toutes les options de couleur, d'épaisseur du trait, ainsi que des caractéristiques des flèches.
+    \item \Cadre{labelsep=valeur} qui permet de placer à la distance souhaitée de l'extrémité de la flèche, l'étiquette de l'axe, sa valeur par défaut est \Cadre{labelsep=5pt}, il s'agit de la distance réelle en trois dimensions et non sur l'écran.
+    \item Le choix des étiquettes(\textit{labels}) de chaque axe avec l'option \Cadre{axisnames={a,b,c}}, avec par défaut \Cadre{axisnames={x,y,z}}.
+    \item La possibilité de spécifier, le style de ces étiquettes avec l'option : \Cadre{axisemph={\boldmath\Large\color{red}}}, par défaut il n'y a pas de style prédéfini, c'est-à-dire que si l'on ne précise rien on aura \Cadre{$x,y,z$}.
+    \item \Cadre{showOrigin} est un booléen, \texttt{true} par défaut, s'il est positionné à \Cadre{showOrigin=false}  les pointillés ne seront plus tracés depuis l'origine.
+    \item \Cadre{mathLabel} est un booléen, \texttt{true} par défaut, qui dans ce cas écrit les étiquettes en mode mathématique, positionné à \Cadre{mathLabel=false} on passe dans le mode usuel.
+\end{itemize}
+\encadre{Les étiquettes sont placées aux extrémités des axes dans leur prolongement.}
+
+\begin{LTXexample}[width=5cm]
+\begin{pspicture}(-2,-2)(3,3)
+\psset{viewpoint=100 30 20,Decran=100}
+\psframe(-2,-2)(3,3)
+\psSolid[object=cube,a=2,
+        action=draw*,
+        fillcolor=magenta!20]
+\axesIIID[showOrigin=false](1,1,1)(3,2,2.5)
+\end{pspicture}
+\end{LTXexample}
+
+\begin{LTXexample}[width=5cm]
+\begin{pspicture}(-2,-1)(3,4)
+\psset{viewpoint=100 45 20,Decran=100}
+\psframe(-2,-1)(3,4)
+\psSolid[object=cylindre,h=2,r=1,
+        action=draw*,mode=4,
+        fillcolor=green!20]
+\axesIIID[linewidth=1pt,linecolor=red,arrowsize=5pt,
+          arrowinset=0,axisnames={a,b,c},
+          axisemph={\boldmath\Large\color{red}},
+          labelsep=10pt]
+         (1,1,2)(2,2,3)
+\end{pspicture}
+\end{LTXexample}

@@ -1,0 +1,35 @@
+LaTeX package hypdvips 2009/03/25 v1.06
+
+The hypdvips package fixes some problems when using hyperref with dvips. It
+also adds support for breaking links, hyperlinked tablenotes, file attachments,
+embedded documents and different types of GoTo-links. The cooperation of
+hyperref with cleveref is improved, which in addition allows an enhanced back-
+referencing system.
+
+History:
+
+v1.06 - new package option `nlwarning': allows to suppress warnings concerning
+        nested links (thanks to Marco Daniel for the suggestion)
+      - fixes duplicate warnings about nested links when option `evenboxes'
+        is disabled
+
+v1.05 - improved compatibility with packages tabularx & subcaption (thanks to
+        Marco Daniel for the bug-report)
+
+v1.04 - fixes problem with back-reference when citing in footnotetext and
+        option `smallfootnotes' is enabled
+
+v1.03 - new package options: `flip' & `mirror'
+      - support for package threeparttable: tablenotes are now hyperlinked
+      - fixes corrupted /Names entry in {Catalog} when embedding files
+
+v1.02 - better support for broken links (should now work in tables too)
+      - fixes \bmstyle command
+
+v1.01 - uses xcolor package to achieve better print quality when hyperref 
+        option `colorlinks' is used
+      - patches bookmark package to work with jobnames which start with a 
+        parenthesis `('
+      - corrected some minor typos in the documentation
+
+v1.00 - initial release

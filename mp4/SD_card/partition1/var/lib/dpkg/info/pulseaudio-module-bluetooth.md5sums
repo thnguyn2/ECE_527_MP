@@ -1,0 +1,8 @@
+aa3796560464398caeb7162287d7d5db  usr/lib/pulse-1.1/modules/libbluetooth-ipc.so
+5e5ce3c8aa7f70a9c956186a596a46fc  usr/lib/pulse-1.1/modules/libbluetooth-sbc.so
+9e1b2b736d43ffa85bbd58ed9f2ccd58  usr/lib/pulse-1.1/modules/libbluetooth-util.so
+e7fea4100acd3b42243c7e28c42244ba  usr/lib/pulse-1.1/modules/module-bluetooth-device.so
+92d3a67aa5561073152db3f68e190478  usr/lib/pulse-1.1/modules/module-bluetooth-discover.so
+bd5d035bdfe33f8d66eebe014b26d68b  usr/lib/pulse-1.1/modules/module-bluetooth-proximity.so
+520146346dd56a9d7572758f5cb7597d  usr/lib/pulseaudio/pulse/proximity-helper
+1a70969fd317243739e917dee33e532a  usr/share/doc/pulseaudio-module-bluetooth/copyright

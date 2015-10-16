@@ -1,0 +1,654 @@
+% Copyright 2007-2009 by Massimo Redaelli
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/LICENSE for more details.
+
+
+\NeedsTeXFormat{LaTeX2e}
+
+\def\pgfcircversion{0.2.1}
+
+\ProvidesPackage{circuitikz}%
+        [2009/04/17 The CircuiTikz circuit drawing package version \pgfcircversion]
+
+%% Version 2.0 of pgf/TikZ is required
+\RequirePackage{tikz}
+\RequirePackage{xstring}
+\usetikzlibrary{calc}
+\usepgflibrary{decorations.pathmorphing}
+
+
+%% Options
+
+\DeclareOption{fulldiode}{
+	\ctikzset{full diode=true}
+}
+
+\DeclareOption{emptydiode}{
+	\ctikzset{full diode=false}
+}
+
+\DeclareOption{europeanvoltage}{
+	\ctikzset{european voltage=true}
+}
+
+\DeclareOption{americanvoltage}{
+	\ctikzset{european voltage=false}
+}
+
+\DeclareOption{europeancurrent}{
+	\ctikzset{european current=true}
+}
+
+\DeclareOption{americancurrent}{
+	\ctikzset{european current=false}
+}
+
+\DeclareOption{europeanvoltage}{
+	\ctikzset{european voltage=true}
+}
+
+\DeclareOption{americanresistor}{
+	\ctikzset{european resistor=false}
+}
+
+\DeclareOption{europeanresistor}{
+	\ctikzset{european resistor=true}
+}
+
+\DeclareOption{americaninductor}{
+	\ctikzset{european inductor=false}
+}
+
+\DeclareOption{europeaninductor}{
+	\ctikzset{european inductor=true}
+}
+
+\DeclareOption{european}{
+	\ctikzset{european voltage=true} \ctikzset{european current=true} \ctikzset{european inductor=true} \ctikzset{european resistor=true}
+}
+
+\DeclareOption{american}{
+	\ctikzset{european voltage=false} \ctikzset{european current=false} \ctikzset{european resistor=false} \ctikzset{european inductor=false}
+}
+
+\DeclareOption{siunitx}{
+	\pgf@circ@siunitxtrue
+}
+
+\DeclareOption{nosiunitx}{
+	\pgf@circ@siunitxfalse
+}
+
+\DeclareOption{arrowmos}{
+	\pgf@circuit@mos@arrowstrue
+}
+
+\DeclareOption{noarrowmos}{
+	\pgf@circuit@mos@arrowsfalse
+}
+
+
+%% Keys
+
+\newcommand{\pgf@circ@comment}[1]{}
+
+\def\circuitikzbasekey{/tikz/circuitikz}
+
+\pgfkeys{\circuitikzbasekey/.is family}
+
+\def\circuitikzset#1{\pgfkeys{\circuitikzbasekey,#1}}
+\let\ctikzset\circuitikzset
+\def\ctikzvalof#1{\pgfkeysvalueof{\circuitikzbasekey/#1}}
+\def\ctikzsetvalof#1#2{\pgfkeyssetvalue{\circuitikzbasekey/#1}{#2}}
+
+\ctikzset{bipoles/.is family}
+\ctikzset{bipoles/border margin/.initial=1.1}
+\ctikzset{bipoles/thickness/.initial=2} 
+\ctikzset{bipoles/length/.initial=1.4cm} 
+\ctikzset{nodes width/.initial=.04}
+\newdimen\pgf@circ@Rlen 
+\ctikzset{bipoles/resistor/height/.initial=.3}
+\ctikzset{bipoles/resistor/width/.initial=.8}
+\ctikzset{bipoles/potentiometer/height/.initial=.6}
+\ctikzset{bipoles/potentiometer/width/.initial=.8}
+\ctikzset{bipoles/inductor/height/.initial=.3}
+\ctikzset{bipoles/inductor/width/.initial=.8}
+\ctikzset{bipoles/inductor/coils/.initial=6}
+\ctikzset{bipoles/isource/height/.initial=.60}
+\ctikzset{bipoles/isource/width/.initial=.60}
+\ctikzset{bipoles/isourceam/height/.initial=.60}
+\ctikzset{bipoles/isourceam/width/.initial=.60}
+\ctikzset{bipoles/vsource/height/.initial=.60}
+\ctikzset{bipoles/vsource/width/.initial=.60}
+\ctikzset{bipoles/vsourceam/height/.initial=.60}
+\ctikzset{bipoles/vsourceam/width/.initial=.60}
+\ctikzset{bipoles/vsourceam/margin/.initial=.7}
+\ctikzset{bipoles/isourcesin/height/.initial=.60}
+\ctikzset{bipoles/isourcesin/width/.initial=.60}
+\ctikzset{bipoles/vsourcesin/height/.initial=.60}
+\ctikzset{bipoles/vsourcesin/width/.initial=.60}
+\ctikzset{bipoles/cisource/height/.initial=.7}
+\ctikzset{bipoles/cisource/width/.initial=.7}
+\ctikzset{bipoles/cisourceam/height/.initial=.7}
+\ctikzset{bipoles/cisourceam/width/.initial=.7}
+\ctikzset{bipoles/cvsource/height/.initial=.7}
+\ctikzset{bipoles/cvsource/width/.initial=.7}
+\ctikzset{bipoles/cvsourceam/height/.initial=.7}
+\ctikzset{bipoles/cvsourceam/width/.initial=.7}
+\ctikzset{bipoles/cvsourceam/margin/.initial=.7}
+\ctikzset{bipoles/cvsourceam/text scale/.initial=1}
+\ctikzset{bipoles/cisourcesin/width/.initial=.7}
+\ctikzset{bipoles/cvsourcesin/height/.initial=.7}
+\ctikzset{bipoles/cvsourcesin/width/.initial=.7}
+\ctikzset{bipoles/capacitor/height/.initial=.6}
+\ctikzset{bipoles/capacitor/width/.initial=.2}
+\ctikzset{bipoles/battery/height/.initial=.6}
+\ctikzset{bipoles/battery/width/.initial=.3}
+\ctikzset{bipoles/diode/height/.initial=.50}
+\ctikzset{bipoles/diode/width/.initial=.40}
+\ctikzset{bipoles/varcap/height/.initial=.50}
+\ctikzset{bipoles/varcap/width/.initial=.45}
+\ctikzset{bipoles/interr/height/.initial=.35}
+\ctikzset{bipoles/interr/width/.initial=.35}
+\ctikzset{bipoles/interr/height 2/.initial=.08}
+\ctikzset{bipoles/generic/height/.initial=.30}
+\ctikzset{bipoles/generic/width/.initial=.80}
+\ctikzset{bipoles/ageneric/height/.initial=.30}
+\ctikzset{bipoles/ageneric/width/.initial=.80}
+\ctikzset{bipoles/fullgeneric/height/.initial=.30}
+\ctikzset{bipoles/fullgeneric/width/.initial=.80}
+\ctikzset{bipoles/open/height/.initial=.25}
+\ctikzset{bipoles/open/width/.initial=.8}
+\ctikzset{bipoles/ammeter/height/.initial=.60}
+\ctikzset{bipoles/ammeter/width/.initial=.60}
+\ctikzset{bipoles/voltmeter/height/.initial=.60}
+\ctikzset{bipoles/voltmeter/width/.initial=.60}
+\ctikzset{bipoles/not port/width/.initial=1}
+\ctikzset{bipoles/not port/height/.initial=.8}
+\ctikzset{bipoles/not port/circle width/.initial=.15}
+\ctikzset{bipoles/lamp/height/.initial=.60}
+\ctikzset{bipoles/lamp/width/.initial=.60}
+
+\newif\ifpgf@circuit@mos@arrows
+\ctikzset{tripoles/mos style/.is choice}
+\ctikzset{tripoles/mos style/no arrows/.code={\pgf@circuit@mos@arrowsfalse}}
+\ctikzset{tripoles/mos style/arrows/.code={\pgf@circuit@mos@arrowstrue}}
+\ctikzset{tripoles/nmos/width/.initial=.7}
+\ctikzset{tripoles/nmos/gate height/.initial=.35}
+\ctikzset{tripoles/nmos/base height/.initial=.5}
+\ctikzset{tripoles/nmos/height/.initial=1.1}
+\ctikzset{tripoles/nmos/base width/.initial=.5}
+\ctikzset{tripoles/nmos/gate width/.initial=.6}
+\ctikzset{tripoles/pmos/width/.initial=.7}
+\ctikzset{tripoles/pmos/gate height/.initial=.35}
+\ctikzset{tripoles/pmos/base height/.initial=.5}
+\ctikzset{tripoles/pmos/height/.initial=1.1}
+\ctikzset{tripoles/pmos/base width/.initial=.5}
+\ctikzset{tripoles/pmos/gate width/.initial=.6}
+
+\ctikzset{tripoles/npn/width/.initial=.6}
+\ctikzset{tripoles/npn/gate height/.initial=.45}
+\ctikzset{tripoles/npn/gate height 2/.initial=.15}
+\ctikzset{tripoles/npn/base height/.initial=.4}
+\ctikzset{tripoles/npn/height/.initial=1.1}
+\ctikzset{tripoles/npn/gate width/.initial=.5}
+
+\ctikzset{tripoles/pnp/width/.initial=.6}
+\ctikzset{tripoles/pnp/gate height/.initial=.45}
+\ctikzset{tripoles/pnp/gate height 2/.initial=.15}
+\ctikzset{tripoles/pnp/base height/.initial=.4}
+\ctikzset{tripoles/pnp/height/.initial=1.1}
+\ctikzset{tripoles/pnp/gate width/.initial=.5}
+
+\ctikzset{tripoles/and port/width/.initial=1.1}
+\ctikzset{tripoles/and port/height/.initial=.8}
+\ctikzset{tripoles/and port/port width/.initial=.7}
+\ctikzset{tripoles/and port/input height/.initial=.5}
+\ctikzset{tripoles/nand port/width/.initial=1.1}
+\ctikzset{tripoles/nand port/height/.initial=.8}
+\ctikzset{tripoles/nand port/port width/.initial=.7}
+\ctikzset{tripoles/nand port/circle width/.initial=.15}
+\ctikzset{tripoles/nand port/input height/.initial=.5}
+\ctikzset{tripoles/or port/width/.initial=1.1}
+\ctikzset{tripoles/or port/height/.initial=.8}
+\ctikzset{tripoles/or port/port width/.initial=.7}
+\ctikzset{tripoles/or port/input height/.initial=.5}
+\ctikzset{tripoles/or port/input skip/.initial=.25}
+\ctikzset{tripoles/or port/aaa/.initial=.6}
+\ctikzset{tripoles/or port/bbb/.initial=.4} 
+\ctikzset{tripoles/or port/ccc/.initial=.5} 
+\ctikzset{tripoles/or port/ddd/.initial=.0}
+\ctikzset{tripoles/nor port/width/.initial=1.1}
+\ctikzset{tripoles/nor port/height/.initial=.8}
+\ctikzset{tripoles/nor port/port width/.initial=.7}
+\ctikzset{tripoles/nor port/input height/.initial=.5}
+\ctikzset{tripoles/nor port/input skip/.initial=.25}
+\ctikzset{tripoles/nor port/circle width/.initial=.15}
+\ctikzset{tripoles/nor port/aaa/.initial=.6}
+\ctikzset{tripoles/nor port/bbb/.initial=.4} 
+\ctikzset{tripoles/nor port/ccc/.initial=.5} 
+\ctikzset{tripoles/nor port/ddd/.initial=.0}
+\ctikzset{tripoles/xor port/width/.initial=1.1}
+\ctikzset{tripoles/xor port/height/.initial=.8}
+\ctikzset{tripoles/xor port/port width/.initial=.7}
+\ctikzset{tripoles/xor port/input height/.initial=.5}
+\ctikzset{tripoles/xor port/input skip/.initial=.15}
+\ctikzset{tripoles/xor port/distance/.initial=.1} 
+\ctikzset{tripoles/xor port/aaa/.initial=.6}
+\ctikzset{tripoles/xor port/bbb/.initial=.4} 
+\ctikzset{tripoles/xor port/ccc/.initial=.5} 
+\ctikzset{tripoles/xor port/ddd/.initial=.0}
+\ctikzset{tripoles/xnor port/width/.initial=1.1}
+\ctikzset{tripoles/xnor port/height/.initial=.8}
+\ctikzset{tripoles/xnor port/port width/.initial=.7}
+\ctikzset{tripoles/xnor port/input height/.initial=.5}
+\ctikzset{tripoles/xnor port/input skip/.initial=.15}
+\ctikzset{tripoles/xnor port/distance/.initial=.1} 
+\ctikzset{tripoles/xnor port/aaa/.initial=.6}
+\ctikzset{tripoles/xnor port/bbb/.initial=.4} 
+\ctikzset{tripoles/xnor port/ccc/.initial=.5} 
+\ctikzset{tripoles/xnor port/ddd/.initial=.0}
+\ctikzset{tripoles/xnor port/circle width/.initial=.15}
+\ctikzset{tripoles/op amp/width/.initial=1.7}
+\ctikzset{tripoles/op amp/port width/.initial=.7}
+\ctikzset{tripoles/op amp/height/.initial=1.4}
+\ctikzset{tripoles/op amp/input height/.initial=.5}
+\ctikzset{tripoles/op amp/up pos/.initial=.45}
+
+\ctikzset{quadpoles/transformer/width/.initial=1.5}
+\ctikzset{quadpoles/transformer/height/.initial=1.5}
+\ctikzset{quadpoles/gyrator/width/.initial=1.5}
+\ctikzset{quadpoles/gyrator/height/.initial=1.5}
+
+\ctikzset{bipole/.is family}
+\ctikzset{bipole/direction/.initial = 0}
+\ctikzset{bipole/kind/.initial = }
+\ctikzset{bipole/name/.initial = }
+\newif\ifpgf@circuit@bipole@reversed
+\ctikzset{bipole/reversed/.is if=pgf@circuit@bipole@reversed}
+\newif\ifpgf@circuit@bipole@isvoltage
+\ctikzset{bipole/is voltage/.is if=pgf@circuit@bipole@isvoltage}
+\newif\ifpgf@circuit@bipole@iscurrent
+\ctikzset{bipole/is current/.is if=pgf@circuit@bipole@iscurrent}
+
+\ctikzset{bipole/voltage/.is family}
+\newif\ifpgf@circuit@bipole@voltage@backward
+\ctikzset{bipole/voltage/direction/.is choice}
+\ctikzset{bipole/voltage/direction/forward/.code={\pgf@circuit@bipole@voltage@backwardfalse}}
+\ctikzset{bipole/voltage/direction/backward/.code={\pgf@circuit@bipole@voltage@backwardtrue}}
+\newif\ifpgf@circuit@bipole@voltage@below
+\ctikzset{bipole/voltage/position/.is choice}
+\ctikzset{bipole/voltage/position/above/.code={\pgf@circuit@bipole@voltage@belowfalse}}
+\ctikzset{bipole/voltage/position/below/.code={\pgf@circuit@bipole@voltage@belowtrue}}
+
+\ctikzset{bipole/voltage/label/unit/.initial=}
+\ctikzset{bipole/voltage/label/name/.initial=}
+
+\ctikzset{bipole/current/.is family}
+\newif\ifpgf@circuit@bipole@current@backward
+\ctikzset{bipole/current/direction/.is choice}
+\ctikzset{bipole/current/direction/forward/.code={\pgf@circuit@bipole@current@backwardfalse}}
+\ctikzset{bipole/current/direction/backward/.code={\pgf@circuit@bipole@current@backwardtrue}}
+\newif\ifpgf@circuit@bipole@current@before
+\ctikzset{bipole/current/x position/.is choice}
+\ctikzset{bipole/current/x position/after/.code={\pgf@circuit@bipole@current@beforefalse}}
+\ctikzset{bipole/current/x position/before/.code={\pgf@circuit@bipole@current@beforetrue}}
+\newif\ifpgf@circuit@bipole@current@below
+\ctikzset{bipole/current/y position/.is choice}
+\ctikzset{bipole/current/y position/above/.code={\pgf@circuit@bipole@current@belowfalse}}
+\ctikzset{bipole/current/y position/below/.code={\pgf@circuit@bipole@current@belowtrue}}
+
+\ctikzset{bipole/current/label/unit/.initial=}
+\ctikzset{bipole/current/label/name/.initial=}
+
+\ctikzset{bipole/label/.is family}
+\ctikzset{bipole/label/position/.initial=90}
+\ctikzset{bipole/label/unit/.initial=}
+\ctikzset{bipole/label/name/.initial=}
+
+
+
+\ctikzset{bipole/nodes/.is family}
+\ctikzset{bipole/nodes/left/.is choice}
+\ctikzset{bipole/nodes/left/none/.code={\ctikzsetvalof{bipole/nodes/left}{none}}}
+\ctikzset{bipole/nodes/left/empty/.code={\ctikzsetvalof{bipole/nodes/left}{empty}}}
+\ctikzset{bipole/nodes/left/full/.code={\ctikzsetvalof{bipole/nodes/left}{full}}}
+\ctikzset{bipole/nodes/right/.is choice}
+\ctikzset{bipole/nodes/right/none/.code={\ctikzsetvalof{bipole/nodes/right}{none}}}
+\ctikzset{bipole/nodes/right/empty/.code={\ctikzsetvalof{bipole/nodes/right}{empty}}}
+\ctikzset{bipole/nodes/right/full/.code={\ctikzsetvalof{bipole/nodes/right}{full}}}
+
+
+\newif\ifpgf@circuit@europeanvoltage
+\ctikzset{european voltage/.is if=pgf@circuit@europeanvoltage}
+\newif\ifpgf@circuit@europeancurrent
+\ctikzset{european current/.is if=pgf@circuit@europeancurrent}
+\newif\ifpgf@circuit@europeanresistor
+\ctikzset{european resistor/.is if=pgf@circuit@europeanresistor}
+\newif\ifpgf@circuit@europeaninductor
+\ctikzset{european inductor/.is if=pgf@circuit@europeaninductor}
+\newif\ifpgf@circuit@fulldiode
+\ctikzset{full diode/.is if=pgf@circuit@fulldiode}
+\ctikzset{thickness/.initial=2}
+\ctikzset{color/.initial=black}
+\pgfkeys{/tikz/color/.add code={}{\ctikzset{color=#1}}}
+
+\tikzset{european voltage/.code= {\ctikzset{european voltage=true} } }
+\tikzset{european current/.code= {\ctikzset{european current=true} } }
+\tikzset{american voltage/.code= {\ctikzset{european voltage=false} } }
+\tikzset{american current/.code= {\ctikzset{european current=false} } }
+\tikzset{european inductor/.code= {\ctikzset{european inductor=true} } }
+\tikzset{european resistor/.code= {\ctikzset{european resistor=true} } }
+\tikzset{american inductor/.code= {\ctikzset{european inductor=false} } }
+\tikzset{american resistor/.code= {\ctikzset{european resistor=false} } }
+\tikzset{american/.code= {\ctikzset{european current=false} \ctikzset{european voltage=false} \ctikzset{european resistor=false} \ctikzset{european inductor=false}} }
+\tikzset{european/.code= {\ctikzset{european current=true} \ctikzset{european voltage=true} \ctikzset{european resistor=true} \ctikzset{european inductor=true}} }
+\tikzset{full diode/.code= {\ctikzset{full diode=true} } }
+\tikzset{empty diode/.code= {\ctikzset{full diode=false} } }
+
+\newif\ifpgf@circ@siunitx
+\newif\ifpgf@circ@siunitx@res
+
+\ctikzset{voltage/.is family}
+\ctikzset{voltage/distance from node/.initial=.5} %\pgf@circ@Rlen units
+\ctikzset{voltage/distance from line/.initial=.08} % pos, tra 0 e 1
+\ctikzset{voltage/bump a/.initial=1.2}
+\ctikzset{voltage/bump b/.initial=1.5}
+\ctikzset{voltage/european label distance/.initial=1.4}
+\ctikzset{voltage/american label distance/.initial=1.1}
+
+\ctikzset{current/.is family}
+\ctikzset{current/distance/.initial = .5}
+
+
+
+%% dependencies
+
+
+\input pgfcircutils.sty
+\input pgfcircmath.sty
+
+\input pgfcircshapes.sty
+\input pgfcircmonopoles.sty
+\input pgfcircbipoles.sty
+\input pgfcirctripoles.sty
+\input pgfcircquadpoles.sty
+
+\input pgfcirclabel.sty
+\input pgfcircvoltage.sty
+\input pgfcirccurrent.sty
+
+
+
+\ExecuteOptions{european current, european voltage, american resistor, american inductor, nosiunitx, noarrowmos}
+
+\ProcessOptions
+
+\ifpgf@circ@siunitx
+	\RequirePackage{siunitx}
+\fi
+
+
+
+%%%%%%%%%%%%
+%% Dimensions
+
+% coordinate bipoli
+\newdimen\pgf@circ@res@up \newdimen\pgf@circ@res@down \newdimen\pgf@circ@res@zero
+\newdimen\pgf@circ@res@left \newdimen\pgf@circ@res@right
+\newdimen\pgf@circ@res@other
+\newdimen\pgf@circ@res@step
+
+% thickness iniziale
+\newdimen \pgfstartlinewidth
+
+\pgf@circ@Rlen = \pgfkeysvalueof{/tikz/circuitikz/bipoles/length}
+
+
+% Initialize paths
+\def\pgfcircresetpath{
+	\ctikzset{bipole/name=, bipole/direction=, bipole/label/name=, bipole/label/position=90, 
+		bipole/reversed=false, bipole/kind=,
+	  	bipole/voltage/direction=backward, bipole/voltage/label/name=, bipole/voltage/position=below,
+	  	bipole/nodes/left=none, bipole/nodes/right=none, bipole/is voltage=false,
+		bipole/is current=false, bipole/current/label/name=, bipole/current/x position=after,
+		bipole/current/y position=above, bipole/current/direction=forward   }
+}
+
+
+%% Generic bipole path
+\def\pgf@circ@bipole@path#1#2{
+	\pgfextra{
+		\pgf@circ@Rlen = \pgfkeysvalueof{/tikz/circuitikz/bipoles/length}
+		\ctikzset{bipole/kind = #1}
+		\def\pgf@temp{open}
+		\def\pgf@circ@temp{#1}
+		\pgfmathrandominteger{\pgf@circ@rand}{1000}{9999}
+		\ctikzset{bipole/name = #2\pgf@circ@rand}
+	}
+	\ifpgf@circuit@bipole@reversed
+		(\tikztostart) node[coordinate] (\ctikzvalof{bipole/name}end) {}
+		(\tikztotarget) node[coordinate] (\ctikzvalof{bipole/name}start) {} 	
+	\else
+		(\tikztostart) node[coordinate] (\ctikzvalof{bipole/name}start) {}
+		(\tikztotarget) node[coordinate] (\ctikzvalof{bipole/name}end) {} 
+	\fi
+	\pgfextra{
+		\pgf@circ@slope{\pgfpointanchor{\ctikzvalof{bipole/name}start}{center}}
+					   {\pgfpointanchor{\ctikzvalof{bipole/name}end}{center}}
+		\edef\pgf@circ@direction{\pgfmathresult}
+		\ctikzset{bipole/direction = \pgfmathresult}		
+	}
+	($(\tikztostart)!.5!(\tikztotarget)$) 
+		node[#1shape, rotate=\pgf@circ@direction] (\ctikzvalof{bipole/name}) {}
+	\ifx\pgf@temp\pgf@circ@temp  % if it is an open
+	\else
+		(\ctikzvalof{bipole/name}start.center) -- (\ctikzvalof{bipole/name}.left) 
+		(\ctikzvalof{bipole/name}.right)  -- (\ctikzvalof{bipole/name}end.center) 
+	\fi
+	\pgf@circ@ifkeyempty{bipole/label/name}\else
+	\pgf@circ@drawlabel\fi
+	\drawpoles
+	\pgf@circ@ifkeyempty{bipole/voltage/label/name}\else\pgf@circ@drawvoltage\fi
+	\pgf@circ@ifkeyempty{bipole/current/label/name}\else\pgf@circ@drawcurrent\fi
+	% reset
+	\pgfextra{
+		\pgfcircresetpath
+	}  
+	(\tikztotarget) 	\tikztonodes  % e si continua
+}
+
+
+%% Path definitions
+
+\def\pgf@circ@resistor@path#1{\ifpgf@circuit@europeanresistor\pgf@circ@bipole@path{generic}{#1}\else\pgf@circ@bipole@path{resistor}{#1}\fi}
+\def\pgf@circ@potentiometer@path#1{\pgf@circ@bipole@path{potentiometer}{#1}}
+\def\pgf@circ@capacitor@path#1{\pgf@circ@bipole@path{capacitor}{#1}}
+\def\pgf@circ@battery@path#1{\pgf@circ@bipole@path{battery}{#1}}
+\def\pgf@circ@inductor@path#1{\ifpgf@circuit@europeaninductor\pgf@circ@bipole@path{fullgeneric}{#1}\else\pgf@circ@bipole@path{inductor}{#1}\fi}
+\def\pgf@circ@lamp@path#1{\pgf@circ@bipole@path{lamp}{#1}}
+\def\pgf@circ@vsource@path#1{\pgf@circ@bipole@path{vsource}{#1}}
+\def\pgf@circ@vsourceam@path#1{\pgf@circ@bipole@path{vsourceAM}{#1}}
+\def\pgf@circ@vsourcesin@path#1{\pgf@circ@bipole@path{vsourcesin}{#1}}
+\def\pgf@circ@isource@path#1{\pgf@circ@bipole@path{isource}{#1}}
+\def\pgf@circ@isourcesin@path#1{\pgf@circ@bipole@path{isourcesin}{#1}}
+\def\pgf@circ@isourceam@path#1{\pgf@circ@bipole@path{isourceAM}{#1}}
+\def\pgf@circ@cvsource@path#1{\pgf@circ@bipole@path{cvsource}{#1}}
+\def\pgf@circ@cvsourceam@path#1{\pgf@circ@bipole@path{cvsourceAM}{#1}}
+\def\pgf@circ@cvsourcesin@path#1{\pgf@circ@bipole@path{cvsourcesin}{#1}}
+\def\pgf@circ@cisource@path#1{\pgf@circ@bipole@path{cisource}{#1}}
+\def\pgf@circ@cisourceam@path#1{\pgf@circ@bipole@path{cisourceAM}{#1}}
+\def\pgf@circ@cisourcesin@path#1{\pgf@circ@bipole@path{cisourcesin}{#1}}
+\def\pgf@circ@fulldiode@path#1{\pgf@circ@bipole@path{fulldiode}{#1}}
+\def\pgf@circ@fullzdiode@path#1{\pgf@circ@bipole@path{fullzdiode}{#1}}
+\def\pgf@circ@fullsdiode@path#1{\pgf@circ@bipole@path{fullsdiode}{#1}}
+\def\pgf@circ@fulltdiode@path#1{\pgf@circ@bipole@path{fulltdiode}{#1}}
+\def\pgf@circ@fulllediode@path#1{\pgf@circ@bipole@path{fulllediode}{#1}}
+\def\pgf@circ@fullpdiode@path#1{\pgf@circ@bipole@path{fullpdiode}{#1}}
+\def\pgf@circ@fullvarcap@path#1{\pgf@circ@bipole@path{fullvarcap}{#1}}
+\def\pgf@circ@emptydiode@path#1{\pgf@circ@bipole@path{emptydiode}{#1}}
+\def\pgf@circ@emptyzdiode@path#1{\pgf@circ@bipole@path{emptyzdiode}{#1}}
+\def\pgf@circ@emptysdiode@path#1{\pgf@circ@bipole@path{emptysdiode}{#1}}
+\def\pgf@circ@emptytdiode@path#1{\pgf@circ@bipole@path{emptytdiode}{#1}}
+\def\pgf@circ@emptylediode@path#1{\pgf@circ@bipole@path{emptylediode}{#1}}
+\def\pgf@circ@emptypdiode@path#1{\pgf@circ@bipole@path{emptypdiode}{#1}}
+\def\pgf@circ@emptyvarcap@path#1{\pgf@circ@bipole@path{emptyvarcap}{#1}}
+\def\pgf@circ@short@path#1{\pgf@circ@bipole@path{short}{#1}}
+\def\pgf@circ@cspst@path#1{\pgf@circ@bipole@path{cspst}{#1}}
+\def\pgf@circ@ospst@path#1{\pgf@circ@bipole@path{ospst}{#1}}
+\def\pgf@circ@open@path#1{\pgf@circ@bipole@path{open}{#1}}
+\def\pgf@circ@generic@path#1{\pgf@circ@bipole@path{generic}{#1}}
+\def\pgf@circ@ageneric@path#1{\pgf@circ@bipole@path{ageneric}{#1}}
+\def\pgf@circ@fullgeneric@path#1{\pgf@circ@bipole@path{fullgeneric}{#1}}
+\def\pgf@circ@ammeter@path#1{\pgf@circ@bipole@path{ammeter}{#1}}
+\def\pgf@circ@voltmeter@path#1{\pgf@circ@bipole@path{voltmeter}{#1}}
+\def\pgf@circ@empty@path#1{}
+
+
+%% Styles
+
+\tikzset{resistor/.style= {to path=\pgf@circ@resistor@path, l=#1}}
+\tikzset{ammeter/.style= {to path=\pgf@circ@ammeter@path, l=#1}}
+\tikzset{voltmeter/.style= {to path=\pgf@circ@voltmeter@path, l=#1}}
+\tikzset{potentiometer/.style = {to path=\pgf@circ@potentiometer@path, l=#1}}
+\tikzset{capacitor/.style = {to path=\pgf@circ@capacitor@path, l=#1}}
+\tikzset{battery/.style = {to path=\pgf@circ@battery@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{inductor/.style = {to path=\pgf@circ@inductor@path, l=#1}}
+\tikzset{european voltage source/.style = {to path=\pgf@circ@vsource@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{american voltage source/.style = {to path=\pgf@circ@vsourceam@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{european current source/.style = {to path=\pgf@circ@isource@path, \circuitikzbasekey/bipole/is current=true, i=#1}}
+\tikzset{american current source/.style = {to path=\pgf@circ@isourceam@path, \circuitikzbasekey/bipole/is current=true, i=#1}}
+\tikzset{european controlled voltage source/.style = {to path=\pgf@circ@cvsource@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{american controlled voltage source/.style = {to path=\pgf@circ@cvsourceam@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{european controlled current source/.style = {to path=\pgf@circ@cisource@path, \circuitikzbasekey/bipole/is current=true, i=#1}}
+\tikzset{american controlled current source/.style = {to path=\pgf@circ@cisourceam@path, \circuitikzbasekey/bipole/is current=true, i=#1}}
+\tikzset{sinusoidal voltage source/.style = {to path=\pgf@circ@vsourcesin@path, \circuitikzbasekey/bipole/is voltage=true, v=#1 }}
+\tikzset{sinusoidal current source/.style = {to path=\pgf@circ@isourcesin@path, \circuitikzbasekey/bipole/is current=true, i=#1}}
+\tikzset{controlled sinusoidal voltage source/.style = {to path=\pgf@circ@cvsourcesin@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{controlled sinusoidal current source/.style = {to path=\pgf@circ@cisourcesin@path, \circuitikzbasekey/bipole/is current=true, i=#1}}
+
+\tikzset{voltage source/.style = {\ifpgf@circuit@europeanvoltage european \else american \fi voltage source, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{current source/.style = {\ifpgf@circuit@europeancurrent european \else american \fi current source, \circuitikzbasekey/bipole/is current=true, i=#1}}
+\tikzset{controlled voltage source/.style = {\ifpgf@circuit@europeanvoltage european \else american \fi controlled voltage source, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\tikzset{controlled current source/.style = {\ifpgf@circuit@europeancurrent european \else american \fi controlled current source, \circuitikzbasekey/bipole/is current=true, i=#1}}
+
+
+\tikzset{generic/.style = {to path=\pgf@circ@generic@path, l=#1}}
+\tikzset{ageneric/.style = {to path=\pgf@circ@ageneric@path, l=#1}}
+\tikzset{fullgeneric/.style = {to path=\pgf@circ@fullgeneric@path, l=#1}}
+\tikzset{short/.style = {to path=\pgf@circ@short@path}}
+\tikzset{open/.style = {to path=\pgf@circ@open@path}}
+
+\tikzset{lamp/.style = {to path=\pgf@circ@lamp@path}}
+
+\tikzset{full diode/.style = {to path=\pgf@circ@fulldiode@path}}
+\tikzset{full Schottky diode/.style = {to path=\pgf@circ@fullsdiode@path}}
+\tikzset{full Zener diode/.style = {to path=\pgf@circ@fullzdiode@path}}
+\tikzset{full tunnel diode/.style = {to path=\pgf@circ@fulltdiode@path}}
+\tikzset{full photodiode/.style = {to path=\pgf@circ@fullpdiode@path}}
+\tikzset{full led/.style = {to path=\pgf@circ@fulllediode@path}}
+\tikzset{full varcap/.style = {to path=\pgf@circ@fullvarcap@path}}
+
+\tikzset{empty diode/.style = {to path=\pgf@circ@emptydiode@path}}
+\tikzset{empty Schottky diode/.style = {to path=\pgf@circ@emptysdiode@path}}
+\tikzset{empty Zener diode/.style = {to path=\pgf@circ@emptyzdiode@path}}
+\tikzset{empty tunnel diode/.style = {to path=\pgf@circ@emptytdiode@path}}
+\tikzset{empty photodiode/.style = {to path=\pgf@circ@emptypdiode@path}}
+\tikzset{empty led/.style = {to path=\pgf@circ@emptylediode@path}}
+\tikzset{empty varcap/.style = {to path=\pgf@circ@emptyvarcap@path}}
+
+	\tikzset{Schottky diode/.style = {\ifpgf@circuit@fulldiode full \else empty \fi Schottky diode}}
+	\tikzset{Zener diode/.style = {\ifpgf@circuit@fulldiode full \else empty \fi Zener diode}}
+	\tikzset{tunnel diode/.style = {\ifpgf@circuit@fulldiode full \else empty \fi tunnel diode}}
+	\tikzset{photodiode/.style = {\ifpgf@circuit@fulldiode full \else empty \fi photodiode}}
+	\tikzset{led/.style = {\ifpgf@circuit@fulldiode full \else empty \fi led}}
+	\tikzset{varcap/.style = {\ifpgf@circuit@fulldiode full \else empty \fi varcap}}
+	\tikzset{diode/.style = {\ifpgf@circuit@fulldiode full \else empty \fi diode}}
+
+\tikzset{closing switch/.style = {to path=\pgf@circ@cspst@path, l=#1}}
+\tikzset{opening switch/.style = {to path=\pgf@circ@ospst@path, l=#1}}
+
+\tikzset{ammeter/.style = {to path=\pgf@circ@ammeter@path}}
+\tikzset{voltmeter/.style = {to path=\pgf@circ@voltmeter@path}}
+
+% short forms
+\tikzset{vsource/.style = {voltage source = #1}}
+\tikzset{isource/.style = {current source = #1}}
+\tikzset{cisource/.style = {controlled current source = #1}}
+\tikzset{cvsource/.style = {controlled  voltage source = #1}}
+\tikzset{vsourcesin/.style = {sinusoidal  voltage source = #1}}
+\tikzset{isourcesin/.style = {sinusoidal current source = #1}}
+\tikzset{cisourcesin/.style = {controlled sinusoidal current source = #1}}
+\tikzset{cvsourcesin/.style = {controlled sinusoidal  voltage source = #1}}
+
+\tikzset{controlled vsource/.style = {controlled voltage source = #1}}
+\tikzset{controlled isource/.style = {controlled current source = #1}}
+\tikzset{controlled vsourcesin/.style = {controlled sinusoidal  voltage source = #1}}
+\tikzset{controlled isourcesin/.style = {controlled sinusoidal current source = #1}}
+
+\tikzset{R/.style= {resistor = #1}}
+\tikzset{pR/.style= {potentiometer = #1}}
+\tikzset{C/.style = {capacitor = #1}}
+\tikzset{L/.style = {inductor = #1}}
+\tikzset{V/.style = {voltage source = #1}}
+\tikzset{cV/.style = {controlled voltage source = #1}}
+\tikzset{sV/.style = {sinusoidal voltage source = #1}}
+\tikzset{csV/.style = {controlled sinusoidal voltage source = #1}}
+\def\pgf@temp#1{ 
+	\tikzset{V#1/.style = {voltage source, v#1=##1} } 
+	\tikzset{cV#1/.style = {controlled  voltage source, v#1=##1} } 
+	\tikzset{sV#1/.style = {sinusoidal  voltage source, v#1=##1} } 
+	\tikzset{csV#1/.style = {controlled sinusoidal voltage source, v#1=##1} } 
+}
+\pgf@temp{_>} \pgf@temp{_<} \pgf@temp{^>} \pgf@temp{^<} 
+\pgf@temp{>} \pgf@temp{<} \pgf@temp{^} \pgf@temp{_} 
+\tikzset{I/.style = {current source = #1}}
+\tikzset{cI/.style = {controlled current source = #1}}
+\tikzset{sI/.style = {sinusoidal current source = #1}}
+\tikzset{csI/.style = {controlled sinusoidal current source = #1}}
+\def\pgf@temp#1{ 
+	\tikzset{I#1/.style = {current source, i#1=##1} } 
+	\tikzset{cI#1/.style = {controlled current source, i#1=##1} } 
+	\tikzset{sI#1/.style = {sinusoidal current source, i#1=##1} } 
+	\tikzset{csI#1/.style = {controlled sinusoidal current source, i#1=##1} } 
+}
+\pgf@temp{_>} \pgf@temp{_<} \pgf@temp{^>} \pgf@temp{^<} 
+\pgf@temp{>_} \pgf@temp{<_} \pgf@temp{>^} \pgf@temp{<^} 
+\pgf@temp{>} \pgf@temp{<} \pgf@temp{^} \pgf@temp{_} 
+\tikzset{Do/.style = {empty diode}}
+\tikzset{tDo/.style = {empty tunnel diode}}
+\tikzset{zDo/.style = {empty Zener diode}}
+\tikzset{sDo/.style = {empty Schottky diode}}
+\tikzset{pDo/.style = {empty photodiode}}
+\tikzset{leDo/.style = {empty led}}
+\tikzset{VCo/.style = {empty varcap}}
+\tikzset{D*/.style = {full diode}}
+\tikzset{tD*/.style = {full tunnel diode}}
+\tikzset{zD*/.style = {full Zener diode}}
+\tikzset{sD*/.style = {full Schottky diode}}
+\tikzset{pD*/.style = {full photodiode}}
+\tikzset{leD*/.style = {full led}}
+\tikzset{VC*/.style = {full varcap}}
+\tikzset{D/.style = {diode}}
+\tikzset{tD/.style = {tunnel diode}}
+\tikzset{zD/.style = {Zener diode}}
+\tikzset{sD/.style = {Schottky diode}}
+\tikzset{pD/.style = {photodiode}}
+\tikzset{leD/.style = {led}}
+\tikzset{VC/.style = {varcap}}
+
+\tikzset{cspst/.style = {closing switch = #1}}
+\tikzset{ospst/.style = {opening switch = #1}}
+
+%% The environment
+
+\newenvironment{circuitikz}{
+\begin{tikzpicture}}{\end{tikzpicture}}
+
+\endinput
+

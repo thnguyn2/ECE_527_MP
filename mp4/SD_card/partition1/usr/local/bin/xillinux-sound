@@ -1,0 +1,33 @@
+#!/bin/bash
+  # If there's no indicator in the device tree for sound, just quit
+  [ -e /proc/device-tree/xillinux/audio ] || exit 0;
+
+  sleeptime=0;
+
+  while [ ! -c /dev/xillybus_audio ] ; do
+    if ((sleeptime++ > 4)) ; then
+      logger xillinux-sound.conf: /dev/xillybus_audio not found. Aborting
+      exit 1;
+    fi
+    sleep 1 ;
+  done
+
+  case "$(cat /proc/device-tree/xillinux/audio)" in
+      ssm2603)
+        /usr/local/bin/zybo_sound_setup.pl
+	;;
+      adau1761)
+        /usr/local/bin/zedboard_sound_setup.pl
+	;;
+      *)
+        logger xillinux-sound.conf: Unknown sound chip
+	exit 1;
+  esac
+  
+  while ! /usr/bin/pulseaudio -D ; do
+    if ((sleeptime++ > 4)) ; then
+      logger xillinux-sound.conf: Failed to start pulseaudio.
+      exit 1;
+    fi	
+    sleep 1 ;
+  done

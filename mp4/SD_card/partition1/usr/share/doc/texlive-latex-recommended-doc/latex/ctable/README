@@ -1,0 +1,46 @@
+This is version 1.15 of the ctable package
+
+ctable.sty provides commands to easily typeset centered or left or
+right aligned tables and (multiple-)figure floats, with footnotes.
+Instead of an environment, a command with 4 arguments is used; the
+first is optional and is used for key,value pairs generating
+variations on the defaults and offering a route for future
+extensions.
+
+License: LPPL
+
+major changes of v1.15 relative to v1.14):
+- removed whitespace before tables,
+- corrected marginpars in the documentation
+
+major changes of v1.14 relative to v1.13):
+- nosuper propagation to later tables prohibited
+- added option doinside
+- use of (obsolete) carom.sty for docs discontinued
+- empty labels not created
+- newcolumntype warnings removed
+- caption package not needed anymore
+
+major changes of v1.13 relative to v1.12):
+- cap option with empty argument will prohibit insertion in lot/lof
+- added option continued, for continuation tables: same number as 
+  previous table, ` (continued' added to caption.
+
+major changes of v1.12 relative to v1.11):
+- added option notespar, typesetting footnotes in a paragraph, one
+  after the other. Useful for tables with many short footnotes. 
+
+major changes of v1.11 relative to v1.10):
+ - added %'s at eol to prevent whitespace
+ - removed \xspace usage -caused overfull badness
+
+major changes of v1.10 relative to v1.9):
+ - Footnote markers in the text now stay superscript with nosuper.
+ - Documentation: added many examples for the options.
+ - Corrected some unwanted white space in captions.
+ - Caption package included to correct booktabs errors
+   in caption position. As a consequence:
+ - *Captionskip option redefined*: 0pt value now corresponds
+   to LaTeX defaults
+
+$Id: README,v 1.5 2009-09-16 23:10:43 wybo Exp $

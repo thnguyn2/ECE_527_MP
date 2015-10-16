@@ -1,0 +1,38 @@
+%% Package `pst-fractal.tex'
+%%
+%% Herbert Voss <voss _at_ pstricks.de> (Germany)
+%%
+%% 2007-04-05
+%%
+
+Save the files
+
+pst-fractal.sty 
+pst-fractal.tex
+
+in any place, where latex or any other TeX program will find it.
+
+pst-fractal uses the extended version of the keyval package. So
+be sure that you 
+- have installed xkeyval with the special pst-xkey
+  (CTAN: tex-archive/macros/latex/contrib/xkeyval/)
+- do not load another package after pst-fractal, which loads
+  the old keyval.sty or pst-key.tex, eg. pst-node or pst-plot.
+
+
+If you like to get the documentation file in another format run 
+
+latex pst-fractal-doc.tex
+bibtex pst-fractal.doc
+latex pst-fractal-doc.tex
+dvips pst-fractal-doc.dvi
+ps2pdf pst-fractal-doc.ps  (takes a long time!!!)
+
+to get a PostScript or PDF file. But pay attention, that the pst-fractal
+files are saved in the above mentioned way, before you run
+latex on the documentation file.
+
+The intermediate DVI file works only with viewers which can 
+interprete the embedded PostScript code.
+
+For another PDF output read the section from the documentation.

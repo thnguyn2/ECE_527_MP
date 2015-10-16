@@ -1,0 +1,12 @@
+\RequirePackage{pstricks}
+\ProvidesPackage{pst-func}[2008/03/21 package wrapper for 
+  pst-func.tex (hv)]
+\input{pst-func.tex}
+\ProvidesFile{pst-func.tex}
+  [\filedate\space v\fileversion\space `PST-func' (hv)]
+\IfFileExists{pst-func.pro}{%
+  \ProvidesFile{pst-func.pro}
+    [2008/03/22 v. 0.09,  PostScript prologue file (hv)]
+\@addtofilelist{pst-func.pro}}{}%
+\endinput
+%% $Id: pst-func.sty 55 2008-11-14 12:01:12Z herbert $

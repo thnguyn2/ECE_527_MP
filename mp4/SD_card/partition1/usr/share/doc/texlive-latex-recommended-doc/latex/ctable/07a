@@ -1,0 +1,6 @@
+\ctable{c}{
+  \tnote{First footnote}
+  \tnote[b]{Second footnote}
+}{\FL Table's\tmark\ first\tmark[b]\ row\LL}
+
+$Id: 07a,v 1.1 2007-07-22 15:30:56 wybo Exp $

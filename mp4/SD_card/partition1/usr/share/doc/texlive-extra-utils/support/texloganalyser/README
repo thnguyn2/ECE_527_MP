@@ -1,0 +1,8 @@
+This is texloganalyser (Perl script), version 0.6
+	Copyright 2006-2009 Thomas van Oudenhove
+	License: BSD
+
+Usage: texloganalyser [--help|--version|-efhioprstuvw] <TeX log>
+	Displays selective infos of LaTeX logs
+
+More documentation is available with `perldoc texloganalyser`.

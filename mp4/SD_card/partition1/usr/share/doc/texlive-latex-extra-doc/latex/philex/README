@@ -1,0 +1,10 @@
+Readme
+philex is a package for creating and cross-referencing named or numbered environments, such as equations, example sentences as in linguistics or philosophy, and named principles. philex offers dynamic cross-references not only the numbers of labeled environments, but also to short names of environments, and to the contents of those environment. Cross-referencing works forward as well as backward in the text. 
+
+philex builds upon Wolfgang Sternefelds linguex package, designed for example sentences in linguistics (as well as for adding phrase structure brackets and glosses). linguex provides the basic formatting, numbering in several levels, and naming capacity.
+
+philex adds some extra formatting and numbering options to linguex, over and above the cross-referencing features.
+
+philex.sty is to be placed in the LaTeX-folder of the texmf-tree. A short manual is provided, together with its .tex source. It requires the linguex package as well as the calc package.
+
+This material is subject to the LaTeX Project Public License. See http://www.ctan.org/tex-archive/help/Catalogue/licenses.lppl.html for the details of that license.

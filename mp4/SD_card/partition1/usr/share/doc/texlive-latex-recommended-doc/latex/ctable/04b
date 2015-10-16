@@ -1,0 +1,6 @@
+\ctable[
+    caption =  Caption,
+captionskip = -2ex,
+     botcap
+]{c}{}{\FL Table's first row\LL}
+$Id: 04b,v 1.2 2007-08-13 11:02:10 wybo Exp $

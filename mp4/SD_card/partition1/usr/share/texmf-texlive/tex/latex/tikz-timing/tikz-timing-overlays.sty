@@ -1,0 +1,62 @@
+%%
+%% This is file `tikz-timing-overlays.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% tikz-timing.dtx  (with options: `lib-overlays')
+%% 
+%% Copyright (C) 2009 by Martin Scharrer <martin@scharrer-online.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%% 
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008/05/04 or later.
+%% 
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is Martin Scharrer.
+%% 
+%% This work consists of the files tikz-timing.dtx, tikz-timing.ins
+%% and the derived file tikz-timing.sty.
+%% 
+\RequirePackage{svn-prov}[2009/05/03]
+\ProvidesPackageSVN[tikz-timing-overlays]
+  {$Id: tikz-timing.dtx 1158 2009-07-28 09:14:00Z martin $}
+  [v0.6a
+   TikZ-Timing Library for timing overlays]
+\DefineFileInfoSVN
+
+\tikztiming@defcode{O}{%
+  \@ifnextchar\relax
+    {\tikztiming@\relax}%
+    {\tikztiming@overlay}%
+}
+\def\tikztiming@overlay#1#2{%
+  \ifx\relax#1\relax
+    \tikztiming@output@flush
+    \def\next{\tikztiming@\relax}%
+  \else
+    \ifx\relax#2\relax
+      \def\next{\tikztiming@#1\relax}%
+    \else
+      \tikztiming@output@flush
+      \let\tikztiming@overlay@lastchar\lastchar
+      \tikztiming@addtostr{ node [timing/save] (timing@overlay@start) {} }%
+      \tikztiming@#1\relax
+      \tikztiming@output@flush
+      \let\lastchar\tikztiming@overlay@lastchar
+      \tikztiming@addtostr{ (timing@overlay@start) }%
+      \def\next{\tikztiming@#2}%
+    \fi
+  \fi
+  \next
+}
+\endinput
+%%
+%% End of file `tikz-timing-overlays.sty'.

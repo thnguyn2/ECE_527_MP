@@ -1,0 +1,19 @@
+Epspdf is an ps/eps/pdf converter which can be used both from the
+command-line and as a GUI application.
+
+Full documentation is available in the doc subdirectory.
+
+Windows users: you may prefer the Windows setup program available
+from http://tex.aanhet.net/epspdf/ or on CTAN as part of
+epspdf-extra. This setup program includes a minimal subset of Ruby/Tk,
+whereas this version requires separate installation of Ruby, and for
+the GUI also Tcl/Tk.
+
+Mac users: you may want to have a look at epspdf_app, a very simple
+AppleScript applet for starting epspdftk.rb by double-clicking. Also
+available from http://tex.aanhet.net/epspdf/ or on CTAN as part of
+epspdf-extra.
+
+The files in the texlive subdirectory are NOT useful for a
+standalone installation. They are wrapper scripts for
+embedding epspdf and epspdftk into TeX Live.
