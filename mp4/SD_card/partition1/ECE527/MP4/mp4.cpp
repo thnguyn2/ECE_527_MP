@@ -1,31 +1,28 @@
-//This source code implement the software part for MP4
-//Last updated: 10/20/2015
-//Authors: Tan H. Nguyen and Enyu Luo
-/********************************************************/
-/*                                                      */
-/* Base code: sample code 1				*/
-/* To keep this code simple and outwork indendent, we   */
-/* will stream each individual 8x8 block to the hardware*/ 
-/* do the calculation and store the stream the result back*/
-/* All the coefficient matrices will be stored on the   */
-/* Each streaming package will be 64 x 4 bytes with     */
-/* another 4 bytes indication type of operators to      */
-/* perform on the hardware                              */
-/********************************************************/
+//Tan Nguyen and Enyu Luo
+//Dept of Electrical and Computer Engineering
+//University of Illinois, Urbana-Champaign
 
-#include <iostream>
-#include <opencv2/highgui/highgui.cpp>
-#include <opencv2/opencv.hpp>
-#include <cmath>
+/*******************************************************/
+/*                                                      *
+/* ECE527 						*
+/* MP4							*
+/* Source code for image compression			*
+/*							*
+/*******************************************************/
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/time.h>
+#include<iostream>
+#include<opencv2/highgui/highgui.hpp>
+#include<opencv2/opencv.hpp>
+#include<cmath>
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/time.h>
 
 using namespace std;
 using namespace cv;
 
-//Quantization matrix - JPEG 50- May need to bring this matrix into the hardware
+//Quantization matrix - JPEG 50
 float stdQuantizationMatrix[8][8] = {
 {16, 11, 10, 16, 24, 40, 51, 61},
 {12, 12, 14, 19, 26, 58, 60, 55},
@@ -79,7 +76,7 @@ double timeMatdquant=0;
 //OpenCV Mat object to store images
 //Note: It's an overkill to use so many matrix objects, this is just for clarity and readability
 Mat srcImg;
-Mat img; //This is the padded image to make sue the image dimension is a multiple of 8
+Mat img;
 Mat imgSP;
 Mat dctBlock;
 Mat freqImg;
@@ -342,6 +339,4 @@ waitKey(0);
 return 1;
 
 }
-
-
 
