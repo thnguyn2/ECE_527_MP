@@ -143,7 +143,7 @@ else
 cout<<"Source image size: "<<srcImgWidth<<"X"<<srcImgHeight<<endl;
 
 //Pad source image with 0 and resize
-copyMakeBorder(srcImg, img, 0, srcImgHeight-imgHeight, 0, srcImgWidth-imgWidth, 0);
+copyMakeBorder(srcImg, img, 0, srcImgHeight-srcImgHeight, 0, srcImgWidth-srcImgWidth, 0);
 
 cout<<"Image resized to: "<<imgWidth<<"X"<<imgHeight<<endl;
 
