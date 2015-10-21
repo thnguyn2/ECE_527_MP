@@ -19,6 +19,11 @@
 #include<stdlib.h>
 #include<sys/time.h>
 
+//---Modified from sample code----
+#include<fstream>//For input and output files handling...
+//---End of modification---
+
+
 using namespace std;
 using namespace cv;
 
