@@ -272,19 +272,6 @@ module xillydemo
       .empty(user_r_read_32_empty)
       );
 
-/*
-     fifo_32x4096 fifo_32
-     (
-      .clk(bus_clk),
-      .srst(!user_w_write_32_open && !user_r_read_32_open),
-      .din(user_w_write_32_data),
-      .wr_en(user_w_write_32_wren),
-      .rd_en(user_r_read_32_rden),
-      .dout(user_r_read_32_data),
-      .full(user_w_write_32_full),
-      .empty(user_r_read_32_empty)
-      );
-*/
 
    assign  user_r_read_32_eof = 0;
    
