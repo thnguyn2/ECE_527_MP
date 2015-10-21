@@ -45,6 +45,7 @@ Mat quant = Mat(8,8,CV_32F,&stdQuantizationMatrix);
 // Pass the image to compress and decompress
 // Only 1 argument
 // 
+
 int main( int argc, char **argv)
 {
 
@@ -97,6 +98,12 @@ int imgHeight;
 //Compression data
 long int compressionCount=0;
 float compressionRatio;
+
+// ---Modified code for streaming data over the bus--
+std::ofstream opfile ("temp.txt", ofstream::out|ios::binary);
+std::ifstream ipfile ("temp.txt", ifstream::in|ios::binary);
+Mat rcvBlock (8,8,CV_32F,0.0);//Buffer for data to be sent
+//---------------------------------------------------
 
 if(argc < 2)
 {
@@ -183,7 +190,13 @@ for(int i=0; i<imgSP.rows; i+=8)
         //Time operation
         gettimeofday(&tdctStart,NULL);
 
-            dct(block,dctBlock);
+	//---Modified source code for sending data over the xillybus--
+	opfile.write(reinterpret_cast<char*>(block.data),sizeof(float)*64*block.channels());
+	ipfile.read(reinterpret_cast<char*>(rcvBlock.data),sizeof(float)*64*block.channels());//Test data read back
+	//--End of modification--
+
+	dct(rcvBlock,dctBlock);//Check to see if the data is sent back correctly or not
+	//            dct(block,dctBlock);
 
         gettimeofday(&tdctEnd, NULL);
         timersub(&tdctEnd,&tdctStart,&tdctDiff);
