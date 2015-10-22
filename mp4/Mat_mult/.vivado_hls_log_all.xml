@@ -12,11 +12,13 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [LIC-102] License feature [VIVADO_HLS] is expiring in 5 days." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T10:22:42.139-0700" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'MAT_Stream/op_type' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T21:00:34.071-0700" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'MAT_Stream/out_arr' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T21:00:34.065-0700" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'MAT_Stream/in_arr' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T21:00:34.053-0700" type="Warning"/>
+        <logs message="@W [SYNCHK-77] The top function 'MAT_Stream' (Mat_mult/matrixmath.c:5) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T21:00:33.913-0700" type="Warning"/>
+        <logs message="@W [LIC-102] License feature [VIVADO_HLS] is expiring in 5 days." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T21:00:32.673-0700" type="Warning"/>
       </synLog>
-      <simLog>
-        <logs message="@W [LIC-102] License feature [VIVADO_HLS] is expiring in 5 days." projectName="Mat_mult" solutionName="solution1" date="2015-10-21T10:22:58.593-0700" type="Warning"/>
-      </simLog>
+      <simLog/>
       <mgLog/>
       <packageLog/>
       <csimLog/>

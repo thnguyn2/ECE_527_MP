@@ -1,12 +1,12 @@
 
-set TopModule "MAT_Multiply"
+set TopModule "MAT_Stream"
 set ClockPeriod "10.000000"
-set ClockList {ap_clk}
+set ClockList {}
 set multiClockList {}
 set PortClockMap {}
-set CombLogicFlag 0
+set CombLogicFlag 1
 set PipelineFlag 0
-set DataflowTaskPipelineFlag  1
+set DataflowTaskPipelineFlag  0
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
@@ -43,12 +43,12 @@ set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c ../matrixmath.c}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/solution1.directive}
-set TBFiles {verilog ../matrixmath_test.c bc ../matrixmath_test.c vhdl ../matrixmath_test.c sc ../matrixmath_test.c cas ../matrixmath_test.c c {}}
+set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
-set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set PlatformFiles {{DefaultPlatform {xilinx/zynq/zynq xilinx/zynq/zynq_fpv6}}}
 set DefaultPlatform "DefaultPlatform"

@@ -1,122 +1,56 @@
 @I [LIC-101] Checked out feature [VIVADO_HLS]
 @W [LIC-102] License feature [VIVADO_HLS] is expiring in 5 days.
 @I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.1/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-66-generic) on Wed Oct 21 12:22:58 CDT 2015
+            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-66-generic) on Wed Oct 21 23:00:32 CDT 2015
             in directory '/home/parallels/source_code/ECE_527_MP/mp4'
 @I [HLS-10] Opening project '/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult'.
+@I [HLS-10] Adding design file 'Mat_mult/matrixmath.c' to the project
+@I [HLS-10] Adding design file 'Mat_mult/matrixmath.h' to the project
 @I [HLS-10] Opening solution '/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1'.
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
-@I [SIM-47] Using XSIM for RTL simulation.
-@I [SIM-14] Instrumenting C test bench ...
-   Build using "/opt/Xilinx/Vivado_HLS/2015.1/lnx64/tools/gcc/bin/g++"
-   Compiling apatb_MAT_Multiply.cpp
-   Compiling(apcc) matrixmath.c_pre.c.tb.c
-@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.1/bin/unwrapped/lnx64.o/apcc'
-            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-66-generic) on Wed Oct 21 12:23:01 CDT 2015
-            in directory '/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/wrapc'
-clang: warning: argument unused during compilation: '-fno-builtin-isinf'
-clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-@I [APCC-1] APCC is done.
-   Compiling(apcc) matrixmath_test.c_pre.c.tb.c
-@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.1/bin/unwrapped/lnx64.o/apcc'
-            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-66-generic) on Wed Oct 21 12:23:01 CDT 2015
-            in directory '/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/wrapc'
-clang: warning: argument unused during compilation: '-fno-builtin-isinf'
-clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-@I [APCC-1] APCC is done.
-   Generating cosim.tv.exe
-@I [SIM-302] Starting C TB testing ... 
-Testing dimensions set Row C = 10, Col C = 10, Col A =10: PASSED...
-Testing dimensions set Row C = 10, Col C = 10, Col A =50: PASSED...
-Testing dimensions set Row C = 10, Col C = 10, Col A =50: PASSED...
-Testing dimensions set Row C = 10, Col C = 50, Col A =10: PASSED...
-Testing dimensions set Row C = 10, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 10, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 10, Col C = 50, Col A =10: PASSED...
-Testing dimensions set Row C = 10, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 10, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 10, Col A =10: PASSED...
-Testing dimensions set Row C = 50, Col C = 10, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 10, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =10: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =10: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 10, Col A =10: PASSED...
-Testing dimensions set Row C = 50, Col C = 10, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 10, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =10: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =10: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-Testing dimensions set Row C = 50, Col C = 50, Col A =50: PASSED...
-@I [SIM-333] Generating C post check test bench ...
-@I [SIM-12] Generating RTL test bench ...
-@I [SIM-323] Starting verilog simulation. 
-@I [SIM-15] Starting XSIM ...
-Vivado Simulator 2015.1
-Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2015.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_MAT_Multiply_top -prj MAT_Multiply.prj --lib ieee_proposed=./ieee_proposed -s MAT_Multiply 
-WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
-    LIBRARY_PATH
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/MAT_Multiply_mul_32s_32s_32_6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MAT_Multiply_mul_32s_32s_32_6_MulnS_0
-INFO: [VRFC 10-311] analyzing module MAT_Multiply_mul_32s_32s_32_6
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/AESL_automem_C.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_C
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/MAT_Multiply.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_MAT_Multiply_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/MAT_Multiply_B_cached.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MAT_Multiply_B_cached_ram
-INFO: [VRFC 10-311] analyzing module MAT_Multiply_B_cached
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/MAT_Multiply_A_cached_row.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MAT_Multiply_A_cached_row_ram
-INFO: [VRFC 10-311] analyzing module MAT_Multiply_A_cached_row
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/MAT_Multiply.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MAT_Multiply
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_B
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_A
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.MAT_Multiply_A_cached_row_ram
-Compiling module xil_defaultlib.MAT_Multiply_A_cached_row(DataWi...
-Compiling module xil_defaultlib.MAT_Multiply_B_cached_ram
-Compiling module xil_defaultlib.MAT_Multiply_B_cached(DataWidth=...
-Compiling module xil_defaultlib.MAT_Multiply_mul_32s_32s_32_6_Mu...
-Compiling module xil_defaultlib.MAT_Multiply_mul_32s_32s_32_6(ID...
-Compiling module xil_defaultlib.MAT_Multiply
-Compiling module xil_defaultlib.AESL_automem_A
-Compiling module xil_defaultlib.AESL_automem_B
-Compiling module xil_defaultlib.AESL_automem_C
-Compiling module xil_defaultlib.apatb_MAT_Multiply_top
-Built simulation snapshot MAT_Multiply
-
-****** Webtalk v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/xsim.dir/MAT_Multiply/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/sim/verilog/xsim.dir/MAT_Multiply/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Oct 21 12:23:08 2015. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Wed Oct 21 12:23:08 2015...
-
-****** xsim v2015.1 (64-bit)
-  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
-  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-
-source xsim.dir/MAT_Multiply/xsim_script.tcl
-# xsim {MAT_Multiply} -maxdeltaid 10000 -tclbatch {MAT_Multiply.tcl}
-Vivado Simulator 2015.1
-Time resolution is 1 ps
-source MAT_Multiply.tcl
-## run all
+@I [HLS-10] Analyzing design file 'Mat_mult/matrixmath.c' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@W [SYNCHK-77] The top function 'MAT_Stream' (Mat_mult/matrixmath.c:5) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+@I [SYNCHK-10] 0 error(s), 1 warning(s).
+@I [HLS-111] Elapsed time: 0.44993 seconds; current memory usage: 51.9 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'MAT_Stream' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'MAT_Stream' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.007979 seconds; current memory usage: 52.1 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'MAT_Stream' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.002213 seconds; current memory usage: 52.1 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'MAT_Stream' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'MAT_Stream/in_arr' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'MAT_Stream/out_arr' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'MAT_Stream/op_type' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on function 'MAT_Stream' to 'ap_ctrl_hs'.
+@W [RTGEN-101] Port 'MAT_Stream/in_arr' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+@W [RTGEN-101] Port 'MAT_Stream/out_arr' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+@W [RTGEN-101] Port 'MAT_Stream/op_type' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+@I [RTGEN-100] Finished creating RTL model for 'MAT_Stream'.
+@I [HLS-111] Elapsed time: 0.002725 seconds; current memory usage: 52.2 MB.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'MAT_Stream'.
+@I [WVHDL-304] Generating RTL VHDL for 'MAT_Stream'.
+@I [WVLOG-307] Generating RTL Verilog for 'MAT_Stream'.
+@I [HLS-112] Total elapsed time: 1.768 seconds; peak memory usage: 52.2 MB.
+@I [LIC-101] Checked in feature [VIVADO_HLS]

@@ -1,4 +1,1 @@
-MAT_Multiply_mul_32s_32s_32_6
-MAT_Multiply_A_cached_row
-MAT_Multiply_B_cached
-MAT_Multiply
+MAT_Stream
