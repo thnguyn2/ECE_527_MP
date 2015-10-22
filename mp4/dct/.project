@@ -42,6 +42,11 @@
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/coeff.h</name>
+			<type>1</type>
+			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/coeff.h</location>
+		</link>
+		<link>
 			<name>source/dct.c</name>
 			<type>1</type>
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/dct.c</location>
