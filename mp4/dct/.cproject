@@ -29,6 +29,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include"/>
+									<listOptionValue builtIn="false" value="Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/win64/tools/systemc/include"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1881370571" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
@@ -46,6 +47,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include"/>
+									<listOptionValue builtIn="false" value="Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/win64/tools/systemc/include"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.481435554" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
@@ -113,6 +115,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include"/>
+									<listOptionValue builtIn="false" value="Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/win64/tools/systemc/include"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1928410204" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -125,6 +128,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/include"/>
+									<listOptionValue builtIn="false" value="Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2015.1/win64/tools/systemc/include"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1774130815" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
