@@ -100,9 +100,12 @@ long int compressionCount=0;
 float compressionRatio;
 
 // ---Modified code for streaming data over the bus--
-std::ofstream opfile ("temp.txt", ofstream::out|ios::binary);
-std::ifstream ipfile ("temp.txt", ifstream::in|ios::binary);
-Mat rcvBlock (8,8,CV_32F,0.0);//Buffer for data to be sent
+std::ofstream opfile;
+opfile.open  ("temp.txt", ofstream::out|ios::binary);
+std::ifstream ipfile;
+ipfile.open  ("temp.txt", ifstream::in|ios::binary);
+unsigned char rcvBuf[sizeof(float)*64];//Buffer for the received data
+Mat rcvBlock (8,8,CV_32F,rcvBuf);//Image defined on the top of the buffer
 //---------------------------------------------------
 
 if(argc < 2)
@@ -179,7 +182,7 @@ for(int i=0; i<imgSP.rows; i+=8)
         for(int n=0; n<8; n++)
         {
             block.at<float>(m,n) = imgSP.at<float>(i+m,j+n);
-        }
+	}
         gettimeofday(&tmatdctEnd, NULL);
         timersub(&tmatdctEnd,&tmatdctStart,&tmatdctDiff);
         timeMatdct += (tmatdctDiff.tv_sec*1000000.00) + tmatdctDiff.tv_usec;
@@ -192,7 +195,8 @@ for(int i=0; i<imgSP.rows; i+=8)
 
 	//---Modified source code for sending data over the xillybus--
 	opfile.write(reinterpret_cast<char*>(block.data),sizeof(float)*64*block.channels());
-	ipfile.read(reinterpret_cast<char*>(rcvBlock.data),sizeof(float)*64*block.channels());//Test data read back
+	opfile.flush(); //Make sure the data is flushed-Important to make sure that the data is being sent
+	ipfile.read(reinterpret_cast<char*>(rcvBuf),sizeof(float)*64);//Test data read back
 	//--End of modification--
 
 	dct(rcvBlock,dctBlock);//Check to see if the data is sent back correctly or not
