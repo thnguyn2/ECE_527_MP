@@ -1,0 +1,24 @@
+@W [LIC-102] Failed to get a license [VIVADO_HLS].
+@W [LIC-102] Failed to get a license [ap_opencl].
+@W [LIC-102] Failed to get a license [HLS].
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.1/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'root' on host 'ubuntu' (Linux_x86_64 version 3.13.0-66-generic) on Wed Oct 21 11:57:03 CDT 2015
+            in directory '/home/parallels/source_code/ECE_527_MP/mp4/SD_card'
+@I [HLS-10] Opening project '/home/parallels/source_code/ECE_527_MP/mp4/SD_card/Matrix_multiplication'.
+@I [HLS-10] Adding design file 'Matrix_multiplication/matrixmath.c' to the project
+@I [HLS-10] Adding design file 'Matrix_multiplication/matrixmath.h' to the project
+@I [HLS-10] Adding test bench file 'Matrix_multiplication/matrixmath_test.c' to the project
+@I [HLS-10] Opening solution '/home/parallels/source_code/ECE_527_MP/mp4/SD_card/Matrix_multiplication/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@E [HLS-72] License checkout unsuccessful. Make sure that a license is accessible or specify an appropriate one through an environment variable.
+command 'ap_source' returned error code
+    while executing
+"source /home/parallels/source_code/ECE_527_MP/mp4/SD_card/Matrix_multiplication/solution1/csynth.tcl"
+    invoked from within
+"hls::main /home/parallels/source_code/ECE_527_MP/mp4/SD_card/Matrix_multiplication/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
