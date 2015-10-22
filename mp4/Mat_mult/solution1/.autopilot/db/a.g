@@ -1,4 +1,0 @@
-#!/bin/sh
-lli=${LLVMINTERP-lli}
-exec $lli \
-    /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/.autopilot/db/a.g.bc ${1+"$@"}

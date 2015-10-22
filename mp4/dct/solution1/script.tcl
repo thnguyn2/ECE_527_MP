@@ -4,6 +4,7 @@
 ## Copyright (C) 2015 Xilinx Inc. All rights reserved.
 ############################################################
 open_project dct
+set_top DCT
 add_files dct/coeff.h
 add_files dct/dct.c
 add_files dct/dct.h
