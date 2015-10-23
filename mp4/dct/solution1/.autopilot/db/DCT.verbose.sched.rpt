@@ -1,0 +1,225 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT'
+================================================================
+* Date:           Thu Oct 22 14:03:37 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.58|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+-------+------+-------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    |  min |  max  |  min |  max  |   Type  |
+    +------+-------+------+-------+---------+
+    |  9509|  15653|  9510|  15654|   none  |
+    +------+-------+------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!cond)
+	5  / (cond)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+5 --> 
+	6  / true
+6 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 2.00ns
+ST_1: stg_7 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %X) nounwind, !map !7
+
+ST_1: stg_8 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !map !13
+
+ST_1: stg_9 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %Y) nounwind, !map !19
+
+ST_1: stg_10 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
+
+ST_1: function_read [1/1] 0.00ns
+:4  %function_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %function_r) nounwind
+
+ST_1: temp [1/1] 0.00ns
+:5  %temp = alloca [64 x float], align 4
+
+ST_1: cond [1/1] 2.00ns
+:6  %cond = icmp eq i8 %function_read, 1
+
+ST_1: stg_14 [1/1] 0.00ns
+:7  br i1 %cond, label %1, label %2
+
+ST_1: stg_15 [2/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture @T, [64 x float]* nocapture %X, [64 x float]* nocapture %temp) nounwind
+
+ST_1: stg_16 [2/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture @Tinv, [64 x float]* nocapture %X, [64 x float]* nocapture %temp) nounwind
+
+
+ <State 2>: 0.00ns
+ST_2: stg_17 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture @T, [64 x float]* nocapture %X, [64 x float]* nocapture %temp) nounwind
+
+
+ <State 3>: 0.00ns
+ST_3: stg_18 [2/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
+
+
+ <State 4>: 0.00ns
+ST_4: stg_19 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
+
+ST_4: stg_20 [1/1] 0.00ns
+:2  br label %3
+
+ST_4: stg_21 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
+
+ST_4: stg_22 [1/1] 0.00ns
+:2  br label %3
+
+ST_4: stg_23 [1/1] 0.00ns
+:0  ret void
+
+
+ <State 5>: 0.00ns
+ST_5: stg_24 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture @Tinv, [64 x float]* nocapture %X, [64 x float]* nocapture %temp) nounwind
+
+
+ <State 6>: 0.00ns
+ST_6: stg_25 [2/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

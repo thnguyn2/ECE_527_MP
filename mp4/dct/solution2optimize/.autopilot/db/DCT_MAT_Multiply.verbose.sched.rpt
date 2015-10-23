@@ -1,0 +1,1109 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_MAT_Multiply'
+================================================================
+* Date:           Thu Oct 22 22:21:33 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.64|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  192|  192|  111|  111| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 5.41ns
+ST_1: A_7_6_read_1 [1/1] 1.04ns
+codeRepl:0  %A_7_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_6_read)
+
+ST_1: A_7_5_read_1 [1/1] 1.04ns
+codeRepl:1  %A_7_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_5_read)
+
+ST_1: A_7_4_read_1 [1/1] 1.04ns
+codeRepl:2  %A_7_4_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_4_read)
+
+ST_1: A_7_3_read_1 [1/1] 1.04ns
+codeRepl:3  %A_7_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_3_read)
+
+ST_1: A_7_2_read_1 [1/1] 1.04ns
+codeRepl:4  %A_7_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_2_read)
+
+ST_1: A_7_1_read_1 [1/1] 1.04ns
+codeRepl:5  %A_7_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_1_read)
+
+ST_1: A_7_0_read_1 [1/1] 1.04ns
+codeRepl:6  %A_7_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_7_0_read)
+
+ST_1: A_6_7_read_1 [1/1] 1.04ns
+codeRepl:7  %A_6_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_7_read)
+
+ST_1: A_6_5_read_1 [1/1] 1.04ns
+codeRepl:8  %A_6_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_5_read)
+
+ST_1: A_6_4_read_1 [1/1] 1.04ns
+codeRepl:9  %A_6_4_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_4_read)
+
+ST_1: A_6_3_read_1 [1/1] 1.04ns
+codeRepl:10  %A_6_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_3_read)
+
+ST_1: A_6_2_read_1 [1/1] 1.04ns
+codeRepl:11  %A_6_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_2_read)
+
+ST_1: A_6_1_read_1 [1/1] 1.04ns
+codeRepl:12  %A_6_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_1_read)
+
+ST_1: A_6_0_read_1 [1/1] 1.04ns
+codeRepl:13  %A_6_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_6_0_read)
+
+ST_1: A_5_7_read_1 [1/1] 1.04ns
+codeRepl:14  %A_5_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_7_read)
+
+ST_1: A_5_6_read_1 [1/1] 1.04ns
+codeRepl:15  %A_5_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_6_read)
+
+ST_1: A_5_4_read_1 [1/1] 1.04ns
+codeRepl:16  %A_5_4_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_4_read)
+
+ST_1: A_5_3_read_1 [1/1] 1.04ns
+codeRepl:17  %A_5_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_3_read)
+
+ST_1: A_5_2_read_1 [1/1] 1.04ns
+codeRepl:18  %A_5_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_2_read)
+
+ST_1: A_5_1_read_1 [1/1] 1.04ns
+codeRepl:19  %A_5_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_1_read)
+
+ST_1: A_5_0_read_1 [1/1] 1.04ns
+codeRepl:20  %A_5_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_5_0_read)
+
+ST_1: A_4_7_read_1 [1/1] 1.04ns
+codeRepl:21  %A_4_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_4_7_read)
+
+ST_1: A_4_6_read_1 [1/1] 1.04ns
+codeRepl:22  %A_4_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_4_6_read)
+
+ST_1: A_4_5_read_1 [1/1] 1.04ns
+codeRepl:23  %A_4_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_4_5_read)
+
+ST_1: A_4_3_read_1 [1/1] 1.04ns
+codeRepl:24  %A_4_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_4_3_read)
+
+ST_1: A_4_2_read_1 [1/1] 1.04ns
+codeRepl:25  %A_4_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_4_2_read)
+
+ST_1: A_4_1_read_1 [1/1] 1.04ns
+codeRepl:26  %A_4_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_4_1_read)
+
+ST_1: A_3_7_read_1 [1/1] 1.04ns
+codeRepl:27  %A_3_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_7_read)
+
+ST_1: A_3_6_read_1 [1/1] 1.04ns
+codeRepl:28  %A_3_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_6_read)
+
+ST_1: A_3_5_read_1 [1/1] 1.04ns
+codeRepl:29  %A_3_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_5_read)
+
+ST_1: A_3_4_read_1 [1/1] 1.04ns
+codeRepl:30  %A_3_4_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_4_read)
+
+ST_1: A_3_2_read_1 [1/1] 1.04ns
+codeRepl:31  %A_3_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_2_read)
+
+ST_1: A_3_1_read_1 [1/1] 1.04ns
+codeRepl:32  %A_3_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_1_read)
+
+ST_1: A_3_0_read_1 [1/1] 1.04ns
+codeRepl:33  %A_3_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_3_0_read)
+
+ST_1: A_2_7_read_1 [1/1] 1.04ns
+codeRepl:34  %A_2_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_7_read)
+
+ST_1: A_2_6_read_1 [1/1] 1.04ns
+codeRepl:35  %A_2_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_6_read)
+
+ST_1: A_2_5_read_1 [1/1] 1.04ns
+codeRepl:36  %A_2_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_5_read)
+
+ST_1: A_2_4_read_1 [1/1] 1.04ns
+codeRepl:37  %A_2_4_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_4_read)
+
+ST_1: A_2_3_read_1 [1/1] 1.04ns
+codeRepl:38  %A_2_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_3_read)
+
+ST_1: A_2_1_read_1 [1/1] 1.04ns
+codeRepl:39  %A_2_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_1_read)
+
+ST_1: A_2_0_read_1 [1/1] 1.04ns
+codeRepl:40  %A_2_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_2_0_read)
+
+ST_1: A_1_7_read_1 [1/1] 1.04ns
+codeRepl:41  %A_1_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_7_read)
+
+ST_1: A_1_6_read_1 [1/1] 1.04ns
+codeRepl:42  %A_1_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_6_read)
+
+ST_1: A_1_5_read_1 [1/1] 1.04ns
+codeRepl:43  %A_1_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_5_read)
+
+ST_1: A_1_4_read_1 [1/1] 1.04ns
+codeRepl:44  %A_1_4_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_4_read)
+
+ST_1: A_1_3_read_1 [1/1] 1.04ns
+codeRepl:45  %A_1_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_3_read)
+
+ST_1: A_1_2_read_1 [1/1] 1.04ns
+codeRepl:46  %A_1_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_2_read)
+
+ST_1: A_1_0_read_1 [1/1] 1.04ns
+codeRepl:47  %A_1_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_1_0_read)
+
+ST_1: A_0_7_read_1 [1/1] 1.04ns
+codeRepl:48  %A_0_7_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_0_7_read)
+
+ST_1: A_0_6_read_1 [1/1] 1.04ns
+codeRepl:49  %A_0_6_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_0_6_read)
+
+ST_1: A_0_5_read_1 [1/1] 1.04ns
+codeRepl:50  %A_0_5_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_0_5_read)
+
+ST_1: A_0_3_read_1 [1/1] 1.04ns
+codeRepl:51  %A_0_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_0_3_read)
+
+ST_1: A_0_2_read_1 [1/1] 1.04ns
+codeRepl:52  %A_0_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_0_2_read)
+
+ST_1: A_0_1_read_1 [1/1] 1.04ns
+codeRepl:53  %A_0_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %A_0_1_read)
+
+ST_1: A_2_2134 [1/1] 0.00ns
+codeRepl:54  %A_2_2134 = alloca float, align 4
+
+ST_1: A_4_5133 [1/1] 0.00ns
+codeRepl:55  %A_4_5133 = alloca float, align 4
+
+ST_1: A_5_5132 [1/1] 0.00ns
+codeRepl:56  %A_5_5132 = alloca float, align 4
+
+ST_1: A_2_3131 [1/1] 0.00ns
+codeRepl:57  %A_2_3131 = alloca float, align 4
+
+ST_1: A_3_3130 [1/1] 0.00ns
+codeRepl:58  %A_3_3130 = alloca float, align 4
+
+ST_1: A_3_4129 [1/1] 0.00ns
+codeRepl:59  %A_3_4129 = alloca float, align 4
+
+ST_1: A_3_5128 [1/1] 0.00ns
+codeRepl:60  %A_3_5128 = alloca float, align 4
+
+ST_1: A_2_7127 [1/1] 0.00ns
+codeRepl:61  %A_2_7127 = alloca float, align 4
+
+ST_1: A_1_0126 [1/1] 0.00ns
+codeRepl:62  %A_1_0126 = alloca float, align 4
+
+ST_1: A_1_6125 [1/1] 0.00ns
+codeRepl:63  %A_1_6125 = alloca float, align 4
+
+ST_1: A_3_7124 [1/1] 0.00ns
+codeRepl:64  %A_3_7124 = alloca float, align 4
+
+ST_1: A_3_0123 [1/1] 0.00ns
+codeRepl:65  %A_3_0123 = alloca float, align 4
+
+ST_1: A_2_6122 [1/1] 0.00ns
+codeRepl:66  %A_2_6122 = alloca float, align 4
+
+ST_1: A_7_0121 [1/1] 0.00ns
+codeRepl:67  %A_7_0121 = alloca float, align 4
+
+ST_1: A_6_1120 [1/1] 0.00ns
+codeRepl:68  %A_6_1120 = alloca float, align 4
+
+ST_1: A_1_3119 [1/1] 0.00ns
+codeRepl:69  %A_1_3119 = alloca float, align 4
+
+ST_1: A_7_1118 [1/1] 0.00ns
+codeRepl:70  %A_7_1118 = alloca float, align 4
+
+ST_1: A_3_2117 [1/1] 0.00ns
+codeRepl:71  %A_3_2117 = alloca float, align 4
+
+ST_1: A_7_6116 [1/1] 0.00ns
+codeRepl:72  %A_7_6116 = alloca float, align 4
+
+ST_1: A_2_1115 [1/1] 0.00ns
+codeRepl:73  %A_2_1115 = alloca float, align 4
+
+ST_1: A_3_1114 [1/1] 0.00ns
+codeRepl:74  %A_3_1114 = alloca float, align 4
+
+ST_1: A_7_4113 [1/1] 0.00ns
+codeRepl:75  %A_7_4113 = alloca float, align 4
+
+ST_1: A_0_4112 [1/1] 0.00ns
+codeRepl:76  %A_0_4112 = alloca float, align 4
+
+ST_1: A_4_6111 [1/1] 0.00ns
+codeRepl:77  %A_4_6111 = alloca float, align 4
+
+ST_1: A_2_4110 [1/1] 0.00ns
+codeRepl:78  %A_2_4110 = alloca float, align 4
+
+ST_1: A_7_3109 [1/1] 0.00ns
+codeRepl:79  %A_7_3109 = alloca float, align 4
+
+ST_1: A_0_3108 [1/1] 0.00ns
+codeRepl:80  %A_0_3108 = alloca float, align 4
+
+ST_1: A_7_2107 [1/1] 0.00ns
+codeRepl:81  %A_7_2107 = alloca float, align 4
+
+ST_1: A_0_2106 [1/1] 0.00ns
+codeRepl:82  %A_0_2106 = alloca float, align 4
+
+ST_1: A_6_0105 [1/1] 0.00ns
+codeRepl:83  %A_6_0105 = alloca float, align 4
+
+ST_1: A_5_2104 [1/1] 0.00ns
+codeRepl:84  %A_5_2104 = alloca float, align 4
+
+ST_1: A_6_7103 [1/1] 0.00ns
+codeRepl:85  %A_6_7103 = alloca float, align 4
+
+ST_1: A_6_5102 [1/1] 0.00ns
+codeRepl:86  %A_6_5102 = alloca float, align 4
+
+ST_1: A_1_7101 [1/1] 0.00ns
+codeRepl:87  %A_1_7101 = alloca float, align 4
+
+ST_1: A_6_3100 [1/1] 0.00ns
+codeRepl:88  %A_6_3100 = alloca float, align 4
+
+ST_1: A_5_799 [1/1] 0.00ns
+codeRepl:89  %A_5_799 = alloca float, align 4
+
+ST_1: A_4_498 [1/1] 0.00ns
+codeRepl:90  %A_4_498 = alloca float, align 4
+
+ST_1: A_5_497 [1/1] 0.00ns
+codeRepl:91  %A_5_497 = alloca float, align 4
+
+ST_1: A_2_596 [1/1] 0.00ns
+codeRepl:92  %A_2_596 = alloca float, align 4
+
+ST_1: A_4_295 [1/1] 0.00ns
+codeRepl:93  %A_4_295 = alloca float, align 4
+
+ST_1: A_4_394 [1/1] 0.00ns
+codeRepl:94  %A_4_394 = alloca float, align 4
+
+ST_1: A_5_393 [1/1] 0.00ns
+codeRepl:95  %A_5_393 = alloca float, align 4
+
+ST_1: A_0_592 [1/1] 0.00ns
+codeRepl:96  %A_0_592 = alloca float, align 4
+
+ST_1: A_0_091 [1/1] 0.00ns
+codeRepl:97  %A_0_091 = alloca float, align 4
+
+ST_1: A_0_690 [1/1] 0.00ns
+codeRepl:98  %A_0_690 = alloca float, align 4
+
+ST_1: A_0_189 [1/1] 0.00ns
+codeRepl:99  %A_0_189 = alloca float, align 4
+
+ST_1: A_1_488 [1/1] 0.00ns
+codeRepl:100  %A_1_488 = alloca float, align 4
+
+ST_1: A_2_087 [1/1] 0.00ns
+codeRepl:101  %A_2_087 = alloca float, align 4
+
+ST_1: A_7_586 [1/1] 0.00ns
+codeRepl:102  %A_7_586 = alloca float, align 4
+
+ST_1: A_0_785 [1/1] 0.00ns
+codeRepl:103  %A_0_785 = alloca float, align 4
+
+ST_1: A_4_784 [1/1] 0.00ns
+codeRepl:104  %A_4_784 = alloca float, align 4
+
+ST_1: A_6_483 [1/1] 0.00ns
+codeRepl:105  %A_6_483 = alloca float, align 4
+
+ST_1: A_1_582 [1/1] 0.00ns
+codeRepl:106  %A_1_582 = alloca float, align 4
+
+ST_1: A_5_681 [1/1] 0.00ns
+codeRepl:107  %A_5_681 = alloca float, align 4
+
+ST_1: A_3_680 [1/1] 0.00ns
+codeRepl:108  %A_3_680 = alloca float, align 4
+
+ST_1: A_7_779 [1/1] 0.00ns
+codeRepl:109  %A_7_779 = alloca float, align 4
+
+ST_1: A_1_178 [1/1] 0.00ns
+codeRepl:110  %A_1_178 = alloca float, align 4
+
+ST_1: A_1_277 [1/1] 0.00ns
+codeRepl:111  %A_1_277 = alloca float, align 4
+
+ST_1: A_4_076 [1/1] 0.00ns
+codeRepl:112  %A_4_076 = alloca float, align 4
+
+ST_1: A_6_675 [1/1] 0.00ns
+codeRepl:113  %A_6_675 = alloca float, align 4
+
+ST_1: A_5_074 [1/1] 0.00ns
+codeRepl:114  %A_5_074 = alloca float, align 4
+
+ST_1: A_4_173 [1/1] 0.00ns
+codeRepl:115  %A_4_173 = alloca float, align 4
+
+ST_1: A_6_272 [1/1] 0.00ns
+codeRepl:116  %A_6_272 = alloca float, align 4
+
+ST_1: A_5_171 [1/1] 0.00ns
+codeRepl:117  %A_5_171 = alloca float, align 4
+
+ST_1: call_ret [2/2] 4.38ns
+codeRepl:248  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply_Loop_LoadRow_proc(float* %B, float %A_5_1_read_1, float %A_6_2_read_1, float %A_4_1_read_1, float %A_5_0_read_1, float %A_1_2_read_1, float %A_3_6_read_1, float %A_5_6_read_1, float %A_1_5_read_1, float %A_6_4_read_1, float %A_4_7_read_1, float %A_0_7_read_1, float %A_7_5_read_1, float %A_2_0_read_1, float %A_1_4_read_1, float %A_0_1_read_1, float %A_0_6_read_1, float %A_0_5_read_1, float %A_5_3_read_1, float %A_4_3_read_1, float %A_4_2_read_1, float %A_2_5_read_1, float %A_5_4_read_1, float %A_5_7_read_1, float %A_6_3_read_1, float %A_1_7_read_1, float %A_6_5_read_1, float %A_6_7_read_1, float %A_5_2_read_1, float %A_6_0_read_1, float %A_0_2_read_1, float %A_7_2_read_1, float %A_0_3_read_1, float %A_7_3_read_1, float %A_2_4_read_1, float %A_4_6_read_1, float %A_7_4_read_1, float %A_3_1_read_1, float %A_2_1_read_1, float %A_7_6_read_1, float %A_3_2_read_1, float %A_7_1_read_1, float %A_1_3_read_1, float %A_6_1_read_1, float %A_7_0_read_1, float %A_2_6_read_1, float %A_3_0_read_1, float %A_3_7_read_1, float %A_1_6_read_1, float %A_1_0_read_1, float %A_2_7_read_1, float %A_3_5_read_1, float %A_3_4_read_1, float %A_2_3_read_1, float %A_4_5_read_1, float* %A_5_171, float* %A_6_272, float* %A_4_173, float* %A_5_074, float* %A_6_675, float* %A_4_076, float* %A_1_277, float* %A_1_178, float* %A_7_779, float* %A_3_680, float* %A_5_681, float* %A_1_582, float* %A_6_483, float* %A_4_784, float* %A_0_785, float* %A_7_586, float* %A_2_087, float* %A_1_488, float* %A_0_189, float* %A_0_690, float* %A_0_091, float* %A_0_592, float* %A_5_393, float* %A_4_394, float* %A_4_295, float* %A_2_596, float* %A_5_497, float* %A_4_498, float* %A_5_799, float* %A_6_3100, float* %A_1_7101, float* %A_6_5102, float* %A_6_7103, float* %A_5_2104, float* %A_6_0105, float* %A_0_2106, float* %A_7_2107, float* %A_0_3108, float* %A_7_3109, float* %A_2_4110, float* %A_4_6111, float* %A_0_4112, float* %A_7_4113, float* %A_3_1114, float* %A_2_1115, float* %A_7_6116, float* %A_3_2117, float* %A_7_1118, float* %A_1_3119, float* %A_6_1120, float* %A_7_0121, float* %A_2_6122, float* %A_3_0123, float* %A_3_7124, float* %A_1_6125, float* %A_1_0126, float* %A_2_7127, float* %A_3_5128, float* %A_3_4129, float* %A_3_3130, float* %A_2_3131, float* %A_5_5132, float* %A_4_5133, float* %A_2_2134)
+
+
+ <State 2>: 0.00ns
+ST_2: call_ret [1/2] 0.00ns
+codeRepl:248  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply_Loop_LoadRow_proc(float* %B, float %A_5_1_read_1, float %A_6_2_read_1, float %A_4_1_read_1, float %A_5_0_read_1, float %A_1_2_read_1, float %A_3_6_read_1, float %A_5_6_read_1, float %A_1_5_read_1, float %A_6_4_read_1, float %A_4_7_read_1, float %A_0_7_read_1, float %A_7_5_read_1, float %A_2_0_read_1, float %A_1_4_read_1, float %A_0_1_read_1, float %A_0_6_read_1, float %A_0_5_read_1, float %A_5_3_read_1, float %A_4_3_read_1, float %A_4_2_read_1, float %A_2_5_read_1, float %A_5_4_read_1, float %A_5_7_read_1, float %A_6_3_read_1, float %A_1_7_read_1, float %A_6_5_read_1, float %A_6_7_read_1, float %A_5_2_read_1, float %A_6_0_read_1, float %A_0_2_read_1, float %A_7_2_read_1, float %A_0_3_read_1, float %A_7_3_read_1, float %A_2_4_read_1, float %A_4_6_read_1, float %A_7_4_read_1, float %A_3_1_read_1, float %A_2_1_read_1, float %A_7_6_read_1, float %A_3_2_read_1, float %A_7_1_read_1, float %A_1_3_read_1, float %A_6_1_read_1, float %A_7_0_read_1, float %A_2_6_read_1, float %A_3_0_read_1, float %A_3_7_read_1, float %A_1_6_read_1, float %A_1_0_read_1, float %A_2_7_read_1, float %A_3_5_read_1, float %A_3_4_read_1, float %A_2_3_read_1, float %A_4_5_read_1, float* %A_5_171, float* %A_6_272, float* %A_4_173, float* %A_5_074, float* %A_6_675, float* %A_4_076, float* %A_1_277, float* %A_1_178, float* %A_7_779, float* %A_3_680, float* %A_5_681, float* %A_1_582, float* %A_6_483, float* %A_4_784, float* %A_0_785, float* %A_7_586, float* %A_2_087, float* %A_1_488, float* %A_0_189, float* %A_0_690, float* %A_0_091, float* %A_0_592, float* %A_5_393, float* %A_4_394, float* %A_4_295, float* %A_2_596, float* %A_5_497, float* %A_4_498, float* %A_5_799, float* %A_6_3100, float* %A_1_7101, float* %A_6_5102, float* %A_6_7103, float* %A_5_2104, float* %A_6_0105, float* %A_0_2106, float* %A_7_2107, float* %A_0_3108, float* %A_7_3109, float* %A_2_4110, float* %A_4_6111, float* %A_0_4112, float* %A_7_4113, float* %A_3_1114, float* %A_2_1115, float* %A_7_6116, float* %A_3_2117, float* %A_7_1118, float* %A_1_3119, float* %A_6_1120, float* %A_7_0121, float* %A_2_6122, float* %A_3_0123, float* %A_3_7124, float* %A_1_6125, float* %A_1_0126, float* %A_2_7127, float* %A_3_5128, float* %A_3_4129, float* %A_3_3130, float* %A_2_3131, float* %A_5_5132, float* %A_4_5133, float* %A_2_2134)
+
+ST_2: B_cached_0_0_channel [1/1] 0.00ns
+codeRepl:249  %B_cached_0_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 0
+
+ST_2: B_cached_0_1_channel [1/1] 0.00ns
+codeRepl:250  %B_cached_0_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 1
+
+ST_2: B_cached_0_2_channel [1/1] 0.00ns
+codeRepl:251  %B_cached_0_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 2
+
+ST_2: B_cached_0_3_channel [1/1] 0.00ns
+codeRepl:252  %B_cached_0_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 3
+
+ST_2: B_cached_0_4_channel [1/1] 0.00ns
+codeRepl:253  %B_cached_0_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 4
+
+ST_2: B_cached_0_5_channel [1/1] 0.00ns
+codeRepl:254  %B_cached_0_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 5
+
+ST_2: B_cached_0_6_channel [1/1] 0.00ns
+codeRepl:255  %B_cached_0_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 6
+
+ST_2: B_cached_0_7_channel [1/1] 0.00ns
+codeRepl:256  %B_cached_0_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 7
+
+ST_2: B_cached_1_0_channel [1/1] 0.00ns
+codeRepl:257  %B_cached_1_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 8
+
+ST_2: B_cached_1_1_channel [1/1] 0.00ns
+codeRepl:258  %B_cached_1_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 9
+
+ST_2: B_cached_1_2_channel [1/1] 0.00ns
+codeRepl:259  %B_cached_1_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 10
+
+ST_2: B_cached_1_3_channel [1/1] 0.00ns
+codeRepl:260  %B_cached_1_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 11
+
+ST_2: B_cached_1_4_channel [1/1] 0.00ns
+codeRepl:261  %B_cached_1_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 12
+
+ST_2: B_cached_1_5_channel [1/1] 0.00ns
+codeRepl:262  %B_cached_1_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 13
+
+ST_2: B_cached_1_6_channel [1/1] 0.00ns
+codeRepl:263  %B_cached_1_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 14
+
+ST_2: B_cached_1_7_channel [1/1] 0.00ns
+codeRepl:264  %B_cached_1_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 15
+
+ST_2: B_cached_2_0_channel [1/1] 0.00ns
+codeRepl:265  %B_cached_2_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 16
+
+ST_2: B_cached_2_1_channel [1/1] 0.00ns
+codeRepl:266  %B_cached_2_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 17
+
+ST_2: B_cached_2_2_channel [1/1] 0.00ns
+codeRepl:267  %B_cached_2_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 18
+
+ST_2: B_cached_2_3_channel [1/1] 0.00ns
+codeRepl:268  %B_cached_2_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 19
+
+ST_2: B_cached_2_4_channel [1/1] 0.00ns
+codeRepl:269  %B_cached_2_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 20
+
+ST_2: B_cached_2_5_channel [1/1] 0.00ns
+codeRepl:270  %B_cached_2_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 21
+
+ST_2: B_cached_2_6_channel [1/1] 0.00ns
+codeRepl:271  %B_cached_2_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 22
+
+ST_2: B_cached_2_7_channel [1/1] 0.00ns
+codeRepl:272  %B_cached_2_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 23
+
+ST_2: B_cached_3_0_channel [1/1] 0.00ns
+codeRepl:273  %B_cached_3_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 24
+
+ST_2: B_cached_3_1_channel [1/1] 0.00ns
+codeRepl:274  %B_cached_3_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 25
+
+ST_2: B_cached_3_2_channel [1/1] 0.00ns
+codeRepl:275  %B_cached_3_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 26
+
+ST_2: B_cached_3_3_channel [1/1] 0.00ns
+codeRepl:276  %B_cached_3_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 27
+
+ST_2: B_cached_3_4_channel [1/1] 0.00ns
+codeRepl:277  %B_cached_3_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 28
+
+ST_2: B_cached_3_5_channel [1/1] 0.00ns
+codeRepl:278  %B_cached_3_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 29
+
+ST_2: B_cached_3_6_channel [1/1] 0.00ns
+codeRepl:279  %B_cached_3_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 30
+
+ST_2: B_cached_3_7_channel [1/1] 0.00ns
+codeRepl:280  %B_cached_3_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 31
+
+ST_2: B_cached_4_0_channel [1/1] 0.00ns
+codeRepl:281  %B_cached_4_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 32
+
+ST_2: B_cached_4_1_channel [1/1] 0.00ns
+codeRepl:282  %B_cached_4_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 33
+
+ST_2: B_cached_4_2_channel [1/1] 0.00ns
+codeRepl:283  %B_cached_4_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 34
+
+ST_2: B_cached_4_3_channel [1/1] 0.00ns
+codeRepl:284  %B_cached_4_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 35
+
+ST_2: B_cached_4_4_channel [1/1] 0.00ns
+codeRepl:285  %B_cached_4_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 36
+
+ST_2: B_cached_4_5_channel [1/1] 0.00ns
+codeRepl:286  %B_cached_4_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 37
+
+ST_2: B_cached_4_6_channel [1/1] 0.00ns
+codeRepl:287  %B_cached_4_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 38
+
+ST_2: B_cached_4_7_channel [1/1] 0.00ns
+codeRepl:288  %B_cached_4_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 39
+
+ST_2: B_cached_5_0_channel [1/1] 0.00ns
+codeRepl:289  %B_cached_5_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 40
+
+ST_2: B_cached_5_1_channel [1/1] 0.00ns
+codeRepl:290  %B_cached_5_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 41
+
+ST_2: B_cached_5_2_channel [1/1] 0.00ns
+codeRepl:291  %B_cached_5_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 42
+
+ST_2: B_cached_5_3_channel [1/1] 0.00ns
+codeRepl:292  %B_cached_5_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 43
+
+ST_2: B_cached_5_4_channel [1/1] 0.00ns
+codeRepl:293  %B_cached_5_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 44
+
+ST_2: B_cached_5_5_channel [1/1] 0.00ns
+codeRepl:294  %B_cached_5_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 45
+
+ST_2: B_cached_5_6_channel [1/1] 0.00ns
+codeRepl:295  %B_cached_5_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 46
+
+ST_2: B_cached_5_7_channel [1/1] 0.00ns
+codeRepl:296  %B_cached_5_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 47
+
+ST_2: B_cached_6_0_channel [1/1] 0.00ns
+codeRepl:297  %B_cached_6_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 48
+
+ST_2: B_cached_6_1_channel [1/1] 0.00ns
+codeRepl:298  %B_cached_6_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 49
+
+ST_2: B_cached_6_2_channel [1/1] 0.00ns
+codeRepl:299  %B_cached_6_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 50
+
+ST_2: B_cached_6_3_channel [1/1] 0.00ns
+codeRepl:300  %B_cached_6_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 51
+
+ST_2: B_cached_6_4_channel [1/1] 0.00ns
+codeRepl:301  %B_cached_6_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 52
+
+ST_2: B_cached_6_5_channel [1/1] 0.00ns
+codeRepl:302  %B_cached_6_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 53
+
+ST_2: B_cached_6_6_channel [1/1] 0.00ns
+codeRepl:303  %B_cached_6_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 54
+
+ST_2: B_cached_6_7_channel [1/1] 0.00ns
+codeRepl:304  %B_cached_6_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 55
+
+ST_2: B_cached_7_0_channel [1/1] 0.00ns
+codeRepl:305  %B_cached_7_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 56
+
+ST_2: B_cached_7_1_channel [1/1] 0.00ns
+codeRepl:306  %B_cached_7_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 57
+
+ST_2: B_cached_7_2_channel [1/1] 0.00ns
+codeRepl:307  %B_cached_7_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 58
+
+ST_2: B_cached_7_3_channel [1/1] 0.00ns
+codeRepl:308  %B_cached_7_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 59
+
+ST_2: B_cached_7_4_channel [1/1] 0.00ns
+codeRepl:309  %B_cached_7_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 60
+
+ST_2: B_cached_7_5_channel [1/1] 0.00ns
+codeRepl:310  %B_cached_7_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 61
+
+ST_2: B_cached_7_6_channel [1/1] 0.00ns
+codeRepl:311  %B_cached_7_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 62
+
+ST_2: B_cached_7_7_channel [1/1] 0.00ns
+codeRepl:312  %B_cached_7_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 63
+
+
+ <State 3>: 0.00ns
+ST_3: stg_189 [2/2] 0.00ns
+codeRepl:313  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc440(float* %A_0_091, float* %A_1_0126, float* %A_2_087, float* %A_3_0123, float* %A_4_076, float* %A_5_074, float* %A_6_0105, float* %A_7_0121, float %B_cached_0_0_channel, float %B_cached_0_1_channel, float %B_cached_0_2_channel, float %B_cached_0_3_channel, float %B_cached_0_4_channel, float %B_cached_0_5_channel, float %B_cached_0_6_channel, float %B_cached_0_7_channel, float* %A_0_189, float* %A_1_178, float* %A_2_1115, float* %A_3_1114, float* %A_4_173, float* %A_5_171, float* %A_6_1120, float* %A_7_1118, float %B_cached_1_0_channel, float %B_cached_1_1_channel, float %B_cached_1_2_channel, float %B_cached_1_3_channel, float %B_cached_1_4_channel, float %B_cached_1_5_channel, float %B_cached_1_6_channel, float %B_cached_1_7_channel, float* %A_0_2106, float* %A_1_277, float* %A_2_2134, float* %A_3_2117, float* %A_4_295, float* %A_5_2104, float* %A_6_272, float* %A_7_2107, float %B_cached_2_0_channel, float %B_cached_2_1_channel, float %B_cached_2_2_channel, float %B_cached_2_3_channel, float %B_cached_2_4_channel, float %B_cached_2_5_channel, float %B_cached_2_6_channel, float %B_cached_2_7_channel, float* %A_0_3108, float* %A_1_3119, float* %A_2_3131, float* %A_3_3130, float* %A_4_394, float* %A_5_393, float* %A_6_3100, float* %A_7_3109, float %B_cached_3_0_channel, float %B_cached_3_1_channel, float %B_cached_3_2_channel, float %B_cached_3_3_channel, float %B_cached_3_4_channel, float %B_cached_3_5_channel, float %B_cached_3_6_channel, float %B_cached_3_7_channel, float* %A_0_4112, float* %A_1_488, float* %A_2_4110, float* %A_3_4129, float* %A_4_498, float* %A_5_497, float* %A_6_483, float* %A_7_4113, float %B_cached_4_0_channel, float %B_cached_4_1_channel, float %B_cached_4_2_channel, float %B_cached_4_3_channel, float %B_cached_4_4_channel, float %B_cached_4_5_channel, float %B_cached_4_6_channel, float %B_cached_4_7_channel, float* %A_0_592, float* %A_1_582, float* %A_2_596, float* %A_3_5128, float* %A_4_5133, float* %A_5_5132, float* %A_6_5102, float* %A_7_586, float %B_cached_5_0_channel, float %B_cached_5_1_channel, float %B_cached_5_2_channel, float %B_cached_5_3_channel, float %B_cached_5_4_channel, float %B_cached_5_5_channel, float %B_cached_5_6_channel, float %B_cached_5_7_channel, float* %A_0_690, float* %A_1_6125, float* %A_2_6122, float* %A_3_680, float* %A_4_6111, float* %A_5_681, float* %A_6_675, float* %A_7_6116, float %B_cached_6_0_channel, float %B_cached_6_1_channel, float %B_cached_6_2_channel, float %B_cached_6_3_channel, float %B_cached_6_4_channel, float %B_cached_6_5_channel, float %B_cached_6_6_channel, float %B_cached_6_7_channel, float* %A_0_785, float* %A_1_7101, float* %A_2_7127, float* %A_3_7124, float* %A_4_784, float* %A_5_799, float* %A_6_7103, float* %A_7_779, float %B_cached_7_0_channel, float %B_cached_7_1_channel, float %B_cached_7_2_channel, float %B_cached_7_3_channel, float %B_cached_7_4_channel, float %B_cached_7_5_channel, float %B_cached_7_6_channel, float %B_cached_7_7_channel, [64 x float]* nocapture %C)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_190 [1/1] 0.00ns
+codeRepl:118  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str2) nounwind
+
+ST_4: stg_191 [1/1] 0.00ns
+codeRepl:119  call void (...)* @_ssdm_op_SpecInterface(float* %B, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_4: empty [1/1] 0.00ns
+codeRepl:120  %empty = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str248, i32 1, [1 x i8]* @str249, [1 x i8]* @str249, i32 2, i32 0, float* %A_5_171, float* %A_5_171)
+
+ST_4: stg_193 [1/1] 0.00ns
+codeRepl:121  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_171, [8 x i8]* @str250, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str250, [8 x i8]* @str250, [8 x i8]* @str250)
+
+ST_4: empty_5 [1/1] 0.00ns
+codeRepl:122  %empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str251, i32 1, [1 x i8]* @str252, [1 x i8]* @str252, i32 2, i32 0, float* %A_6_272, float* %A_6_272)
+
+ST_4: stg_195 [1/1] 0.00ns
+codeRepl:123  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_272, [8 x i8]* @str253, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str253, [8 x i8]* @str253, [8 x i8]* @str253)
+
+ST_4: empty_6 [1/1] 0.00ns
+codeRepl:124  %empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str254, i32 1, [1 x i8]* @str255, [1 x i8]* @str255, i32 2, i32 0, float* %A_4_173, float* %A_4_173)
+
+ST_4: stg_197 [1/1] 0.00ns
+codeRepl:125  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_173, [8 x i8]* @str256, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str256, [8 x i8]* @str256, [8 x i8]* @str256)
+
+ST_4: empty_7 [1/1] 0.00ns
+codeRepl:126  %empty_7 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str257, i32 1, [1 x i8]* @str258, [1 x i8]* @str258, i32 2, i32 0, float* %A_5_074, float* %A_5_074)
+
+ST_4: stg_199 [1/1] 0.00ns
+codeRepl:127  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_074, [8 x i8]* @str259, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str259, [8 x i8]* @str259, [8 x i8]* @str259)
+
+ST_4: empty_8 [1/1] 0.00ns
+codeRepl:128  %empty_8 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str260, i32 1, [1 x i8]* @str261, [1 x i8]* @str261, i32 2, i32 0, float* %A_6_675, float* %A_6_675)
+
+ST_4: stg_201 [1/1] 0.00ns
+codeRepl:129  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_675, [8 x i8]* @str262, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str262, [8 x i8]* @str262, [8 x i8]* @str262)
+
+ST_4: empty_9 [1/1] 0.00ns
+codeRepl:130  %empty_9 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str263, i32 1, [1 x i8]* @str264, [1 x i8]* @str264, i32 2, i32 0, float* %A_4_076, float* %A_4_076)
+
+ST_4: stg_203 [1/1] 0.00ns
+codeRepl:131  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_076, [8 x i8]* @str265, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str265, [8 x i8]* @str265, [8 x i8]* @str265)
+
+ST_4: empty_10 [1/1] 0.00ns
+codeRepl:132  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str266, i32 1, [1 x i8]* @str267, [1 x i8]* @str267, i32 2, i32 0, float* %A_1_277, float* %A_1_277)
+
+ST_4: stg_205 [1/1] 0.00ns
+codeRepl:133  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_277, [8 x i8]* @str268, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str268, [8 x i8]* @str268, [8 x i8]* @str268)
+
+ST_4: empty_11 [1/1] 0.00ns
+codeRepl:134  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str269, i32 1, [1 x i8]* @str270, [1 x i8]* @str270, i32 2, i32 0, float* %A_1_178, float* %A_1_178)
+
+ST_4: stg_207 [1/1] 0.00ns
+codeRepl:135  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_178, [8 x i8]* @str271, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str271, [8 x i8]* @str271, [8 x i8]* @str271)
+
+ST_4: empty_12 [1/1] 0.00ns
+codeRepl:136  %empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str272, i32 1, [1 x i8]* @str273, [1 x i8]* @str273, i32 2, i32 0, float* %A_7_779, float* %A_7_779)
+
+ST_4: stg_209 [1/1] 0.00ns
+codeRepl:137  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_779, [8 x i8]* @str274, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str274, [8 x i8]* @str274, [8 x i8]* @str274)
+
+ST_4: empty_13 [1/1] 0.00ns
+codeRepl:138  %empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str275, i32 1, [1 x i8]* @str276, [1 x i8]* @str276, i32 2, i32 0, float* %A_3_680, float* %A_3_680)
+
+ST_4: stg_211 [1/1] 0.00ns
+codeRepl:139  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_680, [8 x i8]* @str277, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str277, [8 x i8]* @str277, [8 x i8]* @str277)
+
+ST_4: empty_14 [1/1] 0.00ns
+codeRepl:140  %empty_14 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str278, i32 1, [1 x i8]* @str279, [1 x i8]* @str279, i32 2, i32 0, float* %A_5_681, float* %A_5_681)
+
+ST_4: stg_213 [1/1] 0.00ns
+codeRepl:141  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_681, [8 x i8]* @str280, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str280, [8 x i8]* @str280, [8 x i8]* @str280)
+
+ST_4: empty_15 [1/1] 0.00ns
+codeRepl:142  %empty_15 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str281, i32 1, [1 x i8]* @str282, [1 x i8]* @str282, i32 2, i32 0, float* %A_1_582, float* %A_1_582)
+
+ST_4: stg_215 [1/1] 0.00ns
+codeRepl:143  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_582, [8 x i8]* @str283, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str283, [8 x i8]* @str283, [8 x i8]* @str283)
+
+ST_4: empty_16 [1/1] 0.00ns
+codeRepl:144  %empty_16 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str284, i32 1, [1 x i8]* @str285, [1 x i8]* @str285, i32 2, i32 0, float* %A_6_483, float* %A_6_483)
+
+ST_4: stg_217 [1/1] 0.00ns
+codeRepl:145  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_483, [8 x i8]* @str286, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str286, [8 x i8]* @str286, [8 x i8]* @str286)
+
+ST_4: empty_17 [1/1] 0.00ns
+codeRepl:146  %empty_17 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str287, i32 1, [1 x i8]* @str288, [1 x i8]* @str288, i32 2, i32 0, float* %A_4_784, float* %A_4_784)
+
+ST_4: stg_219 [1/1] 0.00ns
+codeRepl:147  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_784, [8 x i8]* @str289, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str289, [8 x i8]* @str289, [8 x i8]* @str289)
+
+ST_4: empty_18 [1/1] 0.00ns
+codeRepl:148  %empty_18 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str290, i32 1, [1 x i8]* @str291, [1 x i8]* @str291, i32 2, i32 0, float* %A_0_785, float* %A_0_785)
+
+ST_4: stg_221 [1/1] 0.00ns
+codeRepl:149  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_785, [8 x i8]* @str292, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str292, [8 x i8]* @str292, [8 x i8]* @str292)
+
+ST_4: empty_19 [1/1] 0.00ns
+codeRepl:150  %empty_19 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str293, i32 1, [1 x i8]* @str294, [1 x i8]* @str294, i32 2, i32 0, float* %A_7_586, float* %A_7_586)
+
+ST_4: stg_223 [1/1] 0.00ns
+codeRepl:151  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_586, [8 x i8]* @str295, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str295, [8 x i8]* @str295, [8 x i8]* @str295)
+
+ST_4: empty_20 [1/1] 0.00ns
+codeRepl:152  %empty_20 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str296, i32 1, [1 x i8]* @str297, [1 x i8]* @str297, i32 2, i32 0, float* %A_2_087, float* %A_2_087)
+
+ST_4: stg_225 [1/1] 0.00ns
+codeRepl:153  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_087, [8 x i8]* @str298, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str298, [8 x i8]* @str298, [8 x i8]* @str298)
+
+ST_4: empty_21 [1/1] 0.00ns
+codeRepl:154  %empty_21 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str299, i32 1, [1 x i8]* @str300, [1 x i8]* @str300, i32 2, i32 0, float* %A_1_488, float* %A_1_488)
+
+ST_4: stg_227 [1/1] 0.00ns
+codeRepl:155  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_488, [8 x i8]* @str301, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str301, [8 x i8]* @str301, [8 x i8]* @str301)
+
+ST_4: empty_22 [1/1] 0.00ns
+codeRepl:156  %empty_22 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str302, i32 1, [1 x i8]* @str303, [1 x i8]* @str303, i32 2, i32 0, float* %A_0_189, float* %A_0_189)
+
+ST_4: stg_229 [1/1] 0.00ns
+codeRepl:157  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_189, [8 x i8]* @str304, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str304, [8 x i8]* @str304, [8 x i8]* @str304)
+
+ST_4: empty_23 [1/1] 0.00ns
+codeRepl:158  %empty_23 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str305, i32 1, [1 x i8]* @str306, [1 x i8]* @str306, i32 2, i32 0, float* %A_0_690, float* %A_0_690)
+
+ST_4: stg_231 [1/1] 0.00ns
+codeRepl:159  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_690, [8 x i8]* @str307, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str307, [8 x i8]* @str307, [8 x i8]* @str307)
+
+ST_4: empty_24 [1/1] 0.00ns
+codeRepl:160  %empty_24 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str308, i32 1, [1 x i8]* @str309, [1 x i8]* @str309, i32 2, i32 0, float* %A_0_091, float* %A_0_091)
+
+ST_4: stg_233 [1/1] 0.00ns
+codeRepl:161  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_091, [8 x i8]* @str310, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str310, [8 x i8]* @str310, [8 x i8]* @str310)
+
+ST_4: empty_25 [1/1] 0.00ns
+codeRepl:162  %empty_25 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str311, i32 1, [1 x i8]* @str312, [1 x i8]* @str312, i32 2, i32 0, float* %A_0_592, float* %A_0_592)
+
+ST_4: stg_235 [1/1] 0.00ns
+codeRepl:163  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_592, [8 x i8]* @str313, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str313, [8 x i8]* @str313, [8 x i8]* @str313)
+
+ST_4: empty_26 [1/1] 0.00ns
+codeRepl:164  %empty_26 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str314, i32 1, [1 x i8]* @str315, [1 x i8]* @str315, i32 2, i32 0, float* %A_5_393, float* %A_5_393)
+
+ST_4: stg_237 [1/1] 0.00ns
+codeRepl:165  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_393, [8 x i8]* @str316, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str316, [8 x i8]* @str316, [8 x i8]* @str316)
+
+ST_4: empty_27 [1/1] 0.00ns
+codeRepl:166  %empty_27 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str317, i32 1, [1 x i8]* @str318, [1 x i8]* @str318, i32 2, i32 0, float* %A_4_394, float* %A_4_394)
+
+ST_4: stg_239 [1/1] 0.00ns
+codeRepl:167  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_394, [8 x i8]* @str319, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str319, [8 x i8]* @str319, [8 x i8]* @str319)
+
+ST_4: empty_28 [1/1] 0.00ns
+codeRepl:168  %empty_28 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str320, i32 1, [1 x i8]* @str321, [1 x i8]* @str321, i32 2, i32 0, float* %A_4_295, float* %A_4_295)
+
+ST_4: stg_241 [1/1] 0.00ns
+codeRepl:169  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_295, [8 x i8]* @str322, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str322, [8 x i8]* @str322, [8 x i8]* @str322)
+
+ST_4: empty_29 [1/1] 0.00ns
+codeRepl:170  %empty_29 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str323, i32 1, [1 x i8]* @str324, [1 x i8]* @str324, i32 2, i32 0, float* %A_2_596, float* %A_2_596)
+
+ST_4: stg_243 [1/1] 0.00ns
+codeRepl:171  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_596, [8 x i8]* @str325, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str325, [8 x i8]* @str325, [8 x i8]* @str325)
+
+ST_4: empty_30 [1/1] 0.00ns
+codeRepl:172  %empty_30 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str326, i32 1, [1 x i8]* @str327, [1 x i8]* @str327, i32 2, i32 0, float* %A_5_497, float* %A_5_497)
+
+ST_4: stg_245 [1/1] 0.00ns
+codeRepl:173  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_497, [8 x i8]* @str328, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str328, [8 x i8]* @str328, [8 x i8]* @str328)
+
+ST_4: empty_31 [1/1] 0.00ns
+codeRepl:174  %empty_31 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str329, i32 1, [1 x i8]* @str330, [1 x i8]* @str330, i32 2, i32 0, float* %A_4_498, float* %A_4_498)
+
+ST_4: stg_247 [1/1] 0.00ns
+codeRepl:175  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_498, [8 x i8]* @str331, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str331, [8 x i8]* @str331, [8 x i8]* @str331)
+
+ST_4: empty_32 [1/1] 0.00ns
+codeRepl:176  %empty_32 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @str332, i32 1, [1 x i8]* @str333, [1 x i8]* @str333, i32 2, i32 0, float* %A_5_799, float* %A_5_799)
+
+ST_4: stg_249 [1/1] 0.00ns
+codeRepl:177  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_799, [8 x i8]* @str334, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str334, [8 x i8]* @str334, [8 x i8]* @str334)
+
+ST_4: empty_33 [1/1] 0.00ns
+codeRepl:178  %empty_33 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str335, i32 1, [1 x i8]* @str336, [1 x i8]* @str336, i32 2, i32 0, float* %A_6_3100, float* %A_6_3100)
+
+ST_4: stg_251 [1/1] 0.00ns
+codeRepl:179  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_3100, [8 x i8]* @str337, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str337, [8 x i8]* @str337, [8 x i8]* @str337)
+
+ST_4: empty_34 [1/1] 0.00ns
+codeRepl:180  %empty_34 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str338, i32 1, [1 x i8]* @str339, [1 x i8]* @str339, i32 2, i32 0, float* %A_1_7101, float* %A_1_7101)
+
+ST_4: stg_253 [1/1] 0.00ns
+codeRepl:181  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_7101, [8 x i8]* @str340, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str340, [8 x i8]* @str340, [8 x i8]* @str340)
+
+ST_4: empty_35 [1/1] 0.00ns
+codeRepl:182  %empty_35 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str341, i32 1, [1 x i8]* @str342, [1 x i8]* @str342, i32 2, i32 0, float* %A_6_5102, float* %A_6_5102)
+
+ST_4: stg_255 [1/1] 0.00ns
+codeRepl:183  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_5102, [8 x i8]* @str343, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str343, [8 x i8]* @str343, [8 x i8]* @str343)
+
+ST_4: empty_36 [1/1] 0.00ns
+codeRepl:184  %empty_36 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str344, i32 1, [1 x i8]* @str345, [1 x i8]* @str345, i32 2, i32 0, float* %A_6_7103, float* %A_6_7103)
+
+ST_4: stg_257 [1/1] 0.00ns
+codeRepl:185  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_7103, [8 x i8]* @str346, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str346, [8 x i8]* @str346, [8 x i8]* @str346)
+
+ST_4: empty_37 [1/1] 0.00ns
+codeRepl:186  %empty_37 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str347, i32 1, [1 x i8]* @str348, [1 x i8]* @str348, i32 2, i32 0, float* %A_5_2104, float* %A_5_2104)
+
+ST_4: stg_259 [1/1] 0.00ns
+codeRepl:187  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_2104, [8 x i8]* @str349, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str349, [8 x i8]* @str349, [8 x i8]* @str349)
+
+ST_4: empty_38 [1/1] 0.00ns
+codeRepl:188  %empty_38 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str350, i32 1, [1 x i8]* @str351, [1 x i8]* @str351, i32 2, i32 0, float* %A_6_0105, float* %A_6_0105)
+
+ST_4: stg_261 [1/1] 0.00ns
+codeRepl:189  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_0105, [8 x i8]* @str352, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str352, [8 x i8]* @str352, [8 x i8]* @str352)
+
+ST_4: empty_39 [1/1] 0.00ns
+codeRepl:190  %empty_39 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str353, i32 1, [1 x i8]* @str354, [1 x i8]* @str354, i32 2, i32 0, float* %A_0_2106, float* %A_0_2106)
+
+ST_4: stg_263 [1/1] 0.00ns
+codeRepl:191  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_2106, [8 x i8]* @str355, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str355, [8 x i8]* @str355, [8 x i8]* @str355)
+
+ST_4: empty_40 [1/1] 0.00ns
+codeRepl:192  %empty_40 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str356, i32 1, [1 x i8]* @str357, [1 x i8]* @str357, i32 2, i32 0, float* %A_7_2107, float* %A_7_2107)
+
+ST_4: stg_265 [1/1] 0.00ns
+codeRepl:193  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_2107, [8 x i8]* @str358, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str358, [8 x i8]* @str358, [8 x i8]* @str358)
+
+ST_4: empty_41 [1/1] 0.00ns
+codeRepl:194  %empty_41 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str359, i32 1, [1 x i8]* @str360, [1 x i8]* @str360, i32 2, i32 0, float* %A_0_3108, float* %A_0_3108)
+
+ST_4: stg_267 [1/1] 0.00ns
+codeRepl:195  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_3108, [8 x i8]* @str361, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str361, [8 x i8]* @str361, [8 x i8]* @str361)
+
+ST_4: empty_42 [1/1] 0.00ns
+codeRepl:196  %empty_42 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str362, i32 1, [1 x i8]* @str363, [1 x i8]* @str363, i32 2, i32 0, float* %A_7_3109, float* %A_7_3109)
+
+ST_4: stg_269 [1/1] 0.00ns
+codeRepl:197  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_3109, [8 x i8]* @str364, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str364, [8 x i8]* @str364, [8 x i8]* @str364)
+
+ST_4: empty_43 [1/1] 0.00ns
+codeRepl:198  %empty_43 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str365, i32 1, [1 x i8]* @str366, [1 x i8]* @str366, i32 2, i32 0, float* %A_2_4110, float* %A_2_4110)
+
+ST_4: stg_271 [1/1] 0.00ns
+codeRepl:199  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_4110, [8 x i8]* @str367, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str367, [8 x i8]* @str367, [8 x i8]* @str367)
+
+ST_4: empty_44 [1/1] 0.00ns
+codeRepl:200  %empty_44 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str368, i32 1, [1 x i8]* @str369, [1 x i8]* @str369, i32 2, i32 0, float* %A_4_6111, float* %A_4_6111)
+
+ST_4: stg_273 [1/1] 0.00ns
+codeRepl:201  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_6111, [8 x i8]* @str370, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str370, [8 x i8]* @str370, [8 x i8]* @str370)
+
+ST_4: empty_45 [1/1] 0.00ns
+codeRepl:202  %empty_45 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str371, i32 1, [1 x i8]* @str372, [1 x i8]* @str372, i32 2, i32 0, float* %A_0_4112, float* %A_0_4112)
+
+ST_4: stg_275 [1/1] 0.00ns
+codeRepl:203  call void (...)* @_ssdm_op_SpecInterface(float* %A_0_4112, [8 x i8]* @str373, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str373, [8 x i8]* @str373, [8 x i8]* @str373)
+
+ST_4: empty_46 [1/1] 0.00ns
+codeRepl:204  %empty_46 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str374, i32 1, [1 x i8]* @str375, [1 x i8]* @str375, i32 2, i32 0, float* %A_7_4113, float* %A_7_4113)
+
+ST_4: stg_277 [1/1] 0.00ns
+codeRepl:205  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_4113, [8 x i8]* @str376, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str376, [8 x i8]* @str376, [8 x i8]* @str376)
+
+ST_4: empty_47 [1/1] 0.00ns
+codeRepl:206  %empty_47 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str377, i32 1, [1 x i8]* @str378, [1 x i8]* @str378, i32 2, i32 0, float* %A_3_1114, float* %A_3_1114)
+
+ST_4: stg_279 [1/1] 0.00ns
+codeRepl:207  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_1114, [8 x i8]* @str379, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str379, [8 x i8]* @str379, [8 x i8]* @str379)
+
+ST_4: empty_48 [1/1] 0.00ns
+codeRepl:208  %empty_48 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str380, i32 1, [1 x i8]* @str381, [1 x i8]* @str381, i32 2, i32 0, float* %A_2_1115, float* %A_2_1115)
+
+ST_4: stg_281 [1/1] 0.00ns
+codeRepl:209  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_1115, [8 x i8]* @str382, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str382, [8 x i8]* @str382, [8 x i8]* @str382)
+
+ST_4: empty_49 [1/1] 0.00ns
+codeRepl:210  %empty_49 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str383, i32 1, [1 x i8]* @str384, [1 x i8]* @str384, i32 2, i32 0, float* %A_7_6116, float* %A_7_6116)
+
+ST_4: stg_283 [1/1] 0.00ns
+codeRepl:211  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_6116, [8 x i8]* @str385, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str385, [8 x i8]* @str385, [8 x i8]* @str385)
+
+ST_4: empty_50 [1/1] 0.00ns
+codeRepl:212  %empty_50 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str386, i32 1, [1 x i8]* @str387, [1 x i8]* @str387, i32 2, i32 0, float* %A_3_2117, float* %A_3_2117)
+
+ST_4: stg_285 [1/1] 0.00ns
+codeRepl:213  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_2117, [8 x i8]* @str388, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str388, [8 x i8]* @str388, [8 x i8]* @str388)
+
+ST_4: empty_51 [1/1] 0.00ns
+codeRepl:214  %empty_51 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str389, i32 1, [1 x i8]* @str390, [1 x i8]* @str390, i32 2, i32 0, float* %A_7_1118, float* %A_7_1118)
+
+ST_4: stg_287 [1/1] 0.00ns
+codeRepl:215  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_1118, [8 x i8]* @str391, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str391, [8 x i8]* @str391, [8 x i8]* @str391)
+
+ST_4: empty_52 [1/1] 0.00ns
+codeRepl:216  %empty_52 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str392, i32 1, [1 x i8]* @str393, [1 x i8]* @str393, i32 2, i32 0, float* %A_1_3119, float* %A_1_3119)
+
+ST_4: stg_289 [1/1] 0.00ns
+codeRepl:217  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_3119, [8 x i8]* @str394, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str394, [8 x i8]* @str394, [8 x i8]* @str394)
+
+ST_4: empty_53 [1/1] 0.00ns
+codeRepl:218  %empty_53 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str395, i32 1, [1 x i8]* @str396, [1 x i8]* @str396, i32 2, i32 0, float* %A_6_1120, float* %A_6_1120)
+
+ST_4: stg_291 [1/1] 0.00ns
+codeRepl:219  call void (...)* @_ssdm_op_SpecInterface(float* %A_6_1120, [8 x i8]* @str397, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str397, [8 x i8]* @str397, [8 x i8]* @str397)
+
+ST_4: empty_54 [1/1] 0.00ns
+codeRepl:220  %empty_54 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str398, i32 1, [1 x i8]* @str399, [1 x i8]* @str399, i32 2, i32 0, float* %A_7_0121, float* %A_7_0121)
+
+ST_4: stg_293 [1/1] 0.00ns
+codeRepl:221  call void (...)* @_ssdm_op_SpecInterface(float* %A_7_0121, [8 x i8]* @str400, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str400, [8 x i8]* @str400, [8 x i8]* @str400)
+
+ST_4: empty_55 [1/1] 0.00ns
+codeRepl:222  %empty_55 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str401, i32 1, [1 x i8]* @str402, [1 x i8]* @str402, i32 2, i32 0, float* %A_2_6122, float* %A_2_6122)
+
+ST_4: stg_295 [1/1] 0.00ns
+codeRepl:223  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_6122, [8 x i8]* @str403, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str403, [8 x i8]* @str403, [8 x i8]* @str403)
+
+ST_4: empty_56 [1/1] 0.00ns
+codeRepl:224  %empty_56 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str404, i32 1, [1 x i8]* @str405, [1 x i8]* @str405, i32 2, i32 0, float* %A_3_0123, float* %A_3_0123)
+
+ST_4: stg_297 [1/1] 0.00ns
+codeRepl:225  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_0123, [8 x i8]* @str406, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str406, [8 x i8]* @str406, [8 x i8]* @str406)
+
+ST_4: empty_57 [1/1] 0.00ns
+codeRepl:226  %empty_57 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str407, i32 1, [1 x i8]* @str408, [1 x i8]* @str408, i32 2, i32 0, float* %A_3_7124, float* %A_3_7124)
+
+ST_4: stg_299 [1/1] 0.00ns
+codeRepl:227  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_7124, [8 x i8]* @str409, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str409, [8 x i8]* @str409, [8 x i8]* @str409)
+
+ST_4: empty_58 [1/1] 0.00ns
+codeRepl:228  %empty_58 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str410, i32 1, [1 x i8]* @str411, [1 x i8]* @str411, i32 2, i32 0, float* %A_1_6125, float* %A_1_6125)
+
+ST_4: stg_301 [1/1] 0.00ns
+codeRepl:229  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_6125, [8 x i8]* @str412, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str412, [8 x i8]* @str412, [8 x i8]* @str412)
+
+ST_4: empty_59 [1/1] 0.00ns
+codeRepl:230  %empty_59 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str413, i32 1, [1 x i8]* @str414, [1 x i8]* @str414, i32 2, i32 0, float* %A_1_0126, float* %A_1_0126)
+
+ST_4: stg_303 [1/1] 0.00ns
+codeRepl:231  call void (...)* @_ssdm_op_SpecInterface(float* %A_1_0126, [8 x i8]* @str415, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str415, [8 x i8]* @str415, [8 x i8]* @str415)
+
+ST_4: empty_60 [1/1] 0.00ns
+codeRepl:232  %empty_60 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str416, i32 1, [1 x i8]* @str417, [1 x i8]* @str417, i32 2, i32 0, float* %A_2_7127, float* %A_2_7127)
+
+ST_4: stg_305 [1/1] 0.00ns
+codeRepl:233  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_7127, [8 x i8]* @str418, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str418, [8 x i8]* @str418, [8 x i8]* @str418)
+
+ST_4: empty_61 [1/1] 0.00ns
+codeRepl:234  %empty_61 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str419, i32 1, [1 x i8]* @str420, [1 x i8]* @str420, i32 2, i32 0, float* %A_3_5128, float* %A_3_5128)
+
+ST_4: stg_307 [1/1] 0.00ns
+codeRepl:235  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_5128, [8 x i8]* @str421, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str421, [8 x i8]* @str421, [8 x i8]* @str421)
+
+ST_4: empty_62 [1/1] 0.00ns
+codeRepl:236  %empty_62 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str422, i32 1, [1 x i8]* @str423, [1 x i8]* @str423, i32 2, i32 0, float* %A_3_4129, float* %A_3_4129)
+
+ST_4: stg_309 [1/1] 0.00ns
+codeRepl:237  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_4129, [8 x i8]* @str424, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str424, [8 x i8]* @str424, [8 x i8]* @str424)
+
+ST_4: empty_63 [1/1] 0.00ns
+codeRepl:238  %empty_63 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str425, i32 1, [1 x i8]* @str426, [1 x i8]* @str426, i32 2, i32 0, float* %A_3_3130, float* %A_3_3130)
+
+ST_4: stg_311 [1/1] 0.00ns
+codeRepl:239  call void (...)* @_ssdm_op_SpecInterface(float* %A_3_3130, [8 x i8]* @str427, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str427, [8 x i8]* @str427, [8 x i8]* @str427)
+
+ST_4: empty_64 [1/1] 0.00ns
+codeRepl:240  %empty_64 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str428, i32 1, [1 x i8]* @str429, [1 x i8]* @str429, i32 2, i32 0, float* %A_2_3131, float* %A_2_3131)
+
+ST_4: stg_313 [1/1] 0.00ns
+codeRepl:241  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_3131, [8 x i8]* @str430, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str430, [8 x i8]* @str430, [8 x i8]* @str430)
+
+ST_4: empty_65 [1/1] 0.00ns
+codeRepl:242  %empty_65 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str431, i32 1, [1 x i8]* @str432, [1 x i8]* @str432, i32 2, i32 0, float* %A_5_5132, float* %A_5_5132)
+
+ST_4: stg_315 [1/1] 0.00ns
+codeRepl:243  call void (...)* @_ssdm_op_SpecInterface(float* %A_5_5132, [8 x i8]* @str433, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str433, [8 x i8]* @str433, [8 x i8]* @str433)
+
+ST_4: empty_66 [1/1] 0.00ns
+codeRepl:244  %empty_66 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str434, i32 1, [1 x i8]* @str435, [1 x i8]* @str435, i32 2, i32 0, float* %A_4_5133, float* %A_4_5133)
+
+ST_4: stg_317 [1/1] 0.00ns
+codeRepl:245  call void (...)* @_ssdm_op_SpecInterface(float* %A_4_5133, [8 x i8]* @str436, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str436, [8 x i8]* @str436, [8 x i8]* @str436)
+
+ST_4: empty_67 [1/1] 0.00ns
+codeRepl:246  %empty_67 = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @str437, i32 1, [1 x i8]* @str438, [1 x i8]* @str438, i32 2, i32 0, float* %A_2_2134, float* %A_2_2134)
+
+ST_4: stg_319 [1/1] 0.00ns
+codeRepl:247  call void (...)* @_ssdm_op_SpecInterface(float* %A_2_2134, [8 x i8]* @str439, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str439, [8 x i8]* @str439, [8 x i8]* @str439)
+
+ST_4: stg_320 [1/2] 0.00ns
+codeRepl:313  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc440(float* %A_0_091, float* %A_1_0126, float* %A_2_087, float* %A_3_0123, float* %A_4_076, float* %A_5_074, float* %A_6_0105, float* %A_7_0121, float %B_cached_0_0_channel, float %B_cached_0_1_channel, float %B_cached_0_2_channel, float %B_cached_0_3_channel, float %B_cached_0_4_channel, float %B_cached_0_5_channel, float %B_cached_0_6_channel, float %B_cached_0_7_channel, float* %A_0_189, float* %A_1_178, float* %A_2_1115, float* %A_3_1114, float* %A_4_173, float* %A_5_171, float* %A_6_1120, float* %A_7_1118, float %B_cached_1_0_channel, float %B_cached_1_1_channel, float %B_cached_1_2_channel, float %B_cached_1_3_channel, float %B_cached_1_4_channel, float %B_cached_1_5_channel, float %B_cached_1_6_channel, float %B_cached_1_7_channel, float* %A_0_2106, float* %A_1_277, float* %A_2_2134, float* %A_3_2117, float* %A_4_295, float* %A_5_2104, float* %A_6_272, float* %A_7_2107, float %B_cached_2_0_channel, float %B_cached_2_1_channel, float %B_cached_2_2_channel, float %B_cached_2_3_channel, float %B_cached_2_4_channel, float %B_cached_2_5_channel, float %B_cached_2_6_channel, float %B_cached_2_7_channel, float* %A_0_3108, float* %A_1_3119, float* %A_2_3131, float* %A_3_3130, float* %A_4_394, float* %A_5_393, float* %A_6_3100, float* %A_7_3109, float %B_cached_3_0_channel, float %B_cached_3_1_channel, float %B_cached_3_2_channel, float %B_cached_3_3_channel, float %B_cached_3_4_channel, float %B_cached_3_5_channel, float %B_cached_3_6_channel, float %B_cached_3_7_channel, float* %A_0_4112, float* %A_1_488, float* %A_2_4110, float* %A_3_4129, float* %A_4_498, float* %A_5_497, float* %A_6_483, float* %A_7_4113, float %B_cached_4_0_channel, float %B_cached_4_1_channel, float %B_cached_4_2_channel, float %B_cached_4_3_channel, float %B_cached_4_4_channel, float %B_cached_4_5_channel, float %B_cached_4_6_channel, float %B_cached_4_7_channel, float* %A_0_592, float* %A_1_582, float* %A_2_596, float* %A_3_5128, float* %A_4_5133, float* %A_5_5132, float* %A_6_5102, float* %A_7_586, float %B_cached_5_0_channel, float %B_cached_5_1_channel, float %B_cached_5_2_channel, float %B_cached_5_3_channel, float %B_cached_5_4_channel, float %B_cached_5_5_channel, float %B_cached_5_6_channel, float %B_cached_5_7_channel, float* %A_0_690, float* %A_1_6125, float* %A_2_6122, float* %A_3_680, float* %A_4_6111, float* %A_5_681, float* %A_6_675, float* %A_7_6116, float %B_cached_6_0_channel, float %B_cached_6_1_channel, float %B_cached_6_2_channel, float %B_cached_6_3_channel, float %B_cached_6_4_channel, float %B_cached_6_5_channel, float %B_cached_6_6_channel, float %B_cached_6_7_channel, float* %A_0_785, float* %A_1_7101, float* %A_2_7127, float* %A_3_7124, float* %A_4_784, float* %A_5_799, float* %A_6_7103, float* %A_7_779, float %B_cached_7_0_channel, float %B_cached_7_1_channel, float %B_cached_7_2_channel, float %B_cached_7_3_channel, float %B_cached_7_4_channel, float %B_cached_7_5_channel, float %B_cached_7_6_channel, float %B_cached_7_7_channel, [64 x float]* nocapture %C)
+
+ST_4: stg_321 [1/1] 0.00ns
+codeRepl:314  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

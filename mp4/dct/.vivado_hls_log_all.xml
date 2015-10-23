@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_load_2', dct/matrixmath.c:47) on array 'A' due to limited memory ports." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:34.912-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:23.271-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:23.255-0500" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply_Loop_LoadRow_proc5556' (dct/matrixmath.c:11:4) into MAT_Multiply_Loop_LoadRow_proc." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:23.177-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'RowCaching' (dct/matrixmath.c:47) because its parent loop or function is pipelined." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:15.708-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_T' is read-only, switch it to a ROM." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:40.014-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Tinv' is read-only, switch it to a ROM." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:39.904-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'T' will not be exposed as RTL port." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:38.623-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'Tinv' will not be exposed as RTL port." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:38.608-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:36.498-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

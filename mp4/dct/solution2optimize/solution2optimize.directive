@@ -1,0 +1,63 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="A" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="0"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="B" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="0"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="A_cached_row" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="0"/>
+            </pragma>
+        </directive>
+        <directive functionName="DCT" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="X" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="DCT" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="Y" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="DCT" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="Col" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="RowCaching" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="Col" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="B_cached" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="0"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

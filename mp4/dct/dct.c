@@ -13,12 +13,12 @@ void DCT(float X[MAT_SIZE][MAT_SIZE],
 	switch (function){
 	case FUNCTION_IDCT:
 		MAT_Multiply(Tinv,X,temp);
-		MAT_Multiply(temp, T, Y);
+		MAT_Multiply2(temp, T, Y);
 		break;
 	case FUNCTION_DCT:
 	default:
 		MAT_Multiply(T,X,temp);
-		MAT_Multiply(temp, Tinv, Y);
+		MAT_Multiply2(temp, Tinv, Y);
 		break;
 	}
 }
