@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Fri Oct 23 21:44:16 2015
+# Process ID: 2393
+# Log file: /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/impl/ip/vivado.log
+# Journal file: /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'MAT_Stream_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'MAT_Stream_ap_fadd_3_full_dsp_32'...
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2706850392 -regid "211083026_1777510696_210611924_202" -xml /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/i..."
+    (file "/home/parallels/source_code/ECE_527_MP/mp4/Mat_mult/solution1/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 23 21:44:26 2015...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 21:44:26 2015...

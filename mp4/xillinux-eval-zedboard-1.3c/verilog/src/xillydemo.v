@@ -141,7 +141,7 @@ module xillydemo
     .user_r_read_32_data(user_r_read_32_data),
     .user_r_read_32_eof(user_r_read_32_eof),
     .user_r_read_32_open(user_r_read_32_open),
-
+    
 
     // Ports related to /dev/xillybus_read_8
     // FPGA to CPU signals:
@@ -259,21 +259,86 @@ module xillydemo
    assign  user_r_mem_8_eof = 0;
    assign  user_w_mem_8_full = 0;
 
+   //Define additional signals for the communications
+   //For receiving the data from the fifo_to_function
+   wire [31:0] in_r_dout; //Data that goes to the function
+   wire in_r_read;        //What is this pin for?
+   reg  in_r_empty_n;       
+   //Signals that are produced by the HLS function for interfacing
+   wire hls_fifo_rd_en; //Control signal specifying when the data should be streamed out
+   wire hls_fifo_empty; //A flag telling that the fifo is empty
+   
+   wire [31:0] out_r_din; //Signal produced by the HLS IP and send to the fifo_from_funjction
+   wire out_r_full; //From the output fifo to the function fifo
+   wire out_r_write; //Output signal from the HLS IP
    // 32-bit loopback
-   fifo_32x512 fifo_32
+  /* fifo_32x512 fifo_to_function//For writing from Host to PL
+       (
+        .clk(bus_clk),
+        .srst(!user_w_write_32_open),
+        .din(user_w_write_32_data),
+        .wr_en(user_w_write_32_wren),
+        .rd_en(user_r_read_32_rden),//Allowing the data to be stream out
+        .dout(user_r_read_32_data),//Data passed into the hls function
+        .full(user_w_write_32_full),//Signal telling that the FIFO is full
+        .empty(user_r_read_32_empty)
+        );
+ */
+  
+   fifo_32x512 fifo_to_function//For writing from Host to PL
      (
       .clk(bus_clk),
-      .srst(!user_w_write_32_open && !user_r_read_32_open),
+      .srst(!user_w_write_32_open),
       .din(user_w_write_32_data),
       .wr_en(user_w_write_32_wren),
-      .rd_en(user_r_read_32_rden),
-      .dout(user_r_read_32_data),
-      .full(user_w_write_32_full),
-      .empty(user_r_read_32_empty)
+      .rd_en(hls_info_rd_en),//Allowing the data to be stream out
+      .dout(in_r_dout),//Data passed into the hls function
+      .full(user_w_write_32_full),//Signal telling that the FIFO is full
+      .empty(hls_fifo_empty)
       );
 
 
+   assign hls_info_rd_en = !hls_fifo_empty && (in_r_read||!in_r_empty_n);//Enable the data streaming out
+   
+   //Calculate the not(empty) flag. This will be used to tell the HLS when to read the data
+   always @(posedge bus_clk)
+    if (!user_w_write_32_open)
+        in_r_empty_n<=0; //Buffer will be empty if port not open
+    else if (hls_fifo_rd_en)
+        in_r_empty_n<=1; //If the read is enable, buffer will not be empty
+    else if (in_r_read) //This signal is produced by the HLS IP.
+        in_r_empty_n<=0; //Why is this?
+        
+        
+ 
+
+    MAT_Stream_1 MAT_Stream_1_inst (
+    .ap_clk(bus_clk),
+    .ap_rst(!user_w_write_32_open && !user_r_read_32_open),//Should this be quiesce or the signals from Xillybus
+    .in_arr_dout(in_r_dout),//Signals from the fifo_to_function
+    .in_arr_empty_n(in_r_empty_n),//Input to HLS IP
+    .in_arr_read(in_r_read),//OUtput signal from the HLS IP, see MAT_Stream.v
+    .out_arr_din(out_r_din),//Output data to the fifo_from_function to send back to the host 
+    .out_arr_full_n(!out_r_full),//Input signal to the HLS IP
+    .out_arr_write(out_r_write),
+    .op_type(0)
+   );
+          
+ fifo_32x512 fifo_from_function //For writing from PL to host
+ (
+    .clk(bus_clk),
+    .srst(!user_r_read_32_open),
+    .din(in_r_dout),
+    //.din(out_r_din),//From the HLS IP
+    .wr_en(user_w_write_32_wren),
+    .rd_en(user_r_read_32_rden),
+    .dout(user_r_read_32_data),//Data to send back to the host
+    .full(out_r_full), //A flag produced by the fifo_from_function to signals to HLS IP fifo
+    .empty(user_r_read_32_empty)
+);
+
    assign  user_r_read_32_eof = 0;
+   
    
    // 8-bit loopback
    fifo_8x2048 fifo_8

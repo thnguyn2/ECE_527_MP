@@ -14,20 +14,88 @@ namespace ap_rtl {
 
 const sc_logic MAT_Stream::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic MAT_Stream::ap_const_logic_0 = sc_dt::Log_0;
+const sc_lv<7> MAT_Stream::ap_ST_st1_fsm_0 = "1";
+const sc_lv<7> MAT_Stream::ap_ST_st2_fsm_1 = "10";
+const sc_lv<7> MAT_Stream::ap_ST_st3_fsm_2 = "100";
+const sc_lv<7> MAT_Stream::ap_ST_st4_fsm_3 = "1000";
+const sc_lv<7> MAT_Stream::ap_ST_st5_fsm_4 = "10000";
+const sc_lv<7> MAT_Stream::ap_ST_st6_fsm_5 = "100000";
+const sc_lv<7> MAT_Stream::ap_ST_st7_fsm_6 = "1000000";
+const sc_lv<32> MAT_Stream::ap_const_lv32_0 = "00000000000000000000000000000000";
+const sc_lv<1> MAT_Stream::ap_const_lv1_1 = "1";
+const sc_lv<32> MAT_Stream::ap_const_lv32_1 = "1";
+const sc_lv<32> MAT_Stream::ap_const_lv32_5 = "101";
+const sc_lv<32> MAT_Stream::ap_const_lv32_6 = "110";
+const sc_lv<32> MAT_Stream::ap_const_lv32_40A00000 = "1000000101000000000000000000000";
 
 MAT_Stream::MAT_Stream(sc_module_name name) : sc_module(name), mVcdFile(0) {
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1 = new MAT_Stream_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>("MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1");
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1->clk(ap_clk);
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1->reset(ap_rst);
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1->din0(grp_fu_42_p0);
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1->din1(grp_fu_42_p1);
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1->ce(grp_fu_42_ce);
+    MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1->dout(grp_fu_42_p2);
 
-    SC_METHOD(thread_ap_done);
-    sensitive << ( ap_start );
+    SC_METHOD(thread_ap_clk_no_reset_);
+    dont_initialize();
+    sensitive << ( ap_clk.pos() );
 
-    SC_METHOD(thread_ap_idle);
+    SC_METHOD(thread_ap_sig_bdd_31);
+    sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_start );
+    SC_METHOD(thread_ap_sig_bdd_44);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_sig_bdd_53);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_sig_bdd_62);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_sig_cseq_ST_st1_fsm_0);
+    sensitive << ( ap_sig_bdd_31 );
+
+    SC_METHOD(thread_ap_sig_cseq_ST_st2_fsm_1);
+    sensitive << ( ap_sig_bdd_44 );
+
+    SC_METHOD(thread_ap_sig_cseq_ST_st6_fsm_5);
+    sensitive << ( ap_sig_bdd_53 );
+
+    SC_METHOD(thread_ap_sig_cseq_ST_st7_fsm_6);
+    sensitive << ( ap_sig_bdd_62 );
+
+    SC_METHOD(thread_grp_fu_42_ce);
+
+    SC_METHOD(thread_grp_fu_42_p0);
+    sensitive << ( temp_reg_55 );
+    sensitive << ( ap_sig_cseq_ST_st2_fsm_1 );
+
+    SC_METHOD(thread_grp_fu_42_p1);
+    sensitive << ( ap_sig_cseq_ST_st2_fsm_1 );
+
+    SC_METHOD(thread_in_arr_read);
+    sensitive << ( in_arr_empty_n );
+    sensitive << ( ap_sig_cseq_ST_st1_fsm_0 );
+
+    SC_METHOD(thread_out_arr_din);
+    sensitive << ( out_arr_full_n );
+    sensitive << ( tmp_reg_65 );
+    sensitive << ( ap_sig_cseq_ST_st7_fsm_6 );
+
+    SC_METHOD(thread_out_arr_write);
+    sensitive << ( out_arr_full_n );
+    sensitive << ( ap_sig_cseq_ST_st7_fsm_6 );
+
+    SC_METHOD(thread_ap_NS_fsm);
+    sensitive << ( in_arr_empty_n );
+    sensitive << ( out_arr_full_n );
+    sensitive << ( ap_CS_fsm );
 
     SC_THREAD(thread_hdltv_gen);
-    sensitive << ( ap_virtual_clock.pos() );
+    sensitive << ( ap_clk.pos() );
 
+    ap_CS_fsm = "0000001";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "MAT_Stream_sc_trace_" << apTFileNum ++;
@@ -36,13 +104,33 @@ MAT_Stream::MAT_Stream(sc_module_name name) : sc_module(name), mVcdFile(0) {
     mVcdFile->set_time_unit(1, SC_PS);
     if (1) {
 #ifdef __HLS_TRACE_LEVEL_PORT__
-    sc_trace(mVcdFile, ap_start, "(port)ap_start");
-    sc_trace(mVcdFile, ap_done, "(port)ap_done");
-    sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
-    sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
-    sc_trace(mVcdFile, in_arr, "(port)in_arr");
-    sc_trace(mVcdFile, out_arr, "(port)out_arr");
+    sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
+    sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
+    sc_trace(mVcdFile, in_arr_dout, "(port)in_arr_dout");
+    sc_trace(mVcdFile, in_arr_empty_n, "(port)in_arr_empty_n");
+    sc_trace(mVcdFile, in_arr_read, "(port)in_arr_read");
+    sc_trace(mVcdFile, out_arr_din, "(port)out_arr_din");
+    sc_trace(mVcdFile, out_arr_full_n, "(port)out_arr_full_n");
+    sc_trace(mVcdFile, out_arr_write, "(port)out_arr_write");
     sc_trace(mVcdFile, op_type, "(port)op_type");
+#endif
+#ifdef __HLS_TRACE_LEVEL_INT__
+    sc_trace(mVcdFile, temp_reg_55, "temp_reg_55");
+    sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
+    sc_trace(mVcdFile, ap_sig_cseq_ST_st1_fsm_0, "ap_sig_cseq_ST_st1_fsm_0");
+    sc_trace(mVcdFile, ap_sig_bdd_31, "ap_sig_bdd_31");
+    sc_trace(mVcdFile, ap_sig_cseq_ST_st2_fsm_1, "ap_sig_cseq_ST_st2_fsm_1");
+    sc_trace(mVcdFile, ap_sig_bdd_44, "ap_sig_bdd_44");
+    sc_trace(mVcdFile, grp_fu_42_p2, "grp_fu_42_p2");
+    sc_trace(mVcdFile, tmp_reg_65, "tmp_reg_65");
+    sc_trace(mVcdFile, ap_sig_cseq_ST_st6_fsm_5, "ap_sig_cseq_ST_st6_fsm_5");
+    sc_trace(mVcdFile, ap_sig_bdd_53, "ap_sig_bdd_53");
+    sc_trace(mVcdFile, ap_sig_cseq_ST_st7_fsm_6, "ap_sig_cseq_ST_st7_fsm_6");
+    sc_trace(mVcdFile, ap_sig_bdd_62, "ap_sig_bdd_62");
+    sc_trace(mVcdFile, grp_fu_42_p0, "grp_fu_42_p0");
+    sc_trace(mVcdFile, grp_fu_42_p1, "grp_fu_42_p1");
+    sc_trace(mVcdFile, grp_fu_42_ce, "grp_fu_42_ce");
+    sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
     }
@@ -58,18 +146,140 @@ MAT_Stream::~MAT_Stream() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
+    delete MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1;
 }
 
-void MAT_Stream::thread_ap_done() {
-    ap_done = ap_start.read();
+void MAT_Stream::thread_ap_clk_no_reset_() {
+    if ( ap_rst.read() == ap_const_logic_1) {
+        ap_CS_fsm = ap_ST_st1_fsm_0;
+    } else {
+        ap_CS_fsm = ap_NS_fsm.read();
+    }
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st1_fsm_0.read()) && !esl_seteq<1,1,1>(in_arr_empty_n.read(), ap_const_logic_0))) {
+        temp_reg_55 = in_arr_dout.read();
+    }
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st6_fsm_5.read())) {
+        tmp_reg_65 = grp_fu_42_p2.read();
+    }
 }
 
-void MAT_Stream::thread_ap_idle() {
-    ap_idle = ap_const_logic_1;
+void MAT_Stream::thread_ap_sig_bdd_31() {
+    ap_sig_bdd_31 = esl_seteq<1,1,1>(ap_CS_fsm.read().range(0, 0), ap_const_lv1_1);
 }
 
-void MAT_Stream::thread_ap_ready() {
-    ap_ready = ap_start.read();
+void MAT_Stream::thread_ap_sig_bdd_44() {
+    ap_sig_bdd_44 = esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm.read().range(1, 1));
+}
+
+void MAT_Stream::thread_ap_sig_bdd_53() {
+    ap_sig_bdd_53 = esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm.read().range(5, 5));
+}
+
+void MAT_Stream::thread_ap_sig_bdd_62() {
+    ap_sig_bdd_62 = esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm.read().range(6, 6));
+}
+
+void MAT_Stream::thread_ap_sig_cseq_ST_st1_fsm_0() {
+    if (ap_sig_bdd_31.read()) {
+        ap_sig_cseq_ST_st1_fsm_0 = ap_const_logic_1;
+    } else {
+        ap_sig_cseq_ST_st1_fsm_0 = ap_const_logic_0;
+    }
+}
+
+void MAT_Stream::thread_ap_sig_cseq_ST_st2_fsm_1() {
+    if (ap_sig_bdd_44.read()) {
+        ap_sig_cseq_ST_st2_fsm_1 = ap_const_logic_1;
+    } else {
+        ap_sig_cseq_ST_st2_fsm_1 = ap_const_logic_0;
+    }
+}
+
+void MAT_Stream::thread_ap_sig_cseq_ST_st6_fsm_5() {
+    if (ap_sig_bdd_53.read()) {
+        ap_sig_cseq_ST_st6_fsm_5 = ap_const_logic_1;
+    } else {
+        ap_sig_cseq_ST_st6_fsm_5 = ap_const_logic_0;
+    }
+}
+
+void MAT_Stream::thread_ap_sig_cseq_ST_st7_fsm_6() {
+    if (ap_sig_bdd_62.read()) {
+        ap_sig_cseq_ST_st7_fsm_6 = ap_const_logic_1;
+    } else {
+        ap_sig_cseq_ST_st7_fsm_6 = ap_const_logic_0;
+    }
+}
+
+void MAT_Stream::thread_grp_fu_42_ce() {
+    grp_fu_42_ce = ap_const_logic_1;
+}
+
+void MAT_Stream::thread_grp_fu_42_p0() {
+    grp_fu_42_p0 = temp_reg_55.read();
+}
+
+void MAT_Stream::thread_grp_fu_42_p1() {
+    grp_fu_42_p1 = ap_const_lv32_40A00000;
+}
+
+void MAT_Stream::thread_in_arr_read() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st1_fsm_0.read()) && 
+         !esl_seteq<1,1,1>(in_arr_empty_n.read(), ap_const_logic_0))) {
+        in_arr_read = ap_const_logic_1;
+    } else {
+        in_arr_read = ap_const_logic_0;
+    }
+}
+
+void MAT_Stream::thread_out_arr_din() {
+    out_arr_din = tmp_reg_65.read();
+}
+
+void MAT_Stream::thread_out_arr_write() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st7_fsm_6.read()) && 
+         !esl_seteq<1,1,1>(out_arr_full_n.read(), ap_const_logic_0))) {
+        out_arr_write = ap_const_logic_1;
+    } else {
+        out_arr_write = ap_const_logic_0;
+    }
+}
+
+void MAT_Stream::thread_ap_NS_fsm() {
+    switch (ap_CS_fsm.read().to_uint64()) {
+        case 1 : 
+            if (!esl_seteq<1,1,1>(in_arr_empty_n.read(), ap_const_logic_0)) {
+                ap_NS_fsm = ap_ST_st2_fsm_1;
+            } else {
+                ap_NS_fsm = ap_ST_st1_fsm_0;
+            }
+            break;
+        case 2 : 
+            ap_NS_fsm = ap_ST_st3_fsm_2;
+            break;
+        case 4 : 
+            ap_NS_fsm = ap_ST_st4_fsm_3;
+            break;
+        case 8 : 
+            ap_NS_fsm = ap_ST_st5_fsm_4;
+            break;
+        case 16 : 
+            ap_NS_fsm = ap_ST_st6_fsm_5;
+            break;
+        case 32 : 
+            ap_NS_fsm = ap_ST_st7_fsm_6;
+            break;
+        case 64 : 
+            if (!esl_seteq<1,1,1>(out_arr_full_n.read(), ap_const_logic_0)) {
+                ap_NS_fsm = ap_ST_st1_fsm_0;
+            } else {
+                ap_NS_fsm = ap_ST_st7_fsm_6;
+            }
+            break;
+        default : 
+            ap_NS_fsm = "XXXXXXX";
+            break;
+    }
 }
 
 void MAT_Stream::thread_hdltv_gen() {
@@ -84,12 +294,13 @@ void MAT_Stream::thread_hdltv_gen() {
     while (1) {
         wait();
         const char* mComma = ap_cycleNo == 0 ? " " : ", " ;
-        mHdltvinHandle << mComma << "{"  <<  " \"ap_start\" :  \"" << ap_start.read() << "\" ";
-        mHdltvoutHandle << mComma << "{"  <<  " \"ap_done\" :  \"" << ap_done.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"ap_idle\" :  \"" << ap_idle.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"ap_ready\" :  \"" << ap_ready.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"in_arr\" :  \"" << in_arr.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"out_arr\" :  \"" << out_arr.read() << "\" ";
+        mHdltvinHandle << mComma << "{"  <<  " \"ap_rst\" :  \"" << ap_rst.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"in_arr_dout\" :  \"" << in_arr_dout.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"in_arr_empty_n\" :  \"" << in_arr_empty_n.read() << "\" ";
+        mHdltvoutHandle << mComma << "{"  <<  " \"in_arr_read\" :  \"" << in_arr_read.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"out_arr_din\" :  \"" << out_arr_din.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"out_arr_full_n\" :  \"" << out_arr_full_n.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"out_arr_write\" :  \"" << out_arr_write.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"op_type\" :  \"" << op_type.read() << "\" ";
         mHdltvinHandle << "}" << std::endl;
         mHdltvoutHandle << "}" << std::endl;

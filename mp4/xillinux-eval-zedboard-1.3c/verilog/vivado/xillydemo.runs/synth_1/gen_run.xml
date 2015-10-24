@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1444999097">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1445660028">
   <File Type="VDS-TIMING-PB" Name="xillydemo_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="xillydemo_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="xillydemo.dcp"/>
   <File Type="RDS-UTIL-PB" Name="xillydemo_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="xillydemo_utilization_synth.rpt"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-RDS" Name="xillydemo.vds"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="PA-TCL" Name="xillydemo.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="xillydemo_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="xillydemo.vds"/>
+  <File Type="PA-TCL" Name="xillydemo.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/xillydemo.v">
@@ -62,13 +62,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vivado-essentials/fifo_8x2048/fifo_8x2048.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../vivado-essentials/fifo_32x512/fifo_32x512.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -101,9 +94,10 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="MAT_Stream_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
+  <BlockFileSet Type="BlockSrcs" Name="MAT_Stream_0"/>
 </GenRun>

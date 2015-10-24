@@ -101,9 +101,9 @@ float compressionRatio;
 
 // ---Modified code for streaming data over the bus--
 std::ofstream opfile;
-opfile.open  ("temp.txt", ofstream::out|ios::binary);
+opfile.open  ("/dev/xillybus_write_32", ofstream::out|ios::binary);//Read and write to the 32-bit xillybus
 std::ifstream ipfile;
-ipfile.open  ("temp.txt", ifstream::in|ios::binary);
+ipfile.open  ("/dev/xillybus_read_32", ifstream::in|ios::binary);
 unsigned char rcvBuf[sizeof(float)*64];//Buffer for the received data
 Mat rcvBlock (8,8,CV_32F,rcvBuf);//Image defined on the top of the buffer
 //---------------------------------------------------
@@ -169,6 +169,7 @@ decompImg = Mat(imgSP.rows,imgSP.cols,CV_32S,0.00);
 //Encoding/Compression procedure
 //Iterate over rows and cols of image matrix
 //Extract and compute 8x8 blocks
+cout << "...Testing IO connection...\n";
 for(int i=0; i<imgSP.rows; i+=8)
 {
     for(int j=0; j<imgSP.cols; j+=8)
@@ -183,6 +184,7 @@ for(int i=0; i<imgSP.rows; i+=8)
         {
             block.at<float>(m,n) = imgSP.at<float>(i+m,j+n);
 	}
+
         gettimeofday(&tmatdctEnd, NULL);
         timersub(&tmatdctEnd,&tmatdctStart,&tmatdctDiff);
         timeMatdct += (tmatdctDiff.tv_sec*1000000.00) + tmatdctDiff.tv_usec;
@@ -199,6 +201,13 @@ for(int i=0; i<imgSP.rows; i+=8)
 	ipfile.read(reinterpret_cast<char*>(rcvBuf),sizeof(float)*64);//Test data read back
 	//--End of modification--
 
+	if ((i==0)&&(j==0))
+	{
+		cout << 10.0;
+		cout << block.at<float>(0,0);
+		cout << "\n";
+		cout << rcvBlock.at<float>(0,0);
+	}
 	dct(rcvBlock,dctBlock);//Check to see if the data is sent back correctly or not
 	//            dct(block,dctBlock);
 

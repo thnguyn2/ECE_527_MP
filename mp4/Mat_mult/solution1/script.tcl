@@ -14,4 +14,4 @@ source "./Mat_mult/solution1/directives.tcl"
 #csim_design
 csynth_design
 #cosim_design
-export_design -format ip_catalog
+export_design -format ip_catalog -vendor "xillinx.com" -display_name "Mat_Mult_Test"

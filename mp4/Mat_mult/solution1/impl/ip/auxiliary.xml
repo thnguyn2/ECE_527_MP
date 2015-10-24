@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="MAT_Stream" xd:componentRef="MAT_Stream" xd:initiationInterval="7" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="*(in_arr)" xd:originalName="in_arr" xd:direction="in" xd:interfaceRef="in_arr" xd:busTypeRef="acc_fifo" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(out_arr)" xd:originalName="out_arr" xd:direction="out" xd:interfaceRef="out_arr" xd:busTypeRef="acc_fifo" xd:dataWidth="32"/>
+  <xd:arg xd:name="op_type" xd:originalName="op_type" xd:direction="in" xd:interfaceRef="op_type" xd:busTypeRef="register" xd:dataWidth="8" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="6" xd:worst-case="6" xd:average-case="6"/>
+  <xd:resourceEstimates xd:LUT="392" xd:FF="276" xd:BRAM="0" xd:DSP="2"/>
+</xd:acceleratorMap>
