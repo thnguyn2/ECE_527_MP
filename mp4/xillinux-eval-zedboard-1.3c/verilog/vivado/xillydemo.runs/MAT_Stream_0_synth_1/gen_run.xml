@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="MAT_Stream_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1445604897">
-  <File Type="RDS-UTIL" Name="MAT_Stream_0_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="MAT_Stream_0_drc_synth.rpt"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/MAT_Stream_0_synth_1/MAT_Stream_0_synth_1.psg"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="MAT_Stream_0_timing_summary_synth.rpt"/>
-  <File Type="RDS-RDS" Name="MAT_Stream_0.vds"/>
-  <File Type="VDS-TIMING-PB" Name="MAT_Stream_0_timing_summary_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/MAT_Stream_0_synth_1/sources.xml"/>
   <File Type="PA-TCL" Name="MAT_Stream_0.tcl"/>
   <File Type="RDS-DCP" Name="MAT_Stream_0.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="MAT_Stream_0_utilization_synth.pb"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/MAT_Stream_0_synth_1/constrs_in.xml"/>
+  <File Type="RDS-RDS" Name="MAT_Stream_0.vds"/>
+  <File Type="VDS-TIMING-PB" Name="MAT_Stream_0_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="MAT_Stream_0_timing_summary_synth.rpt"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/MAT_Stream_0_synth_1/MAT_Stream_0_synth_1.psg"/>
+  <File Type="RDS-UTIL" Name="MAT_Stream_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="MAT_Stream_0_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/MAT_Stream_0">
     <File Path="$PSRCDIR/sources_1/ip/MAT_Stream_0/MAT_Stream_0.xci">
       <FileInfo>

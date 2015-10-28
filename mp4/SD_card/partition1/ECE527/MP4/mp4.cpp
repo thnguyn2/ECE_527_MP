@@ -21,6 +21,8 @@
 
 //---Modified from sample code----
 #include<fstream>//For input and output files handling...
+#include<fcntl.h>
+#include<stdint.h>
 //---End of modification---
 
 
@@ -100,10 +102,22 @@ long int compressionCount=0;
 float compressionRatio;
 
 // ---Modified code for streaming data over the bus--
+/*
 std::ofstream opfile;
 opfile.open  ("/dev/xillybus_write_32", ofstream::out|ios::binary);//Read and write to the 32-bit xillybus
 std::ifstream ipfile;
 ipfile.open  ("/dev/xillybus_read_32", ifstream::in|ios::binary);
+*/
+
+int fdr, fdw;
+fdr = open("/dev/xillybus_read_32",O_RDONLY);
+fdw = open("/dev/xillybus_write_32",O_WRONLY);
+if ((fdr<0)||(fdw<0))
+{
+	perror("Failed to open device files");
+	exit(1);
+}
+
 unsigned char rcvBuf[sizeof(float)*64];//Buffer for the received data
 Mat rcvBlock (8,8,CV_32F,rcvBuf);//Image defined on the top of the buffer
 //---------------------------------------------------
@@ -195,10 +209,14 @@ for(int i=0; i<imgSP.rows; i+=8)
         //Time operation
         gettimeofday(&tdctStart,NULL);
 
+/*
 	//---Modified source code for sending data over the xillybus--
-	opfile.write(reinterpret_cast<char*>(block.data),sizeof(float)*64*block.channels());
+	opfile.write(reinterpret_cast<void*>(block.data),sizeof(float)*64*block.channels());
 	opfile.flush(); //Make sure the data is flushed-Important to make sure that the data is being sent
-	ipfile.read(reinterpret_cast<char*>(rcvBuf),sizeof(float)*64);//Test data read back
+	ipfile.read(reinterpret_cast<void**>(rcvBuf),sizeof(float)*64);//Test data read back
+*/
+	write(fdw,(void*)(block.data),sizeof(float)*64);
+	read(fdr,(void*)rcvBuf,sizeof(float)*64);
 	//--End of modification--
 
 	if ((i==0)&&(j==0))

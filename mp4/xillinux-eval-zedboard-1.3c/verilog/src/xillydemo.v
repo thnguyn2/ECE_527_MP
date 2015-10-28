@@ -271,8 +271,10 @@ module xillydemo
    wire [31:0] out_r_din; //Signal produced by the HLS IP and send to the fifo_from_funjction
    wire out_r_full; //From the output fifo to the function fifo
    wire out_r_write; //Output signal from the HLS IP
-   // 32-bit loopback
-  /* fifo_32x512 fifo_to_function//For writing from Host to PL
+   // 32-bit loopback - worked
+  /*
+  //--------------------------------------------------------------------------
+   fifo_32x512 fifo_to_function//For writing from Host to PL
        (
         .clk(bus_clk),
         .srst(!user_w_write_32_open),
@@ -283,21 +285,68 @@ module xillydemo
         .full(user_w_write_32_full),//Signal telling that the FIFO is full
         .empty(user_r_read_32_empty)
         );
- */
+ //----------------------------------------------------------------------------
+  */
   
-   fifo_32x512 fifo_to_function//For writing from Host to PL
+  /*
+  //------------------------Testing 2 FIFO blocks--------
+     fifo_32x512 fifo_to_function//For writing from Host to PL
+    (
+     .clk(bus_clk),
+     .srst(!user_w_write_32_open),
+     .din(user_w_write_32_data),
+     .wr_en(user_w_write_32_wren),
+     .rd_en(hls_info_rd_en),//Allowing the data to be stream out
+     .dout(in_r_dout),//Data passed into the hls function
+     .full(user_w_write_32_full),//Signal telling that the FIFO is full
+     .empty(hls_fifo_empty)
+     );
+     assign hls_info_rd_en = !hls_fifo_empty;
+    
+     fifo_32x512 fifo_from_function //For writing from PL to host
      (
-      .clk(bus_clk),
-      .srst(!user_w_write_32_open),
-      .din(user_w_write_32_data),
-      .wr_en(user_w_write_32_wren),
-      .rd_en(hls_info_rd_en),//Allowing the data to be stream out
-      .dout(in_r_dout),//Data passed into the hls function
-      .full(user_w_write_32_full),//Signal telling that the FIFO is full
-      .empty(hls_fifo_empty)
-      );
+        .clk(bus_clk),
+        .srst(!user_r_read_32_open),
+        .din(in_r_dout),
+        //.din(out_r_din),//From the HLS IP
+        .wr_en(user_w_write_32_wren),//It is very important to have this signal provided by user_w_write_32_wren. Otherwise, it will not work
+        .rd_en(user_r_read_32_rden),
+        .dout(user_r_read_32_data),//Data to send back to the host
+        .full(out_r_full), //A flag produced by the fifo_from_function to signals to HLS IP fifo
+        .empty(user_r_read_32_empty)
+    );
+     
+  //----------------------------------------------------------
+  */
 
 
+  fifo_32x512 fifo_to_function//For writing from Host to PL
+    (
+     .clk(bus_clk),
+     .srst(!user_w_write_32_open),
+     .din(user_w_write_32_data),
+     .wr_en(user_w_write_32_wren),
+     .rd_en(hls_info_rd_en),//Allowing the data to be stream out
+     .dout(in_r_dout),//Data passed into the hls function
+     .full(user_w_write_32_full),//Signal telling that the FIFO is full
+     .empty(hls_fifo_empty)
+     );
+    
+     fifo_32x512 fifo_from_function //For writing from PL to host
+     (
+        .clk(bus_clk),
+        .srst(!user_r_read_32_open),
+        .din(out_r_din),//From the HLS IP
+        .wr_en(out_r_write),//It is very important to have this signal provided by user_w_write_32_wren. Otherwise, it will not work
+        .rd_en(user_r_read_32_rden),
+        .dout(user_r_read_32_data),//Data to send back to the host
+        .full(out_r_full), //A flag produced by the fifo_from_function to signals to HLS IP fifo
+        .empty(user_r_read_32_empty)
+    );
+
+    
+    
+ 
    assign hls_info_rd_en = !hls_fifo_empty && (in_r_read||!in_r_empty_n);//Enable the data streaming out
    
    //Calculate the not(empty) flag. This will be used to tell the HLS when to read the data
@@ -323,19 +372,8 @@ module xillydemo
     .out_arr_write(out_r_write),
     .op_type(0)
    );
-          
- fifo_32x512 fifo_from_function //For writing from PL to host
- (
-    .clk(bus_clk),
-    .srst(!user_r_read_32_open),
-    .din(in_r_dout),
-    //.din(out_r_din),//From the HLS IP
-    .wr_en(user_w_write_32_wren),
-    .rd_en(user_r_read_32_rden),
-    .dout(user_r_read_32_data),//Data to send back to the host
-    .full(out_r_full), //A flag produced by the fifo_from_function to signals to HLS IP fifo
-    .empty(user_r_read_32_empty)
-);
+  
+
 
    assign  user_r_read_32_eof = 0;
    
