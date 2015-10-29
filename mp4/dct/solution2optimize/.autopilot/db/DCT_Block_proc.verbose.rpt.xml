@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_Block_proc'" level="0">
-<item name = "Date">Thu Oct 22 22:21:57 2015
+<item name = "Date">Wed Oct 28 18:15:14 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 7.64, 1.25</column>
+<column name="default">10.00, 9.59, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">495, 495, 495, 495, none</column>
+<column name="">493, 493, 493, 493, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_DCT_MAT_Multiply_fu_63">DCT_MAT_Multiply, 192, 192, 111, 111, dataflow</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233">DCT_MAT_Multiply2, 300, 300, 301, 301, dataflow</column>
+<column name="grp_DCT_MAT_Multiply_fu_67">DCT_MAT_Multiply, 368, 368, 301, 301, dataflow</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99">DCT_MAT_Multiply2, 122, 122, 68, 68, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,25 +50,41 @@
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="Expression">-, -, 0, 4</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">0, 50, 12669, 17435</column>
-<column name="Memory">2, -, 0, 0</column>
-<column name="Multiplexer">-, -, -, 3470</column>
+<column name="Instance">0, 50, 8035, 15051</column>
+<column name="Memory">1, -, 1024, 64</column>
+<column name="Multiplexer">-, -, -, 861</column>
 <column name="Register">-, -, 12, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">~0, 22, 11, 39</specialColumn>
+<specialColumn name="Utilization (%)">~0, 22, 8, 30</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_DCT_MAT_Multiply_fu_63">DCT_MAT_Multiply, 0, 40, 10758, 14632</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233">DCT_MAT_Multiply2, 0, 10, 1911, 2803</column>
+<column name="grp_DCT_MAT_Multiply_fu_67">DCT_MAT_Multiply, 0, 10, 4303, 7716</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99">DCT_MAT_Multiply2, 0, 40, 3732, 7335</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="temp_U">DCT_Block_proc_temp, 2, 0, 0, 64, 32, 1, 2048</column>
+<column name="T_0_U">DCT_Block_proc_T_0, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_1_U">DCT_Block_proc_T_1, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_2_U">DCT_Block_proc_T_2, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_3_U">DCT_Block_proc_T_3, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_4_U">DCT_Block_proc_T_4, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_5_U">DCT_Block_proc_T_5, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_6_U">DCT_Block_proc_T_6, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_7_U">DCT_Block_proc_T_7, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_0_U">DCT_Block_proc_Tinv_0, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_1_U">DCT_Block_proc_Tinv_1, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_2_U">DCT_Block_proc_Tinv_2, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_3_U">DCT_Block_proc_Tinv_3, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_4_U">DCT_Block_proc_Tinv_4, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_5_U">DCT_Block_proc_Tinv_5, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_6_U">DCT_Block_proc_Tinv_6, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_7_U">DCT_Block_proc_Tinv_7, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="temp_U">DCT_Block_proc_temp, 1, 0, 0, 64, 32, 1, 2048</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -77,128 +93,91 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="cond_fu_402_p2">icmp, 0, 0, 3, 8, 1</column>
-<column name="ap_sig_bdd_46">or, 0, 0, 1, 1, 1</column>
+<column name="cond_fu_130_p2">icmp, 0, 0, 3, 8, 1</column>
+<column name="ap_sig_bdd_222">or, 0, 0, 1, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="T_0_address0">3, 3, 3, 9</column>
+<column name="T_0_ce0">1, 3, 1, 3</column>
+<column name="T_0_ce1">1, 2, 1, 2</column>
+<column name="T_1_address0">3, 3, 3, 9</column>
+<column name="T_1_ce0">1, 3, 1, 3</column>
+<column name="T_1_ce1">1, 2, 1, 2</column>
+<column name="T_2_address0">3, 3, 3, 9</column>
+<column name="T_2_ce0">1, 3, 1, 3</column>
+<column name="T_2_ce1">1, 2, 1, 2</column>
+<column name="T_3_address0">3, 3, 3, 9</column>
+<column name="T_3_ce0">1, 3, 1, 3</column>
+<column name="T_3_ce1">1, 2, 1, 2</column>
+<column name="T_4_address0">3, 3, 3, 9</column>
+<column name="T_4_ce0">1, 3, 1, 3</column>
+<column name="T_4_ce1">1, 2, 1, 2</column>
+<column name="T_5_address0">3, 3, 3, 9</column>
+<column name="T_5_ce0">1, 3, 1, 3</column>
+<column name="T_5_ce1">1, 2, 1, 2</column>
+<column name="T_6_address0">3, 3, 3, 9</column>
+<column name="T_6_ce0">1, 3, 1, 3</column>
+<column name="T_6_ce1">1, 2, 1, 2</column>
+<column name="T_7_address0">3, 3, 3, 9</column>
+<column name="T_7_ce0">1, 3, 1, 3</column>
+<column name="T_7_ce1">1, 2, 1, 2</column>
+<column name="Tinv_0_address0">3, 3, 3, 9</column>
+<column name="Tinv_0_ce0">1, 3, 1, 3</column>
+<column name="Tinv_0_ce1">1, 2, 1, 2</column>
+<column name="Tinv_1_address0">3, 3, 3, 9</column>
+<column name="Tinv_1_ce0">1, 3, 1, 3</column>
+<column name="Tinv_1_ce1">1, 2, 1, 2</column>
+<column name="Tinv_2_address0">3, 3, 3, 9</column>
+<column name="Tinv_2_ce0">1, 3, 1, 3</column>
+<column name="Tinv_2_ce1">1, 2, 1, 2</column>
+<column name="Tinv_3_address0">3, 3, 3, 9</column>
+<column name="Tinv_3_ce0">1, 3, 1, 3</column>
+<column name="Tinv_3_ce1">1, 2, 1, 2</column>
+<column name="Tinv_4_address0">3, 3, 3, 9</column>
+<column name="Tinv_4_ce0">1, 3, 1, 3</column>
+<column name="Tinv_4_ce1">1, 2, 1, 2</column>
+<column name="Tinv_5_address0">3, 3, 3, 9</column>
+<column name="Tinv_5_ce0">1, 3, 1, 3</column>
+<column name="Tinv_5_ce1">1, 2, 1, 2</column>
+<column name="Tinv_6_address0">3, 3, 3, 9</column>
+<column name="Tinv_6_ce0">1, 3, 1, 3</column>
+<column name="Tinv_6_ce1">1, 2, 1, 2</column>
+<column name="Tinv_7_address0">3, 3, 3, 9</column>
+<column name="Tinv_7_ce0">1, 3, 1, 3</column>
+<column name="Tinv_7_ce1">1, 2, 1, 2</column>
 <column name="X_read">1, 2, 1, 2</column>
 <column name="Y_write">1, 2, 1, 2</column>
 <column name="ap_NS_fsm">1, 7, 1, 7</column>
-<column name="ap_sig_startack_grp_DCT_MAT_Multiply2_fu_233_ap_ready">1, 2, 1, 2</column>
-<column name="ap_sig_startack_grp_DCT_MAT_Multiply_fu_63_ap_ready">1, 2, 1, 2</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_0_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_0_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_0_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_0_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_0_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_0_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_1_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_2_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_3_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_4_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_4_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_4_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_4_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_4_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_4_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_5_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_6_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_B_7_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_0_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_0_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_0_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_0_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_0_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_0_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_1_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_2_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_3_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_4_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_4_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_4_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_4_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_4_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_4_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_6_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_5_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_6_7_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_0_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_1_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_2_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_3_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_4_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_5_read">32, 3, 32, 96</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_A_7_6_read">32, 3, 32, 96</column>
+<column name="ap_sig_startack_grp_DCT_MAT_Multiply2_fu_99_ap_ready">1, 2, 1, 2</column>
+<column name="ap_sig_startack_grp_DCT_MAT_Multiply_fu_67_ap_ready">1, 2, 1, 2</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_0_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_1_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_2_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_3_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_4_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_5_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_6_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_B_7_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_0_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_0_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_1_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_1_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_2_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_2_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_3_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_3_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_4_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_4_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_5_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_5_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_6_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_6_q1">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_7_q0">32, 3, 32, 96</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_A_7_q1">32, 3, 32, 96</column>
 <column name="temp_address0">6, 3, 6, 18</column>
 <column name="temp_ce0">1, 3, 1, 3</column>
-<column name="temp_ce1">1, 2, 1, 2</column>
 <column name="temp_we0">1, 2, 1, 2</column>
 </table>
 </item>
@@ -206,11 +185,11 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="ap_reg_startack_grp_DCT_MAT_Multiply2_fu_233_ap_ready">1, 0, 1, 0</column>
-<column name="ap_reg_startack_grp_DCT_MAT_Multiply_fu_63_ap_ready">1, 0, 1, 0</column>
-<column name="cond_reg_408">1, 0, 1, 0</column>
-<column name="grp_DCT_MAT_Multiply2_fu_233_ap_start_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_DCT_MAT_Multiply_fu_63_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="ap_reg_startack_grp_DCT_MAT_Multiply2_fu_99_ap_ready">1, 0, 1, 0</column>
+<column name="ap_reg_startack_grp_DCT_MAT_Multiply_fu_67_ap_ready">1, 0, 1, 0</column>
+<column name="cond_reg_136">1, 0, 1, 0</column>
+<column name="grp_DCT_MAT_Multiply2_fu_99_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_DCT_MAT_Multiply_fu_67_ap_start_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

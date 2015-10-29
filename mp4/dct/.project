@@ -47,6 +47,11 @@
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/.tcls</location>
 		</link>
 		<link>
+			<name>solution3opt/constraints</name>
+			<type>2</type>
+			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/.tcls</location>
+		</link>
+		<link>
 			<name>source/coeff.h</name>
 			<type>1</type>
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/coeff.h</location>
@@ -100,6 +105,21 @@
 			<name>solution2optimize/constraints/script.tcl</name>
 			<type>1</type>
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/script.tcl</location>
+		</link>
+		<link>
+			<name>solution3opt/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/solution3opt.directive</location>
+		</link>
+		<link>
+			<name>solution3opt/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution3opt/constraints/script.tcl</name>
+			<type>1</type>
+			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

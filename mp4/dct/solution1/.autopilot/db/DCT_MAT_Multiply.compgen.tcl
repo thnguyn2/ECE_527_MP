@@ -1,18 +1,21 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 0
-set name DCT_sitofp_32ns_32_6
-set corename simcore_sitofp
-set op sitofp
-set stage_num 6
+set name DCT_fadd_32ns_32ns_32_5_full_dsp
+set corename simcore_fadd
+set op fadd
+set stage_num 5
 set max_latency -1
 set registered_input 1
+set impl_style full_dsp
 set in0_width 32
 set in0_signed 0
+set in1_width 32
+set in1_signed 0
 set out_width 32
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_sitofp] == "ap_gen_simcore_sitofp"} {
-eval "ap_gen_simcore_sitofp { \
+if {[info proc ap_gen_simcore_fadd] == "ap_gen_simcore_fadd"} {
+eval "ap_gen_simcore_fadd { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -22,12 +25,15 @@ eval "ap_gen_simcore_sitofp { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    style ${impl_style} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_sitofp, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_fadd, check your AutoPilot builtin lib"
 }
 }
 
@@ -37,8 +43,8 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op sitofp
-set corename Int2Float
+set op fadd
+set corename FAddSub
 if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
@@ -51,8 +57,11 @@ eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    style ${impl_style} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
     out_width ${out_width} \
 }"
 } else {
@@ -62,20 +71,21 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 1
-set name DCT_mul_32s_32s_32_6
-set corename simcore_mul
-set op mul
-set stage_num 6
+set name DCT_fmul_32ns_32ns_32_4_max_dsp
+set corename simcore_fmul
+set op fmul
+set stage_num 4
 set max_latency -1
 set registered_input 1
+set impl_style max_dsp
 set in0_width 32
-set in0_signed 1
+set in0_signed 0
 set in1_width 32
-set in1_signed 1
+set in1_signed 0
 set out_width 32
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
-eval "ap_gen_simcore_mul { \
+if {[info proc ap_gen_simcore_fmul] == "ap_gen_simcore_fmul"} {
+eval "ap_gen_simcore_fmul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -85,6 +95,7 @@ eval "ap_gen_simcore_mul { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    style ${impl_style} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
@@ -92,7 +103,7 @@ eval "ap_gen_simcore_mul { \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_fmul, check your AutoPilot builtin lib"
 }
 }
 
@@ -102,11 +113,11 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mul
-set corename MulnS
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul] == "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
+set op fmul
+set corename FMul
+if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en})} {
+if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
+eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -116,6 +127,7 @@ eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    style ${impl_style} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
@@ -123,95 +135,13 @@ eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, check your platform lib"
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your platform lib"
 }
 }
 
 
 # Memory (RAM/ROM)  definition:
 set ID 2
-set MemName DCT_MAT_Multiply_A_cached_row
-set CoreName ap_simcore_mem
-set PortList { 2 3 }
-set DataWd 32
-set AddrRange 8
-set AddrWd 3
-set impl_style block
-set TrueReset 0
-set HasInitializer 0
-set IsROM 0
-set ROMData {}
-set NumOfStage 2
-set MaxLatency -1
-set DelayBudget 2.39
-set ClkPeriod 10
-set RegisteredInput 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
-    eval "ap_gen_simcore_mem { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-} else {
-    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-  ::AP::rtl_comp_handler $MemName
-}
-
-
-set CoreName RAM
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
-    eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 2 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    style ${impl_style} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-  } else {
-    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_RAM, check your platform lib"
-  }
-}
-
-
-# Memory (RAM/ROM)  definition:
-set ID 3
 set MemName DCT_MAT_Multiply_B_cached
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
@@ -303,7 +233,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 4 \
+    id 3 \
     name A \
     reset_level 1 \
     sync_rst true \
@@ -322,7 +252,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 5 \
+    id 4 \
     name B \
     reset_level 1 \
     sync_rst true \
@@ -341,7 +271,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6 \
+    id 5 \
     name C \
     reset_level 1 \
     sync_rst true \

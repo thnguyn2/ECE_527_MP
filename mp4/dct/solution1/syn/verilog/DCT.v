@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.583500,HLS_SYN_LAT=12581,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=4,HLS_SYN_FF=671,HLS_SYN_LUT=1679}" *)
+(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.412000,HLS_SYN_LAT=6215,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=10,HLS_SYN_FF=1028,HLS_SYN_LUT=1755}" *)
 
 module DCT (
         ap_clk,
@@ -37,10 +37,10 @@ parameter    ap_ST_st6_fsm_5 = 6'b100000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 parameter    ap_const_lv1_1 = 1'b1;
 parameter    ap_const_lv1_0 = 1'b0;
-parameter    ap_const_lv32_2 = 32'b10;
-parameter    ap_const_lv32_5 = 32'b101;
 parameter    ap_const_lv32_1 = 32'b1;
 parameter    ap_const_lv32_4 = 32'b100;
+parameter    ap_const_lv32_2 = 32'b10;
+parameter    ap_const_lv32_5 = 32'b101;
 parameter    ap_const_lv32_3 = 32'b11;
 parameter    ap_const_lv8_1 = 8'b1;
 parameter    ap_true = 1'b1;
@@ -75,38 +75,53 @@ wire   [31:0] Tinv_q0;
 reg   [5:0] T_address0;
 reg    T_ce0;
 wire   [31:0] T_q0;
-wire   [0:0] cond_fu_49_p2;
-reg   [0:0] cond_reg_55;
+wire   [0:0] cond_fu_58_p2;
+reg   [0:0] cond_reg_64;
 reg   [5:0] temp_address0;
 reg    temp_ce0;
 reg    temp_we0;
 wire   [31:0] temp_d0;
 wire   [31:0] temp_q0;
-wire    grp_DCT_MAT_Multiply_fu_35_ap_start;
-wire    grp_DCT_MAT_Multiply_fu_35_ap_done;
-wire    grp_DCT_MAT_Multiply_fu_35_ap_idle;
-wire    grp_DCT_MAT_Multiply_fu_35_ap_ready;
-wire   [5:0] grp_DCT_MAT_Multiply_fu_35_A_address0;
-wire    grp_DCT_MAT_Multiply_fu_35_A_ce0;
-reg   [31:0] grp_DCT_MAT_Multiply_fu_35_A_q0;
-wire   [5:0] grp_DCT_MAT_Multiply_fu_35_B_address0;
-wire    grp_DCT_MAT_Multiply_fu_35_B_ce0;
-reg   [31:0] grp_DCT_MAT_Multiply_fu_35_B_q0;
-wire   [5:0] grp_DCT_MAT_Multiply_fu_35_C_address0;
-wire    grp_DCT_MAT_Multiply_fu_35_C_ce0;
-wire    grp_DCT_MAT_Multiply_fu_35_C_we0;
-wire   [31:0] grp_DCT_MAT_Multiply_fu_35_C_d0;
-reg    grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg = 1'b0;
-reg    ap_sig_cseq_ST_st3_fsm_2;
-reg    ap_sig_bdd_103;
-reg    ap_sig_cseq_ST_st6_fsm_5;
-reg    ap_sig_bdd_111;
+wire    grp_DCT_MAT_Multiply_fu_37_ap_start;
+wire    grp_DCT_MAT_Multiply_fu_37_ap_done;
+wire    grp_DCT_MAT_Multiply_fu_37_ap_idle;
+wire    grp_DCT_MAT_Multiply_fu_37_ap_ready;
+wire   [5:0] grp_DCT_MAT_Multiply_fu_37_A_address0;
+wire    grp_DCT_MAT_Multiply_fu_37_A_ce0;
+reg   [31:0] grp_DCT_MAT_Multiply_fu_37_A_q0;
+wire   [5:0] grp_DCT_MAT_Multiply_fu_37_B_address0;
+wire    grp_DCT_MAT_Multiply_fu_37_B_ce0;
+wire   [31:0] grp_DCT_MAT_Multiply_fu_37_B_q0;
+wire   [5:0] grp_DCT_MAT_Multiply_fu_37_C_address0;
+wire    grp_DCT_MAT_Multiply_fu_37_C_ce0;
+wire    grp_DCT_MAT_Multiply_fu_37_C_we0;
+wire   [31:0] grp_DCT_MAT_Multiply_fu_37_C_d0;
+wire    grp_DCT_MAT_Multiply2_fu_48_ap_start;
+wire    grp_DCT_MAT_Multiply2_fu_48_ap_done;
+wire    grp_DCT_MAT_Multiply2_fu_48_ap_idle;
+wire    grp_DCT_MAT_Multiply2_fu_48_ap_ready;
+wire   [5:0] grp_DCT_MAT_Multiply2_fu_48_A_address0;
+wire    grp_DCT_MAT_Multiply2_fu_48_A_ce0;
+wire   [31:0] grp_DCT_MAT_Multiply2_fu_48_A_q0;
+wire   [5:0] grp_DCT_MAT_Multiply2_fu_48_B_address0;
+wire    grp_DCT_MAT_Multiply2_fu_48_B_ce0;
+reg   [31:0] grp_DCT_MAT_Multiply2_fu_48_B_q0;
+wire   [5:0] grp_DCT_MAT_Multiply2_fu_48_C_address0;
+wire    grp_DCT_MAT_Multiply2_fu_48_C_ce0;
+wire    grp_DCT_MAT_Multiply2_fu_48_C_we0;
+wire   [31:0] grp_DCT_MAT_Multiply2_fu_48_C_d0;
+reg    grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg = 1'b0;
 reg    ap_sig_cseq_ST_st2_fsm_1;
 reg    ap_sig_bdd_119;
 reg    ap_sig_cseq_ST_st5_fsm_4;
 reg    ap_sig_bdd_126;
+reg    grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg = 1'b0;
+reg    ap_sig_cseq_ST_st3_fsm_2;
+reg    ap_sig_bdd_136;
+reg    ap_sig_cseq_ST_st6_fsm_5;
+reg    ap_sig_bdd_143;
 reg    ap_sig_cseq_ST_st4_fsm_3;
-reg    ap_sig_bdd_133;
+reg    ap_sig_bdd_151;
 reg   [5:0] ap_NS_fsm;
 
 
@@ -148,23 +163,42 @@ temp_U(
     .q0( temp_q0 )
 );
 
-DCT_MAT_Multiply grp_DCT_MAT_Multiply_fu_35(
+DCT_MAT_Multiply grp_DCT_MAT_Multiply_fu_37(
     .ap_clk( ap_clk ),
     .ap_rst( ap_rst ),
-    .ap_start( grp_DCT_MAT_Multiply_fu_35_ap_start ),
-    .ap_done( grp_DCT_MAT_Multiply_fu_35_ap_done ),
-    .ap_idle( grp_DCT_MAT_Multiply_fu_35_ap_idle ),
-    .ap_ready( grp_DCT_MAT_Multiply_fu_35_ap_ready ),
-    .A_address0( grp_DCT_MAT_Multiply_fu_35_A_address0 ),
-    .A_ce0( grp_DCT_MAT_Multiply_fu_35_A_ce0 ),
-    .A_q0( grp_DCT_MAT_Multiply_fu_35_A_q0 ),
-    .B_address0( grp_DCT_MAT_Multiply_fu_35_B_address0 ),
-    .B_ce0( grp_DCT_MAT_Multiply_fu_35_B_ce0 ),
-    .B_q0( grp_DCT_MAT_Multiply_fu_35_B_q0 ),
-    .C_address0( grp_DCT_MAT_Multiply_fu_35_C_address0 ),
-    .C_ce0( grp_DCT_MAT_Multiply_fu_35_C_ce0 ),
-    .C_we0( grp_DCT_MAT_Multiply_fu_35_C_we0 ),
-    .C_d0( grp_DCT_MAT_Multiply_fu_35_C_d0 )
+    .ap_start( grp_DCT_MAT_Multiply_fu_37_ap_start ),
+    .ap_done( grp_DCT_MAT_Multiply_fu_37_ap_done ),
+    .ap_idle( grp_DCT_MAT_Multiply_fu_37_ap_idle ),
+    .ap_ready( grp_DCT_MAT_Multiply_fu_37_ap_ready ),
+    .A_address0( grp_DCT_MAT_Multiply_fu_37_A_address0 ),
+    .A_ce0( grp_DCT_MAT_Multiply_fu_37_A_ce0 ),
+    .A_q0( grp_DCT_MAT_Multiply_fu_37_A_q0 ),
+    .B_address0( grp_DCT_MAT_Multiply_fu_37_B_address0 ),
+    .B_ce0( grp_DCT_MAT_Multiply_fu_37_B_ce0 ),
+    .B_q0( grp_DCT_MAT_Multiply_fu_37_B_q0 ),
+    .C_address0( grp_DCT_MAT_Multiply_fu_37_C_address0 ),
+    .C_ce0( grp_DCT_MAT_Multiply_fu_37_C_ce0 ),
+    .C_we0( grp_DCT_MAT_Multiply_fu_37_C_we0 ),
+    .C_d0( grp_DCT_MAT_Multiply_fu_37_C_d0 )
+);
+
+DCT_MAT_Multiply2 grp_DCT_MAT_Multiply2_fu_48(
+    .ap_clk( ap_clk ),
+    .ap_rst( ap_rst ),
+    .ap_start( grp_DCT_MAT_Multiply2_fu_48_ap_start ),
+    .ap_done( grp_DCT_MAT_Multiply2_fu_48_ap_done ),
+    .ap_idle( grp_DCT_MAT_Multiply2_fu_48_ap_idle ),
+    .ap_ready( grp_DCT_MAT_Multiply2_fu_48_ap_ready ),
+    .A_address0( grp_DCT_MAT_Multiply2_fu_48_A_address0 ),
+    .A_ce0( grp_DCT_MAT_Multiply2_fu_48_A_ce0 ),
+    .A_q0( grp_DCT_MAT_Multiply2_fu_48_A_q0 ),
+    .B_address0( grp_DCT_MAT_Multiply2_fu_48_B_address0 ),
+    .B_ce0( grp_DCT_MAT_Multiply2_fu_48_B_ce0 ),
+    .B_q0( grp_DCT_MAT_Multiply2_fu_48_B_q0 ),
+    .C_address0( grp_DCT_MAT_Multiply2_fu_48_C_address0 ),
+    .C_ce0( grp_DCT_MAT_Multiply2_fu_48_C_ce0 ),
+    .C_we0( grp_DCT_MAT_Multiply2_fu_48_C_we0 ),
+    .C_d0( grp_DCT_MAT_Multiply2_fu_48_C_d0 )
 );
 
 
@@ -179,16 +213,30 @@ begin : ap_ret_ap_CS_fsm
     end
 end
 
-/// grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg assign process. ///
+/// grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg assign process. ///
 always @ (posedge ap_clk)
-begin : ap_ret_grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg
+begin : ap_ret_grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg
     if (ap_rst == 1'b1) begin
-        grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg <= ap_const_logic_0;
+        grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg <= ap_const_logic_0;
     end else begin
-        if ((((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == ap_const_logic_0) & (cond_fu_49_p2 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == ap_const_logic_0) & ~(cond_fu_49_p2 == ap_const_lv1_0)) | (ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) | (ap_const_logic_1 == ap_sig_cseq_ST_st6_fsm_5))) begin
-            grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg <= ap_const_logic_1;
-        end else if ((ap_const_logic_1 == grp_DCT_MAT_Multiply_fu_35_ap_ready)) begin
-            grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg <= ap_const_logic_0;
+        if (((ap_const_logic_1 == ap_sig_cseq_ST_st3_fsm_2) | (ap_const_logic_1 == ap_sig_cseq_ST_st6_fsm_5))) begin
+            grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg <= ap_const_logic_1;
+        end else if ((ap_const_logic_1 == grp_DCT_MAT_Multiply2_fu_48_ap_ready)) begin
+            grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg <= ap_const_logic_0;
+        end
+    end
+end
+
+/// grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg assign process. ///
+always @ (posedge ap_clk)
+begin : ap_ret_grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg
+    if (ap_rst == 1'b1) begin
+        grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg <= ap_const_logic_0;
+    end else begin
+        if ((((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == ap_const_logic_0) & (cond_fu_58_p2 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == ap_const_logic_0) & ~(cond_fu_58_p2 == ap_const_lv1_0)))) begin
+            grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg <= ap_const_logic_1;
+        end else if ((ap_const_logic_1 == grp_DCT_MAT_Multiply_fu_37_ap_ready)) begin
+            grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg <= ap_const_logic_0;
         end
     end
 end
@@ -197,92 +245,92 @@ end
 always @(posedge ap_clk)
 begin
     if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == ap_const_logic_0))) begin
-        cond_reg_55 <= cond_fu_49_p2;
+        cond_reg_64 <= cond_fu_58_p2;
     end
 end
 
 /// T_address0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_A_address0 or grp_DCT_MAT_Multiply_fu_35_B_address0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_A_address0 or grp_DCT_MAT_Multiply2_fu_48_B_address0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0))) begin
-        T_address0 = grp_DCT_MAT_Multiply_fu_35_B_address0;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_64 == ap_const_lv1_0))) begin
+        T_address0 = grp_DCT_MAT_Multiply2_fu_48_B_address0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        T_address0 = grp_DCT_MAT_Multiply_fu_35_A_address0;
+        T_address0 = grp_DCT_MAT_Multiply_fu_37_A_address0;
     end else begin
         T_address0 = 'bx;
     end
 end
 
 /// T_ce0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_A_ce0 or grp_DCT_MAT_Multiply_fu_35_B_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_A_ce0 or grp_DCT_MAT_Multiply2_fu_48_B_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0))) begin
-        T_ce0 = grp_DCT_MAT_Multiply_fu_35_B_ce0;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_64 == ap_const_lv1_0))) begin
+        T_ce0 = grp_DCT_MAT_Multiply2_fu_48_B_ce0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        T_ce0 = grp_DCT_MAT_Multiply_fu_35_A_ce0;
+        T_ce0 = grp_DCT_MAT_Multiply_fu_37_A_ce0;
     end else begin
         T_ce0 = ap_const_logic_0;
     end
 end
 
 /// Tinv_address0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_A_address0 or grp_DCT_MAT_Multiply_fu_35_B_address0 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_A_address0 or grp_DCT_MAT_Multiply2_fu_48_B_address0 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0))) begin
-        Tinv_address0 = grp_DCT_MAT_Multiply_fu_35_B_address0;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_64 == ap_const_lv1_0))) begin
+        Tinv_address0 = grp_DCT_MAT_Multiply2_fu_48_B_address0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        Tinv_address0 = grp_DCT_MAT_Multiply_fu_35_A_address0;
+        Tinv_address0 = grp_DCT_MAT_Multiply_fu_37_A_address0;
     end else begin
         Tinv_address0 = 'bx;
     end
 end
 
 /// Tinv_ce0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_A_ce0 or grp_DCT_MAT_Multiply_fu_35_B_ce0 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_A_ce0 or grp_DCT_MAT_Multiply2_fu_48_B_ce0 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0))) begin
-        Tinv_ce0 = grp_DCT_MAT_Multiply_fu_35_B_ce0;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_64 == ap_const_lv1_0))) begin
+        Tinv_ce0 = grp_DCT_MAT_Multiply2_fu_48_B_ce0;
     end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        Tinv_ce0 = grp_DCT_MAT_Multiply_fu_35_A_ce0;
+        Tinv_ce0 = grp_DCT_MAT_Multiply_fu_37_A_ce0;
     end else begin
         Tinv_ce0 = ap_const_logic_0;
     end
 end
 
 /// X_ce0 assign process. ///
-always @ (grp_DCT_MAT_Multiply_fu_35_B_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4)
+always @ (grp_DCT_MAT_Multiply_fu_37_B_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4)
 begin
     if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
-        X_ce0 = grp_DCT_MAT_Multiply_fu_35_B_ce0;
+        X_ce0 = grp_DCT_MAT_Multiply_fu_37_B_ce0;
     end else begin
         X_ce0 = ap_const_logic_0;
     end
 end
 
 /// Y_ce0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_C_ce0 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply2_fu_48_C_ce0 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0)))) begin
-        Y_ce0 = grp_DCT_MAT_Multiply_fu_35_C_ce0;
+    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_64 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_64 == ap_const_lv1_0)))) begin
+        Y_ce0 = grp_DCT_MAT_Multiply2_fu_48_C_ce0;
     end else begin
         Y_ce0 = ap_const_logic_0;
     end
 end
 
 /// Y_we0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_C_we0 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply2_fu_48_C_we0 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0)))) begin
-        Y_we0 = grp_DCT_MAT_Multiply_fu_35_C_we0;
+    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_64 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_64 == ap_const_lv1_0)))) begin
+        Y_we0 = grp_DCT_MAT_Multiply2_fu_48_C_we0;
     end else begin
         Y_we0 = ap_const_logic_0;
     end
 end
 
 /// ap_done assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_ap_done or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply2_fu_48_ap_done or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(((cond_reg_55 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done)) | (~(cond_reg_55 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done))))) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(((cond_reg_64 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply2_fu_48_ap_done)) | (~(cond_reg_64 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply2_fu_48_ap_done))))) begin
         ap_done = ap_const_logic_1;
     end else begin
         ap_done = ap_const_logic_0;
@@ -300,9 +348,9 @@ begin
 end
 
 /// ap_ready assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_ap_done or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply2_fu_48_ap_done or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(((cond_reg_55 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done)) | (~(cond_reg_55 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done))))) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(((cond_reg_64 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply2_fu_48_ap_done)) | (~(cond_reg_64 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply2_fu_48_ap_done))))) begin
         ap_ready = ap_const_logic_1;
     end else begin
         ap_ready = ap_const_logic_0;
@@ -330,9 +378,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st3_fsm_2 assign process. ///
-always @ (ap_sig_bdd_103)
+always @ (ap_sig_bdd_136)
 begin
-    if (ap_sig_bdd_103) begin
+    if (ap_sig_bdd_136) begin
         ap_sig_cseq_ST_st3_fsm_2 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st3_fsm_2 = ap_const_logic_0;
@@ -340,9 +388,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st4_fsm_3 assign process. ///
-always @ (ap_sig_bdd_133)
+always @ (ap_sig_bdd_151)
 begin
-    if (ap_sig_bdd_133) begin
+    if (ap_sig_bdd_151) begin
         ap_sig_cseq_ST_st4_fsm_3 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st4_fsm_3 = ap_const_logic_0;
@@ -360,85 +408,85 @@ begin
 end
 
 /// ap_sig_cseq_ST_st6_fsm_5 assign process. ///
-always @ (ap_sig_bdd_111)
+always @ (ap_sig_bdd_143)
 begin
-    if (ap_sig_bdd_111) begin
+    if (ap_sig_bdd_143) begin
         ap_sig_cseq_ST_st6_fsm_5 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st6_fsm_5 = ap_const_logic_0;
     end
 end
 
-/// grp_DCT_MAT_Multiply_fu_35_A_q0 assign process. ///
-always @ (Tinv_q0 or T_q0 or cond_reg_55 or temp_q0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
+/// grp_DCT_MAT_Multiply2_fu_48_B_q0 assign process. ///
+always @ (Tinv_q0 or T_q0 or cond_reg_64 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0)))) begin
-        grp_DCT_MAT_Multiply_fu_35_A_q0 = temp_q0;
-    end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        grp_DCT_MAT_Multiply_fu_35_A_q0 = Tinv_q0;
-    end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-        grp_DCT_MAT_Multiply_fu_35_A_q0 = T_q0;
+    if ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3)) begin
+        if (~(cond_reg_64 == ap_const_lv1_0)) begin
+            grp_DCT_MAT_Multiply2_fu_48_B_q0 = T_q0;
+        end else if ((cond_reg_64 == ap_const_lv1_0)) begin
+            grp_DCT_MAT_Multiply2_fu_48_B_q0 = Tinv_q0;
+        end else begin
+            grp_DCT_MAT_Multiply2_fu_48_B_q0 = 'bx;
+        end
     end else begin
-        grp_DCT_MAT_Multiply_fu_35_A_q0 = 'bx;
+        grp_DCT_MAT_Multiply2_fu_48_B_q0 = 'bx;
     end
 end
 
-/// grp_DCT_MAT_Multiply_fu_35_B_q0 assign process. ///
-always @ (X_q0 or Tinv_q0 or T_q0 or cond_reg_55 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
+/// grp_DCT_MAT_Multiply_fu_37_A_q0 assign process. ///
+always @ (Tinv_q0 or T_q0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0))) begin
-        grp_DCT_MAT_Multiply_fu_35_B_q0 = T_q0;
-    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0))) begin
-        grp_DCT_MAT_Multiply_fu_35_B_q0 = Tinv_q0;
-    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
-        grp_DCT_MAT_Multiply_fu_35_B_q0 = X_q0;
+    if ((ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        grp_DCT_MAT_Multiply_fu_37_A_q0 = Tinv_q0;
+    end else if ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1)) begin
+        grp_DCT_MAT_Multiply_fu_37_A_q0 = T_q0;
     end else begin
-        grp_DCT_MAT_Multiply_fu_35_B_q0 = 'bx;
+        grp_DCT_MAT_Multiply_fu_37_A_q0 = 'bx;
     end
 end
 
 /// temp_address0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_A_address0 or grp_DCT_MAT_Multiply_fu_35_C_address0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_C_address0 or grp_DCT_MAT_Multiply2_fu_48_A_address0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
-        temp_address0 = grp_DCT_MAT_Multiply_fu_35_C_address0;
-    end else if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0)))) begin
-        temp_address0 = grp_DCT_MAT_Multiply_fu_35_A_address0;
+    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_64 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_64 == ap_const_lv1_0)))) begin
+        temp_address0 = grp_DCT_MAT_Multiply2_fu_48_A_address0;
+    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
+        temp_address0 = grp_DCT_MAT_Multiply_fu_37_C_address0;
     end else begin
         temp_address0 = 'bx;
     end
 end
 
 /// temp_ce0 assign process. ///
-always @ (cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_A_ce0 or grp_DCT_MAT_Multiply_fu_35_C_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
+always @ (cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_C_ce0 or grp_DCT_MAT_Multiply2_fu_48_A_ce0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4 or ap_sig_cseq_ST_st4_fsm_3)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
-        temp_ce0 = grp_DCT_MAT_Multiply_fu_35_C_ce0;
-    end else if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_55 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_55 == ap_const_lv1_0)))) begin
-        temp_ce0 = grp_DCT_MAT_Multiply_fu_35_A_ce0;
+    if ((((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & (cond_reg_64 == ap_const_lv1_0)) | ((ap_const_logic_1 == ap_sig_cseq_ST_st4_fsm_3) & ~(cond_reg_64 == ap_const_lv1_0)))) begin
+        temp_ce0 = grp_DCT_MAT_Multiply2_fu_48_A_ce0;
+    end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
+        temp_ce0 = grp_DCT_MAT_Multiply_fu_37_C_ce0;
     end else begin
         temp_ce0 = ap_const_logic_0;
     end
 end
 
 /// temp_we0 assign process. ///
-always @ (grp_DCT_MAT_Multiply_fu_35_C_we0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4)
+always @ (grp_DCT_MAT_Multiply_fu_37_C_we0 or ap_sig_cseq_ST_st2_fsm_1 or ap_sig_cseq_ST_st5_fsm_4)
 begin
     if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) | (ap_const_logic_1 == ap_sig_cseq_ST_st5_fsm_4))) begin
-        temp_we0 = grp_DCT_MAT_Multiply_fu_35_C_we0;
+        temp_we0 = grp_DCT_MAT_Multiply_fu_37_C_we0;
     end else begin
         temp_we0 = ap_const_logic_0;
     end
 end
 /// the next state (ap_NS_fsm) of the state machine. ///
-always @ (ap_start or ap_CS_fsm or cond_fu_49_p2 or cond_reg_55 or grp_DCT_MAT_Multiply_fu_35_ap_done)
+always @ (ap_start or ap_CS_fsm or cond_fu_58_p2 or cond_reg_64 or grp_DCT_MAT_Multiply_fu_37_ap_done or grp_DCT_MAT_Multiply2_fu_48_ap_done)
 begin
     case (ap_CS_fsm)
         ap_ST_st1_fsm_0 : 
         begin
-            if ((~(ap_start == ap_const_logic_0) & ~(cond_fu_49_p2 == ap_const_lv1_0))) begin
+            if ((~(ap_start == ap_const_logic_0) & ~(cond_fu_58_p2 == ap_const_lv1_0))) begin
                 ap_NS_fsm = ap_ST_st5_fsm_4;
-            end else if ((~(ap_start == ap_const_logic_0) & (cond_fu_49_p2 == ap_const_lv1_0))) begin
+            end else if ((~(ap_start == ap_const_logic_0) & (cond_fu_58_p2 == ap_const_lv1_0))) begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
             end else begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
@@ -446,7 +494,7 @@ begin
         end
         ap_ST_st2_fsm_1 : 
         begin
-            if (~(ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done)) begin
+            if (~(ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_37_ap_done)) begin
                 ap_NS_fsm = ap_ST_st3_fsm_2;
             end else begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
@@ -458,7 +506,7 @@ begin
         end
         ap_ST_st4_fsm_3 : 
         begin
-            if (~(((cond_reg_55 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done)) | (~(cond_reg_55 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done)))) begin
+            if (~(((cond_reg_64 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply2_fu_48_ap_done)) | (~(cond_reg_64 == ap_const_lv1_0) & (ap_const_logic_0 == grp_DCT_MAT_Multiply2_fu_48_ap_done)))) begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
             end else begin
                 ap_NS_fsm = ap_ST_st4_fsm_3;
@@ -466,7 +514,7 @@ begin
         end
         ap_ST_st5_fsm_4 : 
         begin
-            if (~(ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_35_ap_done)) begin
+            if (~(ap_const_logic_0 == grp_DCT_MAT_Multiply_fu_37_ap_done)) begin
                 ap_NS_fsm = ap_ST_st6_fsm_5;
             end else begin
                 ap_NS_fsm = ap_ST_st5_fsm_4;
@@ -483,21 +531,9 @@ begin
     endcase
 end
 
-assign X_address0 = grp_DCT_MAT_Multiply_fu_35_B_address0;
-assign Y_address0 = grp_DCT_MAT_Multiply_fu_35_C_address0;
-assign Y_d0 = grp_DCT_MAT_Multiply_fu_35_C_d0;
-
-/// ap_sig_bdd_103 assign process. ///
-always @ (ap_CS_fsm)
-begin
-    ap_sig_bdd_103 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_2]);
-end
-
-/// ap_sig_bdd_111 assign process. ///
-always @ (ap_CS_fsm)
-begin
-    ap_sig_bdd_111 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_5]);
-end
+assign X_address0 = grp_DCT_MAT_Multiply_fu_37_B_address0;
+assign Y_address0 = grp_DCT_MAT_Multiply2_fu_48_C_address0;
+assign Y_d0 = grp_DCT_MAT_Multiply2_fu_48_C_d0;
 
 /// ap_sig_bdd_119 assign process. ///
 always @ (ap_CS_fsm)
@@ -511,10 +547,22 @@ begin
     ap_sig_bdd_126 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_4]);
 end
 
-/// ap_sig_bdd_133 assign process. ///
+/// ap_sig_bdd_136 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_133 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_3]);
+    ap_sig_bdd_136 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_2]);
+end
+
+/// ap_sig_bdd_143 assign process. ///
+always @ (ap_CS_fsm)
+begin
+    ap_sig_bdd_143 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_5]);
+end
+
+/// ap_sig_bdd_151 assign process. ///
+always @ (ap_CS_fsm)
+begin
+    ap_sig_bdd_151 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_3]);
 end
 
 /// ap_sig_bdd_22 assign process. ///
@@ -522,9 +570,12 @@ always @ (ap_CS_fsm)
 begin
     ap_sig_bdd_22 = (ap_CS_fsm[ap_const_lv32_0] == ap_const_lv1_1);
 end
-assign cond_fu_49_p2 = (function_r == ap_const_lv8_1? 1'b1: 1'b0);
-assign grp_DCT_MAT_Multiply_fu_35_ap_start = grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg;
-assign temp_d0 = grp_DCT_MAT_Multiply_fu_35_C_d0;
+assign cond_fu_58_p2 = (function_r == ap_const_lv8_1? 1'b1: 1'b0);
+assign grp_DCT_MAT_Multiply2_fu_48_A_q0 = temp_q0;
+assign grp_DCT_MAT_Multiply2_fu_48_ap_start = grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg;
+assign grp_DCT_MAT_Multiply_fu_37_B_q0 = X_q0;
+assign grp_DCT_MAT_Multiply_fu_37_ap_start = grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg;
+assign temp_d0 = grp_DCT_MAT_Multiply_fu_37_C_d0;
 
 
 endmodule //DCT

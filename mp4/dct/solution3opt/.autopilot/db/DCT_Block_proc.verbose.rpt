@@ -1,0 +1,1471 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_Block_proc'
+================================================================
+* Date:           Wed Oct 28 17:54:38 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution3opt
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.22|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  302|  302|  302|  302|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------+-------------------+-----+-----+-----+-----+----------+
+        |                              |                   |  Latency  |  Interval | Pipeline |
+        |           Instance           |       Module      | min | max | min | max |   Type   |
+        +------------------------------+-------------------+-----+-----+-----+-----+----------+
+        |grp_DCT_MAT_Multiply_fu_63    |DCT_MAT_Multiply   |  178|  178|  111|  111| dataflow |
+        |grp_DCT_MAT_Multiply2_fu_233  |DCT_MAT_Multiply2  |  121|  121|   68|   68| dataflow |
+        +------------------------------+-------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       0|      4|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        0|     80|   15258|  25447|
+|Memory           |        1|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|   3469|
+|Register         |        -|      -|      12|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        1|     80|   15270|  28920|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |    ~0   |     36|      14|     54|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------+-------------------+---------+-------+------+-------+
+    |           Instance           |       Module      | BRAM_18K| DSP48E|  FF  |  LUT  |
+    +------------------------------+-------------------+---------+-------+------+-------+
+    |grp_DCT_MAT_Multiply_fu_63    |DCT_MAT_Multiply   |        0|     40|  8713|  14656|
+    |grp_DCT_MAT_Multiply2_fu_233  |DCT_MAT_Multiply2  |        0|     40|  6545|  10791|
+    +------------------------------+-------------------+---------+-------+------+-------+
+    |Total                         |                   |        0|     80| 15258|  25447|
+    +------------------------------+-------------------+---------+-------+------+-------+
+
+    * Memory: 
+    +--------+---------------------+---------+---+----+------+-----+------+-------------+
+    | Memory |        Module       | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +--------+---------------------+---------+---+----+------+-----+------+-------------+
+    |temp_U  |DCT_Block_proc_temp  |        1|  0|   0|    64|   32|     1|         2048|
+    +--------+---------------------+---------+---+----+------+-----+------+-------------+
+    |Total   |                     |        1|  0|   0|    64|   32|     1|         2048|
+    +--------+---------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------+----------+-------+---+----+------------+------------+
+    |cond_fu_402_p2  |   icmp   |      0|  0|   3|           8|           1|
+    |ap_sig_bdd_46   |    or    |      0|  0|   1|           1|           1|
+    +----------------+----------+-------+---+----+------------+------------+
+    |Total           |          |      0|  0|   4|           9|           2|
+    +----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------------+----+-----------+-----+-----------+
+    |                          Name                         | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------------+----+-----------+-----+-----------+
+    |X_read                                                 |   1|          2|    1|          2|
+    |Y_write                                                |   1|          2|    1|          2|
+    |ap_NS_fsm                                              |   1|          7|    1|          7|
+    |ap_sig_startack_grp_DCT_MAT_Multiply2_fu_233_ap_ready  |   1|          2|    1|          2|
+    |ap_sig_startack_grp_DCT_MAT_Multiply_fu_63_ap_ready    |   1|          2|    1|          2|
+    |grp_DCT_MAT_Multiply2_fu_233_B_0_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_0_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_0_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_0_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_0_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_0_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_0_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_4_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_1_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_0_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_4_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_2_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_0_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_4_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_3_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_4_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_4_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_4_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_4_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_4_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_4_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_0_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_4_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_5_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_0_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_4_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_6_7_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_0_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_1_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_2_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_3_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_4_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_5_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply2_fu_233_B_7_6_read                |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_0_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_0_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_0_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_0_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_0_6_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_0_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_0_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_4_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_6_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_1_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_0_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_4_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_6_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_2_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_0_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_4_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_6_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_3_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_4_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_4_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_4_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_4_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_4_6_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_4_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_0_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_4_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_6_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_5_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_0_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_4_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_6_7_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_0_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_1_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_2_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_3_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_4_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_5_read                  |  32|          3|   32|         96|
+    |grp_DCT_MAT_Multiply_fu_63_A_7_6_read                  |  32|          3|   32|         96|
+    |temp_address0                                          |   6|          3|    6|         18|
+    |temp_ce0                                               |   1|          3|    1|          3|
+    |temp_we0                                               |   1|          2|    1|          2|
+    +-------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                  |3469|        347| 3469|      10406|
+    +-------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------+---+----+-----+-----------+
+    |                          Name                         | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                              |  6|   0|    6|          0|
+    |ap_done_reg                                            |  1|   0|    1|          0|
+    |ap_reg_startack_grp_DCT_MAT_Multiply2_fu_233_ap_ready  |  1|   0|    1|          0|
+    |ap_reg_startack_grp_DCT_MAT_Multiply_fu_63_ap_ready    |  1|   0|    1|          0|
+    |cond_reg_408                                           |  1|   0|    1|          0|
+    |grp_DCT_MAT_Multiply2_fu_233_ap_start_ap_start_reg     |  1|   0|    1|          0|
+    |grp_DCT_MAT_Multiply_fu_63_ap_start_ap_start_reg       |  1|   0|    1|          0|
+    +-------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                  | 12|   0|   12|          0|
+    +-------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+-----------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-------------+-----+-----+------------+-----------------+--------------+
+|ap_clk       |  in |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|ap_rst       |  in |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|ap_start     |  in |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|ap_done      | out |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|ap_continue  |  in |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|ap_idle      | out |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|ap_ready     | out |    1| ap_ctrl_hs | DCT_Block__proc | return value |
+|function_r   |  in |    8|   ap_none  |    function_r   |    scalar    |
+|X_dout       |  in |   32|   ap_fifo  |        X        |    pointer   |
+|X_empty_n    |  in |    1|   ap_fifo  |        X        |    pointer   |
+|X_read       | out |    1|   ap_fifo  |        X        |    pointer   |
+|Y_din        | out |   32|   ap_fifo  |        Y        |    pointer   |
+|Y_full_n     |  in |    1|   ap_fifo  |        Y        |    pointer   |
+|Y_write      | out |    1|   ap_fifo  |        Y        |    pointer   |
++-------------+-----+-----+------------+-----------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!cond)
+	5  / (cond)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+5 --> 
+	6  / true
+6 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 3.75ns
+ST_1: stg_7 [1/1] 0.00ns
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(float* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+
+ST_1: stg_8 [1/1] 0.00ns
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(float* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+
+ST_1: function_read [1/1] 0.00ns
+newFuncRoot:2  %function_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %function_r)
+
+ST_1: temp [1/1] 2.71ns
+newFuncRoot:3  %temp = alloca [64 x float], align 4
+
+ST_1: cond [1/1] 2.00ns
+newFuncRoot:4  %cond = icmp eq i8 %function_read, 1
+
+ST_1: stg_12 [1/1] 0.00ns
+newFuncRoot:5  br i1 %cond, label %0, label %1
+
+ST_1: stg_13 [2/2] 1.04ns
+:0  call fastcc void @DCT_MAT_Multiply(float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FB8F8B840000000, float 0xBFB8F8B840000000, float 0xBFD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0xBFDD906BE0000000, float 0xBFC87DE2A0000000, float 0x3FC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0xBFB8F8B840000000, float 0xBFDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FDF6297C0000000, float 0x3FB8F8B840000000, float 0xBFDA9B6620000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0x3FB8F8B840000000, float 0x3FDA9B6620000000, float 0xBFDA9B6620000000, float 0x3FDF6297C0000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0x3FDD906BE0000000, float 0xBFC87DE2A0000000, float 0xBFC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD1C73B40000000, float 0x3FDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDF6297C0000000, float 0xBFDA9B6620000000, float 0x3FD1C73B40000000, float* %X, [64 x float]* nocapture %temp)
+
+ST_1: stg_14 [2/2] 1.04ns
+:0  call fastcc void @DCT_MAT_Multiply(float 0x3FDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD1C73B40000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0x3FD6A09E60000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, float 0xBFD6A09E60000000, float 0xBFDF6297C0000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FB8F8B840000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD6A09E60000000, float 0x3FB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, float 0xBFB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FD6A09E60000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float* %X, [64 x float]* nocapture %temp)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_15 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply(float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FB8F8B840000000, float 0xBFB8F8B840000000, float 0xBFD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0xBFDD906BE0000000, float 0xBFC87DE2A0000000, float 0x3FC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0xBFB8F8B840000000, float 0xBFDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FDF6297C0000000, float 0x3FB8F8B840000000, float 0xBFDA9B6620000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0x3FB8F8B840000000, float 0x3FDA9B6620000000, float 0xBFDA9B6620000000, float 0x3FDF6297C0000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0x3FDD906BE0000000, float 0xBFC87DE2A0000000, float 0xBFC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD1C73B40000000, float 0x3FDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDF6297C0000000, float 0xBFDA9B6620000000, float 0x3FD1C73B40000000, float* %X, [64 x float]* nocapture %temp)
+
+
+ <State 3>: 1.04ns
+ST_3: stg_16 [2/2] 1.04ns
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, float 0x3FDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD1C73B40000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0x3FD6A09E60000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, float 0xBFD6A09E60000000, float 0xBFDF6297C0000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FB8F8B840000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD6A09E60000000, float 0x3FB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, float 0xBFB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FD6A09E60000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float* %Y)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_17 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, float 0x3FDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD1C73B40000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0x3FD6A09E60000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, float 0xBFD6A09E60000000, float 0xBFDF6297C0000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FB8F8B840000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD6A09E60000000, float 0x3FB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, float 0xBFB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FD6A09E60000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float* %Y)
+
+ST_4: stg_18 [1/1] 0.00ns
+:2  br label %.ret.exitStub
+
+ST_4: stg_19 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FB8F8B840000000, float 0xBFB8F8B840000000, float 0xBFD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0xBFDD906BE0000000, float 0xBFC87DE2A0000000, float 0x3FC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0xBFB8F8B840000000, float 0xBFDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FDF6297C0000000, float 0x3FB8F8B840000000, float 0xBFDA9B6620000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0x3FB8F8B840000000, float 0x3FDA9B6620000000, float 0xBFDA9B6620000000, float 0x3FDF6297C0000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0x3FDD906BE0000000, float 0xBFC87DE2A0000000, float 0xBFC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD1C73B40000000, float 0x3FDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDF6297C0000000, float 0xBFDA9B6620000000, float 0x3FD1C73B40000000, float* %Y)
+
+ST_4: stg_20 [1/1] 0.00ns
+:2  br label %.ret.exitStub
+
+ST_4: stg_21 [1/1] 0.00ns
+.ret.exitStub:0  ret void
+
+
+ <State 5>: 0.00ns
+ST_5: stg_22 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply(float 0x3FDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD1C73B40000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0x3FD6A09E60000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, float 0xBFD6A09E60000000, float 0xBFDF6297C0000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FB8F8B840000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD6A09E60000000, float 0x3FB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, float 0xBFB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FD6A09E60000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float* %X, [64 x float]* nocapture %temp)
+
+
+ <State 6>: 1.04ns
+ST_6: stg_23 [2/2] 1.04ns
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FB8F8B840000000, float 0xBFB8F8B840000000, float 0xBFD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0xBFDD906BE0000000, float 0xBFC87DE2A0000000, float 0x3FC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0xBFB8F8B840000000, float 0xBFDF6297C0000000, float 0x3FD1C73B40000000, float 0x3FDF6297C0000000, float 0x3FB8F8B840000000, float 0xBFDA9B6620000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0x3FB8F8B840000000, float 0x3FDA9B6620000000, float 0xBFDA9B6620000000, float 0x3FDF6297C0000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0x3FDD906BE0000000, float 0xBFC87DE2A0000000, float 0xBFC87DE2A0000000, float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD1C73B40000000, float 0x3FDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDF6297C0000000, float 0xBFDA9B6620000000, float 0x3FD1C73B40000000, float* %Y)
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is clock enabled: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ function_r]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x266bd02e00; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ X]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x266bd03670; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x266bd031f0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+stg_7         (specinterface) [ 0000000]
+stg_8         (specinterface) [ 0000000]
+function_read (read         ) [ 0000000]
+temp          (alloca       ) [ 0011111]
+cond          (icmp         ) [ 0111111]
+stg_12        (br           ) [ 0000000]
+stg_15        (call         ) [ 0000000]
+stg_17        (call         ) [ 0000000]
+stg_18        (br           ) [ 0000000]
+stg_19        (call         ) [ 0000000]
+stg_20        (br           ) [ 0000000]
+stg_21        (ret          ) [ 0000000]
+stg_22        (call         ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="function_r">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="function_r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="X">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="X"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="Y">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Y"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str19"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DCT_MAT_Multiply"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DCT_MAT_Multiply2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="temp_alloca_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="1" slack="0"/>
+<pin id="54" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="temp/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="function_read_read_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="8" slack="0"/>
+<pin id="58" dir="0" index="1" bw="8" slack="0"/>
+<pin id="59" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="function_read/1 "/>
+</bind>
+</comp>
+
+<comp id="63" class="1004" name="grp_DCT_MAT_Multiply_fu_63">
+<pin_list>
+<pin id="64" dir="0" index="0" bw="0" slack="0"/>
+<pin id="65" dir="0" index="1" bw="32" slack="0"/>
+<pin id="66" dir="0" index="2" bw="32" slack="0"/>
+<pin id="67" dir="0" index="3" bw="32" slack="0"/>
+<pin id="68" dir="0" index="4" bw="32" slack="0"/>
+<pin id="69" dir="0" index="5" bw="32" slack="0"/>
+<pin id="70" dir="0" index="6" bw="32" slack="0"/>
+<pin id="71" dir="0" index="7" bw="32" slack="0"/>
+<pin id="72" dir="0" index="8" bw="32" slack="0"/>
+<pin id="73" dir="0" index="9" bw="32" slack="0"/>
+<pin id="74" dir="0" index="10" bw="32" slack="0"/>
+<pin id="75" dir="0" index="11" bw="32" slack="0"/>
+<pin id="76" dir="0" index="12" bw="32" slack="0"/>
+<pin id="77" dir="0" index="13" bw="32" slack="0"/>
+<pin id="78" dir="0" index="14" bw="32" slack="0"/>
+<pin id="79" dir="0" index="15" bw="32" slack="0"/>
+<pin id="80" dir="0" index="16" bw="32" slack="0"/>
+<pin id="81" dir="0" index="17" bw="32" slack="0"/>
+<pin id="82" dir="0" index="18" bw="32" slack="0"/>
+<pin id="83" dir="0" index="19" bw="32" slack="0"/>
+<pin id="84" dir="0" index="20" bw="32" slack="0"/>
+<pin id="85" dir="0" index="21" bw="32" slack="0"/>
+<pin id="86" dir="0" index="22" bw="32" slack="0"/>
+<pin id="87" dir="0" index="23" bw="32" slack="0"/>
+<pin id="88" dir="0" index="24" bw="32" slack="0"/>
+<pin id="89" dir="0" index="25" bw="32" slack="0"/>
+<pin id="90" dir="0" index="26" bw="32" slack="0"/>
+<pin id="91" dir="0" index="27" bw="32" slack="0"/>
+<pin id="92" dir="0" index="28" bw="32" slack="0"/>
+<pin id="93" dir="0" index="29" bw="32" slack="0"/>
+<pin id="94" dir="0" index="30" bw="32" slack="0"/>
+<pin id="95" dir="0" index="31" bw="32" slack="0"/>
+<pin id="96" dir="0" index="32" bw="32" slack="0"/>
+<pin id="97" dir="0" index="33" bw="32" slack="0"/>
+<pin id="98" dir="0" index="34" bw="32" slack="0"/>
+<pin id="99" dir="0" index="35" bw="32" slack="0"/>
+<pin id="100" dir="0" index="36" bw="32" slack="0"/>
+<pin id="101" dir="0" index="37" bw="32" slack="0"/>
+<pin id="102" dir="0" index="38" bw="32" slack="0"/>
+<pin id="103" dir="0" index="39" bw="32" slack="0"/>
+<pin id="104" dir="0" index="40" bw="32" slack="0"/>
+<pin id="105" dir="0" index="41" bw="32" slack="0"/>
+<pin id="106" dir="0" index="42" bw="32" slack="0"/>
+<pin id="107" dir="0" index="43" bw="32" slack="0"/>
+<pin id="108" dir="0" index="44" bw="32" slack="0"/>
+<pin id="109" dir="0" index="45" bw="32" slack="0"/>
+<pin id="110" dir="0" index="46" bw="32" slack="0"/>
+<pin id="111" dir="0" index="47" bw="32" slack="0"/>
+<pin id="112" dir="0" index="48" bw="32" slack="0"/>
+<pin id="113" dir="0" index="49" bw="32" slack="0"/>
+<pin id="114" dir="0" index="50" bw="32" slack="0"/>
+<pin id="115" dir="0" index="51" bw="32" slack="0"/>
+<pin id="116" dir="0" index="52" bw="32" slack="0"/>
+<pin id="117" dir="0" index="53" bw="32" slack="0"/>
+<pin id="118" dir="0" index="54" bw="32" slack="0"/>
+<pin id="119" dir="0" index="55" bw="32" slack="0"/>
+<pin id="120" dir="0" index="56" bw="32" slack="0"/>
+<pin id="121" dir="1" index="57" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="stg_13/1 stg_14/1 "/>
+</bind>
+</comp>
+
+<comp id="233" class="1004" name="grp_DCT_MAT_Multiply2_fu_233">
+<pin_list>
+<pin id="234" dir="0" index="0" bw="0" slack="0"/>
+<pin id="235" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="236" dir="0" index="2" bw="32" slack="0"/>
+<pin id="237" dir="0" index="3" bw="32" slack="0"/>
+<pin id="238" dir="0" index="4" bw="32" slack="0"/>
+<pin id="239" dir="0" index="5" bw="32" slack="0"/>
+<pin id="240" dir="0" index="6" bw="32" slack="0"/>
+<pin id="241" dir="0" index="7" bw="32" slack="0"/>
+<pin id="242" dir="0" index="8" bw="32" slack="0"/>
+<pin id="243" dir="0" index="9" bw="32" slack="0"/>
+<pin id="244" dir="0" index="10" bw="32" slack="0"/>
+<pin id="245" dir="0" index="11" bw="32" slack="0"/>
+<pin id="246" dir="0" index="12" bw="32" slack="0"/>
+<pin id="247" dir="0" index="13" bw="32" slack="0"/>
+<pin id="248" dir="0" index="14" bw="32" slack="0"/>
+<pin id="249" dir="0" index="15" bw="32" slack="0"/>
+<pin id="250" dir="0" index="16" bw="32" slack="0"/>
+<pin id="251" dir="0" index="17" bw="32" slack="0"/>
+<pin id="252" dir="0" index="18" bw="32" slack="0"/>
+<pin id="253" dir="0" index="19" bw="32" slack="0"/>
+<pin id="254" dir="0" index="20" bw="32" slack="0"/>
+<pin id="255" dir="0" index="21" bw="32" slack="0"/>
+<pin id="256" dir="0" index="22" bw="32" slack="0"/>
+<pin id="257" dir="0" index="23" bw="32" slack="0"/>
+<pin id="258" dir="0" index="24" bw="32" slack="0"/>
+<pin id="259" dir="0" index="25" bw="32" slack="0"/>
+<pin id="260" dir="0" index="26" bw="32" slack="0"/>
+<pin id="261" dir="0" index="27" bw="32" slack="0"/>
+<pin id="262" dir="0" index="28" bw="32" slack="0"/>
+<pin id="263" dir="0" index="29" bw="32" slack="0"/>
+<pin id="264" dir="0" index="30" bw="32" slack="0"/>
+<pin id="265" dir="0" index="31" bw="32" slack="0"/>
+<pin id="266" dir="0" index="32" bw="32" slack="0"/>
+<pin id="267" dir="0" index="33" bw="32" slack="0"/>
+<pin id="268" dir="0" index="34" bw="32" slack="0"/>
+<pin id="269" dir="0" index="35" bw="32" slack="0"/>
+<pin id="270" dir="0" index="36" bw="32" slack="0"/>
+<pin id="271" dir="0" index="37" bw="32" slack="0"/>
+<pin id="272" dir="0" index="38" bw="32" slack="0"/>
+<pin id="273" dir="0" index="39" bw="32" slack="0"/>
+<pin id="274" dir="0" index="40" bw="32" slack="0"/>
+<pin id="275" dir="0" index="41" bw="32" slack="0"/>
+<pin id="276" dir="0" index="42" bw="32" slack="0"/>
+<pin id="277" dir="0" index="43" bw="32" slack="0"/>
+<pin id="278" dir="0" index="44" bw="32" slack="0"/>
+<pin id="279" dir="0" index="45" bw="32" slack="0"/>
+<pin id="280" dir="0" index="46" bw="32" slack="0"/>
+<pin id="281" dir="0" index="47" bw="32" slack="0"/>
+<pin id="282" dir="0" index="48" bw="32" slack="0"/>
+<pin id="283" dir="0" index="49" bw="32" slack="0"/>
+<pin id="284" dir="0" index="50" bw="32" slack="0"/>
+<pin id="285" dir="0" index="51" bw="32" slack="0"/>
+<pin id="286" dir="0" index="52" bw="32" slack="0"/>
+<pin id="287" dir="0" index="53" bw="32" slack="0"/>
+<pin id="288" dir="0" index="54" bw="32" slack="0"/>
+<pin id="289" dir="0" index="55" bw="32" slack="0"/>
+<pin id="290" dir="0" index="56" bw="32" slack="0"/>
+<pin id="291" dir="1" index="57" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="stg_16/3 stg_23/6 "/>
+</bind>
+</comp>
+
+<comp id="402" class="1004" name="cond_fu_402">
+<pin_list>
+<pin id="403" dir="0" index="0" bw="8" slack="0"/>
+<pin id="404" dir="0" index="1" bw="8" slack="0"/>
+<pin id="405" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="cond/1 "/>
+</bind>
+</comp>
+
+<comp id="408" class="1005" name="cond_reg_408">
+<pin_list>
+<pin id="409" dir="0" index="0" bw="1" slack="3"/>
+<pin id="410" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="cond "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="55"><net_src comp="16" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="60"><net_src comp="14" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="61"><net_src comp="0" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="122"><net_src comp="20" pin="0"/><net_sink comp="63" pin=0"/></net>
+
+<net id="123"><net_src comp="22" pin="0"/><net_sink comp="63" pin=1"/></net>
+
+<net id="124"><net_src comp="22" pin="0"/><net_sink comp="63" pin=2"/></net>
+
+<net id="125"><net_src comp="22" pin="0"/><net_sink comp="63" pin=3"/></net>
+
+<net id="126"><net_src comp="22" pin="0"/><net_sink comp="63" pin=4"/></net>
+
+<net id="127"><net_src comp="22" pin="0"/><net_sink comp="63" pin=5"/></net>
+
+<net id="128"><net_src comp="22" pin="0"/><net_sink comp="63" pin=6"/></net>
+
+<net id="129"><net_src comp="24" pin="0"/><net_sink comp="63" pin=7"/></net>
+
+<net id="130"><net_src comp="26" pin="0"/><net_sink comp="63" pin=8"/></net>
+
+<net id="131"><net_src comp="28" pin="0"/><net_sink comp="63" pin=9"/></net>
+
+<net id="132"><net_src comp="30" pin="0"/><net_sink comp="63" pin=10"/></net>
+
+<net id="133"><net_src comp="32" pin="0"/><net_sink comp="63" pin=11"/></net>
+
+<net id="134"><net_src comp="34" pin="0"/><net_sink comp="63" pin=12"/></net>
+
+<net id="135"><net_src comp="36" pin="0"/><net_sink comp="63" pin=13"/></net>
+
+<net id="136"><net_src comp="38" pin="0"/><net_sink comp="63" pin=14"/></net>
+
+<net id="137"><net_src comp="40" pin="0"/><net_sink comp="63" pin=15"/></net>
+
+<net id="138"><net_src comp="42" pin="0"/><net_sink comp="63" pin=16"/></net>
+
+<net id="139"><net_src comp="42" pin="0"/><net_sink comp="63" pin=17"/></net>
+
+<net id="140"><net_src comp="44" pin="0"/><net_sink comp="63" pin=18"/></net>
+
+<net id="141"><net_src comp="40" pin="0"/><net_sink comp="63" pin=19"/></net>
+
+<net id="142"><net_src comp="38" pin="0"/><net_sink comp="63" pin=20"/></net>
+
+<net id="143"><net_src comp="46" pin="0"/><net_sink comp="63" pin=21"/></net>
+
+<net id="144"><net_src comp="30" pin="0"/><net_sink comp="63" pin=22"/></net>
+
+<net id="145"><net_src comp="36" pin="0"/><net_sink comp="63" pin=23"/></net>
+
+<net id="146"><net_src comp="26" pin="0"/><net_sink comp="63" pin=24"/></net>
+
+<net id="147"><net_src comp="24" pin="0"/><net_sink comp="63" pin=25"/></net>
+
+<net id="148"><net_src comp="28" pin="0"/><net_sink comp="63" pin=26"/></net>
+
+<net id="149"><net_src comp="34" pin="0"/><net_sink comp="63" pin=27"/></net>
+
+<net id="150"><net_src comp="48" pin="0"/><net_sink comp="63" pin=28"/></net>
+
+<net id="151"><net_src comp="48" pin="0"/><net_sink comp="63" pin=29"/></net>
+
+<net id="152"><net_src comp="22" pin="0"/><net_sink comp="63" pin=30"/></net>
+
+<net id="153"><net_src comp="48" pin="0"/><net_sink comp="63" pin=31"/></net>
+
+<net id="154"><net_src comp="48" pin="0"/><net_sink comp="63" pin=32"/></net>
+
+<net id="155"><net_src comp="22" pin="0"/><net_sink comp="63" pin=33"/></net>
+
+<net id="156"><net_src comp="26" pin="0"/><net_sink comp="63" pin=34"/></net>
+
+<net id="157"><net_src comp="36" pin="0"/><net_sink comp="63" pin=35"/></net>
+
+<net id="158"><net_src comp="28" pin="0"/><net_sink comp="63" pin=36"/></net>
+
+<net id="159"><net_src comp="46" pin="0"/><net_sink comp="63" pin=37"/></net>
+
+<net id="160"><net_src comp="34" pin="0"/><net_sink comp="63" pin=38"/></net>
+
+<net id="161"><net_src comp="24" pin="0"/><net_sink comp="63" pin=39"/></net>
+
+<net id="162"><net_src comp="32" pin="0"/><net_sink comp="63" pin=40"/></net>
+
+<net id="163"><net_src comp="40" pin="0"/><net_sink comp="63" pin=41"/></net>
+
+<net id="164"><net_src comp="42" pin="0"/><net_sink comp="63" pin=42"/></net>
+
+<net id="165"><net_src comp="38" pin="0"/><net_sink comp="63" pin=43"/></net>
+
+<net id="166"><net_src comp="44" pin="0"/><net_sink comp="63" pin=44"/></net>
+
+<net id="167"><net_src comp="44" pin="0"/><net_sink comp="63" pin=45"/></net>
+
+<net id="168"><net_src comp="38" pin="0"/><net_sink comp="63" pin=46"/></net>
+
+<net id="169"><net_src comp="40" pin="0"/><net_sink comp="63" pin=47"/></net>
+
+<net id="170"><net_src comp="28" pin="0"/><net_sink comp="63" pin=48"/></net>
+
+<net id="171"><net_src comp="32" pin="0"/><net_sink comp="63" pin=49"/></net>
+
+<net id="172"><net_src comp="46" pin="0"/><net_sink comp="63" pin=50"/></net>
+
+<net id="173"><net_src comp="36" pin="0"/><net_sink comp="63" pin=51"/></net>
+
+<net id="174"><net_src comp="24" pin="0"/><net_sink comp="63" pin=52"/></net>
+
+<net id="175"><net_src comp="34" pin="0"/><net_sink comp="63" pin=53"/></net>
+
+<net id="176"><net_src comp="26" pin="0"/><net_sink comp="63" pin=54"/></net>
+
+<net id="177"><net_src comp="2" pin="0"/><net_sink comp="63" pin=55"/></net>
+
+<net id="178"><net_src comp="52" pin="1"/><net_sink comp="63" pin=56"/></net>
+
+<net id="179"><net_src comp="24" pin="0"/><net_sink comp="63" pin=1"/></net>
+
+<net id="180"><net_src comp="38" pin="0"/><net_sink comp="63" pin=2"/></net>
+
+<net id="181"><net_src comp="46" pin="0"/><net_sink comp="63" pin=3"/></net>
+
+<net id="182"><net_src comp="26" pin="0"/><net_sink comp="63" pin=4"/></net>
+
+<net id="183"><net_src comp="40" pin="0"/><net_sink comp="63" pin=5"/></net>
+
+<net id="184"><net_src comp="28" pin="0"/><net_sink comp="63" pin=6"/></net>
+
+<net id="185"><net_src comp="22" pin="0"/><net_sink comp="63" pin=7"/></net>
+
+<net id="186"><net_src comp="40" pin="0"/><net_sink comp="63" pin=8"/></net>
+
+<net id="187"><net_src comp="30" pin="0"/><net_sink comp="63" pin=9"/></net>
+
+<net id="188"><net_src comp="48" pin="0"/><net_sink comp="63" pin=10"/></net>
+
+<net id="189"><net_src comp="36" pin="0"/><net_sink comp="63" pin=11"/></net>
+
+<net id="190"><net_src comp="42" pin="0"/><net_sink comp="63" pin=12"/></net>
+
+<net id="191"><net_src comp="32" pin="0"/><net_sink comp="63" pin=13"/></net>
+
+<net id="192"><net_src comp="22" pin="0"/><net_sink comp="63" pin=14"/></net>
+
+<net id="193"><net_src comp="26" pin="0"/><net_sink comp="63" pin=15"/></net>
+
+<net id="194"><net_src comp="36" pin="0"/><net_sink comp="63" pin=16"/></net>
+
+<net id="195"><net_src comp="48" pin="0"/><net_sink comp="63" pin=17"/></net>
+
+<net id="196"><net_src comp="28" pin="0"/><net_sink comp="63" pin=18"/></net>
+
+<net id="197"><net_src comp="38" pin="0"/><net_sink comp="63" pin=19"/></net>
+
+<net id="198"><net_src comp="46" pin="0"/><net_sink comp="63" pin=20"/></net>
+
+<net id="199"><net_src comp="22" pin="0"/><net_sink comp="63" pin=21"/></net>
+
+<net id="200"><net_src comp="28" pin="0"/><net_sink comp="63" pin=22"/></net>
+
+<net id="201"><net_src comp="42" pin="0"/><net_sink comp="63" pin=23"/></net>
+
+<net id="202"><net_src comp="22" pin="0"/><net_sink comp="63" pin=24"/></net>
+
+<net id="203"><net_src comp="46" pin="0"/><net_sink comp="63" pin=25"/></net>
+
+<net id="204"><net_src comp="44" pin="0"/><net_sink comp="63" pin=26"/></net>
+
+<net id="205"><net_src comp="36" pin="0"/><net_sink comp="63" pin=27"/></net>
+
+<net id="206"><net_src comp="30" pin="0"/><net_sink comp="63" pin=28"/></net>
+
+<net id="207"><net_src comp="42" pin="0"/><net_sink comp="63" pin=29"/></net>
+
+<net id="208"><net_src comp="26" pin="0"/><net_sink comp="63" pin=30"/></net>
+
+<net id="209"><net_src comp="34" pin="0"/><net_sink comp="63" pin=31"/></net>
+
+<net id="210"><net_src comp="44" pin="0"/><net_sink comp="63" pin=32"/></net>
+
+<net id="211"><net_src comp="24" pin="0"/><net_sink comp="63" pin=33"/></net>
+
+<net id="212"><net_src comp="22" pin="0"/><net_sink comp="63" pin=34"/></net>
+
+<net id="213"><net_src comp="32" pin="0"/><net_sink comp="63" pin=35"/></net>
+
+<net id="214"><net_src comp="44" pin="0"/><net_sink comp="63" pin=36"/></net>
+
+<net id="215"><net_src comp="24" pin="0"/><net_sink comp="63" pin=37"/></net>
+
+<net id="216"><net_src comp="48" pin="0"/><net_sink comp="63" pin=38"/></net>
+
+<net id="217"><net_src comp="38" pin="0"/><net_sink comp="63" pin=39"/></net>
+
+<net id="218"><net_src comp="34" pin="0"/><net_sink comp="63" pin=40"/></net>
+
+<net id="219"><net_src comp="22" pin="0"/><net_sink comp="63" pin=41"/></net>
+
+<net id="220"><net_src comp="34" pin="0"/><net_sink comp="63" pin=42"/></net>
+
+<net id="221"><net_src comp="40" pin="0"/><net_sink comp="63" pin=43"/></net>
+
+<net id="222"><net_src comp="28" pin="0"/><net_sink comp="63" pin=44"/></net>
+
+<net id="223"><net_src comp="48" pin="0"/><net_sink comp="63" pin=45"/></net>
+
+<net id="224"><net_src comp="24" pin="0"/><net_sink comp="63" pin=46"/></net>
+
+<net id="225"><net_src comp="26" pin="0"/><net_sink comp="63" pin=47"/></net>
+
+<net id="226"><net_src comp="22" pin="0"/><net_sink comp="63" pin=48"/></net>
+
+<net id="227"><net_src comp="36" pin="0"/><net_sink comp="63" pin=49"/></net>
+
+<net id="228"><net_src comp="38" pin="0"/><net_sink comp="63" pin=50"/></net>
+
+<net id="229"><net_src comp="34" pin="0"/><net_sink comp="63" pin=51"/></net>
+
+<net id="230"><net_src comp="22" pin="0"/><net_sink comp="63" pin=52"/></net>
+
+<net id="231"><net_src comp="32" pin="0"/><net_sink comp="63" pin=53"/></net>
+
+<net id="232"><net_src comp="40" pin="0"/><net_sink comp="63" pin=54"/></net>
+
+<net id="292"><net_src comp="50" pin="0"/><net_sink comp="233" pin=0"/></net>
+
+<net id="293"><net_src comp="24" pin="0"/><net_sink comp="233" pin=2"/></net>
+
+<net id="294"><net_src comp="38" pin="0"/><net_sink comp="233" pin=3"/></net>
+
+<net id="295"><net_src comp="46" pin="0"/><net_sink comp="233" pin=4"/></net>
+
+<net id="296"><net_src comp="26" pin="0"/><net_sink comp="233" pin=5"/></net>
+
+<net id="297"><net_src comp="40" pin="0"/><net_sink comp="233" pin=6"/></net>
+
+<net id="298"><net_src comp="28" pin="0"/><net_sink comp="233" pin=7"/></net>
+
+<net id="299"><net_src comp="22" pin="0"/><net_sink comp="233" pin=8"/></net>
+
+<net id="300"><net_src comp="40" pin="0"/><net_sink comp="233" pin=9"/></net>
+
+<net id="301"><net_src comp="30" pin="0"/><net_sink comp="233" pin=10"/></net>
+
+<net id="302"><net_src comp="48" pin="0"/><net_sink comp="233" pin=11"/></net>
+
+<net id="303"><net_src comp="36" pin="0"/><net_sink comp="233" pin=12"/></net>
+
+<net id="304"><net_src comp="42" pin="0"/><net_sink comp="233" pin=13"/></net>
+
+<net id="305"><net_src comp="32" pin="0"/><net_sink comp="233" pin=14"/></net>
+
+<net id="306"><net_src comp="22" pin="0"/><net_sink comp="233" pin=15"/></net>
+
+<net id="307"><net_src comp="26" pin="0"/><net_sink comp="233" pin=16"/></net>
+
+<net id="308"><net_src comp="36" pin="0"/><net_sink comp="233" pin=17"/></net>
+
+<net id="309"><net_src comp="48" pin="0"/><net_sink comp="233" pin=18"/></net>
+
+<net id="310"><net_src comp="28" pin="0"/><net_sink comp="233" pin=19"/></net>
+
+<net id="311"><net_src comp="38" pin="0"/><net_sink comp="233" pin=20"/></net>
+
+<net id="312"><net_src comp="46" pin="0"/><net_sink comp="233" pin=21"/></net>
+
+<net id="313"><net_src comp="22" pin="0"/><net_sink comp="233" pin=22"/></net>
+
+<net id="314"><net_src comp="28" pin="0"/><net_sink comp="233" pin=23"/></net>
+
+<net id="315"><net_src comp="42" pin="0"/><net_sink comp="233" pin=24"/></net>
+
+<net id="316"><net_src comp="22" pin="0"/><net_sink comp="233" pin=25"/></net>
+
+<net id="317"><net_src comp="46" pin="0"/><net_sink comp="233" pin=26"/></net>
+
+<net id="318"><net_src comp="44" pin="0"/><net_sink comp="233" pin=27"/></net>
+
+<net id="319"><net_src comp="36" pin="0"/><net_sink comp="233" pin=28"/></net>
+
+<net id="320"><net_src comp="30" pin="0"/><net_sink comp="233" pin=29"/></net>
+
+<net id="321"><net_src comp="42" pin="0"/><net_sink comp="233" pin=30"/></net>
+
+<net id="322"><net_src comp="26" pin="0"/><net_sink comp="233" pin=31"/></net>
+
+<net id="323"><net_src comp="34" pin="0"/><net_sink comp="233" pin=32"/></net>
+
+<net id="324"><net_src comp="44" pin="0"/><net_sink comp="233" pin=33"/></net>
+
+<net id="325"><net_src comp="24" pin="0"/><net_sink comp="233" pin=34"/></net>
+
+<net id="326"><net_src comp="22" pin="0"/><net_sink comp="233" pin=35"/></net>
+
+<net id="327"><net_src comp="32" pin="0"/><net_sink comp="233" pin=36"/></net>
+
+<net id="328"><net_src comp="44" pin="0"/><net_sink comp="233" pin=37"/></net>
+
+<net id="329"><net_src comp="24" pin="0"/><net_sink comp="233" pin=38"/></net>
+
+<net id="330"><net_src comp="48" pin="0"/><net_sink comp="233" pin=39"/></net>
+
+<net id="331"><net_src comp="38" pin="0"/><net_sink comp="233" pin=40"/></net>
+
+<net id="332"><net_src comp="34" pin="0"/><net_sink comp="233" pin=41"/></net>
+
+<net id="333"><net_src comp="22" pin="0"/><net_sink comp="233" pin=42"/></net>
+
+<net id="334"><net_src comp="34" pin="0"/><net_sink comp="233" pin=43"/></net>
+
+<net id="335"><net_src comp="40" pin="0"/><net_sink comp="233" pin=44"/></net>
+
+<net id="336"><net_src comp="28" pin="0"/><net_sink comp="233" pin=45"/></net>
+
+<net id="337"><net_src comp="48" pin="0"/><net_sink comp="233" pin=46"/></net>
+
+<net id="338"><net_src comp="24" pin="0"/><net_sink comp="233" pin=47"/></net>
+
+<net id="339"><net_src comp="26" pin="0"/><net_sink comp="233" pin=48"/></net>
+
+<net id="340"><net_src comp="22" pin="0"/><net_sink comp="233" pin=49"/></net>
+
+<net id="341"><net_src comp="36" pin="0"/><net_sink comp="233" pin=50"/></net>
+
+<net id="342"><net_src comp="38" pin="0"/><net_sink comp="233" pin=51"/></net>
+
+<net id="343"><net_src comp="34" pin="0"/><net_sink comp="233" pin=52"/></net>
+
+<net id="344"><net_src comp="22" pin="0"/><net_sink comp="233" pin=53"/></net>
+
+<net id="345"><net_src comp="32" pin="0"/><net_sink comp="233" pin=54"/></net>
+
+<net id="346"><net_src comp="40" pin="0"/><net_sink comp="233" pin=55"/></net>
+
+<net id="347"><net_src comp="4" pin="0"/><net_sink comp="233" pin=56"/></net>
+
+<net id="348"><net_src comp="22" pin="0"/><net_sink comp="233" pin=2"/></net>
+
+<net id="349"><net_src comp="22" pin="0"/><net_sink comp="233" pin=3"/></net>
+
+<net id="350"><net_src comp="22" pin="0"/><net_sink comp="233" pin=4"/></net>
+
+<net id="351"><net_src comp="22" pin="0"/><net_sink comp="233" pin=5"/></net>
+
+<net id="352"><net_src comp="22" pin="0"/><net_sink comp="233" pin=6"/></net>
+
+<net id="353"><net_src comp="22" pin="0"/><net_sink comp="233" pin=7"/></net>
+
+<net id="354"><net_src comp="24" pin="0"/><net_sink comp="233" pin=8"/></net>
+
+<net id="355"><net_src comp="26" pin="0"/><net_sink comp="233" pin=9"/></net>
+
+<net id="356"><net_src comp="28" pin="0"/><net_sink comp="233" pin=10"/></net>
+
+<net id="357"><net_src comp="30" pin="0"/><net_sink comp="233" pin=11"/></net>
+
+<net id="358"><net_src comp="32" pin="0"/><net_sink comp="233" pin=12"/></net>
+
+<net id="359"><net_src comp="34" pin="0"/><net_sink comp="233" pin=13"/></net>
+
+<net id="360"><net_src comp="36" pin="0"/><net_sink comp="233" pin=14"/></net>
+
+<net id="361"><net_src comp="38" pin="0"/><net_sink comp="233" pin=15"/></net>
+
+<net id="362"><net_src comp="40" pin="0"/><net_sink comp="233" pin=16"/></net>
+
+<net id="363"><net_src comp="42" pin="0"/><net_sink comp="233" pin=17"/></net>
+
+<net id="364"><net_src comp="42" pin="0"/><net_sink comp="233" pin=18"/></net>
+
+<net id="365"><net_src comp="44" pin="0"/><net_sink comp="233" pin=19"/></net>
+
+<net id="366"><net_src comp="40" pin="0"/><net_sink comp="233" pin=20"/></net>
+
+<net id="367"><net_src comp="38" pin="0"/><net_sink comp="233" pin=21"/></net>
+
+<net id="368"><net_src comp="46" pin="0"/><net_sink comp="233" pin=22"/></net>
+
+<net id="369"><net_src comp="30" pin="0"/><net_sink comp="233" pin=23"/></net>
+
+<net id="370"><net_src comp="36" pin="0"/><net_sink comp="233" pin=24"/></net>
+
+<net id="371"><net_src comp="26" pin="0"/><net_sink comp="233" pin=25"/></net>
+
+<net id="372"><net_src comp="24" pin="0"/><net_sink comp="233" pin=26"/></net>
+
+<net id="373"><net_src comp="28" pin="0"/><net_sink comp="233" pin=27"/></net>
+
+<net id="374"><net_src comp="34" pin="0"/><net_sink comp="233" pin=28"/></net>
+
+<net id="375"><net_src comp="48" pin="0"/><net_sink comp="233" pin=29"/></net>
+
+<net id="376"><net_src comp="48" pin="0"/><net_sink comp="233" pin=30"/></net>
+
+<net id="377"><net_src comp="22" pin="0"/><net_sink comp="233" pin=31"/></net>
+
+<net id="378"><net_src comp="48" pin="0"/><net_sink comp="233" pin=32"/></net>
+
+<net id="379"><net_src comp="48" pin="0"/><net_sink comp="233" pin=33"/></net>
+
+<net id="380"><net_src comp="22" pin="0"/><net_sink comp="233" pin=34"/></net>
+
+<net id="381"><net_src comp="26" pin="0"/><net_sink comp="233" pin=35"/></net>
+
+<net id="382"><net_src comp="36" pin="0"/><net_sink comp="233" pin=36"/></net>
+
+<net id="383"><net_src comp="28" pin="0"/><net_sink comp="233" pin=37"/></net>
+
+<net id="384"><net_src comp="46" pin="0"/><net_sink comp="233" pin=38"/></net>
+
+<net id="385"><net_src comp="34" pin="0"/><net_sink comp="233" pin=39"/></net>
+
+<net id="386"><net_src comp="24" pin="0"/><net_sink comp="233" pin=40"/></net>
+
+<net id="387"><net_src comp="32" pin="0"/><net_sink comp="233" pin=41"/></net>
+
+<net id="388"><net_src comp="40" pin="0"/><net_sink comp="233" pin=42"/></net>
+
+<net id="389"><net_src comp="42" pin="0"/><net_sink comp="233" pin=43"/></net>
+
+<net id="390"><net_src comp="38" pin="0"/><net_sink comp="233" pin=44"/></net>
+
+<net id="391"><net_src comp="44" pin="0"/><net_sink comp="233" pin=45"/></net>
+
+<net id="392"><net_src comp="44" pin="0"/><net_sink comp="233" pin=46"/></net>
+
+<net id="393"><net_src comp="38" pin="0"/><net_sink comp="233" pin=47"/></net>
+
+<net id="394"><net_src comp="40" pin="0"/><net_sink comp="233" pin=48"/></net>
+
+<net id="395"><net_src comp="28" pin="0"/><net_sink comp="233" pin=49"/></net>
+
+<net id="396"><net_src comp="32" pin="0"/><net_sink comp="233" pin=50"/></net>
+
+<net id="397"><net_src comp="46" pin="0"/><net_sink comp="233" pin=51"/></net>
+
+<net id="398"><net_src comp="36" pin="0"/><net_sink comp="233" pin=52"/></net>
+
+<net id="399"><net_src comp="24" pin="0"/><net_sink comp="233" pin=53"/></net>
+
+<net id="400"><net_src comp="34" pin="0"/><net_sink comp="233" pin=54"/></net>
+
+<net id="401"><net_src comp="26" pin="0"/><net_sink comp="233" pin=55"/></net>
+
+<net id="406"><net_src comp="56" pin="2"/><net_sink comp="402" pin=0"/></net>
+
+<net id="407"><net_src comp="18" pin="0"/><net_sink comp="402" pin=1"/></net>
+
+<net id="411"><net_src comp="402" pin="2"/><net_sink comp="408" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: X | {}
+	Port: Y | {3 4 6 }
+  - Chain level:
+	State 1
+		stg_12 : 1
+		stg_13 : 1
+		stg_14 : 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------|---------|---------|---------|---------|
+| Operation|        Functional Unit       |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|------------------------------|---------|---------|---------|---------|
+|   call   |  grp_DCT_MAT_Multiply_fu_63  |    40   | 210.514 |  18408  |  11063  |
+|          | grp_DCT_MAT_Multiply2_fu_233 |    40   | 111.541 |  10810  |   9621  |
+|----------|------------------------------|---------|---------|---------|---------|
+|   icmp   |          cond_fu_402         |    0    |    0    |    0    |    3    |
+|----------|------------------------------|---------|---------|---------|---------|
+|   read   |   function_read_read_fu_56   |    0    |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|---------|
+|   Total  |                              |    80   | 322.055 |  29218  |  20687  |
+|----------|------------------------------|---------|---------|---------|---------|
+
+Memories:
++----+--------+--------+--------+
+|    |  BRAM  |   FF   |   LUT  |
++----+--------+--------+--------+
+|temp|    1   |    0   |    0   |
++----+--------+--------+--------+
+|Total|    1   |    0   |    0   |
++----+--------+--------+--------+
+
+* Register list:
++------------+--------+
+|            |   FF   |
++------------+--------+
+|cond_reg_408|    1   |
++------------+--------+
+|    Total   |    1   |
++------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------------|------|------|------|--------||---------|
+|             Comp             |  Pin | Size |  BW  | S x BW ||  Delay  |
+|------------------------------|------|------|------|--------||---------|
+|  grp_DCT_MAT_Multiply_fu_63  |  p1  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p2  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p3  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p4  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p5  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p6  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p7  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p8  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p9  |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p10 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p11 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p12 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p13 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p14 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p15 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p16 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p17 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p18 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p19 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p20 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p21 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p22 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p23 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p24 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p25 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p26 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p27 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p28 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p29 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p30 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p31 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p32 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p33 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p34 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p35 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p36 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p37 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p38 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p39 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p40 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p41 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p42 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p43 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p44 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p45 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p46 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p47 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p48 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p49 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p50 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p51 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p52 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p53 |   2  |  32  |   64   |
+|  grp_DCT_MAT_Multiply_fu_63  |  p54 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p2  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p3  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p4  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p5  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p6  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p7  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p8  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p9  |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p10 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p11 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p12 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p13 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p14 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p15 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p16 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p17 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p18 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p19 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p20 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p21 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p22 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p23 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p24 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p25 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p26 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p27 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p28 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p29 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p30 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p31 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p32 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p33 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p34 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p35 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p36 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p37 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p38 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p39 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p40 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p41 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p42 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p43 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p44 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p45 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p46 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p47 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p48 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p49 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p50 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p51 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p52 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p53 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p54 |   2  |  32  |   64   |
+| grp_DCT_MAT_Multiply2_fu_233 |  p55 |   2  |  32  |   64   |
+|------------------------------|------|------|------|--------||---------|
+|             Total            |      |      |      |  6912  || 169.668 |
+|------------------------------|------|------|------|--------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |    -   |   80   |   322  |  29218 |  20687 |
+|   Memory  |    1   |    -   |    -   |    0   |    0   |
+|Multiplexer|    -   |    -   |   169  |    -   |    -   |
+|  Register |    -   |    -   |    -   |    1   |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |    1   |   80   |   491  |  29219 |  20687 |
++-----------+--------+--------+--------+--------+--------+

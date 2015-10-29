@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="matrixmath.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\matrixmath.h"/>
-    <originFiles name="matrixmath.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\matrixmath.c"/>
-    <originFiles name="dct.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\dct.h"/>
-    <originFiles name="dct.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\dct.c"/>
     <originFiles name="coeff.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\coeff.h"/>
+    <originFiles name="dct.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\dct.c"/>
+    <originFiles name="dct.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\dct.h"/>
+    <originFiles name="matrixmath.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\matrixmath.c"/>
+    <originFiles name="matrixmath.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\dct\matrixmath.h"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

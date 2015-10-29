@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply'" level="0">
-<item name = "Date">Thu Oct 22 22:21:34 2015
+<item name = "Date">Wed Oct 28 18:15:00 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">192, 192, 111, 111, dataflow</column>
+<column name="">368, 368, 301, 301, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

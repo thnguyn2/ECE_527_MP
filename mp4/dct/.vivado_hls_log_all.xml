@@ -12,16 +12,35 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_load_2', dct/matrixmath.c:47) on array 'A' due to limited memory ports." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:34.912-0500" type="Warning"/>
-        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:23.271-0500" type="Warning"/>
-        <logs message="@W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:23.255-0500" type="Warning"/>
-        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply_Loop_LoadRow_proc5556' (dct/matrixmath.c:11:4) into MAT_Multiply_Loop_LoadRow_proc." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:23.177-0500" type="Warning"/>
-        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'RowCaching' (dct/matrixmath.c:47) because its parent loop or function is pipelined." projectName="dct" solutionName="solution2optimize" date="2015-10-22T22:21:15.708-0500" type="Warning"/>
-        <logs message="@W [RTMG-274] Memory 'DCT_T' is read-only, switch it to a ROM." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:40.014-0500" type="Warning"/>
-        <logs message="@W [RTMG-274] Memory 'DCT_Tinv' is read-only, switch it to a ROM." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:39.904-0500" type="Warning"/>
-        <logs message="@W [RTGEN-101] Global array 'T' will not be exposed as RTL port." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:38.623-0500" type="Warning"/>
-        <logs message="@W [RTGEN-101] Global array 'Tinv' will not be exposed as RTL port." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:38.608-0500" type="Warning"/>
-        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution1" date="2015-10-22T14:03:36.498-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_7' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.755-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_6' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.661-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_5' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.551-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_4' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.458-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_3' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.364-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_2' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.255-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_1' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.161-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_T_0' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:22.067-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_7' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.958-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_6' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.864-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_5' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.770-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_4' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.676-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_3' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.567-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_2' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.458-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_1' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.364-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_0' is read-only, switch it to a ROM." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:15:21.270-0500" type="Warning"/>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_0_load_2') on array 'A_0' due to limited memory ports." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:14:59.864-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:14:46.551-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'." projectName="dct" solutionName="solution2optimize" date="2015-10-28T18:14:46.536-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.593-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.577-0500" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply2_Loop_Col_proc2911' (dct/matrixmath.c:43:23) into MAT_Multiply2_Loop_Col_proc291." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.453-0500" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply_Loop_LoadRow_proc7374' (dct/matrixmath.c:11:4) into MAT_Multiply_Loop_LoadRow_proc." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:44.405-0500" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply2_Loop_Row_proc525526' (dct/matrixmath.c:38:28) into MAT_Multiply2_Loop_Row_proc525." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:44.405-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_T' is read-only, switch it to a ROM." projectName="dct" solutionName="solution1" date="2015-10-28T17:34:10.657-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'DCT_Tinv' is read-only, switch it to a ROM." projectName="dct" solutionName="solution1" date="2015-10-28T17:34:10.548-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'T' will not be exposed as RTL port." projectName="dct" solutionName="solution1" date="2015-10-28T17:34:09.376-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'Tinv' will not be exposed as RTL port." projectName="dct" solutionName="solution1" date="2015-10-28T17:34:09.345-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution1" date="2015-10-28T17:34:06.985-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

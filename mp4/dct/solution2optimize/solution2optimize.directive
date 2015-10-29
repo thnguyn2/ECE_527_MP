@@ -4,14 +4,14 @@
             <pragma name="ARRAY_PARTITION">
                 <option name="variable" value="A" positionalBoolean="4"/>
                 <option name="complete" value="" positionalBoolean="type"/>
-                <option name="dim" value="0"/>
+                <option name="dim" value="1"/>
             </pragma>
         </directive>
         <directive functionName="MAT_Multiply2" label="" functionLabel="">
             <pragma name="ARRAY_PARTITION">
                 <option name="variable" value="B" positionalBoolean="4"/>
                 <option name="complete" value="" positionalBoolean="type"/>
-                <option name="dim" value="0"/>
+                <option name="dim" value="1"/>
             </pragma>
         </directive>
         <directive functionName="MAT_Multiply2" label="" functionLabel="">
@@ -45,9 +45,6 @@
         <directive functionName="MAT_Multiply" label="Col" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
-        <directive functionName="MAT_Multiply2" label="RowCaching" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
         <directive functionName="MAT_Multiply2" label="Col" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
@@ -57,6 +54,12 @@
                 <option name="complete" value="" positionalBoolean="type"/>
                 <option name="dim" value="0"/>
             </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="RowCaching" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="LoadCol" functionLabel="">
+            <pragma name="PIPELINE"/>
         </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>

@@ -192,7 +192,6 @@
 #pragma line 7 "<command line>" 2
 #pragma line 1 "<built-in>" 2
 #pragma line 1 "dct/matrixmath.c" 2
-//---Fifo interface design. ---
 #pragma empty_line
 #pragma line 1 "dct/matrixmath.h" 1
 #pragma empty_line
@@ -216,7 +215,7 @@ void MAT_Multiply(float A[8][8],
 #pragma HLS DATAFLOW
 #pragma line 6 "dct/matrixmath.c"
 
-#pragma HLS ARRAY_PARTITION variable=A complete dim=0
+#pragma HLS ARRAY_PARTITION variable=A complete dim=1
 #pragma line 6 "dct/matrixmath.c"
 
  unsigned char i, j, k;
@@ -228,6 +227,9 @@ void MAT_Multiply(float A[8][8],
 #pragma empty_line
  LoadRow: for (i=0; i<8; i++){
   LoadCol: for (j=0; j<8; j++){
+#pragma HLS PIPELINE
+#pragma line 12 "dct/matrixmath.c"
+
    B_cached[i][j]=B[i][j];
   }
  }
@@ -255,7 +257,7 @@ void MAT_Multiply2(float A[8][8],
 #pragma HLS DATAFLOW
 #pragma line 33 "dct/matrixmath.c"
 
-#pragma HLS ARRAY_PARTITION variable=B complete dim=0
+#pragma HLS ARRAY_PARTITION variable=B complete dim=1
 #pragma line 33 "dct/matrixmath.c"
 
  unsigned char i, j, k;
@@ -266,22 +268,26 @@ void MAT_Multiply2(float A[8][8],
 
 #pragma empty_line
  Row: for (i=0; i<8; i++)
+  //Cache the whole row of matrix A
+  RowCaching: for (k=0;k<8;k++)
+   
+#pragma HLS PIPELINE
+#pragma line 41 "dct/matrixmath.c"
+A_cached_row[k]=A[i][k];
+#pragma empty_line
   Col: for (j=0; j<8; j++)
   {
 #pragma HLS PIPELINE
-#pragma line 40 "dct/matrixmath.c"
+#pragma line 44 "dct/matrixmath.c"
 
    //Make sure the data is fully cached to avoid multiple read.
    temp = 0;
-   if (j==0)
-   {
+  //	if (j==0)
+  //	{
     //Cache the whole row of matrix A
-    RowCaching: for (k=0;k<8;k++)
-     
-#pragma HLS PIPELINE
-#pragma line 47 "dct/matrixmath.c"
-A_cached_row[k]=A[i][k];
-   }
+  //		RowCaching: for (k=0;k<MAT_SIZE;k++)
+  //			A_cached_row[k]=A[i][k];
+  //	}
 #pragma empty_line
    Product: for (k=0; k<8; k++)
    {

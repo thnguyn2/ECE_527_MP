@@ -192,7 +192,6 @@
 #7 "<command line>" 2
 #1 "<built-in>" 2
 #1 "dct/matrixmath.c" 2
-//---Fifo interface design. ---
 
 #1 "dct/matrixmath.h" 1
 
@@ -216,7 +215,7 @@ void MAT_Multiply(float A[8][8],
 _ssdm_op_SpecDataflowPipeline(-1, "");
 #6 "dct/matrixmath.c"
 
-_ssdm_SpecArrayPartition( A, 0, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( A, 1, "COMPLETE", 0, "");
 #6 "dct/matrixmath.c"
 
  unsigned char i, j, k;
@@ -228,6 +227,9 @@ _ssdm_SpecArrayPartition( B_cached, 0, "COMPLETE", 0, "");
 
  LoadRow: for (i=0; i<8; i++){
   LoadCol: for (j=0; j<8; j++){
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+#12 "dct/matrixmath.c"
+
    B_cached[i][j]=B[i][j];
   }
  }
@@ -255,7 +257,7 @@ void MAT_Multiply2(float A[8][8],
 _ssdm_op_SpecDataflowPipeline(-1, "");
 #33 "dct/matrixmath.c"
 
-_ssdm_SpecArrayPartition( B, 0, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( B, 1, "COMPLETE", 0, "");
 #33 "dct/matrixmath.c"
 
  unsigned char i, j, k;
@@ -266,22 +268,26 @@ _ssdm_SpecArrayPartition( A_cached_row, 0, "COMPLETE", 0, "");
 
 
  Row: for (i=0; i<8; i++)
+  //Cache the whole row of matrix A
+  RowCaching: for (k=0;k<8;k++)
+   
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+#41 "dct/matrixmath.c"
+A_cached_row[k]=A[i][k];
+
   Col: for (j=0; j<8; j++)
   {
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-#40 "dct/matrixmath.c"
+#44 "dct/matrixmath.c"
 
    //Make sure the data is fully cached to avoid multiple read.
    temp = 0;
-   if (j==0)
-   {
+  //	if (j==0)
+  //	{
     //Cache the whole row of matrix A
-    RowCaching: for (k=0;k<8;k++)
-     
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-#47 "dct/matrixmath.c"
-A_cached_row[k]=A[i][k];
-   }
+  //		RowCaching: for (k=0;k<MAT_SIZE;k++)
+  //			A_cached_row[k]=A[i][k];
+  //	}
 
    Product: for (k=0; k<8; k++)
    {

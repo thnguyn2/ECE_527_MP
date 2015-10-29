@@ -1,0 +1,1171 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_MAT_Multiply2_Loop_Row_proc525'
+================================================================
+* Date:           Wed Oct 28 17:54:13 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution3opt
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.22|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   67|   67|   67|   67|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                  |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_RowCaching  |   65|   65|         3|          1|          1|    64|    yes   |
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	5  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+5 --> 
+* FSM state operations: 
+
+ <State 1>: 4.38ns
+ST_1: stg_6 [1/1] 0.00ns
+entry:0  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_2_out, [8 x i8]* @str529, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str529, [8 x i8]* @str529, [8 x i8]* @str529)
+
+ST_1: stg_7 [1/1] 0.00ns
+entry:1  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_2_out, [8 x i8]* @str528, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str528, [8 x i8]* @str528, [8 x i8]* @str528)
+
+ST_1: p_read [1/1] 0.00ns
+entry:2  %p_read = call float @_ssdm_op_Read.ap_auto.float(float %p_read85)
+
+ST_1: p_read_64 [1/1] 0.00ns
+entry:3  %p_read_64 = call float @_ssdm_op_Read.ap_auto.float(float %p_read84)
+
+ST_1: p_read_65 [1/1] 0.00ns
+entry:4  %p_read_65 = call float @_ssdm_op_Read.ap_auto.float(float %p_read83)
+
+ST_1: p_read_66 [1/1] 0.00ns
+entry:5  %p_read_66 = call float @_ssdm_op_Read.ap_auto.float(float %p_read82)
+
+ST_1: p_read_67 [1/1] 0.00ns
+entry:6  %p_read_67 = call float @_ssdm_op_Read.ap_auto.float(float %p_read81)
+
+ST_1: p_read8054 [1/1] 0.00ns
+entry:7  %p_read8054 = call float @_ssdm_op_Read.ap_auto.float(float %p_read80)
+
+ST_1: p_read_68 [1/1] 0.00ns
+entry:8  %p_read_68 = call float @_ssdm_op_Read.ap_auto.float(float %p_read79)
+
+ST_1: p_read_69 [1/1] 0.00ns
+entry:9  %p_read_69 = call float @_ssdm_op_Read.ap_auto.float(float %p_read78)
+
+ST_1: p_read_70 [1/1] 0.00ns
+entry:10  %p_read_70 = call float @_ssdm_op_Read.ap_auto.float(float %p_read77)
+
+ST_1: p_read_71 [1/1] 0.00ns
+entry:11  %p_read_71 = call float @_ssdm_op_Read.ap_auto.float(float %p_read76)
+
+ST_1: p_read_72 [1/1] 0.00ns
+entry:12  %p_read_72 = call float @_ssdm_op_Read.ap_auto.float(float %p_read75)
+
+ST_1: p_read_73 [1/1] 0.00ns
+entry:13  %p_read_73 = call float @_ssdm_op_Read.ap_auto.float(float %p_read74)
+
+ST_1: p_read_74 [1/1] 0.00ns
+entry:14  %p_read_74 = call float @_ssdm_op_Read.ap_auto.float(float %p_read73)
+
+ST_1: p_read_75 [1/1] 0.00ns
+entry:15  %p_read_75 = call float @_ssdm_op_Read.ap_auto.float(float %p_read72)
+
+ST_1: p_read7045 [1/1] 0.00ns
+entry:16  %p_read7045 = call float @_ssdm_op_Read.ap_auto.float(float %p_read70)
+
+ST_1: p_read_76 [1/1] 0.00ns
+entry:17  %p_read_76 = call float @_ssdm_op_Read.ap_auto.float(float %p_read69)
+
+ST_1: p_read_77 [1/1] 0.00ns
+entry:18  %p_read_77 = call float @_ssdm_op_Read.ap_auto.float(float %p_read67)
+
+ST_1: p_read_78 [1/1] 0.00ns
+entry:19  %p_read_78 = call float @_ssdm_op_Read.ap_auto.float(float %p_read65)
+
+ST_1: p_read_79 [1/1] 0.00ns
+entry:20  %p_read_79 = call float @_ssdm_op_Read.ap_auto.float(float %p_read64)
+
+ST_1: p_read_80 [1/1] 0.00ns
+entry:21  %p_read_80 = call float @_ssdm_op_Read.ap_auto.float(float %p_read63)
+
+ST_1: p_read_81 [1/1] 0.00ns
+entry:22  %p_read_81 = call float @_ssdm_op_Read.ap_auto.float(float %p_read62)
+
+ST_1: p_read6038 [1/1] 0.00ns
+entry:23  %p_read6038 = call float @_ssdm_op_Read.ap_auto.float(float %p_read60)
+
+ST_1: p_read_82 [1/1] 0.00ns
+entry:24  %p_read_82 = call float @_ssdm_op_Read.ap_auto.float(float %p_read59)
+
+ST_1: p_read_83 [1/1] 0.00ns
+entry:25  %p_read_83 = call float @_ssdm_op_Read.ap_auto.float(float %p_read58)
+
+ST_1: p_read_84 [1/1] 0.00ns
+entry:26  %p_read_84 = call float @_ssdm_op_Read.ap_auto.float(float %p_read57)
+
+ST_1: p_read_85 [1/1] 0.00ns
+entry:27  %p_read_85 = call float @_ssdm_op_Read.ap_auto.float(float %p_read56)
+
+ST_1: p_read_86 [1/1] 0.00ns
+entry:28  %p_read_86 = call float @_ssdm_op_Read.ap_auto.float(float %p_read55)
+
+ST_1: p_read_87 [1/1] 0.00ns
+entry:29  %p_read_87 = call float @_ssdm_op_Read.ap_auto.float(float %p_read51)
+
+ST_1: p_read5031 [1/1] 0.00ns
+entry:30  %p_read5031 = call float @_ssdm_op_Read.ap_auto.float(float %p_read50)
+
+ST_1: p_read_88 [1/1] 0.00ns
+entry:31  %p_read_88 = call float @_ssdm_op_Read.ap_auto.float(float %p_read49)
+
+ST_1: p_read_89 [1/1] 0.00ns
+entry:32  %p_read_89 = call float @_ssdm_op_Read.ap_auto.float(float %p_read48)
+
+ST_1: p_read_90 [1/1] 0.00ns
+entry:33  %p_read_90 = call float @_ssdm_op_Read.ap_auto.float(float %p_read46)
+
+ST_1: p_read_91 [1/1] 0.00ns
+entry:34  %p_read_91 = call float @_ssdm_op_Read.ap_auto.float(float %p_read45)
+
+ST_1: p_read_92 [1/1] 0.00ns
+entry:35  %p_read_92 = call float @_ssdm_op_Read.ap_auto.float(float %p_read44)
+
+ST_1: p_read_93 [1/1] 0.00ns
+entry:36  %p_read_93 = call float @_ssdm_op_Read.ap_auto.float(float %p_read43)
+
+ST_1: p_read_94 [1/1] 0.00ns
+entry:37  %p_read_94 = call float @_ssdm_op_Read.ap_auto.float(float %p_read42)
+
+ST_1: p_read_95 [1/1] 0.00ns
+entry:38  %p_read_95 = call float @_ssdm_op_Read.ap_auto.float(float %p_read41)
+
+ST_1: p_read4022 [1/1] 0.00ns
+entry:39  %p_read4022 = call float @_ssdm_op_Read.ap_auto.float(float %p_read40)
+
+ST_1: p_read_96 [1/1] 0.00ns
+entry:40  %p_read_96 = call float @_ssdm_op_Read.ap_auto.float(float %p_read39)
+
+ST_1: p_read_97 [1/1] 0.00ns
+entry:41  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_read38)
+
+ST_1: p_read_98 [1/1] 0.00ns
+entry:42  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_read37)
+
+ST_1: p_read_99 [1/1] 0.00ns
+entry:43  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_read36)
+
+ST_1: p_read_100 [1/1] 0.00ns
+entry:44  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_read35)
+
+ST_1: p_read_101 [1/1] 0.00ns
+entry:45  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_read34)
+
+ST_1: p_read_102 [1/1] 0.00ns
+entry:46  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_read32)
+
+ST_1: p_read_103 [1/1] 0.00ns
+entry:47  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_read31)
+
+ST_1: p_read3013 [1/1] 0.00ns
+entry:48  %p_read3013 = call float @_ssdm_op_Read.ap_auto.float(float %p_read30)
+
+ST_1: p_read_104 [1/1] 0.00ns
+entry:49  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_read29)
+
+ST_1: p_read_105 [1/1] 0.00ns
+entry:50  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_read28)
+
+ST_1: p_read_106 [1/1] 0.00ns
+entry:51  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_read27)
+
+ST_1: p_read269 [1/1] 0.00ns
+entry:52  %p_read269 = call float @_ssdm_op_Read.ap_auto.float(float %p_read26)
+
+ST_1: p_read258 [1/1] 0.00ns
+entry:53  %p_read258 = call float @_ssdm_op_Read.ap_auto.float(float %p_read25)
+
+ST_1: p_read247 [1/1] 0.00ns
+entry:54  %p_read247 = call float @_ssdm_op_Read.ap_auto.float(float %p_read24)
+
+ST_1: p_read86 [1/1] 0.00ns
+entry:55  %p_read86 = call float @_ssdm_op_Read.ap_auto.float(float %p_read8)
+
+ST_1: stg_62 [1/1] 4.38ns
+entry:56  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_2_out, float %p_read86)
+
+ST_1: stg_63 [1/1] 0.00ns
+entry:57  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_1_out, [8 x i8]* @str532, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str532, [8 x i8]* @str532, [8 x i8]* @str532)
+
+ST_1: stg_64 [1/1] 0.00ns
+entry:58  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_1_out, [8 x i8]* @str531, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str531, [8 x i8]* @str531, [8 x i8]* @str531)
+
+ST_1: stg_65 [1/1] 4.38ns
+entry:59  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_1_out, float 0x3FDA9B6620000000)
+
+ST_1: stg_66 [1/1] 0.00ns
+entry:60  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_4_out, [8 x i8]* @str535, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str535, [8 x i8]* @str535, [8 x i8]* @str535)
+
+ST_1: stg_67 [1/1] 0.00ns
+entry:61  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_4_out, [8 x i8]* @str534, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str534, [8 x i8]* @str534, [8 x i8]* @str534)
+
+ST_1: stg_68 [1/1] 4.38ns
+entry:62  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_4_out, float %p_read247)
+
+ST_1: stg_69 [1/1] 0.00ns
+entry:63  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_5_out, [8 x i8]* @str538, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str538, [8 x i8]* @str538, [8 x i8]* @str538)
+
+ST_1: stg_70 [1/1] 0.00ns
+entry:64  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_5_out, [8 x i8]* @str537, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str537, [8 x i8]* @str537, [8 x i8]* @str537)
+
+ST_1: stg_71 [1/1] 4.38ns
+entry:65  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_5_out, float %p_read258)
+
+ST_1: stg_72 [1/1] 0.00ns
+entry:66  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_2_out, [8 x i8]* @str541, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str541, [8 x i8]* @str541, [8 x i8]* @str541)
+
+ST_1: stg_73 [1/1] 0.00ns
+entry:67  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_2_out, [8 x i8]* @str540, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str540, [8 x i8]* @str540, [8 x i8]* @str540)
+
+ST_1: stg_74 [1/1] 4.38ns
+entry:68  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_2_out, float %p_read269)
+
+ST_1: stg_75 [1/1] 0.00ns
+entry:69  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_2_out, [8 x i8]* @str544, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str544, [8 x i8]* @str544, [8 x i8]* @str544)
+
+ST_1: stg_76 [1/1] 0.00ns
+entry:70  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_2_out, [8 x i8]* @str543, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str543, [8 x i8]* @str543, [8 x i8]* @str543)
+
+ST_1: stg_77 [1/1] 4.38ns
+entry:71  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_2_out, float %p_read_106)
+
+ST_1: stg_78 [1/1] 0.00ns
+entry:72  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_0_out, [8 x i8]* @str547, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str547, [8 x i8]* @str547, [8 x i8]* @str547)
+
+ST_1: stg_79 [1/1] 0.00ns
+entry:73  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_0_out, [8 x i8]* @str546, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str546, [8 x i8]* @str546, [8 x i8]* @str546)
+
+ST_1: stg_80 [1/1] 4.38ns
+entry:74  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_0_out, float %p_read_105)
+
+ST_1: stg_81 [1/1] 0.00ns
+entry:75  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_5_out, [8 x i8]* @str550, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str550, [8 x i8]* @str550, [8 x i8]* @str550)
+
+ST_1: stg_82 [1/1] 0.00ns
+entry:76  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_5_out, [8 x i8]* @str549, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str549, [8 x i8]* @str549, [8 x i8]* @str549)
+
+ST_1: stg_83 [1/1] 4.38ns
+entry:77  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_5_out, float %p_read_104)
+
+ST_1: stg_84 [1/1] 0.00ns
+entry:78  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_3_out, [8 x i8]* @str553, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str553, [8 x i8]* @str553, [8 x i8]* @str553)
+
+ST_1: stg_85 [1/1] 0.00ns
+entry:79  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_3_out, [8 x i8]* @str552, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str552, [8 x i8]* @str552, [8 x i8]* @str552)
+
+ST_1: stg_86 [1/1] 4.38ns
+entry:80  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_3_out, float %p_read3013)
+
+ST_1: stg_87 [1/1] 0.00ns
+entry:81  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_7_out, [8 x i8]* @str556, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str556, [8 x i8]* @str556, [8 x i8]* @str556)
+
+ST_1: stg_88 [1/1] 0.00ns
+entry:82  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_7_out, [8 x i8]* @str555, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str555, [8 x i8]* @str555, [8 x i8]* @str555)
+
+ST_1: stg_89 [1/1] 4.38ns
+entry:83  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_7_out, float %p_read_103)
+
+ST_1: stg_90 [1/1] 0.00ns
+entry:84  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_3_out, [8 x i8]* @str559, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str559, [8 x i8]* @str559, [8 x i8]* @str559)
+
+ST_1: stg_91 [1/1] 0.00ns
+entry:85  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_3_out, [8 x i8]* @str558, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str558, [8 x i8]* @str558, [8 x i8]* @str558)
+
+ST_1: stg_92 [1/1] 4.38ns
+entry:86  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_3_out, float %p_read_102)
+
+ST_1: stg_93 [1/1] 0.00ns
+entry:87  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_7_out, [8 x i8]* @str562, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str562, [8 x i8]* @str562, [8 x i8]* @str562)
+
+ST_1: stg_94 [1/1] 0.00ns
+entry:88  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_7_out, [8 x i8]* @str561, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str561, [8 x i8]* @str561, [8 x i8]* @str561)
+
+ST_1: stg_95 [1/1] 4.38ns
+entry:89  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_7_out, float 0xBFB8F8B840000000)
+
+ST_1: stg_96 [1/1] 0.00ns
+entry:90  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_0_out, [8 x i8]* @str565, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str565, [8 x i8]* @str565, [8 x i8]* @str565)
+
+ST_1: stg_97 [1/1] 0.00ns
+entry:91  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_0_out, [8 x i8]* @str564, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str564, [8 x i8]* @str564, [8 x i8]* @str564)
+
+ST_1: stg_98 [1/1] 4.38ns
+entry:92  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_0_out, float %p_read_101)
+
+ST_1: stg_99 [1/1] 0.00ns
+entry:93  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_6_out, [8 x i8]* @str568, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str568, [8 x i8]* @str568, [8 x i8]* @str568)
+
+ST_1: stg_100 [1/1] 0.00ns
+entry:94  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_6_out, [8 x i8]* @str567, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str567, [8 x i8]* @str567, [8 x i8]* @str567)
+
+ST_1: stg_101 [1/1] 4.38ns
+entry:95  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_6_out, float %p_read_100)
+
+ST_1: stg_102 [1/1] 0.00ns
+entry:96  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_2_out, [8 x i8]* @str571, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str571, [8 x i8]* @str571, [8 x i8]* @str571)
+
+ST_1: stg_103 [1/1] 0.00ns
+entry:97  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_2_out, [8 x i8]* @str570, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str570, [8 x i8]* @str570, [8 x i8]* @str570)
+
+ST_1: stg_104 [1/1] 4.38ns
+entry:98  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_2_out, float %p_read_99)
+
+ST_1: stg_105 [1/1] 0.00ns
+entry:99  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_7_out, [8 x i8]* @str574, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str574, [8 x i8]* @str574, [8 x i8]* @str574)
+
+ST_1: stg_106 [1/1] 0.00ns
+entry:100  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_7_out, [8 x i8]* @str573, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str573, [8 x i8]* @str573, [8 x i8]* @str573)
+
+ST_1: stg_107 [1/1] 4.38ns
+entry:101  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_7_out, float %p_read_98)
+
+ST_1: stg_108 [1/1] 0.00ns
+entry:102  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_6_out, [8 x i8]* @str577, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str577, [8 x i8]* @str577, [8 x i8]* @str577)
+
+ST_1: stg_109 [1/1] 0.00ns
+entry:103  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_6_out, [8 x i8]* @str576, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str576, [8 x i8]* @str576, [8 x i8]* @str576)
+
+ST_1: stg_110 [1/1] 4.38ns
+entry:104  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_6_out, float %p_read_97)
+
+ST_1: stg_111 [1/1] 0.00ns
+entry:105  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_3_out, [8 x i8]* @str580, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str580, [8 x i8]* @str580, [8 x i8]* @str580)
+
+ST_1: stg_112 [1/1] 0.00ns
+entry:106  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_3_out, [8 x i8]* @str579, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str579, [8 x i8]* @str579, [8 x i8]* @str579)
+
+ST_1: stg_113 [1/1] 4.38ns
+entry:107  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_3_out, float %p_read_96)
+
+ST_1: stg_114 [1/1] 0.00ns
+entry:108  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_1_out, [8 x i8]* @str583, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str583, [8 x i8]* @str583, [8 x i8]* @str583)
+
+ST_1: stg_115 [1/1] 0.00ns
+entry:109  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_1_out, [8 x i8]* @str582, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str582, [8 x i8]* @str582, [8 x i8]* @str582)
+
+ST_1: stg_116 [1/1] 4.38ns
+entry:110  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_1_out, float %p_read4022)
+
+ST_1: stg_117 [1/1] 0.00ns
+entry:111  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_1_out, [8 x i8]* @str586, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str586, [8 x i8]* @str586, [8 x i8]* @str586)
+
+ST_1: stg_118 [1/1] 0.00ns
+entry:112  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_1_out, [8 x i8]* @str585, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str585, [8 x i8]* @str585, [8 x i8]* @str585)
+
+ST_1: stg_119 [1/1] 4.38ns
+entry:113  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_1_out, float %p_read_95)
+
+ST_1: stg_120 [1/1] 0.00ns
+entry:114  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_1_out, [8 x i8]* @str589, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str589, [8 x i8]* @str589, [8 x i8]* @str589)
+
+ST_1: stg_121 [1/1] 0.00ns
+entry:115  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_1_out, [8 x i8]* @str588, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str588, [8 x i8]* @str588, [8 x i8]* @str588)
+
+ST_1: stg_122 [1/1] 4.38ns
+entry:116  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_1_out, float %p_read_94)
+
+ST_1: stg_123 [1/1] 0.00ns
+entry:117  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_6_out, [8 x i8]* @str592, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str592, [8 x i8]* @str592, [8 x i8]* @str592)
+
+ST_1: stg_124 [1/1] 0.00ns
+entry:118  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_6_out, [8 x i8]* @str591, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str591, [8 x i8]* @str591, [8 x i8]* @str591)
+
+ST_1: stg_125 [1/1] 4.38ns
+entry:119  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_6_out, float %p_read_93)
+
+ST_1: stg_126 [1/1] 0.00ns
+entry:120  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_5_out, [8 x i8]* @str595, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str595, [8 x i8]* @str595, [8 x i8]* @str595)
+
+ST_1: stg_127 [1/1] 0.00ns
+entry:121  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_5_out, [8 x i8]* @str594, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str594, [8 x i8]* @str594, [8 x i8]* @str594)
+
+ST_1: stg_128 [1/1] 4.38ns
+entry:122  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_5_out, float %p_read_92)
+
+ST_1: stg_129 [1/1] 0.00ns
+entry:123  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_4_out, [8 x i8]* @str598, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str598, [8 x i8]* @str598, [8 x i8]* @str598)
+
+ST_1: stg_130 [1/1] 0.00ns
+entry:124  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_4_out, [8 x i8]* @str597, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str597, [8 x i8]* @str597, [8 x i8]* @str597)
+
+ST_1: stg_131 [1/1] 4.38ns
+entry:125  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_4_out, float %p_read_91)
+
+ST_1: stg_132 [1/1] 0.00ns
+entry:126  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_7_out, [8 x i8]* @str601, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str601, [8 x i8]* @str601, [8 x i8]* @str601)
+
+ST_1: stg_133 [1/1] 0.00ns
+entry:127  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_7_out, [8 x i8]* @str600, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str600, [8 x i8]* @str600, [8 x i8]* @str600)
+
+ST_1: stg_134 [1/1] 4.38ns
+entry:128  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_7_out, float %p_read_90)
+
+ST_1: stg_135 [1/1] 0.00ns
+entry:129  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_4_out, [8 x i8]* @str604, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str604, [8 x i8]* @str604, [8 x i8]* @str604)
+
+ST_1: stg_136 [1/1] 0.00ns
+entry:130  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_4_out, [8 x i8]* @str603, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str603, [8 x i8]* @str603, [8 x i8]* @str603)
+
+ST_1: stg_137 [1/1] 4.38ns
+entry:131  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_4_out, float 0x3FD6A09E60000000)
+
+ST_1: stg_138 [1/1] 0.00ns
+entry:132  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_0_out, [8 x i8]* @str607, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str607, [8 x i8]* @str607, [8 x i8]* @str607)
+
+ST_1: stg_139 [1/1] 0.00ns
+entry:133  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_0_out, [8 x i8]* @str606, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str606, [8 x i8]* @str606, [8 x i8]* @str606)
+
+ST_1: stg_140 [1/1] 4.38ns
+entry:134  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_0_out, float %p_read_89)
+
+ST_1: stg_141 [1/1] 0.00ns
+entry:135  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_3_out, [8 x i8]* @str610, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str610, [8 x i8]* @str610, [8 x i8]* @str610)
+
+ST_1: stg_142 [1/1] 0.00ns
+entry:136  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_3_out, [8 x i8]* @str609, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str609, [8 x i8]* @str609, [8 x i8]* @str609)
+
+ST_1: stg_143 [1/1] 4.38ns
+entry:137  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_3_out, float %p_read_88)
+
+ST_1: stg_144 [1/1] 0.00ns
+entry:138  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_3_out, [8 x i8]* @str613, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str613, [8 x i8]* @str613, [8 x i8]* @str613)
+
+ST_1: stg_145 [1/1] 0.00ns
+entry:139  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_3_out, [8 x i8]* @str612, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str612, [8 x i8]* @str612, [8 x i8]* @str612)
+
+ST_1: stg_146 [1/1] 4.38ns
+entry:140  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_3_out, float %p_read5031)
+
+ST_1: stg_147 [1/1] 0.00ns
+entry:141  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_7_out, [8 x i8]* @str616, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str616, [8 x i8]* @str616, [8 x i8]* @str616)
+
+ST_1: stg_148 [1/1] 0.00ns
+entry:142  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_7_out, [8 x i8]* @str615, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str615, [8 x i8]* @str615, [8 x i8]* @str615)
+
+ST_1: stg_149 [1/1] 4.38ns
+entry:143  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_7_out, float %p_read_87)
+
+ST_1: stg_150 [1/1] 0.00ns
+entry:144  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_6_out, [8 x i8]* @str619, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str619, [8 x i8]* @str619, [8 x i8]* @str619)
+
+ST_1: stg_151 [1/1] 0.00ns
+entry:145  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_6_out, [8 x i8]* @str618, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str618, [8 x i8]* @str618, [8 x i8]* @str618)
+
+ST_1: stg_152 [1/1] 4.38ns
+entry:146  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_6_out, float 0xBFDD906BE0000000)
+
+ST_1: stg_153 [1/1] 0.00ns
+entry:147  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_2_out, [8 x i8]* @str622, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str622, [8 x i8]* @str622, [8 x i8]* @str622)
+
+ST_1: stg_154 [1/1] 0.00ns
+entry:148  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_2_out, [8 x i8]* @str621, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str621, [8 x i8]* @str621, [8 x i8]* @str621)
+
+ST_1: stg_155 [1/1] 4.38ns
+entry:149  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_2_out, float 0xBFC87DE2A0000000)
+
+ST_1: stg_156 [1/1] 0.00ns
+entry:150  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_0_out, [8 x i8]* @str625, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str625, [8 x i8]* @str625, [8 x i8]* @str625)
+
+ST_1: stg_157 [1/1] 0.00ns
+entry:151  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_0_out, [8 x i8]* @str624, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str624, [8 x i8]* @str624, [8 x i8]* @str624)
+
+ST_1: stg_158 [1/1] 4.38ns
+entry:152  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_0_out, float 0x3FD6A09E60000000)
+
+ST_1: stg_159 [1/1] 0.00ns
+entry:153  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_2_out, [8 x i8]* @str628, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str628, [8 x i8]* @str628, [8 x i8]* @str628)
+
+ST_1: stg_160 [1/1] 0.00ns
+entry:154  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_2_out, [8 x i8]* @str627, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str627, [8 x i8]* @str627, [8 x i8]* @str627)
+
+ST_1: stg_161 [1/1] 4.38ns
+entry:155  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_2_out, float %p_read_86)
+
+ST_1: stg_162 [1/1] 0.00ns
+entry:156  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_3_out, [8 x i8]* @str631, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str631, [8 x i8]* @str631, [8 x i8]* @str631)
+
+ST_1: stg_163 [1/1] 0.00ns
+entry:157  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_3_out, [8 x i8]* @str630, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str630, [8 x i8]* @str630, [8 x i8]* @str630)
+
+ST_1: stg_164 [1/1] 4.38ns
+entry:158  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_3_out, float %p_read_85)
+
+ST_1: stg_165 [1/1] 0.00ns
+entry:159  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_6_out, [8 x i8]* @str634, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str634, [8 x i8]* @str634, [8 x i8]* @str634)
+
+ST_1: stg_166 [1/1] 0.00ns
+entry:160  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_6_out, [8 x i8]* @str633, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str633, [8 x i8]* @str633, [8 x i8]* @str633)
+
+ST_1: stg_167 [1/1] 4.38ns
+entry:161  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_6_out, float %p_read_84)
+
+ST_1: stg_168 [1/1] 0.00ns
+entry:162  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_5_out, [8 x i8]* @str637, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str637, [8 x i8]* @str637, [8 x i8]* @str637)
+
+ST_1: stg_169 [1/1] 0.00ns
+entry:163  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_5_out, [8 x i8]* @str636, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str636, [8 x i8]* @str636, [8 x i8]* @str636)
+
+ST_1: stg_170 [1/1] 4.38ns
+entry:164  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_5_out, float %p_read_83)
+
+ST_1: stg_171 [1/1] 0.00ns
+entry:165  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_6_out, [8 x i8]* @str640, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str640, [8 x i8]* @str640, [8 x i8]* @str640)
+
+ST_1: stg_172 [1/1] 0.00ns
+entry:166  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_6_out, [8 x i8]* @str639, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str639, [8 x i8]* @str639, [8 x i8]* @str639)
+
+ST_1: stg_173 [1/1] 4.38ns
+entry:167  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_6_out, float %p_read_82)
+
+ST_1: stg_174 [1/1] 0.00ns
+entry:168  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_1_out, [8 x i8]* @str643, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str643, [8 x i8]* @str643, [8 x i8]* @str643)
+
+ST_1: stg_175 [1/1] 0.00ns
+entry:169  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_1_out, [8 x i8]* @str642, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str642, [8 x i8]* @str642, [8 x i8]* @str642)
+
+ST_1: stg_176 [1/1] 4.38ns
+entry:170  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_1_out, float %p_read6038)
+
+ST_1: stg_177 [1/1] 0.00ns
+entry:171  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_0_out, [8 x i8]* @str646, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str646, [8 x i8]* @str646, [8 x i8]* @str646)
+
+ST_1: stg_178 [1/1] 0.00ns
+entry:172  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_0_out, [8 x i8]* @str645, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str645, [8 x i8]* @str645, [8 x i8]* @str645)
+
+ST_1: stg_179 [1/1] 4.38ns
+entry:173  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_0_out, float 0x3FD6A09E60000000)
+
+ST_1: stg_180 [1/1] 0.00ns
+entry:174  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_3_out, [8 x i8]* @str649, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str649, [8 x i8]* @str649, [8 x i8]* @str649)
+
+ST_1: stg_181 [1/1] 0.00ns
+entry:175  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_3_out, [8 x i8]* @str648, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str648, [8 x i8]* @str648, [8 x i8]* @str648)
+
+ST_1: stg_182 [1/1] 4.38ns
+entry:176  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_3_out, float %p_read_81)
+
+ST_1: stg_183 [1/1] 0.00ns
+entry:177  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_5_out, [8 x i8]* @str652, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str652, [8 x i8]* @str652, [8 x i8]* @str652)
+
+ST_1: stg_184 [1/1] 0.00ns
+entry:178  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_5_out, [8 x i8]* @str651, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str651, [8 x i8]* @str651, [8 x i8]* @str651)
+
+ST_1: stg_185 [1/1] 4.38ns
+entry:179  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_5_out, float %p_read_80)
+
+ST_1: stg_186 [1/1] 0.00ns
+entry:180  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_7_out, [8 x i8]* @str655, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str655, [8 x i8]* @str655, [8 x i8]* @str655)
+
+ST_1: stg_187 [1/1] 0.00ns
+entry:181  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_7_out, [8 x i8]* @str654, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str654, [8 x i8]* @str654, [8 x i8]* @str654)
+
+ST_1: stg_188 [1/1] 4.38ns
+entry:182  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_7_out, float %p_read_79)
+
+ST_1: stg_189 [1/1] 0.00ns
+entry:183  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_4_out, [8 x i8]* @str658, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str658, [8 x i8]* @str658, [8 x i8]* @str658)
+
+ST_1: stg_190 [1/1] 0.00ns
+entry:184  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_4_out, [8 x i8]* @str657, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str657, [8 x i8]* @str657, [8 x i8]* @str657)
+
+ST_1: stg_191 [1/1] 4.38ns
+entry:185  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_4_out, float %p_read_78)
+
+ST_1: stg_192 [1/1] 0.00ns
+entry:186  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_3_out, [8 x i8]* @str661, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str661, [8 x i8]* @str661, [8 x i8]* @str661)
+
+ST_1: stg_193 [1/1] 0.00ns
+entry:187  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_3_out, [8 x i8]* @str660, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str660, [8 x i8]* @str660, [8 x i8]* @str660)
+
+ST_1: stg_194 [1/1] 4.38ns
+entry:188  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_3_out, float 0xBFD1C73B40000000)
+
+ST_1: stg_195 [1/1] 0.00ns
+entry:189  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_4_out, [8 x i8]* @str664, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str664, [8 x i8]* @str664, [8 x i8]* @str664)
+
+ST_1: stg_196 [1/1] 0.00ns
+entry:190  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_4_out, [8 x i8]* @str663, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str663, [8 x i8]* @str663, [8 x i8]* @str663)
+
+ST_1: stg_197 [1/1] 4.38ns
+entry:191  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_4_out, float %p_read_77)
+
+ST_1: stg_198 [1/1] 0.00ns
+entry:192  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_5_out, [8 x i8]* @str667, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str667, [8 x i8]* @str667, [8 x i8]* @str667)
+
+ST_1: stg_199 [1/1] 0.00ns
+entry:193  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_5_out, [8 x i8]* @str666, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str666, [8 x i8]* @str666, [8 x i8]* @str666)
+
+ST_1: stg_200 [1/1] 4.38ns
+entry:194  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_5_out, float 0xBFB8F8B840000000)
+
+ST_1: stg_201 [1/1] 0.00ns
+entry:195  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_5_out, [8 x i8]* @str670, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str670, [8 x i8]* @str670, [8 x i8]* @str670)
+
+ST_1: stg_202 [1/1] 0.00ns
+entry:196  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_5_out, [8 x i8]* @str669, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str669, [8 x i8]* @str669, [8 x i8]* @str669)
+
+ST_1: stg_203 [1/1] 4.38ns
+entry:197  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_5_out, float %p_read_76)
+
+ST_1: stg_204 [1/1] 0.00ns
+entry:198  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_1_out, [8 x i8]* @str673, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str673, [8 x i8]* @str673, [8 x i8]* @str673)
+
+ST_1: stg_205 [1/1] 0.00ns
+entry:199  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_1_out, [8 x i8]* @str672, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str672, [8 x i8]* @str672, [8 x i8]* @str672)
+
+ST_1: stg_206 [1/1] 4.38ns
+entry:200  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_1_out, float %p_read7045)
+
+ST_1: stg_207 [1/1] 0.00ns
+entry:201  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_4_out, [8 x i8]* @str676, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str676, [8 x i8]* @str676, [8 x i8]* @str676)
+
+ST_1: stg_208 [1/1] 0.00ns
+entry:202  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_4_out, [8 x i8]* @str675, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str675, [8 x i8]* @str675, [8 x i8]* @str675)
+
+ST_1: stg_209 [1/1] 4.38ns
+entry:203  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_4_out, float 0x3FD6A09E60000000)
+
+ST_1: stg_210 [1/1] 0.00ns
+entry:204  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_7_out, [8 x i8]* @str679, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str679, [8 x i8]* @str679, [8 x i8]* @str679)
+
+ST_1: stg_211 [1/1] 0.00ns
+entry:205  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_7_out, [8 x i8]* @str678, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str678, [8 x i8]* @str678, [8 x i8]* @str678)
+
+ST_1: stg_212 [1/1] 4.38ns
+entry:206  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_7_out, float %p_read_75)
+
+ST_1: stg_213 [1/1] 0.00ns
+entry:207  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_4_out, [8 x i8]* @str682, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str682, [8 x i8]* @str682, [8 x i8]* @str682)
+
+ST_1: stg_214 [1/1] 0.00ns
+entry:208  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_4_out, [8 x i8]* @str681, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str681, [8 x i8]* @str681, [8 x i8]* @str681)
+
+ST_1: stg_215 [1/1] 4.38ns
+entry:209  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_4_out, float %p_read_74)
+
+ST_1: stg_216 [1/1] 0.00ns
+entry:210  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_7_out, [8 x i8]* @str685, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str685, [8 x i8]* @str685, [8 x i8]* @str685)
+
+ST_1: stg_217 [1/1] 0.00ns
+entry:211  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_7_out, [8 x i8]* @str684, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str684, [8 x i8]* @str684, [8 x i8]* @str684)
+
+ST_1: stg_218 [1/1] 4.38ns
+entry:212  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_7_out, float %p_read_73)
+
+ST_1: stg_219 [1/1] 0.00ns
+entry:213  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_0_out, [8 x i8]* @str688, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str688, [8 x i8]* @str688, [8 x i8]* @str688)
+
+ST_1: stg_220 [1/1] 0.00ns
+entry:214  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_0_out, [8 x i8]* @str687, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str687, [8 x i8]* @str687, [8 x i8]* @str687)
+
+ST_1: stg_221 [1/1] 4.38ns
+entry:215  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_0_out, float %p_read_72)
+
+ST_1: stg_222 [1/1] 0.00ns
+entry:216  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_1_out, [8 x i8]* @str691, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str691, [8 x i8]* @str691, [8 x i8]* @str691)
+
+ST_1: stg_223 [1/1] 0.00ns
+entry:217  call void (...)* @_ssdm_op_SpecInterface(float* %B_0_1_out, [8 x i8]* @str690, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str690, [8 x i8]* @str690, [8 x i8]* @str690)
+
+ST_1: stg_224 [1/1] 4.38ns
+entry:218  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_0_1_out, float %p_read_71)
+
+ST_1: stg_225 [1/1] 0.00ns
+entry:219  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_6_out, [8 x i8]* @str694, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str694, [8 x i8]* @str694, [8 x i8]* @str694)
+
+ST_1: stg_226 [1/1] 0.00ns
+entry:220  call void (...)* @_ssdm_op_SpecInterface(float* %B_2_6_out, [8 x i8]* @str693, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str693, [8 x i8]* @str693, [8 x i8]* @str693)
+
+ST_1: stg_227 [1/1] 4.38ns
+entry:221  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_2_6_out, float %p_read_70)
+
+ST_1: stg_228 [1/1] 0.00ns
+entry:222  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_2_out, [8 x i8]* @str697, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str697, [8 x i8]* @str697, [8 x i8]* @str697)
+
+ST_1: stg_229 [1/1] 0.00ns
+entry:223  call void (...)* @_ssdm_op_SpecInterface(float* %B_3_2_out, [8 x i8]* @str696, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str696, [8 x i8]* @str696, [8 x i8]* @str696)
+
+ST_1: stg_230 [1/1] 4.38ns
+entry:224  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_3_2_out, float %p_read_69)
+
+ST_1: stg_231 [1/1] 0.00ns
+entry:225  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_0_out, [8 x i8]* @str700, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str700, [8 x i8]* @str700, [8 x i8]* @str700)
+
+ST_1: stg_232 [1/1] 0.00ns
+entry:226  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_0_out, [8 x i8]* @str699, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str699, [8 x i8]* @str699, [8 x i8]* @str699)
+
+ST_1: stg_233 [1/1] 4.38ns
+entry:227  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_0_out, float %p_read_68)
+
+ST_1: stg_234 [1/1] 0.00ns
+entry:228  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_5_out, [8 x i8]* @str703, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str703, [8 x i8]* @str703, [8 x i8]* @str703)
+
+ST_1: stg_235 [1/1] 0.00ns
+entry:229  call void (...)* @_ssdm_op_SpecInterface(float* %B_4_5_out, [8 x i8]* @str702, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str702, [8 x i8]* @str702, [8 x i8]* @str702)
+
+ST_1: stg_236 [1/1] 4.38ns
+entry:230  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_4_5_out, float %p_read8054)
+
+ST_1: stg_237 [1/1] 0.00ns
+entry:231  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_1_out, [8 x i8]* @str706, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str706, [8 x i8]* @str706, [8 x i8]* @str706)
+
+ST_1: stg_238 [1/1] 0.00ns
+entry:232  call void (...)* @_ssdm_op_SpecInterface(float* %B_5_1_out, [8 x i8]* @str705, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str705, [8 x i8]* @str705, [8 x i8]* @str705)
+
+ST_1: stg_239 [1/1] 4.38ns
+entry:233  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_5_1_out, float %p_read_67)
+
+ST_1: stg_240 [1/1] 0.00ns
+entry:234  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_2_out, [8 x i8]* @str709, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str709, [8 x i8]* @str709, [8 x i8]* @str709)
+
+ST_1: stg_241 [1/1] 0.00ns
+entry:235  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_2_out, [8 x i8]* @str708, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str708, [8 x i8]* @str708, [8 x i8]* @str708)
+
+ST_1: stg_242 [1/1] 4.38ns
+entry:236  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_2_out, float %p_read_66)
+
+ST_1: stg_243 [1/1] 0.00ns
+entry:237  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_6_out, [8 x i8]* @str712, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str712, [8 x i8]* @str712, [8 x i8]* @str712)
+
+ST_1: stg_244 [1/1] 0.00ns
+entry:238  call void (...)* @_ssdm_op_SpecInterface(float* %B_7_6_out, [8 x i8]* @str711, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str711, [8 x i8]* @str711, [8 x i8]* @str711)
+
+ST_1: stg_245 [1/1] 4.38ns
+entry:239  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_7_6_out, float %p_read_65)
+
+ST_1: stg_246 [1/1] 0.00ns
+entry:240  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_0_out, [8 x i8]* @str715, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str715, [8 x i8]* @str715, [8 x i8]* @str715)
+
+ST_1: stg_247 [1/1] 0.00ns
+entry:241  call void (...)* @_ssdm_op_SpecInterface(float* %B_1_0_out, [8 x i8]* @str714, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str714, [8 x i8]* @str714, [8 x i8]* @str714)
+
+ST_1: stg_248 [1/1] 4.38ns
+entry:242  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_1_0_out, float %p_read_64)
+
+ST_1: stg_249 [1/1] 0.00ns
+entry:243  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_4_out, [8 x i8]* @str718, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str718, [8 x i8]* @str718, [8 x i8]* @str718)
+
+ST_1: stg_250 [1/1] 0.00ns
+entry:244  call void (...)* @_ssdm_op_SpecInterface(float* %B_6_4_out, [8 x i8]* @str717, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str717, [8 x i8]* @str717, [8 x i8]* @str717)
+
+ST_1: stg_251 [1/1] 4.38ns
+entry:245  call void @_ssdm_op_Write.ap_fifo.floatP(float* %B_6_4_out, float %p_read)
+
+ST_1: stg_252 [1/1] 1.57ns
+entry:246  br label %0
+
+
+ <State 2>: 7.68ns
+ST_2: indvar_flatten [1/1] 0.00ns
+:0  %indvar_flatten = phi i7 [ 0, %entry ], [ %indvar_flatten_next, %.reset ]
+
+ST_2: i_0_i_i_i_i [1/1] 0.00ns
+:1  %i_0_i_i_i_i = phi i4 [ 0, %entry ], [ %i_0_i_i_i_i_mid2, %.reset ]
+
+ST_2: A_cached_row_7_1_i_i [1/1] 0.00ns
+:2  %A_cached_row_7_1_i_i = phi float [ undef, %entry ], [ %A_cached_row_7_6, %.reset ]
+
+ST_2: A_cached_row_6_1_i_i [1/1] 0.00ns
+:3  %A_cached_row_6_1_i_i = phi float [ undef, %entry ], [ %A_cached_row_7_13, %.reset ]
+
+ST_2: A_cached_row_7_38 [1/1] 0.00ns
+:4  %A_cached_row_7_38 = phi float [ undef, %entry ], [ %A_cached_row_7_20, %.reset ]
+
+ST_2: A_cached_row_7_14 [1/1] 0.00ns
+:5  %A_cached_row_7_14 = phi float [ undef, %entry ], [ %A_cached_row_7_26, %.reset ]
+
+ST_2: A_cached_row_7_21 [1/1] 0.00ns
+:6  %A_cached_row_7_21 = phi float [ undef, %entry ], [ %A_cached_row_7_31, %.reset ]
+
+ST_2: A_cached_row_7_27 [1/1] 0.00ns
+:7  %A_cached_row_7_27 = phi float [ undef, %entry ], [ %A_cached_row_7_35, %.reset ]
+
+ST_2: A_cached_row_7_32 [1/1] 0.00ns
+:8  %A_cached_row_7_32 = phi float [ undef, %entry ], [ %A_cached_row_7_40, %.reset ]
+
+ST_2: A_cached_row_7_36 [1/1] 0.00ns
+:9  %A_cached_row_7_36 = phi float [ undef, %entry ], [ %A_cached_row_7_41, %.reset ]
+
+ST_2: k_0_i_i_i_i [1/1] 0.00ns
+:10  %k_0_i_i_i_i = phi i4 [ 0, %entry ], [ %k, %.reset ]
+
+ST_2: exitcond_flatten [1/1] 1.97ns
+:11  %exitcond_flatten = icmp eq i7 %indvar_flatten, -64
+
+ST_2: indvar_flatten_next [1/1] 1.72ns
+:12  %indvar_flatten_next = add i7 %indvar_flatten, 1
+
+ST_2: stg_266 [1/1] 0.00ns
+:13  br i1 %exitcond_flatten, label %MAT_Multiply2_Loop_Row_proc525.exit, label %.reset
+
+ST_2: exitcond2_i_i_i_i5 [1/1] 1.88ns
+.reset:2  %exitcond2_i_i_i_i5 = icmp eq i4 %k_0_i_i_i_i, -8
+
+ST_2: k_0_i_i_i_i_mid2 [1/1] 1.37ns
+.reset:3  %k_0_i_i_i_i_mid2 = select i1 %exitcond2_i_i_i_i5, i4 0, i4 %k_0_i_i_i_i
+
+ST_2: tmp_1_i_i_i_dup3 [1/1] 0.80ns
+.reset:4  %tmp_1_i_i_i_dup3 = add i4 1, %i_0_i_i_i_i
+
+ST_2: i_0_i_i_i_i_mid2 [1/1] 1.37ns
+.reset:5  %i_0_i_i_i_i_mid2 = select i1 %exitcond2_i_i_i_i5, i4 %tmp_1_i_i_i_dup3, i4 %i_0_i_i_i_i
+
+ST_2: tmp_2_i_i_i_trn_cast [1/1] 0.00ns
+.reset:9  %tmp_2_i_i_i_trn_cast = zext i4 %k_0_i_i_i_i_mid2 to i8
+
+ST_2: tmp [1/1] 0.00ns
+.reset:10  %tmp = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_0_i_i_i_i_mid2, i3 0)
+
+ST_2: p_addr_cast [1/1] 0.00ns
+.reset:11  %p_addr_cast = zext i7 %tmp to i8
+
+ST_2: p_addr1 [1/1] 1.72ns
+.reset:12  %p_addr1 = add i8 %p_addr_cast, %tmp_2_i_i_i_trn_cast
+
+ST_2: tmp_s [1/1] 0.00ns
+.reset:13  %tmp_s = zext i8 %p_addr1 to i64
+
+ST_2: A_addr [1/1] 0.00ns
+.reset:14  %A_addr = getelementptr [64 x float]* %A, i64 0, i64 %tmp_s
+
+ST_2: A_cached_row_0 [2/2] 2.71ns
+.reset:15  %A_cached_row_0 = load float* %A_addr, align 4
+
+ST_2: tmp_19 [1/1] 0.00ns
+.reset:16  %tmp_19 = trunc i4 %k_0_i_i_i_i_mid2 to i3
+
+ST_2: k [1/1] 0.80ns
+.reset:60  %k = add i4 1, %k_0_i_i_i_i_mid2
+
+
+ <State 3>: 8.19ns
+ST_3: A_cached_row_0 [1/2] 2.71ns
+.reset:15  %A_cached_row_0 = load float* %A_addr, align 4
+
+ST_3: sel_tmp [1/1] 1.62ns
+.reset:17  %sel_tmp = icmp eq i3 %tmp_19, -2
+
+ST_3: A_cached_row_7 [1/1] 1.37ns
+.reset:18  %A_cached_row_7 = select i1 %sel_tmp, float %A_cached_row_7_1_i_i, float %A_cached_row_0
+
+ST_3: sel_tmp2 [1/1] 1.62ns
+.reset:19  %sel_tmp2 = icmp eq i3 %tmp_19, -3
+
+ST_3: A_cached_row_7_1 [1/1] 1.37ns
+.reset:20  %A_cached_row_7_1 = select i1 %sel_tmp2, float %A_cached_row_7_1_i_i, float %A_cached_row_7
+
+ST_3: sel_tmp4 [1/1] 1.62ns
+.reset:21  %sel_tmp4 = icmp eq i3 %tmp_19, -4
+
+ST_3: A_cached_row_7_2 [1/1] 1.37ns
+.reset:22  %A_cached_row_7_2 = select i1 %sel_tmp4, float %A_cached_row_7_1_i_i, float %A_cached_row_7_1
+
+ST_3: sel_tmp6 [1/1] 1.62ns
+.reset:23  %sel_tmp6 = icmp eq i3 %tmp_19, 3
+
+ST_3: sel_tmp8 [1/1] 1.62ns
+.reset:25  %sel_tmp8 = icmp eq i3 %tmp_19, 2
+
+ST_3: sel_tmp1 [1/1] 1.62ns
+.reset:27  %sel_tmp1 = icmp eq i3 %tmp_19, 1
+
+ST_3: sel_tmp5 [1/1] 1.62ns
+.reset:29  %sel_tmp5 = icmp eq i3 %tmp_19, 0
+
+ST_3: A_cached_row_7_7 [1/1] 1.37ns
+.reset:31  %A_cached_row_7_7 = select i1 %sel_tmp, float %A_cached_row_0, float %A_cached_row_6_1_i_i
+
+ST_3: A_cached_row_7_8 [1/1] 1.37ns
+.reset:32  %A_cached_row_7_8 = select i1 %sel_tmp2, float %A_cached_row_6_1_i_i, float %A_cached_row_7_7
+
+ST_3: A_cached_row_7_9 [1/1] 1.37ns
+.reset:33  %A_cached_row_7_9 = select i1 %sel_tmp4, float %A_cached_row_6_1_i_i, float %A_cached_row_7_8
+
+ST_3: A_cached_row_7_28 [1/1] 1.37ns
+.reset:49  %A_cached_row_7_28 = select i1 %sel_tmp6, float %A_cached_row_0, float %A_cached_row_7_21
+
+ST_3: A_cached_row_7_29 [1/1] 1.37ns
+.reset:50  %A_cached_row_7_29 = select i1 %sel_tmp8, float %A_cached_row_7_21, float %A_cached_row_7_28
+
+ST_3: A_cached_row_7_30 [1/1] 1.37ns
+.reset:51  %A_cached_row_7_30 = select i1 %sel_tmp1, float %A_cached_row_7_21, float %A_cached_row_7_29
+
+ST_3: A_cached_row_7_31 [1/1] 1.37ns
+.reset:52  %A_cached_row_7_31 = select i1 %sel_tmp5, float %A_cached_row_7_21, float %A_cached_row_7_30
+
+ST_3: A_cached_row_7_33 [1/1] 1.37ns
+.reset:53  %A_cached_row_7_33 = select i1 %sel_tmp8, float %A_cached_row_0, float %A_cached_row_7_27
+
+ST_3: A_cached_row_7_34 [1/1] 1.37ns
+.reset:54  %A_cached_row_7_34 = select i1 %sel_tmp1, float %A_cached_row_7_27, float %A_cached_row_7_33
+
+ST_3: A_cached_row_7_35 [1/1] 1.37ns
+.reset:55  %A_cached_row_7_35 = select i1 %sel_tmp5, float %A_cached_row_7_27, float %A_cached_row_7_34
+
+ST_3: A_cached_row_7_39 [1/1] 1.37ns
+.reset:56  %A_cached_row_7_39 = select i1 %sel_tmp1, float %A_cached_row_0, float %A_cached_row_7_32
+
+ST_3: A_cached_row_7_40 [1/1] 1.37ns
+.reset:57  %A_cached_row_7_40 = select i1 %sel_tmp5, float %A_cached_row_7_32, float %A_cached_row_7_39
+
+ST_3: A_cached_row_7_41 [1/1] 1.37ns
+.reset:58  %A_cached_row_7_41 = select i1 %sel_tmp5, float %A_cached_row_0, float %A_cached_row_7_36
+
+
+ <State 4>: 8.22ns
+ST_4: stg_304 [1/1] 0.00ns
+.reset:0  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @str2)
+
+ST_4: empty [1/1] 0.00ns
+.reset:1  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)
+
+ST_4: stg_306 [1/1] 0.00ns
+.reset:6  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str7) nounwind
+
+ST_4: tmp_19_i_i [1/1] 0.00ns
+.reset:7  %tmp_19_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str7)
+
+ST_4: stg_308 [1/1] 0.00ns
+.reset:8  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_4: A_cached_row_7_3 [1/1] 1.37ns
+.reset:24  %A_cached_row_7_3 = select i1 %sel_tmp6, float %A_cached_row_7_1_i_i, float %A_cached_row_7_2
+
+ST_4: A_cached_row_7_4 [1/1] 1.37ns
+.reset:26  %A_cached_row_7_4 = select i1 %sel_tmp8, float %A_cached_row_7_1_i_i, float %A_cached_row_7_3
+
+ST_4: A_cached_row_7_5 [1/1] 1.37ns
+.reset:28  %A_cached_row_7_5 = select i1 %sel_tmp1, float %A_cached_row_7_1_i_i, float %A_cached_row_7_4
+
+ST_4: A_cached_row_7_6 [1/1] 1.37ns
+.reset:30  %A_cached_row_7_6 = select i1 %sel_tmp5, float %A_cached_row_7_1_i_i, float %A_cached_row_7_5
+
+ST_4: A_cached_row_7_10 [1/1] 1.37ns
+.reset:34  %A_cached_row_7_10 = select i1 %sel_tmp6, float %A_cached_row_6_1_i_i, float %A_cached_row_7_9
+
+ST_4: A_cached_row_7_11 [1/1] 1.37ns
+.reset:35  %A_cached_row_7_11 = select i1 %sel_tmp8, float %A_cached_row_6_1_i_i, float %A_cached_row_7_10
+
+ST_4: A_cached_row_7_12 [1/1] 1.37ns
+.reset:36  %A_cached_row_7_12 = select i1 %sel_tmp1, float %A_cached_row_6_1_i_i, float %A_cached_row_7_11
+
+ST_4: A_cached_row_7_13 [1/1] 1.37ns
+.reset:37  %A_cached_row_7_13 = select i1 %sel_tmp5, float %A_cached_row_6_1_i_i, float %A_cached_row_7_12
+
+ST_4: A_cached_row_7_15 [1/1] 1.37ns
+.reset:38  %A_cached_row_7_15 = select i1 %sel_tmp2, float %A_cached_row_0, float %A_cached_row_7_38
+
+ST_4: A_cached_row_7_16 [1/1] 1.37ns
+.reset:39  %A_cached_row_7_16 = select i1 %sel_tmp4, float %A_cached_row_7_38, float %A_cached_row_7_15
+
+ST_4: A_cached_row_7_17 [1/1] 1.37ns
+.reset:40  %A_cached_row_7_17 = select i1 %sel_tmp6, float %A_cached_row_7_38, float %A_cached_row_7_16
+
+ST_4: A_cached_row_7_18 [1/1] 1.37ns
+.reset:41  %A_cached_row_7_18 = select i1 %sel_tmp8, float %A_cached_row_7_38, float %A_cached_row_7_17
+
+ST_4: A_cached_row_7_19 [1/1] 1.37ns
+.reset:42  %A_cached_row_7_19 = select i1 %sel_tmp1, float %A_cached_row_7_38, float %A_cached_row_7_18
+
+ST_4: A_cached_row_7_20 [1/1] 1.37ns
+.reset:43  %A_cached_row_7_20 = select i1 %sel_tmp5, float %A_cached_row_7_38, float %A_cached_row_7_19
+
+ST_4: A_cached_row_7_22 [1/1] 1.37ns
+.reset:44  %A_cached_row_7_22 = select i1 %sel_tmp4, float %A_cached_row_0, float %A_cached_row_7_14
+
+ST_4: A_cached_row_7_23 [1/1] 1.37ns
+.reset:45  %A_cached_row_7_23 = select i1 %sel_tmp6, float %A_cached_row_7_14, float %A_cached_row_7_22
+
+ST_4: A_cached_row_7_24 [1/1] 1.37ns
+.reset:46  %A_cached_row_7_24 = select i1 %sel_tmp8, float %A_cached_row_7_14, float %A_cached_row_7_23
+
+ST_4: A_cached_row_7_25 [1/1] 1.37ns
+.reset:47  %A_cached_row_7_25 = select i1 %sel_tmp1, float %A_cached_row_7_14, float %A_cached_row_7_24
+
+ST_4: A_cached_row_7_26 [1/1] 1.37ns
+.reset:48  %A_cached_row_7_26 = select i1 %sel_tmp5, float %A_cached_row_7_14, float %A_cached_row_7_25
+
+ST_4: empty_5 [1/1] 0.00ns
+.reset:59  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str7, i32 %tmp_19_i_i)
+
+ST_4: stg_329 [1/1] 0.00ns
+.reset:61  br label %0
+
+
+ <State 5>: 0.00ns
+ST_5: mrv [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:0  %mrv = insertvalue { float, float, float, float, float, float, float, float } undef, float %A_cached_row_7_1_i_i, 0
+
+ST_5: mrv_1 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:1  %mrv_1 = insertvalue { float, float, float, float, float, float, float, float } %mrv, float %A_cached_row_6_1_i_i, 1
+
+ST_5: mrv_2 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:2  %mrv_2 = insertvalue { float, float, float, float, float, float, float, float } %mrv_1, float %A_cached_row_7_38, 2
+
+ST_5: mrv_3 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:3  %mrv_3 = insertvalue { float, float, float, float, float, float, float, float } %mrv_2, float %A_cached_row_7_14, 3
+
+ST_5: mrv_4 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:4  %mrv_4 = insertvalue { float, float, float, float, float, float, float, float } %mrv_3, float %A_cached_row_7_21, 4
+
+ST_5: mrv_5 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:5  %mrv_5 = insertvalue { float, float, float, float, float, float, float, float } %mrv_4, float %A_cached_row_7_27, 5
+
+ST_5: mrv_6 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:6  %mrv_6 = insertvalue { float, float, float, float, float, float, float, float } %mrv_5, float %A_cached_row_7_32, 6
+
+ST_5: mrv_7 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:7  %mrv_7 = insertvalue { float, float, float, float, float, float, float, float } %mrv_6, float %A_cached_row_7_36, 7
+
+ST_5: stg_338 [1/1] 0.00ns
+MAT_Multiply2_Loop_Row_proc525.exit:8  ret { float, float, float, float, float, float, float, float } %mrv_7
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

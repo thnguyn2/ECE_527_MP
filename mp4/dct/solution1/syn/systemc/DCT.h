@@ -12,6 +12,7 @@
 #include "AESL_pkg.h"
 
 #include "DCT_MAT_Multiply.h"
+#include "DCT_MAT_Multiply2.h"
 #include "DCT_Tinv.h"
 #include "DCT_T.h"
 #include "DCT_MAT_Multiply_B_cached.h"
@@ -49,7 +50,8 @@ struct DCT : public sc_module {
     DCT_Tinv* Tinv_U;
     DCT_T* T_U;
     DCT_MAT_Multiply_B_cached* temp_U;
-    DCT_MAT_Multiply* grp_DCT_MAT_Multiply_fu_35;
+    DCT_MAT_Multiply* grp_DCT_MAT_Multiply_fu_37;
+    DCT_MAT_Multiply2* grp_DCT_MAT_Multiply2_fu_48;
     sc_signal< sc_lv<6> > ap_CS_fsm;
     sc_signal< sc_logic > ap_sig_cseq_ST_st1_fsm_0;
     sc_signal< bool > ap_sig_bdd_22;
@@ -59,38 +61,53 @@ struct DCT : public sc_module {
     sc_signal< sc_lv<6> > T_address0;
     sc_signal< sc_logic > T_ce0;
     sc_signal< sc_lv<32> > T_q0;
-    sc_signal< sc_lv<1> > cond_fu_49_p2;
-    sc_signal< sc_lv<1> > cond_reg_55;
+    sc_signal< sc_lv<1> > cond_fu_58_p2;
+    sc_signal< sc_lv<1> > cond_reg_64;
     sc_signal< sc_lv<6> > temp_address0;
     sc_signal< sc_logic > temp_ce0;
     sc_signal< sc_logic > temp_we0;
     sc_signal< sc_lv<32> > temp_d0;
     sc_signal< sc_lv<32> > temp_q0;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_ap_start;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_ap_done;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_ap_idle;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_ap_ready;
-    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply_fu_35_A_address0;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_A_ce0;
-    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply_fu_35_A_q0;
-    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply_fu_35_B_address0;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_B_ce0;
-    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply_fu_35_B_q0;
-    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply_fu_35_C_address0;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_C_ce0;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_C_we0;
-    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply_fu_35_C_d0;
-    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_35_ap_start_ap_start_reg;
-    sc_signal< sc_logic > ap_sig_cseq_ST_st3_fsm_2;
-    sc_signal< bool > ap_sig_bdd_103;
-    sc_signal< sc_logic > ap_sig_cseq_ST_st6_fsm_5;
-    sc_signal< bool > ap_sig_bdd_111;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_ap_start;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_ap_done;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_ap_idle;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_ap_ready;
+    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply_fu_37_A_address0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_A_ce0;
+    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply_fu_37_A_q0;
+    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply_fu_37_B_address0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_B_ce0;
+    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply_fu_37_B_q0;
+    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply_fu_37_C_address0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_C_ce0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_C_we0;
+    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply_fu_37_C_d0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_ap_start;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_ap_done;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_ap_idle;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_ap_ready;
+    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply2_fu_48_A_address0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_A_ce0;
+    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply2_fu_48_A_q0;
+    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply2_fu_48_B_address0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_B_ce0;
+    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply2_fu_48_B_q0;
+    sc_signal< sc_lv<6> > grp_DCT_MAT_Multiply2_fu_48_C_address0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_C_ce0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_C_we0;
+    sc_signal< sc_lv<32> > grp_DCT_MAT_Multiply2_fu_48_C_d0;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply_fu_37_ap_start_ap_start_reg;
     sc_signal< sc_logic > ap_sig_cseq_ST_st2_fsm_1;
     sc_signal< bool > ap_sig_bdd_119;
     sc_signal< sc_logic > ap_sig_cseq_ST_st5_fsm_4;
     sc_signal< bool > ap_sig_bdd_126;
+    sc_signal< sc_logic > grp_DCT_MAT_Multiply2_fu_48_ap_start_ap_start_reg;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st3_fsm_2;
+    sc_signal< bool > ap_sig_bdd_136;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st6_fsm_5;
+    sc_signal< bool > ap_sig_bdd_143;
     sc_signal< sc_logic > ap_sig_cseq_ST_st4_fsm_3;
-    sc_signal< bool > ap_sig_bdd_133;
+    sc_signal< bool > ap_sig_bdd_151;
     sc_signal< sc_lv<6> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -103,10 +120,10 @@ struct DCT : public sc_module {
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<1> ap_const_lv1_0;
-    static const sc_lv<32> ap_const_lv32_2;
-    static const sc_lv<32> ap_const_lv32_5;
     static const sc_lv<32> ap_const_lv32_1;
     static const sc_lv<32> ap_const_lv32_4;
+    static const sc_lv<32> ap_const_lv32_2;
+    static const sc_lv<32> ap_const_lv32_5;
     static const sc_lv<32> ap_const_lv32_3;
     static const sc_lv<8> ap_const_lv8_1;
     // Thread declarations
@@ -124,11 +141,11 @@ struct DCT : public sc_module {
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
-    void thread_ap_sig_bdd_103();
-    void thread_ap_sig_bdd_111();
     void thread_ap_sig_bdd_119();
     void thread_ap_sig_bdd_126();
-    void thread_ap_sig_bdd_133();
+    void thread_ap_sig_bdd_136();
+    void thread_ap_sig_bdd_143();
+    void thread_ap_sig_bdd_151();
     void thread_ap_sig_bdd_22();
     void thread_ap_sig_cseq_ST_st1_fsm_0();
     void thread_ap_sig_cseq_ST_st2_fsm_1();
@@ -136,10 +153,13 @@ struct DCT : public sc_module {
     void thread_ap_sig_cseq_ST_st4_fsm_3();
     void thread_ap_sig_cseq_ST_st5_fsm_4();
     void thread_ap_sig_cseq_ST_st6_fsm_5();
-    void thread_cond_fu_49_p2();
-    void thread_grp_DCT_MAT_Multiply_fu_35_A_q0();
-    void thread_grp_DCT_MAT_Multiply_fu_35_B_q0();
-    void thread_grp_DCT_MAT_Multiply_fu_35_ap_start();
+    void thread_cond_fu_58_p2();
+    void thread_grp_DCT_MAT_Multiply2_fu_48_A_q0();
+    void thread_grp_DCT_MAT_Multiply2_fu_48_B_q0();
+    void thread_grp_DCT_MAT_Multiply2_fu_48_ap_start();
+    void thread_grp_DCT_MAT_Multiply_fu_37_A_q0();
+    void thread_grp_DCT_MAT_Multiply_fu_37_B_q0();
+    void thread_grp_DCT_MAT_Multiply_fu_37_ap_start();
     void thread_temp_address0();
     void thread_temp_ce0();
     void thread_temp_d0();

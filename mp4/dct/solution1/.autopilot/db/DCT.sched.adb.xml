@@ -57,7 +57,7 @@
 
 <node id="6" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %X) nounwind, !map !7
+:0  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %X) nounwind, !map !0
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -72,7 +72,7 @@
 
 <node id="7" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !map !13
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !map !6
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -87,7 +87,7 @@
 
 <node id="8" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %Y) nounwind, !map !19
+:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %Y) nounwind, !map !12
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -230,7 +230,7 @@
 
 <node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -249,7 +249,7 @@
 
 <node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -281,7 +281,7 @@
 
 <node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -348,7 +348,7 @@
 
 <node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

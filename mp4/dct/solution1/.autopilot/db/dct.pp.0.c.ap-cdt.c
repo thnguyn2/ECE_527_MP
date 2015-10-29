@@ -209,6 +209,9 @@
 #pragma empty_line
 void MAT_Multiply(float A[8][8],
   float B[8][8], float C[8][8]);
+#pragma empty_line
+void MAT_Multiply2(float A[8][8],
+  float B[8][8], float C[8][8]);
 #pragma line 6 "dct/dct.h" 2
 #pragma empty_line
 #pragma empty_line
@@ -258,12 +261,12 @@ void DCT(float X[8][8],
  switch (function){
  case 1:
   MAT_Multiply(Tinv,X,temp);
-  MAT_Multiply(temp, T, Y);
+  MAT_Multiply2(temp, T, Y);
   break;
  case 0:
  default:
   MAT_Multiply(T,X,temp);
-  MAT_Multiply(temp, Tinv, Y);
+  MAT_Multiply2(temp, Tinv, Y);
   break;
  }
 }

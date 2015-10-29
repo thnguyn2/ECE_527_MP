@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT'
 ================================================================
-* Date:           Thu Oct 22 14:03:37 2015
+* Date:           Wed Oct 28 17:34:07 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -20,17 +20,17 @@
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |  10.00|      8.58|        1.25|
+    |default  |  10.00|      8.41|        1.25|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +------+-------+------+-------+---------+
-    |    Latency   |   Interval   | Pipeline|
-    |  min |  max  |  min |  max  |   Type  |
-    +------+-------+------+-------+---------+
-    |  9509|  15653|  9510|  15654|   none  |
-    +------+-------+------+-------+---------+
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  6215|  6215|  6216|  6216|   none  |
+    +------+------+------+------+---------+
 
     + Detail: 
         * Instance: 
@@ -136,13 +136,13 @@ IsGatedGlobalClock: 0
 
  <State 1>: 2.00ns
 ST_1: stg_7 [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %X) nounwind, !map !7
+:0  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %X) nounwind, !map !0
 
 ST_1: stg_8 [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !map !13
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !map !6
 
 ST_1: stg_9 [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %Y) nounwind, !map !19
+:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x float]* %Y) nounwind, !map !12
 
 ST_1: stg_10 [1/1] 0.00ns
 :3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
@@ -173,18 +173,18 @@ ST_2: stg_17 [1/2] 0.00ns
 
  <State 3>: 0.00ns
 ST_3: stg_18 [2/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
 
 
  <State 4>: 0.00ns
 ST_4: stg_19 [1/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @Tinv, [64 x float]* nocapture %Y) nounwind
 
 ST_4: stg_20 [1/1] 0.00ns
 :2  br label %3
 
 ST_4: stg_21 [1/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
 
 ST_4: stg_22 [1/1] 0.00ns
 :2  br label %3
@@ -200,7 +200,7 @@ ST_5: stg_24 [1/2] 0.00ns
 
  <State 6>: 0.00ns
 ST_6: stg_25 [2/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
+:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [64 x float]* nocapture @T, [64 x float]* nocapture %Y) nounwind
 
 
 

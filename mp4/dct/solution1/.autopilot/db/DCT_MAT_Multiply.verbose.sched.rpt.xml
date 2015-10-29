@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply'" level="0">
-<item name = "Date">Thu Oct 22 14:03:36 2015
+<item name = "Date">Wed Oct 28 17:34:07 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 8.58, 1.25</column>
+<column name="default">10.00, 8.41, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">4753, 7825, 4753, 7825, none</column>
+<column name="">5410, 5410, 5410, 5410, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,11 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Row">4752, 7824, 594 ~ 978, -, -, 8, no</column>
-<column name=" + Col">592, 976, 74 ~ 122, -, -, 8, no</column>
-<column name="  ++ RowCaching">24, 24, 3, -, -, 8, no</column>
-<column name="  ++ ColCaching">24, 24, 3, -, -, 8, no</column>
-<column name="  ++ Product">64, 64, 8, -, -, 8, no</column>
+<column name="- LoadRow">144, 144, 18, -, -, 8, no</column>
+<column name=" + LoadCol">16, 16, 2, -, -, 8, no</column>
+<column name="- Row">5264, 5264, 658, -, -, 8, no</column>
+<column name=" + Col">656, 656, 82, -, -, 8, no</column>
+<column name="  ++ Product">80, 80, 10, -, -, 8, no</column>
 </table>
 </item>
 </section>

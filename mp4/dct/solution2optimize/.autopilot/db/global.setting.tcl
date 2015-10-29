@@ -40,7 +40,7 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../dct.c ../matrixmath.c}}
+set SourceFiles {sc {} c {../matrixmath.c ../dct.c}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/solution2optimize.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -1,8 +1,9 @@
-DCT_sitofp_32ns_32_6
-DCT_mul_32s_32s_32_6
-DCT_MAT_Multiply_A_cached_row
+DCT_fadd_32ns_32ns_32_5_full_dsp
+DCT_fmul_32ns_32ns_32_4_max_dsp
 DCT_MAT_Multiply_B_cached
+DCT_MAT_Multiply2_A_cached_row
 DCT_Tinv
 DCT_T
 DCT_MAT_Multiply
+DCT_MAT_Multiply2
 DCT

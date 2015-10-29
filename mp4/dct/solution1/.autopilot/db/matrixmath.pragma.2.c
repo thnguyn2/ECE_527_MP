@@ -400,38 +400,63 @@
 
 void MAT_Multiply(float A[8][8],
   float B[8][8], float C[8][8]);
+
+void MAT_Multiply2(float A[8][8],
+  float B[8][8], float C[8][8]);
 # 3 "dct/matrixmath.c" 2
 
 void MAT_Multiply(float A[8][8],
   float B[8][8], float C[8][8])
 {_ssdm_SpecArrayDimSize(A,8);_ssdm_SpecArrayDimSize(B,8);_ssdm_SpecArrayDimSize(C,8);
  unsigned char i, j, k;
- long temp;
- int A_cached_row[8];
- int B_cached[8][8];
+ float temp;
+ float B_cached[8][8];
+
+ LoadRow: for (i=0; i<8; i++){
+  LoadCol: for (j=0; j<8; j++){
+   B_cached[i][j]=B[i][j];
+  }
+ }
 
  Row: for (i=0; i<8; i++)
   Col: for (j=0; j<8; j++)
   {
    //Make sure the data is fully cached to avoid multiple read.
    temp = 0;
-   if (j==0)
-   {
-    //Cache the whole row of matrix A
-    RowCaching: for (k=0;k<8;k++)
-     A_cached_row[k]=A[i][k];
-   }
-
-   //Cache all the columns of matrix B, see Fig. 7.21. B will be read only once
-   if (i==0)
-   {
-    ColCaching: for (k=0;k<8;k++)
-     B_cached[k][j]=B[k][j];
-   }
 
    Product: for (k=0; k<8; k++)
    {
-    temp += A_cached_row[k] * B_cached[k][j];
+    temp += A[i][k] * B_cached[k][j];
+   }
+   C[i][j] = temp;
+  }
+}
+
+void MAT_Multiply2(float A[8][8],
+  float B[8][8], float C[8][8])
+{_ssdm_SpecArrayDimSize(A,8);_ssdm_SpecArrayDimSize(B,8);_ssdm_SpecArrayDimSize(C,8);
+ unsigned char i, j, k;
+ float temp;
+ float A_cached_row[8];
+
+ Row: for (i=0; i<8; i++)
+  //Cache the whole row of matrix A
+  RowCaching: for (k=0;k<8;k++)
+   A_cached_row[k]=A[i][k];
+  Col: for (j=0; j<8; j++)
+  {
+   //Make sure the data is fully cached to avoid multiple read.
+   temp = 0;
+  //	if (j==0)
+  //	{
+    //Cache the whole row of matrix A
+  //		RowCaching: for (k=0;k<MAT_SIZE;k++)
+  //			A_cached_row[k]=A[i][k];
+  //	}
+
+   Product: for (k=0; k<8; k++)
+   {
+    temp += A_cached_row[k] * B[k][j];
    }
    C[i][j] = temp;
   }

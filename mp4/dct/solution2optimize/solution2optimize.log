@@ -8,6 +8,7 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [HLS-10] Analyzing design file 'dct/matrixmath.c' ... 
 @I [HLS-10] Analyzing design file 'dct/dct.c' ... 
 dct/dct.c:15:16: warning: passing 'const float [8][8]' to parameter of type 'float (*)[8]' discards qualifiers [-Wincompatible-pointer-types]
                 MAT_Multiply(Tinv,X,temp);
@@ -34,36 +35,17 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
                 float B[MAT_SIZE][MAT_SIZE], float C[MAT_SIZE][MAT_SIZE]);
                       ^
 4 warnings generated.
-@I [HLS-10] Analyzing design file 'dct/matrixmath.c' ... 
 @I [HLS-10] Validating synthesis directives ...
 @I [HLS-10] Starting code transformations ...
 @I [HLS-10] Checking synthesizability ...
-@I [XFORM-502] Unrolling all sub-loops inside loop 'Col' (dct/matrixmath.c:40) in function 'MAT_Multiply2' for pipelining.
-@W [XFORM-505] Ignored pipeline directive for loop 'RowCaching' (dct/matrixmath.c:47) because its parent loop or function is pipelined.
+@I [XFORM-502] Unrolling all sub-loops inside loop 'Col' (dct/matrixmath.c:44) in function 'MAT_Multiply2' for pipelining.
 @I [XFORM-502] Unrolling all sub-loops inside loop 'Col' (dct/matrixmath.c:19) in function 'MAT_Multiply' for pipelining.
-@I [XFORM-501] Unrolling loop 'RowCaching' (dct/matrixmath.c:47) in function 'MAT_Multiply2' completely.
-@I [XFORM-501] Unrolling loop 'Product' (dct/matrixmath.c:51) in function 'MAT_Multiply2' completely.
+@I [XFORM-501] Unrolling loop 'Product' (dct/matrixmath.c:55) in function 'MAT_Multiply2' completely.
 @I [XFORM-501] Unrolling loop 'Product' (dct/matrixmath.c:24) in function 'MAT_Multiply' completely.
-@I [XFORM-101] Partitioning array 'T'  in dimension 1 completely.
 @I [XFORM-101] Partitioning array 'Tinv'  in dimension 1 completely.
+@I [XFORM-101] Partitioning array 'T'  in dimension 1 completely.
 @I [XFORM-101] Partitioning array 'A_cached_row' (dct/matrixmath.c:36) in dimension 1 completely.
 @I [XFORM-101] Partitioning array 'B_cached' (dct/matrixmath.c:9) in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.0'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.1'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.2'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.3'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.4'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.5'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.6'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'T.7'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.0'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.1'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.2'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.3'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.4'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.5'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.6'  in dimension 1 completely.
-@I [XFORM-101] Partitioning array 'Tinv.7'  in dimension 1 completely.
 @I [XFORM-101] Partitioning array 'B_cached.0' (dct/matrixmath.c:9) in dimension 1 completely.
 @I [XFORM-101] Partitioning array 'B_cached.1' (dct/matrixmath.c:9) in dimension 1 completely.
 @I [XFORM-101] Partitioning array 'B_cached.2' (dct/matrixmath.c:9) in dimension 1 completely.
@@ -74,19 +56,21 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [XFORM-101] Partitioning array 'B_cached.7' (dct/matrixmath.c:9) in dimension 1 completely.
 @I [XFORM-721] Changing loop 'Loop_LoadRow_proc' (dct/matrixmath.c:11) to a process function for dataflow in function 'MAT_Multiply'.
 @I [XFORM-721] Changing loop 'Loop_Row_proc' (dct/matrixmath.c:18) to a process function for dataflow in function 'MAT_Multiply'.
-@I [XFORM-721] Changing loop 'Loop_Row_proc' (dct/matrixmath.c:39) to a process function for dataflow in function 'MAT_Multiply2'.
+@I [XFORM-721] Changing loop 'Loop_Row_proc' (dct/matrixmath.c:40) to a process function for dataflow in function 'MAT_Multiply2'.
+@I [XFORM-721] Changing loop 'Loop_Col_proc' (dct/matrixmath.c:44) to a process function for dataflow in function 'MAT_Multiply2'.
 @I [XFORM-712] Applying dataflow to function 'MAT_Multiply' (dct/matrixmath.c:4), detected/extracted 2 process function(s):
-	 'MAT_Multiply_Loop_LoadRow_proc5556'
-	 'MAT_Multiply_Loop_Row_proc440'.
-@I [XFORM-712] Applying dataflow to function 'MAT_Multiply2' (dct/matrixmath.c:31), detected/extracted 1 process function(s):
-	 'MAT_Multiply2_Loop_Row_proc'.
+	 'MAT_Multiply_Loop_LoadRow_proc'
+	 'MAT_Multiply_Loop_Row_proc'.
+@I [XFORM-712] Applying dataflow to function 'MAT_Multiply2' (dct/matrixmath.c:31), detected/extracted 2 process function(s):
+	 'MAT_Multiply2_Loop_Row_proc'
+	 'MAT_Multiply2_Loop_Col_proc2'.
 @I [XFORM-712] Applying dataflow to function 'DCT' (dct/dct.c:7), detected/extracted 1 process function(s):
 	 'Block__proc'.
-@I [XFORM-401] Performing if-conversion on hyperblock from (dct/matrixmath.c:40:4) to (dct/matrixmath.c:39:23) in function 'MAT_Multiply2_Loop_Row_proc'... converting 3 basic blocks.
-@I [XFORM-541] Flattening a loop nest 'Row' (dct/matrixmath.c:18:3) in function 'MAT_Multiply_Loop_Row_proc440'.
-@I [XFORM-541] Flattening a loop nest 'Row' (dct/matrixmath.c:39:3) in function 'MAT_Multiply2_Loop_Row_proc'.
-@W [XFORM-631] Renaming function 'MAT_Multiply_Loop_LoadRow_proc5556' (dct/matrixmath.c:11:4) into MAT_Multiply_Loop_LoadRow_proc.
-@I [HLS-111] Elapsed time: 97.171 seconds; current memory usage: 146 MB.
+@I [XFORM-401] Performing if-conversion on hyperblock from (dct/matrixmath.c:41:2) to (dct/matrixmath.c:40:28) in function 'MAT_Multiply2_Loop_Row_proc'... converting 9 basic blocks.
+@I [XFORM-541] Flattening a loop nest 'Row' (dct/matrixmath.c:18:3) in function 'MAT_Multiply_Loop_Row_proc'.
+@I [XFORM-541] Flattening a loop nest 'Row' (dct/matrixmath.c:40:3) in function 'MAT_Multiply2_Loop_Row_proc'.
+@I [XFORM-541] Flattening a loop nest 'LoadRow' (dct/matrixmath.c:11:31) in function 'MAT_Multiply_Loop_LoadRow_proc'.
+@I [HLS-111] Elapsed time: 87.203 seconds; current memory usage: 149 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'DCT' ...
 @W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'.
@@ -95,8 +79,10 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply_Loop_LoadRow_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'LoadRow_LoadCol'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 3.656 seconds; current memory usage: 150 MB.
+@I [HLS-111] Elapsed time: 11.094 seconds; current memory usage: 172 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply_Loop_LoadRow_proc' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -105,30 +91,31 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.876 seconds; current memory usage: 156 MB.
+@I [HLS-111] Elapsed time: 1.109 seconds; current memory usage: 172 MB.
 @I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply_Loop_Row_proc440' 
+@I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply_Loop_Row_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-61] Pipelining loop 'Row_Col'.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 46.
+@W [SCHED-69] Unable to schedule 'load' operation ('A_0_load_2') on array 'A_0' due to limited memory ports.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 47.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 4.969 seconds; current memory usage: 159 MB.
+@I [HLS-111] Elapsed time: 1.25 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply_Loop_Row_proc440' 
+@I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply_Loop_Row_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [BIND-100] Starting micro-architecture generation ...
 @I [BIND-101] Performing variable lifetime analysis.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.422 seconds; current memory usage: 160 MB.
+@I [HLS-111] Elapsed time: 0.313 seconds; current memory usage: 172 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.624 seconds; current memory usage: 160 MB.
+@I [HLS-111] Elapsed time: 0.375 seconds; current memory usage: 172 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -137,16 +124,15 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.438 seconds; current memory usage: 161 MB.
+@I [HLS-111] Elapsed time: 0.157 seconds; current memory usage: 172 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply2_Loop_Row_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
-@I [SCHED-61] Pipelining loop 'Row_Col'.
-@W [SCHED-69] Unable to schedule 'load' operation ('A_load_2', dct/matrixmath.c:47) on array 'A' due to limited memory ports.
-@I [SCHED-61] Pipelining result: Target II: 1, Final II: 4, Depth: 47.
+@I [SCHED-61] Pipelining loop 'Row_RowCaching'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.874 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.234 seconds; current memory usage: 172 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply2_Loop_Row_proc' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -155,13 +141,30 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.375 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.125 seconds; current memory usage: 172 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply2_Loop_Col_proc2' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Col'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 46.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.281 seconds; current memory usage: 171 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply2_Loop_Col_proc2' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.141 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'DCT_MAT_Multiply2' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.422 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.186 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'DCT_MAT_Multiply2' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -170,13 +173,13 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.156 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.111 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'DCT_Block_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.282 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'DCT_Block_proc' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -185,13 +188,13 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.296 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.204 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'DCT' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.297 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.203 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'DCT' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -200,43 +203,47 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.141 seconds; current memory usage: 163 MB.
+@I [HLS-111] Elapsed time: 0.109 seconds; current memory usage: 171 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply_Loop_LoadRow_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply_Loop_LoadRow_proc'.
-@I [HLS-111] Elapsed time: 6.75 seconds; current memory usage: 182 MB.
+@I [HLS-111] Elapsed time: 2.875 seconds; current memory usage: 187 MB.
 @I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply_Loop_Row_proc440' 
+@I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply_Loop_Row_proc' 
 @I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-100] Generating core module 'DCT_fadd_32ns_32ns_32_5_full_dsp': 8 instance(s).
-@I [RTGEN-100] Generating core module 'DCT_fmul_32ns_32ns_32_4_max_dsp': 8 instance(s).
-@I [RTGEN-100] Generating core module 'DCT_mux_8to1_sel3_32_1': 16 instance(s).
-@I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply_Loop_Row_proc440'.
-@I [HLS-111] Elapsed time: 6.47 seconds; current memory usage: 185 MB.
+@I [RTGEN-100] Generating core module 'DCT_fadd_32ns_32ns_32_5_full_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'DCT_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
+@I [RTGEN-100] Generating core module 'DCT_mux_8to1_sel3_32_1': 10 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply_Loop_Row_proc'.
+@I [HLS-111] Elapsed time: 4.421 seconds; current memory usage: 189 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply'.
-@I [HLS-111] Elapsed time: 1.937 seconds; current memory usage: 190 MB.
+@I [HLS-111] Elapsed time: 1.36 seconds; current memory usage: 191 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply2_Loop_Row_proc' 
 @I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-100] Generating core module 'DCT_fadd_32ns_32ns_32_5_full_dsp': 2 instance(s).
-@I [RTGEN-100] Generating core module 'DCT_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
-@I [RTGEN-100] Generating core module 'DCT_mux_8to1_sel3_32_1': 8 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply2_Loop_Row_proc'.
-@I [HLS-111] Elapsed time: 2.328 seconds; current memory usage: 192 MB.
+@I [HLS-111] Elapsed time: 1.047 seconds; current memory usage: 192 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply2_Loop_Col_proc2' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'DCT_fadd_32ns_32ns_32_5_full_dsp': 8 instance(s).
+@I [RTGEN-100] Generating core module 'DCT_fmul_32ns_32ns_32_4_max_dsp': 8 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply2_Loop_Col_proc2'.
+@I [HLS-111] Elapsed time: 1.234 seconds; current memory usage: 193 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'DCT_MAT_Multiply2' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'DCT_MAT_Multiply2'.
-@I [HLS-111] Elapsed time: 2.374 seconds; current memory usage: 194 MB.
+@I [HLS-111] Elapsed time: 0.922 seconds; current memory usage: 193 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'DCT_Block_proc' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'DCT_Block_proc'.
-@I [HLS-111] Elapsed time: 0.454 seconds; current memory usage: 194 MB.
+@I [HLS-111] Elapsed time: 0.421 seconds; current memory usage: 195 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'DCT' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -245,71 +252,7 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [RTGEN-500] Setting interface mode on port 'DCT/Y' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'DCT' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'DCT'.
-@I [HLS-111] Elapsed time: 0.657 seconds; current memory usage: 194 MB.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_171' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_272' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_173' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_074' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_675' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_076' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_277' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_178' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_779' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_680' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_681' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_582' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_483' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_784' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_785' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_586' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_087' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_488' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_189' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_690' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_091' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_592' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_393' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_394' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_295' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_596' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_497' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_498' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_799' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_3100' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_7101' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_5102' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_7103' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_2104' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_0105' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_2106' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_2107' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_3108' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_3109' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_4110' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_6111' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_0_4112' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_4113' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_1114' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_1115' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_6116' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_2117' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_1118' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_3119' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_6_1120' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_7_0121' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_6122' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_0123' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_7124' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_6125' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_1_0126' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_7127' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_5128' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_4129' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_3_3130' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_3131' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_5_5132' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_4_5133' using Shift Registers.
-@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_A_2_2134' using Shift Registers.
+@I [HLS-111] Elapsed time: 0.517 seconds; current memory usage: 195 MB.
 @I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_B_cached_0_0_channel' using Shift Registers.
 @I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_B_cached_0_1_channel' using Shift Registers.
 @I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_B_cached_0_2_channel' using Shift Registers.
@@ -374,10 +317,50 @@ dct/matrixmath.h:13:9: note: passing argument to parameter 'B' here
 @I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_B_cached_7_5_channel' using Shift Registers.
 @I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_B_cached_7_6_channel' using Shift Registers.
 @I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply_B_cached_7_7_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_7_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_6_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_5_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_4_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_3_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_2_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_1_loc_channel' using Shift Registers.
+@I [RTMG-285] Implementing FIFO 'FIFO_DCT_MAT_Multiply2_A_cached_row_0_loc_channel' using Shift Registers.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_0' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_0_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_1' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_1_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_2' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_2_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_3' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_3_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_4' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_4_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_5' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_5_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_6' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_6_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_Tinv_7' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_Tinv_7_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_0' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_0_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_1' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_1_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_2' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_2_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_3' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_3_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_4' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_4_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_5' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_5_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_6' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_6_rom' using distributed ROMs.
+@W [RTMG-274] Memory 'DCT_Block_proc_T_7' is read-only, switch it to a ROM.
+@I [RTMG-279] Implementing memory 'DCT_Block_proc_T_7_rom' using distributed ROMs.
 @I [RTMG-278] Implementing memory 'DCT_Block_proc_temp_ram' using block RAMs.
 @I [HLS-10] Finished generating all RTL models.
 @I [WSYSC-301] Generating RTL SystemC for 'DCT'.
 @I [WVHDL-304] Generating RTL VHDL for 'DCT'.
 @I [WVLOG-307] Generating RTL Verilog for 'DCT'.
-@I [HLS-112] Total elapsed time: 155.844 seconds; peak memory usage: 194 MB.
+@I [HLS-112] Total elapsed time: 129.844 seconds; peak memory usage: 195 MB.
 @I [LIC-101] Checked in feature [HLS]
