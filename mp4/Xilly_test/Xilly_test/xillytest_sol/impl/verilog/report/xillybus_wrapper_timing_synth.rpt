@@ -1,0 +1,35 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
+| Date         : Wed Oct 28 23:46:40 2015
+| Host         : zombie running 64-bit Service Pack 1  (build 7601)
+| Command      : report_timing -file ./report/xillybus_wrapper_timing_synth.rpt
+| Design       : xillybus_wrapper
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 out_r_full_n
+                            (input port)
+  Destination:            in_r_read
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.070ns  (logic 0.124ns (5.990%)  route 1.946ns (94.010%))
+  Logic Levels:           1  (LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  out_r_full_n (IN)
+                         net (fo=0)                   0.973     0.973    out_r_full_n
+                         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  out_r_write_INST_0/O
+                         net (fo=0)                   0.973     2.070    out_r_write
+                                                                      r  in_r_read (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
