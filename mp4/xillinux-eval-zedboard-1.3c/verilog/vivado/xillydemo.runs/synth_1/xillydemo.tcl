@@ -17,52 +17,50 @@ create_project -in_memory -part xc7z020clg484-1
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.cache/wt [current_project]
-set_property parent.project_path /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.xpr [current_project]
+set_property webtalk.parent_dir E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.cache/wt [current_project]
+set_property parent.project_path E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip
-  /home/parallels/source_code/ECE_527_MP/mp4/Mat_mult
+  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip
+  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Mat_mult
 } [current_project]
-add_files -quiet /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/MAT_Stream_0_synth_1/MAT_Stream_0.dcp
-set_property used_in_implementation false [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/MAT_Stream_0_synth_1/MAT_Stream_0.dcp]
-add_files -quiet /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp
-set_property used_in_implementation false [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp]
-add_files -quiet /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/MAT_Stream_1_synth_1/MAT_Stream_1.dcp
-set_property used_in_implementation false [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/MAT_Stream_1_synth_1/MAT_Stream_1.dcp]
-read_ip /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.xci
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.dcp]
-set_property is_locked true [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.xci]
+add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp
+set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp]
+add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/MAT_Stream_0_synth_1/MAT_Stream_0.dcp
+set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/MAT_Stream_0_synth_1/MAT_Stream_0.dcp]
+read_ip E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.xci
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.dcp]
+set_property is_locked true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.xci]
 
-read_ip /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512.xci
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
-set_property is_locked true [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512.xci]
+read_ip E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512.xci
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
+set_property is_locked true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512.xci]
 
-add_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system.bd
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_xbar_0/vivado_system_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system_ooc.xdc]
-set_property is_locked true [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system.bd]
+add_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system.bd
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_xbar_0/vivado_system_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system_ooc.xdc]
+set_property is_locked true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/vivado_system.bd]
 
 read_verilog -library xil_defaultlib {
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/smbus.v
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/i2s_audio.v
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/xillybus.v
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/xillybus_core.v
-  /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/system.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/smbus.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/i2s_audio.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/xillybus.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/verilog/src/xillybus_core.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/system.v
 }
 set_property edif_extra_search_paths /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/cores [current_fileset]
-read_xdc /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc
-set_property used_in_implementation false [get_files /home/parallels/source_code/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc]
+read_xdc E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc
+set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

@@ -272,7 +272,7 @@ module xillydemo
    wire out_r_full; //From the output fifo to the function fifo
    wire out_r_write; //Output signal from the HLS IP
    // 32-bit loopback - worked
-  /*
+  
   //--------------------------------------------------------------------------
    fifo_32x512 fifo_to_function//For writing from Host to PL
        (
@@ -286,7 +286,7 @@ module xillydemo
         .empty(user_r_read_32_empty)
         );
  //----------------------------------------------------------------------------
-  */
+  
   
   /*
   //------------------------Testing 2 FIFO blocks--------
@@ -318,7 +318,7 @@ module xillydemo
      
   //----------------------------------------------------------
   */
-
+/*
 
   fifo_32x512 fifo_to_function//For writing from Host to PL
     (
@@ -361,7 +361,7 @@ module xillydemo
         
  
 
-    MAT_Stream_1 MAT_Stream_1_inst (
+    MAT_Stream_0 MAT_Stream_0_inst (
     .ap_clk(bus_clk),
     .ap_rst(!user_w_write_32_open && !user_r_read_32_open),//Should this be quiesce or the signals from Xillybus
     .in_arr_dout(in_r_dout),//Signals from the fifo_to_function
@@ -372,6 +372,7 @@ module xillydemo
     .out_arr_write(out_r_write),
     .op_type(0)
    );
+   */
   
 
 

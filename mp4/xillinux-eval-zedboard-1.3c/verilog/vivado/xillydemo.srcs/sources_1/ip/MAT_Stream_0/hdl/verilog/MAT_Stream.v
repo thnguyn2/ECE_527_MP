@@ -7,15 +7,11 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="MAT_Stream,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.256000,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=2,HLS_SYN_FF=276,HLS_SYN_LUT=393}" *)
+(* CORE_GENERATION_INFO="MAT_Stream,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.256000,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=2,HLS_SYN_FF=276,HLS_SYN_LUT=392}" *)
 
 module MAT_Stream (
         ap_clk,
         ap_rst,
-        ap_start,
-        ap_done,
-        ap_idle,
-        ap_ready,
         in_arr_dout,
         in_arr_empty_n,
         in_arr_read,
@@ -44,10 +40,6 @@ parameter    ap_true = 1'b1;
 
 input   ap_clk;
 input   ap_rst;
-input   ap_start;
-output   ap_done;
-output   ap_idle;
-output   ap_ready;
 input  [31:0] in_arr_dout;
 input   in_arr_empty_n;
 output   in_arr_read;
@@ -56,27 +48,23 @@ input   out_arr_full_n;
 output   out_arr_write;
 input  [7:0] op_type;
 
-reg ap_done;
-reg ap_idle;
-reg ap_ready;
 reg in_arr_read;
 reg out_arr_write;
+reg   [31:0] temp_reg_55;
 (* fsm_encoding = "none" *) reg   [6:0] ap_CS_fsm = 7'b1;
 reg    ap_sig_cseq_ST_st1_fsm_0;
-reg    ap_sig_bdd_23;
-reg   [31:0] temp_reg_53;
-reg    ap_sig_bdd_44;
+reg    ap_sig_bdd_31;
 reg    ap_sig_cseq_ST_st2_fsm_1;
-reg    ap_sig_bdd_54;
-wire   [31:0] grp_fu_40_p2;
-reg   [31:0] tmp_reg_63;
+reg    ap_sig_bdd_44;
+wire   [31:0] grp_fu_42_p2;
+reg   [31:0] tmp_reg_65;
 reg    ap_sig_cseq_ST_st6_fsm_5;
-reg    ap_sig_bdd_63;
+reg    ap_sig_bdd_53;
 reg    ap_sig_cseq_ST_st7_fsm_6;
-reg    ap_sig_bdd_72;
-wire   [31:0] grp_fu_40_p0;
-wire   [31:0] grp_fu_40_p1;
-wire    grp_fu_40_ce;
+reg    ap_sig_bdd_62;
+wire   [31:0] grp_fu_42_p0;
+wire   [31:0] grp_fu_42_p1;
+wire    grp_fu_42_ce;
 reg   [6:0] ap_NS_fsm;
 
 
@@ -89,10 +77,10 @@ MAT_Stream_fadd_32ns_32ns_32_5_full_dsp #(
 MAT_Stream_fadd_32ns_32ns_32_5_full_dsp_U1(
     .clk( ap_clk ),
     .reset( ap_rst ),
-    .din0( grp_fu_40_p0 ),
-    .din1( grp_fu_40_p1 ),
-    .ce( grp_fu_40_ce ),
-    .dout( grp_fu_40_p2 )
+    .din0( grp_fu_42_p0 ),
+    .din1( grp_fu_42_p1 ),
+    .ce( grp_fu_42_ce ),
+    .dout( grp_fu_42_p2 )
 );
 
 
@@ -110,8 +98,8 @@ end
 /// assign process. ///
 always @(posedge ap_clk)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~ap_sig_bdd_44)) begin
-        temp_reg_53 <= in_arr_dout;
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(in_arr_empty_n == ap_const_logic_0))) begin
+        temp_reg_55 <= in_arr_dout;
     end
 end
 
@@ -119,44 +107,14 @@ end
 always @(posedge ap_clk)
 begin
     if ((ap_const_logic_1 == ap_sig_cseq_ST_st6_fsm_5)) begin
-        tmp_reg_63 <= grp_fu_40_p2;
-    end
-end
-
-/// ap_done assign process. ///
-always @ (out_arr_full_n or ap_sig_cseq_ST_st7_fsm_6)
-begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st7_fsm_6) & ~(out_arr_full_n == ap_const_logic_0))) begin
-        ap_done = ap_const_logic_1;
-    end else begin
-        ap_done = ap_const_logic_0;
-    end
-end
-
-/// ap_idle assign process. ///
-always @ (ap_start or ap_sig_cseq_ST_st1_fsm_0)
-begin
-    if ((~(ap_const_logic_1 == ap_start) & (ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0))) begin
-        ap_idle = ap_const_logic_1;
-    end else begin
-        ap_idle = ap_const_logic_0;
-    end
-end
-
-/// ap_ready assign process. ///
-always @ (out_arr_full_n or ap_sig_cseq_ST_st7_fsm_6)
-begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st7_fsm_6) & ~(out_arr_full_n == ap_const_logic_0))) begin
-        ap_ready = ap_const_logic_1;
-    end else begin
-        ap_ready = ap_const_logic_0;
+        tmp_reg_65 <= grp_fu_42_p2;
     end
 end
 
 /// ap_sig_cseq_ST_st1_fsm_0 assign process. ///
-always @ (ap_sig_bdd_23)
+always @ (ap_sig_bdd_31)
 begin
-    if (ap_sig_bdd_23) begin
+    if (ap_sig_bdd_31) begin
         ap_sig_cseq_ST_st1_fsm_0 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st1_fsm_0 = ap_const_logic_0;
@@ -164,9 +122,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st2_fsm_1 assign process. ///
-always @ (ap_sig_bdd_54)
+always @ (ap_sig_bdd_44)
 begin
-    if (ap_sig_bdd_54) begin
+    if (ap_sig_bdd_44) begin
         ap_sig_cseq_ST_st2_fsm_1 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st2_fsm_1 = ap_const_logic_0;
@@ -174,9 +132,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st6_fsm_5 assign process. ///
-always @ (ap_sig_bdd_63)
+always @ (ap_sig_bdd_53)
 begin
-    if (ap_sig_bdd_63) begin
+    if (ap_sig_bdd_53) begin
         ap_sig_cseq_ST_st6_fsm_5 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st6_fsm_5 = ap_const_logic_0;
@@ -184,9 +142,9 @@ begin
 end
 
 /// ap_sig_cseq_ST_st7_fsm_6 assign process. ///
-always @ (ap_sig_bdd_72)
+always @ (ap_sig_bdd_62)
 begin
-    if (ap_sig_bdd_72) begin
+    if (ap_sig_bdd_62) begin
         ap_sig_cseq_ST_st7_fsm_6 = ap_const_logic_1;
     end else begin
         ap_sig_cseq_ST_st7_fsm_6 = ap_const_logic_0;
@@ -194,9 +152,9 @@ begin
 end
 
 /// in_arr_read assign process. ///
-always @ (ap_sig_cseq_ST_st1_fsm_0 or ap_sig_bdd_44)
+always @ (in_arr_empty_n or ap_sig_cseq_ST_st1_fsm_0)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~ap_sig_bdd_44)) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~(in_arr_empty_n == ap_const_logic_0))) begin
         in_arr_read = ap_const_logic_1;
     end else begin
         in_arr_read = ap_const_logic_0;
@@ -213,12 +171,12 @@ begin
     end
 end
 /// the next state (ap_NS_fsm) of the state machine. ///
-always @ (ap_CS_fsm or out_arr_full_n or ap_sig_bdd_44)
+always @ (in_arr_empty_n or out_arr_full_n or ap_CS_fsm)
 begin
     case (ap_CS_fsm)
         ap_ST_st1_fsm_0 : 
         begin
-            if (~ap_sig_bdd_44) begin
+            if (~(in_arr_empty_n == ap_const_logic_0)) begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
             end else begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
@@ -260,39 +218,33 @@ begin
 end
 
 
-/// ap_sig_bdd_23 assign process. ///
+/// ap_sig_bdd_31 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_23 = (ap_CS_fsm[ap_const_lv32_0] == ap_const_lv1_1);
+    ap_sig_bdd_31 = (ap_CS_fsm[ap_const_lv32_0] == ap_const_lv1_1);
 end
 
 /// ap_sig_bdd_44 assign process. ///
-always @ (ap_start or in_arr_empty_n)
-begin
-    ap_sig_bdd_44 = ((in_arr_empty_n == ap_const_logic_0) | (ap_start == ap_const_logic_0));
-end
-
-/// ap_sig_bdd_54 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_54 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_1]);
+    ap_sig_bdd_44 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_1]);
 end
 
-/// ap_sig_bdd_63 assign process. ///
+/// ap_sig_bdd_53 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_63 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_5]);
+    ap_sig_bdd_53 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_5]);
 end
 
-/// ap_sig_bdd_72 assign process. ///
+/// ap_sig_bdd_62 assign process. ///
 always @ (ap_CS_fsm)
 begin
-    ap_sig_bdd_72 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_6]);
+    ap_sig_bdd_62 = (ap_const_lv1_1 == ap_CS_fsm[ap_const_lv32_6]);
 end
-assign grp_fu_40_ce = ap_const_logic_1;
-assign grp_fu_40_p0 = temp_reg_53;
-assign grp_fu_40_p1 = ap_const_lv32_40A00000;
-assign out_arr_din = tmp_reg_63;
+assign grp_fu_42_ce = ap_const_logic_1;
+assign grp_fu_42_p0 = temp_reg_55;
+assign grp_fu_42_p1 = ap_const_lv32_40A00000;
+assign out_arr_din = tmp_reg_65;
 
 
 endmodule //MAT_Stream

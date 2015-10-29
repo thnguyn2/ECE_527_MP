@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xillinx.com:hls:MAT_Stream:1.0
--- IP Revision: 1510230753
+-- IP Revision: 1510232144
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -57,10 +57,6 @@ ENTITY MAT_Stream_0 IS
   PORT (
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
-    ap_start : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_idle : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
     in_arr_dout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     in_arr_empty_n : IN STD_LOGIC;
     in_arr_read : OUT STD_LOGIC;
@@ -79,10 +75,6 @@ ARCHITECTURE MAT_Stream_0_arch OF MAT_Stream_0 IS
     PORT (
       ap_clk : IN STD_LOGIC;
       ap_rst : IN STD_LOGIC;
-      ap_start : IN STD_LOGIC;
-      ap_done : OUT STD_LOGIC;
-      ap_idle : OUT STD_LOGIC;
-      ap_ready : OUT STD_LOGIC;
       in_arr_dout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       in_arr_empty_n : IN STD_LOGIC;
       in_arr_read : OUT STD_LOGIC;
@@ -95,10 +87,6 @@ ARCHITECTURE MAT_Stream_0_arch OF MAT_Stream_0 IS
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF ap_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 ap_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF ap_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 ap_rst RST";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_start: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_done: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_idle: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_ready: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready";
   ATTRIBUTE X_INTERFACE_INFO OF in_arr_dout: SIGNAL IS "xilinx.com:interface:acc_fifo_read:1.0 in_arr RD_DATA";
   ATTRIBUTE X_INTERFACE_INFO OF in_arr_empty_n: SIGNAL IS "xilinx.com:interface:acc_fifo_read:1.0 in_arr EMPTY_N";
   ATTRIBUTE X_INTERFACE_INFO OF in_arr_read: SIGNAL IS "xilinx.com:interface:acc_fifo_read:1.0 in_arr RD_EN";
@@ -111,10 +99,6 @@ BEGIN
     PORT MAP (
       ap_clk => ap_clk,
       ap_rst => ap_rst,
-      ap_start => ap_start,
-      ap_done => ap_done,
-      ap_idle => ap_idle,
-      ap_ready => ap_ready,
       in_arr_dout => in_arr_dout,
       in_arr_empty_n => in_arr_empty_n,
       in_arr_read => in_arr_read,

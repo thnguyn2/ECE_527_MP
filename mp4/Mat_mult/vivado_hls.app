@@ -5,6 +5,8 @@
         <SimFlow name="csim"/>
     </Simulation>
     <files xmlns="">
+        <file name="Mat_mult/xilly_debug.h" sc="0" tb="false" cflags=""/>
+        <file name="Mat_mult/xilly_debug.c" sc="0" tb="false" cflags=""/>
         <file name="Mat_mult/matrixmath.h" sc="0" tb="false" cflags=""/>
         <file name="Mat_mult/matrixmath.c" sc="0" tb="false" cflags=""/>
     </files>

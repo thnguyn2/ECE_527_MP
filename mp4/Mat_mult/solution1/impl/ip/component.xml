@@ -165,9 +165,6 @@
         <spirit:language>verilog</spirit:language>
         <spirit:modelName>MAT_Stream</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
       </spirit:view>
@@ -177,9 +174,6 @@
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
         <spirit:modelName>MAT_Stream</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -191,9 +185,6 @@
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>MAT_Stream</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
       </spirit:view>
@@ -203,9 +194,6 @@
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>MAT_Stream</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -379,10 +367,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/MAT_Stream_ap_fadd_3_full_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>constraints/MAT_Stream_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
@@ -390,55 +374,19 @@
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/MAT_Stream_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/MAT_Stream.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.0">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/MAT_Stream_fadd_32ns_32ns_32_5_full_dsp.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/MAT_Stream.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/MAT_Stream_ap_fadd_3_full_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.0">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>hdl/ip/MAT_Stream_ap_fadd_3_full_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>constraints/MAT_Stream_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
@@ -447,49 +395,17 @@
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/MAT_Stream_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/MAT_Stream.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_89772b74</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f5402398</spirit:userFileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.0">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/MAT_Stream_fadd_32ns_32ns_32_5_full_dsp.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/MAT_Stream.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/MAT_Stream_ap_fadd_3_full_dsp_32.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_floating_point_7_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.0">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_documentation_view_fileset</spirit:name>
@@ -543,7 +459,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">6</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -559,8 +475,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Mat_Mult_Test</xilinx:displayName>
-      <xilinx:coreRevision>1510232144</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-10-24T02:44:26Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1510281026</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2015-10-28T15:26:33Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.1</xilinx:xilinxVersion>

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xillinx.com:hls:MAT_Stream:1.0
-// IP Revision: 1510230753
+// IP Revision: 1510232144
 
 (* X_CORE_INFO = "MAT_Stream,Vivado 2015.1" *)
 (* CHECK_LICENSE_TYPE = "MAT_Stream_0,MAT_Stream,{}" *)
@@ -56,10 +56,6 @@
 module MAT_Stream_0 (
   ap_clk,
   ap_rst,
-  ap_start,
-  ap_done,
-  ap_idle,
-  ap_ready,
   in_arr_dout,
   in_arr_empty_n,
   in_arr_read,
@@ -73,14 +69,6 @@ module MAT_Stream_0 (
 input wire ap_clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst RST" *)
 input wire ap_rst;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start" *)
-input wire ap_start;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done" *)
-output wire ap_done;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle" *)
-output wire ap_idle;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready" *)
-output wire ap_ready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_read:1.0 in_arr RD_DATA" *)
 input wire [31 : 0] in_arr_dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_read:1.0 in_arr EMPTY_N" *)
@@ -99,10 +87,6 @@ input wire [7 : 0] op_type;
   MAT_Stream inst (
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(ap_start),
-    .ap_done(ap_done),
-    .ap_idle(ap_idle),
-    .ap_ready(ap_ready),
     .in_arr_dout(in_arr_dout),
     .in_arr_empty_n(in_arr_empty_n),
     .in_arr_read(in_arr_read),

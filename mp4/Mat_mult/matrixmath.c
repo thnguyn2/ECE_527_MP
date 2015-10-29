@@ -3,6 +3,8 @@
 #include <math.h>
 #include <stdint.h>
 
+
+
 // This folder provide skeleton code for creating IP and integration with other IP components
 // Author: Tan H. Nguyen and Luo Enyu.
 void MAT_Stream(int *in_arr, int *out_arr, char op_type)
@@ -13,18 +15,21 @@ void MAT_Stream(int *in_arr, int *out_arr, char op_type)
 		out_data: pointer to the data array that is being stream out
 	*/
 	//Define the fifo interface for the input/output data
-	#pragma	AP interface ap_fifo port = in_arr
-	#pragma AP interface ap_fifo port = out_arr
-	#pragma AP interface ap_ctrl_none port = return //Disable the ap control signal
+	#pragma	AP interface ap_fifo port=in_arr
+	#pragma AP interface ap_fifo port=out_arr
+	#pragma AP interface ap_ctrl_none port=return //Disable the ap control signal
 
-	/*float x2,x1;
-	uint32_t temp;
+	float x1;
+
+	xilly_puts("Some data will come...");
+
+	uint32_t temp,temp_out;
 	//Read the current data file
 	temp = *in_arr++;
 	x1 = *(float *) &temp;
-	x2 = x1+5;
-	*out_arr++ = *(uint32_t *) &x2;*/
-	*out_arr++ = *in_arr++;
+
+	temp_out= *(uint32_t *) &x1;
+	*out_arr++ = temp_out;
 
 }
 

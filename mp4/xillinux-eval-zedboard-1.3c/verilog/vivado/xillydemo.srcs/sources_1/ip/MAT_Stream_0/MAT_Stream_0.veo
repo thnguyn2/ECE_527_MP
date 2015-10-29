@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xillinx.com:hls:MAT_Stream:1.0
-// IP Revision: 1510230753
+// IP Revision: 1510232144
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -57,10 +57,6 @@
 MAT_Stream_0 your_instance_name (
   .ap_clk(ap_clk),                  // input wire ap_clk
   .ap_rst(ap_rst),                  // input wire ap_rst
-  .ap_start(ap_start),              // input wire ap_start
-  .ap_done(ap_done),                // output wire ap_done
-  .ap_idle(ap_idle),                // output wire ap_idle
-  .ap_ready(ap_ready),              // output wire ap_ready
   .in_arr_dout(in_arr_dout),        // input wire [31 : 0] in_arr_dout
   .in_arr_empty_n(in_arr_empty_n),  // input wire in_arr_empty_n
   .in_arr_read(in_arr_read),        // output wire in_arr_read
