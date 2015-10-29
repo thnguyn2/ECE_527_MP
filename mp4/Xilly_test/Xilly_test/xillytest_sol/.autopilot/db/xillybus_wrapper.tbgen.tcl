@@ -4,7 +4,7 @@ set isDatapathOnly 0
 set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_none
-set isOneStateSeq 0
+set isOneStateSeq 1
 set C_modelName {xillybus_wrapper}
 set C_modelType { void 0 }
 set C_modelArgList { 

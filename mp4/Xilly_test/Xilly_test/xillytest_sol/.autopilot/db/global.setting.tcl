@@ -40,7 +40,7 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../xilly_debug.c ../main.c}}
+set SourceFiles {sc {} c {../main.c ../xilly_debug.c}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Xilly_test/Xilly_test/xillytest_sol/xillytest_sol.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

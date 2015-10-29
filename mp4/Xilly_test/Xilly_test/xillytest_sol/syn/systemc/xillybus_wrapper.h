@@ -36,27 +36,21 @@ struct xillybus_wrapper : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    sc_signal< sc_lv<32> > data_reg_46;
-    sc_signal< sc_lv<2> > ap_CS_fsm;
+    sc_signal< sc_lv<1> > ap_CS_fsm;
     sc_signal< sc_logic > ap_sig_cseq_ST_st1_fsm_0;
-    sc_signal< bool > ap_sig_bdd_25;
-    sc_signal< sc_logic > ap_sig_cseq_ST_st2_fsm_1;
-    sc_signal< bool > ap_sig_bdd_38;
-    sc_signal< sc_lv<2> > ap_NS_fsm;
+    sc_signal< bool > ap_sig_bdd_23;
+    sc_signal< bool > ap_sig_bdd_29;
+    sc_signal< sc_lv<1> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
-    static const sc_lv<2> ap_ST_st1_fsm_0;
-    static const sc_lv<2> ap_ST_st2_fsm_1;
+    static const sc_lv<1> ap_ST_st1_fsm_0;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<1> ap_const_lv1_1;
-    static const sc_lv<32> ap_const_lv32_1;
-    static const sc_lv<32> ap_const_lv32_5;
     // Thread declarations
     void thread_ap_clk_no_reset_();
-    void thread_ap_sig_bdd_25();
-    void thread_ap_sig_bdd_38();
+    void thread_ap_sig_bdd_23();
+    void thread_ap_sig_bdd_29();
     void thread_ap_sig_cseq_ST_st1_fsm_0();
-    void thread_ap_sig_cseq_ST_st2_fsm_1();
     void thread_in_r_read();
     void thread_out_r_din();
     void thread_out_r_write();

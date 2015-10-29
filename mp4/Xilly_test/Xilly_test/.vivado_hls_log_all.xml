@@ -12,8 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [SYN-107] Renaming port name 'xillybus_wrapper/out' to 'xillybus_wrapper/out_r' to avoid the conflict with HDL keywords or other object names." projectName="Xilly_test" solutionName="xillytest_sol" date="2015-10-28T18:30:49.907-0500" type="Warning"/>
-        <logs message="@W [SYN-107] Renaming port name 'xillybus_wrapper/in' to 'xillybus_wrapper/in_r' to avoid the conflict with HDL keywords or other object names." projectName="Xilly_test" solutionName="xillytest_sol" date="2015-10-28T18:30:49.897-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'xillybus_wrapper/out' to 'xillybus_wrapper/out_r' to avoid the conflict with HDL keywords or other object names." projectName="Xilly_test" solutionName="xillytest_sol" date="2015-10-28T23:44:00.874-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'xillybus_wrapper/in' to 'xillybus_wrapper/in_r' to avoid the conflict with HDL keywords or other object names." projectName="Xilly_test" solutionName="xillytest_sol" date="2015-10-28T23:44:00.864-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

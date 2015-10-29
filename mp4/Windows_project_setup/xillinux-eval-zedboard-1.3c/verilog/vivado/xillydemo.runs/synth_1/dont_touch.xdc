@@ -6,9 +6,6 @@
 # IP: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==vga_fifo || ORIG_REF_NAME==vga_fifo}]
 
-# IP: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_8x2048/fifo_8x2048.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_8x2048 || ORIG_REF_NAME==fifo_8x2048}]
-
 # IP: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_32x512 || ORIG_REF_NAME==fifo_32x512}]
 

@@ -2,11 +2,11 @@
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-w64-mingw32"
 
-@debug_ready = common global i8 0, align 1
-@debug_out = common global i8 0, align 1
 @p_str = private unnamed_addr constant [8 x i8] c"ap_fifo\00", align 1
 @p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @p_str2 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
+@debug_ready = common global i8 0, align 1
+@debug_out = common global i8 0, align 1
 @str = internal constant [17 x i8] c"xillybus_wrapper\00"
 
 define void @xillybus_wrapper(i32* %in_r, i32* %out_r) nounwind uwtable {
@@ -16,9 +16,8 @@ define void @xillybus_wrapper(i32* %in_r, i32* %out_r) nounwind uwtable {
   call void (...)* @_ssdm_op_SpecInterface(i32* %in_r, [8 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32* %out_r, [8 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
-  %data = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %in_r) nounwind
-  %data_1 = add nsw i32 %data, 5
-  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %out_r, i32 %data_1) nounwind
+  %in_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %in_r) nounwind
+  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %out_r, i32 %in_read) nounwind
   ret void
 }
 

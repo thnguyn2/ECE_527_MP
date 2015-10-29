@@ -393,8 +393,8 @@ _ssdm_op_SpecInterface(out, "ap_fifo", 0, 0, 0, 0, "", "", "");
 _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, 0, 0, "", "", "");
 
  int data;
- data = *in++;
- data = data+5;
-
-  *out++ = data;
+ /*data = *in++;
+	data = 2*data;
+    *out++ = data;*/
+ *out++ = *in++;
 }

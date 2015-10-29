@@ -8,43 +8,6 @@ Copyright (C) 2015 Xilinx Inc. All rights reserved.
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
-@I [SYN-201] Setting up clock 'default' with a period of 10ns.
-@I [HLS-10] Analyzing design file 'Xilly_test/xilly_debug.c' ... 
-@I [HLS-10] Analyzing design file 'Xilly_test/main.c' ... 
-@I [HLS-10] Validating synthesis directives ...
-@I [HLS-10] Starting code transformations ...
-@I [HLS-10] Checking synthesizability ...
-@I [HLS-111] Elapsed time: 87.783 seconds; current memory usage: 68.5 MB.
-@I [HLS-10] Starting hardware synthesis ...
-@I [HLS-10] Synthesizing 'xillybus_wrapper' ...
-@W [SYN-107] Renaming port name 'xillybus_wrapper/in' to 'xillybus_wrapper/in_r' to avoid the conflict with HDL keywords or other object names.
-@W [SYN-107] Renaming port name 'xillybus_wrapper/out' to 'xillybus_wrapper/out_r' to avoid the conflict with HDL keywords or other object names.
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Scheduling module 'xillybus_wrapper' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [SCHED-11] Starting scheduling ...
-@I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.205 seconds; current memory usage: 69.2 MB.
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Exploring micro-architecture for module 'xillybus_wrapper' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [BIND-100] Starting micro-architecture generation ...
-@I [BIND-101] Performing variable lifetime analysis.
-@I [BIND-101] Exploring resource sharing.
-@I [BIND-101] Binding ...
-@I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.15 seconds; current memory usage: 69.2 MB.
-@I [HLS-10] ----------------------------------------------------------------
-@I [HLS-10] -- Generating RTL for module 'xillybus_wrapper' 
-@I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-500] Setting interface mode on port 'xillybus_wrapper/in_r' to 'ap_fifo'.
-@I [RTGEN-500] Setting interface mode on port 'xillybus_wrapper/out_r' to 'ap_fifo'.
-@I [RTGEN-500] Setting interface mode on function 'xillybus_wrapper' to 'ap_ctrl_none'.
-@I [RTGEN-100] Finished creating RTL model for 'xillybus_wrapper'.
-@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 69.2 MB.
-@I [HLS-10] Finished generating all RTL models.
-@I [WSYSC-301] Generating RTL SystemC for 'xillybus_wrapper'.
-@I [WVHDL-304] Generating RTL VHDL for 'xillybus_wrapper'.
-@I [WVLOG-307] Generating RTL Verilog for 'xillybus_wrapper'.
-@I [HLS-112] Total elapsed time: 88.776 seconds; peak memory usage: 69.2 MB.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+@I [IMPL-8] Starting RTL evaluation using Vivado ...
 @I [LIC-101] Checked in feature [HLS]

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date             : Wed Oct 28 17:39:49 2015
+| Date             : Wed Oct 28 23:56:27 2015
 | Host             : zombie running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file xillydemo_power_routed.rpt -pb xillydemo_power_summary_routed.pb
 | Design           : xillydemo
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.915 |
-| Dynamic (W)              | 1.755 |
+| Total On-Chip Power (W)  | 1.913 |
+| Dynamic (W)              | 1.753 |
 | Device Static (W)        | 0.160 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 62.9  |
@@ -49,23 +49,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.023 |        6 |       --- |             --- |
-| Slice Logic              |     0.009 |    12253 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     4882 |     53200 |            9.18 |
-|   CARRY4                 |    <0.001 |      381 |     13300 |            2.86 |
-|   Register               |    <0.001 |     5204 |    106400 |            4.89 |
+| Clocks                   |     0.021 |        6 |       --- |             --- |
+| Slice Logic              |     0.008 |    10919 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     4278 |     53200 |            8.04 |
+|   CARRY4                 |    <0.001 |      335 |     13300 |            2.52 |
+|   Register               |    <0.001 |     4738 |    106400 |            4.45 |
 |   LUT as Distributed RAM |    <0.001 |      270 |     17400 |            1.55 |
-|   F7/F8 Muxes            |    <0.001 |       46 |     53200 |            0.09 |
-|   LUT as Shift Register  |    <0.001 |       68 |     17400 |            0.39 |
-|   Others                 |     0.000 |      832 |       --- |             --- |
-| Signals                  |     0.013 |     8849 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |       45 |     53200 |            0.08 |
+|   LUT as Shift Register  |    <0.001 |       67 |     17400 |            0.39 |
+|   Others                 |     0.000 |      719 |       --- |             --- |
+| Signals                  |     0.013 |     7831 |       --- |             --- |
 | Block RAM                |     0.026 |       19 |       140 |           13.57 |
 | PLL                      |     0.106 |        1 |         4 |           25.00 |
-| DSPs                     |     0.000 |        2 |       220 |            0.91 |
 | I/O                      |     0.046 |       85 |       200 |           42.50 |
 | PS7                      |     1.533 |        1 |       --- |             --- |
 | Static Power             |     0.160 |          |           |                 |
-| Total                    |     1.915 |          |           |                 |
+| Total                    |     1.913 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.096 |       0.078 |      0.017 |
+| Vccint    |       1.000 |     0.094 |       0.077 |      0.017 |
 | Vccaux    |       1.800 |     0.076 |       0.055 |      0.021 |
 | Vcco33    |       3.300 |     0.014 |       0.013 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -154,113 +153,9 @@ Table of Contents
 +---------------------------------------------------------------+-----------+
 | Name                                                          | Power (W) |
 +---------------------------------------------------------------+-----------+
-| xillydemo                                                     |     1.755 |
-|   HLS_wrapper                                                 |     0.002 |
-|     inst                                                      |     0.002 |
-|       xillybus_wrapper_fadd_32ns_32ns_32_5_full_dsp_U0        |    <0.001 |
-|         xillybus_wrapper_ap_fadd_3_full_dsp_32_u              |    <0.001 |
-|           U0                                                  |    <0.001 |
-|             i_synth                                           |    <0.001 |
-|               ADDSUB_OP.ADDSUB                                |    <0.001 |
-|                 SPEED_OP.DSP.OP                               |    <0.001 |
-|                   A_IP_DELAY                                  |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                   B_IP_DELAY                                  |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                   DSP48E1_BODY.ALIGN_ADD                      |    <0.001 |
-|                     DSP2                                      |    <0.001 |
-|                     ZERO_14_DET.CARRY_MUX                     |     0.000 |
-|                     ZERO_14_DET.ZERO_DET                      |     0.000 |
-|                       CARRY_ZERO_DET                          |     0.000 |
-|                     Z_14_LZD_DELAY                            |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                   DSP48E1_BODY.NORM_RND                       |    <0.001 |
-|                     LOD                                       |     0.000 |
-|                     MSBS_DELAY                                |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     ROUND_BIT_DELAY                           |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     SHIFT_RND                                 |    <0.001 |
-|                   EXP                                         |    <0.001 |
-|                     A_EXP_DELAY                               |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     A_SIGN_DELAY                              |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     BMA_EXP_DELAY                             |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     B_EXP_DELAY                               |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     B_SIGN_DELAY                              |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     CANCELLATION_DELAY                        |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     COND_DET_A                                |    <0.001 |
-|                       EXP_DET_LUT.EXP_ALL_ONE_DEL             |    <0.001 |
-|                         i_pipe                                |    <0.001 |
-|                       EXP_DET_LUT.EXP_ALL_ZERO_DEL            |    <0.001 |
-|                         i_pipe                                |    <0.001 |
-|                       MANT_CARRY.MANT_ALL_ZERO_DET            |    <0.001 |
-|                         CARRY_ZERO_DET                        |    <0.001 |
-|                     COND_DET_B                                |    <0.001 |
-|                       EXP_DET_LUT.EXP_ALL_ONE_DEL             |    <0.001 |
-|                         i_pipe                                |    <0.001 |
-|                       EXP_DET_LUT.EXP_ALL_ZERO_DEL            |    <0.001 |
-|                         i_pipe                                |    <0.001 |
-|                       MANT_CARRY.MANT_ALL_ZERO_DET            |    <0.001 |
-|                         CARRY_ZERO_DET                        |    <0.001 |
-|                     DET_SIGN_DELAY                            |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     EXP_OFF.LRG_EXP_DELAY                     |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     EXP_OFF.STRUCT_ADD                        |     0.000 |
-|                     NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY  |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     NUMB_CMP                                  |    <0.001 |
-|                       NOT_FAST.CMP                            |    <0.001 |
-|                         C_CHAIN                               |    <0.001 |
-|                     STATE_DELAY                               |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                     SUB_DELAY                                 |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|       xillybus_wrapper_sitofp_32ns_32_6_U1                    |    <0.001 |
-|         xillybus_wrapper_ap_sitofp_4_no_dsp_32_u              |    <0.001 |
-|           U0                                                  |    <0.001 |
-|             i_synth                                           |    <0.001 |
-|               FIX_TO_FLT_OP.SPD.OP                            |    <0.001 |
-|                 EXP                                           |    <0.001 |
-|                   IP_SIGN_DELAY                               |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                   ZERO_DELAY                                  |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                 LZE                                           |    <0.001 |
-|                   ENCODE[0].DIST_DEL                          |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                   ENCODE[1].DIST_DEL                          |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                   ENCODE[1].MUX_0                             |    <0.001 |
-|                     OP_DEL                                    |    <0.001 |
-|                       i_pipe                                  |    <0.001 |
-|                   ZERO_DET_CC_1                               |    <0.001 |
-|                   ZERO_DET_CC_2.CC                            |    <0.001 |
-|                 M_ABS                                         |    <0.001 |
-|                   Q_DEL                                       |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                 NEED_Z_DET.Z_DET                              |    <0.001 |
-|                   ENCODE[1].Z_DET_DEL                         |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                   Z_C_DEL                                     |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                 NORM_SHIFT                                    |    <0.001 |
-|                   MUX_LOOP[1].DEL_SHIFT                       |    <0.001 |
-|                     i_pipe                                    |    <0.001 |
-|                 OP                                            |    <0.001 |
-|                 ROUND                                         |     0.000 |
-|                   LOGIC.RND1                                  |     0.000 |
-|                   LOGIC.RND2                                  |     0.000 |
-|                   RND_BIT_GEN                                 |     0.000 |
-|                     NORM_1_OR_0.STRUCT_REQ.GENERAL.RND1       |     0.000 |
-|                 Z_C_DEL                                       |    <0.001 |
-|                   i_pipe                                      |    <0.001 |
+| xillydemo                                                     |     1.753 |
+|   HLS_wrapper                                                 |     0.000 |
+|     inst                                                      |     0.000 |
 |   PS_GPIO_IOBUF[0]_inst                                       |    <0.001 |
 |   PS_GPIO_IOBUF[10]_inst                                      |    <0.001 |
 |   PS_GPIO_IOBUF[11]_inst                                      |    <0.001 |
@@ -598,7 +493,7 @@ Table of Contents
 |                                     prim_noinit.ram           |    <0.001 |
 |                         rstblk                                |    <0.001 |
 |         xlconcat_0                                            |     0.000 |
-|     xillybus_core_ins                                         |     0.026 |
+|     xillybus_core_ins                                         |     0.027 |
 |       axi4_send_dma_ins/xillybus_wr_fifo/ram0/Mram_fifo_ram1  |    <0.001 |
 |       axi4_send_dma_ins/xillybus_wr_fifo/ram0/Mram_fifo_ram2  |    <0.001 |
 |       axi4_send_dma_ins/xillybus_wr_fifo/ram0/Mram_fifo_ram3  |    <0.001 |

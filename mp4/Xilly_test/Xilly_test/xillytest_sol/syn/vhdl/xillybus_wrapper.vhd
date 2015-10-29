@@ -25,25 +25,20 @@ end;
 architecture behav of xillybus_wrapper is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "xillybus_wrapper,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.815000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=34,HLS_SYN_LUT=33}";
+    "xillybus_wrapper,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.750000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=1,HLS_SYN_LUT=1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_st1_fsm_0 : STD_LOGIC_VECTOR (1 downto 0) := "01";
-    constant ap_ST_st2_fsm_1 : STD_LOGIC_VECTOR (1 downto 0) := "10";
+    constant ap_ST_st1_fsm_0 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
-    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
 
-    signal data_reg_46 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0) := "01";
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_sig_cseq_ST_st1_fsm_0 : STD_LOGIC;
-    signal ap_sig_bdd_25 : BOOLEAN;
-    signal ap_sig_cseq_ST_st2_fsm_1 : STD_LOGIC;
-    signal ap_sig_bdd_38 : BOOLEAN;
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_sig_bdd_23 : BOOLEAN;
+    signal ap_sig_bdd_29 : BOOLEAN;
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
 
 
 begin
@@ -64,55 +59,35 @@ begin
     end process;
 
 
-    -- assign process. --
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not((in_r_empty_n = ap_const_logic_0)))) then
-                data_reg_46 <= in_r_dout;
-            end if;
-        end if;
-    end process;
-
     -- the next state (ap_NS_fsm) of the state machine. --
-    ap_NS_fsm_assign_proc : process (in_r_empty_n, out_r_full_n, ap_CS_fsm)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_sig_bdd_29)
     begin
         case ap_CS_fsm is
             when ap_ST_st1_fsm_0 => 
-                if (not((in_r_empty_n = ap_const_logic_0))) then
-                    ap_NS_fsm <= ap_ST_st2_fsm_1;
-                else
-                    ap_NS_fsm <= ap_ST_st1_fsm_0;
-                end if;
-            when ap_ST_st2_fsm_1 => 
-                if (not((out_r_full_n = ap_const_logic_0))) then
-                    ap_NS_fsm <= ap_ST_st1_fsm_0;
-                else
-                    ap_NS_fsm <= ap_ST_st2_fsm_1;
-                end if;
+                ap_NS_fsm <= ap_ST_st1_fsm_0;
             when others =>  
-                ap_NS_fsm <= "XX";
+                ap_NS_fsm <= "X";
         end case;
     end process;
 
-    -- ap_sig_bdd_25 assign process. --
-    ap_sig_bdd_25_assign_proc : process(ap_CS_fsm)
+    -- ap_sig_bdd_23 assign process. --
+    ap_sig_bdd_23_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_bdd_25 <= (ap_CS_fsm(0 downto 0) = ap_const_lv1_1);
+                ap_sig_bdd_23 <= (ap_CS_fsm(0 downto 0) = ap_const_lv1_1);
     end process;
 
 
-    -- ap_sig_bdd_38 assign process. --
-    ap_sig_bdd_38_assign_proc : process(ap_CS_fsm)
+    -- ap_sig_bdd_29 assign process. --
+    ap_sig_bdd_29_assign_proc : process(in_r_empty_n, out_r_full_n)
     begin
-                ap_sig_bdd_38 <= (ap_const_lv1_1 = ap_CS_fsm(1 downto 1));
+                ap_sig_bdd_29 <= ((in_r_empty_n = ap_const_logic_0) or (out_r_full_n = ap_const_logic_0));
     end process;
 
 
     -- ap_sig_cseq_ST_st1_fsm_0 assign process. --
-    ap_sig_cseq_ST_st1_fsm_0_assign_proc : process(ap_sig_bdd_25)
+    ap_sig_cseq_ST_st1_fsm_0_assign_proc : process(ap_sig_bdd_23)
     begin
-        if (ap_sig_bdd_25) then 
+        if (ap_sig_bdd_23) then 
             ap_sig_cseq_ST_st1_fsm_0 <= ap_const_logic_1;
         else 
             ap_sig_cseq_ST_st1_fsm_0 <= ap_const_logic_0;
@@ -120,33 +95,22 @@ begin
     end process;
 
 
-    -- ap_sig_cseq_ST_st2_fsm_1 assign process. --
-    ap_sig_cseq_ST_st2_fsm_1_assign_proc : process(ap_sig_bdd_38)
-    begin
-        if (ap_sig_bdd_38) then 
-            ap_sig_cseq_ST_st2_fsm_1 <= ap_const_logic_1;
-        else 
-            ap_sig_cseq_ST_st2_fsm_1 <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
     -- in_r_read assign process. --
-    in_r_read_assign_proc : process(in_r_empty_n, ap_sig_cseq_ST_st1_fsm_0)
+    in_r_read_assign_proc : process(ap_sig_cseq_ST_st1_fsm_0, ap_sig_bdd_29)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not((in_r_empty_n = ap_const_logic_0)))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not(ap_sig_bdd_29))) then 
             in_r_read <= ap_const_logic_1;
         else 
             in_r_read <= ap_const_logic_0;
         end if; 
     end process;
 
-    out_r_din <= std_logic_vector(unsigned(data_reg_46) + unsigned(ap_const_lv32_5));
+    out_r_din <= in_r_dout;
 
     -- out_r_write assign process. --
-    out_r_write_assign_proc : process(out_r_full_n, ap_sig_cseq_ST_st2_fsm_1)
+    out_r_write_assign_proc : process(ap_sig_cseq_ST_st1_fsm_0, ap_sig_bdd_29)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not((out_r_full_n = ap_const_logic_0)))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not(ap_sig_bdd_29))) then 
             out_r_write <= ap_const_logic_1;
         else 
             out_r_write <= ap_const_logic_0;

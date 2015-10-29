@@ -199,8 +199,8 @@ void xillybus_wrapper(int *in, int *out) {
 #pragma AP interface ap_ctrl_none port=return
 #pragma empty_line
  int data;
- data = *in++;
- data = data+5;
-#pragma empty_line
-  *out++ = data;
+ /*data = *in++;
+	data = 2*data;
+    *out++ = data;*/
+ *out++ = *in++;
 }

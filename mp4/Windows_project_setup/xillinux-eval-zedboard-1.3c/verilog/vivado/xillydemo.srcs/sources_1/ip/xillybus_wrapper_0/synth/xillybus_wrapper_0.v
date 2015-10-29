@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:xillybus_wrapper:1.0
-// IP Revision: 1510281720
+// IP Revision: 1510282345
 
 (* X_CORE_INFO = "xillybus_wrapper,Vivado 2015.1" *)
 (* CHECK_LICENSE_TYPE = "xillybus_wrapper_0,xillybus_wrapper,{}" *)
-(* CORE_GENERATION_INFO = "xillybus_wrapper_0,xillybus_wrapper,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=xillybus_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1510281720,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "xillybus_wrapper_0,xillybus_wrapper,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=xillybus_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1510282345,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module xillybus_wrapper_0 (
   ap_clk,

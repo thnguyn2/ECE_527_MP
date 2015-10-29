@@ -2,12 +2,6 @@
 
 
 <trans_list>
-
-<trans id="13" from="1" to="2">
-<condition id="2">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
 </trans_list>
 
 
@@ -16,28 +10,10 @@
 
 <state id="1" st_id="1">
 
-<operation id="3" st_id="1" stage="1" lat="1">
-<core>FIFO</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="0">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<node id="9" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-:6  %data = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %in_r) nounwind
-
-]]></node>
-<StgValue><ssdm name="data"/></StgValue>
-</operation>
-</state>
-
-<state id="2" st_id="2">
-
-<operation id="4" st_id="2" stage="1" lat="1">
+<operation id="2" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -49,10 +25,10 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="5" st_id="2" stage="1" lat="1">
+<operation id="3" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -64,10 +40,10 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="6" st_id="2" stage="1" lat="1">
+<operation id="4" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -79,10 +55,10 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="7" st_id="2" stage="1" lat="1">
+<operation id="5" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -94,10 +70,10 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="8" st_id="2" stage="1" lat="1">
+<operation id="6" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -109,10 +85,10 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="9" st_id="2" stage="1" lat="1">
+<operation id="7" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -124,46 +100,46 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="10" st_id="2" stage="1" lat="1">
-<core>AddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<node id="10" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-:7  %data_1 = add nsw i32 %data, 5
-
-]]></node>
-<StgValue><ssdm name="data_1"/></StgValue>
-</operation>
-
-<operation id="11" st_id="2" stage="1" lat="1">
+<operation id="8" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="9" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %out_r, i32 %data_1) nounwind
+:6  %in_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %in_r) nounwind
+
+]]></node>
+<StgValue><ssdm name="in_read"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:7  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %out_r, i32 %in_read) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="12" st_id="2" stage="1" lat="1">
+<operation id="10" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="1">
+<condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="12" bw="0">
+<node id="11" bw="0">
 <![CDATA[
-:9  ret void
+:8  ret void
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

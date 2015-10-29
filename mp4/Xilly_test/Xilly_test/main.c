@@ -5,7 +5,8 @@ void xillybus_wrapper(int *in, int *out) {
 #pragma AP interface ap_ctrl_none port=return
 
 	int data;
-	data = *in++;
-	data = data+5;
-    *out++ = data;
+	/*data = *in++;
+	data = 2*data;
+    *out++ = data;*/
+	*out++ = *in++;
 }
