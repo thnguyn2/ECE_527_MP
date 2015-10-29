@@ -11,10 +11,20 @@ void DCT(int *X,unsigned char function,int *Y)
 	#pragma AP interface ap_fifo port=Y
 	#pragma AP interface ap_ctrl_none port=return
 	//--------------------------------------------
-	*Y++ = *X++; //Output the same as the input
-	int count;
+	int colrcv, rowrcv;
 	float Xbuff[MAT_SIZE][MAT_SIZE];
 	float YBuff[MAT_SIZE][MAT_SIZE];
+	int count =0;
+	int opt_type = *X++; //Read in the type of operation to perform
+	//Read in the data
+	for (rowrcv=0;rowrcv<8;rowrcv++)
+		for (colrcv=0;colrcv<8;colrcv++)
+		{
+			Xbuff[rowrcv][colrcv]=*X++;
+			count++;
+			*Y++ = count;
+		}
+
 
 	/*
 	float temp[MAT_SIZE][MAT_SIZE];

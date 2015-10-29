@@ -4,11 +4,11 @@ set isDatapathOnly 0
 set isPipelined 1
 set pipeline_type dataflow
 set FunctionProtocol ap_ctrl_none
-set isOneStateSeq 1
+set isOneStateSeq 0
 set C_modelName {DCT}
 set C_modelType { void 0 }
 set C_modelArgList { 
-	{ X int 32 regular {fifo 0}  }
+	{ X int 32 unused {fifo 0}  }
 	{ function_r uint 8 unused  }
 	{ Y int 32 regular {fifo 1}  }
 }
@@ -47,7 +47,7 @@ set Spec2ImplPortList {
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 
-	X { fifo_read 1 no_conditional }
+	X { fifo_read 0 no_conditional }
 	Y { fifo_write 1 no_conditional }
 }
 

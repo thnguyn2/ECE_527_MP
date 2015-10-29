@@ -1,2 +1,2 @@
-DCT_Block_proc
+DCT_Loop_1_proc
 DCT

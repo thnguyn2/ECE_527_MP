@@ -260,10 +260,20 @@ _ssdm_op_SpecInterface(X, "ap_fifo", 0, 0, 0, 0, "", "", "");
 _ssdm_op_SpecInterface(Y, "ap_fifo", 0, 0, 0, 0, "", "", "");
 _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, 0, 0, "", "", "");
  //--------------------------------------------
- *Y++ = *X++; //Output the same as the input
- int count;
+ int colrcv, rowrcv;
  float Xbuff[8][8];
  float YBuff[8][8];
+ int count =0;
+ int opt_type = *X++; //Read in the type of operation to perform
+ //Read in the data
+ for (rowrcv=0;rowrcv<8;rowrcv++)
+  for (colrcv=0;colrcv<8;colrcv++)
+  {
+   Xbuff[rowrcv][colrcv]=*X++;
+   count++;
+   *Y++ = count;
+  }
+
 
  /*
 	float temp[MAT_SIZE][MAT_SIZE];

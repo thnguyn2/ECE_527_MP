@@ -1,0 +1,16 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
+| Date         : Thu Oct 29 08:56:38 2015
+| Host         : zombie running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'DCT_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of DCT_0 (Matrix_transform:hls:DCT:1.0) from (Rev. 1510290110) to (Rev. 1510290852)
+

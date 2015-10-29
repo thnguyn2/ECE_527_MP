@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_3" LaunchPart="xc7z020clg484-1" LaunchTime="1446099495">
+<GenRun Id="synth_3" LaunchPart="xc7z020clg484-1" LaunchTime="1446127414">
   <File Type="RDS-DCP" Name="xillydemo.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_3/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="xillydemo_utilization_synth.pb"/>
@@ -70,6 +70,7 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/xillybus_wrapper_0/xillybus_wrapper_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/DCT_0/DCT_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="xillydemo"/>
@@ -88,12 +89,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="xillybus_wrapper_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
   <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="DCT_0"/>

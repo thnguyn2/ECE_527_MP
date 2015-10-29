@@ -1,12 +1,12 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Thu Oct 29 01:13:59 2015
+| Date         : Thu Oct 29 08:55:34 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file ./report/DCT_utilization_routed.rpt
 | Design       : DCT
 | Device       : xc7z020
-| Design State : Routed
+| Design State : Fully Placed
 ------------------------------------------------------------------------------------
 
 Utilization Design Information
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              |    2 |     0 |     53200 | <0.01 |
-|   LUT as Logic          |    2 |     0 |     53200 | <0.01 |
+| Slice LUTs              |   27 |     0 |     53200 |  0.05 |
+|   LUT as Logic          |   27 |     0 |     53200 |  0.05 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |    1 |     0 |    106400 | <0.01 |
-|   Register as Flip Flop |    1 |     0 |    106400 | <0.01 |
+| Slice Registers         |   30 |     0 |    106400 |  0.03 |
+|   Register as Flip Flop |   30 |     0 |    106400 |  0.03 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,33 +57,33 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1     |          Yes |       Reset |            - |
+| 30    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
 2. Slice Logic Distribution
 ---------------------------
 
-+-------------------------------------------------------------+---------+-------+-----------+-------+
-|                          Site Type                          |   Used  | Fixed | Available | Util% |
-+-------------------------------------------------------------+---------+-------+-----------+-------+
-| Slice                                                       |       1 |     0 |     13300 | <0.01 |
-|   SLICEL                                                    |       1 |     0 |           |       |
-|   SLICEM                                                    |       0 |     0 |           |       |
-| LUT as Logic                                                |       2 |     0 |     53200 | <0.01 |
-|   using O5 output only                                      |       0 |       |           |       |
-|   using O6 output only                                      |       2 |       |           |       |
-|   using O5 and O6                                           |       0 |       |           |       |
-| LUT as Memory                                               |       0 |     0 |     17400 |  0.00 |
-|   LUT as Distributed RAM                                    |       0 |     0 |           |       |
-|   LUT as Shift Register                                     |       0 |     0 |           |       |
-| LUT Flip Flop Pairs                                         |       2 |     0 |     53200 | <0.01 |
-|   fully used LUT-FF pairs                                   |       1 |       |           |       |
-|   LUT-FF pairs with unused LUT                              |       0 |       |           |       |
-|   LUT-FF pairs with unused Flip Flop                        |       1 |       |           |       |
-| Unique Control Sets                                         |       1 |       |           |       |
-| Minimum number of registers lost to control set restriction | 7(Lost) |       |           |       |
-+-------------------------------------------------------------+---------+-------+-----------+-------+
++-------------------------------------------------------------+----------+-------+-----------+-------+
+|                          Site Type                          |   Used   | Fixed | Available | Util% |
++-------------------------------------------------------------+----------+-------+-----------+-------+
+| Slice                                                       |        9 |     0 |     13300 |  0.07 |
+|   SLICEL                                                    |        5 |     0 |           |       |
+|   SLICEM                                                    |        4 |     0 |           |       |
+| LUT as Logic                                                |       27 |     0 |     53200 |  0.05 |
+|   using O5 output only                                      |        0 |       |           |       |
+|   using O6 output only                                      |       15 |       |           |       |
+|   using O5 and O6                                           |       12 |       |           |       |
+| LUT as Memory                                               |        0 |     0 |     17400 |  0.00 |
+|   LUT as Distributed RAM                                    |        0 |     0 |           |       |
+|   LUT as Shift Register                                     |        0 |     0 |           |       |
+| LUT Flip Flop Pairs                                         |       31 |     0 |     53200 |  0.06 |
+|   fully used LUT-FF pairs                                   |       18 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |        4 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |        9 |       |           |       |
+| Unique Control Sets                                         |        6 |       |           |       |
+| Minimum number of registers lost to control set restriction | 18(Lost) |       |           |       |
++-------------------------------------------------------------+----------+-------+-----------+-------+
 
 
 3. Memory
@@ -171,9 +171,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT3     |    1 |                 LUT |
-| LUT1     |    1 |                 LUT |
-| FDRE     |    1 |        Flop & Latch |
+| FDRE     |   30 |        Flop & Latch |
+| LUT6     |    9 |                 LUT |
+| LUT4     |    9 |                 LUT |
+| LUT5     |    6 |                 LUT |
+| LUT2     |    6 |                 LUT |
+| LUT3     |    5 |                 LUT |
+| LUT1     |    4 |                 LUT |
 +----------+------+---------------------+
 
 

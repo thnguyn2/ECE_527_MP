@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1446100148">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1446127068">
   <File Type="RDS-DCP" Name="xillydemo.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="xillydemo_utilization_synth.pb"/>
@@ -70,6 +70,7 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/xillybus_wrapper_0/xillybus_wrapper_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/DCT_0/DCT_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="xillydemo"/>

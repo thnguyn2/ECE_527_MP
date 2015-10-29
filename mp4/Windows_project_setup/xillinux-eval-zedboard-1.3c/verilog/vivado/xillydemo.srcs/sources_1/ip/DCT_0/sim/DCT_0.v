@@ -48,7 +48,7 @@
 
 
 // IP VLNV: Matrix_transform:hls:DCT:1.0
-// IP Revision: 1510290110
+// IP Revision: 1510290852
 
 `timescale 1ns/1ps
 

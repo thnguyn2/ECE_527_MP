@@ -24,13 +24,10 @@ set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize
-  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Mat_mult
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Xilly_test
 } [current_project]
 add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp
 set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp]
-add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/xillybus_wrapper_0_synth_1/xillybus_wrapper_0.dcp
-set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/xillybus_wrapper_0_synth_1/xillybus_wrapper_0.dcp]
 add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.dcp
 set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.dcp]
 add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/DCT_0_synth_1/DCT_0.dcp

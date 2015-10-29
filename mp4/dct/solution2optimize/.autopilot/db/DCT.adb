@@ -26,7 +26,7 @@
               </inlineStackInfo>
               <originalName>X</originalName>
               <rtlName/>
-              <coreName>FIFO</coreName>
+              <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -113,17 +113,16 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>DCT_Block_proc_U0</rtlName>
+              <rtlName>DCT_Loop_1_proc_U0</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>3</count>
+            <count>2</count>
             <item_version>0</item_version>
             <item>16</item>
             <item>17</item>
-            <item>18</item>
           </oprand_edges>
           <opcode>call</opcode>
         </item>
@@ -135,7 +134,7 @@
               <name/>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>44</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -150,7 +149,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>34</second>
+                      <second>44</second>
                     </item>
                   </second>
                 </item>
@@ -176,7 +175,7 @@
             <Obj>
               <type>2</type>
               <id>15</id>
-              <name>DCT_Block_proc</name>
+              <name>DCT_Loop_1_proc</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -192,7 +191,7 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:DCT_Block__proc&gt;</content>
+          <content>&lt;constant:DCT_Loop_1_proc&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -224,7 +223,7 @@
         </item>
       </blocks>
       <edges class_id="19" tracking_level="0" version="0">
-        <count>3</count>
+        <count>2</count>
         <item_version>0</item_version>
         <item class_id="20" tracking_level="1" version="0" object_id="_8">
           <id>16</id>
@@ -235,12 +234,6 @@
         <item class_id_reference="20" object_id="_9">
           <id>17</id>
           <edge_type>1</edge_type>
-          <source_obj>1</source_obj>
-          <sink_obj>12</sink_obj>
-        </item>
-        <item class_id_reference="20" object_id="_10">
-          <id>18</id>
-          <edge_type>1</edge_type>
           <source_obj>3</source_obj>
           <sink_obj>12</sink_obj>
         </item>
@@ -249,7 +242,7 @@
     <cdfg_regions class_id="21" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="22" tracking_level="1" version="0" object_id="_11">
+      <item class_id="22" tracking_level="1" version="0" object_id="_10">
         <mId>1</mId>
         <mTag>DCT</mTag>
         <mType>0</mType>
@@ -266,10 +259,10 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>0</mMinLatency>
+        <mMinLatency>81</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
-        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_12">
+        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_11">
           <port_list class_id="24" tracking_level="0" version="0">
             <count>0</count>
             <item_version>0</item_version>
@@ -277,32 +270,24 @@
           <process_list class_id="25" tracking_level="0" version="0">
             <count>1</count>
             <item_version>0</item_version>
-            <item class_id="26" tracking_level="1" version="0" object_id="_13">
+            <item class_id="26" tracking_level="1" version="0" object_id="_12">
               <type>0</type>
-              <name>DCT_Block_proc_U0</name>
+              <name>DCT_Loop_1_proc_U0</name>
               <ssdmobj_id>12</ssdmobj_id>
               <pins class_id="27" tracking_level="0" version="0">
-                <count>2</count>
+                <count>1</count>
                 <item_version>0</item_version>
-                <item class_id="28" tracking_level="1" version="0" object_id="_14">
-                  <port class_id="29" tracking_level="1" version="0" object_id="_15">
-                    <name>X</name>
-                    <dir>0</dir>
-                    <type>0</type>
-                  </port>
-                  <inst class_id="30" tracking_level="1" version="0" object_id="_16">
-                    <type>0</type>
-                    <name>DCT_Block_proc_U0</name>
-                    <ssdmobj_id>12</ssdmobj_id>
-                  </inst>
-                </item>
-                <item class_id_reference="28" object_id="_17">
-                  <port class_id_reference="29" object_id="_18">
+                <item class_id="28" tracking_level="1" version="0" object_id="_13">
+                  <port class_id="29" tracking_level="1" version="0" object_id="_14">
                     <name>Y</name>
                     <dir>0</dir>
                     <type>1</type>
                   </port>
-                  <inst class_id_reference="30" object_id_reference="_16"/>
+                  <inst class_id="30" tracking_level="1" version="0" object_id="_15">
+                    <type>0</type>
+                    <name>DCT_Loop_1_proc_U0</name>
+                    <ssdmobj_id>12</ssdmobj_id>
+                  </inst>
                 </item>
               </pins>
             </item>
@@ -318,61 +303,73 @@
         </mDfPipe>
       </item>
     </cdfg_regions>
-    <fsm class_id="33" tracking_level="1" version="0" object_id="_19">
+    <fsm class_id="33" tracking_level="1" version="0" object_id="_16">
       <states class_id="34" tracking_level="0" version="0">
-        <count>1</count>
+        <count>2</count>
         <item_version>0</item_version>
-        <item class_id="35" tracking_level="1" version="0" object_id="_20">
+        <item class_id="35" tracking_level="1" version="0" object_id="_17">
           <id>1</id>
           <operations class_id="36" tracking_level="0" version="0">
+            <count>1</count>
+            <item_version>0</item_version>
+            <item class_id="37" tracking_level="1" version="0" object_id="_18">
+              <id>12</id>
+              <stage>2</stage>
+              <latency>2</latency>
+            </item>
+          </operations>
+        </item>
+        <item class_id_reference="35" object_id="_19">
+          <id>2</id>
+          <operations>
             <count>10</count>
             <item_version>0</item_version>
-            <item class_id="37" tracking_level="1" version="0" object_id="_21">
+            <item class_id_reference="37" object_id="_20">
               <id>4</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_22">
+            <item class_id_reference="37" object_id="_21">
               <id>5</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_23">
+            <item class_id_reference="37" object_id="_22">
               <id>6</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_24">
+            <item class_id_reference="37" object_id="_23">
               <id>7</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_25">
+            <item class_id_reference="37" object_id="_24">
               <id>8</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_26">
+            <item class_id_reference="37" object_id="_25">
               <id>9</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_27">
+            <item class_id_reference="37" object_id="_26">
               <id>10</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_28">
+            <item class_id_reference="37" object_id="_27">
               <id>11</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="37" object_id="_29">
+            <item class_id_reference="37" object_id="_28">
               <id>12</id>
               <stage>1</stage>
-              <latency>1</latency>
+              <latency>2</latency>
             </item>
-            <item class_id_reference="37" object_id="_30">
+            <item class_id_reference="37" object_id="_29">
               <id>13</id>
               <stage>1</stage>
               <latency>1</latency>
@@ -381,26 +378,41 @@
         </item>
       </states>
       <transitions class_id="38" tracking_level="0" version="0">
-        <count>0</count>
-        <item_version>0</item_version>
-      </transitions>
-    </fsm>
-    <res class_id="39" tracking_level="1" version="0" object_id="_31">
-      <dp_component_resource class_id="40" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="41" tracking_level="0" version="0">
-          <first>DCT_Block_proc_U0 (DCT_Block_proc)</first>
-          <second class_id="42" tracking_level="0" version="0">
+        <item class_id="39" tracking_level="1" version="0" object_id="_30">
+          <inState>1</inState>
+          <outState>2</outState>
+          <condition class_id="40" tracking_level="0" version="0">
+            <id>0</id>
+            <sop class_id="41" tracking_level="0" version="0">
+              <count>1</count>
+              <item_version>0</item_version>
+              <item class_id="42" tracking_level="0" version="0">
+                <count>0</count>
+                <item_version>0</item_version>
+              </item>
+            </sop>
+          </condition>
+        </item>
+      </transitions>
+    </fsm>
+    <res class_id="43" tracking_level="1" version="0" object_id="_31">
+      <dp_component_resource class_id="44" tracking_level="0" version="0">
+        <count>1</count>
+        <item_version>0</item_version>
+        <item class_id="45" tracking_level="0" version="0">
+          <first>DCT_Loop_1_proc_U0 (DCT_Loop_1_proc)</first>
+          <second class_id="46" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
-            <item class_id="43" tracking_level="0" version="0">
+            <item class_id="47" tracking_level="0" version="0">
               <first>FF</first>
-              <second>2</second>
+              <second>37</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1</second>
+              <second>51</second>
             </item>
           </second>
         </item>
@@ -422,27 +434,8 @@
         <item_version>0</item_version>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>2</count>
+        <count>1</count>
         <item_version>0</item_version>
-        <item>
-          <first>DCT_Block_proc_U0_ap_start</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
-            </item>
-          </second>
-        </item>
         <item>
           <first>ap_CS</first>
           <second>
@@ -463,11 +456,11 @@
           </second>
         </item>
       </dp_register_resource>
-      <dp_component_map class_id="44" tracking_level="0" version="0">
+      <dp_component_map class_id="48" tracking_level="0" version="0">
         <count>1</count>
         <item_version>0</item_version>
-        <item class_id="45" tracking_level="0" version="0">
-          <first>DCT_Block_proc_U0 (DCT_Block_proc)</first>
+        <item class_id="49" tracking_level="0" version="0">
+          <first>DCT_Loop_1_proc_U0 (DCT_Loop_1_proc)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -488,39 +481,39 @@
         <item_version>0</item_version>
       </dp_memory_map>
     </res>
-    <node_label_latency class_id="46" tracking_level="0" version="0">
+    <node_label_latency class_id="50" tracking_level="0" version="0">
       <count>2</count>
       <item_version>0</item_version>
-      <item class_id="47" tracking_level="0" version="0">
+      <item class_id="51" tracking_level="0" version="0">
         <first>12</first>
-        <second class_id="48" tracking_level="0" version="0">
+        <second class_id="52" tracking_level="0" version="0">
           <first>0</first>
-          <second>0</second>
+          <second>1</second>
         </second>
       </item>
       <item>
         <first>13</first>
         <second>
-          <first>0</first>
+          <first>1</first>
           <second>0</second>
         </second>
       </item>
     </node_label_latency>
-    <bblk_ent_exit class_id="49" tracking_level="0" version="0">
+    <bblk_ent_exit class_id="53" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="50" tracking_level="0" version="0">
+      <item class_id="54" tracking_level="0" version="0">
         <first>14</first>
-        <second class_id="51" tracking_level="0" version="0">
+        <second class_id="55" tracking_level="0" version="0">
           <first>0</first>
-          <second>0</second>
+          <second>1</second>
         </second>
       </item>
     </bblk_ent_exit>
-    <regions class_id="52" tracking_level="0" version="0">
+    <regions class_id="56" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="53" tracking_level="1" version="0" object_id="_32">
+      <item class_id="57" tracking_level="1" version="0" object_id="_32">
         <region_name>DCT</region_name>
         <basic_blocks>
           <count>1</count>
@@ -547,30 +540,32 @@
         <pipe_depth>0</pipe_depth>
       </item>
     </regions>
-    <dp_fu_nodes class_id="54" tracking_level="0" version="0">
+    <dp_fu_nodes class_id="58" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="55" tracking_level="0" version="0">
+      <item class_id="59" tracking_level="0" version="0">
         <first>29</first>
         <second>
-          <count>1</count>
+          <count>2</count>
           <item_version>0</item_version>
+          <item>12</item>
           <item>12</item>
         </second>
       </item>
     </dp_fu_nodes>
-    <dp_fu_nodes_expression class_id="57" tracking_level="0" version="0">
+    <dp_fu_nodes_expression class_id="61" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_fu_nodes_expression>
     <dp_fu_nodes_module>
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="58" tracking_level="0" version="0">
-        <first>stg_10_DCT_Block_proc_fu_29</first>
+      <item class_id="62" tracking_level="0" version="0">
+        <first>grp_DCT_Loop_1_proc_fu_29</first>
         <second>
-          <count>1</count>
+          <count>2</count>
           <item_version>0</item_version>
+          <item>12</item>
           <item>12</item>
         </second>
       </item>
@@ -583,7 +578,7 @@
       <count>0</count>
       <item_version>0</item_version>
     </return_ports>
-    <dp_mem_port_nodes class_id="59" tracking_level="0" version="0">
+    <dp_mem_port_nodes class_id="63" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_mem_port_nodes>
@@ -603,22 +598,14 @@
       <count>0</count>
       <item_version>0</item_version>
     </dp_regname_phi>
-    <dp_port_io_nodes class_id="60" tracking_level="0" version="0">
+    <dp_port_io_nodes class_id="64" tracking_level="0" version="0">
       <count>3</count>
       <item_version>0</item_version>
-      <item class_id="61" tracking_level="0" version="0">
+      <item class_id="65" tracking_level="0" version="0">
         <first>X</first>
         <second>
-          <count>1</count>
+          <count>0</count>
           <item_version>0</item_version>
-          <item>
-            <first>call</first>
-            <second>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>12</item>
-            </second>
-          </item>
         </second>
       </item>
       <item>
@@ -644,14 +631,10 @@
         </second>
       </item>
     </dp_port_io_nodes>
-    <port2core class_id="62" tracking_level="0" version="0">
-      <count>2</count>
+    <port2core class_id="66" tracking_level="0" version="0">
+      <count>1</count>
       <item_version>0</item_version>
-      <item class_id="63" tracking_level="0" version="0">
-        <first>1</first>
-        <second>FIFO</second>
-      </item>
-      <item>
+      <item class_id="67" tracking_level="0" version="0">
         <first>3</first>
         <second>FIFO</second>
       </item>

@@ -119,11 +119,10 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>3</count>
+					<count>2</count>
 					<item_version>0</item_version>
 					<item>16</item>
 					<item>17</item>
-					<item>18</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 			</item>
@@ -135,7 +134,7 @@
 						<name></name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<lineNumber>44</lineNumber>
 						<contextFuncName>DCT</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -150,7 +149,7 @@
 											<first>dct/dct.c</first>
 											<second>DCT</second>
 										</first>
-										<second>34</second>
+										<second>44</second>
 									</item>
 								</second>
 							</item>
@@ -176,7 +175,7 @@
 					<Obj>
 						<type>2</type>
 						<id>15</id>
-						<name>DCT_Block_proc</name>
+						<name>DCT_Loop_1_proc</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -192,7 +191,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:DCT_Block__proc&gt;</content>
+				<content>&lt;constant:DCT_Loop_1_proc&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -224,7 +223,7 @@
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>3</count>
+			<count>2</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_8">
 				<id>16</id>
@@ -235,12 +234,6 @@
 			<item class_id_reference="20" object_id="_9">
 				<id>17</id>
 				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>12</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_10">
-				<id>18</id>
-				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>12</sink_obj>
 			</item>
@@ -249,7 +242,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_11">
+		<item class_id="22" tracking_level="1" version="0" object_id="_10">
 			<mId>1</mId>
 			<mTag>DCT</mTag>
 			<mType>0</mType>
@@ -266,10 +259,10 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>0</mMinLatency>
+			<mMinLatency>81</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
-			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_12">
+			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_11">
 				<port_list class_id="24" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -277,32 +270,24 @@
 				<process_list class_id="25" tracking_level="0" version="0">
 					<count>1</count>
 					<item_version>0</item_version>
-					<item class_id="26" tracking_level="1" version="0" object_id="_13">
+					<item class_id="26" tracking_level="1" version="0" object_id="_12">
 						<type>0</type>
-						<name>DCT_Block_proc_U0</name>
+						<name>DCT_Loop_1_proc_U0</name>
 						<ssdmobj_id>12</ssdmobj_id>
 						<pins class_id="27" tracking_level="0" version="0">
-							<count>2</count>
+							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id="28" tracking_level="1" version="0" object_id="_14">
-								<port class_id="29" tracking_level="1" version="0" object_id="_15">
-									<name>X</name>
-									<dir>0</dir>
-									<type>0</type>
-								</port>
-								<inst class_id="30" tracking_level="1" version="0" object_id="_16">
-									<type>0</type>
-									<name>DCT_Block_proc_U0</name>
-									<ssdmobj_id>12</ssdmobj_id>
-								</inst>
-							</item>
-							<item class_id_reference="28" object_id="_17">
-								<port class_id_reference="29" object_id="_18">
+							<item class_id="28" tracking_level="1" version="0" object_id="_13">
+								<port class_id="29" tracking_level="1" version="0" object_id="_14">
 									<name>Y</name>
 									<dir>0</dir>
 									<type>1</type>
 								</port>
-								<inst class_id_reference="30" object_id_reference="_16"></inst>
+								<inst class_id="30" tracking_level="1" version="0" object_id="_15">
+									<type>0</type>
+									<name>DCT_Loop_1_proc_U0</name>
+									<ssdmobj_id>12</ssdmobj_id>
+								</inst>
 							</item>
 						</pins>
 					</item>
@@ -319,7 +304,7 @@
 		</item>
 	</cdfg_regions>
 	<fsm class_id="-1"></fsm>
-	<res class_id="34" tracking_level="1" version="0" object_id="_19">
+	<res class_id="34" tracking_level="1" version="0" object_id="_16">
 		<dp_component_resource class_id="35" tracking_level="0" version="0">
 			<count>0</count>
 			<item_version>0</item_version>
@@ -368,13 +353,13 @@
 			<first>12</first>
 			<second class_id="39" tracking_level="0" version="0">
 				<first>0</first>
-				<second>0</second>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>13</first>
 			<second>
-				<first>0</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -386,14 +371,14 @@
 			<first>14</first>
 			<second class_id="42" tracking_level="0" version="0">
 				<first>0</first>
-				<second>0</second>
+				<second>1</second>
 			</second>
 		</item>
 	</bblk_ent_exit>
 	<regions class_id="43" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="44" tracking_level="1" version="0" object_id="_20">
+		<item class_id="44" tracking_level="1" version="0" object_id="_17">
 			<region_name>DCT</region_name>
 			<basic_blocks>
 				<count>1</count>

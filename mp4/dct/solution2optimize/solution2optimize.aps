@@ -41,7 +41,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="true" formatName="ip_catalog" rtl="verilog">
-        <Format description="IP generated for matrix transformation on 8 x 8 block" formatName="ip_catalog" vendor="Matrix_transform" version="1.0" library="" driver_input_dir="" display_name="" taxonomy=""/>
+        <Format description="IP generated for matrix transformation on 8 x 8 block" formatName="ip_catalog" vendor="Matrix_transform" library="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>

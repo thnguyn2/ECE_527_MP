@@ -24,7 +24,6 @@ set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize
-  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Mat_mult
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Xilly_test
 } [current_project]
 add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp
