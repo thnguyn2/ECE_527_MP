@@ -279,37 +279,7 @@ module xillydemo
   */
   
   /*
-  //------------------------Testing 2 FIFO blocks--------
-     fifo_32x512 fifo_to_function//For writing from Host to PL
-    (
-     .clk(bus_clk),
-     .srst(!user_w_write_32_open),
-     .din(user_w_write_32_data),
-     .wr_en(user_w_write_32_wren),
-     .rd_en(hls_info_rd_en),//Allowing the data to be stream out
-     .dout(in_r_dout),//Data passed into the hls function
-     .full(user_w_write_32_full),//Signal telling that the FIFO is full
-     .empty(hls_fifo_empty)
-     );
-     assign hls_info_rd_en = !hls_fifo_empty;
-    
-     fifo_32x512 fifo_from_function //For writing from PL to host
-     (
-        .clk(bus_clk),
-        .srst(!user_r_read_32_open),
-        .din(in_r_dout),
-        //.din(out_r_din),//From the HLS IP
-        .wr_en(user_w_write_32_wren),//It is very important to have this signal provided by user_w_write_32_wren. Otherwise, it will not work
-        .rd_en(user_r_read_32_rden),
-        .dout(user_r_read_32_data),//Data to send back to the host
-        .full(out_r_full), //A flag produced by the fifo_from_function to signals to HLS IP fifo
-        .empty(user_r_read_32_empty)
-    );
-     
-  //----------------------------------------------------------
-  */
-
-   // Wires related to HLS_wrapper
+  //-------------Second demo--Connected to the Xilly_test_HLS IP instance---working
    wire [31:0] in_r_dout;
    wire        in_r_read;
    wire        hls_fifo_rd_en;
@@ -320,7 +290,6 @@ module xillydemo
    wire [7:0]  debug_out_din;
    wire        debug_out_full;
    wire        debug_out_write;
-
    fifo_32x512 fifo_to_function
      (
       .clk(bus_clk),
@@ -332,19 +301,6 @@ module xillydemo
       .full(user_w_write_32_full),
       .empty(in_r_empty_n)
       );
-
-/*
-   assign  hls_fifo_rd_en = !hls_fifo_empty && (in_r_read || !in_r_empty_n);
-
-   always @(posedge bus_clk)
-     if (!user_w_write_32_open)
-       in_r_empty_n <= 0;
-     else if (hls_fifo_rd_en)
-       in_r_empty_n <= 1;
-     else if (in_r_read)
-       in_r_empty_n <= 0;
-*/
-
    fifo_32x512 fifo_from_function
      (
       .clk(bus_clk),
@@ -356,32 +312,11 @@ module xillydemo
       .full(out_r_full),
       .empty(user_r_read_32_empty)
       );
-
    assign  user_r_read_32_eof = 0;
-
- fifo_8x2048 fifo_8
-     (
-      .clk(bus_clk),
-      .srst(!user_w_write_8_open && !user_r_read_8_open),
-      .din(user_w_write_8_data),
-      .wr_en(user_w_write_8_wren),
-      .rd_en(user_r_read_8_rden),
-      .dout(user_r_read_8_data),
-      .full(user_w_write_8_full),
-      .empty(user_r_read_8_empty)
-      );
-
-   assign  user_r_read_8_eof = 0;
-  
-
    xillybus_wrapper_0 HLS_wrapper
      (
       .ap_clk(bus_clk),
       .ap_rst(!user_w_write_32_open || !user_r_read_32_open),
-      //.debug_ready(!debug_out_full || !user_r_read_8_open),
-      //.debug_out(debug_out_din),
-      //.debug_out_ap_vld(debug_out_write),
-
       .in_r_dout(in_r_dout),
       .in_r_empty_n(!in_r_empty_n),
       .in_r_read(in_r_read),
@@ -389,6 +324,71 @@ module xillydemo
       .out_r_full_n(!out_r_full),
       .out_r_write(out_r_write)
       );
+    */
+    
+    
+    //----MP4 implementation----
+      wire [31:0] in_r_dout;
+      wire        in_r_read;
+      wire        hls_fifo_rd_en;
+      wire           in_r_empty_n;
+      wire [31:0] out_r_din;
+      wire        out_r_full;
+      wire        out_r_write;
+      wire [7:0]  debug_out_din;
+      wire        debug_out_full;
+      wire        debug_out_write;
+      fifo_32x512 fifo_to_function
+        (
+         .clk(bus_clk),
+         .srst(!user_w_write_32_open),
+         .din(user_w_write_32_data),
+         .wr_en(user_w_write_32_wren),
+         .rd_en(in_r_read),
+         .dout(in_r_dout),
+         .full(user_w_write_32_full),
+         .empty(in_r_empty_n)
+         );
+      fifo_32x512 fifo_from_function
+        (
+         .clk(bus_clk),
+         .srst(!user_r_read_32_open),
+         .din(out_r_din),
+         .wr_en(out_r_write),
+         .rd_en(user_r_read_32_rden),
+         .dout(user_r_read_32_data),
+         .full(out_r_full),
+         .empty(user_r_read_32_empty)
+         );
+      assign  user_r_read_32_eof = 0;
+      
+      DCT_0 inst_0
+        (
+         .ap_clk(bus_clk),
+         .ap_rst(!user_w_write_32_open || !user_r_read_32_open),
+         .X_dout(in_r_dout),
+         .X_empty_n(!in_r_empty_n),
+         .X_read(in_r_read),
+         .Y_din(out_r_din),
+         .Y_full_n(!out_r_full),
+         .Y_write(out_r_write),
+         .function_r(0)
+         );
+
+    //---------------------------------------------------------------------
+
+     fifo_8x2048 fifo_8
+         (
+          .clk(bus_clk),
+          .srst(!user_w_write_8_open && !user_r_read_8_open),
+          .din(user_w_write_8_data),
+          .wr_en(user_w_write_8_wren),
+          .rd_en(user_r_read_8_rden),
+          .dout(user_r_read_8_data),
+          .full(user_w_write_8_full),
+          .empty(user_r_read_8_empty)
+          );
+       assign  user_r_read_8_eof = 0;
 
    i2s_audio audio
      (

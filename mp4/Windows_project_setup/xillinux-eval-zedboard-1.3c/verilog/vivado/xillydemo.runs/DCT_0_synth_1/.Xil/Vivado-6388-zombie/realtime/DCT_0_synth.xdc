@@ -1,0 +1,8 @@
+set_property SRC_FILE_INFO {cfile:e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/constraints/DCT_ooc.xdc rfile:../../../../../xillydemo.srcs/sources_1/ip/DCT_0/constraints/DCT_ooc.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/DCT_0_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:6 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
+set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports ap_clk]
+set_property src_info {type:XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property DONT_TOUCH true [get_cells inst]
+set_property src_info {type:SCOPED_XDC file:1 line:5 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
+create_clock -period 10.000 -name ap_clk [get_ports ap_clk]

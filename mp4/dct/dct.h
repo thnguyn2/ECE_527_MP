@@ -8,8 +8,6 @@
 
 #define FUNCTION_IDCT	1
 
-void DCT(float X[MAT_SIZE][MAT_SIZE],
-		unsigned char function,
-		float Y[MAT_SIZE][MAT_SIZE]);
+void DCT(int *X,unsigned char function,int *Y);
 
 #endif

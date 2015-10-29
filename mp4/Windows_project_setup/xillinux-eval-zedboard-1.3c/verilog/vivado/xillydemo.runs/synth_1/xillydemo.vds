@@ -2,14 +2,15 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Wed Oct 28 23:51:01 2015
-# Process ID: 7908
+# Start of session at: Thu Oct 29 01:29:14 2015
+# Process ID: 9608
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/xillydemo.vds
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source xillydemo.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize'.
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Mat_mult'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Xilly_test'.
@@ -19,7 +20,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 304.391 ; gain = 125.172
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 301.824 ; gain = 123.703
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'xillydemo' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:1]
 INFO: [Synth 8-638] synthesizing module 'xillybus' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillybus.v:3]
@@ -3718,10 +3719,10 @@ INFO: [Synth 8-256] done synthesizing module 'fifo_generator_top' (81#1) [e:/Ubu
 INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v12_0_synth' (82#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_generator_v12_0/hdl/fifo_generator_v12_0_vhsyn_rfs.vhd:33314]
 INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v12_0' (83#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_generator_v12_0/hdl/fifo_generator_v12_0.vhd:665]
 INFO: [Synth 8-256] done synthesizing module 'fifo_32x512' (84#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/synth/fifo_32x512.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'fifo_8x2048' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-7908-zombie/realtime/fifo_8x2048_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'fifo_8x2048' (85#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-7908-zombie/realtime/fifo_8x2048_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'xillybus_wrapper_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-7908-zombie/realtime/xillybus_wrapper_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'xillybus_wrapper_0' (86#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-7908-zombie/realtime/xillybus_wrapper_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'DCT_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-9608-zombie/realtime/DCT_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'DCT_0' (85#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-9608-zombie/realtime/DCT_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'fifo_8x2048' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-9608-zombie/realtime/fifo_8x2048_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'fifo_8x2048' (86#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-9608-zombie/realtime/fifo_8x2048_stub.v:7]
 INFO: [Synth 8-638] synthesizing module 'i2s_audio' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/i2s_audio.v:1]
 INFO: [Synth 8-256] done synthesizing module 'i2s_audio' (87#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/i2s_audio.v:1]
 INFO: [Synth 8-638] synthesizing module 'smbus' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/smbus.v:1]
@@ -3741,7 +3742,7 @@ INFO: [Synth 8-638] synthesizing module 'smbus' [E:/Ubuntu_source_code_data/ECE_
 INFO: [Synth 8-256] done synthesizing module 'smbus' (88#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/smbus.v:1]
 INFO: [Synth 8-256] done synthesizing module 'xillydemo' (89#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 539.289 ; gain = 360.070
+Finished RTL Elaboration : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 537.191 ; gain = 359.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3762,7 +3763,7 @@ WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_SRSTB to constant 0 [
 WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_CLK to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:116]
 WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_PORB to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:116]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:41 ; elapsed = 00:01:52 . Memory (MB): peak = 539.289 ; gain = 360.070
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 537.191 ; gain = 359.070
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3997,9 +3998,7 @@ INFO: [Constraints 18-632] set_output_delay: No clock object specified, the cloc
 Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/xillydemo_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==vga_fifo || ORIG_REF_NAME==vga_fifo}'. [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc:7]
 Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/xillydemo_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xillydemo_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/xillydemo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
@@ -4009,16 +4008,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 712.402 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 709.586 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:59 ; elapsed = 00:02:16 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Constraint Validation : Time (s): cpu = 00:02:00 ; elapsed = 00:02:15 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:59 ; elapsed = 00:02:16 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:00 ; elapsed = 00:02:15 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -5043,11 +5042,11 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for audio/playback_fifo/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 43).
-Applied set_property DONT_TOUCH = true for audio/record_fifo/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 43).
-Applied set_property DONT_TOUCH = true for fifo_from_function/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 43).
-Applied set_property DONT_TOUCH = true for fifo_to_function/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 43).
-Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 46).
+Applied set_property DONT_TOUCH = true for audio/playback_fifo/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 40).
+Applied set_property DONT_TOUCH = true for audio/record_fifo/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 40).
+Applied set_property DONT_TOUCH = true for fifo_from_function/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 40).
+Applied set_property DONT_TOUCH = true for fifo_to_function/U0. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 40).
+Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/dont_touch.xdc, line 43).
 Applied set_property DONT_TOUCH = true for audio/playback_fifo. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for audio/record_fifo. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for fifo_from_function. (constraint file  auto generated constraint, line ).
@@ -5063,7 +5062,7 @@ Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/xillyvga_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:59 ; elapsed = 00:02:16 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:01 ; elapsed = 00:02:15 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in4" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -5111,7 +5110,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'smbus'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:02 ; elapsed = 00:02:19 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:04 ; elapsed = 00:02:19 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -5473,7 +5472,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:02 ; elapsed = 00:02:19 . Memory (MB): peak = 712.402 ; gain = 533.184
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:04 ; elapsed = 00:02:19 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -5484,9 +5483,9 @@ INFO: [Synth 8-5546] ROM "smbus/pre_en" won't be mapped to RAM because it is too
 WARNING: [Synth 8-3917] design xillydemo has port smbus_addr[1] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port smbus_addr[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:20 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:20 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:03 ; elapsed = 00:02:20 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Parallel Reinference  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:20 . Memory (MB): peak = 709.586 ; gain = 531.465
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -5516,16 +5515,16 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:23 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Area Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:23 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:23 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:07 ; elapsed = 00:02:23 . Memory (MB): peak = 709.586 ; gain = 531.465
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:05 ; elapsed = 00:02:23 . Memory (MB): peak = 712.402 ; gain = 533.184
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:07 ; elapsed = 00:02:23 . Memory (MB): peak = 709.586 ; gain = 531.465
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -6553,10 +6552,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:36 . Memory (MB): peak = 827.992 ; gain = 648.773
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:20 ; elapsed = 00:02:36 . Memory (MB): peak = 825.133 ; gain = 647.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:18 ; elapsed = 00:02:36 . Memory (MB): peak = 844.027 ; gain = 664.809
+Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:36 . Memory (MB): peak = 841.156 ; gain = 663.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6599,7 +6598,7 @@ INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/G
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module vivado_system_rst_processing_system7_0_100M_0.
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module vivado_system_rst_processing_system7_0_100M_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:21 ; elapsed = 00:02:39 . Memory (MB): peak = 863.094 ; gain = 683.875
+Finished Technology Mapping : Time (s): cpu = 00:02:23 ; elapsed = 00:02:39 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6643,7 +6642,7 @@ INFO: [Synth 8-4163] Replicating register \audio/audio_dac_reg  to handle IOB=TR
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:22 ; elapsed = 00:02:40 . Memory (MB): peak = 863.094 ; gain = 683.875
+Finished IO Insertion : Time (s): cpu = 00:02:24 ; elapsed = 00:02:40 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -6656,7 +6655,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:22 ; elapsed = 00:02:40 . Memory (MB): peak = 863.094 ; gain = 683.875
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:24 ; elapsed = 00:02:40 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6668,13 +6667,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:23 ; elapsed = 00:02:41 . Memory (MB): peak = 863.094 ; gain = 683.875
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:25 ; elapsed = 00:02:41 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:02:23 ; elapsed = 00:02:41 . Memory (MB): peak = 863.094 ; gain = 683.875
+Start Renaming Generated Ports : Time (s): cpu = 00:02:25 ; elapsed = 00:02:41 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:23 ; elapsed = 00:02:41 . Memory (MB): peak = 863.094 ; gain = 683.875
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:25 ; elapsed = 00:02:41 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -6698,25 +6697,25 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+-------------------+----------+
-|      |BlackBox name      |Instances |
-+------+-------------------+----------+
-|1     |fifo_8x2048        |         2|
-|2     |xillybus_wrapper_0 |         1|
-|3     |xillybus_core      |         1|
-|4     |xillybus_lite      |         1|
-|5     |xillyvga_core      |         1|
-+------+-------------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |DCT_0         |         1|
+|2     |fifo_8x2048   |         2|
+|3     |xillybus_core |         1|
+|4     |xillybus_lite |         1|
+|5     |xillyvga_core |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
 +------+-------------------+------+
 |      |Cell               |Count |
 +------+-------------------+------+
-|1     |fifo_8x2048        |     1|
-|2     |fifo_8x2048__1     |     1|
-|3     |xillybus_core      |     1|
-|4     |xillybus_lite_bbox |     1|
-|5     |xillybus_wrapper_0 |     1|
+|1     |DCT_0              |     1|
+|2     |fifo_8x2048        |     1|
+|3     |fifo_8x2048__1     |     1|
+|4     |xillybus_core      |     1|
+|5     |xillybus_lite_bbox |     1|
 |6     |xillyvga_core      |     1|
 |7     |BIBUF              |   130|
 |8     |BUFG               |     2|
@@ -6921,18 +6920,88 @@ Report Instance Areas:
 |167   |        xlconcat_0                                     |vivado_system_xlconcat_0_0                                  |     0|
 +------+-------------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:23 ; elapsed = 00:02:41 . Memory (MB): peak = 863.094 ; gain = 683.875
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:25 ; elapsed = 00:02:41 . Memory (MB): peak = 860.309 ; gain = 682.188
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:58 . Memory (MB): peak = 863.094 ; gain = 434.313
-Synthesis Optimization Complete : Time (s): cpu = 00:02:23 ; elapsed = 00:02:41 . Memory (MB): peak = 863.094 ; gain = 683.875
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:59 . Memory (MB): peak = 860.309 ; gain = 434.816
+Synthesis Optimization Complete : Time (s): cpu = 00:02:25 ; elapsed = 00:02:41 . Memory (MB): peak = 860.309 ; gain = 682.188
 INFO: [Project 1-571] Translating synthesized netlist
+Release 14.7 - ngc2edif P_INT.20150421 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design xillybus_core.ngc ...
+WARNING:NetListWriters:298 - No output is written to xillybus_core.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_real_word[26 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus bar_registers_ins/buf_ctrl_reg[26 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   axi4_send_dma_ins/GND_9_o_GND_9_o_sub_181_OUT[8 : 3] on block xillybus_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rd_arbiter_ins/Mmux_rd_arb_roundrobin[2]_recvbuf_bufno[8]_wide_mux_44_OUT_rs_
+   lut[8 : 3] on block xillybus_core is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus messages_ins/Madd_n0532_Madd_cy[2 : 0]
+   on block xillybus_core is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/Mmux_msg_vacant_entries[3]_BUS_0004_mux_43_OUT_rs_A[3 : 0] on
+   block xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/msgbuf_read_data[31]_msgbuf_read_data[31]_mux_24_OUT[31 : 22] on
+   block xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/msg_buf_w1[31]_msg_buf_w0[31]_mux_50_OUT[26 : 0] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   messages_ins/GND_5_o_GND_5_o_mux_88_OUT[26 : 0] on block xillybus_core is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_w0[26 : 0] on block
+   xillybus_core is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file xillybus_core.edif ...
+ngc2edif: Total memory usage is 91824 kilobytes
+
 Reading core file 'E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/cores/xillybus_core.ngc' for (cell view 'xillybus_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_core_ngc_3aee5611.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillybus_core_ngc_3aee5611.edif]
 Reading core file 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc' for (cell view 'xillybus_lite', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_lite_ngc_ebb62e3a.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillybus_lite_ngc_ebb62e3a.edif]
+Release 14.7 - ngc2edif P_INT.20150421 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design xillyvga_core.ngc ...
+WARNING:NetListWriters:298 - No output is written to xillyvga_core.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus fifo_rd_data_w[32 : 0] on block
+   xillyvga_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus screensaver_ins/vorigin[8 : 0] on block
+   xillyvga_core is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Result[9 : 0] on block xillyvga_core is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   registers_ins/v_data_start_reg[31]_GND_32_o_mux_33_OUT[2 : 0] on block
+   xillyvga_core is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file xillyvga_core.edif ...
+ngc2edif: Total memory usage is 80112 kilobytes
+
 Reading core file 'E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/cores/xillyvga_core.ngc' for (cell view 'xillyvga_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_3aee5611.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_3aee5611.edif]
@@ -6959,8 +7028,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC16E => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-488 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
+489 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 863.094 ; gain = 607.426
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 863.094 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 23:53:52 2015...
+synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:46 . Memory (MB): peak = 860.309 ; gain = 607.211
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 860.309 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 01:32:08 2015...

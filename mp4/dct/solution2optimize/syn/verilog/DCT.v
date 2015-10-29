@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=9.590000,HLS_SYN_LAT=493,HLS_SYN_TPT=494,HLS_SYN_MEM=1,HLS_SYN_DSP=50,HLS_SYN_FF=9073,HLS_SYN_LUT=15980}" *)
+(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.750000,HLS_SYN_LAT=0,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=4,HLS_SYN_LUT=1}" *)
 
 module DCT (
         X_dout,
@@ -18,11 +18,7 @@ module DCT (
         Y_full_n,
         Y_write,
         ap_clk,
-        ap_rst,
-        ap_done,
-        ap_start,
-        ap_idle,
-        ap_ready
+        ap_rst
 );
 
 parameter    ap_const_logic_0 = 1'b0;
@@ -39,18 +35,12 @@ input   Y_full_n;
 output   Y_write;
 input   ap_clk;
 input   ap_rst;
-output   ap_done;
-input   ap_start;
-output   ap_idle;
-output   ap_ready;
 
-reg ap_idle;
-wire    DCT_Block_proc_U0_ap_start;
+reg    DCT_Block_proc_U0_ap_start = 1'b0;
 wire    DCT_Block_proc_U0_ap_done;
 wire    DCT_Block_proc_U0_ap_continue;
 wire    DCT_Block_proc_U0_ap_idle;
 wire    DCT_Block_proc_U0_ap_ready;
-wire   [7:0] DCT_Block_proc_U0_function_r;
 wire   [31:0] DCT_Block_proc_U0_X_dout;
 wire    DCT_Block_proc_U0_X_empty_n;
 wire    DCT_Block_proc_U0_X_read;
@@ -58,10 +48,8 @@ wire   [31:0] DCT_Block_proc_U0_Y_din;
 wire    DCT_Block_proc_U0_Y_full_n;
 wire    DCT_Block_proc_U0_Y_write;
 wire    ap_sig_hs_continue;
-reg    ap_reg_procdone_DCT_Block_proc_U0 = 1'b0;
-reg    ap_sig_hs_done;
 reg    ap_CS;
-wire    ap_sig_top_allready;
+reg    ap_sig_hs_done;
 
 
 DCT_Block_proc DCT_Block_proc_U0(
@@ -72,7 +60,6 @@ DCT_Block_proc DCT_Block_proc_U0(
     .ap_continue( DCT_Block_proc_U0_ap_continue ),
     .ap_idle( DCT_Block_proc_U0_ap_idle ),
     .ap_ready( DCT_Block_proc_U0_ap_ready ),
-    .function_r( DCT_Block_proc_U0_function_r ),
     .X_dout( DCT_Block_proc_U0_X_dout ),
     .X_empty_n( DCT_Block_proc_U0_X_empty_n ),
     .X_read( DCT_Block_proc_U0_X_read ),
@@ -83,17 +70,13 @@ DCT_Block_proc DCT_Block_proc_U0(
 
 
 
-/// ap_reg_procdone_DCT_Block_proc_U0 assign process. ///
+/// DCT_Block_proc_U0_ap_start assign process. ///
 always @ (posedge ap_clk)
-begin : ap_ret_ap_reg_procdone_DCT_Block_proc_U0
+begin : ap_ret_DCT_Block_proc_U0_ap_start
     if (ap_rst == 1'b1) begin
-        ap_reg_procdone_DCT_Block_proc_U0 <= ap_const_logic_0;
+        DCT_Block_proc_U0_ap_start <= ap_const_logic_0;
     end else begin
-        if ((ap_const_logic_1 == ap_sig_hs_done)) begin
-            ap_reg_procdone_DCT_Block_proc_U0 <= ap_const_logic_0;
-        end else if ((DCT_Block_proc_U0_ap_done == ap_const_logic_1)) begin
-            ap_reg_procdone_DCT_Block_proc_U0 <= ap_const_logic_1;
-        end
+        DCT_Block_proc_U0_ap_start <= ap_const_logic_1;
     end
 end
 
@@ -101,16 +84,6 @@ end
 always @(posedge ap_clk)
 begin
     ap_CS <= ap_const_logic_0;
-end
-
-/// ap_idle assign process. ///
-always @ (DCT_Block_proc_U0_ap_idle)
-begin
-    if ((DCT_Block_proc_U0_ap_idle == ap_const_logic_1)) begin
-        ap_idle = ap_const_logic_1;
-    end else begin
-        ap_idle = ap_const_logic_0;
-    end
 end
 
 /// ap_sig_hs_done assign process. ///
@@ -125,16 +98,11 @@ end
 assign DCT_Block_proc_U0_X_dout = X_dout;
 assign DCT_Block_proc_U0_X_empty_n = X_empty_n;
 assign DCT_Block_proc_U0_Y_full_n = Y_full_n;
-assign DCT_Block_proc_U0_ap_continue = ap_sig_hs_continue;
-assign DCT_Block_proc_U0_ap_start = ap_start;
-assign DCT_Block_proc_U0_function_r = function_r;
+assign DCT_Block_proc_U0_ap_continue = ap_const_logic_1;
 assign X_read = DCT_Block_proc_U0_X_read;
 assign Y_din = DCT_Block_proc_U0_Y_din;
 assign Y_write = DCT_Block_proc_U0_Y_write;
-assign ap_done = ap_sig_hs_done;
-assign ap_ready = ap_sig_top_allready;
-assign ap_sig_hs_continue = ap_const_logic_1;
-assign ap_sig_top_allready = DCT_Block_proc_U0_ap_ready;
+assign ap_sig_hs_continue = ap_const_logic_0;
 
 
 endmodule //DCT

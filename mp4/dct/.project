@@ -29,97 +29,97 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/.apc/.src</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/.apc/.tb</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution1/.tcls</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>solution2optimize/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/.tcls</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/.tcls</location>
 		</link>
 		<link>
 			<name>solution3opt/constraints</name>
 			<type>2</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/.tcls</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution3opt/.tcls</location>
 		</link>
 		<link>
 			<name>source/coeff.h</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/coeff.h</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/coeff.h</location>
 		</link>
 		<link>
 			<name>source/dct.c</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/dct.c</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/dct.c</location>
 		</link>
 		<link>
 			<name>source/dct.h</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/dct.h</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/dct.h</location>
 		</link>
 		<link>
 			<name>source/matrixmath.c</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/matrixmath.c</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/matrixmath.c</location>
 		</link>
 		<link>
 			<name>source/matrixmath.h</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/matrixmath.h</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/matrixmath.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution1/solution1.directive</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution1/directives.tcl</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution1/script.tcl</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution1/script.tcl</location>
 		</link>
 		<link>
 			<name>solution2optimize/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/solution2optimize.directive</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/solution2optimize.directive</location>
 		</link>
 		<link>
 			<name>solution2optimize/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/directives.tcl</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution2optimize/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/script.tcl</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/script.tcl</location>
 		</link>
 		<link>
 			<name>solution3opt/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/solution3opt.directive</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution3opt/solution3opt.directive</location>
 		</link>
 		<link>
 			<name>solution3opt/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/directives.tcl</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution3opt/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution3opt/constraints/script.tcl</name>
 			<type>1</type>
-			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution3opt/script.tcl</location>
+			<location>E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution3opt/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

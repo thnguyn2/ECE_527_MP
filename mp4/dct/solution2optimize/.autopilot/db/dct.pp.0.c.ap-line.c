@@ -218,9 +218,7 @@ void MAT_Multiply2(float A[8][8],
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-void DCT(float X[8][8],
-  unsigned char function,
-  float Y[8][8]);
+void DCT(int *X,unsigned char function,int *Y);
 #pragma line 3 "dct/dct.c" 2
 #pragma empty_line
 #pragma line 1 "dct/coeff.h" 1
@@ -252,21 +250,31 @@ const float Tinv[8][8] = {
 #pragma line 5 "dct/dct.c" 2
 #pragma empty_line
 #pragma empty_line
-void DCT(float X[8][8],
-  unsigned char function,
-  float Y[8][8])
+void DCT(int *X,unsigned char function,int *Y)
 {
+ //---AP interface--
+#pragma AP interface ap_fifo port=X
+#pragma AP interface ap_fifo port=Y
+#pragma AP interface ap_ctrl_none port=return
+ //--------------------------------------------
+ *Y++ = *X++; //Output the same as the input
+ int count;
+ float Xbuff[8][8];
+ float YBuff[8][8];
 #pragma empty_line
- float temp[8][8];
- switch (function){
- case 1:
-  MAT_Multiply(Tinv,X,temp);
-  MAT_Multiply2(temp, T, Y);
-  break;
- case 0:
- default:
-  MAT_Multiply(T,X,temp);
-  MAT_Multiply2(temp, Tinv, Y);
-  break;
- }
+ /*
+	float temp[MAT_SIZE][MAT_SIZE];
+	switch (function){
+	case FUNCTION_IDCT:
+		MAT_Multiply(Tinv,X,temp);
+		MAT_Multiply2(temp, T, Y);
+		break;
+	case FUNCTION_DCT:
+	default:
+		MAT_Multiply(T,X,temp);
+		MAT_Multiply2(temp, Tinv, Y);
+		break;
+	}
+	*/
+#pragma empty_line
 }

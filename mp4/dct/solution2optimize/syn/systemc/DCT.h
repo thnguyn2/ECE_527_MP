@@ -16,7 +16,7 @@
 namespace ap_rtl {
 
 struct DCT : public sc_module {
-    // Port declarations 13
+    // Port declarations 9
     sc_in< sc_lv<32> > X_dout;
     sc_in< sc_logic > X_empty_n;
     sc_out< sc_logic > X_read;
@@ -26,10 +26,6 @@ struct DCT : public sc_module {
     sc_out< sc_logic > Y_write;
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
-    sc_out< sc_logic > ap_done;
-    sc_in< sc_logic > ap_start;
-    sc_out< sc_logic > ap_idle;
-    sc_out< sc_logic > ap_ready;
 
 
     // Module declarations
@@ -48,7 +44,6 @@ struct DCT : public sc_module {
     sc_signal< sc_logic > DCT_Block_proc_U0_ap_continue;
     sc_signal< sc_logic > DCT_Block_proc_U0_ap_idle;
     sc_signal< sc_logic > DCT_Block_proc_U0_ap_ready;
-    sc_signal< sc_lv<8> > DCT_Block_proc_U0_function_r;
     sc_signal< sc_lv<32> > DCT_Block_proc_U0_X_dout;
     sc_signal< sc_logic > DCT_Block_proc_U0_X_empty_n;
     sc_signal< sc_logic > DCT_Block_proc_U0_X_read;
@@ -56,10 +51,8 @@ struct DCT : public sc_module {
     sc_signal< sc_logic > DCT_Block_proc_U0_Y_full_n;
     sc_signal< sc_logic > DCT_Block_proc_U0_Y_write;
     sc_signal< sc_logic > ap_sig_hs_continue;
-    sc_signal< sc_logic > ap_reg_procdone_DCT_Block_proc_U0;
-    sc_signal< sc_logic > ap_sig_hs_done;
     sc_signal< sc_logic > ap_CS;
-    sc_signal< sc_logic > ap_sig_top_allready;
+    sc_signal< sc_logic > ap_sig_hs_done;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_logic ap_const_logic_1;
@@ -70,17 +63,11 @@ struct DCT : public sc_module {
     void thread_DCT_Block_proc_U0_X_empty_n();
     void thread_DCT_Block_proc_U0_Y_full_n();
     void thread_DCT_Block_proc_U0_ap_continue();
-    void thread_DCT_Block_proc_U0_ap_start();
-    void thread_DCT_Block_proc_U0_function_r();
     void thread_X_read();
     void thread_Y_din();
     void thread_Y_write();
-    void thread_ap_done();
-    void thread_ap_idle();
-    void thread_ap_ready();
     void thread_ap_sig_hs_continue();
     void thread_ap_sig_hs_done();
-    void thread_ap_sig_top_allready();
     void thread_hdltv_gen();
 };
 

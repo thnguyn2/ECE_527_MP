@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1446094256">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1446100148">
   <File Type="OPT-DCP" Name="xillydemo_opt.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
@@ -92,13 +92,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vivado-essentials/vga_fifo/vga_fifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../vivado-essentials/fifo_32x512/fifo_32x512.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -143,6 +136,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="xillybus_wrapper_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
+  <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="DCT_0"/>
 </GenRun>

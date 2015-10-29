@@ -61,22 +61,21 @@ set rc [catch {
   set_property parent.project_path E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.xpr [current_project]
   set_property ip_repo_paths {
   e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.cache/ip
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Mat_mult
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Xilly_test
+  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado-ip
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize
+  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Mat_mult
+  e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Xilly_test
 } [current_project]
   set_property ip_output_repo e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.cache/ip [current_project]
   add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/xillydemo.dcp
   set_property edif_extra_search_paths E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/cores [current_fileset]
   read_edif e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc
-  add_files -quiet e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.dcp
-  set_property netlist_only true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo.dcp]
   add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp
   set_property netlist_only true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp]
-  add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/xillybus_wrapper_0_synth_1/xillybus_wrapper_0.dcp
-  set_property netlist_only true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/xillybus_wrapper_0_synth_1/xillybus_wrapper_0.dcp]
-  read_xdc -ref vga_fifo -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc
-  set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
+  add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.dcp
+  set_property netlist_only true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.dcp]
+  add_files -quiet E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/DCT_0_synth_1/DCT_0.dcp
+  set_property netlist_only true [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/DCT_0_synth_1/DCT_0.dcp]
   read_xdc -ref fifo_32x512 -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc
   set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
   read_xdc -ref vivado_system_processing_system7_0_0 -cells inst e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc
@@ -89,8 +88,12 @@ set rc [catch {
   set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_8x2048/fifo_8x2048_ooc.xdc]
   read_xdc -ref fifo_8x2048 -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc
   set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc]
-  read_xdc -mode out_of_context -ref xillybus_wrapper_0 -cells inst e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/xillybus_wrapper_0/constraints/xillybus_wrapper_ooc.xdc
-  set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/xillybus_wrapper_0/constraints/xillybus_wrapper_ooc.xdc]
+  read_xdc -mode out_of_context -ref vga_fifo -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc
+  set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc]
+  read_xdc -ref vga_fifo -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc
+  set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
+  read_xdc -mode out_of_context -ref DCT_0 -cells inst e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/constraints/DCT_ooc.xdc
+  set_property processing_order EARLY [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/constraints/DCT_ooc.xdc]
   read_xdc E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/xillydemo.xdc
   read_xdc -ref vga_fifo -cells U0 e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc
   set_property processing_order LATE [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]

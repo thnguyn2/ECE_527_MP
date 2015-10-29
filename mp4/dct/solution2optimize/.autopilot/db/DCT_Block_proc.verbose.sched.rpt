@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Block_proc'
 ================================================================
-* Date:           Wed Oct 28 18:15:02 2015
+* Date:           Thu Oct 29 01:01:20 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -20,7 +20,7 @@
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |  10.00|      9.59|        1.25|
+    |default  |  10.00|      8.75|        1.25|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |  493|  493|  493|  493|   none  |
+    |    0|    0|    0|    0|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -103,7 +103,7 @@ IsCombinational: 2
 IsDatapathOnly: 0
 HasWiredReturn: 1
 HasMFsm: 0
-HasVarLatency: 1
+HasVarLatency: 0
 IsPipeline: 0
 IsRtlPipelined: 0
 IsInstanceOverlapped: 0
@@ -115,86 +115,29 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 6
+* Number of FSM states: 1
 * Pipeline: 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
-	2  / (!cond)
-	5  / (cond)
-2 --> 
-	3  / true
-3 --> 
-	4  / true
-4 --> 
-5 --> 
-	6  / true
-6 --> 
-	4  / true
 * FSM state operations: 
 
- <State 1>: 2.00ns
-ST_1: stg_7 [1/1] 0.00ns
-newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(float* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+ <State 1>: 8.75ns
+ST_1: stg_2 [1/1] 0.00ns
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
-ST_1: stg_8 [1/1] 0.00ns
-newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(float* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+ST_1: stg_3 [1/1] 0.00ns
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
-ST_1: function_read [1/1] 0.00ns
-newFuncRoot:2  %function_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %function_r)
+ST_1: X_read [1/1] 4.38ns
+newFuncRoot:2  %X_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X) nounwind
 
-ST_1: temp [1/1] 0.00ns
-newFuncRoot:3  %temp = alloca [64 x float], align 4
+ST_1: stg_5 [1/1] 4.38ns
+newFuncRoot:3  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %Y, i32 %X_read) nounwind
 
-ST_1: cond [1/1] 2.00ns
-newFuncRoot:4  %cond = icmp eq i8 %function_read, 1
-
-ST_1: stg_12 [1/1] 0.00ns
-newFuncRoot:5  br i1 %cond, label %0, label %1
-
-ST_1: stg_13 [2/2] 0.00ns
-:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, float* %X, [64 x float]* nocapture %temp)
-
-ST_1: stg_14 [2/2] 0.00ns
-:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, float* %X, [64 x float]* nocapture %temp)
-
-
- <State 2>: 0.00ns
-ST_2: stg_15 [1/2] 0.00ns
-:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, float* %X, [64 x float]* nocapture %temp)
-
-
- <State 3>: 0.00ns
-ST_3: stg_16 [2/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, float* %Y)
-
-
- <State 4>: 0.00ns
-ST_4: stg_17 [1/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, float* %Y)
-
-ST_4: stg_18 [1/1] 0.00ns
-:2  br label %.ret.exitStub
-
-ST_4: stg_19 [1/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, float* %Y)
-
-ST_4: stg_20 [1/1] 0.00ns
-:2  br label %.ret.exitStub
-
-ST_4: stg_21 [1/1] 0.00ns
-.ret.exitStub:0  ret void
-
-
- <State 5>: 0.00ns
-ST_5: stg_22 [1/2] 0.00ns
-:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, float* %X, [64 x float]* nocapture %temp)
-
-
- <State 6>: 0.00ns
-ST_6: stg_23 [2/2] 0.00ns
-:1  call fastcc void @DCT_MAT_Multiply2([64 x float]* nocapture %temp, [8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, float* %Y)
+ST_1: stg_6 [1/1] 0.00ns
+newFuncRoot:4  ret void
 
 
 
@@ -206,11 +149,6 @@ N/A
   - Output states:
   - Chain level:
 	State 1
-	State 2
-	State 3
-	State 4
-	State 5
-	State 6
 
 
 ============================================================

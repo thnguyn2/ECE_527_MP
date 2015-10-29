@@ -22,18 +22,6 @@
             </pragma>
         </directive>
         <directive functionName="DCT" label="" functionLabel="">
-            <pragma name="INTERFACE">
-                <option name="ap_fifo" value="" positionalBoolean="mode"/>
-                <option name="port" value="X" positionalBoolean="4"/>
-            </pragma>
-        </directive>
-        <directive functionName="DCT" label="" functionLabel="">
-            <pragma name="INTERFACE">
-                <option name="ap_fifo" value="" positionalBoolean="mode"/>
-                <option name="port" value="Y" positionalBoolean="4"/>
-            </pragma>
-        </directive>
-        <directive functionName="DCT" label="" functionLabel="">
             <pragma name="DATAFLOW"/>
         </directive>
         <directive functionName="MAT_Multiply" label="" functionLabel="">

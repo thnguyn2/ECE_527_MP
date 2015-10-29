@@ -1,5 +1,5 @@
-# 1 "Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/.autopilot/db/dct.pragma.1.c"
-# 1 "Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/.autopilot/db/dct.pragma.1.c" 1
+# 1 "E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/.autopilot/db/dct.pragma.1.c"
+# 1 "E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/.autopilot/db/dct.pragma.1.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
@@ -191,7 +191,7 @@
 #define _ssdm_op_Delayed(X) X */
 # 7 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/.autopilot/db/dct.pragma.1.c" 2
+# 1 "E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/.autopilot/db/dct.pragma.1.c" 2
 # 1 "dct/dct.c"
 # 1 "dct/dct.c" 1
 # 1 "<built-in>" 1
@@ -412,9 +412,7 @@ void MAT_Multiply2(float A[8][8],
 
 
 
-void DCT(float X[8][8],
-  unsigned char function,
-  float Y[8][8]);
+void DCT(int *X,unsigned char function,int *Y);
 # 3 "dct/dct.c" 2
 
 # 1 "dct/coeff.h" 1
@@ -446,30 +444,34 @@ const float Tinv[8][8] = {
 # 5 "dct/dct.c" 2
 
 
-void DCT(float X[8][8],
-  unsigned char function,
-  float Y[8][8])
-{_ssdm_SpecArrayDimSize(X,8);_ssdm_SpecArrayDimSize(Y,8);
+void DCT(int *X,unsigned char function,int *Y)
+{
 _ssdm_op_SpecDataflowPipeline(-1, "");
-# 10 "dct/dct.c"
+# 8 "dct/dct.c"
 
-_ssdm_op_SpecInterface(Y, "ap_fifo", 0, 0, 0, 0, "", "", "");
-# 10 "dct/dct.c"
-
+ //---AP interface--
 _ssdm_op_SpecInterface(X, "ap_fifo", 0, 0, 0, 0, "", "", "");
-# 10 "dct/dct.c"
+_ssdm_op_SpecInterface(Y, "ap_fifo", 0, 0, 0, 0, "", "", "");
+_ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, 0, 0, "", "", "");
+ //--------------------------------------------
+ *Y++ = *X++; //Output the same as the input
+ int count;
+ float Xbuff[8][8];
+ float YBuff[8][8];
 
+ /*
+	float temp[MAT_SIZE][MAT_SIZE];
+	switch (function){
+	case FUNCTION_IDCT:
+		MAT_Multiply(Tinv,X,temp);
+		MAT_Multiply2(temp, T, Y);
+		break;
+	case FUNCTION_DCT:
+	default:
+		MAT_Multiply(T,X,temp);
+		MAT_Multiply2(temp, Tinv, Y);
+		break;
+	}
+	*/
 
- float temp[8][8];
- switch (function){
- case 1:
-  MAT_Multiply(Tinv,X,temp);
-  MAT_Multiply2(temp, T, Y);
-  break;
- case 0:
- default:
-  MAT_Multiply(T,X,temp);
-  MAT_Multiply2(temp, Tinv, Y);
-  break;
- }
 }

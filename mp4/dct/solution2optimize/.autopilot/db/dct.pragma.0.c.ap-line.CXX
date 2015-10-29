@@ -12,9 +12,7 @@
 #pragma line 1 "dct/dct.h" 1 ::: 185
 #pragma line 1 "dct/matrixmath.h" 1 ::: 190
 #pragma line 6 "dct/dct.h" 2 ::: 204
-#pragma line 3 "dct/dct.c" 2 ::: 213
-#pragma line 1 "dct/coeff.h" 1 ::: 215
-#pragma line 5 "dct/dct.c" 2 ::: 241
-#pragma line 10 "dct/dct.c" ::: 249
-#pragma line 10 "dct/dct.c" ::: 252
-#pragma line 10 "dct/dct.c" ::: 255
+#pragma line 3 "dct/dct.c" 2 ::: 211
+#pragma line 1 "dct/coeff.h" 1 ::: 213
+#pragma line 5 "dct/dct.c" 2 ::: 239
+#pragma line 8 "dct/dct.c" ::: 245

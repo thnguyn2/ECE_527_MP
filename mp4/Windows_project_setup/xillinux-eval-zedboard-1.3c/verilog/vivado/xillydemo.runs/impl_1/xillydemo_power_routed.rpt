@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date             : Wed Oct 28 23:56:27 2015
+| Date             : Thu Oct 29 01:34:42 2015
 | Host             : zombie running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file xillydemo_power_routed.rpt -pb xillydemo_power_summary_routed.pb
 | Design           : xillydemo
@@ -49,16 +49,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.021 |        6 |       --- |             --- |
-| Slice Logic              |     0.008 |    10919 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     4278 |     53200 |            8.04 |
+| Clocks                   |     0.022 |        6 |       --- |             --- |
+| Slice Logic              |     0.008 |    10924 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     4293 |     53200 |            8.07 |
 |   CARRY4                 |    <0.001 |      335 |     13300 |            2.52 |
-|   Register               |    <0.001 |     4738 |    106400 |            4.45 |
+|   Register               |    <0.001 |     4739 |    106400 |            4.45 |
 |   LUT as Distributed RAM |    <0.001 |      270 |     17400 |            1.55 |
 |   F7/F8 Muxes            |    <0.001 |       45 |     53200 |            0.08 |
 |   LUT as Shift Register  |    <0.001 |       67 |     17400 |            0.39 |
-|   Others                 |     0.000 |      719 |       --- |             --- |
-| Signals                  |     0.013 |     7831 |       --- |             --- |
+|   Others                 |     0.000 |      721 |       --- |             --- |
+| Signals                  |     0.013 |     7830 |       --- |             --- |
 | Block RAM                |     0.026 |       19 |       140 |           13.57 |
 | PLL                      |     0.106 |        1 |         4 |           25.00 |
 | I/O                      |     0.046 |       85 |       200 |           42.50 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.094 |       0.077 |      0.017 |
+| Vccint    |       1.000 |     0.095 |       0.077 |      0.017 |
 | Vccaux    |       1.800 |     0.076 |       0.055 |      0.021 |
 | Vcco33    |       3.300 |     0.014 |       0.013 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -154,8 +154,6 @@ Table of Contents
 | Name                                                          | Power (W) |
 +---------------------------------------------------------------+-----------+
 | xillydemo                                                     |     1.753 |
-|   HLS_wrapper                                                 |     0.000 |
-|     inst                                                      |     0.000 |
 |   PS_GPIO_IOBUF[0]_inst                                       |    <0.001 |
 |   PS_GPIO_IOBUF[10]_inst                                      |    <0.001 |
 |   PS_GPIO_IOBUF[11]_inst                                      |    <0.001 |
@@ -355,6 +353,8 @@ Table of Contents
 |                         prim_noinit.ram                       |     0.003 |
 |                       ramloop[3].ram.r                        |     0.003 |
 |                         prim_noinit.ram                       |     0.003 |
+|   inst_0                                                      |    <0.001 |
+|     inst                                                      |    <0.001 |
 |   litearray0_reg_0_31_0_0                                     |    <0.001 |
 |   litearray0_reg_0_31_1_1                                     |    <0.001 |
 |   litearray0_reg_0_31_2_2                                     |    <0.001 |
@@ -411,7 +411,7 @@ Table of Contents
 |                       valid.cstr                              |    <0.001 |
 |                         ramloop[0].ram.r                      |    <0.001 |
 |                           prim_noinit.ram                     |    <0.001 |
-|   xillybus_ins                                                |     1.679 |
+|   xillybus_ins                                                |     1.680 |
 |     system_i                                                  |     1.653 |
 |       vivado_system_i                                         |     1.653 |
 |         processing_system7_0                                  |     1.536 |

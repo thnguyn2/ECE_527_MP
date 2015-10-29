@@ -9,7 +9,7 @@ set PipelineFlag 1
 set DataflowTaskPipelineFlag  1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
-set FloatingPointFlag 1
+set FloatingPointFlag 0
 set FftOrFirFlag 0
 set NbRWValue 0
 set NewDSPMapping 1
@@ -40,9 +40,9 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../matrixmath.c ../dct.c}}
+set SourceFiles {sc {} c {../dct.c ../matrixmath.c}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution2optimize/solution2optimize.directive}
+set DirectiveFile {E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/solution2optimize.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

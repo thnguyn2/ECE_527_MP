@@ -14,7 +14,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../vivado-essentials/vivado-ip"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../Mat_mult"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../dct/solution2optimize"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../Xilly_test"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
@@ -64,13 +64,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../vivado-essentials/vga_fifo/vga_fifo.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../vivado-essentials/fifo_32x512/fifo_32x512.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -84,20 +77,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="hdl/vivado_system.v"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xillybus_lite_0_0/vivado_system_xillybus_lite_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xbar_0/vivado_system_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_processing_system7_0_axi_periph_0/vivado_system_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xlconcat_0_0/vivado_system_xlconcat_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xillyvga_0_0/vivado_system_xillyvga_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xillybus_ip_0_0/vivado_system_xillybus_ip_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="hdl/vivado_system.hwdef"/>
         <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="hw_handoff/vivado_system_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="hw_handoff/vivado_system.hwh"/>
         <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="vivado_system_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xillybus_ip_0_0/vivado_system_xillybus_ip_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xbar_0/vivado_system_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_processing_system7_0_axi_periph_0/vivado_system_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xlconcat_0_0/vivado_system_xlconcat_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xillyvga_0_0/vivado_system_xillyvga_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="ip/vivado_system_xillybus_lite_0_0/vivado_system_xillybus_lite_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vivado_system.bd" FileRelPathName="hdl/vivado_system.v"/>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/xillybus_wrapper_0/xillybus_wrapper_0.upgrade_log"/>
       <Config>
@@ -141,8 +134,8 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="xillybus_wrapper_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/xillybus_wrapper_0">
-      <File Path="$PSRCDIR/sources_1/ip/xillybus_wrapper_0/xillybus_wrapper_0.xci">
+    <FileSet Name="vga_fifo" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_fifo">
+      <File Path="$PPRDIR/../../vivado-essentials/vga_fifo/vga_fifo.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -150,7 +143,33 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="xillybus_wrapper_0"/>
+        <Option Name="TopModule" Val="vga_fifo"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="DCT_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DCT_0">
+      <File Path="$PSRCDIR/sources_1/ip/DCT_0/DCT_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0.dcp"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0.veo"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="DCT_0.xml"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="hdl/verilog/DCT.v"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="misc/logo.png"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="sim/DCT_0.v"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="hdl/verilog/DCT_Block_proc.v"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="synth/DCT_0.v"/>
+        <CompFileExtendedInfo CompFileName="DCT_0.xci" FileRelPathName="constraints/DCT_ooc.xdc"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="DCT_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -189,6 +208,13 @@
     </Run>
     <Run Id="fifo_8x2048_synth_1" Type="Ft3:Synth" SrcSet="fifo_8x2048" Part="xc7z020clg484-1" ConstrsSet="fifo_8x2048" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fifo_8x2048_synth_1">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="synth_2" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/synth_2">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
@@ -196,7 +222,25 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="xillybus_wrapper_0_synth_1" Type="Ft3:Synth" SrcSet="xillybus_wrapper_0" Part="xc7z020clg484-1" ConstrsSet="xillybus_wrapper_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/xillybus_wrapper_0_synth_1">
+    <Run Id="vga_fifo_synth_1" Type="Ft3:Synth" SrcSet="vga_fifo" Part="xc7z020clg484-1" ConstrsSet="vga_fifo" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/vga_fifo_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="DCT_0_synth_1" Type="Ft3:Synth" SrcSet="DCT_0" Part="xc7z020clg484-1" ConstrsSet="DCT_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DCT_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="synth_3" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/synth_3">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -222,6 +266,20 @@
     </Run>
     <Run Id="fifo_8x2048_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="fifo_8x2048" Description="Vivado Implementation Defaults" SynthRun="fifo_8x2048_synth_1">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" SynthRun="synth_2">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>
         </StratHandle>
@@ -236,7 +294,23 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="xillybus_wrapper_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="xillybus_wrapper_0" Description="Vivado Implementation Defaults" SynthRun="xillybus_wrapper_0_synth_1">
+    <Run Id="vga_fifo_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="vga_fifo" Description="Vivado Implementation Defaults" SynthRun="vga_fifo_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="DCT_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="DCT_0" Description="Vivado Implementation Defaults" SynthRun="DCT_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>

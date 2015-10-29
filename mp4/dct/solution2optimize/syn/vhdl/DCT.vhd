@@ -19,29 +19,24 @@ port (
     Y_full_n : IN STD_LOGIC;
     Y_write : OUT STD_LOGIC;
     ap_clk : IN STD_LOGIC;
-    ap_rst : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_start : IN STD_LOGIC;
-    ap_idle : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC );
+    ap_rst : IN STD_LOGIC );
 end;
 
 
 architecture behav of DCT is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=9.590000,HLS_SYN_LAT=493,HLS_SYN_TPT=494,HLS_SYN_MEM=1,HLS_SYN_DSP=50,HLS_SYN_FF=9073,HLS_SYN_LUT=15980}";
+    "DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.750000,HLS_SYN_LAT=0,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=4,HLS_SYN_LUT=1}";
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_true : BOOLEAN := true;
 
-    signal DCT_Block_proc_U0_ap_start : STD_LOGIC;
+    signal DCT_Block_proc_U0_ap_start : STD_LOGIC := '0';
     signal DCT_Block_proc_U0_ap_done : STD_LOGIC;
     signal DCT_Block_proc_U0_ap_continue : STD_LOGIC;
     signal DCT_Block_proc_U0_ap_idle : STD_LOGIC;
     signal DCT_Block_proc_U0_ap_ready : STD_LOGIC;
-    signal DCT_Block_proc_U0_function_r : STD_LOGIC_VECTOR (7 downto 0);
     signal DCT_Block_proc_U0_X_dout : STD_LOGIC_VECTOR (31 downto 0);
     signal DCT_Block_proc_U0_X_empty_n : STD_LOGIC;
     signal DCT_Block_proc_U0_X_read : STD_LOGIC;
@@ -49,10 +44,8 @@ architecture behav of DCT is
     signal DCT_Block_proc_U0_Y_full_n : STD_LOGIC;
     signal DCT_Block_proc_U0_Y_write : STD_LOGIC;
     signal ap_sig_hs_continue : STD_LOGIC;
-    signal ap_reg_procdone_DCT_Block_proc_U0 : STD_LOGIC := '0';
-    signal ap_sig_hs_done : STD_LOGIC;
     signal ap_CS : STD_LOGIC;
-    signal ap_sig_top_allready : STD_LOGIC;
+    signal ap_sig_hs_done : STD_LOGIC;
 
     component DCT_Block_proc IS
     port (
@@ -63,7 +56,6 @@ architecture behav of DCT is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        function_r : IN STD_LOGIC_VECTOR (7 downto 0);
         X_dout : IN STD_LOGIC_VECTOR (31 downto 0);
         X_empty_n : IN STD_LOGIC;
         X_read : OUT STD_LOGIC;
@@ -84,7 +76,6 @@ begin
         ap_continue => DCT_Block_proc_U0_ap_continue,
         ap_idle => DCT_Block_proc_U0_ap_idle,
         ap_ready => DCT_Block_proc_U0_ap_ready,
-        function_r => DCT_Block_proc_U0_function_r,
         X_dout => DCT_Block_proc_U0_X_dout,
         X_empty_n => DCT_Block_proc_U0_X_empty_n,
         X_read => DCT_Block_proc_U0_X_read,
@@ -96,18 +87,14 @@ begin
 
 
 
-    -- ap_reg_procdone_DCT_Block_proc_U0 assign process. --
-    ap_reg_procdone_DCT_Block_proc_U0_assign_proc : process(ap_clk)
+    -- DCT_Block_proc_U0_ap_start assign process. --
+    DCT_Block_proc_U0_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                ap_reg_procdone_DCT_Block_proc_U0 <= ap_const_logic_0;
+                DCT_Block_proc_U0_ap_start <= ap_const_logic_0;
             else
-                if ((ap_const_logic_1 = ap_sig_hs_done)) then 
-                    ap_reg_procdone_DCT_Block_proc_U0 <= ap_const_logic_0;
-                elsif ((DCT_Block_proc_U0_ap_done = ap_const_logic_1)) then 
-                    ap_reg_procdone_DCT_Block_proc_U0 <= ap_const_logic_1;
-                end if; 
+                DCT_Block_proc_U0_ap_start <= ap_const_logic_1;
             end if;
         end if;
     end process;
@@ -123,26 +110,11 @@ begin
     DCT_Block_proc_U0_X_dout <= X_dout;
     DCT_Block_proc_U0_X_empty_n <= X_empty_n;
     DCT_Block_proc_U0_Y_full_n <= Y_full_n;
-    DCT_Block_proc_U0_ap_continue <= ap_sig_hs_continue;
-    DCT_Block_proc_U0_ap_start <= ap_start;
-    DCT_Block_proc_U0_function_r <= function_r;
+    DCT_Block_proc_U0_ap_continue <= ap_const_logic_1;
     X_read <= DCT_Block_proc_U0_X_read;
     Y_din <= DCT_Block_proc_U0_Y_din;
     Y_write <= DCT_Block_proc_U0_Y_write;
-    ap_done <= ap_sig_hs_done;
-
-    -- ap_idle assign process. --
-    ap_idle_assign_proc : process(DCT_Block_proc_U0_ap_idle)
-    begin
-        if ((DCT_Block_proc_U0_ap_idle = ap_const_logic_1)) then 
-            ap_idle <= ap_const_logic_1;
-        else 
-            ap_idle <= ap_const_logic_0;
-        end if; 
-    end process;
-
-    ap_ready <= ap_sig_top_allready;
-    ap_sig_hs_continue <= ap_const_logic_1;
+    ap_sig_hs_continue <= ap_const_logic_0;
 
     -- ap_sig_hs_done assign process. --
     ap_sig_hs_done_assign_proc : process(DCT_Block_proc_U0_ap_done)
@@ -154,5 +126,4 @@ begin
         end if; 
     end process;
 
-    ap_sig_top_allready <= DCT_Block_proc_U0_ap_ready;
 end behav;
