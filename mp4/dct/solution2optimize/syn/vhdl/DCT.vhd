@@ -11,27 +11,38 @@ use IEEE.numeric_std.all;
 
 entity DCT is
 port (
+    ap_clk : IN STD_LOGIC;
+    ap_rst : IN STD_LOGIC;
     X_dout : IN STD_LOGIC_VECTOR (31 downto 0);
     X_empty_n : IN STD_LOGIC;
     X_read : OUT STD_LOGIC;
     function_r : IN STD_LOGIC_VECTOR (7 downto 0);
     Y_din : OUT STD_LOGIC_VECTOR (31 downto 0);
     Y_full_n : IN STD_LOGIC;
-    Y_write : OUT STD_LOGIC;
-    ap_clk : IN STD_LOGIC;
-    ap_rst : IN STD_LOGIC );
+    Y_write : OUT STD_LOGIC );
 end;
 
 
 architecture behav of DCT is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.702000,HLS_SYN_LAT=401,HLS_SYN_TPT=402,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=234,HLS_SYN_LUT=347}";
+    "DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.750000,HLS_SYN_LAT=221,HLS_SYN_TPT=132,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=110,HLS_SYN_LUT=166}";
+    constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_true : BOOLEAN := true;
 
+    signal Ybuff_i_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal Ybuff_i_ce0 : STD_LOGIC;
+    signal Ybuff_i_we0 : STD_LOGIC;
+    signal Ybuff_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ybuff_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ybuff_t_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal Ybuff_t_ce0 : STD_LOGIC;
+    signal Ybuff_t_we0 : STD_LOGIC;
+    signal Ybuff_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ybuff_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ybuff_U_ap_dummy_ce : STD_LOGIC;
     signal DCT_Loop_1_proc_U0_ap_start : STD_LOGIC := '0';
     signal DCT_Loop_1_proc_U0_ap_done : STD_LOGIC;
     signal DCT_Loop_1_proc_U0_ap_continue : STD_LOGIC;
@@ -40,10 +51,46 @@ architecture behav of DCT is
     signal DCT_Loop_1_proc_U0_X_dout : STD_LOGIC_VECTOR (31 downto 0);
     signal DCT_Loop_1_proc_U0_X_empty_n : STD_LOGIC;
     signal DCT_Loop_1_proc_U0_X_read : STD_LOGIC;
-    signal DCT_Loop_1_proc_U0_Y_din : STD_LOGIC_VECTOR (31 downto 0);
-    signal DCT_Loop_1_proc_U0_Y_full_n : STD_LOGIC;
-    signal DCT_Loop_1_proc_U0_Y_write : STD_LOGIC;
+    signal DCT_Loop_1_proc_U0_Xbuff_din : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_Loop_1_proc_U0_Xbuff_full_n : STD_LOGIC;
+    signal DCT_Loop_1_proc_U0_Xbuff_write : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_ap_start : STD_LOGIC := '0';
+    signal DCT_Block_DCT_exit2_proc_U0_ap_done : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_ap_continue : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_ap_idle : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_ap_ready : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_Ybuff_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0 : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_Ybuff_we0 : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_Ybuff_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_Block_DCT_exit2_proc_U0_Xbuff_dout : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_Xbuff_read : STD_LOGIC;
+    signal ap_chn_write_DCT_Block_DCT_exit2_proc_U0_Ybuff : STD_LOGIC;
+    signal DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_start : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_done : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_continue : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_idle : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_ready : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Y_din : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_Loop_3_proc_U0_Y_full_n : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Y_write : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Ybuff_address0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal DCT_Loop_3_proc_U0_Ybuff_ce0 : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Ybuff_q0 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_hs_continue : STD_LOGIC;
+    signal Ybuff_i_full_n : STD_LOGIC;
+    signal Ybuff_i_write : STD_LOGIC;
+    signal Ybuff_t_empty_n : STD_LOGIC;
+    signal Ybuff_t_read : STD_LOGIC;
+    signal Xbuff_channel_U_ap_dummy_ce : STD_LOGIC;
+    signal Xbuff_channel_din : STD_LOGIC_VECTOR (31 downto 0);
+    signal Xbuff_channel_full_n : STD_LOGIC;
+    signal Xbuff_channel_write : STD_LOGIC;
+    signal Xbuff_channel_dout : STD_LOGIC_VECTOR (31 downto 0);
+    signal Xbuff_channel_empty_n : STD_LOGIC;
+    signal Xbuff_channel_read : STD_LOGIC;
     signal ap_CS : STD_LOGIC;
     signal ap_sig_hs_done : STD_LOGIC;
 
@@ -59,14 +106,118 @@ architecture behav of DCT is
         X_dout : IN STD_LOGIC_VECTOR (31 downto 0);
         X_empty_n : IN STD_LOGIC;
         X_read : OUT STD_LOGIC;
+        Xbuff_din : OUT STD_LOGIC_VECTOR (31 downto 0);
+        Xbuff_full_n : IN STD_LOGIC;
+        Xbuff_write : OUT STD_LOGIC );
+    end component;
+
+
+    component DCT_Block_DCT_exit2_proc IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        Ybuff_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        Ybuff_ce0 : OUT STD_LOGIC;
+        Ybuff_we0 : OUT STD_LOGIC;
+        Ybuff_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        Xbuff_dout : IN STD_LOGIC_VECTOR (31 downto 0);
+        Xbuff_empty_n : IN STD_LOGIC;
+        Xbuff_read : OUT STD_LOGIC );
+    end component;
+
+
+    component DCT_Loop_3_proc IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
         Y_din : OUT STD_LOGIC_VECTOR (31 downto 0);
         Y_full_n : IN STD_LOGIC;
-        Y_write : OUT STD_LOGIC );
+        Y_write : OUT STD_LOGIC;
+        Ybuff_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        Ybuff_ce0 : OUT STD_LOGIC;
+        Ybuff_q0 : IN STD_LOGIC_VECTOR (31 downto 0) );
+    end component;
+
+
+    component DCT_Ybuff IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        i_address0 : IN STD_LOGIC_VECTOR (6 downto 0);
+        i_ce0 : IN STD_LOGIC;
+        i_we0 : IN STD_LOGIC;
+        i_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        t_address0 : IN STD_LOGIC_VECTOR (6 downto 0);
+        t_ce0 : IN STD_LOGIC;
+        t_we0 : IN STD_LOGIC;
+        t_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        i_ce : IN STD_LOGIC;
+        t_ce : IN STD_LOGIC;
+        i_full_n : OUT STD_LOGIC;
+        i_write : IN STD_LOGIC;
+        t_empty_n : OUT STD_LOGIC;
+        t_read : IN STD_LOGIC );
+    end component;
+
+
+    component FIFO_DCT_Xbuff_channel IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (31 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (31 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
     end component;
 
 
 
 begin
+    Ybuff_U : component DCT_Ybuff
+    generic map (
+        DataWidth => 32,
+        AddressRange => 65,
+        AddressWidth => 7)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => Ybuff_i_address0,
+        i_ce0 => Ybuff_i_ce0,
+        i_we0 => Ybuff_i_we0,
+        i_d0 => Ybuff_i_d0,
+        i_q0 => Ybuff_i_q0,
+        t_address0 => Ybuff_t_address0,
+        t_ce0 => Ybuff_t_ce0,
+        t_we0 => Ybuff_t_we0,
+        t_d0 => Ybuff_t_d0,
+        t_q0 => Ybuff_t_q0,
+        i_ce => Ybuff_U_ap_dummy_ce,
+        t_ce => Ybuff_U_ap_dummy_ce,
+        i_full_n => Ybuff_i_full_n,
+        i_write => Ybuff_i_write,
+        t_empty_n => Ybuff_t_empty_n,
+        t_read => Ybuff_t_read);
+
     DCT_Loop_1_proc_U0 : component DCT_Loop_1_proc
     port map (
         ap_clk => ap_clk,
@@ -79,12 +230,71 @@ begin
         X_dout => DCT_Loop_1_proc_U0_X_dout,
         X_empty_n => DCT_Loop_1_proc_U0_X_empty_n,
         X_read => DCT_Loop_1_proc_U0_X_read,
-        Y_din => DCT_Loop_1_proc_U0_Y_din,
-        Y_full_n => DCT_Loop_1_proc_U0_Y_full_n,
-        Y_write => DCT_Loop_1_proc_U0_Y_write);
+        Xbuff_din => DCT_Loop_1_proc_U0_Xbuff_din,
+        Xbuff_full_n => DCT_Loop_1_proc_U0_Xbuff_full_n,
+        Xbuff_write => DCT_Loop_1_proc_U0_Xbuff_write);
+
+    DCT_Block_DCT_exit2_proc_U0 : component DCT_Block_DCT_exit2_proc
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => DCT_Block_DCT_exit2_proc_U0_ap_start,
+        ap_done => DCT_Block_DCT_exit2_proc_U0_ap_done,
+        ap_continue => DCT_Block_DCT_exit2_proc_U0_ap_continue,
+        ap_idle => DCT_Block_DCT_exit2_proc_U0_ap_idle,
+        ap_ready => DCT_Block_DCT_exit2_proc_U0_ap_ready,
+        Ybuff_address0 => DCT_Block_DCT_exit2_proc_U0_Ybuff_address0,
+        Ybuff_ce0 => DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0,
+        Ybuff_we0 => DCT_Block_DCT_exit2_proc_U0_Ybuff_we0,
+        Ybuff_d0 => DCT_Block_DCT_exit2_proc_U0_Ybuff_d0,
+        Xbuff_dout => DCT_Block_DCT_exit2_proc_U0_Xbuff_dout,
+        Xbuff_empty_n => DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n,
+        Xbuff_read => DCT_Block_DCT_exit2_proc_U0_Xbuff_read);
+
+    DCT_Loop_3_proc_U0 : component DCT_Loop_3_proc
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => DCT_Loop_3_proc_U0_ap_start,
+        ap_done => DCT_Loop_3_proc_U0_ap_done,
+        ap_continue => DCT_Loop_3_proc_U0_ap_continue,
+        ap_idle => DCT_Loop_3_proc_U0_ap_idle,
+        ap_ready => DCT_Loop_3_proc_U0_ap_ready,
+        Y_din => DCT_Loop_3_proc_U0_Y_din,
+        Y_full_n => DCT_Loop_3_proc_U0_Y_full_n,
+        Y_write => DCT_Loop_3_proc_U0_Y_write,
+        Ybuff_address0 => DCT_Loop_3_proc_U0_Ybuff_address0,
+        Ybuff_ce0 => DCT_Loop_3_proc_U0_Ybuff_ce0,
+        Ybuff_q0 => DCT_Loop_3_proc_U0_Ybuff_q0);
+
+    Xbuff_channel_U : component FIFO_DCT_Xbuff_channel
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        if_read_ce => Xbuff_channel_U_ap_dummy_ce,
+        if_write_ce => Xbuff_channel_U_ap_dummy_ce,
+        if_din => Xbuff_channel_din,
+        if_full_n => Xbuff_channel_full_n,
+        if_write => Xbuff_channel_write,
+        if_dout => Xbuff_channel_dout,
+        if_empty_n => Xbuff_channel_empty_n,
+        if_read => Xbuff_channel_read);
 
 
 
+
+
+    -- DCT_Block_DCT_exit2_proc_U0_ap_start assign process. --
+    DCT_Block_DCT_exit2_proc_U0_ap_start_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                DCT_Block_DCT_exit2_proc_U0_ap_start <= ap_const_logic_0;
+            else
+                DCT_Block_DCT_exit2_proc_U0_ap_start <= ap_const_logic_1;
+            end if;
+        end if;
+    end process;
 
 
     -- DCT_Loop_1_proc_U0_ap_start assign process. --
@@ -107,19 +317,43 @@ begin
             ap_CS <= ap_const_logic_0;
         end if;
     end process;
+    DCT_Block_DCT_exit2_proc_U0_Xbuff_dout <= Xbuff_channel_dout;
+    DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n <= Xbuff_channel_empty_n;
+    DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status <= Ybuff_i_full_n;
+    DCT_Block_DCT_exit2_proc_U0_ap_continue <= DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status;
     DCT_Loop_1_proc_U0_X_dout <= X_dout;
     DCT_Loop_1_proc_U0_X_empty_n <= X_empty_n;
-    DCT_Loop_1_proc_U0_Y_full_n <= Y_full_n;
+    DCT_Loop_1_proc_U0_Xbuff_full_n <= Xbuff_channel_full_n;
     DCT_Loop_1_proc_U0_ap_continue <= ap_const_logic_1;
+    DCT_Loop_3_proc_U0_Y_full_n <= Y_full_n;
+    DCT_Loop_3_proc_U0_Ybuff_q0 <= Ybuff_t_q0;
+    DCT_Loop_3_proc_U0_ap_continue <= ap_const_logic_1;
+    DCT_Loop_3_proc_U0_ap_start <= Ybuff_t_empty_n;
     X_read <= DCT_Loop_1_proc_U0_X_read;
-    Y_din <= DCT_Loop_1_proc_U0_Y_din;
-    Y_write <= DCT_Loop_1_proc_U0_Y_write;
+    Xbuff_channel_U_ap_dummy_ce <= ap_const_logic_1;
+    Xbuff_channel_din <= DCT_Loop_1_proc_U0_Xbuff_din;
+    Xbuff_channel_read <= DCT_Block_DCT_exit2_proc_U0_Xbuff_read;
+    Xbuff_channel_write <= DCT_Loop_1_proc_U0_Xbuff_write;
+    Y_din <= DCT_Loop_3_proc_U0_Y_din;
+    Y_write <= DCT_Loop_3_proc_U0_Y_write;
+    Ybuff_U_ap_dummy_ce <= ap_const_logic_1;
+    Ybuff_i_address0 <= DCT_Block_DCT_exit2_proc_U0_Ybuff_address0;
+    Ybuff_i_ce0 <= DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0;
+    Ybuff_i_d0 <= DCT_Block_DCT_exit2_proc_U0_Ybuff_d0;
+    Ybuff_i_we0 <= DCT_Block_DCT_exit2_proc_U0_Ybuff_we0;
+    Ybuff_i_write <= DCT_Block_DCT_exit2_proc_U0_ap_done;
+    Ybuff_t_address0 <= DCT_Loop_3_proc_U0_Ybuff_address0;
+    Ybuff_t_ce0 <= DCT_Loop_3_proc_U0_Ybuff_ce0;
+    Ybuff_t_d0 <= ap_const_lv32_0;
+    Ybuff_t_read <= DCT_Loop_3_proc_U0_ap_ready;
+    Ybuff_t_we0 <= ap_const_logic_0;
+    ap_chn_write_DCT_Block_DCT_exit2_proc_U0_Ybuff <= DCT_Block_DCT_exit2_proc_U0_ap_done;
     ap_sig_hs_continue <= ap_const_logic_0;
 
     -- ap_sig_hs_done assign process. --
-    ap_sig_hs_done_assign_proc : process(DCT_Loop_1_proc_U0_ap_done)
+    ap_sig_hs_done_assign_proc : process(DCT_Loop_3_proc_U0_ap_done)
     begin
-        if ((DCT_Loop_1_proc_U0_ap_done = ap_const_logic_1)) then 
+        if ((ap_const_logic_1 = DCT_Loop_3_proc_U0_ap_done)) then 
             ap_sig_hs_done <= ap_const_logic_1;
         else 
             ap_sig_hs_done <= ap_const_logic_0;

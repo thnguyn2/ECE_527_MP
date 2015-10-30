@@ -48,23 +48,27 @@
 
 
 // IP VLNV: Matrix_transform:hls:DCT:1.0
-// IP Revision: 1510292017
+// IP Revision: 1510292355
 
 (* X_CORE_INFO = "DCT,Vivado 2015.1" *)
 (* CHECK_LICENSE_TYPE = "DCT_0,DCT,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module DCT_0 (
+  ap_clk,
+  ap_rst,
   X_dout,
   X_empty_n,
   X_read,
   function_r,
   Y_din,
   Y_full_n,
-  Y_write,
-  ap_clk,
-  ap_rst
+  Y_write
 );
 
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
+input wire ap_clk;
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst RST" *)
+input wire ap_rst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_read:1.0 X RD_DATA" *)
 input wire [31 : 0] X_dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_read:1.0 X EMPTY_N" *)
@@ -79,20 +83,16 @@ output wire [31 : 0] Y_din;
 input wire Y_full_n;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_write:1.0 Y WR_EN" *)
 output wire Y_write;
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
-input wire ap_clk;
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst RST" *)
-input wire ap_rst;
 
   DCT inst (
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
     .X_dout(X_dout),
     .X_empty_n(X_empty_n),
     .X_read(X_read),
     .function_r(function_r),
     .Y_din(Y_din),
     .Y_full_n(Y_full_n),
-    .Y_write(Y_write),
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst)
+    .Y_write(Y_write)
   );
 endmodule

@@ -9,11 +9,11 @@ set C_modelName {DCT_Loop_1_proc}
 set C_modelType { void 0 }
 set C_modelArgList { 
 	{ X int 32 regular {fifo 0}  }
-	{ Y int 32 regular {fifo 1}  }
+	{ Xbuff float 32 regular {fifo 1 volatile }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "X", "interface" : "fifo", "bitwidth" : 32} , 
- 	{ "Name" : "Y", "interface" : "fifo", "bitwidth" : 32} ]}
+ 	{ "Name" : "Xbuff", "interface" : "fifo", "bitwidth" : 32} ]}
 # RTL Port declarations: 
 set portNum 13
 set portList { 
@@ -27,9 +27,9 @@ set portList {
 	{ X_dout sc_in sc_lv 32 signal 0 } 
 	{ X_empty_n sc_in sc_logic 1 signal 0 } 
 	{ X_read sc_out sc_logic 1 signal 0 } 
-	{ Y_din sc_out sc_lv 32 signal 1 } 
-	{ Y_full_n sc_in sc_logic 1 signal 1 } 
-	{ Y_write sc_out sc_logic 1 signal 1 } 
+	{ Xbuff_din sc_out sc_lv 32 signal 1 } 
+	{ Xbuff_full_n sc_in sc_logic 1 signal 1 } 
+	{ Xbuff_write sc_out sc_logic 1 signal 1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -42,10 +42,10 @@ set NewPortList {[
  	{ "name": "X_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "X", "role": "dout" }} , 
  	{ "name": "X_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "X", "role": "empty_n" }} , 
  	{ "name": "X_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "X", "role": "read" }} , 
- 	{ "name": "Y_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "Y", "role": "din" }} , 
- 	{ "name": "Y_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Y", "role": "full_n" }} , 
- 	{ "name": "Y_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Y", "role": "write" }}  ]}
+ 	{ "name": "Xbuff_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "Xbuff", "role": "din" }} , 
+ 	{ "name": "Xbuff_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Xbuff", "role": "full_n" }} , 
+ 	{ "name": "Xbuff_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Xbuff", "role": "write" }}  ]}
 set Spec2ImplPortList { 
 	X { ap_fifo {  { X_dout fifo_data 0 32 }  { X_empty_n fifo_status 0 1 }  { X_read fifo_update 1 1 } } }
-	Y { ap_fifo {  { Y_din fifo_data 1 32 }  { Y_full_n fifo_status 0 1 }  { Y_write fifo_update 1 1 } } }
+	Xbuff { ap_fifo {  { Xbuff_din fifo_data 1 32 }  { Xbuff_full_n fifo_status 0 1 }  { Xbuff_write fifo_update 1 1 } } }
 }

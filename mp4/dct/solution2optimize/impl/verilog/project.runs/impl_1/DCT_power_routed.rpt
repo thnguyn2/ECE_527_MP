@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date             : Thu Oct 29 20:21:43 2015
+| Date             : Thu Oct 29 23:58:59 2015
 | Host             : zombie running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file DCT_power_routed.rpt -pb DCT_power_summary_routed.pb
 | Design           : DCT
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.121 |
-| Dynamic (W)              | 0.002 |
+| Total On-Chip Power (W)  | 0.124 |
+| Dynamic (W)              | 0.005 |
 | Device Static (W)        | 0.118 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 83.6  |
@@ -46,21 +46,19 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.000 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |      326 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      103 |     53200 |            0.19 |
-|   Register              |    <0.001 |      169 |    106400 |            0.16 |
-|   CARRY4                |    <0.001 |        4 |     13300 |            0.03 |
-|   LUT as Shift Register |    <0.001 |        1 |     17400 |           <0.01 |
-|   Others                |     0.000 |       31 |       --- |             --- |
-| Signals                 |    <0.001 |      403 |       --- |             --- |
-| DSPs                    |     0.001 |        3 |       220 |            1.36 |
-| Static Power            |     0.118 |          |           |                 |
-| Total                   |     0.121 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.000 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      325 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      117 |     53200 |            0.22 |
+|   Register     |    <0.001 |      144 |    106400 |            0.14 |
+|   Others       |     0.000 |       15 |       --- |             --- |
+| Signals        |    <0.001 |      256 |       --- |             --- |
+| Block RAM      |     0.004 |        1 |       140 |            0.71 |
+| Static Power   |     0.118 |          |           |                 |
+| Total          |     0.124 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -69,7 +67,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.002 |      0.007 |
+| Vccint    |       1.000 |     0.013 |       0.005 |      0.008 |
 | Vccaux    |       1.800 |     0.019 |       0.000 |      0.019 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -78,7 +76,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -142,42 +140,17 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------------------------+-----------+
-| Name                                             | Power (W) |
-+--------------------------------------------------+-----------+
-| DCT                                              |     0.002 |
-|   DCT_Loop_1_proc_U0                             |     0.002 |
-|     DCT_fmul_32ns_32ns_32_4_max_dsp_U0           |     0.002 |
-|       DCT_ap_fmul_2_max_dsp_32_u                 |     0.002 |
-|         U0                                       |     0.002 |
-|           i_synth                                |     0.002 |
-|             MULT.OP                              |     0.002 |
-|               EXP                                |    <0.001 |
-|                 COND_DET_A                       |    <0.001 |
-|                   MANT_CARRY.MANT_ALL_ZERO_DET   |    <0.001 |
-|                     CARRY_ZERO_DET               |    <0.001 |
-|                 COND_DET_B                       |     0.000 |
-|                   MANT_CARRY.MANT_ALL_ZERO_DET   |     0.000 |
-|                     CARRY_ZERO_DET               |     0.000 |
-|                 EXP_ADD.C_CHAIN                  |    <0.001 |
-|                 EXP_PRE_RND_DEL                  |    <0.001 |
-|                   i_pipe                         |    <0.001 |
-|                 INV_OP_DEL                       |    <0.001 |
-|                   i_pipe                         |    <0.001 |
-|                 IP_SIGN_DELAY                    |    <0.001 |
-|                   i_pipe                         |    <0.001 |
-|                 SIG_DELAY                        |    <0.001 |
-|                   i_pipe                         |    <0.001 |
-|                 STATE_DELAY                      |    <0.001 |
-|                   i_pipe                         |    <0.001 |
-|               MULT                               |     0.001 |
-|                 DSP48E1_SPD_SGL_VARIANT.FIX_MULT |     0.001 |
-|                   DSP1                           |    <0.001 |
-|                   DSP2                           |     0.001 |
-|               OP                                 |    <0.001 |
-|               R_AND_R                            |    <0.001 |
-|                 LAT_OPT.FULL.R_AND_R             |    <0.001 |
-|                   DSP48E1_SGL_EXP_IP.OLD_ADD.ADD |    <0.001 |
-+--------------------------------------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| DCT                           |     0.005 |
+|   DCT_Block_DCT_exit2_proc_U0 |    <0.001 |
+|   DCT_Loop_1_proc_U0          |    <0.001 |
+|   DCT_Loop_3_proc_U0          |    <0.001 |
+|   Xbuff_channel_U             |     0.003 |
+|   Ybuff_U                     |     0.002 |
+|     DCT_Ybuff_memcore_U       |     0.002 |
+|       DCT_Ybuff_memcore_ram_U |     0.002 |
++-------------------------------+-----------+
 
 

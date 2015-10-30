@@ -12,11 +12,17 @@
 #include "AESL_pkg.h"
 
 #include "DCT_Loop_1_proc.h"
+#include "DCT_Block_DCT_exit2_proc.h"
+#include "DCT_Loop_3_proc.h"
+#include "DCT_Ybuff.h"
+#include "FIFO_DCT_Xbuff_channel.h"
 
 namespace ap_rtl {
 
 struct DCT : public sc_module {
     // Port declarations 9
+    sc_in_clk ap_clk;
+    sc_in< sc_logic > ap_rst;
     sc_in< sc_lv<32> > X_dout;
     sc_in< sc_logic > X_empty_n;
     sc_out< sc_logic > X_read;
@@ -24,8 +30,6 @@ struct DCT : public sc_module {
     sc_out< sc_lv<32> > Y_din;
     sc_in< sc_logic > Y_full_n;
     sc_out< sc_logic > Y_write;
-    sc_in_clk ap_clk;
-    sc_in< sc_logic > ap_rst;
 
 
     // Module declarations
@@ -38,7 +42,22 @@ struct DCT : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
+    DCT_Ybuff* Ybuff_U;
     DCT_Loop_1_proc* DCT_Loop_1_proc_U0;
+    DCT_Block_DCT_exit2_proc* DCT_Block_DCT_exit2_proc_U0;
+    DCT_Loop_3_proc* DCT_Loop_3_proc_U0;
+    FIFO_DCT_Xbuff_channel* Xbuff_channel_U;
+    sc_signal< sc_lv<7> > Ybuff_i_address0;
+    sc_signal< sc_logic > Ybuff_i_ce0;
+    sc_signal< sc_logic > Ybuff_i_we0;
+    sc_signal< sc_lv<32> > Ybuff_i_d0;
+    sc_signal< sc_lv<32> > Ybuff_i_q0;
+    sc_signal< sc_lv<7> > Ybuff_t_address0;
+    sc_signal< sc_logic > Ybuff_t_ce0;
+    sc_signal< sc_logic > Ybuff_t_we0;
+    sc_signal< sc_lv<32> > Ybuff_t_d0;
+    sc_signal< sc_lv<32> > Ybuff_t_q0;
+    sc_signal< sc_logic > Ybuff_U_ap_dummy_ce;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_ap_start;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_ap_done;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_ap_continue;
@@ -47,25 +66,85 @@ struct DCT : public sc_module {
     sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_X_dout;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_X_empty_n;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_X_read;
-    sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_Y_din;
-    sc_signal< sc_logic > DCT_Loop_1_proc_U0_Y_full_n;
-    sc_signal< sc_logic > DCT_Loop_1_proc_U0_Y_write;
+    sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_Xbuff_din;
+    sc_signal< sc_logic > DCT_Loop_1_proc_U0_Xbuff_full_n;
+    sc_signal< sc_logic > DCT_Loop_1_proc_U0_Xbuff_write;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_ap_start;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_ap_done;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_ap_continue;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_ap_idle;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_ap_ready;
+    sc_signal< sc_lv<7> > DCT_Block_DCT_exit2_proc_U0_Ybuff_address0;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_Ybuff_we0;
+    sc_signal< sc_lv<32> > DCT_Block_DCT_exit2_proc_U0_Ybuff_d0;
+    sc_signal< sc_lv<32> > DCT_Block_DCT_exit2_proc_U0_Xbuff_dout;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_Xbuff_read;
+    sc_signal< sc_logic > ap_chn_write_DCT_Block_DCT_exit2_proc_U0_Ybuff;
+    sc_signal< sc_logic > DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_start;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_done;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_continue;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_idle;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_ready;
+    sc_signal< sc_lv<32> > DCT_Loop_3_proc_U0_Y_din;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_Y_full_n;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_Y_write;
+    sc_signal< sc_lv<7> > DCT_Loop_3_proc_U0_Ybuff_address0;
+    sc_signal< sc_logic > DCT_Loop_3_proc_U0_Ybuff_ce0;
+    sc_signal< sc_lv<32> > DCT_Loop_3_proc_U0_Ybuff_q0;
     sc_signal< sc_logic > ap_sig_hs_continue;
+    sc_signal< sc_logic > Ybuff_i_full_n;
+    sc_signal< sc_logic > Ybuff_i_write;
+    sc_signal< sc_logic > Ybuff_t_empty_n;
+    sc_signal< sc_logic > Ybuff_t_read;
+    sc_signal< sc_logic > Xbuff_channel_U_ap_dummy_ce;
+    sc_signal< sc_lv<32> > Xbuff_channel_din;
+    sc_signal< sc_logic > Xbuff_channel_full_n;
+    sc_signal< sc_logic > Xbuff_channel_write;
+    sc_signal< sc_lv<32> > Xbuff_channel_dout;
+    sc_signal< sc_logic > Xbuff_channel_empty_n;
+    sc_signal< sc_logic > Xbuff_channel_read;
     sc_signal< sc_logic > ap_CS;
     sc_signal< sc_logic > ap_sig_hs_done;
+    static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<32> ap_const_lv32_0;
-    static const sc_logic ap_const_logic_1;
     static const bool ap_true;
     // Thread declarations
     void thread_ap_clk_no_reset_();
+    void thread_DCT_Block_DCT_exit2_proc_U0_Xbuff_dout();
+    void thread_DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n();
+    void thread_DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status();
+    void thread_DCT_Block_DCT_exit2_proc_U0_ap_continue();
     void thread_DCT_Loop_1_proc_U0_X_dout();
     void thread_DCT_Loop_1_proc_U0_X_empty_n();
-    void thread_DCT_Loop_1_proc_U0_Y_full_n();
+    void thread_DCT_Loop_1_proc_U0_Xbuff_full_n();
     void thread_DCT_Loop_1_proc_U0_ap_continue();
+    void thread_DCT_Loop_3_proc_U0_Y_full_n();
+    void thread_DCT_Loop_3_proc_U0_Ybuff_q0();
+    void thread_DCT_Loop_3_proc_U0_ap_continue();
+    void thread_DCT_Loop_3_proc_U0_ap_start();
     void thread_X_read();
+    void thread_Xbuff_channel_U_ap_dummy_ce();
+    void thread_Xbuff_channel_din();
+    void thread_Xbuff_channel_read();
+    void thread_Xbuff_channel_write();
     void thread_Y_din();
     void thread_Y_write();
+    void thread_Ybuff_U_ap_dummy_ce();
+    void thread_Ybuff_i_address0();
+    void thread_Ybuff_i_ce0();
+    void thread_Ybuff_i_d0();
+    void thread_Ybuff_i_we0();
+    void thread_Ybuff_i_write();
+    void thread_Ybuff_t_address0();
+    void thread_Ybuff_t_ce0();
+    void thread_Ybuff_t_d0();
+    void thread_Ybuff_t_read();
+    void thread_Ybuff_t_we0();
+    void thread_ap_chn_write_DCT_Block_DCT_exit2_proc_U0_Ybuff();
     void thread_ap_sig_hs_continue();
     void thread_ap_sig_hs_done();
     void thread_hdltv_gen();

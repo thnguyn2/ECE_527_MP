@@ -262,35 +262,43 @@ void DCT(int *X,unsigned char function,int *Y)
  //--------------------------------------------
  int colrcv, rowrcv;
  float Xbuff[8][8];
- float YBuff[8][8];
+ float Ybuff[65];
  int count =0;
  int temp;
  float tempout;
- int opt_type = *X++; //Read in the type of operation to perform
+ int opt_type;
+ int write_idx;
+ int dummy_data2 = *X++;
  //Read in the data
  for (rowrcv=0;rowrcv<8;rowrcv++)
   for (colrcv=0;colrcv<8;colrcv++)
   {
    temp = *X++; //Read the input data
    Xbuff[rowrcv][colrcv]=*(float *)&temp; //Copy the data into the array
-   tempout = Xbuff[rowrcv][colrcv]*3;
-   *Y++ = *(int *)&tempout;
    count++;
   }
+ //opt_type = *X++; //Read in the type of operation to perform
 #pragma empty_line
- /*
-	//Stream the data out
-	if (count==64)
-	{
-	//Now, stream the data out when receive enough data
-	for (rowrcv=0;rowrcv<8;rowrcv++)
-		for (colrcv=0;colrcv<8;colrcv++)
-		{
-			*Y++ = Xbuff[rowrcv][colrcv];
-		}
-		count = 0;
-	}
-	*/
+ Ybuff[64]=-1.0;
+ //Second test, wait to receive enough 64 bytes of data and send back the 64 bit value of the original data
+ if (count==64)
+ {
+ //Now, stream the data out when receive enough data
+ for (rowrcv=0;rowrcv<8;rowrcv++)
+  for (colrcv=0;colrcv<8;colrcv++)
+  {
+   Ybuff[rowrcv*8+colrcv] = Xbuff[rowrcv][colrcv];
+  }
+#pragma empty_line
+ for (write_idx=0;write_idx<65;write_idx++)
+ {
+  tempout = Ybuff[write_idx];
+  *Y++ = *(int *)&tempout;
+ }
+  count = 0;
+#pragma empty_line
+ }
+#pragma empty_line
 #pragma empty_line
  /*
 	float temp[MAT_SIZE][MAT_SIZE];

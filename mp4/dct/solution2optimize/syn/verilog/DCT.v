@@ -7,25 +7,27 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.702000,HLS_SYN_LAT=401,HLS_SYN_TPT=402,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=234,HLS_SYN_LUT=347}" *)
+(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.750000,HLS_SYN_LAT=221,HLS_SYN_TPT=132,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=110,HLS_SYN_LUT=166}" *)
 
 module DCT (
+        ap_clk,
+        ap_rst,
         X_dout,
         X_empty_n,
         X_read,
         function_r,
         Y_din,
         Y_full_n,
-        Y_write,
-        ap_clk,
-        ap_rst
+        Y_write
 );
 
+parameter    ap_const_logic_1 = 1'b1;
 parameter    ap_const_logic_0 = 1'b0;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
-parameter    ap_const_logic_1 = 1'b1;
 parameter    ap_true = 1'b1;
 
+input   ap_clk;
+input   ap_rst;
 input  [31:0] X_dout;
 input   X_empty_n;
 output   X_read;
@@ -33,9 +35,18 @@ input  [7:0] function_r;
 output  [31:0] Y_din;
 input   Y_full_n;
 output   Y_write;
-input   ap_clk;
-input   ap_rst;
 
+wire   [6:0] Ybuff_i_address0;
+wire    Ybuff_i_ce0;
+wire    Ybuff_i_we0;
+wire   [31:0] Ybuff_i_d0;
+wire   [31:0] Ybuff_i_q0;
+wire   [6:0] Ybuff_t_address0;
+wire    Ybuff_t_ce0;
+wire    Ybuff_t_we0;
+wire   [31:0] Ybuff_t_d0;
+wire   [31:0] Ybuff_t_q0;
+wire    Ybuff_U_ap_dummy_ce;
 reg    DCT_Loop_1_proc_U0_ap_start = 1'b0;
 wire    DCT_Loop_1_proc_U0_ap_done;
 wire    DCT_Loop_1_proc_U0_ap_continue;
@@ -44,13 +55,74 @@ wire    DCT_Loop_1_proc_U0_ap_ready;
 wire   [31:0] DCT_Loop_1_proc_U0_X_dout;
 wire    DCT_Loop_1_proc_U0_X_empty_n;
 wire    DCT_Loop_1_proc_U0_X_read;
-wire   [31:0] DCT_Loop_1_proc_U0_Y_din;
-wire    DCT_Loop_1_proc_U0_Y_full_n;
-wire    DCT_Loop_1_proc_U0_Y_write;
+wire   [31:0] DCT_Loop_1_proc_U0_Xbuff_din;
+wire    DCT_Loop_1_proc_U0_Xbuff_full_n;
+wire    DCT_Loop_1_proc_U0_Xbuff_write;
+reg    DCT_Block_DCT_exit2_proc_U0_ap_start = 1'b0;
+wire    DCT_Block_DCT_exit2_proc_U0_ap_done;
+wire    DCT_Block_DCT_exit2_proc_U0_ap_continue;
+wire    DCT_Block_DCT_exit2_proc_U0_ap_idle;
+wire    DCT_Block_DCT_exit2_proc_U0_ap_ready;
+wire   [6:0] DCT_Block_DCT_exit2_proc_U0_Ybuff_address0;
+wire    DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0;
+wire    DCT_Block_DCT_exit2_proc_U0_Ybuff_we0;
+wire   [31:0] DCT_Block_DCT_exit2_proc_U0_Ybuff_d0;
+wire   [31:0] DCT_Block_DCT_exit2_proc_U0_Xbuff_dout;
+wire    DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n;
+wire    DCT_Block_DCT_exit2_proc_U0_Xbuff_read;
+wire    ap_chn_write_DCT_Block_DCT_exit2_proc_U0_Ybuff;
+wire    DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status;
+wire    DCT_Loop_3_proc_U0_ap_start;
+wire    DCT_Loop_3_proc_U0_ap_done;
+wire    DCT_Loop_3_proc_U0_ap_continue;
+wire    DCT_Loop_3_proc_U0_ap_idle;
+wire    DCT_Loop_3_proc_U0_ap_ready;
+wire   [31:0] DCT_Loop_3_proc_U0_Y_din;
+wire    DCT_Loop_3_proc_U0_Y_full_n;
+wire    DCT_Loop_3_proc_U0_Y_write;
+wire   [6:0] DCT_Loop_3_proc_U0_Ybuff_address0;
+wire    DCT_Loop_3_proc_U0_Ybuff_ce0;
+wire   [31:0] DCT_Loop_3_proc_U0_Ybuff_q0;
 wire    ap_sig_hs_continue;
+wire    Ybuff_i_full_n;
+wire    Ybuff_i_write;
+wire    Ybuff_t_empty_n;
+wire    Ybuff_t_read;
+wire    Xbuff_channel_U_ap_dummy_ce;
+wire   [31:0] Xbuff_channel_din;
+wire    Xbuff_channel_full_n;
+wire    Xbuff_channel_write;
+wire   [31:0] Xbuff_channel_dout;
+wire    Xbuff_channel_empty_n;
+wire    Xbuff_channel_read;
 reg    ap_CS;
 reg    ap_sig_hs_done;
 
+
+DCT_Ybuff #(
+    .DataWidth( 32 ),
+    .AddressRange( 65 ),
+    .AddressWidth( 7 ))
+Ybuff_U(
+    .clk( ap_clk ),
+    .reset( ap_rst ),
+    .i_address0( Ybuff_i_address0 ),
+    .i_ce0( Ybuff_i_ce0 ),
+    .i_we0( Ybuff_i_we0 ),
+    .i_d0( Ybuff_i_d0 ),
+    .i_q0( Ybuff_i_q0 ),
+    .t_address0( Ybuff_t_address0 ),
+    .t_ce0( Ybuff_t_ce0 ),
+    .t_we0( Ybuff_t_we0 ),
+    .t_d0( Ybuff_t_d0 ),
+    .t_q0( Ybuff_t_q0 ),
+    .i_ce( Ybuff_U_ap_dummy_ce ),
+    .t_ce( Ybuff_U_ap_dummy_ce ),
+    .i_full_n( Ybuff_i_full_n ),
+    .i_write( Ybuff_i_write ),
+    .t_empty_n( Ybuff_t_empty_n ),
+    .t_read( Ybuff_t_read )
+);
 
 DCT_Loop_1_proc DCT_Loop_1_proc_U0(
     .ap_clk( ap_clk ),
@@ -63,12 +135,68 @@ DCT_Loop_1_proc DCT_Loop_1_proc_U0(
     .X_dout( DCT_Loop_1_proc_U0_X_dout ),
     .X_empty_n( DCT_Loop_1_proc_U0_X_empty_n ),
     .X_read( DCT_Loop_1_proc_U0_X_read ),
-    .Y_din( DCT_Loop_1_proc_U0_Y_din ),
-    .Y_full_n( DCT_Loop_1_proc_U0_Y_full_n ),
-    .Y_write( DCT_Loop_1_proc_U0_Y_write )
+    .Xbuff_din( DCT_Loop_1_proc_U0_Xbuff_din ),
+    .Xbuff_full_n( DCT_Loop_1_proc_U0_Xbuff_full_n ),
+    .Xbuff_write( DCT_Loop_1_proc_U0_Xbuff_write )
+);
+
+DCT_Block_DCT_exit2_proc DCT_Block_DCT_exit2_proc_U0(
+    .ap_clk( ap_clk ),
+    .ap_rst( ap_rst ),
+    .ap_start( DCT_Block_DCT_exit2_proc_U0_ap_start ),
+    .ap_done( DCT_Block_DCT_exit2_proc_U0_ap_done ),
+    .ap_continue( DCT_Block_DCT_exit2_proc_U0_ap_continue ),
+    .ap_idle( DCT_Block_DCT_exit2_proc_U0_ap_idle ),
+    .ap_ready( DCT_Block_DCT_exit2_proc_U0_ap_ready ),
+    .Ybuff_address0( DCT_Block_DCT_exit2_proc_U0_Ybuff_address0 ),
+    .Ybuff_ce0( DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0 ),
+    .Ybuff_we0( DCT_Block_DCT_exit2_proc_U0_Ybuff_we0 ),
+    .Ybuff_d0( DCT_Block_DCT_exit2_proc_U0_Ybuff_d0 ),
+    .Xbuff_dout( DCT_Block_DCT_exit2_proc_U0_Xbuff_dout ),
+    .Xbuff_empty_n( DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n ),
+    .Xbuff_read( DCT_Block_DCT_exit2_proc_U0_Xbuff_read )
+);
+
+DCT_Loop_3_proc DCT_Loop_3_proc_U0(
+    .ap_clk( ap_clk ),
+    .ap_rst( ap_rst ),
+    .ap_start( DCT_Loop_3_proc_U0_ap_start ),
+    .ap_done( DCT_Loop_3_proc_U0_ap_done ),
+    .ap_continue( DCT_Loop_3_proc_U0_ap_continue ),
+    .ap_idle( DCT_Loop_3_proc_U0_ap_idle ),
+    .ap_ready( DCT_Loop_3_proc_U0_ap_ready ),
+    .Y_din( DCT_Loop_3_proc_U0_Y_din ),
+    .Y_full_n( DCT_Loop_3_proc_U0_Y_full_n ),
+    .Y_write( DCT_Loop_3_proc_U0_Y_write ),
+    .Ybuff_address0( DCT_Loop_3_proc_U0_Ybuff_address0 ),
+    .Ybuff_ce0( DCT_Loop_3_proc_U0_Ybuff_ce0 ),
+    .Ybuff_q0( DCT_Loop_3_proc_U0_Ybuff_q0 )
+);
+
+FIFO_DCT_Xbuff_channel Xbuff_channel_U(
+    .clk( ap_clk ),
+    .reset( ap_rst ),
+    .if_read_ce( Xbuff_channel_U_ap_dummy_ce ),
+    .if_write_ce( Xbuff_channel_U_ap_dummy_ce ),
+    .if_din( Xbuff_channel_din ),
+    .if_full_n( Xbuff_channel_full_n ),
+    .if_write( Xbuff_channel_write ),
+    .if_dout( Xbuff_channel_dout ),
+    .if_empty_n( Xbuff_channel_empty_n ),
+    .if_read( Xbuff_channel_read )
 );
 
 
+
+/// DCT_Block_DCT_exit2_proc_U0_ap_start assign process. ///
+always @ (posedge ap_clk)
+begin : ap_ret_DCT_Block_DCT_exit2_proc_U0_ap_start
+    if (ap_rst == 1'b1) begin
+        DCT_Block_DCT_exit2_proc_U0_ap_start <= ap_const_logic_0;
+    end else begin
+        DCT_Block_DCT_exit2_proc_U0_ap_start <= ap_const_logic_1;
+    end
+end
 
 /// DCT_Loop_1_proc_U0_ap_start assign process. ///
 always @ (posedge ap_clk)
@@ -87,21 +215,45 @@ begin
 end
 
 /// ap_sig_hs_done assign process. ///
-always @ (DCT_Loop_1_proc_U0_ap_done)
+always @ (DCT_Loop_3_proc_U0_ap_done)
 begin
-    if ((DCT_Loop_1_proc_U0_ap_done == ap_const_logic_1)) begin
+    if ((ap_const_logic_1 == DCT_Loop_3_proc_U0_ap_done)) begin
         ap_sig_hs_done = ap_const_logic_1;
     end else begin
         ap_sig_hs_done = ap_const_logic_0;
     end
 end
+assign DCT_Block_DCT_exit2_proc_U0_Xbuff_dout = Xbuff_channel_dout;
+assign DCT_Block_DCT_exit2_proc_U0_Xbuff_empty_n = Xbuff_channel_empty_n;
+assign DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status = Ybuff_i_full_n;
+assign DCT_Block_DCT_exit2_proc_U0_ap_continue = DCT_Block_DCT_exit2_proc_U0_Ybuff_pipo_status;
 assign DCT_Loop_1_proc_U0_X_dout = X_dout;
 assign DCT_Loop_1_proc_U0_X_empty_n = X_empty_n;
-assign DCT_Loop_1_proc_U0_Y_full_n = Y_full_n;
+assign DCT_Loop_1_proc_U0_Xbuff_full_n = Xbuff_channel_full_n;
 assign DCT_Loop_1_proc_U0_ap_continue = ap_const_logic_1;
+assign DCT_Loop_3_proc_U0_Y_full_n = Y_full_n;
+assign DCT_Loop_3_proc_U0_Ybuff_q0 = Ybuff_t_q0;
+assign DCT_Loop_3_proc_U0_ap_continue = ap_const_logic_1;
+assign DCT_Loop_3_proc_U0_ap_start = Ybuff_t_empty_n;
 assign X_read = DCT_Loop_1_proc_U0_X_read;
-assign Y_din = DCT_Loop_1_proc_U0_Y_din;
-assign Y_write = DCT_Loop_1_proc_U0_Y_write;
+assign Xbuff_channel_U_ap_dummy_ce = ap_const_logic_1;
+assign Xbuff_channel_din = DCT_Loop_1_proc_U0_Xbuff_din;
+assign Xbuff_channel_read = DCT_Block_DCT_exit2_proc_U0_Xbuff_read;
+assign Xbuff_channel_write = DCT_Loop_1_proc_U0_Xbuff_write;
+assign Y_din = DCT_Loop_3_proc_U0_Y_din;
+assign Y_write = DCT_Loop_3_proc_U0_Y_write;
+assign Ybuff_U_ap_dummy_ce = ap_const_logic_1;
+assign Ybuff_i_address0 = DCT_Block_DCT_exit2_proc_U0_Ybuff_address0;
+assign Ybuff_i_ce0 = DCT_Block_DCT_exit2_proc_U0_Ybuff_ce0;
+assign Ybuff_i_d0 = DCT_Block_DCT_exit2_proc_U0_Ybuff_d0;
+assign Ybuff_i_we0 = DCT_Block_DCT_exit2_proc_U0_Ybuff_we0;
+assign Ybuff_i_write = DCT_Block_DCT_exit2_proc_U0_ap_done;
+assign Ybuff_t_address0 = DCT_Loop_3_proc_U0_Ybuff_address0;
+assign Ybuff_t_ce0 = DCT_Loop_3_proc_U0_Ybuff_ce0;
+assign Ybuff_t_d0 = ap_const_lv32_0;
+assign Ybuff_t_read = DCT_Loop_3_proc_U0_ap_ready;
+assign Ybuff_t_we0 = ap_const_logic_0;
+assign ap_chn_write_DCT_Block_DCT_exit2_proc_U0_Ybuff = DCT_Block_DCT_exit2_proc_U0_ap_done;
 assign ap_sig_hs_continue = ap_const_logic_0;
 
 

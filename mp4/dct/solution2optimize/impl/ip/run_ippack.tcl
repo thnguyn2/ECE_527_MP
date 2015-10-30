@@ -34,7 +34,7 @@ set Library     "hls"
 set IPName      "DCT"
 set Version     "1.0"
 set DisplayName "Dct"
-set Revision    "1510292017"
+set Revision    "1510292355"
 set Description "IP generated for matrix transformation on 8 x 8 block"
 set Device      "zynq"
 set Taxonomy    "/VIVADO_HLS_IP"
@@ -50,6 +50,28 @@ set BDFiles [glob -nocomplain bd/*]
 set ConstraintFiles [glob -nocomplain constraints/*]
 set MiscFiles [glob -nocomplain misc/*]
 set Interfaces {
+    ap_clk {
+        type "clock"
+        ctype {
+            CLK {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+        }
+        buses ""
+    }
+    ap_rst {
+        type "reset"
+        polarity "ACTIVE_HIGH"
+        ctype {
+            RST {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+        }
+    }
     X {
         type "ap_fifo"
         fifo_width "32"
@@ -100,28 +122,6 @@ set Interfaces {
                 Bits "1"
             }
             WR_EN {
-                Type "bool"
-                Width "1"
-                Bits "1"
-            }
-        }
-    }
-    ap_clk {
-        type "clock"
-        ctype {
-            CLK {
-                Type "bool"
-                Width "1"
-                Bits "1"
-            }
-        }
-        buses ""
-    }
-    ap_rst {
-        type "reset"
-        polarity "ACTIVE_HIGH"
-        ctype {
-            RST {
                 Type "bool"
                 Width "1"
                 Bits "1"
@@ -1542,7 +1542,7 @@ if {![regexp -nocase {2014\.3.*} $vivado_version match]} {
 ipx::create_xgui_files -logo_file misc/logo.png $core
 
 ## System Info
-set user_parameters_list {clk_period 10.000000 machine 64 combinational 0 latency 401 II x}
+set user_parameters_list {clk_period 10.000000 machine 64 combinational 0 latency 221 II x}
 foreach {user_para value} $user_parameters_list {
     incr user_parameter_order
     set user_para_value [ipx::add_user_parameter $user_para $core]

@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_Block_DCT_exit2_proc'
+================================================================
+* Date:           Thu Oct 29 23:53:05 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.09|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   81|   81|   81|   81|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   80|   80|        10|          -|          -|     8|    no    |
+        | + Loop 1.1  |    8|    8|         1|          -|          -|     8|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond3)
+3 --> 
+	2  / (exitcond2)
+	3  / (!exitcond2)
+* FSM state operations: 
+
+ <State 1>: 2.71ns
+ST_1: stg_4 [1/1] 0.00ns
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(float* %Xbuff, [8 x i8]* @str16, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str16, [8 x i8]* @str16, [8 x i8]* @str16)
+
+ST_1: Ybuff_addr [1/1] 0.00ns
+newFuncRoot:1  %Ybuff_addr = getelementptr inbounds [65 x float]* %Ybuff, i64 0, i64 64
+
+ST_1: stg_6 [1/1] 2.71ns
+newFuncRoot:2  store float -1.000000e+00, float* %Ybuff_addr, align 16
+
+ST_1: stg_7 [1/1] 1.57ns
+newFuncRoot:3  br label %.loopexit
+
+
+ <State 2>: 1.88ns
+ST_2: rowrcv_1 [1/1] 0.00ns
+.loopexit:0  %rowrcv_1 = phi i4 [ 0, %newFuncRoot ], [ %rowrcv, %.preheader10 ]
+
+ST_2: exitcond3 [1/1] 1.88ns
+.loopexit:1  %exitcond3 = icmp eq i4 %rowrcv_1, -8
+
+ST_2: empty [1/1] 0.00ns
+.loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
+
+ST_2: rowrcv [1/1] 0.80ns
+.loopexit:3  %rowrcv = add i4 %rowrcv_1, 1
+
+ST_2: stg_12 [1/1] 0.00ns
+.loopexit:4  br i1 %exitcond3, label %.preheader.exitStub, label %.preheader10.preheader
+
+ST_2: tmp [1/1] 0.00ns
+.preheader10.preheader:0  %tmp = trunc i4 %rowrcv_1 to i3
+
+ST_2: tmp_2 [1/1] 0.00ns
+.preheader10.preheader:1  %tmp_2 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %tmp, i3 0)
+
+ST_2: stg_15 [1/1] 1.57ns
+.preheader10.preheader:2  br label %.preheader10
+
+ST_2: stg_16 [1/1] 0.00ns
+.preheader.exitStub:0  ret void
+
+
+ <State 3>: 7.09ns
+ST_3: colrcv_1 [1/1] 0.00ns
+.preheader10:0  %colrcv_1 = phi i4 [ %colrcv, %0 ], [ 0, %.preheader10.preheader ]
+
+ST_3: colrcv_1_cast [1/1] 0.00ns
+.preheader10:1  %colrcv_1_cast = zext i4 %colrcv_1 to i6
+
+ST_3: exitcond2 [1/1] 1.88ns
+.preheader10:2  %exitcond2 = icmp eq i4 %colrcv_1, -8
+
+ST_3: empty_5 [1/1] 0.00ns
+.preheader10:3  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
+
+ST_3: colrcv [1/1] 0.80ns
+.preheader10:4  %colrcv = add i4 %colrcv_1, 1
+
+ST_3: stg_22 [1/1] 0.00ns
+.preheader10:5  br i1 %exitcond2, label %.loopexit, label %0
+
+ST_3: Xbuff_read [1/1] 4.38ns
+:0  %Xbuff_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %Xbuff)
+
+ST_3: tmp_3 [1/1] 1.72ns
+:1  %tmp_3 = add i6 %tmp_2, %colrcv_1_cast
+
+ST_3: tmp_6 [1/1] 0.00ns
+:2  %tmp_6 = zext i6 %tmp_3 to i64
+
+ST_3: Ybuff_addr_1 [1/1] 0.00ns
+:3  %Ybuff_addr_1 = getelementptr inbounds [65 x float]* %Ybuff, i64 0, i64 %tmp_6
+
+ST_3: stg_27 [1/1] 2.71ns
+:4  store float %Xbuff_read, float* %Ybuff_addr_1, align 4
+
+ST_3: stg_28 [1/1] 0.00ns
+:5  br label %.preheader10
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

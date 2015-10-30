@@ -12,8 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [RTGEN-101] Port 'DCT/function_r' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="dct" solutionName="solution2optimize" date="2015-10-29T20:16:35.389-0500" type="Warning"/>
-        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution2optimize" date="2015-10-29T20:16:33.950-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'DCT/function_r' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="dct" solutionName="solution2optimize" date="2015-10-29T23:53:06.511-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution2optimize" date="2015-10-29T23:53:05.530-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_Block_DCT_.exit2_proc' to 'DCT_Block_DCT_exit2_proc'." projectName="dct" solutionName="solution2optimize" date="2015-10-29T23:53:05.523-0500" type="Warning"/>
         <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.593-0500" type="Warning"/>
         <logs message="@W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.577-0500" type="Warning"/>
         <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply2_Loop_Col_proc2911' (dct/matrixmath.c:43:23) into MAT_Multiply2_Loop_Col_proc291." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.453-0500" type="Warning"/>
