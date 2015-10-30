@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_1_proc'
 ================================================================
-* Date:           Thu Oct 29 23:53:05 2015
+* Date:           Fri Oct 30 07:58:50 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -20,7 +20,7 @@
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |  10.00|      8.75|        1.25|
+    |default  |  10.00|      7.09|        1.25|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |   81|   81|   81|   81|   none  |
+    |   66|   66|   66|   66|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -37,13 +37,12 @@
         N/A
 
         * Loop: 
-        +-------------+-----+-----+----------+-----------+-----------+------+----------+
-        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
-        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
-        +-------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- Loop 1     |   80|   80|        10|          -|          -|     8|    no    |
-        | + Loop 1.1  |    8|    8|         1|          -|          -|     8|    no    |
-        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   65|   65|         1|          -|          -|    65|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
 
 
 
@@ -121,7 +120,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 3
+* Number of FSM states: 2
 * Pipeline: 0
 * Dataflow Pipeline: 0
 
@@ -129,70 +128,53 @@ IsGatedGlobalClock: 0
 1 --> 
 	2  / true
 2 --> 
-	3  / (!exitcond7_i_i)
-3 --> 
-	2  / (exitcond1)
-	3  / (!exitcond1)
+	2  / (!exitcond9)
 * FSM state operations: 
 
  <State 1>: 1.57ns
-ST_1: stg_4 [1/1] 0.00ns
+ST_1: stg_3 [1/1] 0.00ns
 newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
 
-ST_1: stg_5 [1/1] 0.00ns
-newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(float* %Xbuff, [8 x i8]* @str14, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str14, [8 x i8]* @str14, [8 x i8]* @str14)
-
-ST_1: stg_6 [1/1] 1.57ns
-newFuncRoot:2  br label %.loopexit
+ST_1: stg_4 [1/1] 1.57ns
+newFuncRoot:1  br label %0
 
 
- <State 2>: 3.45ns
-ST_2: rowrcv_0_i_i [1/1] 0.00ns
-.loopexit:0  %rowrcv_0_i_i = phi i4 [ 0, %newFuncRoot ], [ %rowrcv, %.preheader11.i.i ]
+ <State 2>: 7.09ns
+ST_2: read_idx_0_i_i [1/1] 0.00ns
+:0  %read_idx_0_i_i = phi i7 [ 0, %newFuncRoot ], [ %read_idx, %1 ]
 
-ST_2: exitcond7_i_i [1/1] 1.88ns
-.loopexit:1  %exitcond7_i_i = icmp eq i4 %rowrcv_0_i_i, -8
+ST_2: p_0_rec_i_i_cast [1/1] 0.00ns
+:1  %p_0_rec_i_i_cast = zext i7 %read_idx_0_i_i to i64
 
 ST_2: empty [1/1] 0.00ns
-.loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind
 
-ST_2: rowrcv [1/1] 0.80ns
-.loopexit:3  %rowrcv = add i4 %rowrcv_0_i_i, 1
+ST_2: exitcond9 [1/1] 1.97ns
+:3  %exitcond9 = icmp eq i7 %read_idx_0_i_i, -63
 
-ST_2: stg_11 [1/1] 1.57ns
-.loopexit:4  br i1 %exitcond7_i_i, label %DCT_.exit2.exitStub, label %.preheader11.i.i
+ST_2: read_idx [1/1] 1.72ns
+:4  %read_idx = add i7 %read_idx_0_i_i, 1
 
-ST_2: stg_12 [1/1] 0.00ns
-DCT_.exit2.exitStub:0  ret void
+ST_2: stg_10 [1/1] 0.00ns
+:5  br i1 %exitcond9, label %.preheader.exitStub, label %1
 
+ST_2: tempin [1/1] 4.38ns
+:0  %tempin = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X) nounwind
 
- <State 3>: 8.75ns
-ST_3: p_1_rec_i_i [1/1] 0.00ns
-.preheader11.i.i:0  %p_1_rec_i_i = phi i4 [ %p_rec4_i_i, %0 ], [ 0, %.loopexit ]
+ST_2: tmp_i [1/1] 0.00ns
+:1  %tmp_i = bitcast i32 %tempin to float
 
-ST_3: empty_6 [1/1] 0.00ns
-.preheader11.i.i:1  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
+ST_2: Xbuff_addr [1/1] 0.00ns
+:2  %Xbuff_addr = getelementptr inbounds [65 x float]* %Xbuff, i64 0, i64 %p_0_rec_i_i_cast
 
-ST_3: exitcond1 [1/1] 1.88ns
-.preheader11.i.i:2  %exitcond1 = icmp eq i4 %p_1_rec_i_i, -8
+ST_2: stg_14 [1/1] 2.71ns
+:3  store float %tmp_i, float* %Xbuff_addr, align 4
 
-ST_3: p_rec4_i_i [1/1] 0.80ns
-.preheader11.i.i:3  %p_rec4_i_i = add i4 %p_1_rec_i_i, 1
+ST_2: stg_15 [1/1] 0.00ns
+:4  br label %0
 
-ST_3: stg_17 [1/1] 0.00ns
-.preheader11.i.i:4  br i1 %exitcond1, label %.loopexit, label %0
-
-ST_3: temp [1/1] 4.38ns
-:0  %temp = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X)
-
-ST_3: tmp_4_i [1/1] 0.00ns
-:1  %tmp_4_i = bitcast i32 %temp to float
-
-ST_3: stg_20 [1/1] 4.38ns
-:2  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %Xbuff, float %tmp_4_i)
-
-ST_3: stg_21 [1/1] 0.00ns
-:3  br label %.preheader11.i.i
+ST_2: stg_16 [1/1] 0.00ns
+.preheader.exitStub:0  ret void
 
 
 
@@ -205,7 +187,6 @@ N/A
   - Chain level:
 	State 1
 	State 2
-	State 3
 
 
 ============================================================

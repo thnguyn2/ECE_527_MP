@@ -22,7 +22,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 251.844 ; gain = 72.441
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 252.402 ; gain = 72.887
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DCT_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/synth/DCT_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'DCT' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT.v:12]
@@ -30,62 +30,40 @@ INFO: [Synth 8-638] synthesizing module 'DCT' [e:/Ubuntu_source_code_data/ECE_52
 	Parameter ap_const_logic_0 bound to: 1'b0 
 	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
 	Parameter ap_true bound to: 1'b1 
-INFO: [Synth 8-638] synthesizing module 'DCT_Ybuff' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff.v:11]
+INFO: [Synth 8-638] synthesizing module 'DCT_Xbuff' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff.v:11]
 	Parameter DataWidth bound to: 32 - type: integer 
 	Parameter AddressRange bound to: 65 - type: integer 
 	Parameter AddressWidth bound to: 7 - type: integer 
 	Parameter BufferCount bound to: 2 - type: integer 
 	Parameter IndexWidth bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'DCT_Ybuff_memcore' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff_memcore.v:66]
+INFO: [Synth 8-638] synthesizing module 'DCT_Xbuff_memcore' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff_memcore.v:66]
 	Parameter DataWidth bound to: 32 - type: integer 
 	Parameter AddressRange bound to: 130 - type: integer 
 	Parameter AddressWidth bound to: 8 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'DCT_Ybuff_memcore_ram' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff_memcore.v:9]
+INFO: [Synth 8-638] synthesizing module 'DCT_Xbuff_memcore_ram' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff_memcore.v:9]
 	Parameter DWIDTH bound to: 32 - type: integer 
 	Parameter AWIDTH bound to: 8 - type: integer 
 	Parameter MEM_SIZE bound to: 130 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff_memcore.v:27]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Ybuff_memcore_ram' (1#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff_memcore.v:9]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Ybuff_memcore' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff_memcore.v:66]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Ybuff' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Ybuff.v:11]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff_memcore.v:27]
+INFO: [Synth 8-256] done synthesizing module 'DCT_Xbuff_memcore_ram' (1#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff_memcore.v:9]
+INFO: [Synth 8-256] done synthesizing module 'DCT_Xbuff_memcore' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff_memcore.v:66]
+INFO: [Synth 8-256] done synthesizing module 'DCT_Xbuff' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Xbuff.v:11]
 INFO: [Synth 8-638] synthesizing module 'DCT_Loop_1_proc' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_1_proc.v:10]
 	Parameter ap_const_logic_1 bound to: 1'b1 
 	Parameter ap_const_logic_0 bound to: 1'b0 
-	Parameter ap_ST_st1_fsm_0 bound to: 3'b001 
-	Parameter ap_ST_st2_fsm_1 bound to: 3'b010 
-	Parameter ap_ST_st3_fsm_2 bound to: 3'b100 
+	Parameter ap_ST_st1_fsm_0 bound to: 2'b01 
+	Parameter ap_ST_st2_fsm_1 bound to: 2'b10 
 	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
 	Parameter ap_const_lv1_1 bound to: 1'b1 
 	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
-	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
 	Parameter ap_const_lv1_0 bound to: 1'b0 
-	Parameter ap_const_lv4_0 bound to: 4'b0000 
-	Parameter ap_const_lv4_8 bound to: 4'b1000 
-	Parameter ap_const_lv4_1 bound to: 4'b0001 
+	Parameter ap_const_lv7_0 bound to: 7'b0000000 
+	Parameter ap_const_lv7_41 bound to: 7'b1000001 
+	Parameter ap_const_lv7_1 bound to: 7'b0000001 
 	Parameter ap_true bound to: 1'b1 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_1_proc.v:61]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_1_proc.v:62]
 INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_1_proc' (4#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_1_proc.v:10]
-INFO: [Synth 8-638] synthesizing module 'DCT_Block_DCT_exit2_proc' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Block_DCT_exit2_proc.v:10]
-	Parameter ap_const_logic_1 bound to: 1'b1 
-	Parameter ap_const_logic_0 bound to: 1'b0 
-	Parameter ap_ST_st1_fsm_0 bound to: 3'b001 
-	Parameter ap_ST_st2_fsm_1 bound to: 3'b010 
-	Parameter ap_ST_st3_fsm_2 bound to: 3'b100 
-	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
-	Parameter ap_const_lv1_1 bound to: 1'b1 
-	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
-	Parameter ap_const_lv1_0 bound to: 1'b0 
-	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
-	Parameter ap_const_lv4_0 bound to: 4'b0000 
-	Parameter ap_const_lv64_40 bound to: 64'b0000000000000000000000000000000000000000000000000000000001000000 
-	Parameter ap_const_lv32_BF800000 bound to: -1082130432 - type: integer 
-	Parameter ap_const_lv4_8 bound to: 4'b1000 
-	Parameter ap_const_lv4_1 bound to: 4'b0001 
-	Parameter ap_const_lv3_0 bound to: 3'b000 
-	Parameter ap_true bound to: 1'b1 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Block_DCT_exit2_proc.v:69]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Block_DCT_exit2_proc' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Block_DCT_exit2_proc.v:10]
-INFO: [Synth 8-638] synthesizing module 'DCT_Loop_3_proc' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_3_proc.v:10]
+INFO: [Synth 8-638] synthesizing module 'DCT_Loop_2_proc' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_2_proc.v:10]
 	Parameter ap_const_logic_1 bound to: 1'b1 
 	Parameter ap_const_logic_0 bound to: 1'b0 
 	Parameter ap_ST_st1_fsm_0 bound to: 3'b001 
@@ -99,20 +77,15 @@ INFO: [Synth 8-638] synthesizing module 'DCT_Loop_3_proc' [e:/Ubuntu_source_code
 	Parameter ap_const_lv7_0 bound to: 7'b0000000 
 	Parameter ap_const_lv7_41 bound to: 7'b1000001 
 	Parameter ap_const_lv7_1 bound to: 7'b0000001 
+	Parameter ap_const_lv32_6 bound to: 6 - type: integer 
 	Parameter ap_true bound to: 1'b1 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_3_proc.v:61]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_3_proc' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_3_proc.v:10]
-INFO: [Synth 8-638] synthesizing module 'FIFO_DCT_Xbuff_channel' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/FIFO_DCT_Xbuff_channel.v:11]
-	Parameter MEM_STYLE bound to: block - type: string 
-	Parameter DATA_WIDTH bound to: 32 - type: integer 
-	Parameter ADDR_WIDTH bound to: 6 - type: integer 
-	Parameter DEPTH bound to: 64 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'FIFO_DCT_Xbuff_channel' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/FIFO_DCT_Xbuff_channel.v:11]
-INFO: [Synth 8-4471] merging register 'DCT_Loop_1_proc_U0_ap_start_reg' into 'DCT_Block_DCT_exit2_proc_U0_ap_start_reg' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT.v:130]
-INFO: [Synth 8-256] done synthesizing module 'DCT' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT.v:12]
-INFO: [Synth 8-256] done synthesizing module 'DCT_0' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/synth/DCT_0.v:56]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_2_proc.v:62]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_2_proc.v:247]
+INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_2_proc' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT_Loop_2_proc.v:10]
+INFO: [Synth 8-256] done synthesizing module 'DCT' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/hdl/verilog/DCT.v:12]
+INFO: [Synth 8-256] done synthesizing module 'DCT_0' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/synth/DCT_0.v:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 287.031 ; gain = 107.629
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 286.594 ; gain = 107.078
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -122,7 +95,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 287.031 ; gain = 107.629
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 286.594 ; gain = 107.078
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -138,37 +111,32 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 610.410 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 609.816 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/DCT_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5544] ROM "exitcond7_i_i_fu_64_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "exitcond1_fu_76_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exitcond9_fu_61_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5544] ROM "exitcond3_fu_84_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "exitcond2_fu_112_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5546] ROM "exitcond_fu_62_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_61_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5562] The signal ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
-INFO: [Synth 8-5562] The signal mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (6 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -181,30 +149,23 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 4     
-	   2 Input      4 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 5     
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 2     
-	                4 Bit    Registers := 6     
-	                3 Bit    Registers := 5     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 12    
+	               32 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
 +---RAMs : 
 	               4K Bit         RAMs := 1     
-	               2K Bit         RAMs := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 20    
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -212,13 +173,13 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module DCT_Ybuff_memcore_ram 
+Module DCT_Xbuff_memcore_ram 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 2     
 +---RAMs : 
 	               4K Bit         RAMs := 1     
-Module DCT_Ybuff 
+Module DCT_Xbuff 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      2 Bit       Adders := 1     
@@ -232,57 +193,27 @@ Detailed RTL Component Info :
 Module DCT_Loop_1_proc 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   7 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-Module DCT_Block_DCT_exit2_proc 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 2     
-+---Registers : 
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 3     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-Module DCT_Loop_3_proc 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module DCT_Loop_2_proc 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
 	                7 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
-Module FIFO_DCT_Xbuff_channel 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               32 Bit    Registers := 3     
-	                6 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
-+---RAMs : 
-	               2K Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
 Module DCT 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -299,22 +230,21 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 610.410 ; gain = 431.008
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-INFO: [Synth 8-5562] The signal Ybuff_U/DCT_Ybuff_memcore_U/DCT_Ybuff_memcore_ram_U/ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
-INFO: [Synth 8-5562] The signal Xbuff_channel_U/mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (6 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-5562] The signal Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -323,8 +253,7 @@ Block RAM:
 +------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------+
 |Module Name | RTL Object                                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name   | 
 +------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------+
-|DCT_0       | Ybuff_U/DCT_Ybuff_memcore_U/DCT_Ybuff_memcore_ram_U/ram_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B | 1      | 0      | DCT_0/DCT/extram__3 | 
-|DCT_0       | Xbuff_channel_U/mem_reg                                     | 64 x 32(READ_FIRST)    | W |   | 64 x 32(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | DCT_0/DCT/extram__5 | 
+|DCT_0       | Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B | 1      | 0      | DCT_0/DCT/extram__2 | 
 +------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------+
 
 Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
@@ -335,16 +264,16 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -352,11 +281,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5562] The signal Xbuff_channel_U/mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (6 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -367,15 +295,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/ap_done_reg_reg ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Block_DCT_exit2_proc_U0/tmp_2_reg_142_reg[2] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Block_DCT_exit2_proc_U0/tmp_2_reg_142_reg[1] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Block_DCT_exit2_proc_U0/tmp_2_reg_142_reg[0] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_3_proc_U0/ap_done_reg_reg ) is unused and will be removed from module DCT.
-INFO: [Synth 8-4480] The timing for the instance \Ybuff_U/DCT_Ybuff_memcore_U/DCT_Ybuff_memcore_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance \Xbuff_channel_U/mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_2_proc_U0/ap_done_reg_reg ) is unused and will be removed from module DCT.
+INFO: [Synth 8-4480] The timing for the instance \Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -393,7 +316,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -406,7 +329,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -418,13 +341,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Start Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -440,39 +363,37 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |LUT1     |     8|
-|2     |LUT2     |    47|
-|3     |LUT3     |    42|
-|4     |LUT4     |    27|
-|5     |LUT5     |    21|
-|6     |LUT6     |    27|
-|7     |RAMB18E1 |     2|
-|8     |FDRE     |   141|
-|9     |FDSE     |     3|
+|1     |LUT1     |     2|
+|2     |LUT2     |    39|
+|3     |LUT3     |     6|
+|4     |LUT4     |     9|
+|5     |LUT5     |     7|
+|6     |LUT6     |     8|
+|7     |RAMB18E1 |     1|
+|8     |FDRE     |    33|
+|9     |FDSE     |     2|
 +------+---------+------+
 
 Report Instance Areas: 
-+------+--------------------------------+-------------------------+------+
-|      |Instance                        |Module                   |Cells |
-+------+--------------------------------+-------------------------+------+
-|1     |top                             |                         |   318|
-|2     |  inst                          |DCT                      |   318|
-|3     |    DCT_Block_DCT_exit2_proc_U0 |DCT_Block_DCT_exit2_proc |    77|
-|4     |    DCT_Loop_1_proc_U0          |DCT_Loop_1_proc          |    35|
-|5     |    DCT_Loop_3_proc_U0          |DCT_Loop_3_proc          |    34|
-|6     |    Xbuff_channel_U             |FIFO_DCT_Xbuff_channel   |   159|
-|7     |    Ybuff_U                     |DCT_Ybuff                |    12|
-|8     |      DCT_Ybuff_memcore_U       |DCT_Ybuff_memcore        |     1|
-|9     |        DCT_Ybuff_memcore_ram_U |DCT_Ybuff_memcore_ram    |     1|
-+------+--------------------------------+-------------------------+------+
++------+--------------------------------+----------------------+------+
+|      |Instance                        |Module                |Cells |
++------+--------------------------------+----------------------+------+
+|1     |top                             |                      |   107|
+|2     |  inst                          |DCT                   |   107|
+|3     |    DCT_Loop_1_proc_U0          |DCT_Loop_1_proc       |    28|
+|4     |    DCT_Loop_2_proc_U0          |DCT_Loop_2_proc       |    67|
+|5     |    Xbuff_U                     |DCT_Xbuff             |    11|
+|6     |      DCT_Xbuff_memcore_U       |DCT_Xbuff_memcore     |     1|
+|7     |        DCT_Xbuff_memcore_ram_U |DCT_Xbuff_memcore_ram |     1|
++------+--------------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 610.410 ; gain = 82.840
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 431.008
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 609.816 ; gain = 81.152
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 609.816 ; gain = 430.301
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.srcs/sources_1/ip/DCT_0/constraints/DCT_ooc.xdc] for cell 'inst'
@@ -482,9 +403,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 610.410 ; gain = 406.219
-INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 610.410 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 00:01:14 2015...
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 609.816 ; gain = 404.375
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 609.816 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 08:04:33 2015...

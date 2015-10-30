@@ -8,13 +8,8 @@ target triple = "x86_64-w64-mingw32"
 @.str19 = private unnamed_addr constant [8 x i8] c"ap_fifo\00", align 1 ; [#uses=4 type=[8 x i8]*]
 @.str210 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1 ; [#uses=1 type=[13 x i8]*]
 @str = internal constant [4 x i8] c"DCT\00"       ; [#uses=1 type=[4 x i8]*]
-@str10 = internal constant [6 x i8] c"Xbuff\00"   ; [#uses=1 type=[6 x i8]*]
-@str11 = internal constant [1 x i8] zeroinitializer ; [#uses=2 type=[1 x i8]*]
-@str12 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
-@str14 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
-@str16 = internal constant [8 x i8] c"ap_fifo\00" ; [#uses=4 type=[8 x i8]*]
 
-; [#uses=2]
+; [#uses=1]
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 ; [#uses=1]
@@ -28,27 +23,22 @@ codeRepl:
   call void (...)* @_ssdm_op_SpecBitsMap(i8 %function) nounwind, !map !28
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !34
   call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
-  %Xbuff.channel = alloca float, align 4          ; [#uses=5 type=float*]
-  %Ybuff = alloca [65 x float], align 16          ; [#uses=2 type=[65 x float]*]
+  %Xbuff = alloca [65 x float], align 16          ; [#uses=2 type=[65 x float]*]
   call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !38 ; [debug line = 10:1]
   call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !39 ; [debug line = 11:1]
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @.str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !40 ; [debug line = 12:1]
   call void @llvm.dbg.value(metadata !{i32* %X}, i64 0, metadata !41), !dbg !42 ; [debug line = 7:15] [debug variable = X]
   call void @llvm.dbg.value(metadata !{i8 %function}, i64 0, metadata !43), !dbg !44 ; [debug line = 7:31] [debug variable = function]
   call void @llvm.dbg.value(metadata !{i32* %Y}, i64 0, metadata !45), !dbg !46 ; [debug line = 7:45] [debug variable = Y]
-  call void @llvm.dbg.declare(metadata !{[65 x float]* %Ybuff}, metadata !47), !dbg !51 ; [debug line = 16:8] [debug variable = Ybuff]
-  call fastcc void @Loop_1_proc(i32* %X, float* %Xbuff.channel) nounwind
-  %0 = call i32 (...)* @_ssdm_op_SpecChannel([6 x i8]* @str10, i32 1, [1 x i8]* @str11, [1 x i8]* @str11, i32 64, i32 64, float* %Xbuff.channel, float* %Xbuff.channel) nounwind ; [#uses=0 type=i32]
-  call void (...)* @_ssdm_op_SpecInterface(float* %Xbuff.channel, [8 x i8]* @str12, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str12, [8 x i8]* @str12, [8 x i8]* @str12)
-  call fastcc void @Block_DCT_.exit2_proc([65 x float]* %Ybuff, float* %Xbuff.channel) nounwind
-  call fastcc void @Loop_3_proc(i32* %Y, [65 x float]* %Ybuff)
-  ret void, !dbg !52                              ; [debug line = 69:1]
+  call fastcc void @Loop_1_proc(i32* %X, [65 x float]* %Xbuff)
+  call fastcc void @Loop_2_proc(i32* %Y, [65 x float]* %Xbuff)
+  ret void, !dbg !47                              ; [debug line = 43:1]
 }
 
-; [#uses=8]
+; [#uses=5]
 declare void @_ssdm_op_SpecInterface(...) nounwind
 
-; [#uses=9]
+; [#uses=7]
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 ; [#uses=1]
@@ -57,11 +47,40 @@ declare void @_ssdm_op_SpecTopModule(...)
 ; [#uses=3]
 declare void @_ssdm_op_SpecBitsMap(...)
 
-; [#uses=5]
+; [#uses=2]
 declare i32 @_ssdm_op_SpecLoopTripCount(...)
 
 ; [#uses=1]
-define internal fastcc void @Loop_3_proc(i32* %Y, [65 x float]* nocapture %Ybuff) nounwind {
+define internal fastcc void @Loop_1_proc(i32* %X, [65 x float]* nocapture %Xbuff) nounwind {
+newFuncRoot:
+  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
+  call void @llvm.dbg.declare(metadata !{[65 x float]* %Xbuff}, metadata !48), !dbg !52 ; [debug line = 15:8] [debug variable = Xbuff]
+  br label %0
+
+.preheader.exitStub:                              ; preds = %0
+  ret void
+
+; <label>:0                                       ; preds = %2, %newFuncRoot
+  %read_idx.0.i.i = phi i7 [ 0, %newFuncRoot ], [ %read_idx, %2 ] ; [#uses=3 type=i7]
+  %.0.rec.i.i.cast = zext i7 %read_idx.0.i.i to i64 ; [#uses=2 type=i64]
+  %X.addr = getelementptr i32* %X, i64 %.0.rec.i.i.cast ; [#uses=1 type=i32*]
+  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind ; [#uses=0 type=i32]
+  %exitcond9 = icmp eq i7 %read_idx.0.i.i, -63, !dbg !53 ; [#uses=1 type=i1] [debug line = 23:7]
+  br i1 %exitcond9, label %.preheader.exitStub, label %2, !dbg !53 ; [debug line = 23:7]
+
+; <label>:2                                       ; preds = %0
+  %read_idx = add i7 %read_idx.0.i.i, 1, !dbg !55 ; [#uses=1 type=i7] [debug line = 23:30]
+  %tempin = load i32* %X.addr, align 4, !dbg !56  ; [#uses=1 type=i32] [debug line = 25:3]
+  %tmp.i = bitcast i32 %tempin to float, !dbg !58 ; [#uses=1 type=float] [debug line = 26:3]
+  call void @llvm.dbg.value(metadata !{i32 %tempin}, i64 0, metadata !59), !dbg !56 ; [debug line = 25:3] [debug variable = tempin]
+  %Xbuff.addr = getelementptr inbounds [65 x float]* %Xbuff, i64 0, i64 %.0.rec.i.i.cast, !dbg !58 ; [#uses=1 type=float*] [debug line = 26:3]
+  store float %tmp.i, float* %Xbuff.addr, align 4, !dbg !58 ; [debug line = 26:3]
+  call void @llvm.dbg.value(metadata !{i7 %read_idx}, i64 0, metadata !60), !dbg !55 ; [debug line = 23:30] [debug variable = read_idx]
+  br label %0, !dbg !55                           ; [debug line = 23:30]
+}
+
+; [#uses=1]
+define internal fastcc void @Loop_2_proc(i32* %Y, [65 x float]* nocapture %Xbuff) nounwind {
 newFuncRoot:
   call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
   br label %.preheader
@@ -69,119 +88,26 @@ newFuncRoot:
 .exitStub:                                        ; preds = %.preheader
   ret void
 
-.preheader:                                       ; preds = %1, %newFuncRoot
-  %.01.rec = phi i7 [ %write_idx, %1 ], [ 0, %newFuncRoot ] ; [#uses=3 type=i7]
-  %.01.rec.cast = zext i7 %.01.rec to i64         ; [#uses=2 type=i64]
+.preheader:                                       ; preds = %_ifconv, %newFuncRoot
+  %.01.rec = phi i7 [ %write_idx, %_ifconv ], [ 0, %newFuncRoot ] ; [#uses=4 type=i7]
+  %.01.rec.cast = zext i7 %.01.rec to i64         ; [#uses=1 type=i64]
   %Y.addr = getelementptr i32* %Y, i64 %.01.rec.cast ; [#uses=1 type=i32*]
   %0 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind ; [#uses=0 type=i32]
-  %exitcond = icmp eq i7 %.01.rec, -63, !dbg !53  ; [#uses=1 type=i1] [debug line = 44:7]
-  br i1 %exitcond, label %.exitStub, label %1, !dbg !53 ; [debug line = 44:7]
+  %exitcond = icmp eq i7 %.01.rec, -63, !dbg !61  ; [#uses=1 type=i1] [debug line = 31:7]
+  br i1 %exitcond, label %.exitStub, label %_ifconv, !dbg !61 ; [debug line = 31:7]
 
-; <label>:1                                       ; preds = %.preheader
-  %Ybuff.addr = getelementptr inbounds [65 x float]* %Ybuff, i64 0, i64 %.01.rec.cast, !dbg !56 ; [#uses=1 type=float*] [debug line = 46:3]
-  %Ybuff.load = load float* %Ybuff.addr, align 4, !dbg !56 ; [#uses=1 type=float] [debug line = 46:3]
-  %tempout = bitcast float %Ybuff.load to i32, !dbg !56 ; [#uses=1 type=i32] [debug line = 46:3]
-  call void @llvm.dbg.value(metadata !{i32 %tempout}, i64 0, metadata !58), !dbg !56 ; [debug line = 46:3] [debug variable = tempout]
-  %write_idx = add i7 %.01.rec, 1, !dbg !59       ; [#uses=1 type=i7] [debug line = 47:3]
-  store i32 %tempout, i32* %Y.addr, align 4, !dbg !59 ; [debug line = 47:3]
-  call void @llvm.dbg.value(metadata !{i7 %write_idx}, i64 0, metadata !60), !dbg !61 ; [debug line = 44:32] [debug variable = write_idx]
-  br label %.preheader, !dbg !61                  ; [debug line = 44:32]
-}
-
-; [#uses=1]
-declare i32 @_ssdm_op_SpecChannel(...)
-
-; [#uses=1]
-define internal fastcc void @Block_DCT_.exit2_proc([65 x float]* nocapture %Ybuff, float* %Xbuff) {
-newFuncRoot:
-  call void (...)* @_ssdm_op_SpecInterface(float* %Xbuff, [8 x i8]* @str16, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str16, [8 x i8]* @str16, [8 x i8]* @str16)
-  %Ybuff.addr = getelementptr inbounds [65 x float]* %Ybuff, i64 0, i64 64, !dbg !62 ; [#uses=1 type=float*] [debug line = 33:2]
-  store float -1.000000e+00, float* %Ybuff.addr, align 16, !dbg !62 ; [debug line = 33:2]
-  br label %0, !dbg !63                           ; [debug line = 38:7]
-
-.preheader.exitStub:                              ; preds = %0
-  ret void
-
-; <label>:0                                       ; preds = %2, %newFuncRoot
-  %rowrcv.1 = phi i4 [ 0, %newFuncRoot ], [ %rowrcv, %2 ] ; [#uses=3 type=i4]
-  %rowrcv.1.cast = zext i4 %rowrcv.1 to i6, !dbg !63 ; [#uses=1 type=i6] [debug line = 38:7]
-  %exitcond3 = icmp eq i4 %rowrcv.1, -8, !dbg !63 ; [#uses=1 type=i1] [debug line = 38:7]
-  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind ; [#uses=0 type=i32]
-  br i1 %exitcond3, label %.preheader.exitStub, label %.preheader10.preheader, !dbg !63 ; [debug line = 38:7]
-
-; <label>:2                                       ; preds = %.preheader10
-  %rowrcv = add i4 %rowrcv.1, 1, !dbg !65         ; [#uses=1 type=i4] [debug line = 38:25]
-  call void @llvm.dbg.value(metadata !{i4 %rowrcv}, i64 0, metadata !66), !dbg !65 ; [debug line = 38:25] [debug variable = rowrcv]
-  br label %0, !dbg !65                           ; [debug line = 38:25]
-
-.preheader10:                                     ; preds = %4, %.preheader10.preheader
-  %colrcv.1 = phi i4 [ %colrcv, %4 ], [ 0, %.preheader10.preheader ] ; [#uses=3 type=i4]
-  %colrcv.1.cast = zext i4 %colrcv.1 to i6, !dbg !67 ; [#uses=1 type=i6] [debug line = 39:8]
-  %exitcond2 = icmp eq i4 %colrcv.1, -8, !dbg !67 ; [#uses=1 type=i1] [debug line = 39:8]
-  %3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind ; [#uses=0 type=i32]
-  br i1 %exitcond2, label %2, label %4, !dbg !67  ; [debug line = 39:8]
-
-.preheader10.preheader:                           ; preds = %0
-  %tmp.2 = shl i6 %rowrcv.1.cast, 3, !dbg !69     ; [#uses=1 type=i6] [debug line = 41:4]
-  br label %.preheader10, !dbg !67                ; [debug line = 39:8]
-
-; <label>:4                                       ; preds = %.preheader10
-  %Xbuff.load = load volatile float* %Xbuff, align 4, !dbg !69 ; [#uses=1 type=float] [debug line = 41:4]
-  %tmp.3 = add i6 %colrcv.1.cast, %tmp.2, !dbg !69 ; [#uses=1 type=i6] [debug line = 41:4]
-  %tmp.6 = zext i6 %tmp.3 to i64, !dbg !69        ; [#uses=1 type=i64] [debug line = 41:4]
-  %Ybuff.addr.1 = getelementptr inbounds [65 x float]* %Ybuff, i64 0, i64 %tmp.6, !dbg !69 ; [#uses=1 type=float*] [debug line = 41:4]
-  store float %Xbuff.load, float* %Ybuff.addr.1, align 4, !dbg !69 ; [debug line = 41:4]
-  %colrcv = add i4 %colrcv.1, 1, !dbg !71         ; [#uses=1 type=i4] [debug line = 39:26]
-  call void @llvm.dbg.value(metadata !{i4 %colrcv}, i64 0, metadata !72), !dbg !71 ; [debug line = 39:26] [debug variable = colrcv]
-  br label %.preheader10, !dbg !71                ; [debug line = 39:26]
-}
-
-; [#uses=1]
-define internal fastcc void @Loop_1_proc(i32* %X, float* %Xbuff) {
-newFuncRoot:
-  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
-  call void (...)* @_ssdm_op_SpecInterface(float* %Xbuff, [8 x i8]* @str14, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str14, [8 x i8]* @str14, [8 x i8]* @str14)
-  call void @llvm.dbg.declare(metadata !{float* %Xbuff}, metadata !73), !dbg !75 ; [debug line = 15:8] [debug variable = Xbuff]
-  br label %0
-
-DCT_.exit2.exitStub:                              ; preds = %0
-  ret void
-
-; <label>:0                                       ; preds = %2, %newFuncRoot
-  %rowrcv.0.i.i = phi i4 [ 0, %newFuncRoot ], [ %rowrcv, %2 ] ; [#uses=2 type=i4]
-  %.0.i.idx.i = phi i7 [ 0, %newFuncRoot ], [ %tmp, %2 ] ; [#uses=2 type=i7]
-  %X.assign.sum.i5 = or i7 %.0.i.idx.i, 1         ; [#uses=1 type=i7]
-  %X.assign.sum.i5.cast = zext i7 %X.assign.sum.i5 to i8 ; [#uses=1 type=i8]
-  %exitcond7.i.i = icmp eq i4 %rowrcv.0.i.i, -8, !dbg !76 ; [#uses=1 type=i1] [debug line = 24:7]
-  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind ; [#uses=0 type=i32]
-  br i1 %exitcond7.i.i, label %DCT_.exit2.exitStub, label %.preheader11.preheader.i.i, !dbg !76 ; [debug line = 24:7]
-
-; <label>:2                                       ; preds = %.preheader11.i.i
-  %rowrcv = add i4 %rowrcv.0.i.i, 1, !dbg !78     ; [#uses=1 type=i4] [debug line = 24:25]
-  call void @llvm.dbg.value(metadata !{i4 %rowrcv}, i64 0, metadata !66), !dbg !78 ; [debug line = 24:25] [debug variable = rowrcv]
-  br label %0, !dbg !78                           ; [debug line = 24:25]
-
-.preheader11.i.i:                                 ; preds = %.preheader11.preheader.i.i, %4
-  %.1.rec.i.i = phi i4 [ %.rec4.i.i, %4 ], [ 0, %.preheader11.preheader.i.i ] ; [#uses=3 type=i4]
-  %.1.rec.i.i.cast = zext i4 %.1.rec.i.i to i8    ; [#uses=1 type=i8]
-  %X.assign.addr.sum.i = add i8 %.1.rec.i.i.cast, %X.assign.sum.i5.cast ; [#uses=1 type=i8]
-  %X.assign.addr.sum.i.cast = zext i8 %X.assign.addr.sum.i to i64 ; [#uses=1 type=i64]
-  %X.addr = getelementptr i32* %X, i64 %X.assign.addr.sum.i.cast ; [#uses=1 type=i32*]
-  %3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind ; [#uses=0 type=i32]
-  %exitcond1 = icmp eq i4 %.1.rec.i.i, -8, !dbg !79 ; [#uses=1 type=i1] [debug line = 25:8]
-  br i1 %exitcond1, label %2, label %4, !dbg !79  ; [debug line = 25:8]
-
-; <label>:4                                       ; preds = %.preheader11.i.i
-  %.rec4.i.i = add i4 %.1.rec.i.i, 1, !dbg !81    ; [#uses=1 type=i4] [debug line = 27:4]
-  %temp = load i32* %X.addr, align 4, !dbg !81    ; [#uses=1 type=i32] [debug line = 27:4]
-  %tmp.4.i = bitcast i32 %temp to float, !dbg !83 ; [#uses=1 type=float] [debug line = 28:4]
-  call void @llvm.dbg.value(metadata !{i32 %temp}, i64 0, metadata !84), !dbg !81 ; [debug line = 27:4] [debug variable = temp]
-  store volatile float %tmp.4.i, float* %Xbuff, align 4, !dbg !83 ; [debug line = 28:4]
-  br label %.preheader11.i.i, !dbg !85            ; [debug line = 25:26]
-
-.preheader11.preheader.i.i:                       ; preds = %0
-  %tmp = add i7 %.0.i.idx.i, 8                    ; [#uses=1 type=i7]
-  br label %.preheader11.i.i
+_ifconv:                                          ; preds = %.preheader
+  %tmp.3 = icmp sgt i7 %.01.rec, -1, !dbg !63     ; [#uses=1 type=i1] [debug line = 33:3]
+  %write_idx = add i7 %.01.rec, 1, !dbg !65       ; [#uses=2 type=i7] [debug line = 34:4]
+  %tmp.5 = zext i7 %write_idx to i64, !dbg !65    ; [#uses=1 type=i64] [debug line = 34:4]
+  %Xbuff.addr = getelementptr inbounds [65 x float]* %Xbuff, i64 0, i64 %tmp.5, !dbg !65 ; [#uses=1 type=float*] [debug line = 34:4]
+  %Xbuff.load = load float* %Xbuff.addr, align 4, !dbg !65 ; [#uses=1 type=float] [debug line = 34:4]
+  %tmp = bitcast float %Xbuff.load to i32, !dbg !66 ; [#uses=1 type=i32] [debug line = 38:3]
+  %tempout = select i1 %tmp.3, i32 %tmp, i32 0, !dbg !66 ; [#uses=1 type=i32] [debug line = 38:3]
+  call void @llvm.dbg.value(metadata !{i32 %tempout}, i64 0, metadata !67), !dbg !66 ; [debug line = 38:3] [debug variable = tempout]
+  store i32 %tempout, i32* %Y.addr, align 4, !dbg !68 ; [debug line = 39:3]
+  call void @llvm.dbg.value(metadata !{i7 %write_idx}, i64 0, metadata !69), !dbg !70 ; [debug line = 31:32] [debug variable = write_idx]
+  br label %.preheader, !dbg !70                  ; [debug line = 31:32]
 }
 
 !hls.encrypted.func = !{}
@@ -235,42 +161,27 @@ DCT_.exit2.exitStub:                              ; preds = %0
 !44 = metadata !{i32 7, i32 31, metadata !13, null}
 !45 = metadata !{i32 786689, metadata !13, metadata !"Y", metadata !14, i32 50331655, metadata !17, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !46 = metadata !{i32 7, i32 45, metadata !13, null}
-!47 = metadata !{i32 786688, metadata !12, metadata !"Ybuff", metadata !14, i32 16, metadata !48, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!48 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2080, i64 32, i32 0, i32 0, metadata !7, metadata !49, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!49 = metadata !{metadata !50}
-!50 = metadata !{i32 786465, i64 0, i64 64}       ; [ DW_TAG_subrange_type ]
-!51 = metadata !{i32 16, i32 8, metadata !12, null}
-!52 = metadata !{i32 69, i32 1, metadata !12, null}
-!53 = metadata !{i32 44, i32 7, metadata !54, null}
-!54 = metadata !{i32 786443, metadata !55, i32 44, i32 2, metadata !14, i32 8} ; [ DW_TAG_lexical_block ]
-!55 = metadata !{i32 786443, metadata !12, i32 36, i32 2, metadata !14, i32 4} ; [ DW_TAG_lexical_block ]
-!56 = metadata !{i32 46, i32 3, metadata !57, null}
-!57 = metadata !{i32 786443, metadata !54, i32 45, i32 2, metadata !14, i32 9} ; [ DW_TAG_lexical_block ]
-!58 = metadata !{i32 786688, metadata !12, metadata !"tempout", metadata !14, i32 19, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!59 = metadata !{i32 47, i32 3, metadata !57, null}
-!60 = metadata !{i32 786688, metadata !12, metadata !"write_idx", metadata !14, i32 21, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!61 = metadata !{i32 44, i32 32, metadata !54, null}
-!62 = metadata !{i32 33, i32 2, metadata !12, null}
-!63 = metadata !{i32 38, i32 7, metadata !64, null}
-!64 = metadata !{i32 786443, metadata !55, i32 38, i32 2, metadata !14, i32 5} ; [ DW_TAG_lexical_block ]
-!65 = metadata !{i32 38, i32 25, metadata !64, null}
-!66 = metadata !{i32 786688, metadata !12, metadata !"rowrcv", metadata !14, i32 14, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!67 = metadata !{i32 39, i32 8, metadata !68, null}
-!68 = metadata !{i32 786443, metadata !64, i32 39, i32 3, metadata !14, i32 6} ; [ DW_TAG_lexical_block ]
-!69 = metadata !{i32 41, i32 4, metadata !70, null}
-!70 = metadata !{i32 786443, metadata !68, i32 40, i32 3, metadata !14, i32 7} ; [ DW_TAG_lexical_block ]
-!71 = metadata !{i32 39, i32 26, metadata !68, null}
-!72 = metadata !{i32 786688, metadata !12, metadata !"colrcv", metadata !14, i32 14, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!73 = metadata !{i32 786688, metadata !12, metadata !"Xbuff", metadata !14, i32 15, metadata !74, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!74 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2048, i64 32, i32 0, i32 0, metadata !7, metadata !8, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!75 = metadata !{i32 15, i32 8, metadata !12, null}
-!76 = metadata !{i32 24, i32 7, metadata !77, null}
-!77 = metadata !{i32 786443, metadata !12, i32 24, i32 2, metadata !14, i32 1} ; [ DW_TAG_lexical_block ]
-!78 = metadata !{i32 24, i32 25, metadata !77, null}
-!79 = metadata !{i32 25, i32 8, metadata !80, null}
-!80 = metadata !{i32 786443, metadata !77, i32 25, i32 3, metadata !14, i32 2} ; [ DW_TAG_lexical_block ]
-!81 = metadata !{i32 27, i32 4, metadata !82, null}
-!82 = metadata !{i32 786443, metadata !80, i32 26, i32 3, metadata !14, i32 3} ; [ DW_TAG_lexical_block ]
-!83 = metadata !{i32 28, i32 4, metadata !82, null}
-!84 = metadata !{i32 786688, metadata !12, metadata !"temp", metadata !14, i32 18, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!85 = metadata !{i32 25, i32 26, metadata !80, null}
+!47 = metadata !{i32 43, i32 1, metadata !12, null}
+!48 = metadata !{i32 786688, metadata !12, metadata !"Xbuff", metadata !14, i32 15, metadata !49, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!49 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2080, i64 32, i32 0, i32 0, metadata !7, metadata !50, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!50 = metadata !{metadata !51}
+!51 = metadata !{i32 786465, i64 0, i64 64}       ; [ DW_TAG_subrange_type ]
+!52 = metadata !{i32 15, i32 8, metadata !12, null}
+!53 = metadata !{i32 23, i32 7, metadata !54, null}
+!54 = metadata !{i32 786443, metadata !12, i32 23, i32 2, metadata !14, i32 1} ; [ DW_TAG_lexical_block ]
+!55 = metadata !{i32 23, i32 30, metadata !54, null}
+!56 = metadata !{i32 25, i32 3, metadata !57, null}
+!57 = metadata !{i32 786443, metadata !54, i32 24, i32 2, metadata !14, i32 2} ; [ DW_TAG_lexical_block ]
+!58 = metadata !{i32 26, i32 3, metadata !57, null}
+!59 = metadata !{i32 786688, metadata !12, metadata !"tempin", metadata !14, i32 19, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!60 = metadata !{i32 786688, metadata !12, metadata !"read_idx", metadata !14, i32 21, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!61 = metadata !{i32 31, i32 7, metadata !62, null}
+!62 = metadata !{i32 786443, metadata !12, i32 31, i32 2, metadata !14, i32 3} ; [ DW_TAG_lexical_block ]
+!63 = metadata !{i32 33, i32 3, metadata !64, null}
+!64 = metadata !{i32 786443, metadata !62, i32 32, i32 2, metadata !14, i32 4} ; [ DW_TAG_lexical_block ]
+!65 = metadata !{i32 34, i32 4, metadata !64, null}
+!66 = metadata !{i32 38, i32 3, metadata !64, null}
+!67 = metadata !{i32 786688, metadata !12, metadata !"tempout", metadata !14, i32 18, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!68 = metadata !{i32 39, i32 3, metadata !64, null}
+!69 = metadata !{i32 786688, metadata !12, metadata !"write_idx", metadata !14, i32 21, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!70 = metadata !{i32 31, i32 32, metadata !62, null}

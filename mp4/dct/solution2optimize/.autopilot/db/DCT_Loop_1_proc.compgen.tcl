@@ -7,6 +7,25 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1 \
+    name Xbuff \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename Xbuff \
+    op interface \
+    ports { Xbuff_address0 { O 7 vector } Xbuff_ce0 { O 1 bit } Xbuff_we0 { O 1 bit } Xbuff_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'Xbuff'"
+}
+}
+
+
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
@@ -19,21 +38,6 @@ eval "cg_default_interface_gen_dc { \
     corename dc_X \
     op interface \
     ports { X_dout { I 32 vector } X_empty_n { I 1 bit } X_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1 \
-    name Xbuff \
-    type fifo \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_Xbuff \
-    op interface \
-    ports { Xbuff_din { O 32 vector } Xbuff_full_n { I 1 bit } Xbuff_write { O 1 bit } } \
 } "
 }
 

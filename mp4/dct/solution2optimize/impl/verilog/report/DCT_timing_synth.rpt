@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Thu Oct 29 23:57:07 2015
+| Date         : Fri Oct 30 08:01:28 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing -file ./report/DCT_timing_synth.rpt
 | Design       : DCT
@@ -11,18 +11,18 @@ Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             4.844ns  (required time - arrival time)
-  Source:                 DCT_Block_DCT_exit2_proc_U0/colrcv_1_reg_72_reg[1]/C
+Slack (MET) :             5.821ns  (required time - arrival time)
+  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_channel_U/mem_reg/ADDRARDADDR[6]
+  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ENBWREN
                             (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        4.425ns  (logic 1.211ns (27.368%)  route 3.214ns (72.632%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
-  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.607ns = ( 11.607 - 10.000 ) 
+  Data Path Delay:        3.574ns  (logic 1.061ns (29.688%)  route 2.513ns (70.312%))
+  Logic Levels:           3  (LUT2=1 LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.127ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.610ns = ( 11.610 - 10.000 ) 
     Source Clock Delay      (SCD):    1.737ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -35,35 +35,33 @@ Slack (MET) :             4.844ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=147, unset)          1.737     1.737    DCT_Block_DCT_exit2_proc_U0/ap_clk
-                         FDRE                                         r  DCT_Block_DCT_exit2_proc_U0/colrcv_1_reg_72_reg[1]/C
+                         net (fo=36, unset)           1.737     1.737    DCT_Loop_1_proc_U0/ap_clk
+                         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     2.255 r  DCT_Block_DCT_exit2_proc_U0/colrcv_1_reg_72_reg[1]/Q
-                         net (fo=8, unplaced)         0.508     2.763    DCT_Block_DCT_exit2_proc_U0/colrcv_1_reg_72_reg__0[1]
-                         LUT2 (Prop_lut2_I0_O)        0.321     3.084 r  DCT_Block_DCT_exit2_proc_U0/dout_buf[31]_i_3/O
-                         net (fo=1, unplaced)         0.449     3.533    DCT_Block_DCT_exit2_proc_U0/dout_buf[31]_i_3_n_0
-                         LUT6 (Prop_lut6_I3_O)        0.124     3.657 r  DCT_Block_DCT_exit2_proc_U0/dout_buf[31]_i_1/O
-                         net (fo=49, unplaced)        0.531     4.188    Xbuff_channel_U/pop
-                         LUT6 (Prop_lut6_I5_O)        0.124     4.312 r  Xbuff_channel_U/mem_reg_i_8/O
-                         net (fo=4, unplaced)         0.926     5.238    Xbuff_channel_U/mem_reg_i_8_n_0
-                         LUT4 (Prop_lut4_I1_O)        0.124     5.362 r  Xbuff_channel_U/mem_reg_i_5/O
-                         net (fo=2, unplaced)         0.800     6.162    Xbuff_channel_U/rnext[1]
-                         RAMB18E1                                     r  Xbuff_channel_U/mem_reg/ADDRARDADDR[6]
+                         FDRE (Prop_fdre_C_Q)         0.518     2.255 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/Q
+                         net (fo=8, unplaced)         0.349     2.604    DCT_Loop_1_proc_U0/Q[1]
+                         LUT6 (Prop_lut6_I2_O)        0.295     2.899 r  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
+                         net (fo=2, unplaced)         0.430     3.329    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.453 r  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
+                         net (fo=6, unplaced)         0.934     4.387    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.124     4.511 r  DCT_Loop_1_proc_U0/X_read_INST_0/O
+                         net (fo=8, unplaced)         0.800     5.311    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/X_read
+                         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ENBWREN
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=147, unset)          1.607    11.607    Xbuff_channel_U/ap_clk
-                         RAMB18E1                                     r  Xbuff_channel_U/mem_reg/CLKARDCLK
-                         clock pessimism              0.000    11.607    
-                         clock uncertainty           -0.035    11.572    
-                         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
-                                                     -0.566    11.006    Xbuff_channel_U/mem_reg
+                         net (fo=36, unset)           1.610    11.610    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
+                         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
+                         clock pessimism              0.000    11.610    
+                         clock uncertainty           -0.035    11.575    
+                         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    11.132    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
   -------------------------------------------------------------------
-                         required time                         11.006    
-                         arrival time                          -6.162    
+                         required time                         11.132    
+                         arrival time                          -5.311    
   -------------------------------------------------------------------
-                         slack                                  4.844    
+                         slack                                  5.821    
 
 
 

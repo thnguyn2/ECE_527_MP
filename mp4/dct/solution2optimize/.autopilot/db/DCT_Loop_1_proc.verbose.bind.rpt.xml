@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_Loop_1_proc'" level="0">
-<item name = "Date">Thu Oct 29 23:53:05 2015
+<item name = "Date">Fri Oct 30 07:58:50 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 8.75, 1.25</column>
+<column name="default">10.00, 7.09, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">81, 81, 81, 81, none</column>
+<column name="">66, 66, 66, 66, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">80, 80, 10, -, -, 8, no</column>
-<column name=" + Loop 1.1">8, 8, 1, -, -, 8, no</column>
+<column name="- Loop 1">65, 65, 1, -, -, 65, no</column>
 </table>
 </item>
 </section>

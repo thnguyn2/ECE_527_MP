@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Oct 29 23:55:36 2015
-# Process ID: 11412
+# Start of session at: Fri Oct 30 08:00:06 2015
+# Process ID: 10924
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/vivado.log
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip\vivado.jou
 #-----------------------------------------------------------
@@ -11,4 +11,4 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 23:55:40 2015...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 08:00:10 2015...

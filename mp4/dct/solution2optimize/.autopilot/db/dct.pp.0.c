@@ -258,44 +258,35 @@ void DCT(int *X,unsigned char function,int *Y)
 #pragma AP interface ap_ctrl_none port=return
  //--------------------------------------------
  int colrcv, rowrcv;
- float Xbuff[8][8];
+ float Xbuff[65];
  float Ybuff[65];
  int count =0;
- int temp;
  float tempout;
+ int tempin;
  int opt_type;
- int write_idx;
- int dummy_data2 = *X++;
- //Read in the data
- for (rowrcv=0;rowrcv<8;rowrcv++)
-  for (colrcv=0;colrcv<8;colrcv++)
-  {
-   temp = *X++; //Read the input data
-   Xbuff[rowrcv][colrcv]=*(float *)&temp; //Copy the data into the array
-   count++;
-  }
- //opt_type = *X++; //Read in the type of operation to perform
-
- Ybuff[64]=-1.0;
- //Second test, wait to receive enough 64 bytes of data and send back the 64 bit value of the original data
- if (count==64)
+ int read_idx,write_idx;
+ //Read input data - Note that writing from PS to PL, there is one clock latency
+ for (read_idx=0;read_idx<65;read_idx++)
  {
- //Now, stream the data out when receive enough data
- for (rowrcv=0;rowrcv<8;rowrcv++)
-  for (colrcv=0;colrcv<8;colrcv++)
-  {
-   Ybuff[rowrcv*8+colrcv] = Xbuff[rowrcv][colrcv];
-  }
+  tempin = *X++;
+  Xbuff[read_idx]=*(float*)&tempin;
+ }
 
+ //Do matrix multiplication here...
+ //Prepare the write Buffer-There is no latency when writting from PL to PS
  for (write_idx=0;write_idx<65;write_idx++)
  {
-  tempout = Ybuff[write_idx];
+  if (write_idx<64)
+   Ybuff[write_idx]=Xbuff[write_idx+1];
+  else
+   Ybuff[write_idx]=0.0;
+  //Send the data over
+  tempout=Ybuff[write_idx];
   *Y++ = *(int *)&tempout;
- }
-  count = 0;
 
  }
 
+}
 
  /*
 	float temp[MAT_SIZE][MAT_SIZE];
@@ -311,5 +302,3 @@ void DCT(int *X,unsigned char function,int *Y)
 		break;
 	}
 	*/
-
-}

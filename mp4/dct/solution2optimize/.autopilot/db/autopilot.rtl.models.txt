@@ -1,5 +1,3 @@
-FIFO_DCT_Xbuff_channel
 DCT_Loop_1_proc
-DCT_Block_DCT_exit2_proc
-DCT_Loop_3_proc
+DCT_Loop_2_proc
 DCT
