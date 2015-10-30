@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="coeff.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\coeff.h"/>
+    <originFiles name="dct.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\dct.c"/>
+    <originFiles name="dct.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\dct.h"/>
+    <originFiles name="matrixmath.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\matrixmath.c"/>
+    <originFiles name="matrixmath.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\matrixmath.h"/>
+    <originFiles name="vivado_hls.app" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\vivado_hls.app"/>
+    <originFiles name="quant.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\quant.h"/>
+    <originFiles name="quant.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\quant.c"/>
+    <originFiles name="accelerator.h" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\accelerator.h"/>
+    <originFiles name="accelerator.c" path="Z:\Documents\UIUC\ECE527\ECE_527_MP\mp4\hls\accelerator\accelerator.c"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

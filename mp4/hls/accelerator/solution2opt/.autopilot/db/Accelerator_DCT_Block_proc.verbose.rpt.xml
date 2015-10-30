@@ -1,0 +1,212 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Accelerator_DCT_Block_proc'" level="0">
+<item name = "Date">Thu Oct 29 22:12:25 2015
+</item>
+<item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
+<item name = "Project">accelerator</item>
+<item name = "Solution">solution2opt</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="default">10.00, 8.09, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">513, 513, 513, 513, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_Accelerator_MAT_Multiply_fu_83">Accelerator_MAT_Multiply, 367, 367, 301, 301, dataflow</column>
+<column name="grp_Accelerator_MAT_Multiply2_Loop_Row_proc_fu_146">Accelerator_MAT_Multiply2_Loop_Row_proc, 66, 66, 66, 66, none</column>
+<column name="grp_Accelerator_MAT_Multiply2_Loop_Col_proc_fu_115">Accelerator_MAT_Multiply2_Loop_Col_proc, 75, 75, 75, 75, none</column>
+<column name="grp_Accelerator_MAT_Multiply_fu_83">Accelerator_MAT_Multiply, 367, 367, 301, 301, dataflow</column>
+<column name="grp_Accelerator_MAT_Multiply2_Loop_Row_proc_fu_146">Accelerator_MAT_Multiply2_Loop_Row_proc, 66, 66, 66, 66, none</column>
+<column name="grp_Accelerator_MAT_Multiply2_Loop_Col_proc_fu_115">Accelerator_MAT_Multiply2_Loop_Col_proc, 75, 75, 75, 75, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Expression">-, -, 0, 2</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">8, 40, 6294, 8424</column>
+<column name="Memory">2, -, 1152, 72</column>
+<column name="Multiplexer">-, -, -, 36</column>
+<column name="Register">-, -, 26, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">3, 18, 7, 16</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Accelerator_MAT_Multiply_U0">Accelerator_MAT_Multiply, 4, 10, 1877, 2289</column>
+<column name="Accelerator_MAT_Multiply_U1_1">Accelerator_MAT_Multiply, 4, 10, 1877, 2289</column>
+<column name="Accelerator_MAT_Multiply2_Loop_Col_proc_U0">Accelerator_MAT_Multiply2_Loop_Col_proc, 0, 10, 1240, 1866</column>
+<column name="Accelerator_MAT_Multiply2_Loop_Col_proc_U1_1">Accelerator_MAT_Multiply2_Loop_Col_proc, 0, 10, 1240, 1866</column>
+<column name="Accelerator_MAT_Multiply2_Loop_Row_proc_U0">Accelerator_MAT_Multiply2_Loop_Row_proc, 0, 0, 30, 57</column>
+<column name="Accelerator_MAT_Multiply2_Loop_Row_proc_U1_1">Accelerator_MAT_Multiply2_Loop_Row_proc, 0, 0, 30, 57</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="A_cached_row_i1_U">Accelerator_DCT_Block_proc_A_cached_row_i1, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="A_cached_row_i_U">Accelerator_DCT_Block_proc_A_cached_row_i1, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_0_U">Accelerator_DCT_Block_proc_T_0, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_1_U">Accelerator_DCT_Block_proc_T_1, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_2_U">Accelerator_DCT_Block_proc_T_2, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_3_U">Accelerator_DCT_Block_proc_T_3, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_4_U">Accelerator_DCT_Block_proc_T_4, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_5_U">Accelerator_DCT_Block_proc_T_5, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_6_U">Accelerator_DCT_Block_proc_T_6, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="T_7_U">Accelerator_DCT_Block_proc_T_7, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_0_U">Accelerator_DCT_Block_proc_Tinv_0, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_1_U">Accelerator_DCT_Block_proc_Tinv_1, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_2_U">Accelerator_DCT_Block_proc_Tinv_2, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_3_U">Accelerator_DCT_Block_proc_Tinv_3, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_4_U">Accelerator_DCT_Block_proc_Tinv_4, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_5_U">Accelerator_DCT_Block_proc_Tinv_5, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_6_U">Accelerator_DCT_Block_proc_Tinv_6, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Tinv_7_U">Accelerator_DCT_Block_proc_Tinv_7, 0, 64, 4, 8, 32, 1, 256</column>
+<column name="Y_U">Accelerator_DCT_Block_proc_Y, 1, 0, 0, 64, 32, 1, 2048</column>
+<column name="temp_U">Accelerator_DCT_Block_proc_temp, 1, 0, 0, 64, 32, 1, 2048</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Accelerator_MAT_Multiply2_Loop_Col_proc_U1_1_ap_start">and, 0, 0, 1, 1, 1</column>
+<column name="Accelerator_MAT_Multiply_U1_1_ap_start">and, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_0">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_1">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_2">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_3">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_4">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_5">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_6">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Tinv_7">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_Y">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_0">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_1">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_2">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_3">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_4">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_5">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_6">1, 2, 1, 2</column>
+<column name="ap_chn_write_Accelerator_MAT_Multiply_U0_T_7">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_0_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_1_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_2_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_3_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_4_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_5_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_6_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_7_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_C_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_0_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_1_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_2_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_3_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_4_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_5_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_6_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_A_7_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U0_ap_ready">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_U1_1_ap_ready">1, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply2_Loop_Col_proc_U0">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply2_Loop_Col_proc_U1_1">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply2_Loop_Row_proc_U0">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply2_Loop_Row_proc_U1_1">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply_U0">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply_U1_1">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_0_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_1_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_2_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_3_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_4_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_5_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_6_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_B_7_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply2_Loop_Col_proc_U0_C_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_0_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_1_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_2_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_3_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_4_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_5_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_6_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_A_7_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_U1_1_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Accelerator_DCT_Block__proc, return value</column>
+<column name="function_r">in, 8, ap_none, function_r, scalar</column>
+<column name="X_dout">in, 32, ap_fifo, X, pointer</column>
+<column name="X_empty_n">in, 1, ap_fifo, X, pointer</column>
+<column name="X_read">out, 1, ap_fifo, X, pointer</column>
+<column name="Y_address0">out, 6, ap_memory, Y, array</column>
+<column name="Y_ce0">out, 1, ap_memory, Y, array</column>
+<column name="Y_d0">out, 32, ap_memory, Y, array</column>
+<column name="Y_q0">in, 32, ap_memory, Y, array</column>
+<column name="Y_we0">out, 1, ap_memory, Y, array</column>
+<column name="Y_address1">out, 6, ap_memory, Y, array</column>
+<column name="Y_ce1">out, 1, ap_memory, Y, array</column>
+<column name="Y_d1">out, 32, ap_memory, Y, array</column>
+<column name="Y_q1">in, 32, ap_memory, Y, array</column>
+<column name="Y_we1">out, 1, ap_memory, Y, array</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,307 @@
+<stg><name>Accelerator_DCT</name>
+
+
+<trans_list>
+
+<trans id="9" from="1" to="2">
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="22" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+codeRepl:2  %function_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %function_r)
+
+]]></node>
+<StgValue><ssdm name="function_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="23" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+codeRepl:3  call fastcc void @Accelerator_DCT_Block__proc(i8 %function_read, float* %X, [64 x float]* nocapture %Y)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="5" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
+<![CDATA[
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str10) nounwind
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
+<![CDATA[
+codeRepl:1  call void (...)* @_ssdm_op_SpecInterface(float* %X, [8 x i8]* @p_str112, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="23" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+codeRepl:3  call fastcc void @Accelerator_DCT_Block__proc(i8 %function_read, float* %X, [64 x float]* nocapture %Y)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="24" bw="0">
+<![CDATA[
+codeRepl:4  ret void
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="11" name="X" dir="0" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="X"/></StgValue>
+</port>
+<port id="12" name="function_r" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="function_r"/></StgValue>
+</port>
+<port id="13" name="Y" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Y"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="14" name="Tinv_0" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_0"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="15" name="Tinv_1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_1"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="16" name="Tinv_2" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_2"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="17" name="Tinv_3" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_3"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="18" name="Tinv_4" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_4"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="19" name="Tinv_5" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_5"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="20" name="Tinv_6" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_6"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="21" name="Tinv_7" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="Tinv_7"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="22" name="T_0" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_0"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="23" name="T_1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_1"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="24" name="T_2" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_2"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="25" name="T_3" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_3"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="26" name="T_4" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_4"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="27" name="T_5" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_5"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="28" name="T_6" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_6"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="29" name="T_7" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="T_7"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="31" from="_ssdm_op_Read.ap_auto.i8" to="function_read" fromId="30" toId="3">
+</dataflow>
+<dataflow id="32" from="function_r" to="function_read" fromId="12" toId="3">
+</dataflow>
+<dataflow id="34" from="Accelerator_DCT_Block__proc" to="stg_4" fromId="33" toId="4">
+</dataflow>
+<dataflow id="35" from="function_read" to="stg_4" fromId="3" toId="4">
+</dataflow>
+<dataflow id="36" from="X" to="stg_4" fromId="11" toId="4">
+</dataflow>
+<dataflow id="37" from="Y" to="stg_4" fromId="13" toId="4">
+</dataflow>
+<dataflow id="38" from="Tinv_0" to="stg_4" fromId="14" toId="4">
+</dataflow>
+<dataflow id="39" from="Tinv_1" to="stg_4" fromId="15" toId="4">
+</dataflow>
+<dataflow id="40" from="Tinv_2" to="stg_4" fromId="16" toId="4">
+</dataflow>
+<dataflow id="41" from="Tinv_3" to="stg_4" fromId="17" toId="4">
+</dataflow>
+<dataflow id="42" from="Tinv_4" to="stg_4" fromId="18" toId="4">
+</dataflow>
+<dataflow id="43" from="Tinv_5" to="stg_4" fromId="19" toId="4">
+</dataflow>
+<dataflow id="44" from="Tinv_6" to="stg_4" fromId="20" toId="4">
+</dataflow>
+<dataflow id="45" from="Tinv_7" to="stg_4" fromId="21" toId="4">
+</dataflow>
+<dataflow id="46" from="T_0" to="stg_4" fromId="22" toId="4">
+</dataflow>
+<dataflow id="47" from="T_1" to="stg_4" fromId="23" toId="4">
+</dataflow>
+<dataflow id="48" from="T_2" to="stg_4" fromId="24" toId="4">
+</dataflow>
+<dataflow id="49" from="T_3" to="stg_4" fromId="25" toId="4">
+</dataflow>
+<dataflow id="50" from="T_4" to="stg_4" fromId="26" toId="4">
+</dataflow>
+<dataflow id="51" from="T_5" to="stg_4" fromId="27" toId="4">
+</dataflow>
+<dataflow id="52" from="T_6" to="stg_4" fromId="28" toId="4">
+</dataflow>
+<dataflow id="53" from="T_7" to="stg_4" fromId="29" toId="4">
+</dataflow>
+<dataflow id="55" from="_ssdm_op_SpecDataflowPipeline" to="stg_5" fromId="54" toId="5">
+</dataflow>
+<dataflow id="57" from="stg_56" to="stg_5" fromId="56" toId="5">
+</dataflow>
+<dataflow id="59" from="p_str10" to="stg_5" fromId="58" toId="5">
+</dataflow>
+<dataflow id="61" from="_ssdm_op_SpecInterface" to="stg_6" fromId="60" toId="6">
+</dataflow>
+<dataflow id="62" from="X" to="stg_6" fromId="11" toId="6">
+</dataflow>
+<dataflow id="64" from="p_str112" to="stg_6" fromId="63" toId="6">
+</dataflow>
+<dataflow id="66" from="stg_65" to="stg_6" fromId="65" toId="6">
+</dataflow>
+<dataflow id="67" from="stg_65" to="stg_6" fromId="65" toId="6">
+</dataflow>
+<dataflow id="68" from="stg_65" to="stg_6" fromId="65" toId="6">
+</dataflow>
+<dataflow id="69" from="stg_65" to="stg_6" fromId="65" toId="6">
+</dataflow>
+<dataflow id="71" from="p_str11" to="stg_6" fromId="70" toId="6">
+</dataflow>
+<dataflow id="72" from="p_str11" to="stg_6" fromId="70" toId="6">
+</dataflow>
+<dataflow id="73" from="p_str11" to="stg_6" fromId="70" toId="6">
+</dataflow>
+<dataflow id="74" from="Accelerator_DCT_Block__proc" to="stg_7" fromId="33" toId="7">
+</dataflow>
+<dataflow id="75" from="function_read" to="stg_7" fromId="3" toId="7">
+</dataflow>
+<dataflow id="76" from="X" to="stg_7" fromId="11" toId="7">
+</dataflow>
+<dataflow id="77" from="Y" to="stg_7" fromId="13" toId="7">
+</dataflow>
+<dataflow id="78" from="Tinv_0" to="stg_7" fromId="14" toId="7">
+</dataflow>
+<dataflow id="79" from="Tinv_1" to="stg_7" fromId="15" toId="7">
+</dataflow>
+<dataflow id="80" from="Tinv_2" to="stg_7" fromId="16" toId="7">
+</dataflow>
+<dataflow id="81" from="Tinv_3" to="stg_7" fromId="17" toId="7">
+</dataflow>
+<dataflow id="82" from="Tinv_4" to="stg_7" fromId="18" toId="7">
+</dataflow>
+<dataflow id="83" from="Tinv_5" to="stg_7" fromId="19" toId="7">
+</dataflow>
+<dataflow id="84" from="Tinv_6" to="stg_7" fromId="20" toId="7">
+</dataflow>
+<dataflow id="85" from="Tinv_7" to="stg_7" fromId="21" toId="7">
+</dataflow>
+<dataflow id="86" from="T_0" to="stg_7" fromId="22" toId="7">
+</dataflow>
+<dataflow id="87" from="T_1" to="stg_7" fromId="23" toId="7">
+</dataflow>
+<dataflow id="88" from="T_2" to="stg_7" fromId="24" toId="7">
+</dataflow>
+<dataflow id="89" from="T_3" to="stg_7" fromId="25" toId="7">
+</dataflow>
+<dataflow id="90" from="T_4" to="stg_7" fromId="26" toId="7">
+</dataflow>
+<dataflow id="91" from="T_5" to="stg_7" fromId="27" toId="7">
+</dataflow>
+<dataflow id="92" from="T_6" to="stg_7" fromId="28" toId="7">
+</dataflow>
+<dataflow id="93" from="T_7" to="stg_7" fromId="29" toId="7">
+</dataflow>
+</dataflows>
+
+
+</stg>

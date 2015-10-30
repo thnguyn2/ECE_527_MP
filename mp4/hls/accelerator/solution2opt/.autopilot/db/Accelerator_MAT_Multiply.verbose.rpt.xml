@@ -1,0 +1,224 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Accelerator_MAT_Multiply'" level="0">
+<item name = "Date">Thu Oct 29 22:12:23 2015
+</item>
+<item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
+<item name = "Project">accelerator</item>
+<item name = "Solution">solution2opt</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="default">10.00, 7.68, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">367, 367, 301, 301, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_Accelerator_MAT_Multiply_Loop_LoadRow_proc_fu_68">Accelerator_MAT_Multiply_Loop_LoadRow_proc, 66, 66, 66, 66, none</column>
+<column name="grp_Accelerator_MAT_Multiply_Loop_Row_proc_fu_45">Accelerator_MAT_Multiply_Loop_Row_proc, 300, 300, 300, 300, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Expression">-, -, 0, 1</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 10, 1872, 2286</column>
+<column name="Memory">4, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 2</column>
+<column name="Register">-, -, 5, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">1, 4, 1, 4</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Accelerator_MAT_Multiply_Loop_LoadRow_proc_U0">Accelerator_MAT_Multiply_Loop_LoadRow_proc, 0, 0, 26, 88</column>
+<column name="Accelerator_MAT_Multiply_Loop_Row_proc_U0">Accelerator_MAT_Multiply_Loop_Row_proc, 0, 10, 1846, 2198</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="B_cached_U">Accelerator_MAT_Multiply_B_cached, 4, 0, 0, 64, 32, 2, 4096</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Accelerator_MAT_Multiply_Loop_Row_proc_U0_ap_start">and, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_Loop_LoadRow_proc_U0_ap_ready">1, 2, 1, 2</column>
+<column name="ap_sig_ready_Accelerator_MAT_Multiply_Loop_Row_proc_U0_ap_ready">1, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply_Loop_LoadRow_proc_U0">1, 0, 1, 0</column>
+<column name="ap_reg_procdone_Accelerator_MAT_Multiply_Loop_Row_proc_U0">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_Loop_LoadRow_proc_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_reg_ready_Accelerator_MAT_Multiply_Loop_Row_proc_U0_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_0_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_0_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_1_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_1_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_2_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_2_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_3_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_3_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_4_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_4_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_5_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_5_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_6_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_6_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_7_pipo_status">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_7_pipo_update">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Accelerator_MAT_Multiply, return value</column>
+<column name="A_0_address0">out, 3, ap_memory, A_0, array</column>
+<column name="A_0_ce0">out, 1, ap_memory, A_0, array</column>
+<column name="A_0_d0">out, 32, ap_memory, A_0, array</column>
+<column name="A_0_q0">in, 32, ap_memory, A_0, array</column>
+<column name="A_0_we0">out, 1, ap_memory, A_0, array</column>
+<column name="A_0_address1">out, 3, ap_memory, A_0, array</column>
+<column name="A_0_ce1">out, 1, ap_memory, A_0, array</column>
+<column name="A_0_d1">out, 32, ap_memory, A_0, array</column>
+<column name="A_0_q1">in, 32, ap_memory, A_0, array</column>
+<column name="A_0_we1">out, 1, ap_memory, A_0, array</column>
+<column name="A_1_address0">out, 3, ap_memory, A_1, array</column>
+<column name="A_1_ce0">out, 1, ap_memory, A_1, array</column>
+<column name="A_1_d0">out, 32, ap_memory, A_1, array</column>
+<column name="A_1_q0">in, 32, ap_memory, A_1, array</column>
+<column name="A_1_we0">out, 1, ap_memory, A_1, array</column>
+<column name="A_1_address1">out, 3, ap_memory, A_1, array</column>
+<column name="A_1_ce1">out, 1, ap_memory, A_1, array</column>
+<column name="A_1_d1">out, 32, ap_memory, A_1, array</column>
+<column name="A_1_q1">in, 32, ap_memory, A_1, array</column>
+<column name="A_1_we1">out, 1, ap_memory, A_1, array</column>
+<column name="A_2_address0">out, 3, ap_memory, A_2, array</column>
+<column name="A_2_ce0">out, 1, ap_memory, A_2, array</column>
+<column name="A_2_d0">out, 32, ap_memory, A_2, array</column>
+<column name="A_2_q0">in, 32, ap_memory, A_2, array</column>
+<column name="A_2_we0">out, 1, ap_memory, A_2, array</column>
+<column name="A_2_address1">out, 3, ap_memory, A_2, array</column>
+<column name="A_2_ce1">out, 1, ap_memory, A_2, array</column>
+<column name="A_2_d1">out, 32, ap_memory, A_2, array</column>
+<column name="A_2_q1">in, 32, ap_memory, A_2, array</column>
+<column name="A_2_we1">out, 1, ap_memory, A_2, array</column>
+<column name="A_3_address0">out, 3, ap_memory, A_3, array</column>
+<column name="A_3_ce0">out, 1, ap_memory, A_3, array</column>
+<column name="A_3_d0">out, 32, ap_memory, A_3, array</column>
+<column name="A_3_q0">in, 32, ap_memory, A_3, array</column>
+<column name="A_3_we0">out, 1, ap_memory, A_3, array</column>
+<column name="A_3_address1">out, 3, ap_memory, A_3, array</column>
+<column name="A_3_ce1">out, 1, ap_memory, A_3, array</column>
+<column name="A_3_d1">out, 32, ap_memory, A_3, array</column>
+<column name="A_3_q1">in, 32, ap_memory, A_3, array</column>
+<column name="A_3_we1">out, 1, ap_memory, A_3, array</column>
+<column name="A_4_address0">out, 3, ap_memory, A_4, array</column>
+<column name="A_4_ce0">out, 1, ap_memory, A_4, array</column>
+<column name="A_4_d0">out, 32, ap_memory, A_4, array</column>
+<column name="A_4_q0">in, 32, ap_memory, A_4, array</column>
+<column name="A_4_we0">out, 1, ap_memory, A_4, array</column>
+<column name="A_4_address1">out, 3, ap_memory, A_4, array</column>
+<column name="A_4_ce1">out, 1, ap_memory, A_4, array</column>
+<column name="A_4_d1">out, 32, ap_memory, A_4, array</column>
+<column name="A_4_q1">in, 32, ap_memory, A_4, array</column>
+<column name="A_4_we1">out, 1, ap_memory, A_4, array</column>
+<column name="A_5_address0">out, 3, ap_memory, A_5, array</column>
+<column name="A_5_ce0">out, 1, ap_memory, A_5, array</column>
+<column name="A_5_d0">out, 32, ap_memory, A_5, array</column>
+<column name="A_5_q0">in, 32, ap_memory, A_5, array</column>
+<column name="A_5_we0">out, 1, ap_memory, A_5, array</column>
+<column name="A_5_address1">out, 3, ap_memory, A_5, array</column>
+<column name="A_5_ce1">out, 1, ap_memory, A_5, array</column>
+<column name="A_5_d1">out, 32, ap_memory, A_5, array</column>
+<column name="A_5_q1">in, 32, ap_memory, A_5, array</column>
+<column name="A_5_we1">out, 1, ap_memory, A_5, array</column>
+<column name="A_6_address0">out, 3, ap_memory, A_6, array</column>
+<column name="A_6_ce0">out, 1, ap_memory, A_6, array</column>
+<column name="A_6_d0">out, 32, ap_memory, A_6, array</column>
+<column name="A_6_q0">in, 32, ap_memory, A_6, array</column>
+<column name="A_6_we0">out, 1, ap_memory, A_6, array</column>
+<column name="A_6_address1">out, 3, ap_memory, A_6, array</column>
+<column name="A_6_ce1">out, 1, ap_memory, A_6, array</column>
+<column name="A_6_d1">out, 32, ap_memory, A_6, array</column>
+<column name="A_6_q1">in, 32, ap_memory, A_6, array</column>
+<column name="A_6_we1">out, 1, ap_memory, A_6, array</column>
+<column name="A_7_address0">out, 3, ap_memory, A_7, array</column>
+<column name="A_7_ce0">out, 1, ap_memory, A_7, array</column>
+<column name="A_7_d0">out, 32, ap_memory, A_7, array</column>
+<column name="A_7_q0">in, 32, ap_memory, A_7, array</column>
+<column name="A_7_we0">out, 1, ap_memory, A_7, array</column>
+<column name="A_7_address1">out, 3, ap_memory, A_7, array</column>
+<column name="A_7_ce1">out, 1, ap_memory, A_7, array</column>
+<column name="A_7_d1">out, 32, ap_memory, A_7, array</column>
+<column name="A_7_q1">in, 32, ap_memory, A_7, array</column>
+<column name="A_7_we1">out, 1, ap_memory, A_7, array</column>
+<column name="B_dout">in, 32, ap_fifo, B, pointer</column>
+<column name="B_empty_n">in, 1, ap_fifo, B, pointer</column>
+<column name="B_read">out, 1, ap_fifo, B, pointer</column>
+<column name="C_address0">out, 6, ap_memory, C, array</column>
+<column name="C_ce0">out, 1, ap_memory, C, array</column>
+<column name="C_d0">out, 32, ap_memory, C, array</column>
+<column name="C_q0">in, 32, ap_memory, C, array</column>
+<column name="C_we0">out, 1, ap_memory, C, array</column>
+<column name="C_address1">out, 6, ap_memory, C, array</column>
+<column name="C_ce1">out, 1, ap_memory, C, array</column>
+<column name="C_d1">out, 32, ap_memory, C, array</column>
+<column name="C_q1">in, 32, ap_memory, C, array</column>
+<column name="C_we1">out, 1, ap_memory, C, array</column>
+</table>
+</item>
+</section>
+</profile>

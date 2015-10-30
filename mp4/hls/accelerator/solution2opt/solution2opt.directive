@@ -1,0 +1,84 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="Accelerator" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="X" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="Accelerator" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="Y" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="Accelerator" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="A" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="B" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="DOT_Multiply" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="DOT_Multiply" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="B" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="DOT_Divide" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="DOT_Divide" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="B" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="MAT_Multiply" label="LoadRow" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply" label="Col" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="RowCaching" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="MAT_Multiply2" label="Col" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="DOT_Multiply" label="row" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="DOT_Divide" label="row" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="DCT" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="Quant" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

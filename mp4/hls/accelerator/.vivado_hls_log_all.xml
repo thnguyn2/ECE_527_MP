@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="@E [SCHED-51] Unable to satisfy dataflow directive: Region contains control flow." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:16.608-0500"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_7' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:32.483-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_6' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:32.373-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_5' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:32.249-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_4' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:32.139-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_3' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:32.030-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_2' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.920-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_1' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.795-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_T_0' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.686-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_7' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.561-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_6' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.452-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_5' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.342-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_4' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.217-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_3' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:31.108-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_2' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:30.998-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_1' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:30.889-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_DCT_Block_proc_Tinv_0' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:30.764-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 7, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:68) and fifo read on port 'A' (accelerator/matrixmath.c:68)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:18.936-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:68) and fifo read on port 'A' (accelerator/matrixmath.c:68)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:18.936-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:68) and fifo read on port 'A' (accelerator/matrixmath.c:68)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:18.920-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:68) and fifo read on port 'A' (accelerator/matrixmath.c:68)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:18.905-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:68) and fifo read on port 'A' (accelerator/matrixmath.c:68)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:18.905-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 7, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:79) and fifo read on port 'A' (accelerator/matrixmath.c:79)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:17.780-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:79) and fifo read on port 'A' (accelerator/matrixmath.c:79)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:17.764-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:79) and fifo read on port 'A' (accelerator/matrixmath.c:79)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:17.748-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:79) and fifo read on port 'A' (accelerator/matrixmath.c:79)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:17.748-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xD;&#xA;   between fifo read on port 'A' (accelerator/matrixmath.c:79) and fifo read on port 'A' (accelerator/matrixmath.c:79)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:17.733-0500" type="Warning"/>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_cached_row_load_2', accelerator/matrixmath.c:56) on array 'A_cached_row' due to limited memory ports." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:16.280-0500" type="Warning"/>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_0_load_2') on array 'A_0' due to limited memory ports." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:15.358-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 7, distance = 1)&#xD;&#xA;   between fifo read on port 'B' (accelerator/matrixmath.c:13) and fifo read on port 'B' (accelerator/matrixmath.c:13)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.905-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)&#xD;&#xA;   between fifo read on port 'B' (accelerator/matrixmath.c:13) and fifo read on port 'B' (accelerator/matrixmath.c:13)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.889-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)&#xD;&#xA;   between fifo read on port 'B' (accelerator/matrixmath.c:13) and fifo read on port 'B' (accelerator/matrixmath.c:13)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.873-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xD;&#xA;   between fifo read on port 'B' (accelerator/matrixmath.c:13) and fifo read on port 'B' (accelerator/matrixmath.c:13)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.873-0500" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xD;&#xA;   between fifo read on port 'B' (accelerator/matrixmath.c:13) and fifo read on port 'B' (accelerator/matrixmath.c:13)." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.858-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'Accelerator/function' to 'Accelerator/function_r' to avoid the conflict with HDL keywords or other object names." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.499-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'Accelerator_Block__proc' to 'Accelerator_Block_proc'." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.499-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'Accelerator_Quant_Block__proc' to 'Accelerator_Quant_Block_proc'." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.483-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'Accelerator_DCT_Block__proc' to 'Accelerator_DCT_Block_proc'." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:12:14.467-0500" type="Warning"/>
+        <logs message="@W [HLS-40] Skipped source file 'vivado_hls.app'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="accelerator" solutionName="solution2opt" date="2015-10-29T22:11:59.952-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_T' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:52.280-0500" type="Warning"/>
+        <logs message="@W [RTMG-274] Memory 'Accelerator_Tinv' is read-only, switch it to a ROM." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:52.139-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'T' will not be exposed as RTL port." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:50.358-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'Tinv' will not be exposed as RTL port." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:50.342-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'stdQuantizationMatrix' will not be exposed as RTL port." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:50.327-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'Accelerator/function' to 'Accelerator/function_r' to avoid the conflict with HDL keywords or other object names." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:45.967-0500" type="Warning"/>
+        <logs message="@W [HLS-40] Skipped source file 'vivado_hls.app'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="accelerator" solutionName="solution1" date="2015-10-29T21:20:33.045-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

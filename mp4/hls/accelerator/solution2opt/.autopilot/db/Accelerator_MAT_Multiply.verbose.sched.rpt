@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vivado HLS Report for 'Accelerator_MAT_Multiply'
+================================================================
+* Date:           Thu Oct 29 22:12:15 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        accelerator
+* Solution:       solution2opt
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.68|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  367|  367|  301|  301| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: B_cached [1/1] 0.00ns
+codeRepl:2  %B_cached = alloca [64 x float], align 4
+
+ST_1: stg_6 [2/2] 0.00ns
+codeRepl:3  call fastcc void @Accelerator_MAT_Multiply_Loop_LoadRow_proc(float* %B, [64 x float]* nocapture %B_cached)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_7 [1/2] 0.00ns
+codeRepl:3  call fastcc void @Accelerator_MAT_Multiply_Loop_LoadRow_proc(float* %B, [64 x float]* nocapture %B_cached)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_8 [2/2] 0.00ns
+codeRepl:4  call fastcc void @Accelerator_MAT_Multiply_Loop_Row_proc([8 x float]* nocapture %A_0, [8 x float]* nocapture %A_1, [8 x float]* nocapture %A_2, [8 x float]* nocapture %A_3, [8 x float]* nocapture %A_4, [8 x float]* nocapture %A_5, [8 x float]* nocapture %A_6, [8 x float]* nocapture %A_7, [64 x float]* nocapture %B_cached, [64 x float]* nocapture %C)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_9 [1/1] 0.00ns
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str12) nounwind
+
+ST_4: stg_10 [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecInterface(float* %B, [8 x i8]* @p_str112, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)
+
+ST_4: stg_11 [1/2] 0.00ns
+codeRepl:4  call fastcc void @Accelerator_MAT_Multiply_Loop_Row_proc([8 x float]* nocapture %A_0, [8 x float]* nocapture %A_1, [8 x float]* nocapture %A_2, [8 x float]* nocapture %A_3, [8 x float]* nocapture %A_4, [8 x float]* nocapture %A_5, [8 x float]* nocapture %A_6, [8 x float]* nocapture %A_7, [64 x float]* nocapture %B_cached, [64 x float]* nocapture %C)
+
+ST_4: stg_12 [1/1] 0.00ns
+codeRepl:5  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,295 @@
+<stg><name>Accelerator_MAT_Multiply</name>
+
+
+<trans_list>
+
+<trans id="13" from="1" to="2">
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="14" from="2" to="3">
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="15" from="3" to="4">
+<condition id="2">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="13" bw="32" op_0_bw="64">
+<![CDATA[
+codeRepl:2  %B_cached = alloca [64 x float], align 4
+
+]]></node>
+<StgValue><ssdm name="B_cached"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:3  call fastcc void @Accelerator_MAT_Multiply_Loop_LoadRow_proc(float* %B, [64 x float]* nocapture %B_cached)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="7" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:3  call fastcc void @Accelerator_MAT_Multiply_Loop_LoadRow_proc(float* %B, [64 x float]* nocapture %B_cached)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="8" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32">
+<![CDATA[
+codeRepl:4  call fastcc void @Accelerator_MAT_Multiply_Loop_Row_proc([8 x float]* nocapture %A_0, [8 x float]* nocapture %A_1, [8 x float]* nocapture %A_2, [8 x float]* nocapture %A_3, [8 x float]* nocapture %A_4, [8 x float]* nocapture %A_5, [8 x float]* nocapture %A_6, [8 x float]* nocapture %A_7, [64 x float]* nocapture %B_cached, [64 x float]* nocapture %C)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="9" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
+<![CDATA[
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str12) nounwind
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="10" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
+<![CDATA[
+codeRepl:1  call void (...)* @_ssdm_op_SpecInterface(float* %B, [8 x i8]* @p_str112, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="11" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32">
+<![CDATA[
+codeRepl:4  call fastcc void @Accelerator_MAT_Multiply_Loop_Row_proc([8 x float]* nocapture %A_0, [8 x float]* nocapture %A_1, [8 x float]* nocapture %A_2, [8 x float]* nocapture %A_3, [8 x float]* nocapture %A_4, [8 x float]* nocapture %A_5, [8 x float]* nocapture %A_6, [8 x float]* nocapture %A_7, [64 x float]* nocapture %B_cached, [64 x float]* nocapture %C)
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="12" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<node id="16" bw="0">
+<![CDATA[
+codeRepl:5  ret void
+
+]]></node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="17" name="A_0" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_0"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="18" name="A_1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_1"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="19" name="A_2" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_2"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="20" name="A_3" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_3"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="21" name="A_4" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_4"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="22" name="A_5" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_5"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="23" name="A_6" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_6"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="24" name="A_7" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="A_7"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="25" name="B" dir="0" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="B"/></StgValue>
+</port>
+<port id="26" name="C" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="C"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="28" from="stg_27" to="B_cached" fromId="27" toId="5">
+</dataflow>
+<dataflow id="30" from="Accelerator_MAT_Multiply_Loop_LoadRow_proc" to="stg_6" fromId="29" toId="6">
+</dataflow>
+<dataflow id="31" from="B" to="stg_6" fromId="25" toId="6">
+</dataflow>
+<dataflow id="32" from="B_cached" to="stg_6" fromId="5" toId="6">
+</dataflow>
+<dataflow id="33" from="Accelerator_MAT_Multiply_Loop_LoadRow_proc" to="stg_7" fromId="29" toId="7">
+</dataflow>
+<dataflow id="34" from="B" to="stg_7" fromId="25" toId="7">
+</dataflow>
+<dataflow id="35" from="B_cached" to="stg_7" fromId="5" toId="7">
+</dataflow>
+<dataflow id="37" from="Accelerator_MAT_Multiply_Loop_Row_proc" to="stg_8" fromId="36" toId="8">
+</dataflow>
+<dataflow id="38" from="A_0" to="stg_8" fromId="17" toId="8">
+</dataflow>
+<dataflow id="39" from="A_1" to="stg_8" fromId="18" toId="8">
+</dataflow>
+<dataflow id="40" from="A_2" to="stg_8" fromId="19" toId="8">
+</dataflow>
+<dataflow id="41" from="A_3" to="stg_8" fromId="20" toId="8">
+</dataflow>
+<dataflow id="42" from="A_4" to="stg_8" fromId="21" toId="8">
+</dataflow>
+<dataflow id="43" from="A_5" to="stg_8" fromId="22" toId="8">
+</dataflow>
+<dataflow id="44" from="A_6" to="stg_8" fromId="23" toId="8">
+</dataflow>
+<dataflow id="45" from="A_7" to="stg_8" fromId="24" toId="8">
+</dataflow>
+<dataflow id="46" from="B_cached" to="stg_8" fromId="5" toId="8">
+</dataflow>
+<dataflow id="47" from="C" to="stg_8" fromId="26" toId="8">
+</dataflow>
+<dataflow id="49" from="_ssdm_op_SpecDataflowPipeline" to="stg_9" fromId="48" toId="9">
+</dataflow>
+<dataflow id="51" from="stg_50" to="stg_9" fromId="50" toId="9">
+</dataflow>
+<dataflow id="53" from="p_str12" to="stg_9" fromId="52" toId="9">
+</dataflow>
+<dataflow id="55" from="_ssdm_op_SpecInterface" to="stg_10" fromId="54" toId="10">
+</dataflow>
+<dataflow id="56" from="B" to="stg_10" fromId="25" toId="10">
+</dataflow>
+<dataflow id="58" from="p_str112" to="stg_10" fromId="57" toId="10">
+</dataflow>
+<dataflow id="60" from="stg_59" to="stg_10" fromId="59" toId="10">
+</dataflow>
+<dataflow id="61" from="stg_59" to="stg_10" fromId="59" toId="10">
+</dataflow>
+<dataflow id="62" from="stg_59" to="stg_10" fromId="59" toId="10">
+</dataflow>
+<dataflow id="63" from="stg_59" to="stg_10" fromId="59" toId="10">
+</dataflow>
+<dataflow id="65" from="p_str11" to="stg_10" fromId="64" toId="10">
+</dataflow>
+<dataflow id="66" from="p_str11" to="stg_10" fromId="64" toId="10">
+</dataflow>
+<dataflow id="67" from="p_str11" to="stg_10" fromId="64" toId="10">
+</dataflow>
+<dataflow id="68" from="Accelerator_MAT_Multiply_Loop_Row_proc" to="stg_11" fromId="36" toId="11">
+</dataflow>
+<dataflow id="69" from="A_0" to="stg_11" fromId="17" toId="11">
+</dataflow>
+<dataflow id="70" from="A_1" to="stg_11" fromId="18" toId="11">
+</dataflow>
+<dataflow id="71" from="A_2" to="stg_11" fromId="19" toId="11">
+</dataflow>
+<dataflow id="72" from="A_3" to="stg_11" fromId="20" toId="11">
+</dataflow>
+<dataflow id="73" from="A_4" to="stg_11" fromId="21" toId="11">
+</dataflow>
+<dataflow id="74" from="A_5" to="stg_11" fromId="22" toId="11">
+</dataflow>
+<dataflow id="75" from="A_6" to="stg_11" fromId="23" toId="11">
+</dataflow>
+<dataflow id="76" from="A_7" to="stg_11" fromId="24" toId="11">
+</dataflow>
+<dataflow id="77" from="B_cached" to="stg_11" fromId="5" toId="11">
+</dataflow>
+<dataflow id="78" from="C" to="stg_11" fromId="26" toId="11">
+</dataflow>
+</dataflows>
+
+
+</stg>

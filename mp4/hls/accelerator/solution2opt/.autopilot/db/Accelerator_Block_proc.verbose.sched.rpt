@@ -1,0 +1,219 @@
+
+
+================================================================
+== Vivado HLS Report for 'Accelerator_Block_proc'
+================================================================
+* Date:           Thu Oct 29 22:12:19 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        accelerator
+* Solution:       solution2opt
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.09|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  588|  600|  588|  600|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!cond)
+	5  / (cond)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+5 --> 
+	6  / true
+6 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 2.00ns
+ST_1: stg_7 [1/1] 0.00ns
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(float* %Y, [8 x i8]* @p_str112, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)
+
+ST_1: stg_8 [1/1] 0.00ns
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(float* %X, [8 x i8]* @p_str112, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)
+
+ST_1: function_read [1/1] 0.00ns
+newFuncRoot:2  %function_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %function_r)
+
+ST_1: temp [1/1] 0.00ns
+newFuncRoot:3  %temp = alloca [64 x float], align 4
+
+ST_1: cond [1/1] 2.00ns
+newFuncRoot:4  %cond = icmp eq i8 %function_read, 1
+
+ST_1: stg_12 [1/1] 0.00ns
+newFuncRoot:5  br i1 %cond, label %0, label %1
+
+ST_1: stg_13 [2/2] 1.04ns
+:0  call fastcc void @Accelerator_DCT(float* %X, i8 zeroext %function_read, [64 x float]* nocapture %temp)
+
+ST_1: stg_14 [2/2] 1.04ns
+:0  call fastcc void @Accelerator_Quant(float* %X, i8 1, float* %Y)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_15 [1/2] 0.00ns
+:0  call fastcc void @Accelerator_DCT(float* %X, i8 zeroext %function_read, [64 x float]* nocapture %temp)
+
+
+ <State 3>: 1.04ns
+ST_3: stg_16 [2/2] 1.04ns
+:1  call fastcc void @Accelerator_Quant(float* %X, i8 %function_read, float* %Y)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_17 [1/2] 0.00ns
+:1  call fastcc void @Accelerator_Quant(float* %X, i8 %function_read, float* %Y)
+
+ST_4: stg_18 [1/1] 0.00ns
+:2  br label %.ret.exitStub
+
+ST_4: stg_19 [1/2] 0.00ns
+:1  call fastcc void @Accelerator_DCT(float* %X, i8 zeroext 1, [64 x float]* nocapture %temp)
+
+ST_4: stg_20 [1/1] 0.00ns
+:2  br label %.ret.exitStub
+
+ST_4: stg_21 [1/1] 0.00ns
+.ret.exitStub:0  ret void
+
+
+ <State 5>: 0.00ns
+ST_5: stg_22 [1/2] 0.00ns
+:0  call fastcc void @Accelerator_Quant(float* %X, i8 1, float* %Y)
+
+
+ <State 6>: 1.04ns
+ST_6: stg_23 [2/2] 1.04ns
+:1  call fastcc void @Accelerator_DCT(float* %X, i8 zeroext 1, [64 x float]* nocapture %temp)
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
