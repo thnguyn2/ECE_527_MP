@@ -4128,7 +4128,7 @@
 					<Obj>
 						<type>0</type>
 						<id>150</id>
-						<name>i</name>
+						<name>i2</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -14692,6 +14692,14 @@
 			</second>
 		</item>
 		<item>
+			<first>i2_fu_833</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>150</item>
+			</second>
+		</item>
+		<item>
 			<first>i_1_mid2_fu_839</first>
 			<second>
 				<count>1</count>
@@ -14705,14 +14713,6 @@
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>140</item>
-			</second>
-		</item>
-		<item>
-			<first>i_fu_833</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>150</item>
 			</second>
 		</item>
 		<item>

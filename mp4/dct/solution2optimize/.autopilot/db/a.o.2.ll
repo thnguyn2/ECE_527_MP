@@ -35,14 +35,13 @@ declare void @_ssdm_op_SpecLoopName(...) nounwind
 declare void @_ssdm_op_SpecPipeline(...) nounwind
 
 ; [#uses=0]
-define void @DCT(i32* %X, i8 zeroext %function, i32* %Y) nounwind uwtable {
+define void @DCT(i32* %X, i32* %Y) nounwind uwtable {
 codeRepl:
   call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @.str8) nounwind, !dbg !11 ; [debug line = 9:1]
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %X) nounwind, !map !22
-  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function) nounwind, !map !28
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !34
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %X) nounwind, !map !21
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !27
   call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
-  %Xbuff = alloca [65 x float], align 16          ; [#uses=2 type=[65 x float]*]
+  %Xbuff = alloca [66 x float], align 16          ; [#uses=2 type=[66 x float]*]
   %Xmat = alloca [8 x [8 x float]], align 16      ; [#uses=2 type=[8 x [8 x float]]*]
   %"temp[0]" = alloca [8 x float], align 4        ; [#uses=2 type=[8 x float]*]
   %"temp[1]" = alloca [8 x float], align 4        ; [#uses=2 type=[8 x float]*]
@@ -53,33 +52,32 @@ codeRepl:
   %"temp[6]" = alloca [8 x float], align 4        ; [#uses=2 type=[8 x float]*]
   %"temp[7]" = alloca [8 x float], align 4        ; [#uses=2 type=[8 x float]*]
   %Ymat = alloca [8 x [8 x float]], align 16      ; [#uses=2 type=[8 x [8 x float]]*]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !38 ; [debug line = 10:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !39 ; [debug line = 11:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @.str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !40 ; [debug line = 12:1]
-  call void @llvm.dbg.value(metadata !{i32* %X}, i64 0, metadata !41), !dbg !42 ; [debug line = 7:15] [debug variable = X]
-  call void @llvm.dbg.value(metadata !{i8 %function}, i64 0, metadata !43), !dbg !44 ; [debug line = 7:31] [debug variable = function]
-  call void @llvm.dbg.value(metadata !{i32* %Y}, i64 0, metadata !45), !dbg !46 ; [debug line = 7:45] [debug variable = Y]
-  call void @llvm.dbg.declare(metadata !{[8 x [8 x float]]* %Xmat}, metadata !47), !dbg !49 ; [debug line = 17:8] [debug variable = Xmat]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[0]"}, metadata !50), !dbg !53 ; [debug line = 18:8] [debug variable = temp[0]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[1]"}, metadata !54), !dbg !53 ; [debug line = 18:8] [debug variable = temp[1]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[2]"}, metadata !55), !dbg !53 ; [debug line = 18:8] [debug variable = temp[2]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[3]"}, metadata !56), !dbg !53 ; [debug line = 18:8] [debug variable = temp[3]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[4]"}, metadata !57), !dbg !53 ; [debug line = 18:8] [debug variable = temp[4]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[5]"}, metadata !58), !dbg !53 ; [debug line = 18:8] [debug variable = temp[5]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[6]"}, metadata !59), !dbg !53 ; [debug line = 18:8] [debug variable = temp[6]]
-  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[7]"}, metadata !60), !dbg !53 ; [debug line = 18:8] [debug variable = temp[7]]
-  call fastcc void @Loop_1_proc(i32* %X, [65 x float]* %Xbuff)
-  call fastcc void @Loop_2_proc([65 x float]* %Xbuff, [8 x [8 x float]]* %Xmat)
-  call fastcc void @MAT_Multiply([8 x [8 x float]]* %Xmat, [8 x float]* %"temp[0]", [8 x float]* %"temp[1]", [8 x float]* %"temp[2]", [8 x float]* %"temp[3]", [8 x float]* %"temp[4]", [8 x float]* %"temp[5]", [8 x float]* %"temp[6]", [8 x float]* %"temp[7]") nounwind, !dbg !61 ; [debug line = 42:2]
-  call fastcc void @MAT_Multiply.1([8 x float]* %"temp[0]", [8 x float]* %"temp[1]", [8 x float]* %"temp[2]", [8 x float]* %"temp[3]", [8 x float]* %"temp[4]", [8 x float]* %"temp[5]", [8 x float]* %"temp[6]", [8 x float]* %"temp[7]", [8 x [8 x float]]* %Ymat) nounwind, !dbg !62 ; [debug line = 43:2]
-  call fastcc void @Loop_3_proc(i32* %Y, [8 x [8 x float]]* %Ymat)
-  ret void, !dbg !63                              ; [debug line = 66:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !31 ; [debug line = 10:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !32 ; [debug line = 11:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @.str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8) nounwind, !dbg !33 ; [debug line = 12:1]
+  call void @llvm.dbg.value(metadata !{i32* %X}, i64 0, metadata !34), !dbg !35 ; [debug line = 7:15] [debug variable = X]
+  call void @llvm.dbg.value(metadata !{i32* %Y}, i64 0, metadata !36), !dbg !37 ; [debug line = 7:22] [debug variable = Y]
+  call void @llvm.dbg.declare(metadata !{[8 x [8 x float]]* %Xmat}, metadata !38), !dbg !40 ; [debug line = 17:8] [debug variable = Xmat]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[0]"}, metadata !41), !dbg !44 ; [debug line = 18:8] [debug variable = temp[0]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[1]"}, metadata !45), !dbg !44 ; [debug line = 18:8] [debug variable = temp[1]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[2]"}, metadata !46), !dbg !44 ; [debug line = 18:8] [debug variable = temp[2]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[3]"}, metadata !47), !dbg !44 ; [debug line = 18:8] [debug variable = temp[3]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[4]"}, metadata !48), !dbg !44 ; [debug line = 18:8] [debug variable = temp[4]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[5]"}, metadata !49), !dbg !44 ; [debug line = 18:8] [debug variable = temp[5]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[6]"}, metadata !50), !dbg !44 ; [debug line = 18:8] [debug variable = temp[6]]
+  call void @llvm.dbg.declare(metadata !{[8 x float]* %"temp[7]"}, metadata !51), !dbg !44 ; [debug line = 18:8] [debug variable = temp[7]]
+  %opt_type.02.loc.loc.loc.channel = call fastcc i32 @Loop_1_proc(i32* %X, [66 x float]* %Xbuff, i1 undef) nounwind ; [#uses=1 type=i32]
+  call fastcc void @Loop_2_proc([66 x float]* %Xbuff, [8 x [8 x float]]* %Xmat)
+  call fastcc void @MAT_Multiply([8 x [8 x float]]* %Xmat, [8 x float]* %"temp[0]", [8 x float]* %"temp[1]", [8 x float]* %"temp[2]", [8 x float]* %"temp[3]", [8 x float]* %"temp[4]", [8 x float]* %"temp[5]", [8 x float]* %"temp[6]", [8 x float]* %"temp[7]") nounwind, !dbg !52 ; [debug line = 43:2]
+  call fastcc void @MAT_Multiply.1([8 x float]* %"temp[0]", [8 x float]* %"temp[1]", [8 x float]* %"temp[2]", [8 x float]* %"temp[3]", [8 x float]* %"temp[4]", [8 x float]* %"temp[5]", [8 x float]* %"temp[6]", [8 x float]* %"temp[7]", [8 x [8 x float]]* %Ymat) nounwind, !dbg !53 ; [debug line = 44:2]
+  call fastcc void @Loop_3_proc1(i32* %Y, i32 %opt_type.02.loc.loc.loc.channel, [8 x [8 x float]]* %Ymat) nounwind
+  ret void, !dbg !54                              ; [debug line = 70:1]
 }
 
 ; [#uses=5]
 declare void @_ssdm_op_SpecInterface(...) nounwind
 
-; [#uses=157]
+; [#uses=156]
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 ; [#uses=1]
@@ -91,7 +89,7 @@ declare i32 @_ssdm_op_SpecRegionBegin(...)
 ; [#uses=8]
 declare i32 @_ssdm_op_SpecRegionEnd(...)
 
-; [#uses=3]
+; [#uses=2]
 declare void @_ssdm_op_SpecBitsMap(...)
 
 ; [#uses=12]
@@ -100,16 +98,16 @@ declare i32 @_ssdm_op_SpecLoopTripCount(...)
 ; [#uses=1]
 define internal fastcc void @MAT_Multiply([8 x [8 x float]]* nocapture %B, [8 x float]* nocapture %"C[0]", [8 x float]* nocapture %"C[1]", [8 x float]* nocapture %"C[2]", [8 x float]* nocapture %"C[3]", [8 x float]* nocapture %"C[4]", [8 x float]* nocapture %"C[5]", [8 x float]* nocapture %"C[6]", [8 x float]* nocapture %"C[7]") {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @.str) nounwind, !dbg !64 ; [debug line = 7:1]
-  call void @llvm.dbg.value(metadata !{[8 x [8 x float]]* %B}, i64 0, metadata !73), !dbg !74 ; [debug line = 5:9] [debug variable = B]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[0]"}, i64 0, metadata !75), !dbg !77 ; [debug line = 5:24] [debug variable = C[0]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[1]"}, i64 0, metadata !78), !dbg !77 ; [debug line = 5:24] [debug variable = C[1]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[2]"}, i64 0, metadata !79), !dbg !77 ; [debug line = 5:24] [debug variable = C[2]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[3]"}, i64 0, metadata !80), !dbg !77 ; [debug line = 5:24] [debug variable = C[3]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[4]"}, i64 0, metadata !81), !dbg !77 ; [debug line = 5:24] [debug variable = C[4]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[5]"}, i64 0, metadata !82), !dbg !77 ; [debug line = 5:24] [debug variable = C[5]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[6]"}, i64 0, metadata !83), !dbg !77 ; [debug line = 5:24] [debug variable = C[6]]
-  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[7]"}, i64 0, metadata !84), !dbg !77 ; [debug line = 5:24] [debug variable = C[7]]
+  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @.str) nounwind, !dbg !55 ; [debug line = 7:1]
+  call void @llvm.dbg.value(metadata !{[8 x [8 x float]]* %B}, i64 0, metadata !64), !dbg !65 ; [debug line = 5:9] [debug variable = B]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[0]"}, i64 0, metadata !66), !dbg !68 ; [debug line = 5:24] [debug variable = C[0]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[1]"}, i64 0, metadata !69), !dbg !68 ; [debug line = 5:24] [debug variable = C[1]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[2]"}, i64 0, metadata !70), !dbg !68 ; [debug line = 5:24] [debug variable = C[2]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[3]"}, i64 0, metadata !71), !dbg !68 ; [debug line = 5:24] [debug variable = C[3]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[4]"}, i64 0, metadata !72), !dbg !68 ; [debug line = 5:24] [debug variable = C[4]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[5]"}, i64 0, metadata !73), !dbg !68 ; [debug line = 5:24] [debug variable = C[5]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[6]"}, i64 0, metadata !74), !dbg !68 ; [debug line = 5:24] [debug variable = C[6]]
+  call void @llvm.dbg.value(metadata !{[8 x float]* %"C[7]"}, i64 0, metadata !75), !dbg !68 ; [debug line = 5:24] [debug variable = C[7]]
   %call.ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @MAT_Multiply_Loop_LoadRow_proc(float undef, [8 x [8 x float]]* %B, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef) ; [#uses=64 type={ float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float }]
   %"B_cached[0][0].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 0 ; [#uses=1 type=float]
   %"B_cached[0][1].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 1 ; [#uses=1 type=float]
@@ -176,13 +174,13 @@ codeRepl:
   %"B_cached[7][6].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 62 ; [#uses=1 type=float]
   %"B_cached[7][7].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 63 ; [#uses=1 type=float]
   call fastcc void @MAT_Multiply_Loop_Row_proc(float %"B_cached[0][0].channel", float %"B_cached[0][1].channel", float %"B_cached[0][2].channel", float %"B_cached[0][3].channel", float %"B_cached[0][4].channel", float %"B_cached[0][5].channel", float %"B_cached[0][6].channel", float %"B_cached[0][7].channel", float %"B_cached[1][0].channel", float %"B_cached[1][1].channel", float %"B_cached[1][2].channel", float %"B_cached[1][3].channel", float %"B_cached[1][4].channel", float %"B_cached[1][5].channel", float %"B_cached[1][6].channel", float %"B_cached[1][7].channel", float %"B_cached[2][0].channel", float %"B_cached[2][1].channel", float %"B_cached[2][2].channel", float %"B_cached[2][3].channel", float %"B_cached[2][4].channel", float %"B_cached[2][5].channel", float %"B_cached[2][6].channel", float %"B_cached[2][7].channel", float %"B_cached[3][0].channel", float %"B_cached[3][1].channel", float %"B_cached[3][2].channel", float %"B_cached[3][3].channel", float %"B_cached[3][4].channel", float %"B_cached[3][5].channel", float %"B_cached[3][6].channel", float %"B_cached[3][7].channel", float %"B_cached[4][0].channel", float %"B_cached[4][1].channel", float %"B_cached[4][2].channel", float %"B_cached[4][3].channel", float %"B_cached[4][4].channel", float %"B_cached[4][5].channel", float %"B_cached[4][6].channel", float %"B_cached[4][7].channel", float %"B_cached[5][0].channel", float %"B_cached[5][1].channel", float %"B_cached[5][2].channel", float %"B_cached[5][3].channel", float %"B_cached[5][4].channel", float %"B_cached[5][5].channel", float %"B_cached[5][6].channel", float %"B_cached[5][7].channel", float %"B_cached[6][0].channel", float %"B_cached[6][1].channel", float %"B_cached[6][2].channel", float %"B_cached[6][3].channel", float %"B_cached[6][4].channel", float %"B_cached[6][5].channel", float %"B_cached[6][6].channel", float %"B_cached[6][7].channel", float %"B_cached[7][0].channel", float %"B_cached[7][1].channel", float %"B_cached[7][2].channel", float %"B_cached[7][3].channel", float %"B_cached[7][4].channel", float %"B_cached[7][5].channel", float %"B_cached[7][6].channel", float %"B_cached[7][7].channel", [8 x float]* %"C[0]", [8 x float]* %"C[1]", [8 x float]* %"C[2]", [8 x float]* %"C[3]", [8 x float]* %"C[4]", [8 x float]* %"C[5]", [8 x float]* %"C[6]", [8 x float]* %"C[7]")
-  ret void, !dbg !85                              ; [debug line = 29:1]
+  ret void, !dbg !76                              ; [debug line = 29:1]
 }
 
 ; [#uses=1]
 define internal fastcc void @MAT_Multiply.1([8 x float]* nocapture %A, [8 x float]* nocapture %A1, [8 x float]* nocapture %A2, [8 x float]* nocapture %A3, [8 x float]* nocapture %A4, [8 x float]* nocapture %A5, [8 x float]* nocapture %A6, [8 x float]* nocapture %A7, [8 x [8 x float]]* nocapture %C) {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @.str) nounwind, !dbg !64 ; [debug line = 7:1]
+  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @.str) nounwind, !dbg !55 ; [debug line = 7:1]
   %call.ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @MAT_Multiply.1_Loop_LoadRow_proc(float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef, float undef) ; [#uses=64 type={ float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float }]
   %"B_cached[0][0].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 0 ; [#uses=1 type=float]
   %"B_cached[0][1].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 1 ; [#uses=1 type=float]
@@ -249,40 +247,11 @@ codeRepl:
   %"B_cached[7][6].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 62 ; [#uses=1 type=float]
   %"B_cached[7][7].channel" = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call.ret, 63 ; [#uses=1 type=float]
   call fastcc void @MAT_Multiply.1_Loop_Row_proc([8 x float]* %A, [8 x float]* %A1, [8 x float]* %A2, [8 x float]* %A3, [8 x float]* %A4, [8 x float]* %A5, [8 x float]* %A6, [8 x float]* %A7, float %"B_cached[0][0].channel", float %"B_cached[0][1].channel", float %"B_cached[0][2].channel", float %"B_cached[0][3].channel", float %"B_cached[0][4].channel", float %"B_cached[0][5].channel", float %"B_cached[0][6].channel", float %"B_cached[0][7].channel", float %"B_cached[1][0].channel", float %"B_cached[1][1].channel", float %"B_cached[1][2].channel", float %"B_cached[1][3].channel", float %"B_cached[1][4].channel", float %"B_cached[1][5].channel", float %"B_cached[1][6].channel", float %"B_cached[1][7].channel", float %"B_cached[2][0].channel", float %"B_cached[2][1].channel", float %"B_cached[2][2].channel", float %"B_cached[2][3].channel", float %"B_cached[2][4].channel", float %"B_cached[2][5].channel", float %"B_cached[2][6].channel", float %"B_cached[2][7].channel", float %"B_cached[3][0].channel", float %"B_cached[3][1].channel", float %"B_cached[3][2].channel", float %"B_cached[3][3].channel", float %"B_cached[3][4].channel", float %"B_cached[3][5].channel", float %"B_cached[3][6].channel", float %"B_cached[3][7].channel", float %"B_cached[4][0].channel", float %"B_cached[4][1].channel", float %"B_cached[4][2].channel", float %"B_cached[4][3].channel", float %"B_cached[4][4].channel", float %"B_cached[4][5].channel", float %"B_cached[4][6].channel", float %"B_cached[4][7].channel", float %"B_cached[5][0].channel", float %"B_cached[5][1].channel", float %"B_cached[5][2].channel", float %"B_cached[5][3].channel", float %"B_cached[5][4].channel", float %"B_cached[5][5].channel", float %"B_cached[5][6].channel", float %"B_cached[5][7].channel", float %"B_cached[6][0].channel", float %"B_cached[6][1].channel", float %"B_cached[6][2].channel", float %"B_cached[6][3].channel", float %"B_cached[6][4].channel", float %"B_cached[6][5].channel", float %"B_cached[6][6].channel", float %"B_cached[6][7].channel", float %"B_cached[7][0].channel", float %"B_cached[7][1].channel", float %"B_cached[7][2].channel", float %"B_cached[7][3].channel", float %"B_cached[7][4].channel", float %"B_cached[7][5].channel", float %"B_cached[7][6].channel", float %"B_cached[7][7].channel", [8 x [8 x float]]* %C)
-  ret void, !dbg !85                              ; [debug line = 29:1]
+  ret void, !dbg !76                              ; [debug line = 29:1]
 }
 
 ; [#uses=1]
-define internal fastcc void @Loop_1_proc(i32* %X, [65 x float]* nocapture %Xbuff) nounwind {
-newFuncRoot:
-  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
-  call void @llvm.dbg.declare(metadata !{[65 x float]* %Xbuff}, metadata !86), !dbg !90 ; [debug line = 15:8] [debug variable = Xbuff]
-  br label %0
-
-.preheader9.exitStub:                             ; preds = %0
-  ret void
-
-; <label>:0                                       ; preds = %2, %newFuncRoot
-  %read_idx.0.i.i = phi i7 [ 0, %newFuncRoot ], [ %read_idx, %2 ] ; [#uses=3 type=i7]
-  %.0.rec.i.i.cast = zext i7 %read_idx.0.i.i to i64 ; [#uses=2 type=i64]
-  %X.addr = getelementptr i32* %X, i64 %.0.rec.i.i.cast ; [#uses=1 type=i32*]
-  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind ; [#uses=0 type=i32]
-  %exitcond1 = icmp eq i7 %read_idx.0.i.i, -63, !dbg !91 ; [#uses=1 type=i1] [debug line = 27:7]
-  br i1 %exitcond1, label %.preheader9.exitStub, label %2, !dbg !91 ; [debug line = 27:7]
-
-; <label>:2                                       ; preds = %0
-  %read_idx = add i7 %read_idx.0.i.i, 1, !dbg !93 ; [#uses=1 type=i7] [debug line = 27:30]
-  %tempin = load i32* %X.addr, align 4, !dbg !94  ; [#uses=1 type=i32] [debug line = 29:3]
-  %tmp.i = bitcast i32 %tempin to float, !dbg !96 ; [#uses=1 type=float] [debug line = 30:3]
-  call void @llvm.dbg.value(metadata !{i32 %tempin}, i64 0, metadata !97), !dbg !94 ; [debug line = 29:3] [debug variable = tempin]
-  %Xbuff.addr = getelementptr inbounds [65 x float]* %Xbuff, i64 0, i64 %.0.rec.i.i.cast, !dbg !96 ; [#uses=1 type=float*] [debug line = 30:3]
-  store float %tmp.i, float* %Xbuff.addr, align 4, !dbg !96 ; [debug line = 30:3]
-  call void @llvm.dbg.value(metadata !{i7 %read_idx}, i64 0, metadata !98), !dbg !93 ; [debug line = 27:30] [debug variable = read_idx]
-  br label %0, !dbg !93                           ; [debug line = 27:30]
-}
-
-; [#uses=1]
-define internal fastcc void @Loop_2_proc([65 x float]* nocapture %Xbuff, [8 x [8 x float]]* nocapture %Xmat) nounwind {
+define internal fastcc void @Loop_2_proc([66 x float]* nocapture %Xbuff, [8 x [8 x float]]* nocapture %Xmat) nounwind {
 newFuncRoot:
   br label %.preheader9
 
@@ -291,80 +260,42 @@ newFuncRoot:
 
 .preheader9:                                      ; preds = %1, %newFuncRoot
   %rowidx = phi i4 [ %rowidx.1, %1 ], [ 0, %newFuncRoot ] ; [#uses=4 type=i4]
-  %rowidx.cast = zext i4 %rowidx to i6, !dbg !99  ; [#uses=1 type=i6] [debug line = 34:7]
-  %exitcond3 = icmp eq i4 %rowidx, -8, !dbg !99   ; [#uses=1 type=i1] [debug line = 34:7]
+  %rowidx.cast = zext i4 %rowidx to i6, !dbg !77  ; [#uses=1 type=i6] [debug line = 35:7]
+  %exitcond4 = icmp eq i4 %rowidx, -8, !dbg !77   ; [#uses=1 type=i1] [debug line = 35:7]
   %0 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind ; [#uses=0 type=i32]
-  br i1 %exitcond3, label %.exitStub, label %.preheader.preheader, !dbg !99 ; [debug line = 34:7]
+  br i1 %exitcond4, label %.exitStub, label %.preheader.preheader, !dbg !77 ; [debug line = 35:7]
 
 ; <label>:1                                       ; preds = %.preheader
-  %rowidx.1 = add i4 %rowidx, 1, !dbg !101        ; [#uses=1 type=i4] [debug line = 34:25]
-  call void @llvm.dbg.value(metadata !{i4 %rowidx.1}, i64 0, metadata !102), !dbg !101 ; [debug line = 34:25] [debug variable = rowidx]
-  br label %.preheader9, !dbg !101                ; [debug line = 34:25]
+  %rowidx.1 = add i4 %rowidx, 1, !dbg !79         ; [#uses=1 type=i4] [debug line = 35:25]
+  call void @llvm.dbg.value(metadata !{i4 %rowidx.1}, i64 0, metadata !80), !dbg !79 ; [debug line = 35:25] [debug variable = rowidx]
+  br label %.preheader9, !dbg !79                 ; [debug line = 35:25]
 
 .preheader:                                       ; preds = %3, %.preheader.preheader
   %colidx = phi i4 [ %colidx.1, %3 ], [ 0, %.preheader.preheader ] ; [#uses=4 type=i4]
-  %colidx.cast = zext i4 %colidx to i7, !dbg !103 ; [#uses=1 type=i7] [debug line = 35:8]
-  %exitcond2 = icmp eq i4 %colidx, -8, !dbg !103  ; [#uses=1 type=i1] [debug line = 35:8]
+  %colidx.cast = zext i4 %colidx to i7, !dbg !81  ; [#uses=1 type=i7] [debug line = 36:8]
+  %exitcond3 = icmp eq i4 %colidx, -8, !dbg !81   ; [#uses=1 type=i1] [debug line = 36:8]
   %2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind ; [#uses=0 type=i32]
-  br i1 %exitcond2, label %1, label %3, !dbg !103 ; [debug line = 35:8]
+  br i1 %exitcond3, label %1, label %3, !dbg !81  ; [debug line = 36:8]
 
 .preheader.preheader:                             ; preds = %.preheader9
-  %tmp.1 = shl i6 %rowidx.cast, 3, !dbg !105      ; [#uses=1 type=i6] [debug line = 37:4]
-  %idx = or i6 %tmp.1, 1, !dbg !105               ; [#uses=1 type=i6] [debug line = 37:4]
-  %idx.cast = zext i6 %idx to i7, !dbg !105       ; [#uses=1 type=i7] [debug line = 37:4]
-  %tmp.2 = zext i4 %rowidx to i64, !dbg !107      ; [#uses=1 type=i64] [debug line = 38:4]
-  br label %.preheader, !dbg !103                 ; [debug line = 35:8]
+  %tmp.2 = shl i6 %rowidx.cast, 3, !dbg !83       ; [#uses=1 type=i6] [debug line = 38:4]
+  %idx = or i6 %tmp.2, 2, !dbg !83                ; [#uses=1 type=i6] [debug line = 38:4]
+  %idx.cast = zext i6 %idx to i7, !dbg !83        ; [#uses=1 type=i7] [debug line = 38:4]
+  %tmp.3 = zext i4 %rowidx to i64, !dbg !85       ; [#uses=1 type=i64] [debug line = 39:4]
+  br label %.preheader, !dbg !81                  ; [debug line = 36:8]
 
 ; <label>:3                                       ; preds = %.preheader
-  call void @llvm.dbg.value(metadata !{i6 %idx}, i64 0, metadata !108), !dbg !105 ; [debug line = 37:4] [debug variable = idx]
-  %tmp.4 = add i7 %colidx.cast, %idx.cast, !dbg !107 ; [#uses=1 type=i7] [debug line = 38:4]
-  %tmp.5 = zext i7 %tmp.4 to i64, !dbg !107       ; [#uses=1 type=i64] [debug line = 38:4]
-  %Xbuff.addr = getelementptr inbounds [65 x float]* %Xbuff, i64 0, i64 %tmp.5, !dbg !107 ; [#uses=1 type=float*] [debug line = 38:4]
-  %Xbuff.load = load float* %Xbuff.addr, align 4, !dbg !107 ; [#uses=1 type=float] [debug line = 38:4]
-  %tmp.6 = zext i4 %colidx to i64, !dbg !107      ; [#uses=1 type=i64] [debug line = 38:4]
-  %Xmat.addr = getelementptr inbounds [8 x [8 x float]]* %Xmat, i64 0, i64 %tmp.2, i64 %tmp.6, !dbg !107 ; [#uses=1 type=float*] [debug line = 38:4]
-  store float %Xbuff.load, float* %Xmat.addr, align 4, !dbg !107 ; [debug line = 38:4]
-  %colidx.1 = add i4 %colidx, 1, !dbg !109        ; [#uses=1 type=i4] [debug line = 35:26]
-  call void @llvm.dbg.value(metadata !{i4 %colidx.1}, i64 0, metadata !110), !dbg !109 ; [debug line = 35:26] [debug variable = colidx]
-  br label %.preheader, !dbg !109                 ; [debug line = 35:26]
-}
-
-; [#uses=1]
-define internal fastcc void @Loop_3_proc(i32* %Y, [8 x [8 x float]]* nocapture %Ymat) nounwind {
-newFuncRoot:
-  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
-  br label %0, !dbg !111                          ; [debug line = 49:7]
-
-.exitStub:                                        ; preds = %0
-  ret void
-
-; <label>:0                                       ; preds = %_ifconv, %newFuncRoot
-  %write_idx = phi i7 [ 0, %newFuncRoot ], [ %write_idx.1, %_ifconv ] ; [#uses=6 type=i7]
-  %.01.rec.cast = zext i7 %write_idx to i64       ; [#uses=1 type=i64]
-  %colidx = trunc i7 %write_idx to i3             ; [#uses=1 type=i3]
-  %Y.addr = getelementptr i32* %Y, i64 %.01.rec.cast ; [#uses=1 type=i32*]
-  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind ; [#uses=0 type=i32]
-  %exitcond = icmp eq i7 %write_idx, -63, !dbg !111 ; [#uses=1 type=i1] [debug line = 49:7]
-  br i1 %exitcond, label %.exitStub, label %_ifconv, !dbg !111 ; [debug line = 49:7]
-
-_ifconv:                                          ; preds = %0
-  %tmp.3 = icmp sgt i7 %write_idx, -1, !dbg !113  ; [#uses=1 type=i1] [debug line = 51:3]
-  %write_idx.tr.cast = trunc i7 %write_idx to i6, !dbg !115 ; [#uses=1 type=i6] [debug line = 53:4]
-  %_lshr.f = lshr i6 %write_idx.tr.cast, 3, !dbg !115 ; [#uses=1 type=i6] [debug line = 53:4]
-  %_lshr.f.cast = trunc i6 %_lshr.f to i3, !dbg !115 ; [#uses=1 type=i3] [debug line = 53:4]
-  %tmp.8 = zext i3 %_lshr.f.cast to i64, !dbg !117 ; [#uses=1 type=i64] [debug line = 55:4]
-  call void @llvm.dbg.value(metadata !{i3 %colidx}, i64 0, metadata !110), !dbg !118 ; [debug line = 54:4] [debug variable = colidx]
-  %tmp.7 = zext i3 %colidx to i64, !dbg !117      ; [#uses=1 type=i64] [debug line = 55:4]
-  %Ymat.addr = getelementptr inbounds [8 x [8 x float]]* %Ymat, i64 0, i64 %tmp.8, i64 %tmp.7, !dbg !117 ; [#uses=1 type=float*] [debug line = 55:4]
-  %tempval = load float* %Ymat.addr, align 4, !dbg !117 ; [#uses=1 type=float] [debug line = 55:4]
-  call void @llvm.dbg.value(metadata !{float %tempval}, i64 0, metadata !119), !dbg !117 ; [debug line = 55:4] [debug variable = tempval]
-  %tmp = bitcast float %tempval to i32, !dbg !120 ; [#uses=1 type=i32] [debug line = 61:3]
-  %tempout = select i1 %tmp.3, i32 %tmp, i32 0, !dbg !120 ; [#uses=1 type=i32] [debug line = 61:3]
-  call void @llvm.dbg.value(metadata !{i32 %tempout}, i64 0, metadata !121), !dbg !120 ; [debug line = 61:3] [debug variable = tempout]
-  %write_idx.1 = add i7 %write_idx, 1, !dbg !122  ; [#uses=1 type=i7] [debug line = 49:32]
-  store i32 %tempout, i32* %Y.addr, align 4, !dbg !123 ; [debug line = 62:3]
-  call void @llvm.dbg.value(metadata !{i7 %write_idx.1}, i64 0, metadata !124), !dbg !122 ; [debug line = 49:32] [debug variable = write_idx]
-  br label %0, !dbg !122                          ; [debug line = 49:32]
+  call void @llvm.dbg.value(metadata !{i6 %idx}, i64 0, metadata !86), !dbg !83 ; [debug line = 38:4] [debug variable = idx]
+  %tmp.5 = add i7 %colidx.cast, %idx.cast, !dbg !85 ; [#uses=1 type=i7] [debug line = 39:4]
+  %tmp.6 = zext i7 %tmp.5 to i64, !dbg !85        ; [#uses=1 type=i64] [debug line = 39:4]
+  %Xbuff.addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp.6, !dbg !85 ; [#uses=1 type=float*] [debug line = 39:4]
+  %Xbuff.load = load float* %Xbuff.addr, align 4, !dbg !85 ; [#uses=1 type=float] [debug line = 39:4]
+  %tmp.7 = zext i4 %colidx to i64, !dbg !85       ; [#uses=1 type=i64] [debug line = 39:4]
+  %Xmat.addr = getelementptr inbounds [8 x [8 x float]]* %Xmat, i64 0, i64 %tmp.3, i64 %tmp.7, !dbg !85 ; [#uses=1 type=float*] [debug line = 39:4]
+  store float %Xbuff.load, float* %Xmat.addr, align 4, !dbg !85 ; [debug line = 39:4]
+  %colidx.1 = add i4 %colidx, 1, !dbg !87         ; [#uses=1 type=i4] [debug line = 36:26]
+  call void @llvm.dbg.value(metadata !{i4 %colidx.1}, i64 0, metadata !88), !dbg !87 ; [debug line = 36:26] [debug variable = colidx]
+  br label %.preheader, !dbg !87                  ; [debug line = 36:26]
 }
 
 ; [#uses=1]
@@ -761,9 +692,9 @@ newFuncRoot:
   %"B_cached[3][6]." = phi float [ undef, %newFuncRoot ], [ %"B_cached[3][6].1.lcssa", %2 ] ; [#uses=2 type=float]
   %"B_cached[7][7]." = phi float [ undef, %newFuncRoot ], [ %"B_cached[7][7].1.lcssa", %2 ] ; [#uses=2 type=float]
   %i.0.i.i = phi i4 [ 0, %newFuncRoot ], [ %i, %2 ] ; [#uses=4 type=i4]
-  %exitcond4.i.i = icmp eq i4 %i.0.i.i, -8, !dbg !125 ; [#uses=1 type=i1] [debug line = 11:16]
+  %exitcond4.i.i = icmp eq i4 %i.0.i.i, -8, !dbg !89 ; [#uses=1 type=i1] [debug line = 11:16]
   %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond4.i.i, label %.preheader.exitStub, label %6, !dbg !125 ; [debug line = 11:16]
+  br i1 %exitcond4.i.i, label %.preheader.exitStub, label %6, !dbg !89 ; [debug line = 11:16]
 
 ; <label>:2                                       ; preds = %4
   %"B_cached[7][7].1.lcssa" = phi float [ %"B_cached[7][7].1", %4 ] ; [#uses=1 type=float]
@@ -894,10 +825,10 @@ newFuncRoot:
   %"B_cached[1][2].1.lcssa" = phi float [ %"B_cached[1][2].1", %4 ] ; [#uses=1 type=float]
   %"B_cached[1][1].1.lcssa" = phi float [ %"B_cached[1][1].1", %4 ] ; [#uses=1 type=float]
   %write_flag30.1.lcssa = phi i1 [ %write_flag30.1, %4 ] ; [#uses=1 type=i1]
-  %3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str2, i32 %tmp), !dbg !127 ; [#uses=0 type=i32] [debug line = 15:2]
-  %i = add i4 %i.0.i.i, 1, !dbg !129              ; [#uses=1 type=i4] [debug line = 11:26]
-  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !130) nounwind, !dbg !129 ; [debug line = 11:26] [debug variable = i]
-  br label %0, !dbg !129                          ; [debug line = 11:26]
+  %3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str2, i32 %tmp), !dbg !91 ; [#uses=0 type=i32] [debug line = 15:2]
+  %i = add i4 %i.0.i.i, 1, !dbg !93               ; [#uses=1 type=i4] [debug line = 11:26]
+  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !94) nounwind, !dbg !93 ; [debug line = 11:26] [debug variable = i]
+  br label %0, !dbg !93                           ; [debug line = 11:26]
 
 ; <label>:4                                       ; preds = %branch097, %6
   %write_flag30.1 = phi i1 [ %write_flag30, %6 ], [ %write_flag30.2, %branch097 ] ; [#uses=64 type=i1]
@@ -1029,15 +960,15 @@ newFuncRoot:
   %"B_cached[3][6].1" = phi float [ %"B_cached[3][6].", %6 ], [ %"B_cached[3][6].2", %branch097 ] ; [#uses=64 type=float]
   %"B_cached[7][7].1" = phi float [ %"B_cached[7][7].", %6 ], [ %"B_cached[7][7].2", %branch097 ] ; [#uses=64 type=float]
   %j.0.i.i = phi i4 [ 0, %6 ], [ %j, %branch097 ] ; [#uses=4 type=i4]
-  %exitcond3.i.i = icmp eq i4 %j.0.i.i, -8, !dbg !131 ; [#uses=1 type=i1] [debug line = 12:17]
+  %exitcond3.i.i = icmp eq i4 %j.0.i.i, -8, !dbg !96 ; [#uses=1 type=i1] [debug line = 12:17]
   %5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond3.i.i, label %2, label %8, !dbg !131 ; [debug line = 12:17]
+  br i1 %exitcond3.i.i, label %2, label %8, !dbg !96 ; [debug line = 12:17]
 
 ; <label>:6                                       ; preds = %0
-  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str2) nounwind, !dbg !133 ; [debug line = 11:31]
-  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str2), !dbg !133 ; [#uses=1 type=i32] [debug line = 11:31]
-  %tmp.i = zext i4 %i.0.i.i to i64, !dbg !134     ; [#uses=1 type=i64] [debug line = 13:4]
-  br label %4, !dbg !131                          ; [debug line = 12:17]
+  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str2) nounwind, !dbg !98 ; [debug line = 11:31]
+  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str2), !dbg !98 ; [#uses=1 type=i32] [debug line = 11:31]
+  %tmp.i = zext i4 %i.0.i.i to i64, !dbg !99      ; [#uses=1 type=i64] [debug line = 13:4]
+  br label %4, !dbg !96                           ; [debug line = 12:17]
 
 branch097:                                        ; preds = %branch71, %branch70, %branch69, %branch68, %branch67, %branch66, %branch65, %branch7, %branch63, %branch62, %branch61, %branch60, %branch59, %branch58, %branch57, %branch6, %branch55, %branch54, %branch53, %branch52, %branch51, %branch50, %branch49, %branch5, %branch47, %branch46, %branch45, %branch44, %branch43, %branch42, %branch41, %branch4, %branch39, %branch38, %branch37, %branch36, %branch35, %branch34, %branch33, %branch3, %branch31, %branch30, %branch29, %branch28, %branch27, %branch26, %branch25, %branch2, %branch23, %branch22, %branch21, %branch20, %branch19, %branch18, %branch17, %branch1, %branch15, %branch14, %branch13, %branch12, %branch11, %branch10, %branch9, %branch0
   %write_flag30.2 = phi i1 [ %write_flag30.1, %branch15 ], [ %write_flag30.1, %branch14 ], [ %write_flag30.1, %branch13 ], [ %write_flag30.1, %branch12 ], [ %write_flag30.1, %branch11 ], [ %write_flag30.1, %branch10 ], [ %write_flag30.1, %branch9 ], [ %write_flag30.1, %branch0 ], [ %write_flag30.1, %branch23 ], [ %write_flag30.1, %branch22 ], [ %write_flag30.1, %branch21 ], [ %write_flag30.1, %branch20 ], [ %write_flag30.1, %branch19 ], [ true, %branch18 ], [ %write_flag30.1, %branch17 ], [ %write_flag30.1, %branch1 ], [ %write_flag30.1, %branch31 ], [ %write_flag30.1, %branch30 ], [ %write_flag30.1, %branch29 ], [ %write_flag30.1, %branch28 ], [ %write_flag30.1, %branch27 ], [ %write_flag30.1, %branch26 ], [ %write_flag30.1, %branch25 ], [ %write_flag30.1, %branch2 ], [ %write_flag30.1, %branch39 ], [ %write_flag30.1, %branch38 ], [ %write_flag30.1, %branch37 ], [ %write_flag30.1, %branch36 ], [ %write_flag30.1, %branch35 ], [ %write_flag30.1, %branch34 ], [ %write_flag30.1, %branch33 ], [ %write_flag30.1, %branch3 ], [ %write_flag30.1, %branch47 ], [ %write_flag30.1, %branch46 ], [ %write_flag30.1, %branch45 ], [ %write_flag30.1, %branch44 ], [ %write_flag30.1, %branch43 ], [ %write_flag30.1, %branch42 ], [ %write_flag30.1, %branch41 ], [ %write_flag30.1, %branch4 ], [ %write_flag30.1, %branch55 ], [ %write_flag30.1, %branch54 ], [ %write_flag30.1, %branch53 ], [ %write_flag30.1, %branch52 ], [ %write_flag30.1, %branch51 ], [ %write_flag30.1, %branch50 ], [ %write_flag30.1, %branch49 ], [ %write_flag30.1, %branch5 ], [ %write_flag30.1, %branch63 ], [ %write_flag30.1, %branch62 ], [ %write_flag30.1, %branch61 ], [ %write_flag30.1, %branch60 ], [ %write_flag30.1, %branch59 ], [ %write_flag30.1, %branch58 ], [ %write_flag30.1, %branch57 ], [ %write_flag30.1, %branch6 ], [ %write_flag30.1, %branch71 ], [ %write_flag30.1, %branch70 ], [ %write_flag30.1, %branch69 ], [ %write_flag30.1, %branch68 ], [ %write_flag30.1, %branch67 ], [ %write_flag30.1, %branch66 ], [ %write_flag30.1, %branch65 ], [ %write_flag30.1, %branch7 ] ; [#uses=1 type=i1]
@@ -1168,10 +1099,10 @@ branch097:                                        ; preds = %branch71, %branch70
   %write_flag189.2 = phi i1 [ %write_flag189.1, %branch15 ], [ %write_flag189.1, %branch14 ], [ %write_flag189.1, %branch13 ], [ %write_flag189.1, %branch12 ], [ %write_flag189.1, %branch11 ], [ %write_flag189.1, %branch10 ], [ %write_flag189.1, %branch9 ], [ %write_flag189.1, %branch0 ], [ %write_flag189.1, %branch23 ], [ %write_flag189.1, %branch22 ], [ %write_flag189.1, %branch21 ], [ %write_flag189.1, %branch20 ], [ %write_flag189.1, %branch19 ], [ %write_flag189.1, %branch18 ], [ %write_flag189.1, %branch17 ], [ %write_flag189.1, %branch1 ], [ %write_flag189.1, %branch31 ], [ %write_flag189.1, %branch30 ], [ %write_flag189.1, %branch29 ], [ %write_flag189.1, %branch28 ], [ %write_flag189.1, %branch27 ], [ %write_flag189.1, %branch26 ], [ %write_flag189.1, %branch25 ], [ %write_flag189.1, %branch2 ], [ %write_flag189.1, %branch39 ], [ %write_flag189.1, %branch38 ], [ %write_flag189.1, %branch37 ], [ %write_flag189.1, %branch36 ], [ %write_flag189.1, %branch35 ], [ %write_flag189.1, %branch34 ], [ %write_flag189.1, %branch33 ], [ %write_flag189.1, %branch3 ], [ %write_flag189.1, %branch47 ], [ %write_flag189.1, %branch46 ], [ %write_flag189.1, %branch45 ], [ %write_flag189.1, %branch44 ], [ %write_flag189.1, %branch43 ], [ %write_flag189.1, %branch42 ], [ %write_flag189.1, %branch41 ], [ %write_flag189.1, %branch4 ], [ %write_flag189.1, %branch55 ], [ %write_flag189.1, %branch54 ], [ %write_flag189.1, %branch53 ], [ %write_flag189.1, %branch52 ], [ %write_flag189.1, %branch51 ], [ %write_flag189.1, %branch50 ], [ %write_flag189.1, %branch49 ], [ %write_flag189.1, %branch5 ], [ %write_flag189.1, %branch63 ], [ %write_flag189.1, %branch62 ], [ %write_flag189.1, %branch61 ], [ %write_flag189.1, %branch60 ], [ %write_flag189.1, %branch59 ], [ %write_flag189.1, %branch58 ], [ %write_flag189.1, %branch57 ], [ %write_flag189.1, %branch6 ], [ true, %branch71 ], [ %write_flag189.1, %branch70 ], [ %write_flag189.1, %branch69 ], [ %write_flag189.1, %branch68 ], [ %write_flag189.1, %branch67 ], [ %write_flag189.1, %branch66 ], [ %write_flag189.1, %branch65 ], [ %write_flag189.1, %branch7 ] ; [#uses=1 type=i1]
   %"B_cached[3][6].2" = phi float [ %"B_cached[3][6].1", %branch15 ], [ %"B_cached[3][6].1", %branch14 ], [ %"B_cached[3][6].1", %branch13 ], [ %"B_cached[3][6].1", %branch12 ], [ %"B_cached[3][6].1", %branch11 ], [ %"B_cached[3][6].1", %branch10 ], [ %"B_cached[3][6].1", %branch9 ], [ %"B_cached[3][6].1", %branch0 ], [ %"B_cached[3][6].1", %branch23 ], [ %"B_cached[3][6].1", %branch22 ], [ %"B_cached[3][6].1", %branch21 ], [ %"B_cached[3][6].1", %branch20 ], [ %"B_cached[3][6].1", %branch19 ], [ %"B_cached[3][6].1", %branch18 ], [ %"B_cached[3][6].1", %branch17 ], [ %"B_cached[3][6].1", %branch1 ], [ %"B_cached[3][6].1", %branch31 ], [ %"B_cached[3][6].1", %branch30 ], [ %"B_cached[3][6].1", %branch29 ], [ %"B_cached[3][6].1", %branch28 ], [ %"B_cached[3][6].1", %branch27 ], [ %"B_cached[3][6].1", %branch26 ], [ %"B_cached[3][6].1", %branch25 ], [ %"B_cached[3][6].1", %branch2 ], [ %"B_cached[3][6].1", %branch39 ], [ %"B_cached[7][0]", %branch38 ], [ %"B_cached[3][6].1", %branch37 ], [ %"B_cached[3][6].1", %branch36 ], [ %"B_cached[3][6].1", %branch35 ], [ %"B_cached[3][6].1", %branch34 ], [ %"B_cached[3][6].1", %branch33 ], [ %"B_cached[3][6].1", %branch3 ], [ %"B_cached[3][6].1", %branch47 ], [ %"B_cached[3][6].1", %branch46 ], [ %"B_cached[3][6].1", %branch45 ], [ %"B_cached[3][6].1", %branch44 ], [ %"B_cached[3][6].1", %branch43 ], [ %"B_cached[3][6].1", %branch42 ], [ %"B_cached[3][6].1", %branch41 ], [ %"B_cached[3][6].1", %branch4 ], [ %"B_cached[3][6].1", %branch55 ], [ %"B_cached[3][6].1", %branch54 ], [ %"B_cached[3][6].1", %branch53 ], [ %"B_cached[3][6].1", %branch52 ], [ %"B_cached[3][6].1", %branch51 ], [ %"B_cached[3][6].1", %branch50 ], [ %"B_cached[3][6].1", %branch49 ], [ %"B_cached[3][6].1", %branch5 ], [ %"B_cached[3][6].1", %branch63 ], [ %"B_cached[3][6].1", %branch62 ], [ %"B_cached[3][6].1", %branch61 ], [ %"B_cached[3][6].1", %branch60 ], [ %"B_cached[3][6].1", %branch59 ], [ %"B_cached[3][6].1", %branch58 ], [ %"B_cached[3][6].1", %branch57 ], [ %"B_cached[3][6].1", %branch6 ], [ %"B_cached[3][6].1", %branch71 ], [ %"B_cached[3][6].1", %branch70 ], [ %"B_cached[3][6].1", %branch69 ], [ %"B_cached[3][6].1", %branch68 ], [ %"B_cached[3][6].1", %branch67 ], [ %"B_cached[3][6].1", %branch66 ], [ %"B_cached[3][6].1", %branch65 ], [ %"B_cached[3][6].1", %branch7 ] ; [#uses=1 type=float]
   %"B_cached[7][7].2" = phi float [ %"B_cached[7][7].1", %branch15 ], [ %"B_cached[7][7].1", %branch14 ], [ %"B_cached[7][7].1", %branch13 ], [ %"B_cached[7][7].1", %branch12 ], [ %"B_cached[7][7].1", %branch11 ], [ %"B_cached[7][7].1", %branch10 ], [ %"B_cached[7][7].1", %branch9 ], [ %"B_cached[7][7].1", %branch0 ], [ %"B_cached[7][7].1", %branch23 ], [ %"B_cached[7][7].1", %branch22 ], [ %"B_cached[7][7].1", %branch21 ], [ %"B_cached[7][7].1", %branch20 ], [ %"B_cached[7][7].1", %branch19 ], [ %"B_cached[7][7].1", %branch18 ], [ %"B_cached[7][7].1", %branch17 ], [ %"B_cached[7][7].1", %branch1 ], [ %"B_cached[7][7].1", %branch31 ], [ %"B_cached[7][7].1", %branch30 ], [ %"B_cached[7][7].1", %branch29 ], [ %"B_cached[7][7].1", %branch28 ], [ %"B_cached[7][7].1", %branch27 ], [ %"B_cached[7][7].1", %branch26 ], [ %"B_cached[7][7].1", %branch25 ], [ %"B_cached[7][7].1", %branch2 ], [ %"B_cached[7][7].1", %branch39 ], [ %"B_cached[7][7].1", %branch38 ], [ %"B_cached[7][7].1", %branch37 ], [ %"B_cached[7][7].1", %branch36 ], [ %"B_cached[7][7].1", %branch35 ], [ %"B_cached[7][7].1", %branch34 ], [ %"B_cached[7][7].1", %branch33 ], [ %"B_cached[7][7].1", %branch3 ], [ %"B_cached[7][7].1", %branch47 ], [ %"B_cached[7][7].1", %branch46 ], [ %"B_cached[7][7].1", %branch45 ], [ %"B_cached[7][7].1", %branch44 ], [ %"B_cached[7][7].1", %branch43 ], [ %"B_cached[7][7].1", %branch42 ], [ %"B_cached[7][7].1", %branch41 ], [ %"B_cached[7][7].1", %branch4 ], [ %"B_cached[7][7].1", %branch55 ], [ %"B_cached[7][7].1", %branch54 ], [ %"B_cached[7][7].1", %branch53 ], [ %"B_cached[7][7].1", %branch52 ], [ %"B_cached[7][7].1", %branch51 ], [ %"B_cached[7][7].1", %branch50 ], [ %"B_cached[7][7].1", %branch49 ], [ %"B_cached[7][7].1", %branch5 ], [ %"B_cached[7][7].1", %branch63 ], [ %"B_cached[7][7].1", %branch62 ], [ %"B_cached[7][7].1", %branch61 ], [ %"B_cached[7][7].1", %branch60 ], [ %"B_cached[7][7].1", %branch59 ], [ %"B_cached[7][7].1", %branch58 ], [ %"B_cached[7][7].1", %branch57 ], [ %"B_cached[7][7].1", %branch6 ], [ %"B_cached[7][0]", %branch71 ], [ %"B_cached[7][7].1", %branch70 ], [ %"B_cached[7][7].1", %branch69 ], [ %"B_cached[7][7].1", %branch68 ], [ %"B_cached[7][7].1", %branch67 ], [ %"B_cached[7][7].1", %branch66 ], [ %"B_cached[7][7].1", %branch65 ], [ %"B_cached[7][7].1", %branch7 ] ; [#uses=1 type=float]
-  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str3, i32 %tmp.2), !dbg !136 ; [#uses=0 type=i32] [debug line = 14:3]
-  %j = add i4 %j.0.i.i, 1, !dbg !137              ; [#uses=1 type=i4] [debug line = 12:27]
-  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !138) nounwind, !dbg !137 ; [debug line = 12:27] [debug variable = j]
-  br label %4, !dbg !137                          ; [debug line = 12:27]
+  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str3, i32 %tmp.2), !dbg !101 ; [#uses=0 type=i32] [debug line = 14:3]
+  %j = add i4 %j.0.i.i, 1, !dbg !102              ; [#uses=1 type=i4] [debug line = 12:27]
+  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !103) nounwind, !dbg !102 ; [debug line = 12:27] [debug variable = j]
+  br label %4, !dbg !102                          ; [debug line = 12:27]
 
 branch0:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch15 [
@@ -1182,23 +1113,23 @@ branch0:                                          ; preds = %8
     i3 -4, label %branch12
     i3 -3, label %branch13
     i3 -2, label %branch14
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 ; <label>:8                                       ; preds = %4
-  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str3) nounwind, !dbg !139 ; [debug line = 12:32]
-  %tmp.2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str3), !dbg !139 ; [#uses=1 type=i32] [debug line = 12:32]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !140 ; [debug line = 13:1]
-  %tmp.3.i = zext i4 %j.0.i.i to i64, !dbg !134   ; [#uses=1 type=i64] [debug line = 13:4]
-  %B.addr = getelementptr [8 x [8 x float]]* %B, i64 0, i64 %tmp.i, i64 %tmp.3.i, !dbg !134 ; [#uses=1 type=float*] [debug line = 13:4]
-  %"B_cached[7][0]" = load float* %B.addr, align 4, !dbg !134 ; [#uses=64 type=float] [debug line = 13:4]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !141), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !143), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !144), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !145), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !146), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !147), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !148), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !149), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][0]]
+  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str3) nounwind, !dbg !104 ; [debug line = 12:32]
+  %tmp.2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str3), !dbg !104 ; [#uses=1 type=i32] [debug line = 12:32]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !105 ; [debug line = 13:1]
+  %tmp.3.i = zext i4 %j.0.i.i to i64, !dbg !99    ; [#uses=1 type=i64] [debug line = 13:4]
+  %B.addr = getelementptr [8 x [8 x float]]* %B, i64 0, i64 %tmp.i, i64 %tmp.3.i, !dbg !99 ; [#uses=1 type=float*] [debug line = 13:4]
+  %"B_cached[7][0]" = load float* %B.addr, align 4, !dbg !99 ; [#uses=64 type=float] [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !106), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !108), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !109), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !110), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !111), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !112), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !113), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !114), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][0]]
   %j.0.i.i.t = trunc i4 %j.0.i.i to i3            ; [#uses=8 type=i3]
   %i.0.i.i.t = trunc i4 %i.0.i.i to i3            ; [#uses=1 type=i3]
   switch i3 %i.0.i.i.t, label %branch7 [
@@ -1209,35 +1140,35 @@ branch0:                                          ; preds = %8
     i3 -4, label %branch4
     i3 -3, label %branch5
     i3 -2, label %branch6
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch9:                                          ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !150), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !115), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch10:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !151), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !116), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch11:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !152), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !117), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch12:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !153), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !118), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch13:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !154), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !119), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch14:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !155), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !120), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch15:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !156), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !121), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch1:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch23 [
@@ -1248,35 +1179,35 @@ branch1:                                          ; preds = %8
     i3 -4, label %branch20
     i3 -3, label %branch21
     i3 -2, label %branch22
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch17:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !157), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !122), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch18:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !158), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !123), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch19:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !159), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !124), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch20:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !160), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !125), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch21:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !161), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !126), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch22:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !162), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !127), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch23:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !163), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !128), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch2:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch31 [
@@ -1287,35 +1218,35 @@ branch2:                                          ; preds = %8
     i3 -4, label %branch28
     i3 -3, label %branch29
     i3 -2, label %branch30
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch25:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !164), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !129), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch26:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !165), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !130), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch27:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !166), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !131), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch28:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !167), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !132), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch29:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !168), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !133), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch30:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !169), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !134), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch31:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !170), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !135), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch3:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch39 [
@@ -1326,35 +1257,35 @@ branch3:                                          ; preds = %8
     i3 -4, label %branch36
     i3 -3, label %branch37
     i3 -2, label %branch38
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch33:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !171), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !136), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch34:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !172), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !137), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch35:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !173), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !138), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch36:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !174), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !139), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch37:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !175), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !140), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch38:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !176), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !141), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch39:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !177), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !142), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch4:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch47 [
@@ -1365,35 +1296,35 @@ branch4:                                          ; preds = %8
     i3 -4, label %branch44
     i3 -3, label %branch45
     i3 -2, label %branch46
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch41:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !178), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !143), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch42:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !179), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !144), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch43:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !180), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !145), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch44:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !181), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !146), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch45:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !182), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !147), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch46:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !183), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !148), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch47:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !184), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !149), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch5:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch55 [
@@ -1404,35 +1335,35 @@ branch5:                                          ; preds = %8
     i3 -4, label %branch52
     i3 -3, label %branch53
     i3 -2, label %branch54
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch49:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !185), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !150), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch50:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !186), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !151), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch51:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !187), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !152), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch52:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !188), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !153), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch53:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !189), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !154), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch54:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !190), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !155), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch55:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !191), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !156), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch6:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch63 [
@@ -1443,35 +1374,35 @@ branch6:                                          ; preds = %8
     i3 -4, label %branch60
     i3 -3, label %branch61
     i3 -2, label %branch62
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch57:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !192), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !157), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch58:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !193), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !158), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch59:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !194), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !159), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch60:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !195), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !160), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch61:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !196), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !161), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch62:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !197), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !162), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch63:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !198), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !163), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch7:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch71 [
@@ -1482,35 +1413,35 @@ branch7:                                          ; preds = %8
     i3 -4, label %branch68
     i3 -3, label %branch69
     i3 -2, label %branch70
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch65:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !199), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !164), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch66:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !200), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !165), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch67:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !201), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !166), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch68:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !202), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !167), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch69:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !203), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !168), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch70:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !204), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !169), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch71:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !205), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !170), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 }
 
 ; [#uses=1]
@@ -1523,84 +1454,84 @@ newFuncRoot:
 
 .preheader:                                       ; preds = %1, %newFuncRoot
   %i.1 = phi i4 [ %i, %1 ], [ 0, %newFuncRoot ]   ; [#uses=3 type=i4]
-  %exitcond2 = icmp eq i4 %i.1, -8, !dbg !206     ; [#uses=1 type=i1] [debug line = 17:12]
+  %exitcond2 = icmp eq i4 %i.1, -8, !dbg !171     ; [#uses=1 type=i1] [debug line = 17:12]
   %0 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond2, label %.exitStub, label %5, !dbg !206 ; [debug line = 17:12]
+  br i1 %exitcond2, label %.exitStub, label %5, !dbg !171 ; [debug line = 17:12]
 
 ; <label>:1                                       ; preds = %3
-  %2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str4, i32 %tmp.1), !dbg !208 ; [#uses=0 type=i32] [debug line = 28:3]
-  %i = add i4 %i.1, 1, !dbg !211                  ; [#uses=1 type=i4] [debug line = 17:22]
-  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !130), !dbg !211 ; [debug line = 17:22] [debug variable = i]
-  br label %.preheader, !dbg !211                 ; [debug line = 17:22]
+  %2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str4, i32 %tmp.1), !dbg !173 ; [#uses=0 type=i32] [debug line = 28:3]
+  %i = add i4 %i.1, 1, !dbg !176                  ; [#uses=1 type=i4] [debug line = 17:22]
+  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !94), !dbg !176 ; [debug line = 17:22] [debug variable = i]
+  br label %.preheader, !dbg !176                 ; [debug line = 17:22]
 
 ; <label>:3                                       ; preds = %6, %5
   %j.1 = phi i4 [ 0, %5 ], [ %j, %6 ]             ; [#uses=4 type=i4]
-  %exitcond1 = icmp eq i4 %j.1, -8, !dbg !212     ; [#uses=1 type=i1] [debug line = 18:13]
+  %exitcond1 = icmp eq i4 %j.1, -8, !dbg !177     ; [#uses=1 type=i1] [debug line = 18:13]
   %4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond1, label %1, label %8, !dbg !212 ; [debug line = 18:13]
+  br i1 %exitcond1, label %1, label %8, !dbg !177 ; [debug line = 18:13]
 
 ; <label>:5                                       ; preds = %.preheader
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str4) nounwind, !dbg !213 ; [debug line = 18:3]
-  %tmp.1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str4), !dbg !213 ; [#uses=1 type=i32] [debug line = 18:3]
-  br label %3, !dbg !212                          ; [debug line = 18:13]
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str4) nounwind, !dbg !178 ; [debug line = 18:3]
+  %tmp.1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str4), !dbg !178 ; [#uses=1 type=i32] [debug line = 18:3]
+  br label %3, !dbg !177                          ; [debug line = 18:13]
 
 ; <label>:6                                       ; preds = %branch7133, %branch6132, %branch5131, %branch4130, %branch3129, %branch2128, %branch1127, %branch0126
-  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str5, i32 %tmp.3), !dbg !214 ; [#uses=0 type=i32] [debug line = 28:3]
-  %j = add i4 %j.1, 1, !dbg !216                  ; [#uses=1 type=i4] [debug line = 18:23]
-  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !138), !dbg !216 ; [debug line = 18:23] [debug variable = j]
-  br label %3, !dbg !216                          ; [debug line = 18:23]
+  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str5, i32 %tmp.3), !dbg !179 ; [#uses=0 type=i32] [debug line = 28:3]
+  %j = add i4 %j.1, 1, !dbg !181                  ; [#uses=1 type=i4] [debug line = 18:23]
+  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !103), !dbg !181 ; [debug line = 18:23] [debug variable = j]
+  br label %3, !dbg !181                          ; [debug line = 18:23]
 
 branch0126:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[0].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[0].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 ; <label>:8                                       ; preds = %3
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str5) nounwind, !dbg !218 ; [debug line = 19:4]
-  %tmp.3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str5), !dbg !218 ; [#uses=1 type=i32] [debug line = 19:4]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !219 ; [debug line = 20:1]
-  %tmp.6 = zext i4 %j.1 to i64, !dbg !220         ; [#uses=8 type=i64] [debug line = 25:5]
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str5) nounwind, !dbg !183 ; [debug line = 19:4]
+  %tmp.3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str5), !dbg !183 ; [#uses=1 type=i32] [debug line = 19:4]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !184 ; [debug line = 20:1]
+  %tmp.6 = zext i4 %j.1 to i64, !dbg !185         ; [#uses=8 type=i64] [debug line = 25:5]
   %i.1.t = trunc i4 %i.1 to i3                    ; [#uses=9 type=i3]
   %tmp = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, i3 %i.1.t) ; [#uses=1 type=float]
   %j.1.t = trunc i4 %j.1 to i3                    ; [#uses=8 type=i3]
   %tmp.2 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read, float %.read1, float %.read2, float %.read3, float %.read4, float %.read5, float %.read6, float %.read7, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9 = fmul float %tmp, %tmp.2, !dbg !220     ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1 = fadd float %tmp.9, 0.000000e+00, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9 = fmul float %tmp, %tmp.2, !dbg !185     ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1 = fadd float %tmp.9, 0.000000e+00, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.4 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, float 0xBFD6A09E60000000, float 0xBFDF6297C0000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read8, float %.read9, float %.read10, float %.read11, float %.read12, float %.read13, float %.read14, float %.read15, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.1 = fmul float %tmp.4, %tmp.5, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.1 = fadd float %temp.1, %tmp.9.1, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.1 = fmul float %tmp.4, %tmp.5, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.1 = fadd float %temp.1, %tmp.9.1, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.7 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FB8F8B840000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.8 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read16, float %.read17, float %.read18, float %.read19, float %.read20, float %.read21, float %.read22, float %.read23, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.2 = fmul float %tmp.7, %tmp.8, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.2 = fadd float %temp.1.1, %tmp.9.2, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.2 = fmul float %tmp.7, %tmp.8, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.2 = fadd float %temp.1.1, %tmp.9.2, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.10 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0x3FB8F8B840000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000, float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.11 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read24, float %.read25, float %.read26, float %.read27, float %.read28, float %.read29, float %.read30, float %.read31, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.3 = fmul float %tmp.10, %tmp.11, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.3 = fadd float %temp.1.2, %tmp.9.3, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.3 = fmul float %tmp.10, %tmp.11, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.3 = fadd float %temp.1.2, %tmp.9.3, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.12 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0xBFB8F8B840000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000, float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.13 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read32, float %.read33, float %.read34, float %.read35, float %.read36, float %.read37, float %.read38, float %.read39, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.4 = fmul float %tmp.12, %tmp.13, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.4 = fadd float %temp.1.3, %tmp.9.4, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.4 = fmul float %tmp.12, %tmp.13, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.4 = fadd float %temp.1.3, %tmp.9.4, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.14 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0xBFD6A09E60000000, float 0xBFB8F8B840000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.15 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read40, float %.read41, float %.read42, float %.read43, float %.read44, float %.read45, float %.read46, float %.read47, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.5 = fmul float %tmp.14, %tmp.15, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.5 = fadd float %temp.1.4, %tmp.9.5, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.5 = fmul float %tmp.14, %tmp.15, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.5 = fadd float %temp.1.4, %tmp.9.5, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.16 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD6A09E60000000, float 0x3FDF6297C0000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.17 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read48, float %.read49, float %.read50, float %.read51, float %.read52, float %.read53, float %.read54, float %.read55, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.6 = fmul float %tmp.16, %tmp.17, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.6 = fadd float %temp.1.5, %tmp.9.6, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.6 = fmul float %tmp.16, %tmp.17, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.6 = fadd float %temp.1.5, %tmp.9.6, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %tmp.18 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float 0x3FD6A09E60000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read56, float %.read57, float %.read58, float %.read59, float %.read60, float %.read61, float %.read62, float %.read63, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.7 = fmul float %tmp.18, %tmp.19, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.7 = fadd float %temp.1.6, %tmp.9.7, !dbg !220 ; [#uses=8 type=float] [debug line = 25:5]
-  %"C[0].addr" = getelementptr [8 x float]* %"C[0]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[1].addr" = getelementptr [8 x float]* %"C[1]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[2].addr" = getelementptr [8 x float]* %"C[2]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[3].addr" = getelementptr [8 x float]* %"C[3]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[4].addr" = getelementptr [8 x float]* %"C[4]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[5].addr" = getelementptr [8 x float]* %"C[5]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[6].addr" = getelementptr [8 x float]* %"C[6]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  %"C[7].addr" = getelementptr [8 x float]* %"C[7]", i64 0, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
+  %tmp.9.7 = fmul float %tmp.18, %tmp.19, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.7 = fadd float %temp.1.6, %tmp.9.7, !dbg !185 ; [#uses=8 type=float] [debug line = 25:5]
+  %"C[0].addr" = getelementptr [8 x float]* %"C[0]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[1].addr" = getelementptr [8 x float]* %"C[1]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[2].addr" = getelementptr [8 x float]* %"C[2]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[3].addr" = getelementptr [8 x float]* %"C[3]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[4].addr" = getelementptr [8 x float]* %"C[4]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[5].addr" = getelementptr [8 x float]* %"C[5]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[6].addr" = getelementptr [8 x float]* %"C[6]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  %"C[7].addr" = getelementptr [8 x float]* %"C[7]", i64 0, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
   switch i3 %i.1.t, label %branch7133 [
     i3 0, label %branch0126
     i3 1, label %branch1127
@@ -1609,35 +1540,35 @@ branch0126:                                       ; preds = %8
     i3 -4, label %branch4130
     i3 -3, label %branch5131
     i3 -2, label %branch6132
-  ], !dbg !217                                    ; [debug line = 27:4]
+  ], !dbg !182                                    ; [debug line = 27:4]
 
 branch1127:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[1].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[1].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 branch2128:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[2].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[2].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 branch3129:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[3].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[3].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 branch4130:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[4].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[4].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 branch5131:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[5].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[5].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 branch6132:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[6].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[6].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 
 branch7133:                                       ; preds = %8
-  store float %temp.1.7, float* %"C[7].addr", align 4, !dbg !217 ; [debug line = 27:4]
-  br label %6, !dbg !217                          ; [debug line = 27:4]
+  store float %temp.1.7, float* %"C[7].addr", align 4, !dbg !182 ; [debug line = 27:4]
+  br label %6, !dbg !182                          ; [debug line = 27:4]
 }
 
 ; [#uses=1]
@@ -2034,9 +1965,9 @@ newFuncRoot:
   %"B_cached[3][6]." = phi float [ undef, %newFuncRoot ], [ %"B_cached[3][6].1.lcssa", %2 ] ; [#uses=2 type=float]
   %"B_cached[7][7]." = phi float [ undef, %newFuncRoot ], [ %"B_cached[7][7].1.lcssa", %2 ] ; [#uses=2 type=float]
   %i.0.i.i = phi i4 [ 0, %newFuncRoot ], [ %i, %2 ] ; [#uses=4 type=i4]
-  %exitcond4.i.i = icmp eq i4 %i.0.i.i, -8, !dbg !125 ; [#uses=1 type=i1] [debug line = 11:16]
+  %exitcond4.i.i = icmp eq i4 %i.0.i.i, -8, !dbg !89 ; [#uses=1 type=i1] [debug line = 11:16]
   %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond4.i.i, label %.preheader.exitStub, label %6, !dbg !125 ; [debug line = 11:16]
+  br i1 %exitcond4.i.i, label %.preheader.exitStub, label %6, !dbg !89 ; [debug line = 11:16]
 
 ; <label>:2                                       ; preds = %4
   %"B_cached[7][7].1.lcssa" = phi float [ %"B_cached[7][7].1", %4 ] ; [#uses=1 type=float]
@@ -2167,10 +2098,10 @@ newFuncRoot:
   %"B_cached[1][2].1.lcssa" = phi float [ %"B_cached[1][2].1", %4 ] ; [#uses=1 type=float]
   %"B_cached[1][1].1.lcssa" = phi float [ %"B_cached[1][1].1", %4 ] ; [#uses=1 type=float]
   %write_flag30.1.lcssa = phi i1 [ %write_flag30.1, %4 ] ; [#uses=1 type=i1]
-  %3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str2, i32 %tmp), !dbg !127 ; [#uses=0 type=i32] [debug line = 15:2]
-  %i = add i4 %i.0.i.i, 1, !dbg !129              ; [#uses=1 type=i4] [debug line = 11:26]
-  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !130) nounwind, !dbg !129 ; [debug line = 11:26] [debug variable = i]
-  br label %0, !dbg !129                          ; [debug line = 11:26]
+  %3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str2, i32 %tmp), !dbg !91 ; [#uses=0 type=i32] [debug line = 15:2]
+  %i = add i4 %i.0.i.i, 1, !dbg !93               ; [#uses=1 type=i4] [debug line = 11:26]
+  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !94) nounwind, !dbg !93 ; [debug line = 11:26] [debug variable = i]
+  br label %0, !dbg !93                           ; [debug line = 11:26]
 
 ; <label>:4                                       ; preds = %branch097, %6
   %write_flag30.1 = phi i1 [ %write_flag30, %6 ], [ %write_flag30.2, %branch097 ] ; [#uses=64 type=i1]
@@ -2302,15 +2233,15 @@ newFuncRoot:
   %"B_cached[3][6].1" = phi float [ %"B_cached[3][6].", %6 ], [ %"B_cached[3][6].2", %branch097 ] ; [#uses=64 type=float]
   %"B_cached[7][7].1" = phi float [ %"B_cached[7][7].", %6 ], [ %"B_cached[7][7].2", %branch097 ] ; [#uses=64 type=float]
   %j.0.i.i = phi i4 [ 0, %6 ], [ %j, %branch097 ] ; [#uses=4 type=i4]
-  %exitcond3.i.i = icmp eq i4 %j.0.i.i, -8, !dbg !131 ; [#uses=1 type=i1] [debug line = 12:17]
+  %exitcond3.i.i = icmp eq i4 %j.0.i.i, -8, !dbg !96 ; [#uses=1 type=i1] [debug line = 12:17]
   %5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond3.i.i, label %2, label %8, !dbg !131 ; [debug line = 12:17]
+  br i1 %exitcond3.i.i, label %2, label %8, !dbg !96 ; [debug line = 12:17]
 
 ; <label>:6                                       ; preds = %0
-  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str2) nounwind, !dbg !133 ; [debug line = 11:31]
-  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str2), !dbg !133 ; [#uses=1 type=i32] [debug line = 11:31]
-  %tmp.i = zext i4 %i.0.i.i to i64, !dbg !134     ; [#uses=1 type=i64] [debug line = 13:4]
-  br label %4, !dbg !131                          ; [debug line = 12:17]
+  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str2) nounwind, !dbg !98 ; [debug line = 11:31]
+  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str2), !dbg !98 ; [#uses=1 type=i32] [debug line = 11:31]
+  %tmp.i = zext i4 %i.0.i.i to i64, !dbg !99      ; [#uses=1 type=i64] [debug line = 13:4]
+  br label %4, !dbg !96                           ; [debug line = 12:17]
 
 branch097:                                        ; preds = %branch71, %branch70, %branch69, %branch68, %branch67, %branch66, %branch65, %branch7, %branch63, %branch62, %branch61, %branch60, %branch59, %branch58, %branch57, %branch6, %branch55, %branch54, %branch53, %branch52, %branch51, %branch50, %branch49, %branch5, %branch47, %branch46, %branch45, %branch44, %branch43, %branch42, %branch41, %branch4, %branch39, %branch38, %branch37, %branch36, %branch35, %branch34, %branch33, %branch3, %branch31, %branch30, %branch29, %branch28, %branch27, %branch26, %branch25, %branch2, %branch23, %branch22, %branch21, %branch20, %branch19, %branch18, %branch17, %branch1, %branch15, %branch14, %branch13, %branch12, %branch11, %branch10, %branch9, %branch0
   %write_flag30.2 = phi i1 [ %write_flag30.1, %branch15 ], [ %write_flag30.1, %branch14 ], [ %write_flag30.1, %branch13 ], [ %write_flag30.1, %branch12 ], [ %write_flag30.1, %branch11 ], [ %write_flag30.1, %branch10 ], [ %write_flag30.1, %branch9 ], [ %write_flag30.1, %branch0 ], [ %write_flag30.1, %branch23 ], [ %write_flag30.1, %branch22 ], [ %write_flag30.1, %branch21 ], [ %write_flag30.1, %branch20 ], [ %write_flag30.1, %branch19 ], [ true, %branch18 ], [ %write_flag30.1, %branch17 ], [ %write_flag30.1, %branch1 ], [ %write_flag30.1, %branch31 ], [ %write_flag30.1, %branch30 ], [ %write_flag30.1, %branch29 ], [ %write_flag30.1, %branch28 ], [ %write_flag30.1, %branch27 ], [ %write_flag30.1, %branch26 ], [ %write_flag30.1, %branch25 ], [ %write_flag30.1, %branch2 ], [ %write_flag30.1, %branch39 ], [ %write_flag30.1, %branch38 ], [ %write_flag30.1, %branch37 ], [ %write_flag30.1, %branch36 ], [ %write_flag30.1, %branch35 ], [ %write_flag30.1, %branch34 ], [ %write_flag30.1, %branch33 ], [ %write_flag30.1, %branch3 ], [ %write_flag30.1, %branch47 ], [ %write_flag30.1, %branch46 ], [ %write_flag30.1, %branch45 ], [ %write_flag30.1, %branch44 ], [ %write_flag30.1, %branch43 ], [ %write_flag30.1, %branch42 ], [ %write_flag30.1, %branch41 ], [ %write_flag30.1, %branch4 ], [ %write_flag30.1, %branch55 ], [ %write_flag30.1, %branch54 ], [ %write_flag30.1, %branch53 ], [ %write_flag30.1, %branch52 ], [ %write_flag30.1, %branch51 ], [ %write_flag30.1, %branch50 ], [ %write_flag30.1, %branch49 ], [ %write_flag30.1, %branch5 ], [ %write_flag30.1, %branch63 ], [ %write_flag30.1, %branch62 ], [ %write_flag30.1, %branch61 ], [ %write_flag30.1, %branch60 ], [ %write_flag30.1, %branch59 ], [ %write_flag30.1, %branch58 ], [ %write_flag30.1, %branch57 ], [ %write_flag30.1, %branch6 ], [ %write_flag30.1, %branch71 ], [ %write_flag30.1, %branch70 ], [ %write_flag30.1, %branch69 ], [ %write_flag30.1, %branch68 ], [ %write_flag30.1, %branch67 ], [ %write_flag30.1, %branch66 ], [ %write_flag30.1, %branch65 ], [ %write_flag30.1, %branch7 ] ; [#uses=1 type=i1]
@@ -2441,10 +2372,10 @@ branch097:                                        ; preds = %branch71, %branch70
   %write_flag189.2 = phi i1 [ %write_flag189.1, %branch15 ], [ %write_flag189.1, %branch14 ], [ %write_flag189.1, %branch13 ], [ %write_flag189.1, %branch12 ], [ %write_flag189.1, %branch11 ], [ %write_flag189.1, %branch10 ], [ %write_flag189.1, %branch9 ], [ %write_flag189.1, %branch0 ], [ %write_flag189.1, %branch23 ], [ %write_flag189.1, %branch22 ], [ %write_flag189.1, %branch21 ], [ %write_flag189.1, %branch20 ], [ %write_flag189.1, %branch19 ], [ %write_flag189.1, %branch18 ], [ %write_flag189.1, %branch17 ], [ %write_flag189.1, %branch1 ], [ %write_flag189.1, %branch31 ], [ %write_flag189.1, %branch30 ], [ %write_flag189.1, %branch29 ], [ %write_flag189.1, %branch28 ], [ %write_flag189.1, %branch27 ], [ %write_flag189.1, %branch26 ], [ %write_flag189.1, %branch25 ], [ %write_flag189.1, %branch2 ], [ %write_flag189.1, %branch39 ], [ %write_flag189.1, %branch38 ], [ %write_flag189.1, %branch37 ], [ %write_flag189.1, %branch36 ], [ %write_flag189.1, %branch35 ], [ %write_flag189.1, %branch34 ], [ %write_flag189.1, %branch33 ], [ %write_flag189.1, %branch3 ], [ %write_flag189.1, %branch47 ], [ %write_flag189.1, %branch46 ], [ %write_flag189.1, %branch45 ], [ %write_flag189.1, %branch44 ], [ %write_flag189.1, %branch43 ], [ %write_flag189.1, %branch42 ], [ %write_flag189.1, %branch41 ], [ %write_flag189.1, %branch4 ], [ %write_flag189.1, %branch55 ], [ %write_flag189.1, %branch54 ], [ %write_flag189.1, %branch53 ], [ %write_flag189.1, %branch52 ], [ %write_flag189.1, %branch51 ], [ %write_flag189.1, %branch50 ], [ %write_flag189.1, %branch49 ], [ %write_flag189.1, %branch5 ], [ %write_flag189.1, %branch63 ], [ %write_flag189.1, %branch62 ], [ %write_flag189.1, %branch61 ], [ %write_flag189.1, %branch60 ], [ %write_flag189.1, %branch59 ], [ %write_flag189.1, %branch58 ], [ %write_flag189.1, %branch57 ], [ %write_flag189.1, %branch6 ], [ true, %branch71 ], [ %write_flag189.1, %branch70 ], [ %write_flag189.1, %branch69 ], [ %write_flag189.1, %branch68 ], [ %write_flag189.1, %branch67 ], [ %write_flag189.1, %branch66 ], [ %write_flag189.1, %branch65 ], [ %write_flag189.1, %branch7 ] ; [#uses=1 type=i1]
   %"B_cached[3][6].2" = phi float [ %"B_cached[3][6].1", %branch15 ], [ %"B_cached[3][6].1", %branch14 ], [ %"B_cached[3][6].1", %branch13 ], [ %"B_cached[3][6].1", %branch12 ], [ %"B_cached[3][6].1", %branch11 ], [ %"B_cached[3][6].1", %branch10 ], [ %"B_cached[3][6].1", %branch9 ], [ %"B_cached[3][6].1", %branch0 ], [ %"B_cached[3][6].1", %branch23 ], [ %"B_cached[3][6].1", %branch22 ], [ %"B_cached[3][6].1", %branch21 ], [ %"B_cached[3][6].1", %branch20 ], [ %"B_cached[3][6].1", %branch19 ], [ %"B_cached[3][6].1", %branch18 ], [ %"B_cached[3][6].1", %branch17 ], [ %"B_cached[3][6].1", %branch1 ], [ %"B_cached[3][6].1", %branch31 ], [ %"B_cached[3][6].1", %branch30 ], [ %"B_cached[3][6].1", %branch29 ], [ %"B_cached[3][6].1", %branch28 ], [ %"B_cached[3][6].1", %branch27 ], [ %"B_cached[3][6].1", %branch26 ], [ %"B_cached[3][6].1", %branch25 ], [ %"B_cached[3][6].1", %branch2 ], [ %"B_cached[3][6].1", %branch39 ], [ %"B_cached[7][0]", %branch38 ], [ %"B_cached[3][6].1", %branch37 ], [ %"B_cached[3][6].1", %branch36 ], [ %"B_cached[3][6].1", %branch35 ], [ %"B_cached[3][6].1", %branch34 ], [ %"B_cached[3][6].1", %branch33 ], [ %"B_cached[3][6].1", %branch3 ], [ %"B_cached[3][6].1", %branch47 ], [ %"B_cached[3][6].1", %branch46 ], [ %"B_cached[3][6].1", %branch45 ], [ %"B_cached[3][6].1", %branch44 ], [ %"B_cached[3][6].1", %branch43 ], [ %"B_cached[3][6].1", %branch42 ], [ %"B_cached[3][6].1", %branch41 ], [ %"B_cached[3][6].1", %branch4 ], [ %"B_cached[3][6].1", %branch55 ], [ %"B_cached[3][6].1", %branch54 ], [ %"B_cached[3][6].1", %branch53 ], [ %"B_cached[3][6].1", %branch52 ], [ %"B_cached[3][6].1", %branch51 ], [ %"B_cached[3][6].1", %branch50 ], [ %"B_cached[3][6].1", %branch49 ], [ %"B_cached[3][6].1", %branch5 ], [ %"B_cached[3][6].1", %branch63 ], [ %"B_cached[3][6].1", %branch62 ], [ %"B_cached[3][6].1", %branch61 ], [ %"B_cached[3][6].1", %branch60 ], [ %"B_cached[3][6].1", %branch59 ], [ %"B_cached[3][6].1", %branch58 ], [ %"B_cached[3][6].1", %branch57 ], [ %"B_cached[3][6].1", %branch6 ], [ %"B_cached[3][6].1", %branch71 ], [ %"B_cached[3][6].1", %branch70 ], [ %"B_cached[3][6].1", %branch69 ], [ %"B_cached[3][6].1", %branch68 ], [ %"B_cached[3][6].1", %branch67 ], [ %"B_cached[3][6].1", %branch66 ], [ %"B_cached[3][6].1", %branch65 ], [ %"B_cached[3][6].1", %branch7 ] ; [#uses=1 type=float]
   %"B_cached[7][7].2" = phi float [ %"B_cached[7][7].1", %branch15 ], [ %"B_cached[7][7].1", %branch14 ], [ %"B_cached[7][7].1", %branch13 ], [ %"B_cached[7][7].1", %branch12 ], [ %"B_cached[7][7].1", %branch11 ], [ %"B_cached[7][7].1", %branch10 ], [ %"B_cached[7][7].1", %branch9 ], [ %"B_cached[7][7].1", %branch0 ], [ %"B_cached[7][7].1", %branch23 ], [ %"B_cached[7][7].1", %branch22 ], [ %"B_cached[7][7].1", %branch21 ], [ %"B_cached[7][7].1", %branch20 ], [ %"B_cached[7][7].1", %branch19 ], [ %"B_cached[7][7].1", %branch18 ], [ %"B_cached[7][7].1", %branch17 ], [ %"B_cached[7][7].1", %branch1 ], [ %"B_cached[7][7].1", %branch31 ], [ %"B_cached[7][7].1", %branch30 ], [ %"B_cached[7][7].1", %branch29 ], [ %"B_cached[7][7].1", %branch28 ], [ %"B_cached[7][7].1", %branch27 ], [ %"B_cached[7][7].1", %branch26 ], [ %"B_cached[7][7].1", %branch25 ], [ %"B_cached[7][7].1", %branch2 ], [ %"B_cached[7][7].1", %branch39 ], [ %"B_cached[7][7].1", %branch38 ], [ %"B_cached[7][7].1", %branch37 ], [ %"B_cached[7][7].1", %branch36 ], [ %"B_cached[7][7].1", %branch35 ], [ %"B_cached[7][7].1", %branch34 ], [ %"B_cached[7][7].1", %branch33 ], [ %"B_cached[7][7].1", %branch3 ], [ %"B_cached[7][7].1", %branch47 ], [ %"B_cached[7][7].1", %branch46 ], [ %"B_cached[7][7].1", %branch45 ], [ %"B_cached[7][7].1", %branch44 ], [ %"B_cached[7][7].1", %branch43 ], [ %"B_cached[7][7].1", %branch42 ], [ %"B_cached[7][7].1", %branch41 ], [ %"B_cached[7][7].1", %branch4 ], [ %"B_cached[7][7].1", %branch55 ], [ %"B_cached[7][7].1", %branch54 ], [ %"B_cached[7][7].1", %branch53 ], [ %"B_cached[7][7].1", %branch52 ], [ %"B_cached[7][7].1", %branch51 ], [ %"B_cached[7][7].1", %branch50 ], [ %"B_cached[7][7].1", %branch49 ], [ %"B_cached[7][7].1", %branch5 ], [ %"B_cached[7][7].1", %branch63 ], [ %"B_cached[7][7].1", %branch62 ], [ %"B_cached[7][7].1", %branch61 ], [ %"B_cached[7][7].1", %branch60 ], [ %"B_cached[7][7].1", %branch59 ], [ %"B_cached[7][7].1", %branch58 ], [ %"B_cached[7][7].1", %branch57 ], [ %"B_cached[7][7].1", %branch6 ], [ %"B_cached[7][0]", %branch71 ], [ %"B_cached[7][7].1", %branch70 ], [ %"B_cached[7][7].1", %branch69 ], [ %"B_cached[7][7].1", %branch68 ], [ %"B_cached[7][7].1", %branch67 ], [ %"B_cached[7][7].1", %branch66 ], [ %"B_cached[7][7].1", %branch65 ], [ %"B_cached[7][7].1", %branch7 ] ; [#uses=1 type=float]
-  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str3, i32 %tmp.), !dbg !136 ; [#uses=0 type=i32] [debug line = 14:3]
-  %j = add i4 %j.0.i.i, 1, !dbg !137              ; [#uses=1 type=i4] [debug line = 12:27]
-  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !138) nounwind, !dbg !137 ; [debug line = 12:27] [debug variable = j]
-  br label %4, !dbg !137                          ; [debug line = 12:27]
+  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @.str3, i32 %tmp.), !dbg !101 ; [#uses=0 type=i32] [debug line = 14:3]
+  %j = add i4 %j.0.i.i, 1, !dbg !102              ; [#uses=1 type=i4] [debug line = 12:27]
+  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !103) nounwind, !dbg !102 ; [debug line = 12:27] [debug variable = j]
+  br label %4, !dbg !102                          ; [debug line = 12:27]
 
 branch0:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch15 [
@@ -2455,23 +2386,23 @@ branch0:                                          ; preds = %8
     i3 -4, label %branch12
     i3 -3, label %branch13
     i3 -2, label %branch14
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 ; <label>:8                                       ; preds = %4
-  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str3) nounwind, !dbg !139 ; [debug line = 12:32]
-  %tmp. = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str3), !dbg !139 ; [#uses=1 type=i32] [debug line = 12:32]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !140 ; [debug line = 13:1]
-  %tmp.3.i = zext i4 %j.0.i.i to i64, !dbg !134   ; [#uses=1 type=i64] [debug line = 13:4]
-  %Tinv.addr = getelementptr [8 x [8 x float]]* @Tinv, i64 0, i64 %tmp.i, i64 %tmp.3.i, !dbg !134 ; [#uses=1 type=float*] [debug line = 13:4]
-  %"B_cached[7][0]" = load float* %Tinv.addr, align 4, !dbg !134 ; [#uses=64 type=float] [debug line = 13:4]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !141), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !143), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !144), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !145), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !146), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !147), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !148), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][0]]
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !149), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][0]]
+  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @.str3) nounwind, !dbg !104 ; [debug line = 12:32]
+  %tmp. = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @.str3), !dbg !104 ; [#uses=1 type=i32] [debug line = 12:32]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !105 ; [debug line = 13:1]
+  %tmp.3.i = zext i4 %j.0.i.i to i64, !dbg !99    ; [#uses=1 type=i64] [debug line = 13:4]
+  %Tinv.addr = getelementptr [8 x [8 x float]]* @Tinv, i64 0, i64 %tmp.i, i64 %tmp.3.i, !dbg !99 ; [#uses=1 type=float*] [debug line = 13:4]
+  %"B_cached[7][0]" = load float* %Tinv.addr, align 4, !dbg !99 ; [#uses=64 type=float] [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !106), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !108), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !109), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !110), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !111), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !112), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !113), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][0]]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !114), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][0]]
   %j.0.i.i.t = trunc i4 %j.0.i.i to i3            ; [#uses=8 type=i3]
   %i.0.i.i.t = trunc i4 %i.0.i.i to i3            ; [#uses=1 type=i3]
   switch i3 %i.0.i.i.t, label %branch7 [
@@ -2482,35 +2413,35 @@ branch0:                                          ; preds = %8
     i3 -4, label %branch4
     i3 -3, label %branch5
     i3 -2, label %branch6
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch9:                                          ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !150), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !115), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch10:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !151), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !116), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch11:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !152), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !117), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch12:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !153), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !118), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch13:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !154), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !119), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch14:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !155), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !120), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch15:                                         ; preds = %branch0
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !156), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[0][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !121), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[0][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch1:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch23 [
@@ -2521,35 +2452,35 @@ branch1:                                          ; preds = %8
     i3 -4, label %branch20
     i3 -3, label %branch21
     i3 -2, label %branch22
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch17:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !157), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !122), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch18:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !158), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !123), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch19:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !159), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !124), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch20:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !160), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !125), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch21:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !161), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !126), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch22:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !162), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !127), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch23:                                         ; preds = %branch1
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !163), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[1][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !128), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[1][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch2:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch31 [
@@ -2560,35 +2491,35 @@ branch2:                                          ; preds = %8
     i3 -4, label %branch28
     i3 -3, label %branch29
     i3 -2, label %branch30
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch25:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !164), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !129), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch26:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !165), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !130), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch27:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !166), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !131), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch28:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !167), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !132), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch29:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !168), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !133), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch30:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !169), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !134), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch31:                                         ; preds = %branch2
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !170), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[2][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !135), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[2][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch3:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch39 [
@@ -2599,35 +2530,35 @@ branch3:                                          ; preds = %8
     i3 -4, label %branch36
     i3 -3, label %branch37
     i3 -2, label %branch38
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch33:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !171), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !136), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch34:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !172), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !137), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch35:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !173), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !138), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch36:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !174), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !139), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch37:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !175), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !140), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch38:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !176), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !141), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch39:                                         ; preds = %branch3
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !177), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[3][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !142), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[3][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch4:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch47 [
@@ -2638,35 +2569,35 @@ branch4:                                          ; preds = %8
     i3 -4, label %branch44
     i3 -3, label %branch45
     i3 -2, label %branch46
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch41:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !178), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !143), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch42:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !179), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !144), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch43:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !180), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !145), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch44:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !181), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !146), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch45:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !182), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !147), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch46:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !183), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !148), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch47:                                         ; preds = %branch4
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !184), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[4][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !149), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[4][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch5:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch55 [
@@ -2677,35 +2608,35 @@ branch5:                                          ; preds = %8
     i3 -4, label %branch52
     i3 -3, label %branch53
     i3 -2, label %branch54
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch49:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !185), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !150), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch50:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !186), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !151), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch51:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !187), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !152), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch52:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !188), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !153), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch53:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !189), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !154), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch54:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !190), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !155), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch55:                                         ; preds = %branch5
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !191), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[5][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !156), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[5][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch6:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch63 [
@@ -2716,35 +2647,35 @@ branch6:                                          ; preds = %8
     i3 -4, label %branch60
     i3 -3, label %branch61
     i3 -2, label %branch62
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch57:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !192), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !157), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch58:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !193), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !158), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch59:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !194), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !159), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch60:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !195), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !160), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch61:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !196), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !161), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch62:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !197), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !162), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch63:                                         ; preds = %branch6
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !198), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[6][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !163), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[6][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch7:                                          ; preds = %8
   switch i3 %j.0.i.i.t, label %branch71 [
@@ -2755,35 +2686,35 @@ branch7:                                          ; preds = %8
     i3 -4, label %branch68
     i3 -3, label %branch69
     i3 -2, label %branch70
-  ], !dbg !134                                    ; [debug line = 13:4]
+  ], !dbg !99                                     ; [debug line = 13:4]
 
 branch65:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !199), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][1]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !164), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][1]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch66:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !200), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][2]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !165), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][2]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch67:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !201), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][3]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !166), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][3]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch68:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !202), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][4]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !167), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][4]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch69:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !203), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][5]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !168), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][5]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch70:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !204), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][6]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !169), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][6]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 
 branch71:                                         ; preds = %branch7
-  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !205), !dbg !134 ; [debug line = 13:4] [debug variable = B_cached[7][7]]
-  br label %branch097, !dbg !134                  ; [debug line = 13:4]
+  call void @llvm.dbg.value(metadata !{float %"B_cached[7][0]"}, i64 0, metadata !170), !dbg !99 ; [debug line = 13:4] [debug variable = B_cached[7][7]]
+  br label %branch097, !dbg !99                   ; [debug line = 13:4]
 }
 
 ; [#uses=1]
@@ -2796,32 +2727,32 @@ newFuncRoot:
 
 .preheader:                                       ; preds = %1, %newFuncRoot
   %i.1 = phi i4 [ %i, %1 ], [ 0, %newFuncRoot ]   ; [#uses=4 type=i4]
-  %exitcond2 = icmp eq i4 %i.1, -8, !dbg !206     ; [#uses=1 type=i1] [debug line = 17:12]
+  %exitcond2 = icmp eq i4 %i.1, -8, !dbg !171     ; [#uses=1 type=i1] [debug line = 17:12]
   %0 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond2, label %.exitStub, label %5, !dbg !206 ; [debug line = 17:12]
+  br i1 %exitcond2, label %.exitStub, label %5, !dbg !171 ; [debug line = 17:12]
 
 ; <label>:1                                       ; preds = %3
-  %2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str4, i32 %tmp.), !dbg !208 ; [#uses=0 type=i32] [debug line = 28:3]
-  %i = add i4 %i.1, 1, !dbg !211                  ; [#uses=1 type=i4] [debug line = 17:22]
-  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !130), !dbg !211 ; [debug line = 17:22] [debug variable = i]
-  br label %.preheader, !dbg !211                 ; [debug line = 17:22]
+  %2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str4, i32 %tmp.), !dbg !173 ; [#uses=0 type=i32] [debug line = 28:3]
+  %i = add i4 %i.1, 1, !dbg !176                  ; [#uses=1 type=i4] [debug line = 17:22]
+  call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !94), !dbg !176 ; [debug line = 17:22] [debug variable = i]
+  br label %.preheader, !dbg !176                 ; [debug line = 17:22]
 
 ; <label>:3                                       ; preds = %6, %5
   %j.1 = phi i4 [ 0, %5 ], [ %j, %6 ]             ; [#uses=4 type=i4]
-  %exitcond1 = icmp eq i4 %j.1, -8, !dbg !212     ; [#uses=1 type=i1] [debug line = 18:13]
+  %exitcond1 = icmp eq i4 %j.1, -8, !dbg !177     ; [#uses=1 type=i1] [debug line = 18:13]
   %4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  br i1 %exitcond1, label %1, label %6, !dbg !212 ; [debug line = 18:13]
+  br i1 %exitcond1, label %1, label %6, !dbg !177 ; [debug line = 18:13]
 
 ; <label>:5                                       ; preds = %.preheader
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str4) nounwind, !dbg !213 ; [debug line = 18:3]
-  %tmp. = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str4), !dbg !213 ; [#uses=1 type=i32] [debug line = 18:3]
-  %tmp.1 = zext i4 %i.1 to i64, !dbg !220         ; [#uses=1 type=i64] [debug line = 25:5]
-  br label %3, !dbg !212                          ; [debug line = 18:13]
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str4) nounwind, !dbg !178 ; [debug line = 18:3]
+  %tmp. = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str4), !dbg !178 ; [#uses=1 type=i32] [debug line = 18:3]
+  %tmp.1 = zext i4 %i.1 to i64, !dbg !185         ; [#uses=1 type=i64] [debug line = 25:5]
+  br label %3, !dbg !177                          ; [debug line = 18:13]
 
 ; <label>:6                                       ; preds = %3
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str5) nounwind, !dbg !218 ; [debug line = 19:4]
-  %tmp.2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str5), !dbg !218 ; [#uses=1 type=i32] [debug line = 19:4]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !219 ; [debug line = 20:1]
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @.str5) nounwind, !dbg !183 ; [debug line = 19:4]
+  %tmp.2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @.str5), !dbg !183 ; [#uses=1 type=i32] [debug line = 19:4]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @.str) nounwind, !dbg !184 ; [debug line = 20:1]
   %i.1.t = trunc i4 %i.1 to i3                    ; [#uses=8 type=i3]
   %A.addr = getelementptr [8 x float]* %A, i64 0, i64 0 ; [#uses=1 type=float*]
   %A.load = load float* %A.addr, align 4          ; [#uses=1 type=float]
@@ -2842,8 +2773,8 @@ newFuncRoot:
   %tmp = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load, float %A1.load, float %A2.load, float %A3.load, float %A4.load, float %A5.load, float %A6.load, float %A7.load, i3 %i.1.t) ; [#uses=1 type=float]
   %j.1.t = trunc i4 %j.1 to i3                    ; [#uses=8 type=i3]
   %tmp.20 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read, float %.read1, float %.read2, float %.read3, float %.read4, float %.read5, float %.read6, float %.read7, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9 = fmul float %tmp, %tmp.20, !dbg !220    ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1 = fadd float %tmp.9, 0.000000e+00, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9 = fmul float %tmp, %tmp.20, !dbg !185    ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1 = fadd float %tmp.9, 0.000000e+00, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.1 = getelementptr [8 x float]* %A, i64 0, i64 1 ; [#uses=1 type=float*]
   %A.load.1 = load float* %A.addr.1, align 4      ; [#uses=1 type=float]
   %A1.addr.1 = getelementptr [8 x float]* %A1, i64 0, i64 1 ; [#uses=1 type=float*]
@@ -2862,8 +2793,8 @@ newFuncRoot:
   %A7.load.1 = load float* %A7.addr.1, align 4    ; [#uses=1 type=float]
   %tmp.21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.1, float %A1.load.1, float %A2.load.1, float %A3.load.1, float %A4.load.1, float %A5.load.1, float %A6.load.1, float %A7.load.1, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.22 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read8, float %.read9, float %.read10, float %.read11, float %.read12, float %.read13, float %.read14, float %.read15, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.1 = fmul float %tmp.21, %tmp.22, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.1 = fadd float %temp.1, %tmp.9.1, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.1 = fmul float %tmp.21, %tmp.22, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.1 = fadd float %temp.1, %tmp.9.1, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.2 = getelementptr [8 x float]* %A, i64 0, i64 2 ; [#uses=1 type=float*]
   %A.load.2 = load float* %A.addr.2, align 4      ; [#uses=1 type=float]
   %A1.addr.2 = getelementptr [8 x float]* %A1, i64 0, i64 2 ; [#uses=1 type=float*]
@@ -2882,8 +2813,8 @@ newFuncRoot:
   %A7.load.2 = load float* %A7.addr.2, align 4    ; [#uses=1 type=float]
   %tmp.23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.2, float %A1.load.2, float %A2.load.2, float %A3.load.2, float %A4.load.2, float %A5.load.2, float %A6.load.2, float %A7.load.2, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.24 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read16, float %.read17, float %.read18, float %.read19, float %.read20, float %.read21, float %.read22, float %.read23, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.2 = fmul float %tmp.23, %tmp.24, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.2 = fadd float %temp.1.1, %tmp.9.2, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.2 = fmul float %tmp.23, %tmp.24, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.2 = fadd float %temp.1.1, %tmp.9.2, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.3 = getelementptr [8 x float]* %A, i64 0, i64 3 ; [#uses=1 type=float*]
   %A.load.3 = load float* %A.addr.3, align 4      ; [#uses=1 type=float]
   %A1.addr.3 = getelementptr [8 x float]* %A1, i64 0, i64 3 ; [#uses=1 type=float*]
@@ -2902,8 +2833,8 @@ newFuncRoot:
   %A7.load.3 = load float* %A7.addr.3, align 4    ; [#uses=1 type=float]
   %tmp.25 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.3, float %A1.load.3, float %A2.load.3, float %A3.load.3, float %A4.load.3, float %A5.load.3, float %A6.load.3, float %A7.load.3, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.26 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read24, float %.read25, float %.read26, float %.read27, float %.read28, float %.read29, float %.read30, float %.read31, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.3 = fmul float %tmp.25, %tmp.26, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.3 = fadd float %temp.1.2, %tmp.9.3, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.3 = fmul float %tmp.25, %tmp.26, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.3 = fadd float %temp.1.2, %tmp.9.3, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.4 = getelementptr [8 x float]* %A, i64 0, i64 4 ; [#uses=1 type=float*]
   %A.load.4 = load float* %A.addr.4, align 4      ; [#uses=1 type=float]
   %A1.addr.4 = getelementptr [8 x float]* %A1, i64 0, i64 4 ; [#uses=1 type=float*]
@@ -2922,8 +2853,8 @@ newFuncRoot:
   %A7.load.4 = load float* %A7.addr.4, align 4    ; [#uses=1 type=float]
   %tmp.27 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.4, float %A1.load.4, float %A2.load.4, float %A3.load.4, float %A4.load.4, float %A5.load.4, float %A6.load.4, float %A7.load.4, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.28 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read32, float %.read33, float %.read34, float %.read35, float %.read36, float %.read37, float %.read38, float %.read39, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.4 = fmul float %tmp.27, %tmp.28, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.4 = fadd float %temp.1.3, %tmp.9.4, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.4 = fmul float %tmp.27, %tmp.28, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.4 = fadd float %temp.1.3, %tmp.9.4, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.5 = getelementptr [8 x float]* %A, i64 0, i64 5 ; [#uses=1 type=float*]
   %A.load.5 = load float* %A.addr.5, align 4      ; [#uses=1 type=float]
   %A1.addr.5 = getelementptr [8 x float]* %A1, i64 0, i64 5 ; [#uses=1 type=float*]
@@ -2942,8 +2873,8 @@ newFuncRoot:
   %A7.load.5 = load float* %A7.addr.5, align 4    ; [#uses=1 type=float]
   %tmp.29 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.5, float %A1.load.5, float %A2.load.5, float %A3.load.5, float %A4.load.5, float %A5.load.5, float %A6.load.5, float %A7.load.5, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.30 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read40, float %.read41, float %.read42, float %.read43, float %.read44, float %.read45, float %.read46, float %.read47, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.5 = fmul float %tmp.29, %tmp.30, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.5 = fadd float %temp.1.4, %tmp.9.5, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.5 = fmul float %tmp.29, %tmp.30, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.5 = fadd float %temp.1.4, %tmp.9.5, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.6 = getelementptr [8 x float]* %A, i64 0, i64 6 ; [#uses=1 type=float*]
   %A.load.6 = load float* %A.addr.6, align 4      ; [#uses=1 type=float]
   %A1.addr.6 = getelementptr [8 x float]* %A1, i64 0, i64 6 ; [#uses=1 type=float*]
@@ -2962,8 +2893,8 @@ newFuncRoot:
   %A7.load.6 = load float* %A7.addr.6, align 4    ; [#uses=1 type=float]
   %tmp.31 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.6, float %A1.load.6, float %A2.load.6, float %A3.load.6, float %A4.load.6, float %A5.load.6, float %A6.load.6, float %A7.load.6, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.32 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read48, float %.read49, float %.read50, float %.read51, float %.read52, float %.read53, float %.read54, float %.read55, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.6 = fmul float %tmp.31, %tmp.32, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.6 = fadd float %temp.1.5, %tmp.9.6, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.9.6 = fmul float %tmp.31, %tmp.32, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.6 = fadd float %temp.1.5, %tmp.9.6, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
   %A.addr.7 = getelementptr [8 x float]* %A, i64 0, i64 7 ; [#uses=1 type=float*]
   %A.load.7 = load float* %A.addr.7, align 4      ; [#uses=1 type=float]
   %A1.addr.7 = getelementptr [8 x float]* %A1, i64 0, i64 7 ; [#uses=1 type=float*]
@@ -2982,19 +2913,90 @@ newFuncRoot:
   %A7.load.7 = load float* %A7.addr.7, align 4    ; [#uses=1 type=float]
   %tmp.33 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A.load.7, float %A1.load.7, float %A2.load.7, float %A3.load.7, float %A4.load.7, float %A5.load.7, float %A6.load.7, float %A7.load.7, i3 %i.1.t) ; [#uses=1 type=float]
   %tmp.34 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %.read56, float %.read57, float %.read58, float %.read59, float %.read60, float %.read61, float %.read62, float %.read63, i3 %j.1.t) ; [#uses=1 type=float]
-  %tmp.9.7 = fmul float %tmp.33, %tmp.34, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp.1.7 = fadd float %temp.1.6, %tmp.9.7, !dbg !220 ; [#uses=1 type=float] [debug line = 25:5]
-  %tmp.6 = zext i4 %j.1 to i64, !dbg !220         ; [#uses=1 type=i64] [debug line = 25:5]
-  %C.addr = getelementptr [8 x [8 x float]]* %C, i64 0, i64 %tmp.1, i64 %tmp.6, !dbg !217 ; [#uses=1 type=float*] [debug line = 27:4]
-  store float %temp.1.7, float* %C.addr, align 4, !dbg !217 ; [debug line = 27:4]
-  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str5, i32 %tmp.2), !dbg !214 ; [#uses=0 type=i32] [debug line = 28:3]
-  %j = add i4 %j.1, 1, !dbg !216                  ; [#uses=1 type=i4] [debug line = 18:23]
-  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !138), !dbg !216 ; [debug line = 18:23] [debug variable = j]
-  br label %3, !dbg !216                          ; [debug line = 18:23]
+  %tmp.9.7 = fmul float %tmp.33, %tmp.34, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp.1.7 = fadd float %temp.1.6, %tmp.9.7, !dbg !185 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp.6 = zext i4 %j.1 to i64, !dbg !185         ; [#uses=1 type=i64] [debug line = 25:5]
+  %C.addr = getelementptr [8 x [8 x float]]* %C, i64 0, i64 %tmp.1, i64 %tmp.6, !dbg !182 ; [#uses=1 type=float*] [debug line = 27:4]
+  store float %temp.1.7, float* %C.addr, align 4, !dbg !182 ; [debug line = 27:4]
+  %7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @.str5, i32 %tmp.2), !dbg !179 ; [#uses=0 type=i32] [debug line = 28:3]
+  %j = add i4 %j.1, 1, !dbg !181                  ; [#uses=1 type=i4] [debug line = 18:23]
+  call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !103), !dbg !181 ; [debug line = 18:23] [debug variable = j]
+  br label %3, !dbg !181                          ; [debug line = 18:23]
+}
+
+; [#uses=1]
+define internal fastcc void @Loop_3_proc1(i32* %Y, i32 %.read, [8 x [8 x float]]* nocapture %Ymat) {
+newFuncRoot:
+  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
+  br label %0, !dbg !188                          ; [debug line = 50:7]
+
+.exitStub:                                        ; preds = %0
+  ret void
+
+; <label>:0                                       ; preds = %_ifconv, %newFuncRoot
+  %write_idx = phi i7 [ 0, %newFuncRoot ], [ %write_idx.1, %_ifconv ] ; [#uses=6 type=i7]
+  %.01.rec.cast = zext i7 %write_idx to i64       ; [#uses=1 type=i64]
+  %colidx = trunc i7 %write_idx to i3             ; [#uses=1 type=i3]
+  %Y.addr = getelementptr i32* %Y, i64 %.01.rec.cast ; [#uses=1 type=i32*]
+  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind ; [#uses=0 type=i32]
+  %exitcond = icmp eq i7 %write_idx, -63, !dbg !188 ; [#uses=1 type=i1] [debug line = 50:7]
+  br i1 %exitcond, label %.exitStub, label %_ifconv, !dbg !188 ; [debug line = 50:7]
+
+_ifconv:                                          ; preds = %0
+  %tmp.4 = icmp sgt i7 %write_idx, -1, !dbg !190  ; [#uses=1 type=i1] [debug line = 52:3]
+  %write_idx.tr.cast = trunc i7 %write_idx to i6, !dbg !192 ; [#uses=1 type=i6] [debug line = 54:4]
+  %_lshr.f = lshr i6 %write_idx.tr.cast, 3, !dbg !192 ; [#uses=1 type=i6] [debug line = 54:4]
+  %_lshr.f.cast = trunc i6 %_lshr.f to i3, !dbg !192 ; [#uses=1 type=i3] [debug line = 54:4]
+  %tmp.9 = zext i3 %_lshr.f.cast to i64, !dbg !194 ; [#uses=1 type=i64] [debug line = 56:4]
+  call void @llvm.dbg.value(metadata !{i3 %colidx}, i64 0, metadata !88), !dbg !195 ; [debug line = 55:4] [debug variable = colidx]
+  %tmp.8 = zext i3 %colidx to i64, !dbg !194      ; [#uses=1 type=i64] [debug line = 56:4]
+  %Ymat.addr = getelementptr inbounds [8 x [8 x float]]* %Ymat, i64 0, i64 %tmp.9, i64 %tmp.8, !dbg !194 ; [#uses=1 type=float*] [debug line = 56:4]
+  %Ymat.load = load float* %Ymat.addr, align 4, !dbg !194 ; [#uses=1 type=float] [debug line = 56:4]
+  %tempval = bitcast float %Ymat.load to i32, !dbg !194 ; [#uses=1 type=i32] [debug line = 56:4]
+  call void @llvm.dbg.value(metadata !{i32 %tempval}, i64 0, metadata !196), !dbg !194 ; [debug line = 56:4] [debug variable = tempval]
+  %storemerge = select i1 %tmp.4, i32 %tempval, i32 %.read ; [#uses=1 type=i32]
+  %write_idx.1 = add i7 %write_idx, 1, !dbg !197  ; [#uses=1 type=i7] [debug line = 50:32]
+  store i32 %storemerge, i32* %Y.addr, align 4, !dbg !198 ; [debug line = 59:4]
+  call void @llvm.dbg.value(metadata !{i7 %write_idx.1}, i64 0, metadata !199), !dbg !197 ; [debug line = 50:32] [debug variable = write_idx]
+  br label %0, !dbg !197                          ; [debug line = 50:32]
 }
 
 ; [#uses=32]
 declare float @_ssdm_op_Mux.ap_auto.8float.i3(float, float, float, float, float, float, float, float, i3)
+
+; [#uses=1]
+define internal fastcc i32 @Loop_1_proc(i32* %X, [66 x float]* nocapture %Xbuff, i1 %.read) {
+newFuncRoot:
+  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @.str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @.str8, [1 x i8]* @.str8, [1 x i8]* @.str8)
+  call void @llvm.dbg.declare(metadata !{[66 x float]* %Xbuff}, metadata !200), !dbg !204 ; [debug line = 15:8] [debug variable = Xbuff]
+  br label %0
+
+.preheader9.exitStub:                             ; preds = %0
+  %opt_type.02.loc.loc.out.0.lcssa = phi i32 [ %opt_type.02.loc.loc.out, %0 ] ; [#uses=1 type=i32]
+  ret i32 %opt_type.02.loc.loc.out.0.lcssa
+
+; <label>:0                                       ; preds = %2, %newFuncRoot
+  %read_idx.0.i.i = phi i7 [ 0, %newFuncRoot ], [ %read_idx, %2 ] ; [#uses=4 type=i7]
+  %opt_type.02.loc.loc.out = phi i32 [ undef, %newFuncRoot ], [ %tempin.0.opt_type.02.i.i, %2 ] ; [#uses=2 type=i32]
+  %.0.rec.i.i.cast = zext i7 %read_idx.0.i.i to i64 ; [#uses=2 type=i64]
+  %X.addr = getelementptr i32* %X, i64 %.0.rec.i.i.cast ; [#uses=1 type=i32*]
+  %1 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 66, i64 66, i64 66) nounwind ; [#uses=0 type=i32]
+  %exitcond1 = icmp eq i7 %read_idx.0.i.i, -62, !dbg !205 ; [#uses=1 type=i1] [debug line = 26:7]
+  br i1 %exitcond1, label %.preheader9.exitStub, label %2, !dbg !205 ; [debug line = 26:7]
+
+; <label>:2                                       ; preds = %0
+  %read_idx = add i7 %read_idx.0.i.i, 1, !dbg !207 ; [#uses=1 type=i7] [debug line = 26:30]
+  %opt_type = load i32* %X.addr, align 4, !dbg !208 ; [#uses=2 type=i32] [debug line = 29:3]
+  %tmp.i = bitcast i32 %opt_type to float, !dbg !210 ; [#uses=1 type=float] [debug line = 30:3]
+  call void @llvm.dbg.value(metadata !{i32 %opt_type}, i64 0, metadata !211), !dbg !212 ; [debug line = 32:4] [debug variable = opt_type]
+  call void @llvm.dbg.value(metadata !{i32 %opt_type}, i64 0, metadata !213), !dbg !208 ; [debug line = 29:3] [debug variable = tempin]
+  %Xbuff.addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %.0.rec.i.i.cast, !dbg !210 ; [#uses=1 type=float*] [debug line = 30:3]
+  store float %tmp.i, float* %Xbuff.addr, align 4, !dbg !210 ; [debug line = 30:3]
+  %tmp.1.i = icmp eq i7 %read_idx.0.i.i, 1, !dbg !214 ; [#uses=1 type=i1] [debug line = 31:3]
+  %tempin.0.opt_type.02.i.i = select i1 %tmp.1.i, i32 %opt_type, i32 %opt_type.02.loc.loc.out, !dbg !214 ; [#uses=1 type=i32] [debug line = 31:3]
+  call void @llvm.dbg.value(metadata !{i7 %read_idx}, i64 0, metadata !215), !dbg !207 ; [debug line = 26:30] [debug variable = read_idx]
+  br label %0, !dbg !207                          ; [debug line = 26:30]
+}
 
 !hls.encrypted.func = !{}
 !llvm.map.gv = !{}
@@ -3013,213 +3015,206 @@ declare float @_ssdm_op_Mux.ap_auto.8float.i3(float, float, float, float, float,
 !10 = metadata !{i32 786484, i32 0, null, metadata !"Tinv", metadata !"Tinv", metadata !"", metadata !4, i32 16, metadata !5, i32 0, i32 1, [8 x [8 x float]]* @Tinv} ; [ DW_TAG_variable ]
 !11 = metadata !{i32 9, i32 1, metadata !12, null}
 !12 = metadata !{i32 786443, metadata !13, i32 8, i32 1, metadata !14, i32 0} ; [ DW_TAG_lexical_block ]
-!13 = metadata !{i32 786478, i32 0, metadata !14, metadata !"DCT", metadata !"DCT", metadata !"", metadata !14, i32 7, metadata !15, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i8, i32*)* @DCT, null, null, metadata !20, i32 8} ; [ DW_TAG_subprogram ]
+!13 = metadata !{i32 786478, i32 0, metadata !14, metadata !"DCT", metadata !"DCT", metadata !"", metadata !14, i32 7, metadata !15, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i32*)* @DCT, null, null, metadata !19, i32 8} ; [ DW_TAG_subprogram ]
 !14 = metadata !{i32 786473, metadata !"dct/dct.c", metadata !"e:/Ubuntu_source_code_data/ECE_527_MP/mp4", null} ; [ DW_TAG_file_type ]
 !15 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !16, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
-!16 = metadata !{null, metadata !17, metadata !19, metadata !17}
+!16 = metadata !{null, metadata !17, metadata !17}
 !17 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !18} ; [ DW_TAG_pointer_type ]
 !18 = metadata !{i32 786468, null, metadata !"int", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]
-!19 = metadata !{i32 786468, null, metadata !"unsigned char", null, i32 0, i64 8, i64 8, i64 0, i32 0, i32 8} ; [ DW_TAG_base_type ]
-!20 = metadata !{metadata !21}
-!21 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]
-!22 = metadata !{metadata !23}
-!23 = metadata !{i32 0, i32 31, metadata !24}
-!24 = metadata !{metadata !25}
-!25 = metadata !{metadata !"X", metadata !26, metadata !"int", i32 0, i32 31}
-!26 = metadata !{metadata !27}
-!27 = metadata !{i32 0, i32 0, i32 1}
-!28 = metadata !{metadata !29}
-!29 = metadata !{i32 0, i32 7, metadata !30}
-!30 = metadata !{metadata !31}
-!31 = metadata !{metadata !"function", metadata !32, metadata !"unsigned char", i32 0, i32 7}
-!32 = metadata !{metadata !33}
-!33 = metadata !{i32 0, i32 0, i32 0}
-!34 = metadata !{metadata !35}
-!35 = metadata !{i32 0, i32 31, metadata !36}
-!36 = metadata !{metadata !37}
-!37 = metadata !{metadata !"Y", metadata !26, metadata !"int", i32 0, i32 31}
-!38 = metadata !{i32 10, i32 1, metadata !12, null}
-!39 = metadata !{i32 11, i32 1, metadata !12, null}
-!40 = metadata !{i32 12, i32 1, metadata !12, null}
-!41 = metadata !{i32 786689, metadata !13, metadata !"X", metadata !14, i32 16777223, metadata !17, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!42 = metadata !{i32 7, i32 15, metadata !13, null}
-!43 = metadata !{i32 786689, metadata !13, metadata !"function", metadata !14, i32 33554439, metadata !19, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!44 = metadata !{i32 7, i32 31, metadata !13, null}
-!45 = metadata !{i32 786689, metadata !13, metadata !"Y", metadata !14, i32 50331655, metadata !17, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!46 = metadata !{i32 7, i32 45, metadata !13, null}
-!47 = metadata !{i32 786688, metadata !12, metadata !"Xmat", metadata !14, i32 17, metadata !48, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!48 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2048, i64 32, i32 0, i32 0, metadata !7, metadata !8, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!49 = metadata !{i32 17, i32 8, metadata !12, null}
-!50 = metadata !{i32 790529, metadata !51, metadata !"temp[0]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!51 = metadata !{i32 786688, metadata !12, metadata !"temp", metadata !14, i32 18, metadata !48, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!52 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 256, i64 32, i32 0, i32 0, metadata !7, metadata !8, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!53 = metadata !{i32 18, i32 8, metadata !12, null}
-!54 = metadata !{i32 790529, metadata !51, metadata !"temp[1]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!55 = metadata !{i32 790529, metadata !51, metadata !"temp[2]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!56 = metadata !{i32 790529, metadata !51, metadata !"temp[3]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!57 = metadata !{i32 790529, metadata !51, metadata !"temp[4]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!58 = metadata !{i32 790529, metadata !51, metadata !"temp[5]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!59 = metadata !{i32 790529, metadata !51, metadata !"temp[6]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!60 = metadata !{i32 790529, metadata !51, metadata !"temp[7]", null, i32 18, metadata !52, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!61 = metadata !{i32 42, i32 2, metadata !12, null}
-!62 = metadata !{i32 43, i32 2, metadata !12, null}
-!63 = metadata !{i32 66, i32 1, metadata !12, null}
-!64 = metadata !{i32 7, i32 1, metadata !65, null}
-!65 = metadata !{i32 786443, metadata !66, i32 6, i32 1, metadata !67, i32 0} ; [ DW_TAG_lexical_block ]
-!66 = metadata !{i32 786478, i32 0, metadata !67, metadata !"MAT_Multiply", metadata !"MAT_Multiply", metadata !"", metadata !67, i32 4, metadata !68, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !20, i32 6} ; [ DW_TAG_subprogram ]
-!67 = metadata !{i32 786473, metadata !"dct/matrixmath.c", metadata !"e:/Ubuntu_source_code_data/ECE_527_MP/mp4", null} ; [ DW_TAG_file_type ]
-!68 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !69, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
-!69 = metadata !{null, metadata !70, metadata !70, metadata !70}
-!70 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !71} ; [ DW_TAG_pointer_type ]
-!71 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 256, i64 32, i32 0, i32 0, metadata !7, metadata !72, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!72 = metadata !{metadata !9}
-!73 = metadata !{i32 786689, metadata !66, metadata !"B", null, i32 5, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!74 = metadata !{i32 5, i32 9, metadata !66, null}
-!75 = metadata !{i32 790531, metadata !76, metadata !"C[0]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!76 = metadata !{i32 786689, metadata !66, metadata !"C", null, i32 5, metadata !48, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!77 = metadata !{i32 5, i32 24, metadata !66, null}
-!78 = metadata !{i32 790531, metadata !76, metadata !"C[1]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!79 = metadata !{i32 790531, metadata !76, metadata !"C[2]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!80 = metadata !{i32 790531, metadata !76, metadata !"C[3]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!81 = metadata !{i32 790531, metadata !76, metadata !"C[4]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!82 = metadata !{i32 790531, metadata !76, metadata !"C[5]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!83 = metadata !{i32 790531, metadata !76, metadata !"C[6]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!84 = metadata !{i32 790531, metadata !76, metadata !"C[7]", null, i32 5, metadata !52, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!85 = metadata !{i32 29, i32 1, metadata !65, null}
-!86 = metadata !{i32 786688, metadata !12, metadata !"Xbuff", metadata !14, i32 15, metadata !87, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!87 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2080, i64 32, i32 0, i32 0, metadata !7, metadata !88, i32 0, i32 0} ; [ DW_TAG_array_type ]
-!88 = metadata !{metadata !89}
-!89 = metadata !{i32 786465, i64 0, i64 64}       ; [ DW_TAG_subrange_type ]
-!90 = metadata !{i32 15, i32 8, metadata !12, null}
-!91 = metadata !{i32 27, i32 7, metadata !92, null}
-!92 = metadata !{i32 786443, metadata !12, i32 27, i32 2, metadata !14, i32 1} ; [ DW_TAG_lexical_block ]
-!93 = metadata !{i32 27, i32 30, metadata !92, null}
-!94 = metadata !{i32 29, i32 3, metadata !95, null}
-!95 = metadata !{i32 786443, metadata !92, i32 28, i32 2, metadata !14, i32 2} ; [ DW_TAG_lexical_block ]
-!96 = metadata !{i32 30, i32 3, metadata !95, null}
-!97 = metadata !{i32 786688, metadata !12, metadata !"tempin", metadata !14, i32 22, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!98 = metadata !{i32 786688, metadata !12, metadata !"read_idx", metadata !14, i32 24, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!99 = metadata !{i32 34, i32 7, metadata !100, null}
-!100 = metadata !{i32 786443, metadata !12, i32 34, i32 2, metadata !14, i32 3} ; [ DW_TAG_lexical_block ]
-!101 = metadata !{i32 34, i32 25, metadata !100, null}
-!102 = metadata !{i32 786688, metadata !12, metadata !"rowidx", metadata !14, i32 25, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!103 = metadata !{i32 35, i32 8, metadata !104, null}
-!104 = metadata !{i32 786443, metadata !100, i32 35, i32 3, metadata !14, i32 4} ; [ DW_TAG_lexical_block ]
-!105 = metadata !{i32 37, i32 4, metadata !106, null}
-!106 = metadata !{i32 786443, metadata !104, i32 36, i32 3, metadata !14, i32 5} ; [ DW_TAG_lexical_block ]
-!107 = metadata !{i32 38, i32 4, metadata !106, null}
-!108 = metadata !{i32 786688, metadata !12, metadata !"idx", metadata !14, i32 25, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!109 = metadata !{i32 35, i32 26, metadata !104, null}
-!110 = metadata !{i32 786688, metadata !12, metadata !"colidx", metadata !14, i32 25, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!111 = metadata !{i32 49, i32 7, metadata !112, null}
-!112 = metadata !{i32 786443, metadata !12, i32 49, i32 2, metadata !14, i32 6} ; [ DW_TAG_lexical_block ]
-!113 = metadata !{i32 51, i32 3, metadata !114, null}
-!114 = metadata !{i32 786443, metadata !112, i32 50, i32 2, metadata !14, i32 7} ; [ DW_TAG_lexical_block ]
-!115 = metadata !{i32 53, i32 4, metadata !116, null}
-!116 = metadata !{i32 786443, metadata !114, i32 52, i32 3, metadata !14, i32 8} ; [ DW_TAG_lexical_block ]
-!117 = metadata !{i32 55, i32 4, metadata !116, null}
-!118 = metadata !{i32 54, i32 4, metadata !116, null}
-!119 = metadata !{i32 786688, metadata !12, metadata !"tempval", metadata !14, i32 48, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!120 = metadata !{i32 61, i32 3, metadata !114, null}
-!121 = metadata !{i32 786688, metadata !12, metadata !"tempout", metadata !14, i32 21, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!122 = metadata !{i32 49, i32 32, metadata !112, null}
-!123 = metadata !{i32 62, i32 3, metadata !114, null}
-!124 = metadata !{i32 786688, metadata !12, metadata !"write_idx", metadata !14, i32 24, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!125 = metadata !{i32 11, i32 16, metadata !126, null}
-!126 = metadata !{i32 786443, metadata !65, i32 11, i32 11, metadata !67, i32 1} ; [ DW_TAG_lexical_block ]
-!127 = metadata !{i32 15, i32 2, metadata !128, null}
-!128 = metadata !{i32 786443, metadata !126, i32 11, i32 30, metadata !67, i32 2} ; [ DW_TAG_lexical_block ]
-!129 = metadata !{i32 11, i32 26, metadata !126, null}
-!130 = metadata !{i32 786688, metadata !65, metadata !"i", metadata !67, i32 7, metadata !19, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!131 = metadata !{i32 12, i32 17, metadata !132, null}
-!132 = metadata !{i32 786443, metadata !128, i32 12, i32 12, metadata !67, i32 3} ; [ DW_TAG_lexical_block ]
-!133 = metadata !{i32 11, i32 31, metadata !128, null}
-!134 = metadata !{i32 13, i32 4, metadata !135, null}
-!135 = metadata !{i32 786443, metadata !132, i32 12, i32 31, metadata !67, i32 4} ; [ DW_TAG_lexical_block ]
-!136 = metadata !{i32 14, i32 3, metadata !135, null}
-!137 = metadata !{i32 12, i32 27, metadata !132, null}
-!138 = metadata !{i32 786688, metadata !65, metadata !"j", metadata !67, i32 7, metadata !19, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!139 = metadata !{i32 12, i32 32, metadata !135, null}
-!140 = metadata !{i32 13, i32 1, metadata !135, null}
-!141 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!142 = metadata !{i32 786688, metadata !65, metadata !"B_cached", metadata !67, i32 9, metadata !48, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!143 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!144 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!145 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!146 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!147 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!148 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!149 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!150 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!151 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!152 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!153 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!154 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!155 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!156 = metadata !{i32 790529, metadata !142, metadata !"B_cached[0][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!157 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!158 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!159 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!160 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!161 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!162 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!163 = metadata !{i32 790529, metadata !142, metadata !"B_cached[1][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!164 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!165 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!166 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!167 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!168 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!169 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!170 = metadata !{i32 790529, metadata !142, metadata !"B_cached[2][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!171 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!172 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!173 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!174 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!175 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!176 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!177 = metadata !{i32 790529, metadata !142, metadata !"B_cached[3][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!178 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!179 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!180 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!181 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!182 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!183 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!184 = metadata !{i32 790529, metadata !142, metadata !"B_cached[4][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!185 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!186 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!187 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!188 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!189 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!190 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!191 = metadata !{i32 790529, metadata !142, metadata !"B_cached[5][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!192 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!193 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!194 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!195 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!196 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!197 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!198 = metadata !{i32 790529, metadata !142, metadata !"B_cached[6][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!199 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!200 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!201 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!202 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!203 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!204 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!205 = metadata !{i32 790529, metadata !142, metadata !"B_cached[7][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
-!206 = metadata !{i32 17, i32 12, metadata !207, null}
-!207 = metadata !{i32 786443, metadata !65, i32 17, i32 7, metadata !67, i32 5} ; [ DW_TAG_lexical_block ]
-!208 = metadata !{i32 28, i32 3, metadata !209, null}
-!209 = metadata !{i32 786443, metadata !210, i32 18, i32 8, metadata !67, i32 7} ; [ DW_TAG_lexical_block ]
-!210 = metadata !{i32 786443, metadata !207, i32 18, i32 3, metadata !67, i32 6} ; [ DW_TAG_lexical_block ]
-!211 = metadata !{i32 17, i32 22, metadata !207, null}
-!212 = metadata !{i32 18, i32 13, metadata !209, null}
-!213 = metadata !{i32 18, i32 3, metadata !210, null}
-!214 = metadata !{i32 28, i32 3, metadata !215, null}
-!215 = metadata !{i32 786443, metadata !209, i32 19, i32 3, metadata !67, i32 8} ; [ DW_TAG_lexical_block ]
-!216 = metadata !{i32 18, i32 23, metadata !209, null}
-!217 = metadata !{i32 27, i32 4, metadata !215, null}
-!218 = metadata !{i32 19, i32 4, metadata !215, null}
-!219 = metadata !{i32 20, i32 1, metadata !215, null}
-!220 = metadata !{i32 25, i32 5, metadata !221, null}
-!221 = metadata !{i32 786443, metadata !222, i32 24, i32 4, metadata !67, i32 10} ; [ DW_TAG_lexical_block ]
-!222 = metadata !{i32 786443, metadata !215, i32 23, i32 13, metadata !67, i32 9} ; [ DW_TAG_lexical_block ]
+!19 = metadata !{metadata !20}
+!20 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]
+!21 = metadata !{metadata !22}
+!22 = metadata !{i32 0, i32 31, metadata !23}
+!23 = metadata !{metadata !24}
+!24 = metadata !{metadata !"X", metadata !25, metadata !"int", i32 0, i32 31}
+!25 = metadata !{metadata !26}
+!26 = metadata !{i32 0, i32 0, i32 1}
+!27 = metadata !{metadata !28}
+!28 = metadata !{i32 0, i32 31, metadata !29}
+!29 = metadata !{metadata !30}
+!30 = metadata !{metadata !"Y", metadata !25, metadata !"int", i32 0, i32 31}
+!31 = metadata !{i32 10, i32 1, metadata !12, null}
+!32 = metadata !{i32 11, i32 1, metadata !12, null}
+!33 = metadata !{i32 12, i32 1, metadata !12, null}
+!34 = metadata !{i32 786689, metadata !13, metadata !"X", metadata !14, i32 16777223, metadata !17, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!35 = metadata !{i32 7, i32 15, metadata !13, null}
+!36 = metadata !{i32 786689, metadata !13, metadata !"Y", metadata !14, i32 33554439, metadata !17, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!37 = metadata !{i32 7, i32 22, metadata !13, null}
+!38 = metadata !{i32 786688, metadata !12, metadata !"Xmat", metadata !14, i32 17, metadata !39, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!39 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2048, i64 32, i32 0, i32 0, metadata !7, metadata !8, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!40 = metadata !{i32 17, i32 8, metadata !12, null}
+!41 = metadata !{i32 790529, metadata !42, metadata !"temp[0]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!42 = metadata !{i32 786688, metadata !12, metadata !"temp", metadata !14, i32 18, metadata !39, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!43 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 256, i64 32, i32 0, i32 0, metadata !7, metadata !8, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!44 = metadata !{i32 18, i32 8, metadata !12, null}
+!45 = metadata !{i32 790529, metadata !42, metadata !"temp[1]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!46 = metadata !{i32 790529, metadata !42, metadata !"temp[2]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!47 = metadata !{i32 790529, metadata !42, metadata !"temp[3]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!48 = metadata !{i32 790529, metadata !42, metadata !"temp[4]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!49 = metadata !{i32 790529, metadata !42, metadata !"temp[5]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!50 = metadata !{i32 790529, metadata !42, metadata !"temp[6]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!51 = metadata !{i32 790529, metadata !42, metadata !"temp[7]", null, i32 18, metadata !43, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!52 = metadata !{i32 43, i32 2, metadata !12, null}
+!53 = metadata !{i32 44, i32 2, metadata !12, null}
+!54 = metadata !{i32 70, i32 1, metadata !12, null}
+!55 = metadata !{i32 7, i32 1, metadata !56, null}
+!56 = metadata !{i32 786443, metadata !57, i32 6, i32 1, metadata !58, i32 0} ; [ DW_TAG_lexical_block ]
+!57 = metadata !{i32 786478, i32 0, metadata !58, metadata !"MAT_Multiply", metadata !"MAT_Multiply", metadata !"", metadata !58, i32 4, metadata !59, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !19, i32 6} ; [ DW_TAG_subprogram ]
+!58 = metadata !{i32 786473, metadata !"dct/matrixmath.c", metadata !"e:/Ubuntu_source_code_data/ECE_527_MP/mp4", null} ; [ DW_TAG_file_type ]
+!59 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !60, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
+!60 = metadata !{null, metadata !61, metadata !61, metadata !61}
+!61 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !62} ; [ DW_TAG_pointer_type ]
+!62 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 256, i64 32, i32 0, i32 0, metadata !7, metadata !63, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!63 = metadata !{metadata !9}
+!64 = metadata !{i32 786689, metadata !57, metadata !"B", null, i32 5, metadata !39, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!65 = metadata !{i32 5, i32 9, metadata !57, null}
+!66 = metadata !{i32 790531, metadata !67, metadata !"C[0]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!67 = metadata !{i32 786689, metadata !57, metadata !"C", null, i32 5, metadata !39, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!68 = metadata !{i32 5, i32 24, metadata !57, null}
+!69 = metadata !{i32 790531, metadata !67, metadata !"C[1]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!70 = metadata !{i32 790531, metadata !67, metadata !"C[2]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!71 = metadata !{i32 790531, metadata !67, metadata !"C[3]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!72 = metadata !{i32 790531, metadata !67, metadata !"C[4]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!73 = metadata !{i32 790531, metadata !67, metadata !"C[5]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!74 = metadata !{i32 790531, metadata !67, metadata !"C[6]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!75 = metadata !{i32 790531, metadata !67, metadata !"C[7]", null, i32 5, metadata !43, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!76 = metadata !{i32 29, i32 1, metadata !56, null}
+!77 = metadata !{i32 35, i32 7, metadata !78, null}
+!78 = metadata !{i32 786443, metadata !12, i32 35, i32 2, metadata !14, i32 3} ; [ DW_TAG_lexical_block ]
+!79 = metadata !{i32 35, i32 25, metadata !78, null}
+!80 = metadata !{i32 786688, metadata !12, metadata !"rowidx", metadata !14, i32 24, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!81 = metadata !{i32 36, i32 8, metadata !82, null}
+!82 = metadata !{i32 786443, metadata !78, i32 36, i32 3, metadata !14, i32 4} ; [ DW_TAG_lexical_block ]
+!83 = metadata !{i32 38, i32 4, metadata !84, null}
+!84 = metadata !{i32 786443, metadata !82, i32 37, i32 3, metadata !14, i32 5} ; [ DW_TAG_lexical_block ]
+!85 = metadata !{i32 39, i32 4, metadata !84, null}
+!86 = metadata !{i32 786688, metadata !12, metadata !"idx", metadata !14, i32 24, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!87 = metadata !{i32 36, i32 26, metadata !82, null}
+!88 = metadata !{i32 786688, metadata !12, metadata !"colidx", metadata !14, i32 24, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!89 = metadata !{i32 11, i32 16, metadata !90, null}
+!90 = metadata !{i32 786443, metadata !56, i32 11, i32 11, metadata !58, i32 1} ; [ DW_TAG_lexical_block ]
+!91 = metadata !{i32 15, i32 2, metadata !92, null}
+!92 = metadata !{i32 786443, metadata !90, i32 11, i32 30, metadata !58, i32 2} ; [ DW_TAG_lexical_block ]
+!93 = metadata !{i32 11, i32 26, metadata !90, null}
+!94 = metadata !{i32 786688, metadata !56, metadata !"i", metadata !58, i32 7, metadata !95, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!95 = metadata !{i32 786468, null, metadata !"unsigned char", null, i32 0, i64 8, i64 8, i64 0, i32 0, i32 8} ; [ DW_TAG_base_type ]
+!96 = metadata !{i32 12, i32 17, metadata !97, null}
+!97 = metadata !{i32 786443, metadata !92, i32 12, i32 12, metadata !58, i32 3} ; [ DW_TAG_lexical_block ]
+!98 = metadata !{i32 11, i32 31, metadata !92, null}
+!99 = metadata !{i32 13, i32 4, metadata !100, null}
+!100 = metadata !{i32 786443, metadata !97, i32 12, i32 31, metadata !58, i32 4} ; [ DW_TAG_lexical_block ]
+!101 = metadata !{i32 14, i32 3, metadata !100, null}
+!102 = metadata !{i32 12, i32 27, metadata !97, null}
+!103 = metadata !{i32 786688, metadata !56, metadata !"j", metadata !58, i32 7, metadata !95, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!104 = metadata !{i32 12, i32 32, metadata !100, null}
+!105 = metadata !{i32 13, i32 1, metadata !100, null}
+!106 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!107 = metadata !{i32 786688, metadata !56, metadata !"B_cached", metadata !58, i32 9, metadata !39, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!108 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!109 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!110 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!111 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!112 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!113 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!114 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][0]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!115 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!116 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!117 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!118 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!119 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!120 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!121 = metadata !{i32 790529, metadata !107, metadata !"B_cached[0][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!122 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!123 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!124 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!125 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!126 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!127 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!128 = metadata !{i32 790529, metadata !107, metadata !"B_cached[1][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!129 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!130 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!131 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!132 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!133 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!134 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!135 = metadata !{i32 790529, metadata !107, metadata !"B_cached[2][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!136 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!137 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!138 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!139 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!140 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!141 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!142 = metadata !{i32 790529, metadata !107, metadata !"B_cached[3][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!143 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!144 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!145 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!146 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!147 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!148 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!149 = metadata !{i32 790529, metadata !107, metadata !"B_cached[4][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!150 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!151 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!152 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!153 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!154 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!155 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!156 = metadata !{i32 790529, metadata !107, metadata !"B_cached[5][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!157 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!158 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!159 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!160 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!161 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!162 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!163 = metadata !{i32 790529, metadata !107, metadata !"B_cached[6][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!164 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][1]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!165 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][2]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!166 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][3]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!167 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][4]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!168 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][5]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!169 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][6]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!170 = metadata !{i32 790529, metadata !107, metadata !"B_cached[7][7]", null, i32 9, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
+!171 = metadata !{i32 17, i32 12, metadata !172, null}
+!172 = metadata !{i32 786443, metadata !56, i32 17, i32 7, metadata !58, i32 5} ; [ DW_TAG_lexical_block ]
+!173 = metadata !{i32 28, i32 3, metadata !174, null}
+!174 = metadata !{i32 786443, metadata !175, i32 18, i32 8, metadata !58, i32 7} ; [ DW_TAG_lexical_block ]
+!175 = metadata !{i32 786443, metadata !172, i32 18, i32 3, metadata !58, i32 6} ; [ DW_TAG_lexical_block ]
+!176 = metadata !{i32 17, i32 22, metadata !172, null}
+!177 = metadata !{i32 18, i32 13, metadata !174, null}
+!178 = metadata !{i32 18, i32 3, metadata !175, null}
+!179 = metadata !{i32 28, i32 3, metadata !180, null}
+!180 = metadata !{i32 786443, metadata !174, i32 19, i32 3, metadata !58, i32 8} ; [ DW_TAG_lexical_block ]
+!181 = metadata !{i32 18, i32 23, metadata !174, null}
+!182 = metadata !{i32 27, i32 4, metadata !180, null}
+!183 = metadata !{i32 19, i32 4, metadata !180, null}
+!184 = metadata !{i32 20, i32 1, metadata !180, null}
+!185 = metadata !{i32 25, i32 5, metadata !186, null}
+!186 = metadata !{i32 786443, metadata !187, i32 24, i32 4, metadata !58, i32 10} ; [ DW_TAG_lexical_block ]
+!187 = metadata !{i32 786443, metadata !180, i32 23, i32 13, metadata !58, i32 9} ; [ DW_TAG_lexical_block ]
+!188 = metadata !{i32 50, i32 7, metadata !189, null}
+!189 = metadata !{i32 786443, metadata !12, i32 50, i32 2, metadata !14, i32 6} ; [ DW_TAG_lexical_block ]
+!190 = metadata !{i32 52, i32 3, metadata !191, null}
+!191 = metadata !{i32 786443, metadata !189, i32 51, i32 2, metadata !14, i32 7} ; [ DW_TAG_lexical_block ]
+!192 = metadata !{i32 54, i32 4, metadata !193, null}
+!193 = metadata !{i32 786443, metadata !191, i32 53, i32 3, metadata !14, i32 8} ; [ DW_TAG_lexical_block ]
+!194 = metadata !{i32 56, i32 4, metadata !193, null}
+!195 = metadata !{i32 55, i32 4, metadata !193, null}
+!196 = metadata !{i32 786688, metadata !12, metadata !"tempval", metadata !14, i32 49, metadata !7, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!197 = metadata !{i32 50, i32 32, metadata !189, null}
+!198 = metadata !{i32 59, i32 4, metadata !193, null}
+!199 = metadata !{i32 786688, metadata !12, metadata !"write_idx", metadata !14, i32 23, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!200 = metadata !{i32 786688, metadata !12, metadata !"Xbuff", metadata !14, i32 15, metadata !201, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!201 = metadata !{i32 786433, null, metadata !"", null, i32 0, i64 2112, i64 32, i32 0, i32 0, metadata !7, metadata !202, i32 0, i32 0} ; [ DW_TAG_array_type ]
+!202 = metadata !{metadata !203}
+!203 = metadata !{i32 786465, i64 0, i64 65}      ; [ DW_TAG_subrange_type ]
+!204 = metadata !{i32 15, i32 8, metadata !12, null}
+!205 = metadata !{i32 26, i32 7, metadata !206, null}
+!206 = metadata !{i32 786443, metadata !12, i32 26, i32 2, metadata !14, i32 1} ; [ DW_TAG_lexical_block ]
+!207 = metadata !{i32 26, i32 30, metadata !206, null}
+!208 = metadata !{i32 29, i32 3, metadata !209, null}
+!209 = metadata !{i32 786443, metadata !206, i32 27, i32 2, metadata !14, i32 2} ; [ DW_TAG_lexical_block ]
+!210 = metadata !{i32 30, i32 3, metadata !209, null}
+!211 = metadata !{i32 786688, metadata !12, metadata !"opt_type", metadata !14, i32 22, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!212 = metadata !{i32 32, i32 4, metadata !209, null}
+!213 = metadata !{i32 786688, metadata !12, metadata !"tempin", metadata !14, i32 21, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!214 = metadata !{i32 31, i32 3, metadata !209, null}
+!215 = metadata !{i32 786688, metadata !12, metadata !"read_idx", metadata !14, i32 23, metadata !18, i32 0, i32 0} ; [ DW_TAG_auto_variable ]

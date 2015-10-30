@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="DCT" xd:componentRef="DCT" xd:initiationInterval="893" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="DCT" xd:componentRef="DCT" xd:initiationInterval="894" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:arg xd:name="*(X)" xd:originalName="X" xd:direction="in" xd:interfaceRef="X" xd:busTypeRef="acc_fifo" xd:dataWidth="32"/>
-  <xd:arg xd:name="function" xd:originalName="function" xd:direction="in" xd:interfaceRef="function_r" xd:busTypeRef="register" xd:dataWidth="8" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="*(Y)" xd:originalName="Y" xd:direction="out" xd:interfaceRef="Y" xd:busTypeRef="acc_fifo" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="892" xd:worst-case="892" xd:average-case="892"/>
-  <xd:resourceEstimates xd:LUT="19757" xd:FF="11765" xd:BRAM="7" xd:DSP="50"/>
+  <xd:latencyEstimates xd:best-case="893" xd:worst-case="893" xd:average-case="893"/>
+  <xd:resourceEstimates xd:LUT="19797" xd:FF="11799" xd:BRAM="7" xd:DSP="50"/>
 </xd:acceleratorMap>

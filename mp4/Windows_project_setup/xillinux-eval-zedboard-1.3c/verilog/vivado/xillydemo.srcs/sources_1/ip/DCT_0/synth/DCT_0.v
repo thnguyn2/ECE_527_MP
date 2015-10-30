@@ -48,7 +48,7 @@
 
 
 // IP VLNV: Matrix_transform:hls:DCT:1.0
-// IP Revision: 1510301122
+// IP Revision: 1510301454
 
 (* X_CORE_INFO = "DCT,Vivado 2015.1" *)
 (* CHECK_LICENSE_TYPE = "DCT_0,DCT,{}" *)
@@ -59,7 +59,6 @@ module DCT_0 (
   X_dout,
   X_empty_n,
   X_read,
-  function_r,
   Y_din,
   Y_full_n,
   Y_write
@@ -75,8 +74,6 @@ input wire [31 : 0] X_dout;
 input wire X_empty_n;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_read:1.0 X RD_EN" *)
 output wire X_read;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 function_r DATA" *)
-input wire [7 : 0] function_r;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_write:1.0 Y WR_DATA" *)
 output wire [31 : 0] Y_din;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_fifo_write:1.0 Y FULL_N" *)
@@ -90,7 +87,6 @@ output wire Y_write;
     .X_dout(X_dout),
     .X_empty_n(X_empty_n),
     .X_read(X_read),
-    .function_r(function_r),
     .Y_din(Y_din),
     .Y_full_n(Y_full_n),
     .Y_write(Y_write)

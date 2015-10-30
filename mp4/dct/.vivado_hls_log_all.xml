@@ -12,13 +12,11 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="@W [RTGEN-101] Port 'DCT/function_r' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:21:18.307-0500" type="Warning"/>
-        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_load_2') on array 'A' due to limited memory ports." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:21:06.641-0500" type="Warning"/>
-        <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:20:45.696-0500" type="Warning"/>
-        <logs message="@W [SYN-103] Legalizing function name 'DCT_MAT_Multiply.1' to 'DCT_MAT_Multiply_1'." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:20:45.696-0500" type="Warning"/>
-        <logs message="@W [SYN-103] Legalizing function name 'DCT_MAT_Multiply.1_Loop_Row_proc' to 'DCT_MAT_Multiply_1_Loop_Row_proc'." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:20:45.666-0500" type="Warning"/>
-        <logs message="@W [SYN-103] Legalizing function name 'DCT_MAT_Multiply.1_Loop_LoadRow_pr' to 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:20:45.656-0500" type="Warning"/>
-        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply.1_Loop_LoadRow_proc' (dct/matrixmath.c:11:4) into MAT_Multiply.1_Loop_LoadRow_pr." projectName="dct" solutionName="solution2optimize" date="2015-10-30T11:20:45.516-0500" type="Warning"/>
+        <logs message="@W [SCHED-69] Unable to schedule 'load' operation ('A_load_2') on array 'A' due to limited memory ports." projectName="dct" solutionName="solution2optimize" date="2015-10-30T14:23:11.628-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_MAT_Multiply.1' to 'DCT_MAT_Multiply_1'." projectName="dct" solutionName="solution2optimize" date="2015-10-30T14:22:51.287-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_MAT_Multiply.1_Loop_Row_proc' to 'DCT_MAT_Multiply_1_Loop_Row_proc'." projectName="dct" solutionName="solution2optimize" date="2015-10-30T14:22:51.279-0500" type="Warning"/>
+        <logs message="@W [SYN-103] Legalizing function name 'DCT_MAT_Multiply.1_Loop_LoadRow_pr' to 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'." projectName="dct" solutionName="solution2optimize" date="2015-10-30T14:22:51.274-0500" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply.1_Loop_LoadRow_proc' (dct/matrixmath.c:11:4) into MAT_Multiply.1_Loop_LoadRow_pr." projectName="dct" solutionName="solution2optimize" date="2015-10-30T14:22:51.171-0500" type="Warning"/>
         <logs message="@W [SYN-107] Renaming port name 'DCT/function' to 'DCT/function_r' to avoid the conflict with HDL keywords or other object names." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.593-0500" type="Warning"/>
         <logs message="@W [SYN-103] Legalizing function name 'DCT_Block__proc' to 'DCT_Block_proc'." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.577-0500" type="Warning"/>
         <logs message="@W [XFORM-631] Renaming function 'MAT_Multiply2_Loop_Col_proc2911' (dct/matrixmath.c:43:23) into MAT_Multiply2_Loop_Col_proc291." projectName="dct" solutionName="solution3opt" date="2015-10-28T17:53:48.453-0500" type="Warning"/>

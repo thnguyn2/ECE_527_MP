@@ -445,7 +445,7 @@ architecture behav of DCT_MAT_Multiply_1_Loop_Row_proc is
     signal indvar_flatten_phi_fu_1174_p4 : STD_LOGIC_VECTOR (6 downto 0);
     signal i_1_phi_fu_1185_p4 : STD_LOGIC_VECTOR (3 downto 0);
     signal j_1_phi_fu_1197_p4 : STD_LOGIC_VECTOR (3 downto 0);
-    signal tmp_10_fu_1452_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_7_fu_1452_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal grp_fu_1206_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_1206_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_1211_p0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -473,7 +473,7 @@ architecture behav of DCT_MAT_Multiply_1_Loop_Row_proc is
     signal grp_fu_1244_p8 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_1244_p9 : STD_LOGIC_VECTOR (2 downto 0);
     signal exitcond_fu_1277_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i_fu_1291_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal i2_fu_1291_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_s_fu_1315_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_s_fu_1315_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_s_fu_1315_p3 : STD_LOGIC_VECTOR (31 downto 0);
@@ -546,7 +546,7 @@ architecture behav of DCT_MAT_Multiply_1_Loop_Row_proc is
     signal tmp_31_fu_1418_p7 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_31_fu_1418_p8 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_31_fu_1418_p9 : STD_LOGIC_VECTOR (2 downto 0);
-    signal tmp_8_fu_1435_p3 : STD_LOGIC_VECTOR (6 downto 0);
+    signal tmp_6_fu_1435_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal p_addr_cast_fu_1442_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp_6_trn_cast_fu_1432_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal p_addr1_fu_1446_p2 : STD_LOGIC_VECTOR (7 downto 0);
@@ -2170,7 +2170,7 @@ begin
         end if; 
     end process;
 
-    C_address0 <= tmp_10_fu_1452_p1(6 - 1 downto 0);
+    C_address0 <= tmp_7_fu_1452_p1(6 - 1 downto 0);
 
     -- C_ce0 assign process. --
     C_ce0_assign_proc : process(ap_reg_ppiten_pp0_it11, ap_sig_cseq_ST_pp0_stg2_fsm_3)
@@ -2526,8 +2526,9 @@ begin
         end if; 
     end process;
 
+    i2_fu_1291_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(i_1_phi_fu_1185_p4));
     i_1_mid2_fu_1297_p3 <= 
-        i_fu_1291_p2 when (exitcond_fu_1277_p2(0) = '1') else 
+        i2_fu_1291_p2 when (exitcond_fu_1277_p2(0) = '1') else 
         i_1_phi_fu_1185_p4;
 
     -- i_1_phi_fu_1185_p4 assign process. --
@@ -2540,7 +2541,6 @@ begin
         end if; 
     end process;
 
-    i_fu_1291_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(i_1_phi_fu_1185_p4));
     indvar_flatten_next_fu_1271_p2 <= std_logic_vector(unsigned(indvar_flatten_phi_fu_1174_p4) + unsigned(ap_const_lv7_1));
 
     -- indvar_flatten_phi_fu_1174_p4 assign process. --
@@ -2569,8 +2569,7 @@ begin
 
     j_fu_1399_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(j_1_mid2_reg_2106));
     p_addr1_fu_1446_p2 <= std_logic_vector(unsigned(p_addr_cast_fu_1442_p1) + unsigned(tmp_6_trn_cast_fu_1432_p1));
-    p_addr_cast_fu_1442_p1 <= std_logic_vector(resize(unsigned(tmp_8_fu_1435_p3),8));
-    tmp_10_fu_1452_p1 <= std_logic_vector(resize(unsigned(p_addr1_fu_1446_p2),64));
+    p_addr_cast_fu_1442_p1 <= std_logic_vector(resize(unsigned(tmp_6_fu_1435_p3),8));
     tmp_19_fu_1329_p1 <= p_read8;
     tmp_19_fu_1329_p2 <= p_read9;
     tmp_19_fu_1329_p3 <= p_read10;
@@ -2636,8 +2635,9 @@ begin
     tmp_31_fu_1418_p9 <= tmp_33_reg_2129;
     tmp_32_fu_1305_p1 <= i_1_mid2_fu_1297_p3(3 - 1 downto 0);
     tmp_33_fu_1311_p1 <= j_1_mid2_fu_1283_p3(3 - 1 downto 0);
+    tmp_6_fu_1435_p3 <= (ap_reg_ppstg_i_1_mid2_reg_2112_pp0_it11 & ap_const_lv3_0);
     tmp_6_trn_cast_fu_1432_p1 <= std_logic_vector(resize(unsigned(ap_reg_ppstg_j_1_mid2_reg_2106_pp0_it11),8));
-    tmp_8_fu_1435_p3 <= (ap_reg_ppstg_i_1_mid2_reg_2112_pp0_it11 & ap_const_lv3_0);
+    tmp_7_fu_1452_p1 <= std_logic_vector(resize(unsigned(p_addr1_fu_1446_p2),64));
     tmp_s_fu_1315_p1 <= p_read;
     tmp_s_fu_1315_p2 <= p_read1;
     tmp_s_fu_1315_p3 <= p_read2;

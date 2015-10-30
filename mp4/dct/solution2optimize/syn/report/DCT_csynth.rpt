@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT'
 ================================================================
-* Date:           Fri Oct 30 11:21:18 2015
+* Date:           Fri Oct 30 14:23:22 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |  892|  892|  301|  301| dataflow |
+    |  893|  893|  301|  301| dataflow |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -38,11 +38,11 @@
         |                              |                    |  Latency  |  Interval | Pipeline |
         |           Instance           |       Module       | min | max | min | max |   Type   |
         +------------------------------+--------------------+-----+-----+-----+-----+----------+
-        |grp_DCT_Loop_1_proc_fu_126    |DCT_Loop_1_proc     |   66|   66|   66|   66|   none   |
-        |grp_DCT_Loop_2_proc_fu_113    |DCT_Loop_2_proc     |  145|  145|  145|  145|   none   |
-        |grp_DCT_MAT_Multiply_fu_85    |DCT_MAT_Multiply    |  178|  178|  111|  111| dataflow |
-        |grp_DCT_MAT_Multiply_1_fu_98  |DCT_MAT_Multiply_1  |  368|  368|  301|  301| dataflow |
-        |grp_DCT_Loop_3_proc_fu_119    |DCT_Loop_3_proc     |  131|  131|  131|  131|   none   |
+        |grp_DCT_Loop_1_proc_fu_119    |DCT_Loop_1_proc     |   67|   67|   67|   67|   none   |
+        |grp_DCT_Loop_2_proc_fu_127    |DCT_Loop_2_proc     |  145|  145|  145|  145|   none   |
+        |grp_DCT_MAT_Multiply_fu_83    |DCT_MAT_Multiply    |  178|  178|  111|  111| dataflow |
+        |grp_DCT_MAT_Multiply_1_fu_96  |DCT_MAT_Multiply_1  |  368|  368|  301|  301| dataflow |
+        |grp_DCT_Loop_3_proc1_fu_111   |DCT_Loop_3_proc1    |  131|  131|  131|  131|   none   |
         +------------------------------+--------------------+-----+-----+-----+-----+----------+
 
         * Loop: 
@@ -57,14 +57,14 @@
 +-----------------+---------+-------+--------+-------+
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
-|Expression       |        -|      -|       0|      1|
+|Expression       |        -|      -|       0|      2|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        1|     50|   10731|  19676|
+|Instance         |        1|     50|   10763|  19711|
 |Memory           |        6|      -|    1024|     64|
-|Multiplexer      |        -|      -|       -|     16|
-|Register         |        -|      -|      10|      -|
+|Multiplexer      |        -|      -|       -|     20|
+|Register         |        -|      -|      12|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        7|     50|   11765|  19757|
+|Total            |        7|     50|   11799|  19797|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -76,20 +76,20 @@
     +-----------------------+--------------------+---------+-------+------+-------+
     |        Instance       |       Module       | BRAM_18K| DSP48E|  FF  |  LUT  |
     +-----------------------+--------------------+---------+-------+------+-------+
-    |DCT_Loop_1_proc_U0     |DCT_Loop_1_proc     |        0|      0|    10|     20|
+    |DCT_Loop_1_proc_U0     |DCT_Loop_1_proc     |        0|      0|    42|     55|
     |DCT_Loop_2_proc_U0     |DCT_Loop_2_proc     |        0|      0|    36|     45|
-    |DCT_Loop_3_proc_U0     |DCT_Loop_3_proc     |        0|      0|    19|     51|
+    |DCT_Loop_3_proc1_U0    |DCT_Loop_3_proc1    |        0|      0|    19|     51|
     |DCT_MAT_Multiply_U0    |DCT_MAT_Multiply    |        0|     40|  6355|  11835|
     |DCT_MAT_Multiply_1_U0  |DCT_MAT_Multiply_1  |        1|     10|  4311|   7725|
     +-----------------------+--------------------+---------+-------+------+-------+
-    |Total                  |                    |        1|     50| 10731|  19676|
+    |Total                  |                    |        1|     50| 10763|  19711|
     +-----------------------+--------------------+---------+-------+------+-------+
 
     * Memory: 
     +----------+------------+---------+-----+----+------+-----+------+-------------+
     |  Memory  |   Module   | BRAM_18K|  FF | LUT| Words| Bits| Banks| W*Bits*Banks|
     +----------+------------+---------+-----+----+------+-----+------+-------------+
-    |Xbuff_U   |DCT_Xbuff   |        2|    0|   0|    65|   32|     2|         4160|
+    |Xbuff_U   |DCT_Xbuff   |        2|    0|   0|    66|   32|     2|         4224|
     |Xmat_U    |DCT_Xmat    |        2|    0|   0|    64|   32|     2|         4096|
     |Ymat_U    |DCT_Xmat    |        2|    0|   0|    64|   32|     2|         4096|
     |temp_0_U  |DCT_temp_0  |        0|  128|   8|     8|   32|     2|          512|
@@ -101,62 +101,75 @@
     |temp_6_U  |DCT_temp_0  |        0|  128|   8|     8|   32|     2|          512|
     |temp_7_U  |DCT_temp_0  |        0|  128|   8|     8|   32|     2|          512|
     +----------+------------+---------+-----+----+------+-----+------+-------------+
-    |Total     |            |        6| 1024|  64|   257|  352|    22|        16448|
+    |Total     |            |        6| 1024|  64|   258|  352|    22|        16512|
     +----------+------------+---------+-----+----+------+-----+------+-------------+
 
     * FIFO: 
-    N/A
+    +----------------------------------+---------+---+----+------+-----+---------+
+    |               Name               | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +----------------------------------+---------+---+----+------+-----+---------+
+    |opt_type_02_loc_loc_loc_channe_U  |        0|  0|   0|     2|   32|       64|
+    +----------------------------------+---------+---+----+------+-----+---------+
+    |Total                             |        0|  0|   0|     2|   32|       64|
+    +----------------------------------+---------+---+----+------+-----+---------+
 
     * Expression: 
     +--------------------------------+----------+-------+---+----+------------+------------+
     |          Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------------+----------+-------+---+----+------------+------------+
+    |DCT_Loop_3_proc1_U0_ap_start    |    and   |      0|  0|   1|           1|           1|
     |DCT_MAT_Multiply_1_U0_ap_start  |    and   |      0|  0|   1|           1|           1|
     +--------------------------------+----------+-------+---+----+------------+------------+
-    |Total                           |          |      0|  0|   1|           1|           1|
+    |Total                           |          |      0|  0|   2|           2|           2|
     +--------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +--------------------------------------------------+----+-----------+-----+-----------+
-    |                       Name                       | LUT| Input Size| Bits| Total Bits|
-    +--------------------------------------------------+----+-----------+-----+-----------+
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_0           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_1           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_2           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_3           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_4           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_5           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_6           |   1|          2|    1|          2|
-    |ap_chn_write_DCT_MAT_Multiply_U0_temp_7           |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status  |   1|          2|    1|          2|
-    |ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status  |   1|          2|    1|          2|
-    +--------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                             |  16|         32|   16|         32|
-    +--------------------------------------------------+----+-----------+-----+-----------+
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |                              Name                              | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_chn_write_DCT_Loop_1_proc_U0_Xbuff                           |   1|          2|    1|          2|
+    |ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe  |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_0                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_1                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_2                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_3                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_4                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_5                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_6                         |   1|          2|    1|          2|
+    |ap_chn_write_DCT_MAT_Multiply_U0_temp_7                         |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status               |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status                |   1|          2|    1|          2|
+    |ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n              |   1|          2|    1|          2|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                           |  20|         40|   20|         40|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------------------------+---+----+-----+-----------+
-    |                       Name                       | FF| LUT| Bits| Const Bits|
-    +--------------------------------------------------+---+----+-----+-----------+
-    |DCT_Loop_1_proc_U0_ap_start                       |  1|   0|    1|          0|
-    |ap_CS                                             |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status  |  1|   0|    1|          0|
-    |ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status  |  1|   0|    1|          0|
-    +--------------------------------------------------+---+----+-----+-----------+
-    |Total                                             | 10|   0|   10|          0|
-    +--------------------------------------------------+---+----+-----+-----------+
+    +----------------------------------------------------+---+----+-----+-----------+
+    |                        Name                        | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |DCT_Loop_1_proc_U0_ap_start                         |  1|   0|    1|          0|
+    |ap_CS                                               |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status   |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status    |  1|   0|    1|          0|
+    |ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n  |  1|   0|    1|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |Total                                               | 12|   0|   12|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
 
 
 
@@ -164,17 +177,16 @@
 == Interface
 ================================================================
 * Summary: 
-+------------+-----+-----+--------------+--------------+--------------+
-|  RTL Ports | Dir | Bits|   Protocol   | Source Object|    C Type    |
-+------------+-----+-----+--------------+--------------+--------------+
-|ap_clk      |  in |    1| ap_ctrl_none |      DCT     | return value |
-|ap_rst      |  in |    1| ap_ctrl_none |      DCT     | return value |
-|X_dout      |  in |   32|    ap_fifo   |       X      |    pointer   |
-|X_empty_n   |  in |    1|    ap_fifo   |       X      |    pointer   |
-|X_read      | out |    1|    ap_fifo   |       X      |    pointer   |
-|function_r  |  in |    8|    ap_none   |  function_r  |    scalar    |
-|Y_din       | out |   32|    ap_fifo   |       Y      |    pointer   |
-|Y_full_n    |  in |    1|    ap_fifo   |       Y      |    pointer   |
-|Y_write     | out |    1|    ap_fifo   |       Y      |    pointer   |
-+------------+-----+-----+--------------+--------------+--------------+
++-----------+-----+-----+--------------+--------------+--------------+
+| RTL Ports | Dir | Bits|   Protocol   | Source Object|    C Type    |
++-----------+-----+-----+--------------+--------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_none |      DCT     | return value |
+|ap_rst     |  in |    1| ap_ctrl_none |      DCT     | return value |
+|X_dout     |  in |   32|    ap_fifo   |       X      |    pointer   |
+|X_empty_n  |  in |    1|    ap_fifo   |       X      |    pointer   |
+|X_read     | out |    1|    ap_fifo   |       X      |    pointer   |
+|Y_din      | out |   32|    ap_fifo   |       Y      |    pointer   |
+|Y_full_n   |  in |    1|    ap_fifo   |       Y      |    pointer   |
+|Y_write    | out |    1|    ap_fifo   |       Y      |    pointer   |
++-----------+-----+-----+--------------+--------------+--------------+
 

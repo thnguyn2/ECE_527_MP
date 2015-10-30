@@ -476,7 +476,7 @@ architecture behav of DCT_MAT_Multiply_Loop_Row_proc is
     signal grp_fu_803_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_803_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal exitcond_fu_819_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i_fu_833_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal i2_fu_833_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_fu_861_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_fu_861_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_fu_861_p3 : STD_LOGIC_VECTOR (31 downto 0);
@@ -2701,8 +2701,9 @@ begin
     grp_fu_803_ce <= ap_const_logic_1;
     grp_fu_803_p0 <= tmp_16_fu_1113_p10;
     grp_fu_803_p1 <= tmp_17_fu_1135_p10;
+    i2_fu_833_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(i_1_phi_fu_723_p4));
     i_1_mid2_fu_839_p3 <= 
-        i_fu_833_p2 when (exitcond_fu_819_p2(0) = '1') else 
+        i2_fu_833_p2 when (exitcond_fu_819_p2(0) = '1') else 
         i_1_phi_fu_723_p4;
 
     -- i_1_phi_fu_723_p4 assign process. --
@@ -2715,7 +2716,6 @@ begin
         end if; 
     end process;
 
-    i_fu_833_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(i_1_phi_fu_723_p4));
     indvar_flatten_next_fu_813_p2 <= std_logic_vector(unsigned(indvar_flatten_reg_708) + unsigned(ap_const_lv7_1));
     j_1_mid2_fu_825_p3 <= 
         ap_const_lv4_0 when (exitcond_fu_819_p2(0) = '1') else 

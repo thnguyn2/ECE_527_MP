@@ -21,16 +21,16 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>66</Best-caseLatency>
-<Average-caseLatency>66</Average-caseLatency>
-<Worst-caseLatency>66</Worst-caseLatency>
-<Interval-min>66</Interval-min>
-<Interval-max>66</Interval-max>
+<Best-caseLatency>67</Best-caseLatency>
+<Average-caseLatency>67</Average-caseLatency>
+<Worst-caseLatency>67</Worst-caseLatency>
+<Interval-min>67</Interval-min>
+<Interval-max>67</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
-<TripCount>65</TripCount>
-<Latency>65</Latency>
+<TripCount>66</TripCount>
+<Latency>66</Latency>
 <IterationLatency>1</IterationLatency>
 </Loop1>
 </SummaryOfLoopLatency>
@@ -38,8 +38,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>10</FF>
-<LUT>20</LUT>
+<FF>42</FF>
+<LUT>55</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 <SLICE>0</SLICE>
@@ -130,6 +130,17 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>DCT_Loop_1_proc</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>X_dout</name>

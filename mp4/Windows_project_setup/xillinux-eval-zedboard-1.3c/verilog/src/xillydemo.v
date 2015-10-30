@@ -371,8 +371,7 @@ module xillydemo
          .X_read(in_r_read),
          .Y_din(out_r_din),
          .Y_full_n(!out_r_full),
-         .Y_write(out_r_write),
-         .function_r(0)
+         .Y_write(out_r_write)
          );
 
     //---------------------------------------------------------------------

@@ -130,6 +130,7 @@ FIFO_DCT_MAT_Multiply_1_B_cached_7_4_channel
 FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel
 FIFO_DCT_MAT_Multiply_1_B_cached_7_6_channel
 FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel
+FIFO_DCT_opt_type_02_loc_loc_loc_channe
 DCT_Loop_1_proc
 DCT_Loop_2_proc
 DCT_MAT_Multiply_Loop_LoadRow_proc
@@ -138,5 +139,5 @@ DCT_MAT_Multiply
 DCT_MAT_Multiply_1_Loop_LoadRow_pr
 DCT_MAT_Multiply_1_Loop_Row_proc
 DCT_MAT_Multiply_1
-DCT_Loop_3_proc
+DCT_Loop_3_proc1
 DCT

@@ -1410,10 +1410,10 @@ newFuncRoot:64  br label %0
 
 <node id="150" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.preheader:4  %i = add i4 1, %i_1
+.preheader:4  %i2 = add i4 1, %i_1
 
 ]]></node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="i2"/></StgValue>
 </operation>
 
 <operation id="123" st_id="2" stage="1" lat="1">
@@ -1426,7 +1426,7 @@ newFuncRoot:64  br label %0
 
 <node id="151" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1
+.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i2, i4 %i_1
 
 ]]></node>
 <StgValue><ssdm name="i_1_mid2"/></StgValue>

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'
 ================================================================
-* Date:           Fri Oct 30 11:21:15 2015
+* Date:           Fri Oct 30 14:23:20 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -88,12 +88,12 @@
     |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+-------+---+----+------------+------------+
     |Tinv_addr3_fu_13668_p2           |     +    |      0|  0|   8|           8|           8|
-    |i6_fu_13634_p2                   |     +    |      0|  0|   4|           1|           4|
+    |i4_fu_13634_p2                   |     +    |      0|  0|   4|           1|           4|
     |indvar_flatten_next_fu_13614_p2  |     +    |      0|  0|   7|           7|           1|
     |j_fu_13683_p2                    |     +    |      0|  0|   4|           4|           1|
     |i_0_i_i_mid2_fu_13640_p3         |  Select  |      0|  0|   4|           1|           4|
     |j_0_i_i_mid2_fu_13626_p3         |  Select  |      0|  0|   4|           1|           1|
-    |exitcond3_i_i8_fu_13620_p2       |   icmp   |      0|  0|   2|           4|           5|
+    |exitcond3_i_i6_fu_13620_p2       |   icmp   |      0|  0|   2|           4|           5|
     |exitcond_flatten_fu_13608_p2     |   icmp   |      0|  0|   3|           7|           8|
     |ap_sig_bdd_396                   |    or    |      0|  0|   1|           1|           1|
     +---------------------------------+----------+-------+---+----+------------+------------+
@@ -409,17 +409,17 @@ ST_2: exitcond_flatten [1/1] 1.97ns
 ST_2: indvar_flatten_next [1/1] 1.72ns
 :68  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
-ST_2: exitcond3_i_i8 [1/1] 1.88ns
-.reset:2  %exitcond3_i_i8 = icmp eq i4 %j_0_i_i, -8
+ST_2: exitcond3_i_i6 [1/1] 1.88ns
+.reset:2  %exitcond3_i_i6 = icmp eq i4 %j_0_i_i, -8
 
 ST_2: j_0_i_i_mid2 [1/1] 1.37ns
-.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i8, i4 0, i4 %j_0_i_i
+.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 0, i4 %j_0_i_i
 
-ST_2: i6 [1/1] 0.80ns
-.reset:4  %i6 = add i4 1, %i_0_i_i
+ST_2: i4 [1/1] 0.80ns
+.reset:4  %i4 = add i4 1, %i_0_i_i
 
 ST_2: i_0_i_i_mid2 [1/1] 1.37ns
-.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i8, i4 %i6, i4 %i_0_i_i
+.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 %i4, i4 %i_0_i_i
 
 ST_2: tmp_20 [1/1] 0.00ns
 .reset:6  %tmp_20 = trunc i4 %i_0_i_i_mid2 to i3
@@ -436,11 +436,11 @@ ST_2: Tinv_addr2_cast [1/1] 0.00ns
 ST_2: Tinv_addr3 [1/1] 1.72ns
 .reset:13  %Tinv_addr3 = add i8 %Tinv_addr2_cast, %tmp_3_i_trn_cast
 
-ST_2: tmp_7 [1/1] 0.00ns
-.reset:14  %tmp_7 = zext i8 %Tinv_addr3 to i64
+ST_2: tmp_5 [1/1] 0.00ns
+.reset:14  %tmp_5 = zext i8 %Tinv_addr3 to i64
 
 ST_2: Tinv_addr [1/1] 0.00ns
-.reset:15  %Tinv_addr = getelementptr [64 x float]* @Tinv, i64 0, i64 %tmp_7
+.reset:15  %Tinv_addr = getelementptr [64 x float]* @Tinv, i64 0, i64 %tmp_5
 
 ST_2: B_cached_7_0 [2/2] 2.39ns
 .reset:16  %B_cached_7_0 = load float* %Tinv_addr, align 4
@@ -1342,7 +1342,7 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ Tinv]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=1; mode=0xd69b3a0; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ Tinv]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=1; mode=0x9228de0; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -1355,16 +1355,16 @@ i_0_i_i             (phi              ) [ 00100]
 j_0_i_i             (phi              ) [ 00100]
 exitcond_flatten    (icmp             ) [ 00110]
 indvar_flatten_next (add              ) [ 01110]
-exitcond3_i_i8      (icmp             ) [ 00000]
+exitcond3_i_i6      (icmp             ) [ 00000]
 j_0_i_i_mid2        (select           ) [ 00000]
-i6                  (add              ) [ 00000]
+i4                  (add              ) [ 00000]
 i_0_i_i_mid2        (select           ) [ 01110]
 tmp_20              (trunc            ) [ 00110]
 tmp_3_i_trn_cast    (zext             ) [ 00000]
 tmp                 (bitconcatenate   ) [ 00000]
 Tinv_addr2_cast     (zext             ) [ 00000]
 Tinv_addr3          (add              ) [ 00000]
-tmp_7               (zext             ) [ 00000]
+tmp_5               (zext             ) [ 00000]
 Tinv_addr           (getelementptr    ) [ 00110]
 tmp_21              (trunc            ) [ 00110]
 stg_24              (switch           ) [ 00000]
@@ -13031,7 +13031,7 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13620" class="1004" name="exitcond3_i_i8_fu_13620">
+<comp id="13620" class="1004" name="exitcond3_i_i6_fu_13620">
 <pin_list>
 <pin id="13621" dir="0" index="0" bw="4" slack="0"/>
 <pin id="13622" dir="0" index="1" bw="4" slack="0"/>
@@ -13039,7 +13039,7 @@ stg_291             (ret              ) [ 00000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="exitcond3_i_i8/2 "/>
+<opset="exitcond3_i_i6/2 "/>
 </bind>
 </comp>
 
@@ -13056,7 +13056,7 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13634" class="1004" name="i6_fu_13634">
+<comp id="13634" class="1004" name="i4_fu_13634">
 <pin_list>
 <pin id="13635" dir="0" index="0" bw="1" slack="0"/>
 <pin id="13636" dir="0" index="1" bw="4" slack="0"/>
@@ -13064,7 +13064,7 @@ stg_291             (ret              ) [ 00000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="i6/2 "/>
+<opset="i4/2 "/>
 </bind>
 </comp>
 
@@ -13139,14 +13139,14 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13674" class="1004" name="tmp_7_fu_13674">
+<comp id="13674" class="1004" name="tmp_5_fu_13674">
 <pin_list>
 <pin id="13675" dir="0" index="0" bw="8" slack="0"/>
 <pin id="13676" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_7/2 "/>
+<opset="tmp_5/2 "/>
 </bind>
 </comp>
 
@@ -23209,16 +23209,16 @@ stg_291             (ret              ) [ 00000]
 	State 2
 		exitcond_flatten : 1
 		indvar_flatten_next : 1
-		exitcond3_i_i8 : 1
+		exitcond3_i_i6 : 1
 		j_0_i_i_mid2 : 2
-		i6 : 1
+		i4 : 1
 		i_0_i_i_mid2 : 2
 		tmp_20 : 3
 		tmp_3_i_trn_cast : 3
 		tmp : 3
 		Tinv_addr2_cast : 4
 		Tinv_addr3 : 5
-		tmp_7 : 6
+		tmp_5 : 6
 		Tinv_addr : 7
 		B_cached_7_0 : 8
 		tmp_21 : 3
@@ -23366,7 +23366,7 @@ stg_291             (ret              ) [ 00000]
 | Operation|        Functional Unit       |    FF   |   LUT   |
 |----------|------------------------------|---------|---------|
 |          | indvar_flatten_next_fu_13614 |    0    |    7    |
-|    add   |          i6_fu_13634         |    0    |    4    |
+|    add   |          i4_fu_13634         |    0    |    4    |
 |          |      Tinv_addr3_fu_13668     |    0    |    7    |
 |          |          j_fu_13683          |    0    |    4    |
 |----------|------------------------------|---------|---------|
@@ -23374,14 +23374,14 @@ stg_291             (ret              ) [ 00000]
 |          |     i_0_i_i_mid2_fu_13640    |    0    |    4    |
 |----------|------------------------------|---------|---------|
 |   icmp   |   exitcond_flatten_fu_13608  |    0    |    3    |
-|          |    exitcond3_i_i8_fu_13620   |    0    |    2    |
+|          |    exitcond3_i_i6_fu_13620   |    0    |    2    |
 |----------|------------------------------|---------|---------|
 |   trunc  |        tmp_20_fu_13648       |    0    |    0    |
 |          |        tmp_21_fu_13679       |    0    |    0    |
 |----------|------------------------------|---------|---------|
 |          |   tmp_3_i_trn_cast_fu_13652  |    0    |    0    |
 |   zext   |   Tinv_addr2_cast_fu_13664   |    0    |    0    |
-|          |        tmp_7_fu_13674        |    0    |    0    |
+|          |        tmp_5_fu_13674        |    0    |    0    |
 |----------|------------------------------|---------|---------|
 |bitconcatenate|         tmp_fu_13656         |    0    |    0    |
 |----------|------------------------------|---------|---------|

@@ -8,6 +8,6 @@
 
 #define FUNCTION_IDCT	1
 
-void DCT(int *X,unsigned char function,int *Y);
+void DCT(int *X,int *Y);
 
 #endif

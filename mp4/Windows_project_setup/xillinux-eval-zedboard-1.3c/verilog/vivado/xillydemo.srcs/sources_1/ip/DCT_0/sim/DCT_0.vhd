@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: Matrix_transform:hls:DCT:1.0
--- IP Revision: 1510301122
+-- IP Revision: 1510301454
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -60,7 +60,6 @@ ENTITY DCT_0 IS
     X_dout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     X_empty_n : IN STD_LOGIC;
     X_read : OUT STD_LOGIC;
-    function_r : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     Y_din : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     Y_full_n : IN STD_LOGIC;
     Y_write : OUT STD_LOGIC
@@ -78,7 +77,6 @@ ARCHITECTURE DCT_0_arch OF DCT_0 IS
       X_dout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       X_empty_n : IN STD_LOGIC;
       X_read : OUT STD_LOGIC;
-      function_r : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       Y_din : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       Y_full_n : IN STD_LOGIC;
       Y_write : OUT STD_LOGIC
@@ -90,7 +88,6 @@ ARCHITECTURE DCT_0_arch OF DCT_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF X_dout: SIGNAL IS "xilinx.com:interface:acc_fifo_read:1.0 X RD_DATA";
   ATTRIBUTE X_INTERFACE_INFO OF X_empty_n: SIGNAL IS "xilinx.com:interface:acc_fifo_read:1.0 X EMPTY_N";
   ATTRIBUTE X_INTERFACE_INFO OF X_read: SIGNAL IS "xilinx.com:interface:acc_fifo_read:1.0 X RD_EN";
-  ATTRIBUTE X_INTERFACE_INFO OF function_r: SIGNAL IS "xilinx.com:signal:data:1.0 function_r DATA";
   ATTRIBUTE X_INTERFACE_INFO OF Y_din: SIGNAL IS "xilinx.com:interface:acc_fifo_write:1.0 Y WR_DATA";
   ATTRIBUTE X_INTERFACE_INFO OF Y_full_n: SIGNAL IS "xilinx.com:interface:acc_fifo_write:1.0 Y FULL_N";
   ATTRIBUTE X_INTERFACE_INFO OF Y_write: SIGNAL IS "xilinx.com:interface:acc_fifo_write:1.0 Y WR_EN";
@@ -102,7 +99,6 @@ BEGIN
       X_dout => X_dout,
       X_empty_n => X_empty_n,
       X_read => X_read,
-      function_r => function_r,
       Y_din => Y_din,
       Y_full_n => Y_full_n,
       Y_write => Y_write

@@ -4128,7 +4128,7 @@
 					<Obj>
 						<type>0</type>
 						<id>150</id>
-						<name>i</name>
+						<name>i2</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>17</lineNumber>

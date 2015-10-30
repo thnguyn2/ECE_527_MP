@@ -139,10 +139,10 @@ newFuncRoot:0  br label %0
 
 <node id="77" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.reset:2  %exitcond3_i_i8 = icmp eq i4 %j_0_i_i, -8
+.reset:2  %exitcond3_i_i6 = icmp eq i4 %j_0_i_i, -8
 
 ]]></node>
-<StgValue><ssdm name="exitcond3_i_i8"/></StgValue>
+<StgValue><ssdm name="exitcond3_i_i6"/></StgValue>
 </operation>
 
 <operation id="12" st_id="2" stage="1" lat="1">
@@ -155,7 +155,7 @@ newFuncRoot:0  br label %0
 
 <node id="78" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i8, i4 0, i4 %j_0_i_i
+.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 0, i4 %j_0_i_i
 
 ]]></node>
 <StgValue><ssdm name="j_0_i_i_mid2"/></StgValue>
@@ -171,10 +171,10 @@ newFuncRoot:0  br label %0
 
 <node id="79" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.reset:4  %i6 = add i4 1, %i_0_i_i
+.reset:4  %i4 = add i4 1, %i_0_i_i
 
 ]]></node>
-<StgValue><ssdm name="i6"/></StgValue>
+<StgValue><ssdm name="i4"/></StgValue>
 </operation>
 
 <operation id="14" st_id="2" stage="1" lat="1">
@@ -187,7 +187,7 @@ newFuncRoot:0  br label %0
 
 <node id="80" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i8, i4 %i6, i4 %i_0_i_i
+.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 %i4, i4 %i_0_i_i
 
 ]]></node>
 <StgValue><ssdm name="i_0_i_i_mid2"/></StgValue>
@@ -283,10 +283,10 @@ newFuncRoot:0  br label %0
 
 <node id="89" bw="64" op_0_bw="8">
 <![CDATA[
-.reset:14  %tmp_7 = zext i8 %Tinv_addr3 to i64
+.reset:14  %tmp_5 = zext i8 %Tinv_addr3 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="21" st_id="2" stage="1" lat="1">
@@ -299,7 +299,7 @@ newFuncRoot:0  br label %0
 
 <node id="90" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.reset:15  %Tinv_addr = getelementptr [64 x float]* @Tinv, i64 0, i64 %tmp_7
+.reset:15  %Tinv_addr = getelementptr [64 x float]* @Tinv, i64 0, i64 %tmp_5
 
 ]]></node>
 <StgValue><ssdm name="Tinv_addr"/></StgValue>

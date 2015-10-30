@@ -1410,10 +1410,10 @@ newFuncRoot:64  br label %0
 
 <node id="150" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.preheader:4  %i = add i4 1, %i_1
+.preheader:4  %i2 = add i4 1, %i_1
 
 ]]></node>
-<StgValue><ssdm name="i"/></StgValue>
+<StgValue><ssdm name="i2"/></StgValue>
 </operation>
 
 <operation id="123" st_id="2" stage="1" lat="1">
@@ -1426,7 +1426,7 @@ newFuncRoot:64  br label %0
 
 <node id="151" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1
+.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i2, i4 %i_1
 
 ]]></node>
 <StgValue><ssdm name="i_1_mid2"/></StgValue>
@@ -4148,13 +4148,13 @@ ifBlock:2  br label %0
 </dataflow>
 <dataflow id="618" from="j_1" to="j_1_mid2" fromId="116" toId="121">
 </dataflow>
-<dataflow id="620" from="stg_619" to="i" fromId="619" toId="122">
+<dataflow id="620" from="stg_619" to="i2" fromId="619" toId="122">
 </dataflow>
-<dataflow id="621" from="i_1" to="i" fromId="115" toId="122">
+<dataflow id="621" from="i_1" to="i2" fromId="115" toId="122">
 </dataflow>
 <dataflow id="622" from="exitcond" to="i_1_mid2" fromId="120" toId="123">
 </dataflow>
-<dataflow id="623" from="i" to="i_1_mid2" fromId="122" toId="123">
+<dataflow id="623" from="i2" to="i_1_mid2" fromId="122" toId="123">
 </dataflow>
 <dataflow id="624" from="i_1" to="i_1_mid2" fromId="115" toId="123">
 </dataflow>

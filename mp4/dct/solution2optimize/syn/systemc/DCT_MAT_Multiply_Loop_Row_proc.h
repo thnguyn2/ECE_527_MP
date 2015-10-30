@@ -481,7 +481,7 @@ struct DCT_MAT_Multiply_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<32> > grp_fu_803_p0;
     sc_signal< sc_lv<32> > grp_fu_803_p1;
     sc_signal< sc_lv<1> > exitcond_fu_819_p2;
-    sc_signal< sc_lv<4> > i_fu_833_p2;
+    sc_signal< sc_lv<4> > i2_fu_833_p2;
     sc_signal< sc_lv<32> > tmp_fu_861_p1;
     sc_signal< sc_lv<32> > tmp_fu_861_p2;
     sc_signal< sc_lv<32> > tmp_fu_861_p3;
@@ -777,9 +777,9 @@ struct DCT_MAT_Multiply_Loop_Row_proc : public sc_module {
     void thread_grp_fu_803_ce();
     void thread_grp_fu_803_p0();
     void thread_grp_fu_803_p1();
+    void thread_i2_fu_833_p2();
     void thread_i_1_mid2_fu_839_p3();
     void thread_i_1_phi_fu_723_p4();
-    void thread_i_fu_833_p2();
     void thread_indvar_flatten_next_fu_813_p2();
     void thread_j_1_mid2_fu_825_p3();
     void thread_j_fu_855_p2();

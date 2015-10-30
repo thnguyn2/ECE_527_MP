@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_Loop_3_proc1'
+================================================================
+* Date:           Fri Oct 30 14:23:12 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.46|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  131|  131|  131|  131|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  130|  130|         2|          -|          -|    65|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: stg_4 [1/1] 0.00ns
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+
+ST_1: p_read_115 [1/1] 0.00ns
+newFuncRoot:1  %p_read_115 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)
+
+ST_1: stg_6 [1/1] 1.57ns
+newFuncRoot:2  br label %0
+
+
+ <State 2>: 2.71ns
+ST_2: write_idx [1/1] 0.00ns
+:0  %write_idx = phi i7 [ 0, %newFuncRoot ], [ %write_idx_1, %_ifconv ]
+
+ST_2: empty [1/1] 0.00ns
+:1  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind
+
+ST_2: exitcond [1/1] 1.97ns
+:2  %exitcond = icmp eq i7 %write_idx, -63
+
+ST_2: write_idx_1 [1/1] 1.72ns
+:3  %write_idx_1 = add i7 %write_idx, 1
+
+ST_2: stg_11 [1/1] 0.00ns
+:4  br i1 %exitcond, label %.exitStub, label %_ifconv
+
+ST_2: tmp [1/1] 0.00ns
+_ifconv:0  %tmp = call i1 @_ssdm_op_BitSelect.i1.i7.i32(i7 %write_idx, i32 6)
+
+ST_2: tmp_34 [1/1] 0.00ns
+_ifconv:1  %tmp_34 = trunc i7 %write_idx to i6
+
+ST_2: tmp_8 [1/1] 0.00ns
+_ifconv:2  %tmp_8 = zext i6 %tmp_34 to i64
+
+ST_2: Ymat_addr [1/1] 0.00ns
+_ifconv:3  %Ymat_addr = getelementptr [64 x float]* %Ymat, i64 0, i64 %tmp_8
+
+ST_2: Ymat_load [2/2] 2.71ns
+_ifconv:4  %Ymat_load = load float* %Ymat_addr, align 4
+
+ST_2: stg_17 [1/1] 0.00ns
+.exitStub:0  ret void
+
+
+ <State 3>: 8.46ns
+ST_3: Ymat_load [1/2] 2.71ns
+_ifconv:4  %Ymat_load = load float* %Ymat_addr, align 4
+
+ST_3: tempval [1/1] 0.00ns
+_ifconv:5  %tempval = bitcast float %Ymat_load to i32
+
+ST_3: storemerge [1/1] 1.37ns
+_ifconv:6  %storemerge = select i1 %tmp, i32 %p_read_115, i32 %tempval
+
+ST_3: stg_21 [1/1] 4.38ns
+_ifconv:7  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %Y, i32 %storemerge)
+
+ST_3: stg_22 [1/1] 0.00ns
+_ifconv:8  br label %0
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Fri Oct 30 11:23:25 2015
-# Process ID: 10608
+# Start of session at: Fri Oct 30 14:55:48 2015
+# Process ID: 6552
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.runs/synth_1/DCT.vds
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -16,7 +16,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 277.863 ; gain = 99.578
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 278.559 ; gain = 99.543
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DCT' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v:12]
 INFO: [Synth 8-638] synthesizing module 'DCT_Xbuff' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xbuff.v:11]
@@ -41,7 +41,8 @@ INFO: [Synth 8-256] done synthesizing module 'DCT_temp_0_memcore_ram' (7#1) [E:/
 INFO: [Synth 8-256] done synthesizing module 'DCT_temp_0_memcore' (8#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_temp_0_memcore.v:58]
 INFO: [Synth 8-256] done synthesizing module 'DCT_temp_0' (9#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_temp_0.v:11]
 INFO: [Synth 8-638] synthesizing module 'DCT_Loop_1_proc' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:10]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:62]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:64]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:263]
 INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_1_proc' (10#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:10]
 INFO: [Synth 8-638] synthesizing module 'DCT_Loop_2_proc' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_2_proc.v:10]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_2_proc.v:68]
@@ -1031,7 +1032,7 @@ INFO: [Synth 8-256] done synthesizing module 'DCT_ap_fmul_2_max_dsp_32' (39#1) [
 INFO: [Synth 8-256] done synthesizing module 'DCT_fmul_32ns_32ns_32_4_max_dsp' (40#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fmul_32ns_32ns_32_4_max_dsp.v:11]
 INFO: [Synth 8-638] synthesizing module 'DCT_mux_8to1_sel3_32_1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_mux_8to1_sel3_32_1.v:11]
 INFO: [Synth 8-256] done synthesizing module 'DCT_mux_8to1_sel3_32_1' (41#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_mux_8to1_sel3_32_1.v:11]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v:2571]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v:2572]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v:2574]
 WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_ppstg_j_1_mid2_reg_1489_pp0_it44_reg' and it is trimmed from '4' to '3' bits. [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v:2036]
 WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_ppstg_j_1_mid2_reg_1489_pp0_it43_reg' and it is trimmed from '4' to '3' bits. [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v:2035]
@@ -1347,7 +1348,7 @@ WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logica
 INFO: [Synth 8-256] done synthesizing module 'DCT_MAT_Multiply_1_Loop_LoadRow_pr' (174#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_LoadRow_pr.v:10]
 INFO: [Synth 8-638] synthesizing module 'DCT_MAT_Multiply_1_Loop_Row_proc' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:10]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:331]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:2445]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:2446]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:2448]
 INFO: [Synth 8-4471] merging register 'A1_addr_reg_1782_reg[2:0]' into 'A_addr_reg_1777_reg[2:0]' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:2532]
 INFO: [Synth 8-4471] merging register 'A2_addr_reg_1787_reg[2:0]' into 'A_addr_reg_1777_reg[2:0]' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v:2533]
@@ -1663,21 +1664,17 @@ INFO: [Synth 8-638] synthesizing module 'FIFO_DCT_MAT_Multiply_1_B_cached_7_7_ch
 INFO: [Synth 8-256] done synthesizing module 'FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_shiftReg' (302#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel.v:11]
 INFO: [Synth 8-256] done synthesizing module 'FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel' (303#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel.v:45]
 INFO: [Synth 8-256] done synthesizing module 'DCT_MAT_Multiply_1' (304#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1.v:10]
-INFO: [Synth 8-638] synthesizing module 'DCT_Loop_3_proc' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc.v:10]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc.v:62]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc.v:247]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_3_proc' (305#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc.v:10]
-INFO: [Synth 8-256] done synthesizing module 'DCT' (306#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v:12]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[7]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[6]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[5]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[4]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[3]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[2]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[1]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[0]
+INFO: [Synth 8-638] synthesizing module 'DCT_Loop_3_proc1' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc1.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc1.v:64]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc1.v:249]
+INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_3_proc1' (305#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc1.v:10]
+INFO: [Synth 8-638] synthesizing module 'FIFO_DCT_opt_type_02_loc_loc_loc_channe' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_opt_type_02_loc_loc_loc_channe.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_DCT_opt_type_02_loc_loc_loc_channe_shiftReg' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_opt_type_02_loc_loc_loc_channe.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_DCT_opt_type_02_loc_loc_loc_channe_shiftReg' (306#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_opt_type_02_loc_loc_loc_channe.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_DCT_opt_type_02_loc_loc_loc_channe' (307#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_opt_type_02_loc_loc_loc_channe.v:45]
+INFO: [Synth 8-256] done synthesizing module 'DCT' (308#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 469.871 ; gain = 291.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:58 . Memory (MB): peak = 470.410 ; gain = 291.395
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1721,10 +1718,10 @@ INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[2]
 INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[1] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fadd_3_full_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
 INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[0] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fadd_3_full_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 469.871 ; gain = 291.586
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 470.410 ; gain = 291.395
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 260 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -1740,16 +1737,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 30 instances were transformed.
   FDE => FDRE: 30 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.628 . Memory (MB): peak = 842.734 ; gain = 9.160
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.653 . Memory (MB): peak = 844.027 ; gain = 9.039
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:12 ; elapsed = 00:01:31 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Constraint Validation : Time (s): cpu = 00:01:14 ; elapsed = 00:01:30 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:12 ; elapsed = 00:01:31 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:14 ; elapsed = 00:01:30 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1775,16 +1772,17 @@ Applied set_property DONT_TOUCH = true for DCT_MAT_Multiply_U0/DCT_MAT_Multiply_
 Applied set_property DONT_TOUCH = true for DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U19/DCT_ap_fmul_2_max_dsp_32_u. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U20/DCT_ap_fmul_2_max_dsp_32_u. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:32 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:31 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5546] ROM "exitcond1_fu_61_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_70_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_1_i_fu_87_p2" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3936] Found unconnected internal register 'p_addr1_reg_188_reg' and it is trimmed from '8' to '6' bits. [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_2_proc.v:171]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5544] ROM "exitcond3_fu_72_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "exitcond2_fu_122_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond4_fu_72_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond3_fu_122_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5544] ROM "exitcond3_i_i6_fu_13620_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond3_i_i4_fu_13620_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "exitcond_flatten_fu_13608_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
@@ -1954,14 +1952,14 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_ppstg_i_1_mi
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-5546] ROM "exitcond_flatten_fu_1265_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5546] ROM "exitcond_fu_61_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_71_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5562] The signal ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
 INFO: [Synth 8-5562] The signal ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (7 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
 INFO: [Synth 8-5562] The signal q0_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (6 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:23 ; elapsed = 00:01:45 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:44 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1990,10 +1988,11 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:24 ; elapsed = 00:01:45 . Memory (MB): peak = 842.734 ; gain = 664.449
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:25 ; elapsed = 00:01:44 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "tmp_1_i_fu_87_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exitcond_flatten_fu_13608_p2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fadd_3_full_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:420]
 INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
@@ -2073,22 +2072,12 @@ INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because i
 INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5562] The signal Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (6 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[7]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[6]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[5]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[4]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[3]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[2]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[1]
-WARNING: [Synth 8-3331] design DCT has unconnected port function_r[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:53 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:53 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:31 ; elapsed = 00:01:53 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Parallel Reinference  : Time (s): cpu = 00:01:33 ; elapsed = 00:01:53 . Memory (MB): peak = 844.027 ; gain = 665.012
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -2172,7 +2161,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_MAT_M
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/\DCT_fmul_32ns_32ns_32_4_max_dsp_U20/din0_buf1_reg[28] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/\DCT_fmul_32ns_32ns_32_4_max_dsp_U20/din0_buf1_reg[29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/\DCT_fmul_32ns_32ns_32_4_max_dsp_U20/din0_buf1_reg[30] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_Loop_2_proc_U0/\idx_cast_reg_165_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_Loop_2_proc_U0/\idx_cast_reg_165_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (DCT_Loop_2_proc_U0/\idx_cast_reg_165_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (DCT_Loop_2_proc_U0/\p_addr_cast_reg_170_reg[2] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/\A_addr_7_reg_2057_reg[0] )
@@ -2200,12 +2189,12 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (DCT_MAT_M
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/\A_addr_2_reg_1857_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/\A_addr_reg_1777_reg[2] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[0] ) is unused and will be removed from module DCT_Loop_2_proc.
+WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[1] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\p_addr_cast_reg_170_reg[6] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[5] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[4] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\p_addr_cast_reg_170_reg[2] ) is unused and will be removed from module DCT_Loop_2_proc.
-WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[1] ) is unused and will be removed from module DCT_Loop_2_proc.
+WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[0] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[2] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[3] ) is unused and will be removed from module DCT_Loop_2_proc.
 WARNING: [Synth 8-3332] Sequential element (\idx_cast_reg_165_reg[6] ) is unused and will be removed from module DCT_Loop_2_proc.
@@ -2305,16 +2294,16 @@ INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instan
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:02:12 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Area Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:02:12 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:48 ; elapsed = 00:02:12 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:50 ; elapsed = 00:02:12 . Memory (MB): peak = 844.027 ; gain = 665.012
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:48 ; elapsed = 00:02:12 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:50 ; elapsed = 00:02:12 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -2322,10 +2311,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:05 ; elapsed = 00:02:29 . Memory (MB): peak = 842.734 ; gain = 664.449
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:08 ; elapsed = 00:02:30 . Memory (MB): peak = 844.027 ; gain = 665.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:11 ; elapsed = 00:02:35 . Memory (MB): peak = 845.641 ; gain = 667.355
+Finished Timing Optimization : Time (s): cpu = 00:02:14 ; elapsed = 00:02:36 . Memory (MB): peak = 845.934 ; gain = 666.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2342,7 +2331,7 @@ INFO: [Synth 8-4480] The timing for the instance \Ymat_U/DCT_Xmat_memcore_U/DCT_
 INFO: [Synth 8-4480] The timing for the instance \DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:29 ; elapsed = 00:02:55 . Memory (MB): peak = 942.266 ; gain = 763.980
+Finished Technology Mapping : Time (s): cpu = 00:02:33 ; elapsed = 00:02:57 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2360,7 +2349,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:31 ; elapsed = 00:02:57 . Memory (MB): peak = 942.266 ; gain = 763.980
+Finished IO Insertion : Time (s): cpu = 00:02:35 ; elapsed = 00:02:59 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2373,7 +2362,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:32 ; elapsed = 00:02:57 . Memory (MB): peak = 942.266 ; gain = 763.980
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:35 ; elapsed = 00:02:59 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2385,13 +2374,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:36 ; elapsed = 00:03:02 . Memory (MB): peak = 942.266 ; gain = 763.980
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:40 ; elapsed = 00:03:04 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:02:36 ; elapsed = 00:03:02 . Memory (MB): peak = 942.266 ; gain = 763.980
+Start Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:03:04 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:36 ; elapsed = 00:03:02 . Memory (MB): peak = 942.266 ; gain = 763.980
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:03:04 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2413,33 +2402,33 @@ Report Cell Usage:
 |4     |DSP48E1_2 |    10|
 |5     |DSP48E1_3 |    10|
 |6     |DSP48E1_4 |    10|
-|7     |LUT1      |    64|
-|8     |LUT2      |  1651|
-|9     |LUT3      |  2357|
-|10    |LUT4      |   963|
-|11    |LUT5      |  1632|
-|12    |LUT6      |  3012|
+|7     |LUT1      |    65|
+|8     |LUT2      |  1622|
+|9     |LUT3      |  2390|
+|10    |LUT4      |   967|
+|11    |LUT5      |  1635|
+|12    |LUT6      |  3021|
 |13    |MUXCY     |   630|
 |14    |MUXF7     |   256|
 |15    |RAM16X1D  |   512|
 |16    |RAMB18E1  |     1|
 |17    |RAMB36E1  |     3|
-|18    |SRL16E    |  4319|
+|18    |SRL16E    |  4351|
 |19    |SRLC32E   |     2|
 |20    |XORCY     |   160|
 |21    |FDE       |    30|
-|22    |FDRE      | 10204|
-|23    |FDSE      |   423|
+|22    |FDRE      | 10240|
+|23    |FDSE      |   426|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:37 ; elapsed = 00:03:03 . Memory (MB): peak = 942.266 ; gain = 763.980
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:41 ; elapsed = 00:03:05 . Memory (MB): peak = 942.801 ; gain = 763.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 176 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:29 ; elapsed = 00:02:17 . Memory (MB): peak = 942.266 ; gain = 365.688
-Synthesis Optimization Complete : Time (s): cpu = 00:02:38 ; elapsed = 00:03:03 . Memory (MB): peak = 942.266 ; gain = 763.980
+Synthesis finished with 0 errors, 0 critical warnings and 168 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:32 ; elapsed = 00:02:21 . Memory (MB): peak = 942.801 ; gain = 365.617
+Synthesis Optimization Complete : Time (s): cpu = 00:02:42 ; elapsed = 00:03:05 . Memory (MB): peak = 942.801 ; gain = 763.785
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 816 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -2450,9 +2439,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC32E => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1901 Infos, 292 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1905 Infos, 277 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:48 ; elapsed = 00:03:13 . Memory (MB): peak = 942.266 ; gain = 738.551
-write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 942.266 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.431 . Memory (MB): peak = 942.266 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 11:26:46 2015...
+synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:03:15 . Memory (MB): peak = 942.801 ; gain = 739.234
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 942.801 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.446 . Memory (MB): peak = 942.801 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 14:59:12 2015...

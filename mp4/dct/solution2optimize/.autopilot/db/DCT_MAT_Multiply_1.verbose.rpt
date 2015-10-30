@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1'
 ================================================================
-* Date:           Fri Oct 30 11:21:17 2015
+* Date:           Fri Oct 30 14:23:21 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -768,16 +768,16 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ A]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a9210; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a92a0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a9330; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a93c0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a9450; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a94e0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a9570; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa5a9600; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ C]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xa5a9690; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ Tinv]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; mode=0xa5a9720; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ A]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e4d0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e560; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e5f0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e680; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e710; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e7a0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e830; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xa89e8c0; pingpong=1; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ C]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xa89e950; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ Tinv]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; mode=0xa89e9e0; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------

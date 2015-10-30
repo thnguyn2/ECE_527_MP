@@ -439,7 +439,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<7> > indvar_flatten_phi_fu_1174_p4;
     sc_signal< sc_lv<4> > i_1_phi_fu_1185_p4;
     sc_signal< sc_lv<4> > j_1_phi_fu_1197_p4;
-    sc_signal< sc_lv<64> > tmp_10_fu_1452_p1;
+    sc_signal< sc_lv<64> > tmp_7_fu_1452_p1;
     sc_signal< sc_lv<32> > grp_fu_1206_p0;
     sc_signal< sc_lv<32> > grp_fu_1206_p1;
     sc_signal< sc_lv<32> > grp_fu_1211_p0;
@@ -467,7 +467,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<32> > grp_fu_1244_p8;
     sc_signal< sc_lv<3> > grp_fu_1244_p9;
     sc_signal< sc_lv<1> > exitcond_fu_1277_p2;
-    sc_signal< sc_lv<4> > i_fu_1291_p2;
+    sc_signal< sc_lv<4> > i2_fu_1291_p2;
     sc_signal< sc_lv<32> > tmp_s_fu_1315_p1;
     sc_signal< sc_lv<32> > tmp_s_fu_1315_p2;
     sc_signal< sc_lv<32> > tmp_s_fu_1315_p3;
@@ -540,7 +540,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<32> > tmp_31_fu_1418_p7;
     sc_signal< sc_lv<32> > tmp_31_fu_1418_p8;
     sc_signal< sc_lv<3> > tmp_31_fu_1418_p9;
-    sc_signal< sc_lv<7> > tmp_8_fu_1435_p3;
+    sc_signal< sc_lv<7> > tmp_6_fu_1435_p3;
     sc_signal< sc_lv<8> > p_addr_cast_fu_1442_p1;
     sc_signal< sc_lv<8> > tmp_6_trn_cast_fu_1432_p1;
     sc_signal< sc_lv<8> > p_addr1_fu_1446_p2;
@@ -732,9 +732,9 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     void thread_grp_fu_1244_p7();
     void thread_grp_fu_1244_p8();
     void thread_grp_fu_1244_p9();
+    void thread_i2_fu_1291_p2();
     void thread_i_1_mid2_fu_1297_p3();
     void thread_i_1_phi_fu_1185_p4();
-    void thread_i_fu_1291_p2();
     void thread_indvar_flatten_next_fu_1271_p2();
     void thread_indvar_flatten_phi_fu_1174_p4();
     void thread_j_1_mid2_fu_1283_p3();
@@ -742,7 +742,6 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     void thread_j_fu_1399_p2();
     void thread_p_addr1_fu_1446_p2();
     void thread_p_addr_cast_fu_1442_p1();
-    void thread_tmp_10_fu_1452_p1();
     void thread_tmp_19_fu_1329_p1();
     void thread_tmp_19_fu_1329_p2();
     void thread_tmp_19_fu_1329_p3();
@@ -808,8 +807,9 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     void thread_tmp_31_fu_1418_p9();
     void thread_tmp_32_fu_1305_p1();
     void thread_tmp_33_fu_1311_p1();
+    void thread_tmp_6_fu_1435_p3();
     void thread_tmp_6_trn_cast_fu_1432_p1();
-    void thread_tmp_8_fu_1435_p3();
+    void thread_tmp_7_fu_1452_p1();
     void thread_tmp_s_fu_1315_p1();
     void thread_tmp_s_fu_1315_p2();
     void thread_tmp_s_fu_1315_p3();

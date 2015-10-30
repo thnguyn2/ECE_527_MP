@@ -3,55 +3,55 @@
 
 <trans_list>
 
-<trans id="41" from="1" to="2">
+<trans id="40" from="1" to="2">
 <condition id="0">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="42" from="2" to="3">
+<trans id="41" from="2" to="3">
 <condition id="1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="43" from="3" to="4">
+<trans id="42" from="3" to="4">
 <condition id="2">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="44" from="4" to="5">
+<trans id="43" from="4" to="5">
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="45" from="5" to="6">
+<trans id="44" from="5" to="6">
 <condition id="4">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="46" from="6" to="7">
+<trans id="45" from="6" to="7">
 <condition id="5">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="47" from="7" to="8">
+<trans id="46" from="7" to="8">
 <condition id="6">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="48" from="8" to="9">
+<trans id="47" from="8" to="9">
 <condition id="7">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="49" from="9" to="10">
+<trans id="48" from="9" to="10">
 <condition id="8">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -71,9 +71,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="10" bw="32" op_0_bw="64">
+<node id="8" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:5  %Xbuff = alloca [65 x float], align 16
+codeRepl:4  %Xbuff = alloca [66 x float], align 16
 
 ]]></node>
 <StgValue><ssdm name="Xbuff"/></StgValue>
@@ -86,9 +86,9 @@ codeRepl:5  %Xbuff = alloca [65 x float], align 16
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="11" bw="32" op_0_bw="64">
+<node id="9" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:6  %Xmat = alloca [64 x float], align 4
+codeRepl:5  %Xmat = alloca [64 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="Xmat"/></StgValue>
@@ -101,9 +101,9 @@ codeRepl:6  %Xmat = alloca [64 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="12" bw="32" op_0_bw="64">
+<node id="10" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:7  %temp_0 = alloca [8 x float], align 4
+codeRepl:6  %temp_0 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_0"/></StgValue>
@@ -116,9 +116,9 @@ codeRepl:7  %temp_0 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="13" bw="32" op_0_bw="64">
+<node id="11" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:8  %temp_1 = alloca [8 x float], align 4
+codeRepl:7  %temp_1 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_1"/></StgValue>
@@ -131,9 +131,9 @@ codeRepl:8  %temp_1 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="14" bw="32" op_0_bw="64">
+<node id="12" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:9  %temp_2 = alloca [8 x float], align 4
+codeRepl:8  %temp_2 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_2"/></StgValue>
@@ -146,9 +146,9 @@ codeRepl:9  %temp_2 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="15" bw="32" op_0_bw="64">
+<node id="13" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:10  %temp_3 = alloca [8 x float], align 4
+codeRepl:9  %temp_3 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_3"/></StgValue>
@@ -161,9 +161,9 @@ codeRepl:10  %temp_3 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="16" bw="32" op_0_bw="64">
+<node id="14" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:11  %temp_4 = alloca [8 x float], align 4
+codeRepl:10  %temp_4 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_4"/></StgValue>
@@ -176,9 +176,9 @@ codeRepl:11  %temp_4 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="17" bw="32" op_0_bw="64">
+<node id="15" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:12  %temp_5 = alloca [8 x float], align 4
+codeRepl:11  %temp_5 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_5"/></StgValue>
@@ -191,9 +191,9 @@ codeRepl:12  %temp_5 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="18" bw="32" op_0_bw="64">
+<node id="16" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:13  %temp_6 = alloca [8 x float], align 4
+codeRepl:12  %temp_6 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_6"/></StgValue>
@@ -206,9 +206,9 @@ codeRepl:13  %temp_6 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="19" bw="32" op_0_bw="64">
+<node id="17" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:14  %temp_7 = alloca [8 x float], align 4
+codeRepl:13  %temp_7 = alloca [8 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="temp_7"/></StgValue>
@@ -221,9 +221,9 @@ codeRepl:14  %temp_7 = alloca [8 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="20" bw="32" op_0_bw="64">
+<node id="18" bw="32" op_0_bw="64">
 <![CDATA[
-codeRepl:15  %Ymat = alloca [64 x float], align 4
+codeRepl:14  %Ymat = alloca [64 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="Ymat"/></StgValue>
@@ -236,12 +236,12 @@ codeRepl:15  %Ymat = alloca [64 x float], align 4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="22" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:19  call fastcc void @DCT_Loop_1_proc(i32* %X, [65 x float]* %Xbuff)
+codeRepl:18  %opt_type_02_loc_loc_loc_channe = call fastcc i32 @DCT_Loop_1_proc(i32* %X, [66 x float]* %Xbuff) nounwind
 
 ]]></node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="opt_type_02_loc_loc_loc_channe"/></StgValue>
 </operation>
 </state>
 
@@ -254,12 +254,12 @@ codeRepl:19  call fastcc void @DCT_Loop_1_proc(i32* %X, [65 x float]* %Xbuff)
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="22" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:19  call fastcc void @DCT_Loop_1_proc(i32* %X, [65 x float]* %Xbuff)
+codeRepl:18  %opt_type_02_loc_loc_loc_channe = call fastcc i32 @DCT_Loop_1_proc(i32* %X, [66 x float]* %Xbuff) nounwind
 
 ]]></node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="opt_type_02_loc_loc_loc_channe"/></StgValue>
 </operation>
 </state>
 
@@ -272,9 +272,9 @@ codeRepl:19  call fastcc void @DCT_Loop_1_proc(i32* %X, [65 x float]* %Xbuff)
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="25" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:20  call fastcc void @DCT_Loop_2_proc([65 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
+codeRepl:19  call fastcc void @DCT_Loop_2_proc([66 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -290,9 +290,9 @@ codeRepl:20  call fastcc void @DCT_Loop_2_proc([65 x float]* nocapture %Xbuff, [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="25" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:20  call fastcc void @DCT_Loop_2_proc([65 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
+codeRepl:19  call fastcc void @DCT_Loop_2_proc([66 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -308,9 +308,9 @@ codeRepl:20  call fastcc void @DCT_Loop_2_proc([65 x float]* nocapture %Xbuff, [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
+<node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
 <![CDATA[
-codeRepl:21  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7) nounwind
+codeRepl:20  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -326,9 +326,9 @@ codeRepl:21  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
+<node id="24" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
 <![CDATA[
-codeRepl:21  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7) nounwind
+codeRepl:20  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -344,9 +344,9 @@ codeRepl:21  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="27" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
+<node id="25" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
 <![CDATA[
-codeRepl:22  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [64 x float]* nocapture %Ymat) nounwind
+codeRepl:21  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [64 x float]* nocapture %Ymat) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -362,9 +362,9 @@ codeRepl:22  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="27" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
+<node id="25" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
 <![CDATA[
-codeRepl:22  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [64 x float]* nocapture %Ymat) nounwind
+codeRepl:21  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [64 x float]* nocapture %Ymat) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -380,9 +380,9 @@ codeRepl:22  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-codeRepl:23  call fastcc void @DCT_Loop_3_proc(i32* %Y, [64 x float]* nocapture %Ymat) nounwind
+codeRepl:22  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_loc_loc_channe, [64 x float]* nocapture %Ymat) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -398,7 +398,7 @@ codeRepl:23  call fastcc void @DCT_Loop_3_proc(i32* %Y, [64 x float]* nocapture 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
+<node id="4" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
 <![CDATA[
 codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str8) nounwind
 
@@ -413,7 +413,7 @@ codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="6" bw="0" op_0_bw="0" op_1_bw="32">
+<node id="5" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
 codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i32* %X) nounwind, !map !0
 
@@ -428,9 +428,9 @@ codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i32* %X) nounwind, !map !0
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="7" bw="0" op_0_bw="0" op_1_bw="8">
+<node id="6" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !map !6
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !6
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -443,9 +443,9 @@ codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i8 %function_r) nounwind, !ma
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="8" bw="0" op_0_bw="0" op_1_bw="32">
+<node id="7" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !12
+codeRepl:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -458,9 +458,9 @@ codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !12
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="9" bw="0" op_0_bw="0" op_1_bw="8">
+<node id="19" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-codeRepl:4  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
+codeRepl:15  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -473,9 +473,9 @@ codeRepl:4  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
+<node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -488,54 +488,39 @@ codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="22" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
+<node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="38" st_id="10" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
-<![CDATA[
-codeRepl:18  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
-
-]]></node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="39" st_id="10" stage="1" lat="2">
+<operation id="38" st_id="10" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-codeRepl:23  call fastcc void @DCT_Loop_3_proc(i32* %Y, [64 x float]* nocapture %Ymat) nounwind
+codeRepl:22  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_loc_loc_channe, [64 x float]* nocapture %Ymat) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="40" st_id="10" stage="1" lat="1">
+<operation id="39" st_id="10" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="29" bw="0">
+<node id="27" bw="0">
 <![CDATA[
-codeRepl:24  ret void
+codeRepl:23  ret void
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

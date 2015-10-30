@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'
 ================================================================
-* Date:           Fri Oct 30 11:21:05 2015
+* Date:           Fri Oct 30 14:23:10 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -160,17 +160,17 @@ ST_2: exitcond_flatten [1/1] 1.97ns
 ST_2: indvar_flatten_next [1/1] 1.72ns
 :68  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
-ST_2: exitcond3_i_i8 [1/1] 1.88ns
-.reset:2  %exitcond3_i_i8 = icmp eq i4 %j_0_i_i, -8
+ST_2: exitcond3_i_i6 [1/1] 1.88ns
+.reset:2  %exitcond3_i_i6 = icmp eq i4 %j_0_i_i, -8
 
 ST_2: j_0_i_i_mid2 [1/1] 1.37ns
-.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i8, i4 0, i4 %j_0_i_i
+.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 0, i4 %j_0_i_i
 
-ST_2: i6 [1/1] 0.80ns
-.reset:4  %i6 = add i4 1, %i_0_i_i
+ST_2: i4 [1/1] 0.80ns
+.reset:4  %i4 = add i4 1, %i_0_i_i
 
 ST_2: i_0_i_i_mid2 [1/1] 1.37ns
-.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i8, i4 %i6, i4 %i_0_i_i
+.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 %i4, i4 %i_0_i_i
 
 ST_2: tmp_20 [1/1] 0.00ns
 .reset:6  %tmp_20 = trunc i4 %i_0_i_i_mid2 to i3
@@ -187,11 +187,11 @@ ST_2: Tinv_addr2_cast [1/1] 0.00ns
 ST_2: Tinv_addr3 [1/1] 1.72ns
 .reset:13  %Tinv_addr3 = add i8 %Tinv_addr2_cast, %tmp_3_i_trn_cast
 
-ST_2: tmp_7 [1/1] 0.00ns
-.reset:14  %tmp_7 = zext i8 %Tinv_addr3 to i64
+ST_2: tmp_5 [1/1] 0.00ns
+.reset:14  %tmp_5 = zext i8 %Tinv_addr3 to i64
 
 ST_2: Tinv_addr [1/1] 0.00ns
-.reset:15  %Tinv_addr = getelementptr [64 x float]* @Tinv, i64 0, i64 %tmp_7
+.reset:15  %Tinv_addr = getelementptr [64 x float]* @Tinv, i64 0, i64 %tmp_5
 
 ST_2: B_cached_7_0 [2/2] 2.39ns
 .reset:16  %B_cached_7_0 = load float* %Tinv_addr, align 4

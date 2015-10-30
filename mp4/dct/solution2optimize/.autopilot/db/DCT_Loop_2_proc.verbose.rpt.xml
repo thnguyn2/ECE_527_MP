@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_Loop_2_proc'" level="0">
-<item name = "Date">Fri Oct 30 11:21:08 2015
+<item name = "Date">Fri Oct 30 14:23:13 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -77,11 +77,11 @@
 <column name="colidx_1_fu_128_p2">+, 0, 0, 4, 4, 1</column>
 <column name="p_addr1_fu_148_p2">+, 0, 0, 8, 8, 8</column>
 <column name="rowidx_1_fu_78_p2">+, 0, 0, 4, 4, 1</column>
-<column name="tmp_4_fu_134_p2">+, 0, 0, 7, 7, 7</column>
-<column name="exitcond2_fu_122_p2">icmp, 0, 0, 2, 4, 5</column>
-<column name="exitcond3_fu_72_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="tmp_5_fu_134_p2">+, 0, 0, 7, 7, 7</column>
+<column name="exitcond3_fu_122_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="exitcond4_fu_72_p2">icmp, 0, 0, 2, 4, 5</column>
 <column name="ap_sig_bdd_82">or, 0, 0, 1, 1, 1</column>
-<column name="idx_fu_96_p2">or, 0, 0, 8, 6, 1</column>
+<column name="idx_fu_96_p2">or, 0, 0, 8, 6, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

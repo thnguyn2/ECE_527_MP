@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_Loop_Row_proc'
 ================================================================
-* Date:           Fri Oct 30 11:20:56 2015
+* Date:           Fri Oct 30 14:23:01 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -449,11 +449,11 @@ ST_2: exitcond [1/1] 1.88ns
 ST_2: j_1_mid2 [1/1] 1.37ns
 .preheader:3  %j_1_mid2 = select i1 %exitcond, i4 0, i4 %j_1
 
-ST_2: i [1/1] 0.80ns
-.preheader:4  %i = add i4 1, %i_1
+ST_2: i2 [1/1] 0.80ns
+.preheader:4  %i2 = add i4 1, %i_1
 
 ST_2: i_1_mid2 [1/1] 1.37ns
-.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1
+.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i2, i4 %i_1
 
 ST_2: tmp_18 [1/1] 0.00ns
 .preheader:6  %tmp_18 = trunc i4 %i_1_mid2 to i3
@@ -944,78 +944,78 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69b940; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69b9d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69ba60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read3]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69baf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read4]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bb80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read5]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bc10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read6]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bca0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read7]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bd30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read8]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bdc0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read9]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69be50; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read10]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bee0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read11]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69bf70; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read12]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c000; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read13]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c090; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read14]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c120; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read15]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c1b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read16]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c240; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read17]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c2d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read18]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c360; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read19]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c3f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read20]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c480; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read21]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c510; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read22]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c5a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read23]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c630; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read24]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c6c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read25]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c750; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read26]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c7e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read27]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c870; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read28]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c900; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read29]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69c990; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read30]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69ca20; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read31]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cab0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read32]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cb40; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read33]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cbd0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read34]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cc60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read35]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69ccf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read36]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cd80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read37]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69ce10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read38]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cea0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read39]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cf30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read40]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69cfc0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read41]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d050; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read42]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d0e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read43]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d1f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read44]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d280; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read45]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d310; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read46]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d3a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read47]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d430; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read48]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d4c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read49]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d550; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read50]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d5e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read51]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d670; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read52]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d700; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read53]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d790; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read54]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d820; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read55]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d8b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read56]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d940; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read57]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69d9d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read58]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69da60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read59]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69daf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read60]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69db80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read61]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69dc10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read62]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69dca0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read63]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xd69dd30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ C_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69ddc0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69de50; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69dee0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69df70; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69e000; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69e090; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69e120; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69e1b0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229380; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229410; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x92294a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read3]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229530; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read4]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x92295c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read5]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229650; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read6]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x92296e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read7]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229770; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read8]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229800; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read9]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229890; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read10]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229920; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read11]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x92299b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read12]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229a40; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read13]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229ad0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read14]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229b60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read15]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229bf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read16]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229c80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read17]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229d10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read18]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229da0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read19]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229e30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read20]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229ec0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read21]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229f50; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read22]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9229fe0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read23]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a070; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read24]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a100; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read25]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a190; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read26]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a220; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read27]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a2b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read28]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a340; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read29]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a3d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read30]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a460; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read31]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a4f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read32]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a580; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read33]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a610; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read34]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a6a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read35]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a730; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read36]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a7c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read37]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a850; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read38]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a8e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read39]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922a970; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read40]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x922aa00; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read41]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe06ff60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read42]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe06fff0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read43]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070080; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read44]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070110; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read45]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe0701a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read46]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070230; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read47]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe0702c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read48]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070350; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read49]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe0703e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read50]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070470; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read51]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070500; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read52]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070590; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read53]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070620; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read54]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe0706b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read55]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070740; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read56]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe0707d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read57]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070860; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read58]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe0708f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read59]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070980; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read60]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070a10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read61]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070aa0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read62]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070b30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read63]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xe070bc0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ C_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070c50; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070ce0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070d70; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070e00; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070e90; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070f20; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe070fb0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xe071040; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -1095,7 +1095,7 @@ indvar_flatten_next (add              ) [ 01111111111111111111111111111111111111
 stg_119             (br               ) [ 0000000000000000000000000000000000000000000000000]
 exitcond            (icmp             ) [ 0000000000000000000000000000000000000000000000000]
 j_1_mid2            (select           ) [ 0011111111111111111111111111111111111111111111110]
-i                   (add              ) [ 0000000000000000000000000000000000000000000000000]
+i2                  (add              ) [ 0000000000000000000000000000000000000000000000000]
 i_1_mid2            (select           ) [ 0111111111111111111111111111111111111111111111110]
 tmp_18              (trunc            ) [ 0011111111111111111111111111111111111111111111110]
 tmp_19              (trunc            ) [ 0011111111111111111111111111111111111110000000000]
@@ -3486,7 +3486,7 @@ stg_248             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="833" class="1004" name="i_fu_833">
+<comp id="833" class="1004" name="i2_fu_833">
 <pin_list>
 <pin id="834" dir="0" index="0" bw="1" slack="0"/>
 <pin id="835" dir="0" index="1" bw="4" slack="0"/>
@@ -3494,7 +3494,7 @@ stg_248             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="i/2 "/>
+<opset="i2/2 "/>
 </bind>
 </comp>
 
@@ -5938,7 +5938,7 @@ stg_248             (ret              ) [ 00000000000000000000000000000000000000
 		stg_119 : 2
 		exitcond : 1
 		j_1_mid2 : 2
-		i : 1
+		i2 : 1
 		i_1_mid2 : 2
 		tmp_18 : 3
 		tmp_19 : 3
@@ -6060,7 +6060,7 @@ stg_248             (ret              ) [ 00000000000000000000000000000000000000
 |          |       tmp_17_fu_1135       |    0    |    32   |    64   |
 |----------|----------------------------|---------|---------|---------|
 |          | indvar_flatten_next_fu_813 |    0    |    0    |    7    |
-|    add   |          i_fu_833          |    0    |    0    |    4    |
+|    add   |          i2_fu_833         |    0    |    0    |    4    |
 |          |          j_fu_855          |    0    |    0    |    4    |
 |----------|----------------------------|---------|---------|---------|
 |  select  |       j_1_mid2_fu_825      |    0    |    0    |    4    |

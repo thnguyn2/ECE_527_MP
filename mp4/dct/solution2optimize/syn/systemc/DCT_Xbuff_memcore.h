@@ -22,7 +22,7 @@ using namespace sc_dt;
 struct DCT_Xbuff_memcore_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 32;
-  static const unsigned AddressRange = 130;
+  static const unsigned AddressRange = 132;
   static const unsigned AddressWidth = 8;
 
 //latency = 1
@@ -112,7 +112,7 @@ SC_MODULE(DCT_Xbuff_memcore) {
 
 
 static const unsigned DataWidth = 32;
-static const unsigned AddressRange = 130;
+static const unsigned AddressRange = 132;
 static const unsigned AddressWidth = 8;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;

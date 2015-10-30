@@ -15,21 +15,21 @@
 #include "DCT_Loop_2_proc.h"
 #include "DCT_MAT_Multiply.h"
 #include "DCT_MAT_Multiply_1.h"
-#include "DCT_Loop_3_proc.h"
+#include "DCT_Loop_3_proc1.h"
 #include "DCT_Xbuff.h"
 #include "DCT_Xmat.h"
 #include "DCT_temp_0.h"
+#include "FIFO_DCT_opt_type_02_loc_loc_loc_channe.h"
 
 namespace ap_rtl {
 
 struct DCT : public sc_module {
-    // Port declarations 9
+    // Port declarations 8
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_lv<32> > X_dout;
     sc_in< sc_logic > X_empty_n;
     sc_out< sc_logic > X_read;
-    sc_in< sc_lv<8> > function_r;
     sc_out< sc_lv<32> > Y_din;
     sc_in< sc_logic > Y_full_n;
     sc_out< sc_logic > Y_write;
@@ -60,7 +60,8 @@ struct DCT : public sc_module {
     DCT_Loop_2_proc* DCT_Loop_2_proc_U0;
     DCT_MAT_Multiply* DCT_MAT_Multiply_U0;
     DCT_MAT_Multiply_1* DCT_MAT_Multiply_1_U0;
-    DCT_Loop_3_proc* DCT_Loop_3_proc_U0;
+    DCT_Loop_3_proc1* DCT_Loop_3_proc1_U0;
+    FIFO_DCT_opt_type_02_loc_loc_loc_channe* opt_type_02_loc_loc_loc_channe_U;
     sc_signal< sc_lv<7> > Xbuff_i_address0;
     sc_signal< sc_logic > Xbuff_i_ce0;
     sc_signal< sc_logic > Xbuff_i_we0;
@@ -242,8 +243,15 @@ struct DCT : public sc_module {
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_Xbuff_ce0;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_Xbuff_we0;
     sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_Xbuff_d0;
+    sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_ap_return;
     sc_signal< sc_logic > ap_chn_write_DCT_Loop_1_proc_U0_Xbuff;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_Xbuff_pipo_status;
+    sc_signal< sc_logic > ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status;
+    sc_signal< sc_logic > ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status;
+    sc_signal< sc_logic > ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe;
+    sc_signal< sc_logic > opt_type_02_loc_loc_loc_channe_full_n;
+    sc_signal< sc_logic > ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n;
+    sc_signal< sc_logic > ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n;
     sc_signal< sc_logic > DCT_Loop_2_proc_U0_ap_start;
     sc_signal< sc_logic > DCT_Loop_2_proc_U0_ap_done;
     sc_signal< sc_logic > DCT_Loop_2_proc_U0_ap_continue;
@@ -509,17 +517,18 @@ struct DCT : public sc_module {
     sc_signal< sc_logic > DCT_MAT_Multiply_1_U0_ap_idle;
     sc_signal< sc_logic > DCT_MAT_Multiply_1_U0_ap_ready;
     sc_signal< sc_logic > ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_start;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_done;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_continue;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_idle;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_ap_ready;
-    sc_signal< sc_lv<32> > DCT_Loop_3_proc_U0_Y_din;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_Y_full_n;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_Y_write;
-    sc_signal< sc_lv<6> > DCT_Loop_3_proc_U0_Ymat_address0;
-    sc_signal< sc_logic > DCT_Loop_3_proc_U0_Ymat_ce0;
-    sc_signal< sc_lv<32> > DCT_Loop_3_proc_U0_Ymat_q0;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_ap_start;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_ap_done;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_ap_continue;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_ap_idle;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_ap_ready;
+    sc_signal< sc_lv<32> > DCT_Loop_3_proc1_U0_Y_din;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_Y_full_n;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_Y_write;
+    sc_signal< sc_lv<32> > DCT_Loop_3_proc1_U0_p_read;
+    sc_signal< sc_lv<6> > DCT_Loop_3_proc1_U0_Ymat_address0;
+    sc_signal< sc_logic > DCT_Loop_3_proc1_U0_Ymat_ce0;
+    sc_signal< sc_lv<32> > DCT_Loop_3_proc1_U0_Ymat_q0;
     sc_signal< sc_logic > ap_sig_hs_continue;
     sc_signal< sc_logic > Xbuff_i_full_n;
     sc_signal< sc_logic > Xbuff_i_write;
@@ -581,6 +590,12 @@ struct DCT : public sc_module {
     sc_signal< sc_logic > Ymat_i_write;
     sc_signal< sc_logic > Ymat_t_empty_n;
     sc_signal< sc_logic > Ymat_t_read;
+    sc_signal< sc_logic > opt_type_02_loc_loc_loc_channe_U_ap_dummy_ce;
+    sc_signal< sc_lv<32> > opt_type_02_loc_loc_loc_channe_din;
+    sc_signal< sc_logic > opt_type_02_loc_loc_loc_channe_write;
+    sc_signal< sc_lv<32> > opt_type_02_loc_loc_loc_channe_dout;
+    sc_signal< sc_logic > opt_type_02_loc_loc_loc_channe_empty_n;
+    sc_signal< sc_logic > opt_type_02_loc_loc_loc_channe_read;
     sc_signal< sc_logic > ap_CS;
     sc_signal< sc_logic > ap_sig_hs_done;
     static const sc_logic ap_const_logic_1;
@@ -600,10 +615,11 @@ struct DCT : public sc_module {
     void thread_DCT_Loop_2_proc_U0_Xmat_pipo_status();
     void thread_DCT_Loop_2_proc_U0_ap_continue();
     void thread_DCT_Loop_2_proc_U0_ap_start();
-    void thread_DCT_Loop_3_proc_U0_Y_full_n();
-    void thread_DCT_Loop_3_proc_U0_Ymat_q0();
-    void thread_DCT_Loop_3_proc_U0_ap_continue();
-    void thread_DCT_Loop_3_proc_U0_ap_start();
+    void thread_DCT_Loop_3_proc1_U0_Y_full_n();
+    void thread_DCT_Loop_3_proc1_U0_Ymat_q0();
+    void thread_DCT_Loop_3_proc1_U0_ap_continue();
+    void thread_DCT_Loop_3_proc1_U0_ap_start();
+    void thread_DCT_Loop_3_proc1_U0_p_read();
     void thread_DCT_MAT_Multiply_1_U0_A1_pipo_status();
     void thread_DCT_MAT_Multiply_1_U0_A1_q0();
     void thread_DCT_MAT_Multiply_1_U0_A1_q1();
@@ -699,6 +715,7 @@ struct DCT : public sc_module {
     void thread_Ymat_t_read();
     void thread_Ymat_t_we0();
     void thread_ap_chn_write_DCT_Loop_1_proc_U0_Xbuff();
+    void thread_ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe();
     void thread_ap_chn_write_DCT_Loop_2_proc_U0_Xmat();
     void thread_ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat();
     void thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_0();
@@ -711,6 +728,7 @@ struct DCT : public sc_module {
     void thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_7();
     void thread_ap_sig_hs_continue();
     void thread_ap_sig_hs_done();
+    void thread_ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status();
     void thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status();
     void thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status();
     void thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status();
@@ -719,6 +737,11 @@ struct DCT : public sc_module {
     void thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status();
     void thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status();
     void thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status();
+    void thread_ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n();
+    void thread_opt_type_02_loc_loc_loc_channe_U_ap_dummy_ce();
+    void thread_opt_type_02_loc_loc_loc_channe_din();
+    void thread_opt_type_02_loc_loc_loc_channe_read();
+    void thread_opt_type_02_loc_loc_loc_channe_write();
     void thread_temp_0_U_ap_dummy_ce();
     void thread_temp_0_i_address0();
     void thread_temp_0_i_address1();

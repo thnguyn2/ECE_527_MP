@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_Loop_LoadRow_proc'
 ================================================================
-* Date:           Fri Oct 30 11:21:11 2015
+* Date:           Fri Oct 30 14:23:16 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -81,13 +81,13 @@
     +---------------------------------+----------+-------+---+----+------------+------------+
     |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+-------+---+----+------------+------------+
-    |i4_fu_13634_p2                   |     +    |      0|  0|   4|           1|           4|
+    |i2_fu_13634_p2                   |     +    |      0|  0|   4|           1|           4|
     |indvar_flatten_next_fu_13614_p2  |     +    |      0|  0|   7|           7|           1|
     |j_fu_13683_p2                    |     +    |      0|  0|   4|           4|           1|
     |p_addr1_fu_13668_p2              |     +    |      0|  0|   8|           8|           8|
     |i_0_i_i_mid2_fu_13640_p3         |  Select  |      0|  0|   4|           1|           4|
     |j_0_i_i_mid2_fu_13626_p3         |  Select  |      0|  0|   4|           1|           1|
-    |exitcond3_i_i6_fu_13620_p2       |   icmp   |      0|  0|   2|           4|           5|
+    |exitcond3_i_i4_fu_13620_p2       |   icmp   |      0|  0|   2|           4|           5|
     |exitcond_flatten_fu_13608_p2     |   icmp   |      0|  0|   3|           7|           8|
     |ap_sig_bdd_395                   |    or    |      0|  0|   1|           1|           1|
     +---------------------------------+----------+-------+---+----+------------+------------+
@@ -249,8 +249,8 @@
     |i_0_i_i_reg_81              |   4|   0|    4|          0|
     |indvar_flatten_reg_70       |   7|   0|    7|          0|
     |j_0_i_i_reg_92              |   4|   0|    4|          0|
-    |tmp_3_reg_14087             |   3|   0|    3|          0|
-    |tmp_4_reg_14096             |   3|   0|    3|          0|
+    |tmp_1_reg_14087             |   3|   0|    3|          0|
+    |tmp_3_reg_14096             |   3|   0|    3|          0|
     +----------------------------+----+----+-----+-----------+
     |Total                       |2080|   0| 2080|          0|
     +----------------------------+----+----+-----+-----------+
@@ -406,20 +406,20 @@ ST_2: exitcond_flatten [1/1] 1.97ns
 ST_2: indvar_flatten_next [1/1] 1.72ns
 :68  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
-ST_2: exitcond3_i_i6 [1/1] 1.88ns
-.reset:2  %exitcond3_i_i6 = icmp eq i4 %j_0_i_i, -8
+ST_2: exitcond3_i_i4 [1/1] 1.88ns
+.reset:2  %exitcond3_i_i4 = icmp eq i4 %j_0_i_i, -8
 
 ST_2: j_0_i_i_mid2 [1/1] 1.37ns
-.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 0, i4 %j_0_i_i
+.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i4, i4 0, i4 %j_0_i_i
 
-ST_2: i4 [1/1] 0.80ns
-.reset:4  %i4 = add i4 1, %i_0_i_i
+ST_2: i2 [1/1] 0.80ns
+.reset:4  %i2 = add i4 1, %i_0_i_i
 
 ST_2: i_0_i_i_mid2 [1/1] 1.37ns
-.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 %i4, i4 %i_0_i_i
+.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i4, i4 %i2, i4 %i_0_i_i
 
-ST_2: tmp_3 [1/1] 0.00ns
-.reset:6  %tmp_3 = trunc i4 %i_0_i_i_mid2 to i3
+ST_2: tmp_1 [1/1] 0.00ns
+.reset:6  %tmp_1 = trunc i4 %i_0_i_i_mid2 to i3
 
 ST_2: tmp_3_i_trn_cast [1/1] 0.00ns
 .reset:10  %tmp_3_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8
@@ -433,20 +433,20 @@ ST_2: p_addr_cast [1/1] 0.00ns
 ST_2: p_addr1 [1/1] 1.72ns
 .reset:13  %p_addr1 = add i8 %p_addr_cast, %tmp_3_i_trn_cast
 
-ST_2: tmp_6 [1/1] 0.00ns
-.reset:14  %tmp_6 = zext i8 %p_addr1 to i64
+ST_2: tmp_4 [1/1] 0.00ns
+.reset:14  %tmp_4 = zext i8 %p_addr1 to i64
 
 ST_2: B_addr [1/1] 0.00ns
-.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_6
+.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_4
 
 ST_2: B_cached_7_0 [2/2] 2.71ns
 .reset:16  %B_cached_7_0 = load float* %B_addr, align 4
 
-ST_2: tmp_4 [1/1] 0.00ns
-.reset:17  %tmp_4 = trunc i4 %j_0_i_i_mid2 to i3
+ST_2: tmp_3 [1/1] 0.00ns
+.reset:17  %tmp_3 = trunc i4 %j_0_i_i_mid2 to i3
 
 ST_2: stg_24 [1/1] 1.91ns
-.reset:18  switch i3 %tmp_3, label %branch7 [
+.reset:18  switch i3 %tmp_1, label %branch7 [
     i3 0, label %branch0
     i3 1, label %branch1
     i3 2, label %branch2
@@ -675,7 +675,7 @@ ST_3: B_cached_7_0 [1/2] 2.71ns
 .reset:16  %B_cached_7_0 = load float* %B_addr, align 4
 
 ST_3: stg_97 [1/1] 1.91ns
-branch6:0  switch i3 %tmp_4, label %branch63 [
+branch6:0  switch i3 %tmp_3, label %branch63 [
     i3 0, label %branch097
     i3 1, label %branch57
     i3 2, label %branch58
@@ -707,7 +707,7 @@ ST_3: stg_104 [1/1] 1.57ns
 branch63:0  br label %branch097
 
 ST_3: stg_105 [1/1] 1.91ns
-branch5:0  switch i3 %tmp_4, label %branch55 [
+branch5:0  switch i3 %tmp_3, label %branch55 [
     i3 0, label %branch097
     i3 1, label %branch49
     i3 2, label %branch50
@@ -739,7 +739,7 @@ ST_3: stg_112 [1/1] 1.57ns
 branch55:0  br label %branch097
 
 ST_3: stg_113 [1/1] 1.91ns
-branch4:0  switch i3 %tmp_4, label %branch47 [
+branch4:0  switch i3 %tmp_3, label %branch47 [
     i3 0, label %branch097
     i3 1, label %branch41
     i3 2, label %branch42
@@ -771,7 +771,7 @@ ST_3: stg_120 [1/1] 1.57ns
 branch47:0  br label %branch097
 
 ST_3: stg_121 [1/1] 1.91ns
-branch3:0  switch i3 %tmp_4, label %branch39 [
+branch3:0  switch i3 %tmp_3, label %branch39 [
     i3 0, label %branch097
     i3 1, label %branch33
     i3 2, label %branch34
@@ -803,7 +803,7 @@ ST_3: stg_128 [1/1] 1.57ns
 branch39:0  br label %branch097
 
 ST_3: stg_129 [1/1] 1.91ns
-branch2:0  switch i3 %tmp_4, label %branch31 [
+branch2:0  switch i3 %tmp_3, label %branch31 [
     i3 0, label %branch097
     i3 1, label %branch25
     i3 2, label %branch26
@@ -835,7 +835,7 @@ ST_3: stg_136 [1/1] 1.57ns
 branch31:0  br label %branch097
 
 ST_3: stg_137 [1/1] 1.91ns
-branch1:0  switch i3 %tmp_4, label %branch23 [
+branch1:0  switch i3 %tmp_3, label %branch23 [
     i3 0, label %branch097
     i3 1, label %branch17
     i3 2, label %branch18
@@ -867,7 +867,7 @@ ST_3: stg_144 [1/1] 1.57ns
 branch23:0  br label %branch097
 
 ST_3: stg_145 [1/1] 1.91ns
-branch0:0  switch i3 %tmp_4, label %branch15 [
+branch0:0  switch i3 %tmp_3, label %branch15 [
     i3 0, label %branch097
     i3 1, label %branch9
     i3 2, label %branch10
@@ -899,7 +899,7 @@ ST_3: stg_152 [1/1] 1.57ns
 branch15:0  br label %branch097
 
 ST_3: stg_153 [1/1] 1.91ns
-branch7:0  switch i3 %tmp_4, label %branch71 [
+branch7:0  switch i3 %tmp_3, label %branch71 [
     i3 0, label %branch097
     i3 1, label %branch65
     i3 2, label %branch66
@@ -1339,7 +1339,7 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ B]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xd69e240; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xe0710d0; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -1352,18 +1352,18 @@ i_0_i_i             (phi              ) [ 00100]
 j_0_i_i             (phi              ) [ 00100]
 exitcond_flatten    (icmp             ) [ 00110]
 indvar_flatten_next (add              ) [ 01110]
-exitcond3_i_i6      (icmp             ) [ 00000]
+exitcond3_i_i4      (icmp             ) [ 00000]
 j_0_i_i_mid2        (select           ) [ 00000]
-i4                  (add              ) [ 00000]
+i2                  (add              ) [ 00000]
 i_0_i_i_mid2        (select           ) [ 01110]
-tmp_3               (trunc            ) [ 00110]
+tmp_1               (trunc            ) [ 00110]
 tmp_3_i_trn_cast    (zext             ) [ 00000]
 tmp                 (bitconcatenate   ) [ 00000]
 p_addr_cast         (zext             ) [ 00000]
 p_addr1             (add              ) [ 00000]
-tmp_6               (zext             ) [ 00000]
+tmp_4               (zext             ) [ 00000]
 B_addr              (getelementptr    ) [ 00110]
-tmp_4               (trunc            ) [ 00110]
+tmp_3               (trunc            ) [ 00110]
 stg_24              (switch           ) [ 00000]
 j                   (add              ) [ 01110]
 B_cached_1_1_1      (phi              ) [ 00111]
@@ -13028,7 +13028,7 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13620" class="1004" name="exitcond3_i_i6_fu_13620">
+<comp id="13620" class="1004" name="exitcond3_i_i4_fu_13620">
 <pin_list>
 <pin id="13621" dir="0" index="0" bw="4" slack="0"/>
 <pin id="13622" dir="0" index="1" bw="4" slack="0"/>
@@ -13036,7 +13036,7 @@ stg_291             (ret              ) [ 00000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="exitcond3_i_i6/2 "/>
+<opset="exitcond3_i_i4/2 "/>
 </bind>
 </comp>
 
@@ -13053,7 +13053,7 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13634" class="1004" name="i4_fu_13634">
+<comp id="13634" class="1004" name="i2_fu_13634">
 <pin_list>
 <pin id="13635" dir="0" index="0" bw="1" slack="0"/>
 <pin id="13636" dir="0" index="1" bw="4" slack="0"/>
@@ -13061,7 +13061,7 @@ stg_291             (ret              ) [ 00000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="i4/2 "/>
+<opset="i2/2 "/>
 </bind>
 </comp>
 
@@ -13078,14 +13078,14 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13648" class="1004" name="tmp_3_fu_13648">
+<comp id="13648" class="1004" name="tmp_1_fu_13648">
 <pin_list>
 <pin id="13649" dir="0" index="0" bw="4" slack="0"/>
 <pin id="13650" dir="1" index="1" bw="3" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_3/2 "/>
+<opset="tmp_1/2 "/>
 </bind>
 </comp>
 
@@ -13136,25 +13136,25 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13674" class="1004" name="tmp_6_fu_13674">
+<comp id="13674" class="1004" name="tmp_4_fu_13674">
 <pin_list>
 <pin id="13675" dir="0" index="0" bw="8" slack="0"/>
 <pin id="13676" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_6/2 "/>
+<opset="tmp_4/2 "/>
 </bind>
 </comp>
 
-<comp id="13679" class="1004" name="tmp_4_fu_13679">
+<comp id="13679" class="1004" name="tmp_3_fu_13679">
 <pin_list>
 <pin id="13680" dir="0" index="0" bw="4" slack="0"/>
 <pin id="13681" dir="1" index="1" bw="3" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_4/2 "/>
+<opset="tmp_3/2 "/>
 </bind>
 </comp>
 
@@ -13968,13 +13968,13 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="14087" class="1005" name="tmp_3_reg_14087">
+<comp id="14087" class="1005" name="tmp_1_reg_14087">
 <pin_list>
 <pin id="14088" dir="0" index="0" bw="3" slack="1"/>
 <pin id="14089" dir="1" index="1" bw="3" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="tmp_3 "/>
+<opset="tmp_1 "/>
 </bind>
 </comp>
 
@@ -13988,13 +13988,13 @@ stg_291             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="14096" class="1005" name="tmp_4_reg_14096">
+<comp id="14096" class="1005" name="tmp_3_reg_14096">
 <pin_list>
 <pin id="14097" dir="0" index="0" bw="3" slack="1"/>
 <pin id="14098" dir="1" index="1" bw="3" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="tmp_4 "/>
+<opset="tmp_3 "/>
 </bind>
 </comp>
 
@@ -23206,19 +23206,19 @@ stg_291             (ret              ) [ 00000]
 	State 2
 		exitcond_flatten : 1
 		indvar_flatten_next : 1
-		exitcond3_i_i6 : 1
+		exitcond3_i_i4 : 1
 		j_0_i_i_mid2 : 2
-		i4 : 1
+		i2 : 1
 		i_0_i_i_mid2 : 2
-		tmp_3 : 3
+		tmp_1 : 3
 		tmp_3_i_trn_cast : 3
 		tmp : 3
 		p_addr_cast : 4
 		p_addr1 : 5
-		tmp_6 : 6
+		tmp_4 : 6
 		B_addr : 7
 		B_cached_7_0 : 8
-		tmp_4 : 3
+		tmp_3 : 3
 		stg_24 : 4
 		j : 3
 	State 3
@@ -23363,7 +23363,7 @@ stg_291             (ret              ) [ 00000]
 | Operation|        Functional Unit       |    FF   |   LUT   |
 |----------|------------------------------|---------|---------|
 |          | indvar_flatten_next_fu_13614 |    0    |    7    |
-|    add   |          i4_fu_13634         |    0    |    4    |
+|    add   |          i2_fu_13634         |    0    |    4    |
 |          |       p_addr1_fu_13668       |    0    |    7    |
 |          |          j_fu_13683          |    0    |    4    |
 |----------|------------------------------|---------|---------|
@@ -23371,14 +23371,14 @@ stg_291             (ret              ) [ 00000]
 |          |     i_0_i_i_mid2_fu_13640    |    0    |    4    |
 |----------|------------------------------|---------|---------|
 |   icmp   |   exitcond_flatten_fu_13608  |    0    |    3    |
-|          |    exitcond3_i_i6_fu_13620   |    0    |    2    |
+|          |    exitcond3_i_i4_fu_13620   |    0    |    2    |
 |----------|------------------------------|---------|---------|
-|   trunc  |        tmp_3_fu_13648        |    0    |    0    |
-|          |        tmp_4_fu_13679        |    0    |    0    |
+|   trunc  |        tmp_1_fu_13648        |    0    |    0    |
+|          |        tmp_3_fu_13679        |    0    |    0    |
 |----------|------------------------------|---------|---------|
 |          |   tmp_3_i_trn_cast_fu_13652  |    0    |    0    |
 |   zext   |     p_addr_cast_fu_13664     |    0    |    0    |
-|          |        tmp_6_fu_13674        |    0    |    0    |
+|          |        tmp_4_fu_13674        |    0    |    0    |
 |----------|------------------------------|---------|---------|
 |bitconcatenate|         tmp_fu_13656         |    0    |    0    |
 |----------|------------------------------|---------|---------|
@@ -23593,8 +23593,8 @@ N/A
 |    indvar_flatten_reg_70    |    7   |
 |        j_0_i_i_reg_92       |    4   |
 |         j_reg_14100         |    4   |
-|       tmp_3_reg_14087       |    3   |
-|       tmp_4_reg_14096       |    3   |
+|       tmp_1_reg_14087       |    3   |
+|       tmp_3_reg_14096       |    3   |
 +-----------------------------+--------+
 |            Total            |  4139  |
 +-----------------------------+--------+

@@ -21,9 +21,9 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>892</Best-caseLatency>
-<Average-caseLatency>892</Average-caseLatency>
-<Worst-caseLatency>892</Worst-caseLatency>
+<Best-caseLatency>893</Best-caseLatency>
+<Average-caseLatency>893</Average-caseLatency>
+<Worst-caseLatency>893</Worst-caseLatency>
 <DataflowPipelineThroughput>301</DataflowPipelineThroughput>
 <Interval-min>301</Interval-min>
 <Interval-max>301</Interval-max>
@@ -34,8 +34,8 @@
 <Resources>
 <BRAM_18K>7</BRAM_18K>
 <DSP48E>50</DSP48E>
-<FF>11765</FF>
-<LUT>19757</LUT>
+<FF>11799</FF>
+<LUT>19797</LUT>
 <SLICE>0</SLICE>
 </Resources>
 <AvailableResources>
@@ -105,18 +105,6 @@
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>function_r</name>
-<Object>function_r</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>Y_din</name>

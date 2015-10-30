@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_Row_proc'" level="0">
-<item name = "Date">Fri Oct 30 11:21:16 2015
+<item name = "Date">Fri Oct 30 14:23:20 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -87,7 +87,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_fu_1291_p2">+, 0, 0, 4, 1, 4</column>
+<column name="i2_fu_1291_p2">+, 0, 0, 4, 1, 4</column>
 <column name="indvar_flatten_next_fu_1271_p2">+, 0, 0, 7, 7, 1</column>
 <column name="j_fu_1399_p2">+, 0, 0, 4, 1, 4</column>
 <column name="p_addr1_fu_1446_p2">+, 0, 0, 8, 8, 8</column>

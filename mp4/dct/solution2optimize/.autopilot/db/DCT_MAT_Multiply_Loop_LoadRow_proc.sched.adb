@@ -3079,7 +3079,7 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>exitcond3_i_i6</name>
+						<name>exitcond3_i_i4</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -3164,7 +3164,7 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>i4</name>
+						<name>i2</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>11</lineNumber>
@@ -3249,7 +3249,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>tmp_3</name>
+						<name>tmp_1</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -3457,7 +3457,7 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>tmp_6</name>
+						<name>tmp_4</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -3582,7 +3582,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>tmp_4</name>
+						<name>tmp_3</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>12</lineNumber>

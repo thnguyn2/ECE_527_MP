@@ -3051,7 +3051,7 @@
             <Obj>
               <type>0</type>
               <id>77</id>
-              <name>exitcond3_i_i8</name>
+              <name>exitcond3_i_i6</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>12</lineNumber>
@@ -3075,7 +3075,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>exitcond3_i_i8_fu_13620_p2</rtlName>
+              <rtlName>exitcond3_i_i6_fu_13620_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3136,7 +3136,7 @@
             <Obj>
               <type>0</type>
               <id>79</id>
-              <name>i6</name>
+              <name>i4</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>11</lineNumber>
@@ -3160,7 +3160,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>i6_fu_13634_p2</rtlName>
+              <rtlName>i4_fu_13634_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -3429,7 +3429,7 @@
             <Obj>
               <type>0</type>
               <id>89</id>
-              <name>tmp_7</name>
+              <name>tmp_5</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -3453,7 +3453,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_fu_13674_p1</rtlName>
+              <rtlName>tmp_5_fu_13674_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -76730,7 +76730,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond3_i_i8_fu_13620_p2 ( icmp ) </first>
+          <first>exitcond3_i_i6_fu_13620_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -76776,7 +76776,7 @@
           </second>
         </item>
         <item>
-          <first>i6_fu_13634_p2 ( + ) </first>
+          <first>i4_fu_13634_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -80001,7 +80001,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond3_i_i8_fu_13620_p2 ( icmp ) </first>
+          <first>exitcond3_i_i6_fu_13620_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -80017,7 +80017,7 @@
           </second>
         </item>
         <item>
-          <first>i6_fu_13634_p2 ( + ) </first>
+          <first>i4_fu_13634_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -85356,7 +85356,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond3_i_i8_fu_13620</first>
+        <first>exitcond3_i_i6_fu_13620</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -85372,7 +85372,7 @@
         </second>
       </item>
       <item>
-        <first>i6_fu_13634</first>
+        <first>i4_fu_13634</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -85972,7 +85972,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_7_fu_13674</first>
+        <first>tmp_5_fu_13674</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

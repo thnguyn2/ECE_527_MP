@@ -187,6 +187,7 @@ decompImg = Mat(imgSP.rows,imgSP.cols,CV_32S,0.00);
 //Extract and compute 8x8 blocks
 cout << "...Testing IO connection...\n";
 int op_mode; //Mode of the operation 0,1,2,3 which defines what operations to be performed on the PL
+int op_mode_rcv;//Received value for the op_mode
 int dummy_data=255; //A dummy data piece since the Xillybus is off by 1 cycle
 int dummy_read;
 op_mode = 0;
@@ -214,6 +215,8 @@ for(int i=0; i<imgSP.rows; i+=8)
         //Compute DCT of block
         //Time operation
         gettimeofday(&tdctStart,NULL);
+	op_mode = 1; //DCT
+	write(fdw,(void*)&op_mode,sizeof(op_mode));//Write also the operation mode
 	write(fdw,(void*)(block.data),sizeof(float)*64);
 	write(fdw,(void*)&dummy_data,sizeof(dummy_data));
 	//--End of modification--
@@ -221,8 +224,7 @@ for(int i=0; i<imgSP.rows; i+=8)
 	
 	//hard ware dct block
 	read(fdr,(void*)hw_dctBuf,sizeof(float)*64);//Read the buffer for dct performed on hardware
-	read(fdr,(void*)&dummy_read,sizeof(dummy_read));//A dummy number
-
+	read(fdr,(void*)&op_mode_rcv,sizeof(op_mode_rcv));//A dummy number
 
 	//Software dct block
 	dct(block,dctBlock);//Check to see if the data is sent back correctly or not
@@ -234,9 +236,10 @@ for(int i=0; i<imgSP.rows; i+=8)
 			{
 				printf("DCT [%d,%d]: HW: %f, SW: %f \n",m,n,hw_dctBlock.at<float>(m,n),dctBlock.at<float>(m,n));
 			}
+	printf("Opmode in: %d, Received value for the transformation mode: %d\n ",op_mode,op_mode_rcv);
+
+
 	}
-
-
         gettimeofday(&tdctEnd, NULL);
         timersub(&tdctEnd,&tdctStart,&tdctDiff);
         timeDct += (tdctDiff.tv_sec*1000000.00) + tdctDiff.tv_usec;

@@ -670,10 +670,13 @@ DCT_MAT_Multiply_Loop_Row_proc::DCT_MAT_Multiply_Loop_Row_proc(sc_module_name na
     sensitive << ( ap_reg_ppiten_pp0_it36 );
     sensitive << ( tmp_17_fu_1135_p10 );
 
+    SC_METHOD(thread_i2_fu_833_p2);
+    sensitive << ( i_1_phi_fu_723_p4 );
+
     SC_METHOD(thread_i_1_mid2_fu_839_p3);
     sensitive << ( i_1_phi_fu_723_p4 );
     sensitive << ( exitcond_fu_819_p2 );
-    sensitive << ( i_fu_833_p2 );
+    sensitive << ( i2_fu_833_p2 );
 
     SC_METHOD(thread_i_1_phi_fu_723_p4);
     sensitive << ( i_1_reg_719 );
@@ -681,9 +684,6 @@ DCT_MAT_Multiply_Loop_Row_proc::DCT_MAT_Multiply_Loop_Row_proc(sc_module_name na
     sensitive << ( ap_sig_cseq_ST_pp0_stg0_fsm_1 );
     sensitive << ( ap_reg_ppiten_pp0_it1 );
     sensitive << ( i_1_mid2_reg_1494 );
-
-    SC_METHOD(thread_i_fu_833_p2);
-    sensitive << ( i_1_phi_fu_723_p4 );
 
     SC_METHOD(thread_indvar_flatten_next_fu_813_p2);
     sensitive << ( indvar_flatten_reg_708 );
@@ -1721,7 +1721,7 @@ DCT_MAT_Multiply_Loop_Row_proc::DCT_MAT_Multiply_Loop_Row_proc(sc_module_name na
     sc_trace(mVcdFile, grp_fu_803_p0, "grp_fu_803_p0");
     sc_trace(mVcdFile, grp_fu_803_p1, "grp_fu_803_p1");
     sc_trace(mVcdFile, exitcond_fu_819_p2, "exitcond_fu_819_p2");
-    sc_trace(mVcdFile, i_fu_833_p2, "i_fu_833_p2");
+    sc_trace(mVcdFile, i2_fu_833_p2, "i2_fu_833_p2");
     sc_trace(mVcdFile, tmp_fu_861_p1, "tmp_fu_861_p1");
     sc_trace(mVcdFile, tmp_fu_861_p2, "tmp_fu_861_p2");
     sc_trace(mVcdFile, tmp_fu_861_p3, "tmp_fu_861_p3");
@@ -2989,8 +2989,12 @@ void DCT_MAT_Multiply_Loop_Row_proc::thread_grp_fu_803_p1() {
     grp_fu_803_p1 = tmp_17_fu_1135_p10.read();
 }
 
+void DCT_MAT_Multiply_Loop_Row_proc::thread_i2_fu_833_p2() {
+    i2_fu_833_p2 = (!ap_const_lv4_1.is_01() || !i_1_phi_fu_723_p4.read().is_01())? sc_lv<4>(): (sc_biguint<4>(ap_const_lv4_1) + sc_biguint<4>(i_1_phi_fu_723_p4.read()));
+}
+
 void DCT_MAT_Multiply_Loop_Row_proc::thread_i_1_mid2_fu_839_p3() {
-    i_1_mid2_fu_839_p3 = (!exitcond_fu_819_p2.read()[0].is_01())? sc_lv<4>(): ((exitcond_fu_819_p2.read()[0].to_bool())? i_fu_833_p2.read(): i_1_phi_fu_723_p4.read());
+    i_1_mid2_fu_839_p3 = (!exitcond_fu_819_p2.read()[0].is_01())? sc_lv<4>(): ((exitcond_fu_819_p2.read()[0].to_bool())? i2_fu_833_p2.read(): i_1_phi_fu_723_p4.read());
 }
 
 void DCT_MAT_Multiply_Loop_Row_proc::thread_i_1_phi_fu_723_p4() {
@@ -3001,10 +3005,6 @@ void DCT_MAT_Multiply_Loop_Row_proc::thread_i_1_phi_fu_723_p4() {
     } else {
         i_1_phi_fu_723_p4 = i_1_reg_719.read();
     }
-}
-
-void DCT_MAT_Multiply_Loop_Row_proc::thread_i_fu_833_p2() {
-    i_fu_833_p2 = (!ap_const_lv4_1.is_01() || !i_1_phi_fu_723_p4.read().is_01())? sc_lv<4>(): (sc_biguint<4>(ap_const_lv4_1) + sc_biguint<4>(i_1_phi_fu_723_p4.read()));
 }
 
 void DCT_MAT_Multiply_Loop_Row_proc::thread_indvar_flatten_next_fu_813_p2() {

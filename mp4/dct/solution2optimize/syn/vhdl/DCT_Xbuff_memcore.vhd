@@ -15,7 +15,7 @@ entity DCT_Xbuff_memcore_ram is
             mem_type    : string := "block"; 
             dwidth     : integer := 32; 
             awidth     : integer := 8; 
-            mem_size    : integer := 130
+            mem_size    : integer := 132
     ); 
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
@@ -107,7 +107,7 @@ use IEEE.std_logic_1164.all;
 entity DCT_Xbuff_memcore is
     generic (
         DataWidth : INTEGER := 32;
-        AddressRange : INTEGER := 130;
+        AddressRange : INTEGER := 132;
         AddressWidth : INTEGER := 8);
     port (
         reset : IN STD_LOGIC;

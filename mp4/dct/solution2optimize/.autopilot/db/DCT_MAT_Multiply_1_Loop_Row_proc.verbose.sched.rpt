@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_Row_proc'
 ================================================================
-* Date:           Fri Oct 30 11:21:06 2015
+* Date:           Fri Oct 30 14:23:11 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -329,98 +329,98 @@ newFuncRoot:31  %p_read_95 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 ST_1: p_read_96 [1/1] 0.00ns
 newFuncRoot:32  %p_read_96 = call float @_ssdm_op_Read.ap_auto.float(float %p_read31)
 
+ST_1: p_read3094 [1/1] 0.00ns
+newFuncRoot:33  %p_read3094 = call float @_ssdm_op_Read.ap_auto.float(float %p_read30)
+
 ST_1: p_read_97 [1/1] 0.00ns
-newFuncRoot:33  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_read30)
+newFuncRoot:34  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_read29)
 
 ST_1: p_read_98 [1/1] 0.00ns
-newFuncRoot:34  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_read29)
+newFuncRoot:35  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_read28)
 
 ST_1: p_read_99 [1/1] 0.00ns
-newFuncRoot:35  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_read28)
+newFuncRoot:36  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_read27)
 
 ST_1: p_read_100 [1/1] 0.00ns
-newFuncRoot:36  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_read27)
+newFuncRoot:37  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_read26)
 
 ST_1: p_read_101 [1/1] 0.00ns
-newFuncRoot:37  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_read26)
+newFuncRoot:38  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_read25)
 
 ST_1: p_read_102 [1/1] 0.00ns
-newFuncRoot:38  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_read25)
+newFuncRoot:39  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_read24)
 
 ST_1: p_read_103 [1/1] 0.00ns
-newFuncRoot:39  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_read24)
+newFuncRoot:40  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_read23)
 
 ST_1: p_read_104 [1/1] 0.00ns
-newFuncRoot:40  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_read23)
+newFuncRoot:41  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_read22)
 
 ST_1: p_read_105 [1/1] 0.00ns
-newFuncRoot:41  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_read22)
+newFuncRoot:42  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_read21)
+
+ST_1: p_read2084 [1/1] 0.00ns
+newFuncRoot:43  %p_read2084 = call float @_ssdm_op_Read.ap_auto.float(float %p_read20)
 
 ST_1: p_read_106 [1/1] 0.00ns
-newFuncRoot:42  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_read21)
+newFuncRoot:44  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_read19)
 
 ST_1: p_read_107 [1/1] 0.00ns
-newFuncRoot:43  %p_read_107 = call float @_ssdm_op_Read.ap_auto.float(float %p_read20)
+newFuncRoot:45  %p_read_107 = call float @_ssdm_op_Read.ap_auto.float(float %p_read18)
 
 ST_1: p_read_108 [1/1] 0.00ns
-newFuncRoot:44  %p_read_108 = call float @_ssdm_op_Read.ap_auto.float(float %p_read19)
+newFuncRoot:46  %p_read_108 = call float @_ssdm_op_Read.ap_auto.float(float %p_read17)
 
 ST_1: p_read_109 [1/1] 0.00ns
-newFuncRoot:45  %p_read_109 = call float @_ssdm_op_Read.ap_auto.float(float %p_read18)
+newFuncRoot:47  %p_read_109 = call float @_ssdm_op_Read.ap_auto.float(float %p_read16)
 
 ST_1: p_read_110 [1/1] 0.00ns
-newFuncRoot:46  %p_read_110 = call float @_ssdm_op_Read.ap_auto.float(float %p_read17)
+newFuncRoot:48  %p_read_110 = call float @_ssdm_op_Read.ap_auto.float(float %p_read15)
 
 ST_1: p_read_111 [1/1] 0.00ns
-newFuncRoot:47  %p_read_111 = call float @_ssdm_op_Read.ap_auto.float(float %p_read16)
+newFuncRoot:49  %p_read_111 = call float @_ssdm_op_Read.ap_auto.float(float %p_read14)
 
 ST_1: p_read_112 [1/1] 0.00ns
-newFuncRoot:48  %p_read_112 = call float @_ssdm_op_Read.ap_auto.float(float %p_read15)
+newFuncRoot:50  %p_read_112 = call float @_ssdm_op_Read.ap_auto.float(float %p_read13)
 
 ST_1: p_read_113 [1/1] 0.00ns
-newFuncRoot:49  %p_read_113 = call float @_ssdm_op_Read.ap_auto.float(float %p_read14)
+newFuncRoot:51  %p_read_113 = call float @_ssdm_op_Read.ap_auto.float(float %p_read12)
 
 ST_1: p_read_114 [1/1] 0.00ns
-newFuncRoot:50  %p_read_114 = call float @_ssdm_op_Read.ap_auto.float(float %p_read13)
+newFuncRoot:52  %p_read_114 = call float @_ssdm_op_Read.ap_auto.float(float %p_read11)
 
-ST_1: p_read_115 [1/1] 0.00ns
-newFuncRoot:51  %p_read_115 = call float @_ssdm_op_Read.ap_auto.float(float %p_read12)
+ST_1: p_read1074 [1/1] 0.00ns
+newFuncRoot:53  %p_read1074 = call float @_ssdm_op_Read.ap_auto.float(float %p_read10)
 
-ST_1: p_read_116 [1/1] 0.00ns
-newFuncRoot:52  %p_read_116 = call float @_ssdm_op_Read.ap_auto.float(float %p_read11)
+ST_1: p_read973 [1/1] 0.00ns
+newFuncRoot:54  %p_read973 = call float @_ssdm_op_Read.ap_auto.float(float %p_read9)
 
-ST_1: p_read_117 [1/1] 0.00ns
-newFuncRoot:53  %p_read_117 = call float @_ssdm_op_Read.ap_auto.float(float %p_read10)
+ST_1: p_read872 [1/1] 0.00ns
+newFuncRoot:55  %p_read872 = call float @_ssdm_op_Read.ap_auto.float(float %p_read8)
 
-ST_1: p_read_118 [1/1] 0.00ns
-newFuncRoot:54  %p_read_118 = call float @_ssdm_op_Read.ap_auto.float(float %p_read9)
+ST_1: p_read771 [1/1] 0.00ns
+newFuncRoot:56  %p_read771 = call float @_ssdm_op_Read.ap_auto.float(float %p_read7)
 
-ST_1: p_read_119 [1/1] 0.00ns
-newFuncRoot:55  %p_read_119 = call float @_ssdm_op_Read.ap_auto.float(float %p_read8)
+ST_1: p_read670 [1/1] 0.00ns
+newFuncRoot:57  %p_read670 = call float @_ssdm_op_Read.ap_auto.float(float %p_read6)
 
-ST_1: p_read_120 [1/1] 0.00ns
-newFuncRoot:56  %p_read_120 = call float @_ssdm_op_Read.ap_auto.float(float %p_read7)
+ST_1: p_read569 [1/1] 0.00ns
+newFuncRoot:58  %p_read569 = call float @_ssdm_op_Read.ap_auto.float(float %p_read5)
 
-ST_1: p_read_121 [1/1] 0.00ns
-newFuncRoot:57  %p_read_121 = call float @_ssdm_op_Read.ap_auto.float(float %p_read6)
+ST_1: p_read468 [1/1] 0.00ns
+newFuncRoot:59  %p_read468 = call float @_ssdm_op_Read.ap_auto.float(float %p_read4)
 
-ST_1: p_read_122 [1/1] 0.00ns
-newFuncRoot:58  %p_read_122 = call float @_ssdm_op_Read.ap_auto.float(float %p_read5)
+ST_1: p_read367 [1/1] 0.00ns
+newFuncRoot:60  %p_read367 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)
 
-ST_1: p_read_123 [1/1] 0.00ns
-newFuncRoot:59  %p_read_123 = call float @_ssdm_op_Read.ap_auto.float(float %p_read4)
+ST_1: p_read266 [1/1] 0.00ns
+newFuncRoot:61  %p_read266 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)
 
-ST_1: p_read_124 [1/1] 0.00ns
-newFuncRoot:60  %p_read_124 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)
+ST_1: p_read165 [1/1] 0.00ns
+newFuncRoot:62  %p_read165 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)
 
-ST_1: p_read_125 [1/1] 0.00ns
-newFuncRoot:61  %p_read_125 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)
-
-ST_1: p_read_126 [1/1] 0.00ns
-newFuncRoot:62  %p_read_126 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)
-
-ST_1: p_read391 [1/1] 0.00ns
-newFuncRoot:63  %p_read391 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
+ST_1: p_read64 [1/1] 0.00ns
+newFuncRoot:63  %p_read64 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
 
 ST_1: A_addr [1/1] 0.00ns
 newFuncRoot:64  %A_addr = getelementptr [8 x float]* %A, i64 0, i64 0
@@ -693,11 +693,11 @@ ST_3: exitcond [1/1] 1.88ns
 ST_3: j_1_mid2 [1/1] 1.37ns
 .preheader:3  %j_1_mid2 = select i1 %exitcond, i4 0, i4 %j_1
 
-ST_3: i [1/1] 0.80ns
-.preheader:4  %i = add i4 1, %i_1
+ST_3: i2 [1/1] 0.80ns
+.preheader:4  %i2 = add i4 1, %i_1
 
 ST_3: i_1_mid2 [1/1] 1.37ns
-.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1
+.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i2, i4 %i_1
 
 ST_3: tmp_32 [1/1] 0.00ns
 .preheader:6  %tmp_32 = trunc i4 %i_1_mid2 to i3
@@ -810,13 +810,13 @@ ST_3: A7_load_3 [2/2] 2.39ns
 
  <State 4>: 7.64ns
 ST_4: tmp_s [1/1] 1.94ns
-.preheader:20  %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read391, float %p_read_126, float %p_read_125, float %p_read_124, float %p_read_123, float %p_read_122, float %p_read_121, float %p_read_120, i3 %tmp_33)
+.preheader:20  %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read64, float %p_read165, float %p_read266, float %p_read367, float %p_read468, float %p_read569, float %p_read670, float %p_read771, i3 %tmp_33)
 
 ST_4: tmp_9 [4/4] 5.70ns
 .preheader:21  %tmp_9 = fmul float %tmp, %tmp_s
 
 ST_4: tmp_19 [1/1] 1.94ns
-.preheader:32  %tmp_19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_119, float %p_read_118, float %p_read_117, float %p_read_116, float %p_read_115, float %p_read_114, float %p_read_113, float %p_read_112, i3 %tmp_33)
+.preheader:32  %tmp_19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read872, float %p_read973, float %p_read1074, float %p_read_114, float %p_read_113, float %p_read_112, float %p_read_111, float %p_read_110, i3 %tmp_33)
 
 ST_4: tmp_9_1 [4/4] 5.70ns
 .preheader:33  %tmp_9_1 = fmul float %tmp_18, %tmp_19
@@ -932,13 +932,13 @@ ST_5: tmp_9_1 [3/4] 5.70ns
 .preheader:33  %tmp_9_1 = fmul float %tmp_18, %tmp_19
 
 ST_5: tmp_21 [1/1] 1.94ns
-.preheader:44  %tmp_21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_111, float %p_read_110, float %p_read_109, float %p_read_108, float %p_read_107, float %p_read_106, float %p_read_105, float %p_read_104, i3 %tmp_33)
+.preheader:44  %tmp_21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_109, float %p_read_108, float %p_read_107, float %p_read_106, float %p_read2084, float %p_read_105, float %p_read_104, float %p_read_103, i3 %tmp_33)
 
 ST_5: tmp_9_2 [4/4] 5.70ns
 .preheader:45  %tmp_9_2 = fmul float %tmp_20, %tmp_21
 
 ST_5: tmp_23 [1/1] 1.94ns
-.preheader:56  %tmp_23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_103, float %p_read_102, float %p_read_101, float %p_read_100, float %p_read_99, float %p_read_98, float %p_read_97, float %p_read_96, i3 %tmp_33)
+.preheader:56  %tmp_23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_102, float %p_read_101, float %p_read_100, float %p_read_99, float %p_read_98, float %p_read_97, float %p_read3094, float %p_read_96, i3 %tmp_33)
 
 ST_5: tmp_9_3 [4/4] 5.70ns
 .preheader:57  %tmp_9_3 = fmul float %tmp_22, %tmp_23
@@ -1416,20 +1416,20 @@ ST_48: stg_412 [1/1] 0.00ns
 ST_48: tmp_6_trn_cast [1/1] 0.00ns
 .preheader:107  %tmp_6_trn_cast = zext i4 %j_1_mid2 to i8
 
-ST_48: tmp_8 [1/1] 0.00ns
-.preheader:108  %tmp_8 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0)
+ST_48: tmp_6 [1/1] 0.00ns
+.preheader:108  %tmp_6 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0)
 
 ST_48: p_addr_cast [1/1] 0.00ns
-.preheader:109  %p_addr_cast = zext i7 %tmp_8 to i8
+.preheader:109  %p_addr_cast = zext i7 %tmp_6 to i8
 
 ST_48: p_addr1 [1/1] 1.72ns
 .preheader:110  %p_addr1 = add i8 %p_addr_cast, %tmp_6_trn_cast
 
-ST_48: tmp_10 [1/1] 0.00ns
-.preheader:111  %tmp_10 = zext i8 %p_addr1 to i64
+ST_48: tmp_7 [1/1] 0.00ns
+.preheader:111  %tmp_7 = zext i8 %p_addr1 to i64
 
 ST_48: C_addr [1/1] 0.00ns
-.preheader:112  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_10
+.preheader:112  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_7
 
 ST_48: stg_419 [1/1] 2.71ns
 .preheader:113  store float %temp_1_7, float* %C_addr, align 4

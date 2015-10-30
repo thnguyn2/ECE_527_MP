@@ -4128,7 +4128,7 @@
             <Obj>
               <type>0</type>
               <id>150</id>
-              <name>i</name>
+              <name>i2</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>17</lineNumber>
@@ -4152,7 +4152,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>i_fu_833_p2</rtlName>
+              <rtlName>i2_fu_833_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -13033,6 +13033,29 @@
           </second>
         </item>
         <item>
+          <first>i2_fu_833_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>4</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>4</second>
+            </item>
+          </second>
+        </item>
+        <item>
           <first>i_1_mid2_fu_839_p3 ( Select ) </first>
           <second>
             <count>5</count>
@@ -13047,29 +13070,6 @@
             </item>
             <item>
               <first>(2P2)</first>
-              <second>4</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>4</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>i_fu_833_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
               <second>4</second>
             </item>
             <item>
@@ -14958,19 +14958,19 @@
           </second>
         </item>
         <item>
+          <first>i2_fu_833_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>150</item>
+          </second>
+        </item>
+        <item>
           <first>i_1_mid2_fu_839_p3 ( Select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>151</item>
-          </second>
-        </item>
-        <item>
-          <first>i_fu_833_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>150</item>
           </second>
         </item>
         <item>
@@ -17246,6 +17246,14 @@
         </second>
       </item>
       <item>
+        <first>i2_fu_833</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>150</item>
+        </second>
+      </item>
+      <item>
         <first>i_1_mid2_fu_839</first>
         <second>
           <count>1</count>
@@ -17259,14 +17267,6 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>140</item>
-        </second>
-      </item>
-      <item>
-        <first>i_fu_833</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>150</item>
         </second>
       </item>
       <item>

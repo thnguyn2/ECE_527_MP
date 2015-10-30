@@ -5,19 +5,19 @@
 <ModuleName>DCT</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_DCT_Loop_1_proc_fu_126</InstName>
+<InstName>grp_DCT_Loop_1_proc_fu_119</InstName>
 <ModuleName>DCT_Loop_1_proc</ModuleName>
-<ID>126</ID>
+<ID>119</ID>
 </Instance>
 <Instance>
-<InstName>grp_DCT_Loop_2_proc_fu_113</InstName>
+<InstName>grp_DCT_Loop_2_proc_fu_127</InstName>
 <ModuleName>DCT_Loop_2_proc</ModuleName>
-<ID>113</ID>
+<ID>127</ID>
 </Instance>
 <Instance>
-<InstName>grp_DCT_MAT_Multiply_fu_85</InstName>
+<InstName>grp_DCT_MAT_Multiply_fu_83</InstName>
 <ModuleName>DCT_MAT_Multiply</ModuleName>
-<ID>85</ID>
+<ID>83</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_DCT_MAT_Multiply_Loop_LoadRow_proc_fu_113</InstName>
@@ -32,9 +32,9 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_DCT_MAT_Multiply_1_fu_98</InstName>
+<InstName>grp_DCT_MAT_Multiply_1_fu_96</InstName>
 <ModuleName>DCT_MAT_Multiply_1</ModuleName>
-<ID>98</ID>
+<ID>96</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_DCT_MAT_Multiply_1_Loop_LoadRow_pr_fu_31</InstName>
@@ -49,9 +49,9 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_DCT_Loop_3_proc_fu_119</InstName>
-<ModuleName>DCT_Loop_3_proc</ModuleName>
-<ID>119</ID>
+<InstName>grp_DCT_Loop_3_proc1_fu_111</InstName>
+<ModuleName>DCT_Loop_3_proc1</ModuleName>
+<ID>111</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -67,17 +67,17 @@
 <EstimatedClockPeriod>7.09</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>66</Best-caseLatency>
-<Average-caseLatency>66</Average-caseLatency>
-<Worst-caseLatency>66</Worst-caseLatency>
-<PipelineInitiationInterval>66</PipelineInitiationInterval>
+<Best-caseLatency>67</Best-caseLatency>
+<Average-caseLatency>67</Average-caseLatency>
+<Worst-caseLatency>67</Worst-caseLatency>
+<PipelineInitiationInterval>67</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Name>Loop 1</Name>
-<TripCount>65</TripCount>
-<Latency>65</Latency>
+<TripCount>66</TripCount>
+<Latency>66</Latency>
 <IterationLatency>1</IterationLatency>
 <PipelineDepth>1</PipelineDepth>
 </Loop1>
@@ -85,8 +85,8 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>10</FF>
-<LUT>20</LUT>
+<FF>42</FF>
+<LUT>55</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -168,6 +168,17 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>DCT_Loop_1_proc</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>X_dout</name>
@@ -7257,7 +7268,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>DCT_Loop_3_proc</Name>
+<Name>DCT_Loop_3_proc1</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
@@ -7292,7 +7303,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7303,7 +7314,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7314,7 +7325,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7325,7 +7336,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7336,7 +7347,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7347,7 +7358,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7358,7 +7369,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>DCT_Loop_3_proc</Object>
+<Object>DCT_Loop_3_proc1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7399,6 +7410,17 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read</name>
+<Object>p_read</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>Ymat_address0</name>
@@ -7444,9 +7466,9 @@
 <EstimatedClockPeriod>8.46</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>892</Best-caseLatency>
-<Average-caseLatency>892</Average-caseLatency>
-<Worst-caseLatency>892</Worst-caseLatency>
+<Best-caseLatency>893</Best-caseLatency>
+<Average-caseLatency>893</Average-caseLatency>
+<Worst-caseLatency>893</Worst-caseLatency>
 <DataflowPipelineThroughput>301</DataflowPipelineThroughput>
 <PipelineInitiationInterval>301</PipelineInitiationInterval>
 <PipelineType>dataflow</PipelineType>
@@ -7456,8 +7478,8 @@
 <Resources>
 <BRAM_18K>7</BRAM_18K>
 <DSP48E>50</DSP48E>
-<FF>11765</FF>
-<LUT>19757</LUT>
+<FF>11799</FF>
+<LUT>19797</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -7518,18 +7540,6 @@
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>function_r</name>
-<Object>function_r</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-<CType>uint</CType>
 </RtlPorts>
 <RtlPorts>
 <name>Y_din</name>

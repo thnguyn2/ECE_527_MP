@@ -8,7 +8,7 @@ set isOneStateSeq 0
 set C_modelName {DCT_Loop_2_proc}
 set C_modelType { void 0 }
 set C_modelArgList { 
-	{ Xbuff float 32 regular {array 65 { 1 3 } 1 1 }  }
+	{ Xbuff float 32 regular {array 66 { 1 3 } 1 1 }  }
 	{ Xmat float 32 regular {array 64 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 

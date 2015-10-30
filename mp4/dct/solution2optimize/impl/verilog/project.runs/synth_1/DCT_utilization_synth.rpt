@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Fri Oct 30 11:26:46 2015
+| Date         : Fri Oct 30 14:59:12 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file DCT_utilization_synth.rpt -pb DCT_utilization_synth.pb
 | Design       : DCT
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 13602 |     0 |     53200 | 25.57 |
-|   LUT as Logic             |  8257 |     0 |     53200 | 15.52 |
-|   LUT as Memory            |  5345 |     0 |     17400 | 30.72 |
+| Slice LUTs*                | 13652 |     0 |     53200 | 25.66 |
+|   LUT as Logic             |  8275 |     0 |     53200 | 15.55 |
+|   LUT as Memory            |  5377 |     0 |     17400 | 30.90 |
 |     LUT as Distributed RAM |  1024 |     0 |           |       |
-|     LUT as Shift Register  |  4321 |     0 |           |       |
-| Slice Registers            | 10657 |     0 |    106400 | 10.02 |
-|   Register as Flip Flop    | 10657 |     0 |    106400 | 10.02 |
+|     LUT as Shift Register  |  4353 |     0 |           |       |
+| Slice Registers            | 10696 |     0 |    106400 | 10.05 |
+|   Register as Flip Flop    | 10696 |     0 |    106400 | 10.05 |
 |   Register as Latch        |     0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |   256 |     0 |     26600 |  0.96 |
 | F8 Muxes                   |     0 |     0 |     13300 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 423   |          Yes |         Set |            - |
-| 10234 |          Yes |       Reset |            - |
+| 426   |          Yes |         Set |            - |
+| 10270 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,18 +151,18 @@ Table of Contents
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 10234 |        Flop & Latch |
-| SRL16E   |  4320 |  Distributed Memory |
-| LUT6     |  3012 |                 LUT |
-| LUT3     |  2357 |                 LUT |
-| LUT2     |  1651 |                 LUT |
-| LUT5     |  1632 |                 LUT |
+| FDRE     | 10270 |        Flop & Latch |
+| SRL16E   |  4352 |  Distributed Memory |
+| LUT6     |  3021 |                 LUT |
+| LUT3     |  2390 |                 LUT |
+| LUT5     |  1635 |                 LUT |
+| LUT2     |  1622 |                 LUT |
 | RAMD32   |  1024 |  Distributed Memory |
-| LUT4     |   963 |                 LUT |
-| FDSE     |   423 |        Flop & Latch |
+| LUT4     |   967 |                 LUT |
+| FDSE     |   426 |        Flop & Latch |
 | MUXF7    |   256 |               MuxFx |
 | CARRY4   |   220 |          CarryLogic |
-| LUT1     |    64 |                 LUT |
+| LUT1     |    65 |                 LUT |
 | DSP48E1  |    50 |    Block Arithmetic |
 | RAMB36E1 |     3 |        Block Memory |
 | SRLC32E  |     1 |  Distributed Memory |

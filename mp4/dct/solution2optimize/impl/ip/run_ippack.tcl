@@ -34,7 +34,7 @@ set Library     "hls"
 set IPName      "DCT"
 set Version     "1.0"
 set DisplayName "Dct"
-set Revision    "1510301122"
+set Revision    "1510301454"
 set Description "IP generated for matrix transformation on 8 x 8 block"
 set Device      "zynq"
 set Taxonomy    "/VIVADO_HLS_IP"
@@ -91,18 +91,6 @@ set Interfaces {
                 Type "bool"
                 Width "1"
                 Bits "1"
-            }
-        }
-    }
-    function_r {
-        type "data"
-        dir "in"
-        width "8"
-        ctype {
-            DATA {
-                Type "integer unsigned"
-                Width "8"
-                Bits "8"
             }
         }
     }
@@ -1542,7 +1530,7 @@ if {![regexp -nocase {2014\.3.*} $vivado_version match]} {
 ipx::create_xgui_files -logo_file misc/logo.png $core
 
 ## System Info
-set user_parameters_list {clk_period 10.000000 machine 64 combinational 0 latency 892 II x}
+set user_parameters_list {clk_period 10.000000 machine 64 combinational 0 latency 893 II x}
 foreach {user_para value} $user_parameters_list {
     incr user_parameter_order
     set user_para_value [ipx::add_user_parameter $user_para $core]

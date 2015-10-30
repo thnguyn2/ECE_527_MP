@@ -330,9 +330,9 @@ architecture behav of DCT_MAT_Multiply_1_Loop_LoadRow_pr is
     signal ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_7_fu_13674_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal exitcond3_i_i8_fu_13620_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i6_fu_13634_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal tmp_5_fu_13674_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal exitcond3_i_i6_fu_13620_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal i4_fu_13634_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal j_0_i_i_mid2_fu_13626_p3 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_fu_13656_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal Tinv_addr2_cast_fu_13664_p1 : STD_LOGIC_VECTOR (7 downto 0);
@@ -1434,7 +1434,7 @@ begin
 
     Tinv_addr2_cast_fu_13664_p1 <= std_logic_vector(resize(unsigned(tmp_fu_13656_p3),8));
     Tinv_addr3_fu_13668_p2 <= std_logic_vector(unsigned(Tinv_addr2_cast_fu_13664_p1) + unsigned(tmp_3_i_trn_cast_fu_13652_p1));
-    Tinv_address0 <= tmp_7_fu_13674_p1(6 - 1 downto 0);
+    Tinv_address0 <= tmp_5_fu_13674_p1(6 - 1 downto 0);
 
     -- Tinv_ce0 assign process. --
     Tinv_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -1668,11 +1668,11 @@ begin
         end if; 
     end process;
 
-    exitcond3_i_i8_fu_13620_p2 <= "1" when (j_0_i_i_reg_92 = ap_const_lv4_8) else "0";
+    exitcond3_i_i6_fu_13620_p2 <= "1" when (j_0_i_i_reg_92 = ap_const_lv4_8) else "0";
     exitcond_flatten_fu_13608_p2 <= "1" when (indvar_flatten_reg_70 = ap_const_lv7_40) else "0";
-    i6_fu_13634_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(i_0_i_i_phi_fu_85_p4));
+    i4_fu_13634_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(i_0_i_i_phi_fu_85_p4));
     i_0_i_i_mid2_fu_13640_p3 <= 
-        i6_fu_13634_p2 when (exitcond3_i_i8_fu_13620_p2(0) = '1') else 
+        i4_fu_13634_p2 when (exitcond3_i_i6_fu_13620_p2(0) = '1') else 
         i_0_i_i_phi_fu_85_p4;
 
     -- i_0_i_i_phi_fu_85_p4 assign process. --
@@ -1687,12 +1687,12 @@ begin
 
     indvar_flatten_next_fu_13614_p2 <= std_logic_vector(unsigned(indvar_flatten_reg_70) + unsigned(ap_const_lv7_1));
     j_0_i_i_mid2_fu_13626_p3 <= 
-        ap_const_lv4_0 when (exitcond3_i_i8_fu_13620_p2(0) = '1') else 
+        ap_const_lv4_0 when (exitcond3_i_i6_fu_13620_p2(0) = '1') else 
         j_0_i_i_reg_92;
     j_fu_13683_p2 <= std_logic_vector(unsigned(j_0_i_i_mid2_fu_13626_p3) + unsigned(ap_const_lv4_1));
     tmp_20_fu_13648_p1 <= i_0_i_i_mid2_fu_13640_p3(3 - 1 downto 0);
     tmp_21_fu_13679_p1 <= j_0_i_i_mid2_fu_13626_p3(3 - 1 downto 0);
     tmp_3_i_trn_cast_fu_13652_p1 <= std_logic_vector(resize(unsigned(j_0_i_i_mid2_fu_13626_p3),8));
-    tmp_7_fu_13674_p1 <= std_logic_vector(resize(unsigned(Tinv_addr3_fu_13668_p2),64));
+    tmp_5_fu_13674_p1 <= std_logic_vector(resize(unsigned(Tinv_addr3_fu_13668_p2),64));
     tmp_fu_13656_p3 <= (i_0_i_i_mid2_fu_13640_p3 & ap_const_lv3_0);
 end behav;

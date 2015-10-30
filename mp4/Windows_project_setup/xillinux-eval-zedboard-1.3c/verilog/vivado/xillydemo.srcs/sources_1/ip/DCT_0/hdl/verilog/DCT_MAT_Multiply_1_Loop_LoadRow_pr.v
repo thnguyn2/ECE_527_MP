@@ -399,9 +399,9 @@ wire   [31:0] ap_reg_phiprechg_B_cached_7_5_2_reg_12811pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1;
-wire   [63:0] tmp_7_fu_13674_p1;
-wire   [0:0] exitcond3_i_i8_fu_13620_p2;
-wire   [3:0] i6_fu_13634_p2;
+wire   [63:0] tmp_5_fu_13674_p1;
+wire   [0:0] exitcond3_i_i6_fu_13620_p2;
+wire   [3:0] i4_fu_13634_p2;
 wire   [3:0] j_0_i_i_mid2_fu_13626_p3;
 wire   [6:0] tmp_fu_13656_p3;
 wire   [7:0] Tinv_addr2_cast_fu_13664_p1;
@@ -1484,7 +1484,7 @@ end
 
 assign Tinv_addr2_cast_fu_13664_p1 = tmp_fu_13656_p3;
 assign Tinv_addr3_fu_13668_p2 = (Tinv_addr2_cast_fu_13664_p1 + tmp_3_i_trn_cast_fu_13652_p1);
-assign Tinv_address0 = tmp_7_fu_13674_p1;
+assign Tinv_address0 = tmp_5_fu_13674_p1;
 assign ap_reg_phiprechg_B_cached_0_0_2_reg_6244pp0_it1 = 'bx;
 assign ap_reg_phiprechg_B_cached_0_1_2_reg_5647pp0_it1 = 'bx;
 assign ap_reg_phiprechg_B_cached_0_2_2_reg_5050pp0_it1 = 'bx;
@@ -1637,17 +1637,17 @@ always @ (ap_start or ap_done_reg)
 begin
     ap_sig_bdd_396 = ((ap_start == ap_const_logic_0) | (ap_done_reg == ap_const_logic_1));
 end
-assign exitcond3_i_i8_fu_13620_p2 = (j_0_i_i_reg_92 == ap_const_lv4_8? 1'b1: 1'b0);
+assign exitcond3_i_i6_fu_13620_p2 = (j_0_i_i_reg_92 == ap_const_lv4_8? 1'b1: 1'b0);
 assign exitcond_flatten_fu_13608_p2 = (indvar_flatten_reg_70 == ap_const_lv7_40? 1'b1: 1'b0);
-assign i6_fu_13634_p2 = (ap_const_lv4_1 + i_0_i_i_phi_fu_85_p4);
-assign i_0_i_i_mid2_fu_13640_p3 = ((exitcond3_i_i8_fu_13620_p2[0:0]===1'b1)? i6_fu_13634_p2: i_0_i_i_phi_fu_85_p4);
+assign i4_fu_13634_p2 = (ap_const_lv4_1 + i_0_i_i_phi_fu_85_p4);
+assign i_0_i_i_mid2_fu_13640_p3 = ((exitcond3_i_i6_fu_13620_p2[0:0]===1'b1)? i4_fu_13634_p2: i_0_i_i_phi_fu_85_p4);
 assign indvar_flatten_next_fu_13614_p2 = (indvar_flatten_reg_70 + ap_const_lv7_1);
-assign j_0_i_i_mid2_fu_13626_p3 = ((exitcond3_i_i8_fu_13620_p2[0:0]===1'b1)? ap_const_lv4_0: j_0_i_i_reg_92);
+assign j_0_i_i_mid2_fu_13626_p3 = ((exitcond3_i_i6_fu_13620_p2[0:0]===1'b1)? ap_const_lv4_0: j_0_i_i_reg_92);
 assign j_fu_13683_p2 = (j_0_i_i_mid2_fu_13626_p3 + ap_const_lv4_1);
 assign tmp_20_fu_13648_p1 = i_0_i_i_mid2_fu_13640_p3[2:0];
 assign tmp_21_fu_13679_p1 = j_0_i_i_mid2_fu_13626_p3[2:0];
 assign tmp_3_i_trn_cast_fu_13652_p1 = j_0_i_i_mid2_fu_13626_p3;
-assign tmp_7_fu_13674_p1 = Tinv_addr3_fu_13668_p2;
+assign tmp_5_fu_13674_p1 = Tinv_addr3_fu_13668_p2;
 assign tmp_fu_13656_p3 = {{i_0_i_i_mid2_fu_13640_p3}, {ap_const_lv3_0}};
 
 

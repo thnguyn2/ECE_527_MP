@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: Matrix_transform:hls:DCT:1.0
-// IP Revision: 1510301122
+// IP Revision: 1510301454
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -55,15 +55,14 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 DCT_0 your_instance_name (
-  .ap_clk(ap_clk),          // input wire ap_clk
-  .ap_rst(ap_rst),          // input wire ap_rst
-  .X_dout(X_dout),          // input wire [31 : 0] X_dout
-  .X_empty_n(X_empty_n),    // input wire X_empty_n
-  .X_read(X_read),          // output wire X_read
-  .function_r(function_r),  // input wire [7 : 0] function_r
-  .Y_din(Y_din),            // output wire [31 : 0] Y_din
-  .Y_full_n(Y_full_n),      // input wire Y_full_n
-  .Y_write(Y_write)        // output wire Y_write
+  .ap_clk(ap_clk),        // input wire ap_clk
+  .ap_rst(ap_rst),        // input wire ap_rst
+  .X_dout(X_dout),        // input wire [31 : 0] X_dout
+  .X_empty_n(X_empty_n),  // input wire X_empty_n
+  .X_read(X_read),        // output wire X_read
+  .Y_din(Y_din),          // output wire [31 : 0] Y_din
+  .Y_full_n(Y_full_n),    // input wire Y_full_n
+  .Y_write(Y_write)      // output wire Y_write
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
