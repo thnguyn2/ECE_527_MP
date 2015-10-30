@@ -9,73 +9,461 @@
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
 source DCT.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
 Command: synth_design -top DCT -part xc7z020clg484-1 -no_iobuf -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 246.605 ; gain = 68.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 253.074 ; gain = 74.457
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DCT' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v:12]
-	Parameter ap_const_logic_0 bound to: 1'b0 
-	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
-	Parameter ap_const_logic_1 bound to: 1'b1 
-	Parameter ap_true bound to: 1'b1 
 INFO: [Synth 8-638] synthesizing module 'DCT_Loop_1_proc' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:10]
-	Parameter ap_const_logic_1 bound to: 1'b1 
-	Parameter ap_const_logic_0 bound to: 1'b0 
-	Parameter ap_ST_st1_fsm_0 bound to: 3'b001 
-	Parameter ap_ST_st2_fsm_1 bound to: 3'b010 
-	Parameter ap_ST_st3_fsm_2 bound to: 3'b100 
-	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
-	Parameter ap_const_lv1_1 bound to: 1'b1 
-	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
-	Parameter ap_const_lv1_0 bound to: 1'b0 
-	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
-	Parameter ap_const_lv4_0 bound to: 4'b0000 
-	Parameter ap_const_lv7_0 bound to: 7'b0000000 
-	Parameter ap_const_lv4_8 bound to: 4'b1000 
-	Parameter ap_const_lv4_1 bound to: 4'b0001 
-	Parameter ap_const_lv7_8 bound to: 7'b0001000 
-	Parameter ap_const_lv7_1 bound to: 7'b0000001 
-	Parameter ap_true bound to: 1'b1 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:57]
-INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_1_proc' (1#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:10]
-INFO: [Synth 8-256] done synthesizing module 'DCT' (2#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v:12]
-WARNING: [Synth 8-3917] design DCT has port X_read driven by constant 0
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[31]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[30]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[29]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[28]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[27]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[26]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[25]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[24]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[23]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[22]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[21]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[20]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[19]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[18]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[17]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[16]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[15]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[14]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[13]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[12]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[11]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[10]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[9]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[8]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[7]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[6]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[5]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[4]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[3]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[2]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[1]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[0]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_empty_n
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:70]
+INFO: [Synth 8-638] synthesizing module 'DCT_fmul_32ns_32ns_32_4_max_dsp' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fmul_32ns_32ns_32_4_max_dsp.v:11]
+INFO: [Synth 8-638] synthesizing module 'DCT_ap_fmul_2_max_dsp_32' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/synth/DCT_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_0' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:84893' bound to instance 'U0' of component 'floating_point_v7_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/synth/DCT_ap_fmul_2_max_dsp_32.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'floating_point_v7_0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:85009]
+INFO: [Synth 8-3491] module 'floating_point_v7_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83233' bound to instance 'i_synth' of component 'floating_point_v7_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:85018]
+INFO: [Synth 8-638] synthesizing module 'floating_point_v7_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83361]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:6990]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:12210]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:7079]
+INFO: [Synth 8-63] RTL assertion: "in get_registers " [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:12544]
+INFO: [Synth 8-3919] null assignment ignored [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83680]
+INFO: [Synth 8-3919] null assignment ignored [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83680]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv' (1#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'flt_mult' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:49392]
+INFO: [Synth 8-638] synthesizing module 'fix_mult' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47243]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47339]
+INFO: [Synth 8-638] synthesizing module 'fix_mult_dsp48e1_sgl' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:45311]
+INFO: [Synth 8-638] synthesizing module 'dsp48e1_wrapper' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32189]
+INFO: [Synth 8-638] synthesizing module 'delay' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized1' (1#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized3' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized3' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized0' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized5' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized5' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized1' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized2' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized7' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized7' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized2' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized3' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized9' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized9' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized3' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized4' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized11' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized11' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized4' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized5' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized13' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized13' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized5' (2#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-113] binding component instance 'DSP' to cell 'DSP48E1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32422]
+INFO: [Synth 8-256] done synthesizing module 'dsp48e1_wrapper' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32189]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized6' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized15' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized15' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized6' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'dsp48e1_wrapper__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32189]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized7' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized17' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized17' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized7' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized8' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized19' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized19' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized8' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized9' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized21' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized21' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized9' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized10' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized23' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized23' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized10' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized11' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized25' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized25' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized11' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-113] binding component instance 'DSP' to cell 'DSP48E1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32422]
+INFO: [Synth 8-256] done synthesizing module 'dsp48e1_wrapper__parameterized0' (3#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32189]
+INFO: [Synth 8-256] done synthesizing module 'fix_mult_dsp48e1_sgl' (4#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:45311]
+INFO: [Synth 8-256] done synthesizing module 'fix_mult' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47243]
+INFO: [Synth 8-638] synthesizing module 'flt_mult_exp' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:48650]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized12' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized27' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized27' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized12' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized13' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized29' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized29' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized13' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'carry_chain' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27447]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'SUM_XOR' to cell 'XORCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27493]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized14' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized31' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized31' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized14' (5#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27447]
+INFO: [Synth 8-638] synthesizing module 'special_detect' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:28800]
+INFO: [Synth 8-638] synthesizing module 'compare_eq_im' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:28085]
+INFO: [Synth 8-638] synthesizing module 'carry_chain__parameterized0' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27447]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-113] binding component instance 'CARRY_MUX' to cell 'MUXCY' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27483]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized15' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized33' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized33' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized15' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-256] done synthesizing module 'carry_chain__parameterized0' (6#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:27447]
+WARNING: [Synth 8-3848] Net CARRYS_OUT in module/entity compare_eq_im does not have driver. [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:28080]
+INFO: [Synth 8-256] done synthesizing module 'compare_eq_im' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:28085]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized16' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized35' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized35' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized16' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized17' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized37' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized37' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized17' (7#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-256] done synthesizing module 'special_detect' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:28800]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized18' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized39' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized39' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized18' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized19' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized41' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized41' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized19' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized20' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized43' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized43' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized20' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized21' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized45' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized45' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized21' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized22' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized47' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized47' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized22' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized23' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized49' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized49' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized23' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized24' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized51' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized51' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized24' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized25' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized53' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized53' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized25' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized26' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized55' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized55' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized26' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized27' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized57' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized57' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized27' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized28' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized59' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized59' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized28' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized29' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized61' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized61' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized29' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized30' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized63' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized63' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized30' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized31' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized65' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized65' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized31' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized32' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized67' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized67' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized32' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized33' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized69' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized69' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized33' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized34' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized71' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized71' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized34' (8#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-256] done synthesizing module 'flt_mult_exp' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:48650]
+INFO: [Synth 8-638] synthesizing module 'flt_mult_round' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:48347]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:48359]
+INFO: [Synth 8-638] synthesizing module 'flt_round_dsp_opt_full' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47527]
+INFO: [Synth 8-638] synthesizing module 'dsp48e1_wrapper__parameterized1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32189]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized35' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized73' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized73' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized35' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized36' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized75' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized75' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized36' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized37' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized77' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized77' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized37' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized38' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized79' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized79' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized38' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized39' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized81' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized81' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized39' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized40' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized83' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized83' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized40' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-113] binding component instance 'DSP' to cell 'DSP48E1' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32422]
+INFO: [Synth 8-256] done synthesizing module 'dsp48e1_wrapper__parameterized1' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:32189]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized41' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized85' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized85' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized41' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized42' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized87' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized87' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized42' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized43' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized89' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized89' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized43' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized44' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized91' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized91' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized44' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized45' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized93' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized93' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized45' (9#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-256] done synthesizing module 'flt_round_dsp_opt_full' (10#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47527]
+INFO: [Synth 8-256] done synthesizing module 'flt_mult_round' (11#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:48347]
+INFO: [Synth 8-638] synthesizing module 'flt_dec_op_lat' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:30795]
+INFO: [Synth 8-256] done synthesizing module 'flt_dec_op_lat' (12#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:30795]
+INFO: [Synth 8-256] done synthesizing module 'flt_mult' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:49392]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized46' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized95' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized95' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized46' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized47' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized97' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized97' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized47' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized48' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized99' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized99' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized48' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized49' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized101' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized101' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized49' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized50' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized103' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized103' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized50' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized51' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized105' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized105' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized51' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized52' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+INFO: [Synth 8-3491] module 'xbip_pipe_v3_0_viv' declared at 'e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:274' bound to instance 'i_pipe' of component 'xbip_pipe_v3_0_viv' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26864]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized107' [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized107' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized52' (13#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:26844]
+WARNING: [Synth 8-3848] Net m_axis_result_tuser_not_abs in module/entity floating_point_v7_0_viv does not have driver. [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83699]
+WARNING: [Synth 8-3848] Net m_axis_result_tlast_not_abs in module/entity floating_point_v7_0_viv does not have driver. [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83701]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_v7_0_viv' (14#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:83361]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_v7_0' (15#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:85009]
+INFO: [Synth 8-256] done synthesizing module 'DCT_ap_fmul_2_max_dsp_32' (16#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/synth/DCT_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'DCT_fmul_32ns_32ns_32_4_max_dsp' (17#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fmul_32ns_32ns_32_4_max_dsp.v:11]
+INFO: [Synth 8-256] done synthesizing module 'DCT_Loop_1_proc' (18#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v:10]
+INFO: [Synth 8-256] done synthesizing module 'DCT' (19#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v:12]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[7]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[6]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[5]
@@ -85,7 +473,7 @@ WARNING: [Synth 8-3331] design DCT has unconnected port function_r[2]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[1]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 279.949 ; gain = 101.449
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 326.996 ; gain = 148.379
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -94,9 +482,43 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin MANT_DEL:D[0] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47693]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[31] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[30] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[29] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[28] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[27] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[26] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[25] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[24] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[23] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[22] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[21] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[20] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[19] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[18] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[17] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[16] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[15] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[14] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[13] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[12] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[11] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[10] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[9] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[8] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[6] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[5] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[4] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[3] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[2] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[1] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
+INFO: [Synth 8-3295] tying undriven pin \DSP48E1_SGL_EXP_IP.OLD_ADD.ADD :C_IN[0] to constant 0 [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/floating_point_v7_0/hdl/floating_point_v7_0_vh_rfs.vhd:47601]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 279.949 ; gain = 101.449
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 326.996 ; gain = 148.379
 ---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -104,33 +526,45 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.xdc]
 Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.xdc]
+Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 596.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 547.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-5544] ROM "exitcond4_i_i_fu_80_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "exitcond_fu_98_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond4_i_i_fu_69_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_fu_81_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:40 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -141,42 +575,12 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 3     
-	   2 Input      4 Bit       Adders := 2     
-+---Registers : 
-	                7 Bit    Registers := 3     
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module DCT_Loop_1_proc 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 3     
-	   2 Input      4 Bit       Adders := 2     
-+---Registers : 
-	                7 Bit    Registers := 3     
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      7 Bit        Muxes := 1     
-	   7 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -189,69 +593,17 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:40 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3917] design DCT has port X_read driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[31] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[30] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[29] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[28] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[27] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[26] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[25] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[24] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[23] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[22] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[21] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[20] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[19] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[18] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[17] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[16] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[15] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[14] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[13] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[12] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[11] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[10] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[9] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[8] driven by constant 0
-WARNING: [Synth 8-3917] design DCT has port Y_din[7] driven by constant 0
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[31]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[30]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[29]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[28]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[27]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[26]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[25]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[24]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[23]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[22]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[21]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[20]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[19]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[18]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[17]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[16]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[15]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[14]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[13]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[12]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[11]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[10]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[9]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[8]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[7]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[6]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[5]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[4]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[3]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[2]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[1]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_dout[0]
-WARNING: [Synth 8-3331] design DCT has unconnected port X_empty_n
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[7]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[6]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[5]
@@ -261,31 +613,65 @@ WARNING: [Synth 8-3331] design DCT has unconnected port function_r[2]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[1]
 WARNING: [Synth 8-3331] design DCT has unconnected port function_r[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Parallel Reinference  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 547.176 ; gain = 368.559
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DCT_Loop_1_proc_U0/ap_done_reg_reg )
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[31] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[30] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[29] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[28] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[27] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[26] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[25] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[24] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[23] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[22] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[21] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[20] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[19] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[18] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[17] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[16] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[15] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[14] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[13] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[12] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[11] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[10] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[9] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[8] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[7] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[6] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[5] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[4] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[3] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[2] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[1] ) is unused and will be removed from module DCT.
+WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din1_buf1_reg[0] ) is unused and will be removed from module DCT.
 WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/ap_done_reg_reg ) is unused and will be removed from module DCT.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 547.176 ; gain = 368.559
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 547.176 ; gain = 368.559
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -293,10 +679,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 626.824 ; gain = 448.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 627.715 ; gain = 449.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -307,14 +693,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/count_reg_129_reg[2] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/count_reg_129_reg[1] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/count_reg_129_reg[0] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/p_01_i_idx_i_reg_46_reg[2] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/p_01_i_idx_i_reg_46_reg[1] ) is unused and will be removed from module DCT.
-WARNING: [Synth 8-3332] Sequential element (\DCT_Loop_1_proc_U0/p_01_i_idx_i_reg_46_reg[0] ) is unused and will be removed from module DCT.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -332,7 +712,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -345,7 +725,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -357,13 +737,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Start Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -376,40 +756,42 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT1 |     4|
-|2     |LUT2 |     6|
-|3     |LUT3 |     5|
-|4     |LUT4 |     9|
-|5     |LUT5 |     6|
-|6     |LUT6 |     9|
-|7     |FDRE |    30|
-+------+-----+------+
-
-Report Instance Areas: 
-+------+---------------------+----------------+------+
-|      |Instance             |Module          |Cells |
-+------+---------------------+----------------+------+
-|1     |top                  |                |    69|
-|2     |  DCT_Loop_1_proc_U0 |DCT_Loop_1_proc |    69|
-+------+---------------------+----------------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |DSP48E1   |     1|
+|2     |DSP48E1_1 |     1|
+|3     |DSP48E1_2 |     1|
+|4     |LUT1      |     2|
+|5     |LUT2      |    16|
+|6     |LUT3      |    31|
+|7     |LUT4      |     8|
+|8     |LUT5      |    16|
+|9     |LUT6      |    56|
+|10    |MUXCY     |    16|
+|11    |SRL16E    |     1|
+|12    |XORCY     |     8|
+|13    |FDRE      |   171|
+|14    |FDSE      |     1|
++------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 471.938
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 596.742 ; gain = 83.707
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 418.242
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 650.555 ; gain = 226.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:59 . Memory (MB): peak = 650.555 ; gain = 471.938
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 4 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+412 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 596.742 ; gain = 404.660
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 596.742 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 08:53:24 2015...
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 650.555 ; gain = 446.699
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 650.555 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 20:19:40 2015...

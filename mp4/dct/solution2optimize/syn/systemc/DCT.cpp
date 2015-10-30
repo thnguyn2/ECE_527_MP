@@ -26,6 +26,9 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     DCT_Loop_1_proc_U0->ap_continue(DCT_Loop_1_proc_U0_ap_continue);
     DCT_Loop_1_proc_U0->ap_idle(DCT_Loop_1_proc_U0_ap_idle);
     DCT_Loop_1_proc_U0->ap_ready(DCT_Loop_1_proc_U0_ap_ready);
+    DCT_Loop_1_proc_U0->X_dout(DCT_Loop_1_proc_U0_X_dout);
+    DCT_Loop_1_proc_U0->X_empty_n(DCT_Loop_1_proc_U0_X_empty_n);
+    DCT_Loop_1_proc_U0->X_read(DCT_Loop_1_proc_U0_X_read);
     DCT_Loop_1_proc_U0->Y_din(DCT_Loop_1_proc_U0_Y_din);
     DCT_Loop_1_proc_U0->Y_full_n(DCT_Loop_1_proc_U0_Y_full_n);
     DCT_Loop_1_proc_U0->Y_write(DCT_Loop_1_proc_U0_Y_write);
@@ -34,14 +37,19 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     dont_initialize();
     sensitive << ( ap_clk.pos() );
 
+    SC_METHOD(thread_DCT_Loop_1_proc_U0_X_dout);
+    sensitive << ( X_dout );
+
+    SC_METHOD(thread_DCT_Loop_1_proc_U0_X_empty_n);
+    sensitive << ( X_empty_n );
+
     SC_METHOD(thread_DCT_Loop_1_proc_U0_Y_full_n);
     sensitive << ( Y_full_n );
 
     SC_METHOD(thread_DCT_Loop_1_proc_U0_ap_continue);
 
-    SC_METHOD(thread_DCT_Loop_1_proc_U0_ap_start);
-
     SC_METHOD(thread_X_read);
+    sensitive << ( DCT_Loop_1_proc_U0_X_read );
 
     SC_METHOD(thread_Y_din);
     sensitive << ( DCT_Loop_1_proc_U0_Y_din );
@@ -57,6 +65,7 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
 
+    DCT_Loop_1_proc_U0_ap_start = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "DCT_sc_trace_" << apTFileNum ++;
@@ -81,6 +90,9 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_ap_continue, "DCT_Loop_1_proc_U0_ap_continue");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_ap_idle, "DCT_Loop_1_proc_U0_ap_idle");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_ap_ready, "DCT_Loop_1_proc_U0_ap_ready");
+    sc_trace(mVcdFile, DCT_Loop_1_proc_U0_X_dout, "DCT_Loop_1_proc_U0_X_dout");
+    sc_trace(mVcdFile, DCT_Loop_1_proc_U0_X_empty_n, "DCT_Loop_1_proc_U0_X_empty_n");
+    sc_trace(mVcdFile, DCT_Loop_1_proc_U0_X_read, "DCT_Loop_1_proc_U0_X_read");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Y_din, "DCT_Loop_1_proc_U0_Y_din");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Y_full_n, "DCT_Loop_1_proc_U0_Y_full_n");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Y_write, "DCT_Loop_1_proc_U0_Y_write");
@@ -106,7 +118,20 @@ DCT::~DCT() {
 }
 
 void DCT::thread_ap_clk_no_reset_() {
+    if ( ap_rst.read() == ap_const_logic_1) {
+        DCT_Loop_1_proc_U0_ap_start = ap_const_logic_0;
+    } else {
+        DCT_Loop_1_proc_U0_ap_start = ap_const_logic_1;
+    }
     ap_CS = ap_const_logic_0;
+}
+
+void DCT::thread_DCT_Loop_1_proc_U0_X_dout() {
+    DCT_Loop_1_proc_U0_X_dout = X_dout.read();
+}
+
+void DCT::thread_DCT_Loop_1_proc_U0_X_empty_n() {
+    DCT_Loop_1_proc_U0_X_empty_n = X_empty_n.read();
 }
 
 void DCT::thread_DCT_Loop_1_proc_U0_Y_full_n() {
@@ -117,12 +142,8 @@ void DCT::thread_DCT_Loop_1_proc_U0_ap_continue() {
     DCT_Loop_1_proc_U0_ap_continue = ap_const_logic_1;
 }
 
-void DCT::thread_DCT_Loop_1_proc_U0_ap_start() {
-    DCT_Loop_1_proc_U0_ap_start = ap_const_logic_1;
-}
-
 void DCT::thread_X_read() {
-    X_read = ap_const_logic_0;
+    X_read = DCT_Loop_1_proc_U0_X_read.read();
 }
 
 void DCT::thread_Y_din() {

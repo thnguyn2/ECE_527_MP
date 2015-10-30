@@ -458,16 +458,33 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, 0, 0, "", "", "");
  float Xbuff[8][8];
  float YBuff[8][8];
  int count =0;
+ int temp;
+ float tempout;
  int opt_type = *X++; //Read in the type of operation to perform
  //Read in the data
  for (rowrcv=0;rowrcv<8;rowrcv++)
   for (colrcv=0;colrcv<8;colrcv++)
   {
-   Xbuff[rowrcv][colrcv]=*X++;
+   temp = *X++; //Read the input data
+   Xbuff[rowrcv][colrcv]=*(float *)&temp; //Copy the data into the array
+   tempout = Xbuff[rowrcv][colrcv]*3;
+   *Y++ = *(int *)&tempout;
    count++;
-   *Y++ = count;
   }
 
+ /*
+	//Stream the data out
+	if (count==64)
+	{
+	//Now, stream the data out when receive enough data
+	for (rowrcv=0;rowrcv<8;rowrcv++)
+		for (colrcv=0;colrcv<8;colrcv++)
+		{
+			*Y++ = Xbuff[rowrcv][colrcv];
+		}
+		count = 0;
+	}
+	*/
 
  /*
 	float temp[MAT_SIZE][MAT_SIZE];

@@ -23,9 +23,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="12" bw="0" op_0_bw="0" op_1_bw="32">
+<node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -161,9 +161,9 @@ codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="12" bw="0" op_0_bw="0" op_1_bw="32">
+<node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

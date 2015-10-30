@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT'" level="0">
-<item name = "Date">Thu Oct 29 08:49:31 2015
+<item name = "Date">Thu Oct 29 20:16:35 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 6.09, 1.25</column>
+<column name="default">10.00, 5.70, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">81, 81, 82, 82, dataflow</column>
+<column name="">401, 401, 402, 402, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_DCT_Loop_1_proc_fu_29">DCT_Loop_1_proc, 81, 81, 81, 81, none</column>
+<column name="grp_DCT_Loop_1_proc_fu_29">DCT_Loop_1_proc, 401, 401, 401, 401, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -49,19 +49,19 @@
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="Expression">-, -, -, -</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, -, 37, 51</column>
+<column name="Instance">-, 3, 232, 347</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
-<column name="Register">-, -, 1, -</column>
+<column name="Register">-, -, 2, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, ~0, ~0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="DCT_Loop_1_proc_U0">DCT_Loop_1_proc, 0, 0, 37, 51</column>
+<column name="DCT_Loop_1_proc_U0">DCT_Loop_1_proc, 0, 3, 232, 347</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -82,6 +82,7 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="DCT_Loop_1_proc_U0_ap_start">1, 0, 1, 0</column>
 <column name="ap_CS">1, 0, 1, 0</column>
 </table>
 </item>

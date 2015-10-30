@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT'
 ================================================================
-* Date:           Thu Oct 29 08:49:31 2015
+* Date:           Thu Oct 29 20:16:34 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -20,7 +20,7 @@
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |  10.00|      6.09|        1.25|
+    |default  |  10.00|      5.70|        1.25|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |   81|   81|   82|   82| dataflow |
+    |  401|  401|  402|  402| dataflow |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -128,7 +128,7 @@ IsGatedGlobalClock: 0
 
  <State 1>: 0.00ns
 ST_1: stg_3 [2/2] 0.00ns
-codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
 
 
  <State 2>: 0.00ns
@@ -157,7 +157,7 @@ ST_2: stg_11 [1/1] 0.00ns
 codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
 
 ST_2: stg_12 [1/2] 0.00ns
-codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
 
 ST_2: stg_13 [1/1] 0.00ns
 codeRepl:9  ret void

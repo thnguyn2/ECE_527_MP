@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=6.095000,HLS_SYN_LAT=81,HLS_SYN_TPT=82,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=38,HLS_SYN_LUT=51}" *)
+(* CORE_GENERATION_INFO="DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.702000,HLS_SYN_LAT=401,HLS_SYN_TPT=402,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=234,HLS_SYN_LUT=347}" *)
 
 module DCT (
         X_dout,
@@ -36,11 +36,14 @@ output   Y_write;
 input   ap_clk;
 input   ap_rst;
 
-wire    DCT_Loop_1_proc_U0_ap_start;
+reg    DCT_Loop_1_proc_U0_ap_start = 1'b0;
 wire    DCT_Loop_1_proc_U0_ap_done;
 wire    DCT_Loop_1_proc_U0_ap_continue;
 wire    DCT_Loop_1_proc_U0_ap_idle;
 wire    DCT_Loop_1_proc_U0_ap_ready;
+wire   [31:0] DCT_Loop_1_proc_U0_X_dout;
+wire    DCT_Loop_1_proc_U0_X_empty_n;
+wire    DCT_Loop_1_proc_U0_X_read;
 wire   [31:0] DCT_Loop_1_proc_U0_Y_din;
 wire    DCT_Loop_1_proc_U0_Y_full_n;
 wire    DCT_Loop_1_proc_U0_Y_write;
@@ -57,12 +60,25 @@ DCT_Loop_1_proc DCT_Loop_1_proc_U0(
     .ap_continue( DCT_Loop_1_proc_U0_ap_continue ),
     .ap_idle( DCT_Loop_1_proc_U0_ap_idle ),
     .ap_ready( DCT_Loop_1_proc_U0_ap_ready ),
+    .X_dout( DCT_Loop_1_proc_U0_X_dout ),
+    .X_empty_n( DCT_Loop_1_proc_U0_X_empty_n ),
+    .X_read( DCT_Loop_1_proc_U0_X_read ),
     .Y_din( DCT_Loop_1_proc_U0_Y_din ),
     .Y_full_n( DCT_Loop_1_proc_U0_Y_full_n ),
     .Y_write( DCT_Loop_1_proc_U0_Y_write )
 );
 
 
+
+/// DCT_Loop_1_proc_U0_ap_start assign process. ///
+always @ (posedge ap_clk)
+begin : ap_ret_DCT_Loop_1_proc_U0_ap_start
+    if (ap_rst == 1'b1) begin
+        DCT_Loop_1_proc_U0_ap_start <= ap_const_logic_0;
+    end else begin
+        DCT_Loop_1_proc_U0_ap_start <= ap_const_logic_1;
+    end
+end
 
 /// assign process. ///
 always @(posedge ap_clk)
@@ -79,10 +95,11 @@ begin
         ap_sig_hs_done = ap_const_logic_0;
     end
 end
+assign DCT_Loop_1_proc_U0_X_dout = X_dout;
+assign DCT_Loop_1_proc_U0_X_empty_n = X_empty_n;
 assign DCT_Loop_1_proc_U0_Y_full_n = Y_full_n;
 assign DCT_Loop_1_proc_U0_ap_continue = ap_const_logic_1;
-assign DCT_Loop_1_proc_U0_ap_start = ap_const_logic_1;
-assign X_read = ap_const_logic_0;
+assign X_read = DCT_Loop_1_proc_U0_X_read;
 assign Y_din = DCT_Loop_1_proc_U0_Y_din;
 assign Y_write = DCT_Loop_1_proc_U0_Y_write;
 assign ap_sig_hs_continue = ap_const_logic_0;

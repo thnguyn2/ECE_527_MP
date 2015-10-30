@@ -1,0 +1,12 @@
+
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3980009433 -regid "210667513_1777502799_210609762_424" -xml E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize..."
+    (file "E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 29 20:18:22 2015...

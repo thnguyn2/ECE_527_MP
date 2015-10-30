@@ -119,10 +119,11 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>2</count>
+					<count>3</count>
 					<item_version>0</item_version>
 					<item>16</item>
 					<item>17</item>
+					<item>18</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 			</item>
@@ -134,7 +135,7 @@
 						<name></name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>61</lineNumber>
 						<contextFuncName>DCT</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -149,7 +150,7 @@
 											<first>dct/dct.c</first>
 											<second>DCT</second>
 										</first>
-										<second>44</second>
+										<second>61</second>
 									</item>
 								</second>
 							</item>
@@ -223,7 +224,7 @@
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>2</count>
+			<count>3</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_8">
 				<id>16</id>
@@ -234,6 +235,12 @@
 			<item class_id_reference="20" object_id="_9">
 				<id>17</id>
 				<edge_type>1</edge_type>
+				<source_obj>1</source_obj>
+				<sink_obj>12</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_10">
+				<id>18</id>
+				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>12</sink_obj>
 			</item>
@@ -242,7 +249,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_10">
+		<item class_id="22" tracking_level="1" version="0" object_id="_11">
 			<mId>1</mId>
 			<mTag>DCT</mTag>
 			<mType>0</mType>
@@ -259,10 +266,10 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>81</mMinLatency>
+			<mMinLatency>401</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
-			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_11">
+			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_12">
 				<port_list class_id="24" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -270,24 +277,32 @@
 				<process_list class_id="25" tracking_level="0" version="0">
 					<count>1</count>
 					<item_version>0</item_version>
-					<item class_id="26" tracking_level="1" version="0" object_id="_12">
+					<item class_id="26" tracking_level="1" version="0" object_id="_13">
 						<type>0</type>
 						<name>DCT_Loop_1_proc_U0</name>
 						<ssdmobj_id>12</ssdmobj_id>
 						<pins class_id="27" tracking_level="0" version="0">
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
-							<item class_id="28" tracking_level="1" version="0" object_id="_13">
-								<port class_id="29" tracking_level="1" version="0" object_id="_14">
-									<name>Y</name>
+							<item class_id="28" tracking_level="1" version="0" object_id="_14">
+								<port class_id="29" tracking_level="1" version="0" object_id="_15">
+									<name>X</name>
 									<dir>0</dir>
-									<type>1</type>
+									<type>0</type>
 								</port>
-								<inst class_id="30" tracking_level="1" version="0" object_id="_15">
+								<inst class_id="30" tracking_level="1" version="0" object_id="_16">
 									<type>0</type>
 									<name>DCT_Loop_1_proc_U0</name>
 									<ssdmobj_id>12</ssdmobj_id>
 								</inst>
+							</item>
+							<item class_id_reference="28" object_id="_17">
+								<port class_id_reference="29" object_id="_18">
+									<name>Y</name>
+									<dir>0</dir>
+									<type>1</type>
+								</port>
+								<inst class_id_reference="30" object_id_reference="_16"></inst>
 							</item>
 						</pins>
 					</item>
@@ -304,7 +319,7 @@
 		</item>
 	</cdfg_regions>
 	<fsm class_id="-1"></fsm>
-	<res class_id="34" tracking_level="1" version="0" object_id="_16">
+	<res class_id="34" tracking_level="1" version="0" object_id="_19">
 		<dp_component_resource class_id="35" tracking_level="0" version="0">
 			<count>0</count>
 			<item_version>0</item_version>
@@ -378,7 +393,7 @@
 	<regions class_id="43" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="44" tracking_level="1" version="0" object_id="_17">
+		<item class_id="44" tracking_level="1" version="0" object_id="_20">
 			<region_name>DCT</region_name>
 			<basic_blocks>
 				<count>1</count>

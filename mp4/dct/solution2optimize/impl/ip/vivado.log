@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Oct 29 08:52:24 2015
-# Process ID: 10928
+# Start of session at: Thu Oct 29 20:18:03 2015
+# Process ID: 11956
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/vivado.log
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip\vivado.jou
 #-----------------------------------------------------------
@@ -11,4 +11,21 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 08:52:26 2015...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DCT_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DCT_ap_fmul_2_max_dsp_32'...
+****** Webtalk v2015.1 (64-bit)
+  **** SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+  **** IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3980009433 -regid "210667513_1777502799_210609762_424" -xml E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize..."
+    (file "E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 29 20:18:22 2015...
+close_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 216.383 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 20:18:22 2015...

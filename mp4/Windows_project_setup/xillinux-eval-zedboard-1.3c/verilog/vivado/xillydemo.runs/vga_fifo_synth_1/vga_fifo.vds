@@ -1807,3 +1807,165 @@ Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:38 ; elapsed =
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:02:10 . Memory (MB): peak = 594.012 ; gain = 413.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:02:10 . Memory (MB): peak = 594.012 ; gain = 413.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:51 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     3|
+|2     |LUT1     |     2|
+|3     |LUT2     |    42|
+|4     |LUT3     |     7|
+|5     |LUT4     |    28|
+|6     |LUT5     |     7|
+|7     |LUT6     |     7|
+|8     |MUXCY    |    20|
+|9     |RAMB18E1 |     1|
+|10    |FDCE     |   120|
+|11    |FDPE     |    22|
+|12    |FDRE     |     4|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------------------------------+---------------------------+------+
+|      |Instance                                        |Module                     |Cells |
++------+------------------------------------------------+---------------------------+------+
+|1     |top                                             |                           |   263|
+|2     |  U0                                            |fifo_generator_v12_0       |   263|
+|3     |    inst_fifo_gen                               |fifo_generator_v12_0_synth |   263|
+|4     |      \gconvfifo.rf                             |fifo_generator_top         |   263|
+|5     |        \grf.rf                                 |fifo_generator_ramfifo     |   263|
+|6     |          \gntv_or_sync_fifo.gcx.clkx           |clk_x_pntrs                |   117|
+|7     |            \gsync_stage[1].rd_stg_inst         |synchronizer_ff            |     9|
+|8     |            \gsync_stage[1].wr_stg_inst         |synchronizer_ff_3          |     9|
+|9     |            \gsync_stage[2].rd_stg_inst         |synchronizer_ff_4          |    17|
+|10    |            \gsync_stage[2].wr_stg_inst         |synchronizer_ff_5          |    17|
+|11    |          \gntv_or_sync_fifo.gl0.rd             |rd_logic                   |    47|
+|12    |            \gras.rsts                          |rd_status_flags_as         |    14|
+|13    |              c0                                |compare_1                  |     5|
+|14    |              c1                                |compare_2                  |     5|
+|15    |            rpntr                               |rd_bin_cntr                |    33|
+|16    |          \gntv_or_sync_fifo.gl0.wr             |wr_logic                   |    74|
+|17    |            \gwas.gpf.wrpf                      |wr_pf_as                   |    11|
+|18    |            \gwas.wsts                          |wr_status_flags_as         |    14|
+|19    |              c1                                |compare                    |     5|
+|20    |              c2                                |compare_0                  |     5|
+|21    |            wpntr                               |wr_bin_cntr                |    49|
+|22    |          \gntv_or_sync_fifo.mem                |memory                     |     1|
+|23    |            \gbm.gbmg.gbmga.ngecc.bmg           |blk_mem_gen_v8_2           |     1|
+|24    |              inst_blk_mem_gen                  |blk_mem_gen_v8_2_synth     |     1|
+|25    |                \gnativebmg.native_blk_mem_gen  |blk_mem_gen_top            |     1|
+|26    |                  \valid.cstr                   |blk_mem_gen_generic_cstr   |     1|
+|27    |                    \ramloop[0].ram.r           |blk_mem_gen_prim_width     |     1|
+|28    |                      \prim_noinit.ram          |blk_mem_gen_prim_wrapper   |     1|
+|29    |          rstblk                                |reset_blk_ramfifo          |    24|
++------+------------------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 604.836 ; gain = 424.004
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:01:46 . Memory (MB): peak = 604.836 ; gain = 269.906
+Synthesis Optimization Complete : Time (s): cpu = 00:01:52 ; elapsed = 00:02:11 . Memory (MB): peak = 604.836 ; gain = 424.004
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
+Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc:53]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1001.605 ; gain = 396.770
+Finished Parsing XDC File [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+93 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:06 ; elapsed = 00:02:24 . Memory (MB): peak = 1001.605 ; gain = 796.957
+INFO: [Coretcl 2-1174] Renamed 28 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1001.605 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 09:06:09 2015...

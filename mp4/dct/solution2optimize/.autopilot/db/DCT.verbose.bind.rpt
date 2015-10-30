@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT'
 ================================================================
-* Date:           Thu Oct 29 08:49:31 2015
+* Date:           Thu Oct 29 20:16:34 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -20,7 +20,7 @@
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |  10.00|      6.09|        1.25|
+    |default  |  10.00|      5.70|        1.25|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |   81|   81|   82|   82| dataflow |
+    |  401|  401|  402|  402| dataflow |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -128,7 +128,7 @@ IsGatedGlobalClock: 0
 
  <State 1>: 0.00ns
 ST_1: stg_3 [2/2] 0.00ns
-codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
 
 
  <State 2>: 0.00ns
@@ -157,7 +157,7 @@ ST_2: stg_11 [1/1] 0.00ns
 codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
 
 ST_2: stg_12 [1/2] 0.00ns
-codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+codeRepl:8  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
 
 ST_2: stg_13 [1/1] 0.00ns
 codeRepl:9  ret void
@@ -176,9 +176,9 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 1
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_none:ce=0
-Port [ X]:  wired=1; compound=1; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=3; mode=0x6fb3fe0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ function_r]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; mode=0x6fb4070; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x6fb4100; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ X]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; mode=0x73458b0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ function_r]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; mode=0x7346750; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x7345b80; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -202,7 +202,7 @@ stg_13 (ret                 ) [ 000]
 <comp_list>
 <comp id="0" class="1000" name="X">
 <pin_list>
-<pin id="1" dir="1" index="0" bw="1" slack="2147483647"/>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="X"/></StgValue>
@@ -330,7 +330,8 @@ stg_13 (ret                 ) [ 000]
 <pin_list>
 <pin id="30" dir="0" index="0" bw="0" slack="0"/>
 <pin id="31" dir="0" index="1" bw="32" slack="0"/>
-<pin id="32" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="32" dir="0" index="2" bw="32" slack="0"/>
+<pin id="33" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -341,9 +342,11 @@ stg_13 (ret                 ) [ 000]
 </comp_list>
 
 <net_list>
-<net id="33"><net_src comp="6" pin="0"/><net_sink comp="29" pin=0"/></net>
+<net id="34"><net_src comp="6" pin="0"/><net_sink comp="29" pin=0"/></net>
 
-<net id="34"><net_src comp="4" pin="0"/><net_sink comp="29" pin=1"/></net>
+<net id="35"><net_src comp="0" pin="0"/><net_sink comp="29" pin=1"/></net>
+
+<net id="36"><net_src comp="4" pin="0"/><net_sink comp="29" pin=2"/></net>
 
 </net_list>
 
@@ -363,13 +366,13 @@ stg_13 (ret                 ) [ 000]
 ============================================================
 
 * Functional unit list:
-|----------|---------------------------|---------|---------|---------|
-| Operation|      Functional Unit      |  Delay  |    FF   |   LUT   |
-|----------|---------------------------|---------|---------|---------|
-|   call   | grp_DCT_Loop_1_proc_fu_29 |  1.571  |    44   |    33   |
-|----------|---------------------------|---------|---------|---------|
-|   Total  |                           |  1.571  |    44   |    33   |
-|----------|---------------------------|---------|---------|---------|
+|----------|---------------------------|---------|---------|---------|---------|
+| Operation|      Functional Unit      |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|---------------------------|---------|---------|---------|---------|
+|   call   | grp_DCT_Loop_1_proc_fu_29 |    3    |  1.571  |   255   |   365   |
+|----------|---------------------------|---------|---------|---------|---------|
+|   Total  |                           |    3    |  1.571  |   255   |   365   |
+|----------|---------------------------|---------|---------|---------|---------|
 
 Memories:
 N/A
@@ -387,13 +390,13 @@ N/A
 
 
 * Summary:
-+-----------+--------+--------+--------+
-|           |  Delay |   FF   |   LUT  |
-+-----------+--------+--------+--------+
-|  Function |    1   |   44   |   33   |
-|   Memory  |    -   |    -   |    -   |
-|Multiplexer|    -   |    -   |    -   |
-|  Register |    -   |    -   |    -   |
-+-----------+--------+--------+--------+
-|   Total   |    1   |   44   |   33   |
-+-----------+--------+--------+--------+
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    3   |    1   |   255  |   365  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    3   |    1   |   255  |   365  |
++-----------+--------+--------+--------+--------+

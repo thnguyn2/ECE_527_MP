@@ -35,8 +35,8 @@ int main( int argc, char **argv)
 {
 //Structure definition for data read and write
 struct {
-	uint32_t v1;
-	float 	 v2;
+	int v1;
+	int v2;
 } tologic, fromlogic;
 
 int fdr, fdw;
@@ -48,8 +48,8 @@ if ((fdr<0)||(fdw<0))
 	exit(1);
 }
 
-tologic.v1 = 123;
-tologic.v2 = 0.7853242;
+tologic.v1 = 20;
+tologic.v2 = 30;
 //Write to PL
 write(fdw,(void*)&tologic,sizeof(tologic));
 printf("Wrote to PL\n");
@@ -57,9 +57,8 @@ read(fdr,(void*)&fromlogic,sizeof(fromlogic));
 
 
 printf("Returned value from the PL \n");
-printf("FPGA said: %d +1 = %d and also"
-	"sin(%f)=%f\n",
-	tologic.v1,fromlogic.v2,
+printf("Input %d -> %d and also %d ->%d",
+	tologic.v1,fromlogic.v1,
 	tologic.v2,fromlogic.v2);
 close(fdr);
 close(fdw);

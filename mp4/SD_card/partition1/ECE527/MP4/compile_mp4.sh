@@ -3,4 +3,4 @@
 
 g++ `pkg-config --cflags opencv` -g ./mp4.cpp `pkg-config --libs opencv` -o mp4.exe
 
-
+g++ `pkg-config --cflags opencv` -g ./mp4_test_tutorial.cpp `pkg-config --libs opencv` -o mp4_tut.exe

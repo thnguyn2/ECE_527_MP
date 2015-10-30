@@ -22,7 +22,7 @@ codeRepl:
   call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
-  call fastcc void @DCT_Loop_1_proc(i32* %Y)
+  call fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y)
   ret void
 }
 
@@ -48,39 +48,42 @@ entry:
   ret i32 0
 }
 
-define internal fastcc void @DCT_Loop_1_proc(i32* %Y) nounwind {
+define internal fastcc void @DCT_Loop_1_proc(i32* %X, i32* %Y) nounwind {
 newFuncRoot:
   call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
   br label %.loopexit
 
 DCT_.exit2.exitStub:                              ; preds = %.loopexit
   ret void
 
-.loopexit:                                        ; preds = %0, %newFuncRoot
-  %rowrcv_0_i_i = phi i4 [ 0, %newFuncRoot ], [ %rowrcv, %0 ]
-  %p_01_i_idx_i = phi i7 [ 0, %newFuncRoot ], [ %count, %0 ]
+.loopexit:                                        ; preds = %.preheader.i.i, %newFuncRoot
+  %rowrcv_0_i_i = phi i4 [ 0, %newFuncRoot ], [ %rowrcv, %.preheader.i.i ]
   %exitcond4_i_i = icmp eq i4 %rowrcv_0_i_i, -8
   %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
   %rowrcv = add i4 %rowrcv_0_i_i, 1
-  br i1 %exitcond4_i_i, label %DCT_.exit2.exitStub, label %1
+  br i1 %exitcond4_i_i, label %DCT_.exit2.exitStub, label %.preheader.i.i
 
-; <label>:0                                       ; preds = %2, %1
-  %p_12_rec_i_i = phi i4 [ 0, %1 ], [ %p_rec_i_i, %2 ]
-  %count_1_i_i = phi i7 [ %p_01_i_idx_i, %1 ], [ %tmp_i, %2 ]
+.preheader.i.i:                                   ; preds = %.loopexit, %0
+  %p_12_rec_i_i = phi i4 [ %p_rec_i_i, %0 ], [ 0, %.loopexit ]
   %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
   %exitcond = icmp eq i4 %p_12_rec_i_i, -8
   %p_rec_i_i = add i4 %p_12_rec_i_i, 1
-  br i1 %exitcond, label %.loopexit, label %2
+  br i1 %exitcond, label %.loopexit, label %0
 
-; <label>:1                                       ; preds = %.loopexit
-  %count = add i7 %p_01_i_idx_i, 8
-  br label %0
+; <label>:0                                       ; preds = %.preheader.i.i
+  %temp = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X) nounwind
+  %tmp_i = bitcast i32 %temp to float
+  %tmp_1_i = fmul float %tmp_i, 3.000000e+00
+  %tempout = bitcast float %tmp_1_i to i32
+  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %Y, i32 %tempout) nounwind
+  br label %.preheader.i.i
+}
 
-; <label>:2                                       ; preds = %0
-  %tmp_i = add i7 %count_1_i_i, 1
-  %tmp_i_cast = zext i7 %tmp_i to i32
-  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %Y, i32 %tmp_i_cast) nounwind
-  br label %0
+define weak i32 @_ssdm_op_Read.ap_fifo.i32P(i32*) {
+entry:
+  %empty = call i32 @_autotb_FifoRead_i32(i32* %0)
+  ret i32 %empty
 }
 
 define weak void @_ssdm_op_Write.ap_fifo.i32P(i32*, i32) {
@@ -88,6 +91,8 @@ entry:
   %empty = call i32 @_autotb_FifoWrite_i32(i32* %0, i32 %1)
   ret void
 }
+
+declare i32 @_autotb_FifoRead_i32(i32*)
 
 declare i32 @_autotb_FifoWrite_i32(i32*, i32)
 

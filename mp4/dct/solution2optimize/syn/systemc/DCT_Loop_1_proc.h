@@ -11,11 +11,12 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
+#include "DCT_fmul_32ns_32ns_32_4_max_dsp.h"
 
 namespace ap_rtl {
 
 struct DCT_Loop_1_proc : public sc_module {
-    // Port declarations 10
+    // Port declarations 13
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
@@ -23,6 +24,9 @@ struct DCT_Loop_1_proc : public sc_module {
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
+    sc_in< sc_lv<32> > X_dout;
+    sc_in< sc_logic > X_empty_n;
+    sc_out< sc_logic > X_read;
     sc_out< sc_lv<32> > Y_din;
     sc_in< sc_logic > Y_full_n;
     sc_out< sc_logic > Y_write;
@@ -36,66 +40,89 @@ struct DCT_Loop_1_proc : public sc_module {
 
     sc_trace_file* mVcdFile;
 
+    DCT_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* DCT_fmul_32ns_32ns_32_4_max_dsp_U0;
     sc_signal< sc_logic > ap_done_reg;
-    sc_signal< sc_lv<3> > ap_CS_fsm;
+    sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_logic > ap_sig_cseq_ST_st1_fsm_0;
-    sc_signal< bool > ap_sig_bdd_22;
-    sc_signal< sc_lv<4> > rowrcv_fu_86_p2;
-    sc_signal< sc_lv<4> > rowrcv_reg_124;
+    sc_signal< bool > ap_sig_bdd_27;
+    sc_signal< sc_lv<4> > rowrcv_fu_75_p2;
+    sc_signal< sc_lv<4> > rowrcv_reg_104;
     sc_signal< sc_logic > ap_sig_cseq_ST_st2_fsm_1;
-    sc_signal< bool > ap_sig_bdd_40;
-    sc_signal< sc_lv<7> > count_fu_92_p2;
-    sc_signal< sc_lv<7> > count_reg_129;
-    sc_signal< sc_lv<1> > exitcond4_i_i_fu_80_p2;
-    sc_signal< sc_lv<4> > p_rec_i_i_fu_104_p2;
+    sc_signal< bool > ap_sig_bdd_49;
+    sc_signal< sc_lv<4> > p_rec_i_i_fu_87_p2;
+    sc_signal< sc_lv<4> > p_rec_i_i_reg_112;
     sc_signal< sc_logic > ap_sig_cseq_ST_st3_fsm_2;
-    sc_signal< bool > ap_sig_bdd_55;
-    sc_signal< sc_lv<1> > exitcond_fu_98_p2;
-    sc_signal< bool > ap_sig_bdd_61;
-    sc_signal< sc_lv<7> > tmp_i_fu_110_p2;
-    sc_signal< sc_lv<4> > rowrcv_0_i_i_reg_35;
-    sc_signal< bool > ap_sig_bdd_73;
-    sc_signal< sc_lv<7> > p_01_i_idx_i_reg_46;
-    sc_signal< sc_lv<4> > p_12_rec_i_i_reg_58;
-    sc_signal< sc_lv<7> > count_1_i_i_reg_69;
-    sc_signal< sc_lv<3> > ap_NS_fsm;
+    sc_signal< bool > ap_sig_bdd_58;
+    sc_signal< sc_lv<1> > exitcond_fu_81_p2;
+    sc_signal< bool > ap_sig_bdd_65;
+    sc_signal< sc_lv<32> > temp_reg_117;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st4_fsm_3;
+    sc_signal< bool > ap_sig_bdd_78;
+    sc_signal< sc_lv<32> > grp_fu_64_p2;
+    sc_signal< sc_lv<32> > tmp_1_i_reg_127;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st7_fsm_6;
+    sc_signal< bool > ap_sig_bdd_87;
+    sc_signal< sc_lv<4> > rowrcv_0_i_i_reg_41;
+    sc_signal< bool > ap_sig_bdd_95;
+    sc_signal< sc_lv<4> > p_12_rec_i_i_reg_52;
+    sc_signal< sc_logic > ap_sig_cseq_ST_st8_fsm_7;
+    sc_signal< bool > ap_sig_bdd_107;
+    sc_signal< sc_lv<1> > exitcond4_i_i_fu_69_p2;
+    sc_signal< sc_lv<32> > grp_fu_64_p0;
+    sc_signal< sc_lv<32> > grp_fu_64_p1;
+    sc_signal< sc_logic > grp_fu_64_ce;
+    sc_signal< sc_lv<8> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
-    static const sc_lv<3> ap_ST_st1_fsm_0;
-    static const sc_lv<3> ap_ST_st2_fsm_1;
-    static const sc_lv<3> ap_ST_st3_fsm_2;
+    static const sc_lv<8> ap_ST_st1_fsm_0;
+    static const sc_lv<8> ap_ST_st2_fsm_1;
+    static const sc_lv<8> ap_ST_st3_fsm_2;
+    static const sc_lv<8> ap_ST_st4_fsm_3;
+    static const sc_lv<8> ap_ST_st5_fsm_4;
+    static const sc_lv<8> ap_ST_st6_fsm_5;
+    static const sc_lv<8> ap_ST_st7_fsm_6;
+    static const sc_lv<8> ap_ST_st8_fsm_7;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<32> ap_const_lv32_1;
-    static const sc_lv<1> ap_const_lv1_0;
     static const sc_lv<32> ap_const_lv32_2;
+    static const sc_lv<1> ap_const_lv1_0;
+    static const sc_lv<32> ap_const_lv32_3;
+    static const sc_lv<32> ap_const_lv32_6;
     static const sc_lv<4> ap_const_lv4_0;
-    static const sc_lv<7> ap_const_lv7_0;
+    static const sc_lv<32> ap_const_lv32_7;
+    static const sc_lv<32> ap_const_lv32_40400000;
     static const sc_lv<4> ap_const_lv4_8;
     static const sc_lv<4> ap_const_lv4_1;
-    static const sc_lv<7> ap_const_lv7_8;
-    static const sc_lv<7> ap_const_lv7_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();
+    void thread_X_read();
     void thread_Y_din();
     void thread_Y_write();
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
-    void thread_ap_sig_bdd_22();
-    void thread_ap_sig_bdd_40();
-    void thread_ap_sig_bdd_55();
-    void thread_ap_sig_bdd_61();
-    void thread_ap_sig_bdd_73();
+    void thread_ap_sig_bdd_107();
+    void thread_ap_sig_bdd_27();
+    void thread_ap_sig_bdd_49();
+    void thread_ap_sig_bdd_58();
+    void thread_ap_sig_bdd_65();
+    void thread_ap_sig_bdd_78();
+    void thread_ap_sig_bdd_87();
+    void thread_ap_sig_bdd_95();
     void thread_ap_sig_cseq_ST_st1_fsm_0();
     void thread_ap_sig_cseq_ST_st2_fsm_1();
     void thread_ap_sig_cseq_ST_st3_fsm_2();
-    void thread_count_fu_92_p2();
-    void thread_exitcond4_i_i_fu_80_p2();
-    void thread_exitcond_fu_98_p2();
-    void thread_p_rec_i_i_fu_104_p2();
-    void thread_rowrcv_fu_86_p2();
-    void thread_tmp_i_fu_110_p2();
+    void thread_ap_sig_cseq_ST_st4_fsm_3();
+    void thread_ap_sig_cseq_ST_st7_fsm_6();
+    void thread_ap_sig_cseq_ST_st8_fsm_7();
+    void thread_exitcond4_i_i_fu_69_p2();
+    void thread_exitcond_fu_81_p2();
+    void thread_grp_fu_64_ce();
+    void thread_grp_fu_64_p0();
+    void thread_grp_fu_64_p1();
+    void thread_p_rec_i_i_fu_87_p2();
+    void thread_rowrcv_fu_75_p2();
     void thread_ap_NS_fsm();
 };
 

@@ -44,6 +44,9 @@ struct DCT : public sc_module {
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_ap_continue;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_ap_idle;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_ap_ready;
+    sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_X_dout;
+    sc_signal< sc_logic > DCT_Loop_1_proc_U0_X_empty_n;
+    sc_signal< sc_logic > DCT_Loop_1_proc_U0_X_read;
     sc_signal< sc_lv<32> > DCT_Loop_1_proc_U0_Y_din;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_Y_full_n;
     sc_signal< sc_logic > DCT_Loop_1_proc_U0_Y_write;
@@ -56,9 +59,10 @@ struct DCT : public sc_module {
     static const bool ap_true;
     // Thread declarations
     void thread_ap_clk_no_reset_();
+    void thread_DCT_Loop_1_proc_U0_X_dout();
+    void thread_DCT_Loop_1_proc_U0_X_empty_n();
     void thread_DCT_Loop_1_proc_U0_Y_full_n();
     void thread_DCT_Loop_1_proc_U0_ap_continue();
-    void thread_DCT_Loop_1_proc_U0_ap_start();
     void thread_X_read();
     void thread_Y_din();
     void thread_Y_write();

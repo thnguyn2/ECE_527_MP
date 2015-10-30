@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Thu Oct 29 08:55:34 2015
+| Date         : Thu Oct 29 20:21:49 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -file ./report/DCT_timing_routed.rpt
 | Design       : DCT
@@ -72,14 +72,14 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 2 input ports with no input delay specified. (HIGH)
+ There are 35 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 8 ports with no output delay specified. (HIGH)
+ There are 34 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -124,7 +124,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      6.857        0.000                      0                   69        0.161        0.000                      0                   69        4.500        0.000                       0                    30  
+      2.554        0.000                      0                  299        0.166        0.000                      0                  299        4.020        0.000                       0                   171  
 
 
 All user specified timing constraints are met.
@@ -147,7 +147,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              6.857        0.000                      0                   69        0.161        0.000                      0                   69        4.500        0.000                       0                    30  
+ap_clk              2.554        0.000                      0                  299        0.166        0.000                      0                  299        4.020        0.000                       0                   171  
 
 
 ------------------------------------------------------------------------------------------------
@@ -178,28 +178,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        6.857ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.161ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        2.554ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.166ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.020ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             6.857ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/ap_CS_fsm_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/p_12_rec_i_i_reg_58_reg[0]/R
+Slack (MET) :             2.554ns  (required time - arrival time)
+  Source:                 DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/OP/RESULT_REG.NORMAL.exp_op_reg[0]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        2.528ns  (logic 0.897ns (35.477%)  route 1.631ns (64.523%))
-  Logic Levels:           2  (LUT6=2)
-  Clock Path Skew:        -0.150ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.473ns = ( 11.473 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.637ns
-    Clock Pessimism Removal (CPR):    0.014ns
+  Data Path Delay:        7.192ns  (logic 4.390ns (61.043%)  route 2.802ns (38.957%))
+  Logic Levels:           4  (DSP48E1=1 LUT5=3)
+  Clock Path Skew:        -0.152ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.464ns = ( 11.464 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.731ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -210,30 +210,36 @@ Slack (MET) :             6.857ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=29, unset)           1.637     1.637    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X50Y89         FDRE                                         r  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[2]/C
+                         net (fo=172, unset)          1.731     1.731    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X2Y27          DSP48E1                                      r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X50Y89         FDRE (Prop_fdre_C_Q)         0.478     2.115 f  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[2]/Q
-                         net (fo=4, routed)           0.687     2.802    DCT_Loop_1_proc_U0/ap_sig_bdd_55
-    SLICE_X51Y88         LUT6 (Prop_lut6_I4_O)        0.295     3.097 f  DCT_Loop_1_proc_U0/Y_write_INST_0/O
-                         net (fo=12, routed)          0.470     3.567    DCT_Loop_1_proc_U0/Y_write
-    SLICE_X50Y88         LUT6 (Prop_lut6_I5_O)        0.124     3.691 r  DCT_Loop_1_proc_U0/p_12_rec_i_i_reg_58[3]_i_1/O
-                         net (fo=4, routed)           0.474     4.165    DCT_Loop_1_proc_U0/p_12_rec_i_i_reg_58[3]_i_1_n_0
-    SLICE_X49Y88         FDRE                                         r  DCT_Loop_1_proc_U0/p_12_rec_i_i_reg_58_reg[0]/R
+    DSP48_X2Y27          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      2.500     4.231 r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[47]
+                         net (fo=1, routed)           0.002     4.233    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/RESULT_CASC[47]
+    DSP48_X2Y28          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[30])
+                                                      1.518     5.751 r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[30]
+                         net (fo=1, routed)           1.226     6.976    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP_0[23]
+    SLICE_X36Y67         LUT5 (Prop_lut5_I0_O)        0.124     7.100 r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_7/O
+                         net (fo=8, routed)           0.678     7.779    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/round_exp_inc_op
+    SLICE_X35Y72         LUT5 (Prop_lut5_I1_O)        0.124     7.903 r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/RESULT_REG.NORMAL.exp_op[0]_i_2/O
+                         net (fo=1, routed)           0.403     8.306    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/SIG_DELAY/i_pipe/DSP
+    SLICE_X35Y72         LUT5 (Prop_lut5_I0_O)        0.124     8.430 r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[0]_i_1/O
+                         net (fo=1, routed)           0.492     8.922    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/OP/D[0]
+    SLICE_X33Y72         FDRE                                         r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/OP/RESULT_REG.NORMAL.exp_op_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=29, unset)           1.473    11.473    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X49Y88         FDRE                                         r  DCT_Loop_1_proc_U0/p_12_rec_i_i_reg_58_reg[0]/C
-                         clock pessimism              0.014    11.487    
-                         clock uncertainty           -0.035    11.452    
-    SLICE_X49Y88         FDRE (Setup_fdre_C_R)       -0.429    11.023    DCT_Loop_1_proc_U0/p_12_rec_i_i_reg_58_reg[0]
+                         net (fo=172, unset)          1.464    11.464    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/OP/aclk
+    SLICE_X33Y72         FDRE                                         r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/OP/RESULT_REG.NORMAL.exp_op_reg[0]/C
+                         clock pessimism              0.115    11.579    
+                         clock uncertainty           -0.035    11.544    
+    SLICE_X33Y72         FDRE (Setup_fdre_C_D)       -0.067    11.477    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/OP/RESULT_REG.NORMAL.exp_op_reg[0]
   -------------------------------------------------------------------
-                         required time                         11.023    
-                         arrival time                          -4.165    
+                         required time                         11.477    
+                         arrival time                          -8.922    
   -------------------------------------------------------------------
-                         slack                                  6.857    
+                         slack                                  2.554    
 
 
 
@@ -241,44 +247,44 @@ Slack (MET) :             6.857ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.161ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/rowrcv_reg_124_reg[3]/C
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 DCT_Loop_1_proc_U0/temp_reg_117_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/rowrcv_0_i_i_reg_35_reg[3]/D
+  Destination:            DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din0_buf1_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.187ns  (logic 0.128ns (68.352%)  route 0.059ns (31.648%))
+  Data Path Delay:        0.273ns  (logic 0.164ns (60.044%)  route 0.109ns (39.956%))
   Logic Levels:           0  
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.818ns
-    Source Clock Delay      (SCD):    0.549ns
-    Clock Pessimism Removal (CPR):    0.253ns
+  Clock Path Skew:        0.031ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.817ns
+    Source Clock Delay      (SCD):    0.551ns
+    Clock Pessimism Removal (CPR):    0.235ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=29, unset)           0.549     0.549    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X51Y88         FDRE                                         r  DCT_Loop_1_proc_U0/rowrcv_reg_124_reg[3]/C
+                         net (fo=172, unset)          0.551     0.551    DCT_Loop_1_proc_U0/ap_clk
+    SLICE_X32Y67         FDRE                                         r  DCT_Loop_1_proc_U0/temp_reg_117_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X51Y88         FDRE (Prop_fdre_C_Q)         0.128     0.677 r  DCT_Loop_1_proc_U0/rowrcv_reg_124_reg[3]/Q
-                         net (fo=1, routed)           0.059     0.736    DCT_Loop_1_proc_U0/rowrcv_reg_124[3]
-    SLICE_X50Y88         FDRE                                         r  DCT_Loop_1_proc_U0/rowrcv_0_i_i_reg_35_reg[3]/D
+    SLICE_X32Y67         FDRE (Prop_fdre_C_Q)         0.164     0.715 r  DCT_Loop_1_proc_U0/temp_reg_117_reg[1]/Q
+                         net (fo=1, routed)           0.109     0.824    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/Q[1]
+    SLICE_X34Y67         FDRE                                         r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din0_buf1_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=29, unset)           0.818     0.818    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X50Y88         FDRE                                         r  DCT_Loop_1_proc_U0/rowrcv_0_i_i_reg_35_reg[3]/C
-                         clock pessimism             -0.253     0.565    
-    SLICE_X50Y88         FDRE (Hold_fdre_C_D)         0.010     0.575    DCT_Loop_1_proc_U0/rowrcv_0_i_i_reg_35_reg[3]
+                         net (fo=172, unset)          0.817     0.817    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/ap_clk
+    SLICE_X34Y67         FDRE                                         r  DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din0_buf1_reg[1]/C
+                         clock pessimism             -0.235     0.582    
+    SLICE_X34Y67         FDRE (Hold_fdre_C_D)         0.076     0.658    DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/din0_buf1_reg[1]
   -------------------------------------------------------------------
-                         required time                         -0.575    
-                         arrival time                           0.736    
+                         required time                         -0.658    
+                         arrival time                           0.824    
   -------------------------------------------------------------------
-                         slack                                  0.161    
+                         slack                                  0.166    
 
 
 
@@ -291,10 +297,10 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X50Y89  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X50Y89  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y88  DCT_Loop_1_proc_U0/count_reg_129_reg[3]/C
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK  n/a            2.545         10.000      7.455      DSP48_X2Y26   DCT_Loop_1_proc_U0/DCT_fmul_32ns_32ns_32_4_max_dsp_U0/DCT_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X38Y73  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[4]_srl2___DCT_Loop_1_proc_U0_ap_CS_fsm_reg_r_0/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X38Y73  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[4]_srl2___DCT_Loop_1_proc_U0_ap_CS_fsm_reg_r_0/CLK
 
 
 

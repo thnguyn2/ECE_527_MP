@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Oct 29 08:57:54 2015
-# Process ID: 10900
+# Start of session at: Thu Oct 29 20:23:26 2015
+# Process ID: 5520
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/xillydemo.vds
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -18,7 +18,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 301.234 ; gain = 122.566
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 301.758 ; gain = 122.730
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'xillydemo' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:1]
 INFO: [Synth 8-638] synthesizing module 'xillybus' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillybus.v:3]
@@ -3717,10 +3717,10 @@ INFO: [Synth 8-256] done synthesizing module 'fifo_generator_top' (81#1) [e:/Ubu
 INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v12_0_synth' (82#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_generator_v12_0/hdl/fifo_generator_v12_0_vhsyn_rfs.vhd:33314]
 INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v12_0' (83#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/fifo_generator_v12_0/hdl/fifo_generator_v12_0.vhd:665]
 INFO: [Synth 8-256] done synthesizing module 'fifo_32x512' (84#1) [e:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/vivado-essentials/fifo_32x512/synth/fifo_32x512.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'DCT_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10900-zombie/realtime/DCT_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'DCT_0' (85#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10900-zombie/realtime/DCT_0_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'fifo_8x2048' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10900-zombie/realtime/fifo_8x2048_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'fifo_8x2048' (86#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10900-zombie/realtime/fifo_8x2048_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'DCT_0' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-5520-zombie/realtime/DCT_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'DCT_0' (85#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-5520-zombie/realtime/DCT_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'fifo_8x2048' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-5520-zombie/realtime/fifo_8x2048_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'fifo_8x2048' (86#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-5520-zombie/realtime/fifo_8x2048_stub.v:7]
 INFO: [Synth 8-638] synthesizing module 'i2s_audio' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/i2s_audio.v:1]
 INFO: [Synth 8-256] done synthesizing module 'i2s_audio' (87#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/i2s_audio.v:1]
 INFO: [Synth 8-638] synthesizing module 'smbus' [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/smbus.v:1]
@@ -3740,7 +3740,7 @@ INFO: [Synth 8-638] synthesizing module 'smbus' [E:/Ubuntu_source_code_data/ECE_
 INFO: [Synth 8-256] done synthesizing module 'smbus' (88#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/smbus.v:1]
 INFO: [Synth 8-256] done synthesizing module 'xillydemo' (89#1) [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:44 ; elapsed = 00:01:54 . Memory (MB): peak = 537.059 ; gain = 358.391
+Finished RTL Elaboration : Time (s): cpu = 00:01:38 ; elapsed = 00:01:48 . Memory (MB): peak = 536.637 ; gain = 357.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3761,7 +3761,7 @@ WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_SRSTB to constant 0 [
 WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_CLK to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:116]
 WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_PORB to constant 0 [E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/verilog/src/xillydemo.v:116]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:44 ; elapsed = 00:01:54 . Memory (MB): peak = 537.059 ; gain = 358.391
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:38 ; elapsed = 00:01:48 . Memory (MB): peak = 536.637 ; gain = 357.609
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -4006,16 +4006,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 708.594 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 709.395 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:03 ; elapsed = 00:02:23 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Constraint Validation : Time (s): cpu = 00:01:56 ; elapsed = 00:02:12 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:03 ; elapsed = 00:02:23 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:56 ; elapsed = 00:02:12 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -5060,7 +5060,7 @@ Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/xillyvga_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:03 ; elapsed = 00:02:23 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:57 ; elapsed = 00:02:13 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in4" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -5108,7 +5108,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'smbus'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:06 ; elapsed = 00:02:26 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:59 ; elapsed = 00:02:16 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -5470,7 +5470,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:07 ; elapsed = 00:02:26 . Memory (MB): peak = 708.594 ; gain = 529.926
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:00 ; elapsed = 00:02:16 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -5481,9 +5481,9 @@ INFO: [Synth 8-5546] ROM "smbus/pre_en" won't be mapped to RAM because it is too
 WARNING: [Synth 8-3917] design xillydemo has port smbus_addr[1] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port smbus_addr[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:27 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:17 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:07 ; elapsed = 00:02:27 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Parallel Reinference  : Time (s): cpu = 00:02:00 ; elapsed = 00:02:17 . Memory (MB): peak = 709.395 ; gain = 530.367
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -5513,16 +5513,16 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:10 ; elapsed = 00:02:30 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Area Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:19 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:10 ; elapsed = 00:02:30 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:03 ; elapsed = 00:02:19 . Memory (MB): peak = 709.395 ; gain = 530.367
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:10 ; elapsed = 00:02:30 . Memory (MB): peak = 708.594 ; gain = 529.926
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:03 ; elapsed = 00:02:19 . Memory (MB): peak = 709.395 ; gain = 530.367
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -6550,10 +6550,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:23 ; elapsed = 00:02:43 . Memory (MB): peak = 824.250 ; gain = 645.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:15 ; elapsed = 00:02:32 . Memory (MB): peak = 825.703 ; gain = 646.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:23 ; elapsed = 00:02:44 . Memory (MB): peak = 841.223 ; gain = 662.555
+Finished Timing Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:32 . Memory (MB): peak = 841.777 ; gain = 662.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6596,7 +6596,7 @@ INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/G
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module vivado_system_rst_processing_system7_0_100M_0.
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module vivado_system_rst_processing_system7_0_100M_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:26 ; elapsed = 00:02:47 . Memory (MB): peak = 859.480 ; gain = 680.813
+Finished Technology Mapping : Time (s): cpu = 00:02:18 ; elapsed = 00:02:35 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6640,7 +6640,7 @@ INFO: [Synth 8-4163] Replicating register \audio/audio_dac_reg  to handle IOB=TR
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:27 ; elapsed = 00:02:48 . Memory (MB): peak = 859.480 ; gain = 680.813
+Finished IO Insertion : Time (s): cpu = 00:02:19 ; elapsed = 00:02:36 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -6653,7 +6653,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:27 ; elapsed = 00:02:48 . Memory (MB): peak = 859.480 ; gain = 680.813
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:19 ; elapsed = 00:02:36 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6665,13 +6665,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:28 ; elapsed = 00:02:49 . Memory (MB): peak = 859.480 ; gain = 680.813
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:20 ; elapsed = 00:02:37 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:02:28 ; elapsed = 00:02:49 . Memory (MB): peak = 859.480 ; gain = 680.813
+Start Renaming Generated Ports : Time (s): cpu = 00:02:20 ; elapsed = 00:02:37 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:28 ; elapsed = 00:02:49 . Memory (MB): peak = 859.480 ; gain = 680.813
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:20 ; elapsed = 00:02:37 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -6918,11 +6918,11 @@ Report Instance Areas:
 |167   |        xlconcat_0                                     |vivado_system_xlconcat_0_0                                  |     0|
 +------+-------------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:28 ; elapsed = 00:02:49 . Memory (MB): peak = 859.480 ; gain = 680.813
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:20 ; elapsed = 00:02:37 . Memory (MB): peak = 860.527 ; gain = 681.500
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:02:02 . Memory (MB): peak = 859.480 ; gain = 435.336
-Synthesis Optimization Complete : Time (s): cpu = 00:02:28 ; elapsed = 00:02:49 . Memory (MB): peak = 859.480 ; gain = 680.813
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:55 . Memory (MB): peak = 860.527 ; gain = 434.832
+Synthesis Optimization Complete : Time (s): cpu = 00:02:20 ; elapsed = 00:02:37 . Memory (MB): peak = 860.527 ; gain = 681.500
 INFO: [Project 1-571] Translating synthesized netlist
 Reading core file 'E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_setup/xillinux-eval-zedboard-1.3c/cores/xillybus_core.ngc' for (cell view 'xillybus_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_core_ngc_3aee5611.edif]
@@ -6934,7 +6934,7 @@ Reading core file 'E:/Ubuntu_source_code_data/ECE_527_MP/mp4/Windows_project_set
 Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_3aee5611.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_3aee5611.edif]
 INFO: [Netlist 29-17] Analyzing 3887 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Xilinx ngc2edif P_INT.20150421
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -6958,6 +6958,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 489 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:30 ; elapsed = 00:02:51 . Memory (MB): peak = 859.480 ; gain = 606.871
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 859.480 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 09:00:53 2015...
+synth_design: Time (s): cpu = 00:02:21 ; elapsed = 00:02:38 . Memory (MB): peak = 860.527 ; gain = 607.590
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.191 . Memory (MB): peak = 860.527 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 20:26:12 2015...
