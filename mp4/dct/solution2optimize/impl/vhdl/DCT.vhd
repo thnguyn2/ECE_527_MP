@@ -26,11 +26,14 @@ end;
 architecture behav of DCT is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.455000,HLS_SYN_LAT=198,HLS_SYN_TPT=132,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=31,HLS_SYN_LUT=71}";
+    "DCT,hls_ip_2015_1,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.455000,HLS_SYN_LAT=892,HLS_SYN_TPT=301,HLS_SYN_MEM=7,HLS_SYN_DSP=50,HLS_SYN_FF=11765,HLS_SYN_LUT=19757}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_true : BOOLEAN := true;
+    constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
+    constant ap_const_lv3_1 : STD_LOGIC_VECTOR (2 downto 0) := "001";
+    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
 
     signal Xbuff_i_address0 : STD_LOGIC_VECTOR (6 downto 0);
     signal Xbuff_i_ce0 : STD_LOGIC;
@@ -43,6 +46,164 @@ architecture behav of DCT is
     signal Xbuff_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
     signal Xbuff_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
     signal Xbuff_U_ap_dummy_ce : STD_LOGIC;
+    signal Xmat_i_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal Xmat_i_ce0 : STD_LOGIC;
+    signal Xmat_i_we0 : STD_LOGIC;
+    signal Xmat_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Xmat_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Xmat_t_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal Xmat_t_ce0 : STD_LOGIC;
+    signal Xmat_t_we0 : STD_LOGIC;
+    signal Xmat_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Xmat_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Xmat_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_0_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_0_i_ce0 : STD_LOGIC;
+    signal temp_0_i_we0 : STD_LOGIC;
+    signal temp_0_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_0_i_ce1 : STD_LOGIC;
+    signal temp_0_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_0_t_ce0 : STD_LOGIC;
+    signal temp_0_t_we0 : STD_LOGIC;
+    signal temp_0_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_0_t_ce1 : STD_LOGIC;
+    signal temp_0_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_1_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_1_i_ce0 : STD_LOGIC;
+    signal temp_1_i_we0 : STD_LOGIC;
+    signal temp_1_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_1_i_ce1 : STD_LOGIC;
+    signal temp_1_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_1_t_ce0 : STD_LOGIC;
+    signal temp_1_t_we0 : STD_LOGIC;
+    signal temp_1_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_1_t_ce1 : STD_LOGIC;
+    signal temp_1_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_2_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_2_i_ce0 : STD_LOGIC;
+    signal temp_2_i_we0 : STD_LOGIC;
+    signal temp_2_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_2_i_ce1 : STD_LOGIC;
+    signal temp_2_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_2_t_ce0 : STD_LOGIC;
+    signal temp_2_t_we0 : STD_LOGIC;
+    signal temp_2_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_2_t_ce1 : STD_LOGIC;
+    signal temp_2_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_3_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_3_i_ce0 : STD_LOGIC;
+    signal temp_3_i_we0 : STD_LOGIC;
+    signal temp_3_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_3_i_ce1 : STD_LOGIC;
+    signal temp_3_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_3_t_ce0 : STD_LOGIC;
+    signal temp_3_t_we0 : STD_LOGIC;
+    signal temp_3_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_3_t_ce1 : STD_LOGIC;
+    signal temp_3_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_4_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_4_i_ce0 : STD_LOGIC;
+    signal temp_4_i_we0 : STD_LOGIC;
+    signal temp_4_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_4_i_ce1 : STD_LOGIC;
+    signal temp_4_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_4_t_ce0 : STD_LOGIC;
+    signal temp_4_t_we0 : STD_LOGIC;
+    signal temp_4_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_4_t_ce1 : STD_LOGIC;
+    signal temp_4_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_5_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_5_i_ce0 : STD_LOGIC;
+    signal temp_5_i_we0 : STD_LOGIC;
+    signal temp_5_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_5_i_ce1 : STD_LOGIC;
+    signal temp_5_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_5_t_ce0 : STD_LOGIC;
+    signal temp_5_t_we0 : STD_LOGIC;
+    signal temp_5_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_5_t_ce1 : STD_LOGIC;
+    signal temp_5_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_6_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_6_i_ce0 : STD_LOGIC;
+    signal temp_6_i_we0 : STD_LOGIC;
+    signal temp_6_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_6_i_ce1 : STD_LOGIC;
+    signal temp_6_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_6_t_ce0 : STD_LOGIC;
+    signal temp_6_t_we0 : STD_LOGIC;
+    signal temp_6_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_6_t_ce1 : STD_LOGIC;
+    signal temp_6_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_U_ap_dummy_ce : STD_LOGIC;
+    signal temp_7_i_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_7_i_ce0 : STD_LOGIC;
+    signal temp_7_i_we0 : STD_LOGIC;
+    signal temp_7_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_i_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_7_i_ce1 : STD_LOGIC;
+    signal temp_7_i_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_t_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_7_t_ce0 : STD_LOGIC;
+    signal temp_7_t_we0 : STD_LOGIC;
+    signal temp_7_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_t_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal temp_7_t_ce1 : STD_LOGIC;
+    signal temp_7_t_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_U_ap_dummy_ce : STD_LOGIC;
+    signal Ymat_i_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal Ymat_i_ce0 : STD_LOGIC;
+    signal Ymat_i_we0 : STD_LOGIC;
+    signal Ymat_i_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ymat_i_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ymat_t_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal Ymat_t_ce0 : STD_LOGIC;
+    signal Ymat_t_we0 : STD_LOGIC;
+    signal Ymat_t_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ymat_t_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Ymat_U_ap_dummy_ce : STD_LOGIC;
     signal DCT_Loop_1_proc_U0_ap_start : STD_LOGIC := '0';
     signal DCT_Loop_1_proc_U0_ap_done : STD_LOGIC;
     signal DCT_Loop_1_proc_U0_ap_continue : STD_LOGIC;
@@ -62,17 +223,338 @@ architecture behav of DCT is
     signal DCT_Loop_2_proc_U0_ap_continue : STD_LOGIC;
     signal DCT_Loop_2_proc_U0_ap_idle : STD_LOGIC;
     signal DCT_Loop_2_proc_U0_ap_ready : STD_LOGIC;
-    signal DCT_Loop_2_proc_U0_Y_din : STD_LOGIC_VECTOR (31 downto 0);
-    signal DCT_Loop_2_proc_U0_Y_full_n : STD_LOGIC;
-    signal DCT_Loop_2_proc_U0_Y_write : STD_LOGIC;
     signal DCT_Loop_2_proc_U0_Xbuff_address0 : STD_LOGIC_VECTOR (6 downto 0);
     signal DCT_Loop_2_proc_U0_Xbuff_ce0 : STD_LOGIC;
     signal DCT_Loop_2_proc_U0_Xbuff_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_Loop_2_proc_U0_Xmat_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal DCT_Loop_2_proc_U0_Xmat_ce0 : STD_LOGIC;
+    signal DCT_Loop_2_proc_U0_Xmat_we0 : STD_LOGIC;
+    signal DCT_Loop_2_proc_U0_Xmat_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_chn_write_DCT_Loop_2_proc_U0_Xmat : STD_LOGIC;
+    signal DCT_Loop_2_proc_U0_Xmat_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_B_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal DCT_MAT_Multiply_U0_B_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_B_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_B_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_B_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_B_address1 : STD_LOGIC_VECTOR (5 downto 0);
+    signal DCT_MAT_Multiply_U0_B_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_B_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_B_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_B_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_0_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_0_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_0_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_0_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_0_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_0_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_0_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_0_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_0_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_0_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_1_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_1_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_1_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_1_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_1_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_1_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_1_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_1_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_1_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_1_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_2_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_2_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_2_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_2_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_2_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_2_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_2_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_2_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_2_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_2_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_3_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_3_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_3_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_3_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_3_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_3_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_3_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_3_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_3_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_3_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_4_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_4_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_4_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_4_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_4_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_4_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_4_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_4_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_4_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_4_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_5_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_5_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_5_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_5_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_5_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_5_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_5_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_5_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_5_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_5_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_6_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_6_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_6_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_6_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_6_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_6_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_6_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_6_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_6_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_6_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_7_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_7_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_7_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_7_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_7_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_7_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_U0_C_7_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_7_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_7_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_U0_C_7_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_B_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_B_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_0_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_0_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_1_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_1_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_2_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_2_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_3_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_3_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_4_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_4_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_5_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_5_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_6_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_6_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_7_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_C_7_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_ap_continue : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_ap_done : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_ap_start : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_ap_idle : STD_LOGIC;
+    signal DCT_MAT_Multiply_U0_ap_ready : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_0 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_1 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_2 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_3 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_4 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_5 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_6 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_U0_temp_7 : STD_LOGIC;
+    signal ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status : STD_LOGIC := '0';
+    signal ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A1_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A1_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A1_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A1_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A1_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A1_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A1_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A1_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A1_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A1_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A2_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A2_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A2_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A2_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A2_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A2_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A2_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A2_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A2_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A2_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A3_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A3_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A3_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A3_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A3_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A3_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A3_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A3_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A3_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A3_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A4_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A4_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A4_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A4_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A4_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A4_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A4_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A4_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A4_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A4_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A5_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A5_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A5_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A5_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A5_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A5_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A5_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A5_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A5_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A5_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A6_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A6_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A6_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A6_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A6_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A6_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A6_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A6_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A6_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A6_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A7_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A7_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A7_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A7_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A7_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A7_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A7_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A7_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A7_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_A7_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_C_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal DCT_MAT_Multiply_1_U0_C_ce0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_C_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_C_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_C_we0 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_C_address1 : STD_LOGIC_VECTOR (5 downto 0);
+    signal DCT_MAT_Multiply_1_U0_C_ce1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_C_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_C_q1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_MAT_Multiply_1_U0_C_we1 : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_ap_start : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A1_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A1_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A2_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A2_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A3_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A3_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A4_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A4_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A5_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A5_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A6_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A6_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A7_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_A7_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_C_pipo_status : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_C_pipo_update : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_ap_continue : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_ap_done : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_ap_idle : STD_LOGIC;
+    signal DCT_MAT_Multiply_1_U0_ap_ready : STD_LOGIC;
+    signal ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_start : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_done : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_continue : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_idle : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_ap_ready : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Y_din : STD_LOGIC_VECTOR (31 downto 0);
+    signal DCT_Loop_3_proc_U0_Y_full_n : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Y_write : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Ymat_address0 : STD_LOGIC_VECTOR (5 downto 0);
+    signal DCT_Loop_3_proc_U0_Ymat_ce0 : STD_LOGIC;
+    signal DCT_Loop_3_proc_U0_Ymat_q0 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_hs_continue : STD_LOGIC;
     signal Xbuff_i_full_n : STD_LOGIC;
     signal Xbuff_i_write : STD_LOGIC;
     signal Xbuff_t_empty_n : STD_LOGIC;
     signal Xbuff_t_read : STD_LOGIC;
+    signal Xmat_i_full_n : STD_LOGIC;
+    signal Xmat_i_write : STD_LOGIC;
+    signal Xmat_t_empty_n : STD_LOGIC;
+    signal Xmat_t_read : STD_LOGIC;
+    signal temp_0_i_full_n : STD_LOGIC;
+    signal temp_0_i_write : STD_LOGIC;
+    signal temp_0_t_empty_n : STD_LOGIC;
+    signal temp_0_t_read : STD_LOGIC;
+    signal temp_0_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_0_t_we1 : STD_LOGIC;
+    signal temp_1_i_full_n : STD_LOGIC;
+    signal temp_1_i_write : STD_LOGIC;
+    signal temp_1_t_empty_n : STD_LOGIC;
+    signal temp_1_t_read : STD_LOGIC;
+    signal temp_1_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_1_t_we1 : STD_LOGIC;
+    signal temp_2_i_full_n : STD_LOGIC;
+    signal temp_2_i_write : STD_LOGIC;
+    signal temp_2_t_empty_n : STD_LOGIC;
+    signal temp_2_t_read : STD_LOGIC;
+    signal temp_2_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_2_t_we1 : STD_LOGIC;
+    signal temp_3_i_full_n : STD_LOGIC;
+    signal temp_3_i_write : STD_LOGIC;
+    signal temp_3_t_empty_n : STD_LOGIC;
+    signal temp_3_t_read : STD_LOGIC;
+    signal temp_3_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_3_t_we1 : STD_LOGIC;
+    signal temp_4_i_full_n : STD_LOGIC;
+    signal temp_4_i_write : STD_LOGIC;
+    signal temp_4_t_empty_n : STD_LOGIC;
+    signal temp_4_t_read : STD_LOGIC;
+    signal temp_4_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_4_t_we1 : STD_LOGIC;
+    signal temp_5_i_full_n : STD_LOGIC;
+    signal temp_5_i_write : STD_LOGIC;
+    signal temp_5_t_empty_n : STD_LOGIC;
+    signal temp_5_t_read : STD_LOGIC;
+    signal temp_5_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_5_t_we1 : STD_LOGIC;
+    signal temp_6_i_full_n : STD_LOGIC;
+    signal temp_6_i_write : STD_LOGIC;
+    signal temp_6_t_empty_n : STD_LOGIC;
+    signal temp_6_t_read : STD_LOGIC;
+    signal temp_6_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_6_t_we1 : STD_LOGIC;
+    signal temp_7_i_full_n : STD_LOGIC;
+    signal temp_7_i_write : STD_LOGIC;
+    signal temp_7_t_empty_n : STD_LOGIC;
+    signal temp_7_t_read : STD_LOGIC;
+    signal temp_7_t_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal temp_7_t_we1 : STD_LOGIC;
+    signal Ymat_i_full_n : STD_LOGIC;
+    signal Ymat_i_write : STD_LOGIC;
+    signal Ymat_t_empty_n : STD_LOGIC;
+    signal Ymat_t_read : STD_LOGIC;
     signal ap_CS : STD_LOGIC;
     signal ap_sig_hs_done : STD_LOGIC;
 
@@ -104,12 +586,271 @@ architecture behav of DCT is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
+        Xbuff_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        Xbuff_ce0 : OUT STD_LOGIC;
+        Xbuff_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        Xmat_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
+        Xmat_ce0 : OUT STD_LOGIC;
+        Xmat_we0 : OUT STD_LOGIC;
+        Xmat_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
+    end component;
+
+
+    component DCT_MAT_Multiply IS
+    port (
+        B_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
+        B_ce0 : OUT STD_LOGIC;
+        B_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        B_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        B_we0 : OUT STD_LOGIC;
+        B_address1 : OUT STD_LOGIC_VECTOR (5 downto 0);
+        B_ce1 : OUT STD_LOGIC;
+        B_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        B_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        B_we1 : OUT STD_LOGIC;
+        C_0_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_0_ce0 : OUT STD_LOGIC;
+        C_0_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_0_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_0_we0 : OUT STD_LOGIC;
+        C_0_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_0_ce1 : OUT STD_LOGIC;
+        C_0_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_0_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_0_we1 : OUT STD_LOGIC;
+        C_1_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_1_ce0 : OUT STD_LOGIC;
+        C_1_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_1_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_1_we0 : OUT STD_LOGIC;
+        C_1_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_1_ce1 : OUT STD_LOGIC;
+        C_1_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_1_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_1_we1 : OUT STD_LOGIC;
+        C_2_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_2_ce0 : OUT STD_LOGIC;
+        C_2_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_2_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_2_we0 : OUT STD_LOGIC;
+        C_2_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_2_ce1 : OUT STD_LOGIC;
+        C_2_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_2_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_2_we1 : OUT STD_LOGIC;
+        C_3_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_3_ce0 : OUT STD_LOGIC;
+        C_3_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_3_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_3_we0 : OUT STD_LOGIC;
+        C_3_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_3_ce1 : OUT STD_LOGIC;
+        C_3_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_3_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_3_we1 : OUT STD_LOGIC;
+        C_4_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_4_ce0 : OUT STD_LOGIC;
+        C_4_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_4_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_4_we0 : OUT STD_LOGIC;
+        C_4_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_4_ce1 : OUT STD_LOGIC;
+        C_4_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_4_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_4_we1 : OUT STD_LOGIC;
+        C_5_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_5_ce0 : OUT STD_LOGIC;
+        C_5_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_5_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_5_we0 : OUT STD_LOGIC;
+        C_5_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_5_ce1 : OUT STD_LOGIC;
+        C_5_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_5_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_5_we1 : OUT STD_LOGIC;
+        C_6_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_6_ce0 : OUT STD_LOGIC;
+        C_6_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_6_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_6_we0 : OUT STD_LOGIC;
+        C_6_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_6_ce1 : OUT STD_LOGIC;
+        C_6_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_6_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_6_we1 : OUT STD_LOGIC;
+        C_7_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_7_ce0 : OUT STD_LOGIC;
+        C_7_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_7_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_7_we0 : OUT STD_LOGIC;
+        C_7_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        C_7_ce1 : OUT STD_LOGIC;
+        C_7_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_7_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_7_we1 : OUT STD_LOGIC;
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        B_pipo_status : IN STD_LOGIC;
+        B_pipo_update : OUT STD_LOGIC;
+        C_0_pipo_status : IN STD_LOGIC;
+        C_0_pipo_update : OUT STD_LOGIC;
+        C_1_pipo_status : IN STD_LOGIC;
+        C_1_pipo_update : OUT STD_LOGIC;
+        C_2_pipo_status : IN STD_LOGIC;
+        C_2_pipo_update : OUT STD_LOGIC;
+        C_3_pipo_status : IN STD_LOGIC;
+        C_3_pipo_update : OUT STD_LOGIC;
+        C_4_pipo_status : IN STD_LOGIC;
+        C_4_pipo_update : OUT STD_LOGIC;
+        C_5_pipo_status : IN STD_LOGIC;
+        C_5_pipo_update : OUT STD_LOGIC;
+        C_6_pipo_status : IN STD_LOGIC;
+        C_6_pipo_update : OUT STD_LOGIC;
+        C_7_pipo_status : IN STD_LOGIC;
+        C_7_pipo_update : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC );
+    end component;
+
+
+    component DCT_MAT_Multiply_1 IS
+    port (
+        A_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A_ce0 : OUT STD_LOGIC;
+        A_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A_we0 : OUT STD_LOGIC;
+        A_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A_ce1 : OUT STD_LOGIC;
+        A_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A_we1 : OUT STD_LOGIC;
+        A1_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A1_ce0 : OUT STD_LOGIC;
+        A1_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A1_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A1_we0 : OUT STD_LOGIC;
+        A1_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A1_ce1 : OUT STD_LOGIC;
+        A1_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A1_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A1_we1 : OUT STD_LOGIC;
+        A2_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A2_ce0 : OUT STD_LOGIC;
+        A2_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A2_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A2_we0 : OUT STD_LOGIC;
+        A2_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A2_ce1 : OUT STD_LOGIC;
+        A2_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A2_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A2_we1 : OUT STD_LOGIC;
+        A3_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A3_ce0 : OUT STD_LOGIC;
+        A3_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A3_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A3_we0 : OUT STD_LOGIC;
+        A3_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A3_ce1 : OUT STD_LOGIC;
+        A3_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A3_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A3_we1 : OUT STD_LOGIC;
+        A4_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A4_ce0 : OUT STD_LOGIC;
+        A4_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A4_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A4_we0 : OUT STD_LOGIC;
+        A4_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A4_ce1 : OUT STD_LOGIC;
+        A4_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A4_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A4_we1 : OUT STD_LOGIC;
+        A5_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A5_ce0 : OUT STD_LOGIC;
+        A5_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A5_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A5_we0 : OUT STD_LOGIC;
+        A5_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A5_ce1 : OUT STD_LOGIC;
+        A5_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A5_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A5_we1 : OUT STD_LOGIC;
+        A6_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A6_ce0 : OUT STD_LOGIC;
+        A6_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A6_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A6_we0 : OUT STD_LOGIC;
+        A6_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A6_ce1 : OUT STD_LOGIC;
+        A6_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A6_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A6_we1 : OUT STD_LOGIC;
+        A7_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A7_ce0 : OUT STD_LOGIC;
+        A7_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A7_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A7_we0 : OUT STD_LOGIC;
+        A7_address1 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        A7_ce1 : OUT STD_LOGIC;
+        A7_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        A7_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        A7_we1 : OUT STD_LOGIC;
+        C_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
+        C_ce0 : OUT STD_LOGIC;
+        C_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_we0 : OUT STD_LOGIC;
+        C_address1 : OUT STD_LOGIC_VECTOR (5 downto 0);
+        C_ce1 : OUT STD_LOGIC;
+        C_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        C_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
+        C_we1 : OUT STD_LOGIC;
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        A_pipo_status : IN STD_LOGIC;
+        A_pipo_update : OUT STD_LOGIC;
+        A1_pipo_status : IN STD_LOGIC;
+        A1_pipo_update : OUT STD_LOGIC;
+        A2_pipo_status : IN STD_LOGIC;
+        A2_pipo_update : OUT STD_LOGIC;
+        A3_pipo_status : IN STD_LOGIC;
+        A3_pipo_update : OUT STD_LOGIC;
+        A4_pipo_status : IN STD_LOGIC;
+        A4_pipo_update : OUT STD_LOGIC;
+        A5_pipo_status : IN STD_LOGIC;
+        A5_pipo_update : OUT STD_LOGIC;
+        A6_pipo_status : IN STD_LOGIC;
+        A6_pipo_update : OUT STD_LOGIC;
+        A7_pipo_status : IN STD_LOGIC;
+        A7_pipo_update : OUT STD_LOGIC;
+        C_pipo_status : IN STD_LOGIC;
+        C_pipo_update : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC );
+    end component;
+
+
+    component DCT_Loop_3_proc IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
         Y_din : OUT STD_LOGIC_VECTOR (31 downto 0);
         Y_full_n : IN STD_LOGIC;
         Y_write : OUT STD_LOGIC;
-        Xbuff_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
-        Xbuff_ce0 : OUT STD_LOGIC;
-        Xbuff_q0 : IN STD_LOGIC_VECTOR (31 downto 0) );
+        Ymat_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
+        Ymat_ce0 : OUT STD_LOGIC;
+        Ymat_q0 : IN STD_LOGIC_VECTOR (31 downto 0) );
     end component;
 
 
@@ -131,6 +872,66 @@ architecture behav of DCT is
         t_we0 : IN STD_LOGIC;
         t_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
         t_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        i_ce : IN STD_LOGIC;
+        t_ce : IN STD_LOGIC;
+        i_full_n : OUT STD_LOGIC;
+        i_write : IN STD_LOGIC;
+        t_empty_n : OUT STD_LOGIC;
+        t_read : IN STD_LOGIC );
+    end component;
+
+
+    component DCT_Xmat IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        i_address0 : IN STD_LOGIC_VECTOR (5 downto 0);
+        i_ce0 : IN STD_LOGIC;
+        i_we0 : IN STD_LOGIC;
+        i_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        t_address0 : IN STD_LOGIC_VECTOR (5 downto 0);
+        t_ce0 : IN STD_LOGIC;
+        t_we0 : IN STD_LOGIC;
+        t_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        i_ce : IN STD_LOGIC;
+        t_ce : IN STD_LOGIC;
+        i_full_n : OUT STD_LOGIC;
+        i_write : IN STD_LOGIC;
+        t_empty_n : OUT STD_LOGIC;
+        t_read : IN STD_LOGIC );
+    end component;
+
+
+    component DCT_temp_0 IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        i_address0 : IN STD_LOGIC_VECTOR (2 downto 0);
+        i_ce0 : IN STD_LOGIC;
+        i_we0 : IN STD_LOGIC;
+        i_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        i_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        i_address1 : IN STD_LOGIC_VECTOR (2 downto 0);
+        i_ce1 : IN STD_LOGIC;
+        i_q1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        t_address0 : IN STD_LOGIC_VECTOR (2 downto 0);
+        t_ce0 : IN STD_LOGIC;
+        t_we0 : IN STD_LOGIC;
+        t_d0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        t_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        t_address1 : IN STD_LOGIC_VECTOR (2 downto 0);
+        t_ce1 : IN STD_LOGIC;
+        t_q1 : OUT STD_LOGIC_VECTOR (31 downto 0);
         i_ce : IN STD_LOGIC;
         t_ce : IN STD_LOGIC;
         i_full_n : OUT STD_LOGIC;
@@ -167,6 +968,304 @@ begin
         t_empty_n => Xbuff_t_empty_n,
         t_read => Xbuff_t_read);
 
+    Xmat_U : component DCT_Xmat
+    generic map (
+        DataWidth => 32,
+        AddressRange => 64,
+        AddressWidth => 6)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => Xmat_i_address0,
+        i_ce0 => Xmat_i_ce0,
+        i_we0 => Xmat_i_we0,
+        i_d0 => Xmat_i_d0,
+        i_q0 => Xmat_i_q0,
+        t_address0 => Xmat_t_address0,
+        t_ce0 => Xmat_t_ce0,
+        t_we0 => Xmat_t_we0,
+        t_d0 => Xmat_t_d0,
+        t_q0 => Xmat_t_q0,
+        i_ce => Xmat_U_ap_dummy_ce,
+        t_ce => Xmat_U_ap_dummy_ce,
+        i_full_n => Xmat_i_full_n,
+        i_write => Xmat_i_write,
+        t_empty_n => Xmat_t_empty_n,
+        t_read => Xmat_t_read);
+
+    temp_0_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_0_i_address0,
+        i_ce0 => temp_0_i_ce0,
+        i_we0 => temp_0_i_we0,
+        i_d0 => temp_0_i_d0,
+        i_q0 => temp_0_i_q0,
+        i_address1 => temp_0_i_address1,
+        i_ce1 => temp_0_i_ce1,
+        i_q1 => temp_0_i_q1,
+        t_address0 => temp_0_t_address0,
+        t_ce0 => temp_0_t_ce0,
+        t_we0 => temp_0_t_we0,
+        t_d0 => temp_0_t_d0,
+        t_q0 => temp_0_t_q0,
+        t_address1 => temp_0_t_address1,
+        t_ce1 => temp_0_t_ce1,
+        t_q1 => temp_0_t_q1,
+        i_ce => temp_0_U_ap_dummy_ce,
+        t_ce => temp_0_U_ap_dummy_ce,
+        i_full_n => temp_0_i_full_n,
+        i_write => temp_0_i_write,
+        t_empty_n => temp_0_t_empty_n,
+        t_read => temp_0_t_read);
+
+    temp_1_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_1_i_address0,
+        i_ce0 => temp_1_i_ce0,
+        i_we0 => temp_1_i_we0,
+        i_d0 => temp_1_i_d0,
+        i_q0 => temp_1_i_q0,
+        i_address1 => temp_1_i_address1,
+        i_ce1 => temp_1_i_ce1,
+        i_q1 => temp_1_i_q1,
+        t_address0 => temp_1_t_address0,
+        t_ce0 => temp_1_t_ce0,
+        t_we0 => temp_1_t_we0,
+        t_d0 => temp_1_t_d0,
+        t_q0 => temp_1_t_q0,
+        t_address1 => temp_1_t_address1,
+        t_ce1 => temp_1_t_ce1,
+        t_q1 => temp_1_t_q1,
+        i_ce => temp_1_U_ap_dummy_ce,
+        t_ce => temp_1_U_ap_dummy_ce,
+        i_full_n => temp_1_i_full_n,
+        i_write => temp_1_i_write,
+        t_empty_n => temp_1_t_empty_n,
+        t_read => temp_1_t_read);
+
+    temp_2_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_2_i_address0,
+        i_ce0 => temp_2_i_ce0,
+        i_we0 => temp_2_i_we0,
+        i_d0 => temp_2_i_d0,
+        i_q0 => temp_2_i_q0,
+        i_address1 => temp_2_i_address1,
+        i_ce1 => temp_2_i_ce1,
+        i_q1 => temp_2_i_q1,
+        t_address0 => temp_2_t_address0,
+        t_ce0 => temp_2_t_ce0,
+        t_we0 => temp_2_t_we0,
+        t_d0 => temp_2_t_d0,
+        t_q0 => temp_2_t_q0,
+        t_address1 => temp_2_t_address1,
+        t_ce1 => temp_2_t_ce1,
+        t_q1 => temp_2_t_q1,
+        i_ce => temp_2_U_ap_dummy_ce,
+        t_ce => temp_2_U_ap_dummy_ce,
+        i_full_n => temp_2_i_full_n,
+        i_write => temp_2_i_write,
+        t_empty_n => temp_2_t_empty_n,
+        t_read => temp_2_t_read);
+
+    temp_3_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_3_i_address0,
+        i_ce0 => temp_3_i_ce0,
+        i_we0 => temp_3_i_we0,
+        i_d0 => temp_3_i_d0,
+        i_q0 => temp_3_i_q0,
+        i_address1 => temp_3_i_address1,
+        i_ce1 => temp_3_i_ce1,
+        i_q1 => temp_3_i_q1,
+        t_address0 => temp_3_t_address0,
+        t_ce0 => temp_3_t_ce0,
+        t_we0 => temp_3_t_we0,
+        t_d0 => temp_3_t_d0,
+        t_q0 => temp_3_t_q0,
+        t_address1 => temp_3_t_address1,
+        t_ce1 => temp_3_t_ce1,
+        t_q1 => temp_3_t_q1,
+        i_ce => temp_3_U_ap_dummy_ce,
+        t_ce => temp_3_U_ap_dummy_ce,
+        i_full_n => temp_3_i_full_n,
+        i_write => temp_3_i_write,
+        t_empty_n => temp_3_t_empty_n,
+        t_read => temp_3_t_read);
+
+    temp_4_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_4_i_address0,
+        i_ce0 => temp_4_i_ce0,
+        i_we0 => temp_4_i_we0,
+        i_d0 => temp_4_i_d0,
+        i_q0 => temp_4_i_q0,
+        i_address1 => temp_4_i_address1,
+        i_ce1 => temp_4_i_ce1,
+        i_q1 => temp_4_i_q1,
+        t_address0 => temp_4_t_address0,
+        t_ce0 => temp_4_t_ce0,
+        t_we0 => temp_4_t_we0,
+        t_d0 => temp_4_t_d0,
+        t_q0 => temp_4_t_q0,
+        t_address1 => temp_4_t_address1,
+        t_ce1 => temp_4_t_ce1,
+        t_q1 => temp_4_t_q1,
+        i_ce => temp_4_U_ap_dummy_ce,
+        t_ce => temp_4_U_ap_dummy_ce,
+        i_full_n => temp_4_i_full_n,
+        i_write => temp_4_i_write,
+        t_empty_n => temp_4_t_empty_n,
+        t_read => temp_4_t_read);
+
+    temp_5_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_5_i_address0,
+        i_ce0 => temp_5_i_ce0,
+        i_we0 => temp_5_i_we0,
+        i_d0 => temp_5_i_d0,
+        i_q0 => temp_5_i_q0,
+        i_address1 => temp_5_i_address1,
+        i_ce1 => temp_5_i_ce1,
+        i_q1 => temp_5_i_q1,
+        t_address0 => temp_5_t_address0,
+        t_ce0 => temp_5_t_ce0,
+        t_we0 => temp_5_t_we0,
+        t_d0 => temp_5_t_d0,
+        t_q0 => temp_5_t_q0,
+        t_address1 => temp_5_t_address1,
+        t_ce1 => temp_5_t_ce1,
+        t_q1 => temp_5_t_q1,
+        i_ce => temp_5_U_ap_dummy_ce,
+        t_ce => temp_5_U_ap_dummy_ce,
+        i_full_n => temp_5_i_full_n,
+        i_write => temp_5_i_write,
+        t_empty_n => temp_5_t_empty_n,
+        t_read => temp_5_t_read);
+
+    temp_6_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_6_i_address0,
+        i_ce0 => temp_6_i_ce0,
+        i_we0 => temp_6_i_we0,
+        i_d0 => temp_6_i_d0,
+        i_q0 => temp_6_i_q0,
+        i_address1 => temp_6_i_address1,
+        i_ce1 => temp_6_i_ce1,
+        i_q1 => temp_6_i_q1,
+        t_address0 => temp_6_t_address0,
+        t_ce0 => temp_6_t_ce0,
+        t_we0 => temp_6_t_we0,
+        t_d0 => temp_6_t_d0,
+        t_q0 => temp_6_t_q0,
+        t_address1 => temp_6_t_address1,
+        t_ce1 => temp_6_t_ce1,
+        t_q1 => temp_6_t_q1,
+        i_ce => temp_6_U_ap_dummy_ce,
+        t_ce => temp_6_U_ap_dummy_ce,
+        i_full_n => temp_6_i_full_n,
+        i_write => temp_6_i_write,
+        t_empty_n => temp_6_t_empty_n,
+        t_read => temp_6_t_read);
+
+    temp_7_U : component DCT_temp_0
+    generic map (
+        DataWidth => 32,
+        AddressRange => 8,
+        AddressWidth => 3)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => temp_7_i_address0,
+        i_ce0 => temp_7_i_ce0,
+        i_we0 => temp_7_i_we0,
+        i_d0 => temp_7_i_d0,
+        i_q0 => temp_7_i_q0,
+        i_address1 => temp_7_i_address1,
+        i_ce1 => temp_7_i_ce1,
+        i_q1 => temp_7_i_q1,
+        t_address0 => temp_7_t_address0,
+        t_ce0 => temp_7_t_ce0,
+        t_we0 => temp_7_t_we0,
+        t_d0 => temp_7_t_d0,
+        t_q0 => temp_7_t_q0,
+        t_address1 => temp_7_t_address1,
+        t_ce1 => temp_7_t_ce1,
+        t_q1 => temp_7_t_q1,
+        i_ce => temp_7_U_ap_dummy_ce,
+        t_ce => temp_7_U_ap_dummy_ce,
+        i_full_n => temp_7_i_full_n,
+        i_write => temp_7_i_write,
+        t_empty_n => temp_7_t_empty_n,
+        t_read => temp_7_t_read);
+
+    Ymat_U : component DCT_Xmat
+    generic map (
+        DataWidth => 32,
+        AddressRange => 64,
+        AddressWidth => 6)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        i_address0 => Ymat_i_address0,
+        i_ce0 => Ymat_i_ce0,
+        i_we0 => Ymat_i_we0,
+        i_d0 => Ymat_i_d0,
+        i_q0 => Ymat_i_q0,
+        t_address0 => Ymat_t_address0,
+        t_ce0 => Ymat_t_ce0,
+        t_we0 => Ymat_t_we0,
+        t_d0 => Ymat_t_d0,
+        t_q0 => Ymat_t_q0,
+        i_ce => Ymat_U_ap_dummy_ce,
+        t_ce => Ymat_U_ap_dummy_ce,
+        i_full_n => Ymat_i_full_n,
+        i_write => Ymat_i_write,
+        t_empty_n => Ymat_t_empty_n,
+        t_read => Ymat_t_read);
+
     DCT_Loop_1_proc_U0 : component DCT_Loop_1_proc
     port map (
         ap_clk => ap_clk,
@@ -193,12 +1292,265 @@ begin
         ap_continue => DCT_Loop_2_proc_U0_ap_continue,
         ap_idle => DCT_Loop_2_proc_U0_ap_idle,
         ap_ready => DCT_Loop_2_proc_U0_ap_ready,
-        Y_din => DCT_Loop_2_proc_U0_Y_din,
-        Y_full_n => DCT_Loop_2_proc_U0_Y_full_n,
-        Y_write => DCT_Loop_2_proc_U0_Y_write,
         Xbuff_address0 => DCT_Loop_2_proc_U0_Xbuff_address0,
         Xbuff_ce0 => DCT_Loop_2_proc_U0_Xbuff_ce0,
-        Xbuff_q0 => DCT_Loop_2_proc_U0_Xbuff_q0);
+        Xbuff_q0 => DCT_Loop_2_proc_U0_Xbuff_q0,
+        Xmat_address0 => DCT_Loop_2_proc_U0_Xmat_address0,
+        Xmat_ce0 => DCT_Loop_2_proc_U0_Xmat_ce0,
+        Xmat_we0 => DCT_Loop_2_proc_U0_Xmat_we0,
+        Xmat_d0 => DCT_Loop_2_proc_U0_Xmat_d0);
+
+    DCT_MAT_Multiply_U0 : component DCT_MAT_Multiply
+    port map (
+        B_address0 => DCT_MAT_Multiply_U0_B_address0,
+        B_ce0 => DCT_MAT_Multiply_U0_B_ce0,
+        B_d0 => DCT_MAT_Multiply_U0_B_d0,
+        B_q0 => DCT_MAT_Multiply_U0_B_q0,
+        B_we0 => DCT_MAT_Multiply_U0_B_we0,
+        B_address1 => DCT_MAT_Multiply_U0_B_address1,
+        B_ce1 => DCT_MAT_Multiply_U0_B_ce1,
+        B_d1 => DCT_MAT_Multiply_U0_B_d1,
+        B_q1 => DCT_MAT_Multiply_U0_B_q1,
+        B_we1 => DCT_MAT_Multiply_U0_B_we1,
+        C_0_address0 => DCT_MAT_Multiply_U0_C_0_address0,
+        C_0_ce0 => DCT_MAT_Multiply_U0_C_0_ce0,
+        C_0_d0 => DCT_MAT_Multiply_U0_C_0_d0,
+        C_0_q0 => DCT_MAT_Multiply_U0_C_0_q0,
+        C_0_we0 => DCT_MAT_Multiply_U0_C_0_we0,
+        C_0_address1 => DCT_MAT_Multiply_U0_C_0_address1,
+        C_0_ce1 => DCT_MAT_Multiply_U0_C_0_ce1,
+        C_0_d1 => DCT_MAT_Multiply_U0_C_0_d1,
+        C_0_q1 => DCT_MAT_Multiply_U0_C_0_q1,
+        C_0_we1 => DCT_MAT_Multiply_U0_C_0_we1,
+        C_1_address0 => DCT_MAT_Multiply_U0_C_1_address0,
+        C_1_ce0 => DCT_MAT_Multiply_U0_C_1_ce0,
+        C_1_d0 => DCT_MAT_Multiply_U0_C_1_d0,
+        C_1_q0 => DCT_MAT_Multiply_U0_C_1_q0,
+        C_1_we0 => DCT_MAT_Multiply_U0_C_1_we0,
+        C_1_address1 => DCT_MAT_Multiply_U0_C_1_address1,
+        C_1_ce1 => DCT_MAT_Multiply_U0_C_1_ce1,
+        C_1_d1 => DCT_MAT_Multiply_U0_C_1_d1,
+        C_1_q1 => DCT_MAT_Multiply_U0_C_1_q1,
+        C_1_we1 => DCT_MAT_Multiply_U0_C_1_we1,
+        C_2_address0 => DCT_MAT_Multiply_U0_C_2_address0,
+        C_2_ce0 => DCT_MAT_Multiply_U0_C_2_ce0,
+        C_2_d0 => DCT_MAT_Multiply_U0_C_2_d0,
+        C_2_q0 => DCT_MAT_Multiply_U0_C_2_q0,
+        C_2_we0 => DCT_MAT_Multiply_U0_C_2_we0,
+        C_2_address1 => DCT_MAT_Multiply_U0_C_2_address1,
+        C_2_ce1 => DCT_MAT_Multiply_U0_C_2_ce1,
+        C_2_d1 => DCT_MAT_Multiply_U0_C_2_d1,
+        C_2_q1 => DCT_MAT_Multiply_U0_C_2_q1,
+        C_2_we1 => DCT_MAT_Multiply_U0_C_2_we1,
+        C_3_address0 => DCT_MAT_Multiply_U0_C_3_address0,
+        C_3_ce0 => DCT_MAT_Multiply_U0_C_3_ce0,
+        C_3_d0 => DCT_MAT_Multiply_U0_C_3_d0,
+        C_3_q0 => DCT_MAT_Multiply_U0_C_3_q0,
+        C_3_we0 => DCT_MAT_Multiply_U0_C_3_we0,
+        C_3_address1 => DCT_MAT_Multiply_U0_C_3_address1,
+        C_3_ce1 => DCT_MAT_Multiply_U0_C_3_ce1,
+        C_3_d1 => DCT_MAT_Multiply_U0_C_3_d1,
+        C_3_q1 => DCT_MAT_Multiply_U0_C_3_q1,
+        C_3_we1 => DCT_MAT_Multiply_U0_C_3_we1,
+        C_4_address0 => DCT_MAT_Multiply_U0_C_4_address0,
+        C_4_ce0 => DCT_MAT_Multiply_U0_C_4_ce0,
+        C_4_d0 => DCT_MAT_Multiply_U0_C_4_d0,
+        C_4_q0 => DCT_MAT_Multiply_U0_C_4_q0,
+        C_4_we0 => DCT_MAT_Multiply_U0_C_4_we0,
+        C_4_address1 => DCT_MAT_Multiply_U0_C_4_address1,
+        C_4_ce1 => DCT_MAT_Multiply_U0_C_4_ce1,
+        C_4_d1 => DCT_MAT_Multiply_U0_C_4_d1,
+        C_4_q1 => DCT_MAT_Multiply_U0_C_4_q1,
+        C_4_we1 => DCT_MAT_Multiply_U0_C_4_we1,
+        C_5_address0 => DCT_MAT_Multiply_U0_C_5_address0,
+        C_5_ce0 => DCT_MAT_Multiply_U0_C_5_ce0,
+        C_5_d0 => DCT_MAT_Multiply_U0_C_5_d0,
+        C_5_q0 => DCT_MAT_Multiply_U0_C_5_q0,
+        C_5_we0 => DCT_MAT_Multiply_U0_C_5_we0,
+        C_5_address1 => DCT_MAT_Multiply_U0_C_5_address1,
+        C_5_ce1 => DCT_MAT_Multiply_U0_C_5_ce1,
+        C_5_d1 => DCT_MAT_Multiply_U0_C_5_d1,
+        C_5_q1 => DCT_MAT_Multiply_U0_C_5_q1,
+        C_5_we1 => DCT_MAT_Multiply_U0_C_5_we1,
+        C_6_address0 => DCT_MAT_Multiply_U0_C_6_address0,
+        C_6_ce0 => DCT_MAT_Multiply_U0_C_6_ce0,
+        C_6_d0 => DCT_MAT_Multiply_U0_C_6_d0,
+        C_6_q0 => DCT_MAT_Multiply_U0_C_6_q0,
+        C_6_we0 => DCT_MAT_Multiply_U0_C_6_we0,
+        C_6_address1 => DCT_MAT_Multiply_U0_C_6_address1,
+        C_6_ce1 => DCT_MAT_Multiply_U0_C_6_ce1,
+        C_6_d1 => DCT_MAT_Multiply_U0_C_6_d1,
+        C_6_q1 => DCT_MAT_Multiply_U0_C_6_q1,
+        C_6_we1 => DCT_MAT_Multiply_U0_C_6_we1,
+        C_7_address0 => DCT_MAT_Multiply_U0_C_7_address0,
+        C_7_ce0 => DCT_MAT_Multiply_U0_C_7_ce0,
+        C_7_d0 => DCT_MAT_Multiply_U0_C_7_d0,
+        C_7_q0 => DCT_MAT_Multiply_U0_C_7_q0,
+        C_7_we0 => DCT_MAT_Multiply_U0_C_7_we0,
+        C_7_address1 => DCT_MAT_Multiply_U0_C_7_address1,
+        C_7_ce1 => DCT_MAT_Multiply_U0_C_7_ce1,
+        C_7_d1 => DCT_MAT_Multiply_U0_C_7_d1,
+        C_7_q1 => DCT_MAT_Multiply_U0_C_7_q1,
+        C_7_we1 => DCT_MAT_Multiply_U0_C_7_we1,
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        B_pipo_status => DCT_MAT_Multiply_U0_B_pipo_status,
+        B_pipo_update => DCT_MAT_Multiply_U0_B_pipo_update,
+        C_0_pipo_status => DCT_MAT_Multiply_U0_C_0_pipo_status,
+        C_0_pipo_update => DCT_MAT_Multiply_U0_C_0_pipo_update,
+        C_1_pipo_status => DCT_MAT_Multiply_U0_C_1_pipo_status,
+        C_1_pipo_update => DCT_MAT_Multiply_U0_C_1_pipo_update,
+        C_2_pipo_status => DCT_MAT_Multiply_U0_C_2_pipo_status,
+        C_2_pipo_update => DCT_MAT_Multiply_U0_C_2_pipo_update,
+        C_3_pipo_status => DCT_MAT_Multiply_U0_C_3_pipo_status,
+        C_3_pipo_update => DCT_MAT_Multiply_U0_C_3_pipo_update,
+        C_4_pipo_status => DCT_MAT_Multiply_U0_C_4_pipo_status,
+        C_4_pipo_update => DCT_MAT_Multiply_U0_C_4_pipo_update,
+        C_5_pipo_status => DCT_MAT_Multiply_U0_C_5_pipo_status,
+        C_5_pipo_update => DCT_MAT_Multiply_U0_C_5_pipo_update,
+        C_6_pipo_status => DCT_MAT_Multiply_U0_C_6_pipo_status,
+        C_6_pipo_update => DCT_MAT_Multiply_U0_C_6_pipo_update,
+        C_7_pipo_status => DCT_MAT_Multiply_U0_C_7_pipo_status,
+        C_7_pipo_update => DCT_MAT_Multiply_U0_C_7_pipo_update,
+        ap_continue => DCT_MAT_Multiply_U0_ap_continue,
+        ap_done => DCT_MAT_Multiply_U0_ap_done,
+        ap_start => DCT_MAT_Multiply_U0_ap_start,
+        ap_idle => DCT_MAT_Multiply_U0_ap_idle,
+        ap_ready => DCT_MAT_Multiply_U0_ap_ready);
+
+    DCT_MAT_Multiply_1_U0 : component DCT_MAT_Multiply_1
+    port map (
+        A_address0 => DCT_MAT_Multiply_1_U0_A_address0,
+        A_ce0 => DCT_MAT_Multiply_1_U0_A_ce0,
+        A_d0 => DCT_MAT_Multiply_1_U0_A_d0,
+        A_q0 => DCT_MAT_Multiply_1_U0_A_q0,
+        A_we0 => DCT_MAT_Multiply_1_U0_A_we0,
+        A_address1 => DCT_MAT_Multiply_1_U0_A_address1,
+        A_ce1 => DCT_MAT_Multiply_1_U0_A_ce1,
+        A_d1 => DCT_MAT_Multiply_1_U0_A_d1,
+        A_q1 => DCT_MAT_Multiply_1_U0_A_q1,
+        A_we1 => DCT_MAT_Multiply_1_U0_A_we1,
+        A1_address0 => DCT_MAT_Multiply_1_U0_A1_address0,
+        A1_ce0 => DCT_MAT_Multiply_1_U0_A1_ce0,
+        A1_d0 => DCT_MAT_Multiply_1_U0_A1_d0,
+        A1_q0 => DCT_MAT_Multiply_1_U0_A1_q0,
+        A1_we0 => DCT_MAT_Multiply_1_U0_A1_we0,
+        A1_address1 => DCT_MAT_Multiply_1_U0_A1_address1,
+        A1_ce1 => DCT_MAT_Multiply_1_U0_A1_ce1,
+        A1_d1 => DCT_MAT_Multiply_1_U0_A1_d1,
+        A1_q1 => DCT_MAT_Multiply_1_U0_A1_q1,
+        A1_we1 => DCT_MAT_Multiply_1_U0_A1_we1,
+        A2_address0 => DCT_MAT_Multiply_1_U0_A2_address0,
+        A2_ce0 => DCT_MAT_Multiply_1_U0_A2_ce0,
+        A2_d0 => DCT_MAT_Multiply_1_U0_A2_d0,
+        A2_q0 => DCT_MAT_Multiply_1_U0_A2_q0,
+        A2_we0 => DCT_MAT_Multiply_1_U0_A2_we0,
+        A2_address1 => DCT_MAT_Multiply_1_U0_A2_address1,
+        A2_ce1 => DCT_MAT_Multiply_1_U0_A2_ce1,
+        A2_d1 => DCT_MAT_Multiply_1_U0_A2_d1,
+        A2_q1 => DCT_MAT_Multiply_1_U0_A2_q1,
+        A2_we1 => DCT_MAT_Multiply_1_U0_A2_we1,
+        A3_address0 => DCT_MAT_Multiply_1_U0_A3_address0,
+        A3_ce0 => DCT_MAT_Multiply_1_U0_A3_ce0,
+        A3_d0 => DCT_MAT_Multiply_1_U0_A3_d0,
+        A3_q0 => DCT_MAT_Multiply_1_U0_A3_q0,
+        A3_we0 => DCT_MAT_Multiply_1_U0_A3_we0,
+        A3_address1 => DCT_MAT_Multiply_1_U0_A3_address1,
+        A3_ce1 => DCT_MAT_Multiply_1_U0_A3_ce1,
+        A3_d1 => DCT_MAT_Multiply_1_U0_A3_d1,
+        A3_q1 => DCT_MAT_Multiply_1_U0_A3_q1,
+        A3_we1 => DCT_MAT_Multiply_1_U0_A3_we1,
+        A4_address0 => DCT_MAT_Multiply_1_U0_A4_address0,
+        A4_ce0 => DCT_MAT_Multiply_1_U0_A4_ce0,
+        A4_d0 => DCT_MAT_Multiply_1_U0_A4_d0,
+        A4_q0 => DCT_MAT_Multiply_1_U0_A4_q0,
+        A4_we0 => DCT_MAT_Multiply_1_U0_A4_we0,
+        A4_address1 => DCT_MAT_Multiply_1_U0_A4_address1,
+        A4_ce1 => DCT_MAT_Multiply_1_U0_A4_ce1,
+        A4_d1 => DCT_MAT_Multiply_1_U0_A4_d1,
+        A4_q1 => DCT_MAT_Multiply_1_U0_A4_q1,
+        A4_we1 => DCT_MAT_Multiply_1_U0_A4_we1,
+        A5_address0 => DCT_MAT_Multiply_1_U0_A5_address0,
+        A5_ce0 => DCT_MAT_Multiply_1_U0_A5_ce0,
+        A5_d0 => DCT_MAT_Multiply_1_U0_A5_d0,
+        A5_q0 => DCT_MAT_Multiply_1_U0_A5_q0,
+        A5_we0 => DCT_MAT_Multiply_1_U0_A5_we0,
+        A5_address1 => DCT_MAT_Multiply_1_U0_A5_address1,
+        A5_ce1 => DCT_MAT_Multiply_1_U0_A5_ce1,
+        A5_d1 => DCT_MAT_Multiply_1_U0_A5_d1,
+        A5_q1 => DCT_MAT_Multiply_1_U0_A5_q1,
+        A5_we1 => DCT_MAT_Multiply_1_U0_A5_we1,
+        A6_address0 => DCT_MAT_Multiply_1_U0_A6_address0,
+        A6_ce0 => DCT_MAT_Multiply_1_U0_A6_ce0,
+        A6_d0 => DCT_MAT_Multiply_1_U0_A6_d0,
+        A6_q0 => DCT_MAT_Multiply_1_U0_A6_q0,
+        A6_we0 => DCT_MAT_Multiply_1_U0_A6_we0,
+        A6_address1 => DCT_MAT_Multiply_1_U0_A6_address1,
+        A6_ce1 => DCT_MAT_Multiply_1_U0_A6_ce1,
+        A6_d1 => DCT_MAT_Multiply_1_U0_A6_d1,
+        A6_q1 => DCT_MAT_Multiply_1_U0_A6_q1,
+        A6_we1 => DCT_MAT_Multiply_1_U0_A6_we1,
+        A7_address0 => DCT_MAT_Multiply_1_U0_A7_address0,
+        A7_ce0 => DCT_MAT_Multiply_1_U0_A7_ce0,
+        A7_d0 => DCT_MAT_Multiply_1_U0_A7_d0,
+        A7_q0 => DCT_MAT_Multiply_1_U0_A7_q0,
+        A7_we0 => DCT_MAT_Multiply_1_U0_A7_we0,
+        A7_address1 => DCT_MAT_Multiply_1_U0_A7_address1,
+        A7_ce1 => DCT_MAT_Multiply_1_U0_A7_ce1,
+        A7_d1 => DCT_MAT_Multiply_1_U0_A7_d1,
+        A7_q1 => DCT_MAT_Multiply_1_U0_A7_q1,
+        A7_we1 => DCT_MAT_Multiply_1_U0_A7_we1,
+        C_address0 => DCT_MAT_Multiply_1_U0_C_address0,
+        C_ce0 => DCT_MAT_Multiply_1_U0_C_ce0,
+        C_d0 => DCT_MAT_Multiply_1_U0_C_d0,
+        C_q0 => DCT_MAT_Multiply_1_U0_C_q0,
+        C_we0 => DCT_MAT_Multiply_1_U0_C_we0,
+        C_address1 => DCT_MAT_Multiply_1_U0_C_address1,
+        C_ce1 => DCT_MAT_Multiply_1_U0_C_ce1,
+        C_d1 => DCT_MAT_Multiply_1_U0_C_d1,
+        C_q1 => DCT_MAT_Multiply_1_U0_C_q1,
+        C_we1 => DCT_MAT_Multiply_1_U0_C_we1,
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => DCT_MAT_Multiply_1_U0_ap_start,
+        A_pipo_status => DCT_MAT_Multiply_1_U0_A_pipo_status,
+        A_pipo_update => DCT_MAT_Multiply_1_U0_A_pipo_update,
+        A1_pipo_status => DCT_MAT_Multiply_1_U0_A1_pipo_status,
+        A1_pipo_update => DCT_MAT_Multiply_1_U0_A1_pipo_update,
+        A2_pipo_status => DCT_MAT_Multiply_1_U0_A2_pipo_status,
+        A2_pipo_update => DCT_MAT_Multiply_1_U0_A2_pipo_update,
+        A3_pipo_status => DCT_MAT_Multiply_1_U0_A3_pipo_status,
+        A3_pipo_update => DCT_MAT_Multiply_1_U0_A3_pipo_update,
+        A4_pipo_status => DCT_MAT_Multiply_1_U0_A4_pipo_status,
+        A4_pipo_update => DCT_MAT_Multiply_1_U0_A4_pipo_update,
+        A5_pipo_status => DCT_MAT_Multiply_1_U0_A5_pipo_status,
+        A5_pipo_update => DCT_MAT_Multiply_1_U0_A5_pipo_update,
+        A6_pipo_status => DCT_MAT_Multiply_1_U0_A6_pipo_status,
+        A6_pipo_update => DCT_MAT_Multiply_1_U0_A6_pipo_update,
+        A7_pipo_status => DCT_MAT_Multiply_1_U0_A7_pipo_status,
+        A7_pipo_update => DCT_MAT_Multiply_1_U0_A7_pipo_update,
+        C_pipo_status => DCT_MAT_Multiply_1_U0_C_pipo_status,
+        C_pipo_update => DCT_MAT_Multiply_1_U0_C_pipo_update,
+        ap_continue => DCT_MAT_Multiply_1_U0_ap_continue,
+        ap_done => DCT_MAT_Multiply_1_U0_ap_done,
+        ap_idle => DCT_MAT_Multiply_1_U0_ap_idle,
+        ap_ready => DCT_MAT_Multiply_1_U0_ap_ready);
+
+    DCT_Loop_3_proc_U0 : component DCT_Loop_3_proc
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => DCT_Loop_3_proc_U0_ap_start,
+        ap_done => DCT_Loop_3_proc_U0_ap_done,
+        ap_continue => DCT_Loop_3_proc_U0_ap_continue,
+        ap_idle => DCT_Loop_3_proc_U0_ap_idle,
+        ap_ready => DCT_Loop_3_proc_U0_ap_ready,
+        Y_din => DCT_Loop_3_proc_U0_Y_din,
+        Y_full_n => DCT_Loop_3_proc_U0_Y_full_n,
+        Y_write => DCT_Loop_3_proc_U0_Y_write,
+        Ymat_address0 => DCT_Loop_3_proc_U0_Ymat_address0,
+        Ymat_ce0 => DCT_Loop_3_proc_U0_Ymat_ce0,
+        Ymat_q0 => DCT_Loop_3_proc_U0_Ymat_q0);
 
 
 
@@ -217,6 +1569,142 @@ begin
     end process;
 
 
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_0_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_1_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_2_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_3_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_4_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_5_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_6_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    -- ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status assign process. --
+    ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status <= ap_const_logic_0;
+            else
+                if (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_continue))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status <= ap_const_logic_0;
+                elsif (((ap_const_logic_1 = DCT_MAT_Multiply_U0_ap_done) and (ap_const_logic_1 = DCT_MAT_Multiply_U0_C_7_pipo_status))) then 
+                    ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
     -- ap_CS assign process. --
     ap_CS_assign_proc : process (ap_clk)
     begin
@@ -229,9 +1717,81 @@ begin
     DCT_Loop_1_proc_U0_Xbuff_pipo_status <= Xbuff_i_full_n;
     DCT_Loop_1_proc_U0_ap_continue <= DCT_Loop_1_proc_U0_Xbuff_pipo_status;
     DCT_Loop_2_proc_U0_Xbuff_q0 <= Xbuff_t_q0;
-    DCT_Loop_2_proc_U0_Y_full_n <= Y_full_n;
-    DCT_Loop_2_proc_U0_ap_continue <= ap_const_logic_1;
+    DCT_Loop_2_proc_U0_Xmat_pipo_status <= Xmat_i_full_n;
+    DCT_Loop_2_proc_U0_ap_continue <= DCT_Loop_2_proc_U0_Xmat_pipo_status;
     DCT_Loop_2_proc_U0_ap_start <= Xbuff_t_empty_n;
+    DCT_Loop_3_proc_U0_Y_full_n <= Y_full_n;
+    DCT_Loop_3_proc_U0_Ymat_q0 <= Ymat_t_q0;
+    DCT_Loop_3_proc_U0_ap_continue <= ap_const_logic_1;
+    DCT_Loop_3_proc_U0_ap_start <= Ymat_t_empty_n;
+    DCT_MAT_Multiply_1_U0_A1_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A1_q0 <= temp_1_t_q0;
+    DCT_MAT_Multiply_1_U0_A1_q1 <= temp_1_t_q1;
+    DCT_MAT_Multiply_1_U0_A2_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A2_q0 <= temp_2_t_q0;
+    DCT_MAT_Multiply_1_U0_A2_q1 <= temp_2_t_q1;
+    DCT_MAT_Multiply_1_U0_A3_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A3_q0 <= temp_3_t_q0;
+    DCT_MAT_Multiply_1_U0_A3_q1 <= temp_3_t_q1;
+    DCT_MAT_Multiply_1_U0_A4_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A4_q0 <= temp_4_t_q0;
+    DCT_MAT_Multiply_1_U0_A4_q1 <= temp_4_t_q1;
+    DCT_MAT_Multiply_1_U0_A5_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A5_q0 <= temp_5_t_q0;
+    DCT_MAT_Multiply_1_U0_A5_q1 <= temp_5_t_q1;
+    DCT_MAT_Multiply_1_U0_A6_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A6_q0 <= temp_6_t_q0;
+    DCT_MAT_Multiply_1_U0_A6_q1 <= temp_6_t_q1;
+    DCT_MAT_Multiply_1_U0_A7_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A7_q0 <= temp_7_t_q0;
+    DCT_MAT_Multiply_1_U0_A7_q1 <= temp_7_t_q1;
+    DCT_MAT_Multiply_1_U0_A_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_1_U0_A_q0 <= temp_0_t_q0;
+    DCT_MAT_Multiply_1_U0_A_q1 <= temp_0_t_q1;
+    DCT_MAT_Multiply_1_U0_C_pipo_status <= Ymat_i_full_n;
+    DCT_MAT_Multiply_1_U0_C_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_1_U0_C_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_1_U0_ap_continue <= DCT_MAT_Multiply_1_U0_C_pipo_status;
+    DCT_MAT_Multiply_1_U0_ap_start <= (temp_0_t_empty_n and temp_1_t_empty_n and temp_2_t_empty_n and temp_3_t_empty_n and temp_4_t_empty_n and temp_5_t_empty_n and temp_6_t_empty_n and temp_7_t_empty_n);
+    DCT_MAT_Multiply_U0_B_pipo_status <= ap_const_logic_0;
+    DCT_MAT_Multiply_U0_B_q0 <= Xmat_t_q0;
+    DCT_MAT_Multiply_U0_B_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_0_pipo_status <= temp_0_i_full_n;
+    DCT_MAT_Multiply_U0_C_0_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_0_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_1_pipo_status <= temp_1_i_full_n;
+    DCT_MAT_Multiply_U0_C_1_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_1_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_2_pipo_status <= temp_2_i_full_n;
+    DCT_MAT_Multiply_U0_C_2_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_2_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_3_pipo_status <= temp_3_i_full_n;
+    DCT_MAT_Multiply_U0_C_3_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_3_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_4_pipo_status <= temp_4_i_full_n;
+    DCT_MAT_Multiply_U0_C_4_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_4_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_5_pipo_status <= temp_5_i_full_n;
+    DCT_MAT_Multiply_U0_C_5_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_5_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_6_pipo_status <= temp_6_i_full_n;
+    DCT_MAT_Multiply_U0_C_6_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_6_q1 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_7_pipo_status <= temp_7_i_full_n;
+    DCT_MAT_Multiply_U0_C_7_q0 <= ap_const_lv32_0;
+    DCT_MAT_Multiply_U0_C_7_q1 <= ap_const_lv32_0;
+
+    -- DCT_MAT_Multiply_U0_ap_continue assign process. --
+    DCT_MAT_Multiply_U0_ap_continue_assign_proc : process(ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status, ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status)
+    begin
+        if (((ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status) and (ap_const_logic_1 = ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status))) then 
+            DCT_MAT_Multiply_U0_ap_continue <= ap_const_logic_1;
+        else 
+            DCT_MAT_Multiply_U0_ap_continue <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    DCT_MAT_Multiply_U0_ap_start <= Xmat_t_empty_n;
     X_read <= DCT_Loop_1_proc_U0_X_read;
     Xbuff_U_ap_dummy_ce <= ap_const_logic_1;
     Xbuff_i_address0 <= DCT_Loop_1_proc_U0_Xbuff_address0;
@@ -244,19 +1804,355 @@ begin
     Xbuff_t_d0 <= ap_const_lv32_0;
     Xbuff_t_read <= DCT_Loop_2_proc_U0_ap_ready;
     Xbuff_t_we0 <= ap_const_logic_0;
-    Y_din <= DCT_Loop_2_proc_U0_Y_din;
-    Y_write <= DCT_Loop_2_proc_U0_Y_write;
+    Xmat_U_ap_dummy_ce <= ap_const_logic_1;
+    Xmat_i_address0 <= DCT_Loop_2_proc_U0_Xmat_address0;
+    Xmat_i_ce0 <= DCT_Loop_2_proc_U0_Xmat_ce0;
+    Xmat_i_d0 <= DCT_Loop_2_proc_U0_Xmat_d0;
+    Xmat_i_we0 <= DCT_Loop_2_proc_U0_Xmat_we0;
+    Xmat_i_write <= DCT_Loop_2_proc_U0_ap_done;
+    Xmat_t_address0 <= DCT_MAT_Multiply_U0_B_address0;
+    Xmat_t_ce0 <= DCT_MAT_Multiply_U0_B_ce0;
+    Xmat_t_d0 <= ap_const_lv32_0;
+    Xmat_t_read <= DCT_MAT_Multiply_U0_ap_ready;
+    Xmat_t_we0 <= ap_const_logic_0;
+    Y_din <= DCT_Loop_3_proc_U0_Y_din;
+    Y_write <= DCT_Loop_3_proc_U0_Y_write;
+    Ymat_U_ap_dummy_ce <= ap_const_logic_1;
+    Ymat_i_address0 <= DCT_MAT_Multiply_1_U0_C_address0;
+    Ymat_i_ce0 <= DCT_MAT_Multiply_1_U0_C_ce0;
+    Ymat_i_d0 <= DCT_MAT_Multiply_1_U0_C_d0;
+    Ymat_i_we0 <= DCT_MAT_Multiply_1_U0_C_we0;
+    Ymat_i_write <= DCT_MAT_Multiply_1_U0_ap_done;
+    Ymat_t_address0 <= DCT_Loop_3_proc_U0_Ymat_address0;
+    Ymat_t_ce0 <= DCT_Loop_3_proc_U0_Ymat_ce0;
+    Ymat_t_d0 <= ap_const_lv32_0;
+    Ymat_t_read <= DCT_Loop_3_proc_U0_ap_ready;
+    Ymat_t_we0 <= ap_const_logic_0;
     ap_chn_write_DCT_Loop_1_proc_U0_Xbuff <= DCT_Loop_1_proc_U0_ap_done;
+    ap_chn_write_DCT_Loop_2_proc_U0_Xmat <= DCT_Loop_2_proc_U0_ap_done;
+    ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat <= DCT_MAT_Multiply_1_U0_ap_done;
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_0 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_0_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_0 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_0 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_1 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_1_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_1 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_1 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_2 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_2_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_2 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_2 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_3 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_3_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_3 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_3 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_4 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_4_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_4 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_4 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_5 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_5_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_5 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_5 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_6 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_6_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_6 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_6 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
+
+    -- ap_chn_write_DCT_MAT_Multiply_U0_temp_7 assign process. --
+    ap_chn_write_DCT_MAT_Multiply_U0_temp_7_assign_proc : process(DCT_MAT_Multiply_U0_ap_done, ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status)
+    begin
+        if ((ap_const_logic_1 = ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status)) then 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_7 <= ap_const_logic_0;
+        else 
+            ap_chn_write_DCT_MAT_Multiply_U0_temp_7 <= DCT_MAT_Multiply_U0_ap_done;
+        end if; 
+    end process;
+
     ap_sig_hs_continue <= ap_const_logic_0;
 
     -- ap_sig_hs_done assign process. --
-    ap_sig_hs_done_assign_proc : process(DCT_Loop_2_proc_U0_ap_done)
+    ap_sig_hs_done_assign_proc : process(DCT_Loop_3_proc_U0_ap_done)
     begin
-        if ((ap_const_logic_1 = DCT_Loop_2_proc_U0_ap_done)) then 
+        if ((ap_const_logic_1 = DCT_Loop_3_proc_U0_ap_done)) then 
             ap_sig_hs_done <= ap_const_logic_1;
         else 
             ap_sig_hs_done <= ap_const_logic_0;
         end if; 
     end process;
 
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_0_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status <= DCT_MAT_Multiply_U0_C_0_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_1_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status <= DCT_MAT_Multiply_U0_C_1_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_2_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status <= DCT_MAT_Multiply_U0_C_2_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_3_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status <= DCT_MAT_Multiply_U0_C_3_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_4_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status <= DCT_MAT_Multiply_U0_C_4_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_5_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status <= DCT_MAT_Multiply_U0_C_5_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_6_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status <= DCT_MAT_Multiply_U0_C_6_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    -- ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status assign process. --
+    ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status_assign_proc : process(DCT_MAT_Multiply_U0_C_7_pipo_status, ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status)
+    begin
+        if ((ap_const_logic_0 = ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status)) then 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status <= DCT_MAT_Multiply_U0_C_7_pipo_status;
+        else 
+            ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status <= ap_const_logic_1;
+        end if; 
+    end process;
+
+    temp_0_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_0_i_address0 <= DCT_MAT_Multiply_U0_C_0_address0;
+    temp_0_i_address1 <= ap_const_lv3_0;
+    temp_0_i_ce0 <= DCT_MAT_Multiply_U0_C_0_ce0;
+    temp_0_i_ce1 <= ap_const_logic_0;
+    temp_0_i_d0 <= DCT_MAT_Multiply_U0_C_0_d0;
+    temp_0_i_we0 <= DCT_MAT_Multiply_U0_C_0_we0;
+    temp_0_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_0;
+    temp_0_t_address0 <= DCT_MAT_Multiply_1_U0_A_address0;
+    temp_0_t_address1 <= DCT_MAT_Multiply_1_U0_A_address1;
+    temp_0_t_ce0 <= DCT_MAT_Multiply_1_U0_A_ce0;
+    temp_0_t_ce1 <= DCT_MAT_Multiply_1_U0_A_ce1;
+    temp_0_t_d0 <= ap_const_lv32_0;
+    temp_0_t_d1 <= ap_const_lv32_0;
+    temp_0_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_0_t_we0 <= ap_const_logic_0;
+    temp_0_t_we1 <= ap_const_logic_0;
+    temp_1_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_1_i_address0 <= DCT_MAT_Multiply_U0_C_1_address0;
+    temp_1_i_address1 <= ap_const_lv3_0;
+    temp_1_i_ce0 <= DCT_MAT_Multiply_U0_C_1_ce0;
+    temp_1_i_ce1 <= ap_const_logic_0;
+    temp_1_i_d0 <= DCT_MAT_Multiply_U0_C_1_d0;
+    temp_1_i_we0 <= DCT_MAT_Multiply_U0_C_1_we0;
+    temp_1_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_1;
+    temp_1_t_address0 <= DCT_MAT_Multiply_1_U0_A1_address0;
+    temp_1_t_address1 <= DCT_MAT_Multiply_1_U0_A1_address1;
+    temp_1_t_ce0 <= DCT_MAT_Multiply_1_U0_A1_ce0;
+    temp_1_t_ce1 <= DCT_MAT_Multiply_1_U0_A1_ce1;
+    temp_1_t_d0 <= ap_const_lv32_0;
+    temp_1_t_d1 <= ap_const_lv32_0;
+    temp_1_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_1_t_we0 <= ap_const_logic_0;
+    temp_1_t_we1 <= ap_const_logic_0;
+    temp_2_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_2_i_address0 <= DCT_MAT_Multiply_U0_C_2_address0;
+    temp_2_i_address1 <= ap_const_lv3_0;
+    temp_2_i_ce0 <= DCT_MAT_Multiply_U0_C_2_ce0;
+    temp_2_i_ce1 <= ap_const_logic_0;
+    temp_2_i_d0 <= DCT_MAT_Multiply_U0_C_2_d0;
+    temp_2_i_we0 <= DCT_MAT_Multiply_U0_C_2_we0;
+    temp_2_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_2;
+    temp_2_t_address0 <= DCT_MAT_Multiply_1_U0_A2_address0;
+    temp_2_t_address1 <= DCT_MAT_Multiply_1_U0_A2_address1;
+    temp_2_t_ce0 <= DCT_MAT_Multiply_1_U0_A2_ce0;
+    temp_2_t_ce1 <= DCT_MAT_Multiply_1_U0_A2_ce1;
+    temp_2_t_d0 <= ap_const_lv32_0;
+    temp_2_t_d1 <= ap_const_lv32_0;
+    temp_2_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_2_t_we0 <= ap_const_logic_0;
+    temp_2_t_we1 <= ap_const_logic_0;
+    temp_3_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_3_i_address0 <= DCT_MAT_Multiply_U0_C_3_address0;
+    temp_3_i_address1 <= ap_const_lv3_0;
+    temp_3_i_ce0 <= DCT_MAT_Multiply_U0_C_3_ce0;
+    temp_3_i_ce1 <= ap_const_logic_0;
+    temp_3_i_d0 <= DCT_MAT_Multiply_U0_C_3_d0;
+    temp_3_i_we0 <= DCT_MAT_Multiply_U0_C_3_we0;
+    temp_3_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_3;
+    temp_3_t_address0 <= DCT_MAT_Multiply_1_U0_A3_address0;
+    temp_3_t_address1 <= DCT_MAT_Multiply_1_U0_A3_address1;
+    temp_3_t_ce0 <= DCT_MAT_Multiply_1_U0_A3_ce0;
+    temp_3_t_ce1 <= DCT_MAT_Multiply_1_U0_A3_ce1;
+    temp_3_t_d0 <= ap_const_lv32_0;
+    temp_3_t_d1 <= ap_const_lv32_0;
+    temp_3_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_3_t_we0 <= ap_const_logic_0;
+    temp_3_t_we1 <= ap_const_logic_0;
+    temp_4_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_4_i_address0 <= DCT_MAT_Multiply_U0_C_4_address0;
+    temp_4_i_address1 <= ap_const_lv3_0;
+    temp_4_i_ce0 <= DCT_MAT_Multiply_U0_C_4_ce0;
+    temp_4_i_ce1 <= ap_const_logic_0;
+    temp_4_i_d0 <= DCT_MAT_Multiply_U0_C_4_d0;
+    temp_4_i_we0 <= DCT_MAT_Multiply_U0_C_4_we0;
+    temp_4_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_4;
+    temp_4_t_address0 <= DCT_MAT_Multiply_1_U0_A4_address0;
+    temp_4_t_address1 <= DCT_MAT_Multiply_1_U0_A4_address1;
+    temp_4_t_ce0 <= DCT_MAT_Multiply_1_U0_A4_ce0;
+    temp_4_t_ce1 <= DCT_MAT_Multiply_1_U0_A4_ce1;
+    temp_4_t_d0 <= ap_const_lv32_0;
+    temp_4_t_d1 <= ap_const_lv32_0;
+    temp_4_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_4_t_we0 <= ap_const_logic_0;
+    temp_4_t_we1 <= ap_const_logic_0;
+    temp_5_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_5_i_address0 <= DCT_MAT_Multiply_U0_C_5_address0;
+    temp_5_i_address1 <= ap_const_lv3_0;
+    temp_5_i_ce0 <= DCT_MAT_Multiply_U0_C_5_ce0;
+    temp_5_i_ce1 <= ap_const_logic_0;
+    temp_5_i_d0 <= DCT_MAT_Multiply_U0_C_5_d0;
+    temp_5_i_we0 <= DCT_MAT_Multiply_U0_C_5_we0;
+    temp_5_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_5;
+    temp_5_t_address0 <= DCT_MAT_Multiply_1_U0_A5_address0;
+    temp_5_t_address1 <= DCT_MAT_Multiply_1_U0_A5_address1;
+    temp_5_t_ce0 <= DCT_MAT_Multiply_1_U0_A5_ce0;
+    temp_5_t_ce1 <= DCT_MAT_Multiply_1_U0_A5_ce1;
+    temp_5_t_d0 <= ap_const_lv32_0;
+    temp_5_t_d1 <= ap_const_lv32_0;
+    temp_5_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_5_t_we0 <= ap_const_logic_0;
+    temp_5_t_we1 <= ap_const_logic_0;
+    temp_6_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_6_i_address0 <= DCT_MAT_Multiply_U0_C_6_address0;
+    temp_6_i_address1 <= ap_const_lv3_0;
+    temp_6_i_ce0 <= DCT_MAT_Multiply_U0_C_6_ce0;
+    temp_6_i_ce1 <= ap_const_logic_0;
+    temp_6_i_d0 <= DCT_MAT_Multiply_U0_C_6_d0;
+    temp_6_i_we0 <= DCT_MAT_Multiply_U0_C_6_we0;
+    temp_6_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_6;
+    temp_6_t_address0 <= DCT_MAT_Multiply_1_U0_A6_address0;
+    temp_6_t_address1 <= DCT_MAT_Multiply_1_U0_A6_address1;
+    temp_6_t_ce0 <= DCT_MAT_Multiply_1_U0_A6_ce0;
+    temp_6_t_ce1 <= DCT_MAT_Multiply_1_U0_A6_ce1;
+    temp_6_t_d0 <= ap_const_lv32_0;
+    temp_6_t_d1 <= ap_const_lv32_0;
+    temp_6_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_6_t_we0 <= ap_const_logic_0;
+    temp_6_t_we1 <= ap_const_logic_0;
+    temp_7_U_ap_dummy_ce <= ap_const_logic_1;
+    temp_7_i_address0 <= DCT_MAT_Multiply_U0_C_7_address0;
+    temp_7_i_address1 <= ap_const_lv3_0;
+    temp_7_i_ce0 <= DCT_MAT_Multiply_U0_C_7_ce0;
+    temp_7_i_ce1 <= ap_const_logic_0;
+    temp_7_i_d0 <= DCT_MAT_Multiply_U0_C_7_d0;
+    temp_7_i_we0 <= DCT_MAT_Multiply_U0_C_7_we0;
+    temp_7_i_write <= ap_chn_write_DCT_MAT_Multiply_U0_temp_7;
+    temp_7_t_address0 <= DCT_MAT_Multiply_1_U0_A7_address0;
+    temp_7_t_address1 <= DCT_MAT_Multiply_1_U0_A7_address1;
+    temp_7_t_ce0 <= DCT_MAT_Multiply_1_U0_A7_ce0;
+    temp_7_t_ce1 <= DCT_MAT_Multiply_1_U0_A7_ce1;
+    temp_7_t_d0 <= ap_const_lv32_0;
+    temp_7_t_d1 <= ap_const_lv32_0;
+    temp_7_t_read <= DCT_MAT_Multiply_1_U0_ap_ready;
+    temp_7_t_we0 <= ap_const_logic_0;
+    temp_7_t_we1 <= ap_const_logic_0;
 end behav;

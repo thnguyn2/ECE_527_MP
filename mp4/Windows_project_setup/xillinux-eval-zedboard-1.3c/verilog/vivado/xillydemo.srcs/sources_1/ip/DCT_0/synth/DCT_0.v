@@ -48,7 +48,7 @@
 
 
 // IP VLNV: Matrix_transform:hls:DCT:1.0
-// IP Revision: 1510300759
+// IP Revision: 1510301122
 
 (* X_CORE_INFO = "DCT,Vivado 2015.1" *)
 (* CHECK_LICENSE_TYPE = "DCT_0,DCT,{}" *)

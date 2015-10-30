@@ -1,0 +1,2875 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_MAT_Multiply'
+================================================================
+* Date:           Fri Oct 30 11:20:56 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.68|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  178|  178|  111|  111| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 3, States = { 1 2 3 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: call_ret [2/2] 0.00ns
+codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply_Loop_LoadRow_proc([64 x float]* nocapture %B) readonly
+
+
+ <State 2>: 0.00ns
+ST_2: call_ret [1/2] 0.00ns
+codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply_Loop_LoadRow_proc([64 x float]* nocapture %B) readonly
+
+ST_2: B_cached_0_0_channel [1/1] 0.00ns
+codeRepl:2  %B_cached_0_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 0
+
+ST_2: B_cached_0_1_channel [1/1] 0.00ns
+codeRepl:3  %B_cached_0_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 1
+
+ST_2: B_cached_0_2_channel [1/1] 0.00ns
+codeRepl:4  %B_cached_0_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 2
+
+ST_2: B_cached_0_3_channel [1/1] 0.00ns
+codeRepl:5  %B_cached_0_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 3
+
+ST_2: B_cached_0_4_channel [1/1] 0.00ns
+codeRepl:6  %B_cached_0_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 4
+
+ST_2: B_cached_0_5_channel [1/1] 0.00ns
+codeRepl:7  %B_cached_0_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 5
+
+ST_2: B_cached_0_6_channel [1/1] 0.00ns
+codeRepl:8  %B_cached_0_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 6
+
+ST_2: B_cached_0_7_channel [1/1] 0.00ns
+codeRepl:9  %B_cached_0_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 7
+
+ST_2: B_cached_1_0_channel [1/1] 0.00ns
+codeRepl:10  %B_cached_1_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 8
+
+ST_2: B_cached_1_1_channel [1/1] 0.00ns
+codeRepl:11  %B_cached_1_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 9
+
+ST_2: B_cached_1_2_channel [1/1] 0.00ns
+codeRepl:12  %B_cached_1_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 10
+
+ST_2: B_cached_1_3_channel [1/1] 0.00ns
+codeRepl:13  %B_cached_1_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 11
+
+ST_2: B_cached_1_4_channel [1/1] 0.00ns
+codeRepl:14  %B_cached_1_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 12
+
+ST_2: B_cached_1_5_channel [1/1] 0.00ns
+codeRepl:15  %B_cached_1_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 13
+
+ST_2: B_cached_1_6_channel [1/1] 0.00ns
+codeRepl:16  %B_cached_1_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 14
+
+ST_2: B_cached_1_7_channel [1/1] 0.00ns
+codeRepl:17  %B_cached_1_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 15
+
+ST_2: B_cached_2_0_channel [1/1] 0.00ns
+codeRepl:18  %B_cached_2_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 16
+
+ST_2: B_cached_2_1_channel [1/1] 0.00ns
+codeRepl:19  %B_cached_2_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 17
+
+ST_2: B_cached_2_2_channel [1/1] 0.00ns
+codeRepl:20  %B_cached_2_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 18
+
+ST_2: B_cached_2_3_channel [1/1] 0.00ns
+codeRepl:21  %B_cached_2_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 19
+
+ST_2: B_cached_2_4_channel [1/1] 0.00ns
+codeRepl:22  %B_cached_2_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 20
+
+ST_2: B_cached_2_5_channel [1/1] 0.00ns
+codeRepl:23  %B_cached_2_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 21
+
+ST_2: B_cached_2_6_channel [1/1] 0.00ns
+codeRepl:24  %B_cached_2_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 22
+
+ST_2: B_cached_2_7_channel [1/1] 0.00ns
+codeRepl:25  %B_cached_2_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 23
+
+ST_2: B_cached_3_0_channel [1/1] 0.00ns
+codeRepl:26  %B_cached_3_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 24
+
+ST_2: B_cached_3_1_channel [1/1] 0.00ns
+codeRepl:27  %B_cached_3_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 25
+
+ST_2: B_cached_3_2_channel [1/1] 0.00ns
+codeRepl:28  %B_cached_3_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 26
+
+ST_2: B_cached_3_3_channel [1/1] 0.00ns
+codeRepl:29  %B_cached_3_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 27
+
+ST_2: B_cached_3_4_channel [1/1] 0.00ns
+codeRepl:30  %B_cached_3_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 28
+
+ST_2: B_cached_3_5_channel [1/1] 0.00ns
+codeRepl:31  %B_cached_3_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 29
+
+ST_2: B_cached_3_6_channel [1/1] 0.00ns
+codeRepl:32  %B_cached_3_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 30
+
+ST_2: B_cached_3_7_channel [1/1] 0.00ns
+codeRepl:33  %B_cached_3_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 31
+
+ST_2: B_cached_4_0_channel [1/1] 0.00ns
+codeRepl:34  %B_cached_4_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 32
+
+ST_2: B_cached_4_1_channel [1/1] 0.00ns
+codeRepl:35  %B_cached_4_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 33
+
+ST_2: B_cached_4_2_channel [1/1] 0.00ns
+codeRepl:36  %B_cached_4_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 34
+
+ST_2: B_cached_4_3_channel [1/1] 0.00ns
+codeRepl:37  %B_cached_4_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 35
+
+ST_2: B_cached_4_4_channel [1/1] 0.00ns
+codeRepl:38  %B_cached_4_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 36
+
+ST_2: B_cached_4_5_channel [1/1] 0.00ns
+codeRepl:39  %B_cached_4_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 37
+
+ST_2: B_cached_4_6_channel [1/1] 0.00ns
+codeRepl:40  %B_cached_4_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 38
+
+ST_2: B_cached_4_7_channel [1/1] 0.00ns
+codeRepl:41  %B_cached_4_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 39
+
+ST_2: B_cached_5_0_channel [1/1] 0.00ns
+codeRepl:42  %B_cached_5_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 40
+
+ST_2: B_cached_5_1_channel [1/1] 0.00ns
+codeRepl:43  %B_cached_5_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 41
+
+ST_2: B_cached_5_2_channel [1/1] 0.00ns
+codeRepl:44  %B_cached_5_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 42
+
+ST_2: B_cached_5_3_channel [1/1] 0.00ns
+codeRepl:45  %B_cached_5_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 43
+
+ST_2: B_cached_5_4_channel [1/1] 0.00ns
+codeRepl:46  %B_cached_5_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 44
+
+ST_2: B_cached_5_5_channel [1/1] 0.00ns
+codeRepl:47  %B_cached_5_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 45
+
+ST_2: B_cached_5_6_channel [1/1] 0.00ns
+codeRepl:48  %B_cached_5_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 46
+
+ST_2: B_cached_5_7_channel [1/1] 0.00ns
+codeRepl:49  %B_cached_5_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 47
+
+ST_2: B_cached_6_0_channel [1/1] 0.00ns
+codeRepl:50  %B_cached_6_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 48
+
+ST_2: B_cached_6_1_channel [1/1] 0.00ns
+codeRepl:51  %B_cached_6_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 49
+
+ST_2: B_cached_6_2_channel [1/1] 0.00ns
+codeRepl:52  %B_cached_6_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 50
+
+ST_2: B_cached_6_3_channel [1/1] 0.00ns
+codeRepl:53  %B_cached_6_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 51
+
+ST_2: B_cached_6_4_channel [1/1] 0.00ns
+codeRepl:54  %B_cached_6_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 52
+
+ST_2: B_cached_6_5_channel [1/1] 0.00ns
+codeRepl:55  %B_cached_6_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 53
+
+ST_2: B_cached_6_6_channel [1/1] 0.00ns
+codeRepl:56  %B_cached_6_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 54
+
+ST_2: B_cached_6_7_channel [1/1] 0.00ns
+codeRepl:57  %B_cached_6_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 55
+
+ST_2: B_cached_7_0_channel [1/1] 0.00ns
+codeRepl:58  %B_cached_7_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 56
+
+ST_2: B_cached_7_1_channel [1/1] 0.00ns
+codeRepl:59  %B_cached_7_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 57
+
+ST_2: B_cached_7_2_channel [1/1] 0.00ns
+codeRepl:60  %B_cached_7_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 58
+
+ST_2: B_cached_7_3_channel [1/1] 0.00ns
+codeRepl:61  %B_cached_7_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 59
+
+ST_2: B_cached_7_4_channel [1/1] 0.00ns
+codeRepl:62  %B_cached_7_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 60
+
+ST_2: B_cached_7_5_channel [1/1] 0.00ns
+codeRepl:63  %B_cached_7_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 61
+
+ST_2: B_cached_7_6_channel [1/1] 0.00ns
+codeRepl:64  %B_cached_7_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 62
+
+ST_2: B_cached_7_7_channel [1/1] 0.00ns
+codeRepl:65  %B_cached_7_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 63
+
+ST_2: stg_70 [2/2] 0.00ns
+codeRepl:66  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc(float %B_cached_0_0_channel, float %B_cached_0_1_channel, float %B_cached_0_2_channel, float %B_cached_0_3_channel, float %B_cached_0_4_channel, float %B_cached_0_5_channel, float %B_cached_0_6_channel, float %B_cached_0_7_channel, float %B_cached_1_0_channel, float %B_cached_1_1_channel, float %B_cached_1_2_channel, float %B_cached_1_3_channel, float %B_cached_1_4_channel, float %B_cached_1_5_channel, float %B_cached_1_6_channel, float %B_cached_1_7_channel, float %B_cached_2_0_channel, float %B_cached_2_1_channel, float %B_cached_2_2_channel, float %B_cached_2_3_channel, float %B_cached_2_4_channel, float %B_cached_2_5_channel, float %B_cached_2_6_channel, float %B_cached_2_7_channel, float %B_cached_3_0_channel, float %B_cached_3_1_channel, float %B_cached_3_2_channel, float %B_cached_3_3_channel, float %B_cached_3_4_channel, float %B_cached_3_5_channel, float %B_cached_3_6_channel, float %B_cached_3_7_channel, float %B_cached_4_0_channel, float %B_cached_4_1_channel, float %B_cached_4_2_channel, float %B_cached_4_3_channel, float %B_cached_4_4_channel, float %B_cached_4_5_channel, float %B_cached_4_6_channel, float %B_cached_4_7_channel, float %B_cached_5_0_channel, float %B_cached_5_1_channel, float %B_cached_5_2_channel, float %B_cached_5_3_channel, float %B_cached_5_4_channel, float %B_cached_5_5_channel, float %B_cached_5_6_channel, float %B_cached_5_7_channel, float %B_cached_6_0_channel, float %B_cached_6_1_channel, float %B_cached_6_2_channel, float %B_cached_6_3_channel, float %B_cached_6_4_channel, float %B_cached_6_5_channel, float %B_cached_6_6_channel, float %B_cached_6_7_channel, float %B_cached_7_0_channel, float %B_cached_7_1_channel, float %B_cached_7_2_channel, float %B_cached_7_3_channel, float %B_cached_7_4_channel, float %B_cached_7_5_channel, float %B_cached_7_6_channel, float %B_cached_7_7_channel, [8 x float]* %C_0, [8 x float]* %C_1, [8 x float]* %C_2, [8 x float]* %C_3, [8 x float]* %C_4, [8 x float]* %C_5, [8 x float]* %C_6, [8 x float]* %C_7)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_71 [1/1] 0.00ns
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_3: stg_72 [1/2] 0.00ns
+codeRepl:66  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc(float %B_cached_0_0_channel, float %B_cached_0_1_channel, float %B_cached_0_2_channel, float %B_cached_0_3_channel, float %B_cached_0_4_channel, float %B_cached_0_5_channel, float %B_cached_0_6_channel, float %B_cached_0_7_channel, float %B_cached_1_0_channel, float %B_cached_1_1_channel, float %B_cached_1_2_channel, float %B_cached_1_3_channel, float %B_cached_1_4_channel, float %B_cached_1_5_channel, float %B_cached_1_6_channel, float %B_cached_1_7_channel, float %B_cached_2_0_channel, float %B_cached_2_1_channel, float %B_cached_2_2_channel, float %B_cached_2_3_channel, float %B_cached_2_4_channel, float %B_cached_2_5_channel, float %B_cached_2_6_channel, float %B_cached_2_7_channel, float %B_cached_3_0_channel, float %B_cached_3_1_channel, float %B_cached_3_2_channel, float %B_cached_3_3_channel, float %B_cached_3_4_channel, float %B_cached_3_5_channel, float %B_cached_3_6_channel, float %B_cached_3_7_channel, float %B_cached_4_0_channel, float %B_cached_4_1_channel, float %B_cached_4_2_channel, float %B_cached_4_3_channel, float %B_cached_4_4_channel, float %B_cached_4_5_channel, float %B_cached_4_6_channel, float %B_cached_4_7_channel, float %B_cached_5_0_channel, float %B_cached_5_1_channel, float %B_cached_5_2_channel, float %B_cached_5_3_channel, float %B_cached_5_4_channel, float %B_cached_5_5_channel, float %B_cached_5_6_channel, float %B_cached_5_7_channel, float %B_cached_6_0_channel, float %B_cached_6_1_channel, float %B_cached_6_2_channel, float %B_cached_6_3_channel, float %B_cached_6_4_channel, float %B_cached_6_5_channel, float %B_cached_6_6_channel, float %B_cached_6_7_channel, float %B_cached_7_0_channel, float %B_cached_7_1_channel, float %B_cached_7_2_channel, float %B_cached_7_3_channel, float %B_cached_7_4_channel, float %B_cached_7_5_channel, float %B_cached_7_6_channel, float %B_cached_7_7_channel, [8 x float]* %C_0, [8 x float]* %C_1, [8 x float]* %C_2, [8 x float]* %C_3, [8 x float]* %C_4, [8 x float]* %C_5, [8 x float]* %C_6, [8 x float]* %C_7)
+
+ST_3: stg_73 [1/1] 0.00ns
+codeRepl:67  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is clock enabled: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ B]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xd69b430; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ C_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b4c0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b550; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b5e0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b670; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b700; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b790; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b820; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xd69b8b0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+call_ret             (call                ) [ 0000]
+B_cached_0_0_channel (extractvalue        ) [ 0001]
+B_cached_0_1_channel (extractvalue        ) [ 0001]
+B_cached_0_2_channel (extractvalue        ) [ 0001]
+B_cached_0_3_channel (extractvalue        ) [ 0001]
+B_cached_0_4_channel (extractvalue        ) [ 0001]
+B_cached_0_5_channel (extractvalue        ) [ 0001]
+B_cached_0_6_channel (extractvalue        ) [ 0001]
+B_cached_0_7_channel (extractvalue        ) [ 0001]
+B_cached_1_0_channel (extractvalue        ) [ 0001]
+B_cached_1_1_channel (extractvalue        ) [ 0001]
+B_cached_1_2_channel (extractvalue        ) [ 0001]
+B_cached_1_3_channel (extractvalue        ) [ 0001]
+B_cached_1_4_channel (extractvalue        ) [ 0001]
+B_cached_1_5_channel (extractvalue        ) [ 0001]
+B_cached_1_6_channel (extractvalue        ) [ 0001]
+B_cached_1_7_channel (extractvalue        ) [ 0001]
+B_cached_2_0_channel (extractvalue        ) [ 0001]
+B_cached_2_1_channel (extractvalue        ) [ 0001]
+B_cached_2_2_channel (extractvalue        ) [ 0001]
+B_cached_2_3_channel (extractvalue        ) [ 0001]
+B_cached_2_4_channel (extractvalue        ) [ 0001]
+B_cached_2_5_channel (extractvalue        ) [ 0001]
+B_cached_2_6_channel (extractvalue        ) [ 0001]
+B_cached_2_7_channel (extractvalue        ) [ 0001]
+B_cached_3_0_channel (extractvalue        ) [ 0001]
+B_cached_3_1_channel (extractvalue        ) [ 0001]
+B_cached_3_2_channel (extractvalue        ) [ 0001]
+B_cached_3_3_channel (extractvalue        ) [ 0001]
+B_cached_3_4_channel (extractvalue        ) [ 0001]
+B_cached_3_5_channel (extractvalue        ) [ 0001]
+B_cached_3_6_channel (extractvalue        ) [ 0001]
+B_cached_3_7_channel (extractvalue        ) [ 0001]
+B_cached_4_0_channel (extractvalue        ) [ 0001]
+B_cached_4_1_channel (extractvalue        ) [ 0001]
+B_cached_4_2_channel (extractvalue        ) [ 0001]
+B_cached_4_3_channel (extractvalue        ) [ 0001]
+B_cached_4_4_channel (extractvalue        ) [ 0001]
+B_cached_4_5_channel (extractvalue        ) [ 0001]
+B_cached_4_6_channel (extractvalue        ) [ 0001]
+B_cached_4_7_channel (extractvalue        ) [ 0001]
+B_cached_5_0_channel (extractvalue        ) [ 0001]
+B_cached_5_1_channel (extractvalue        ) [ 0001]
+B_cached_5_2_channel (extractvalue        ) [ 0001]
+B_cached_5_3_channel (extractvalue        ) [ 0001]
+B_cached_5_4_channel (extractvalue        ) [ 0001]
+B_cached_5_5_channel (extractvalue        ) [ 0001]
+B_cached_5_6_channel (extractvalue        ) [ 0001]
+B_cached_5_7_channel (extractvalue        ) [ 0001]
+B_cached_6_0_channel (extractvalue        ) [ 0001]
+B_cached_6_1_channel (extractvalue        ) [ 0001]
+B_cached_6_2_channel (extractvalue        ) [ 0001]
+B_cached_6_3_channel (extractvalue        ) [ 0001]
+B_cached_6_4_channel (extractvalue        ) [ 0001]
+B_cached_6_5_channel (extractvalue        ) [ 0001]
+B_cached_6_6_channel (extractvalue        ) [ 0001]
+B_cached_6_7_channel (extractvalue        ) [ 0001]
+B_cached_7_0_channel (extractvalue        ) [ 0001]
+B_cached_7_1_channel (extractvalue        ) [ 0001]
+B_cached_7_2_channel (extractvalue        ) [ 0001]
+B_cached_7_3_channel (extractvalue        ) [ 0001]
+B_cached_7_4_channel (extractvalue        ) [ 0001]
+B_cached_7_5_channel (extractvalue        ) [ 0001]
+B_cached_7_6_channel (extractvalue        ) [ 0001]
+B_cached_7_7_channel (extractvalue        ) [ 0001]
+stg_71               (specdataflowpipeline) [ 0000]
+stg_72               (call                ) [ 0000]
+stg_73               (ret                 ) [ 0000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="B">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="B"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="C_0">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_0"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="C_1">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_1"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="C_2">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_2"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="C_3">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_3"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="C_4">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_4"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="C_5">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_5"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="C_6">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_6"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="C_7">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="C_7"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DCT_MAT_Multiply_Loop_LoadRow_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DCT_MAT_Multiply_Loop_Row_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="29" class="1004" name="grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29">
+<pin_list>
+<pin id="30" dir="0" index="0" bw="0" slack="0"/>
+<pin id="31" dir="0" index="1" bw="32" slack="0"/>
+<pin id="32" dir="0" index="2" bw="32" slack="0"/>
+<pin id="33" dir="0" index="3" bw="32" slack="0"/>
+<pin id="34" dir="0" index="4" bw="32" slack="0"/>
+<pin id="35" dir="0" index="5" bw="32" slack="0"/>
+<pin id="36" dir="0" index="6" bw="32" slack="0"/>
+<pin id="37" dir="0" index="7" bw="32" slack="0"/>
+<pin id="38" dir="0" index="8" bw="32" slack="0"/>
+<pin id="39" dir="0" index="9" bw="32" slack="0"/>
+<pin id="40" dir="0" index="10" bw="32" slack="0"/>
+<pin id="41" dir="0" index="11" bw="32" slack="0"/>
+<pin id="42" dir="0" index="12" bw="32" slack="0"/>
+<pin id="43" dir="0" index="13" bw="32" slack="0"/>
+<pin id="44" dir="0" index="14" bw="32" slack="0"/>
+<pin id="45" dir="0" index="15" bw="32" slack="0"/>
+<pin id="46" dir="0" index="16" bw="32" slack="0"/>
+<pin id="47" dir="0" index="17" bw="32" slack="0"/>
+<pin id="48" dir="0" index="18" bw="32" slack="0"/>
+<pin id="49" dir="0" index="19" bw="32" slack="0"/>
+<pin id="50" dir="0" index="20" bw="32" slack="0"/>
+<pin id="51" dir="0" index="21" bw="32" slack="0"/>
+<pin id="52" dir="0" index="22" bw="32" slack="0"/>
+<pin id="53" dir="0" index="23" bw="32" slack="0"/>
+<pin id="54" dir="0" index="24" bw="32" slack="0"/>
+<pin id="55" dir="0" index="25" bw="32" slack="0"/>
+<pin id="56" dir="0" index="26" bw="32" slack="0"/>
+<pin id="57" dir="0" index="27" bw="32" slack="0"/>
+<pin id="58" dir="0" index="28" bw="32" slack="0"/>
+<pin id="59" dir="0" index="29" bw="32" slack="0"/>
+<pin id="60" dir="0" index="30" bw="32" slack="0"/>
+<pin id="61" dir="0" index="31" bw="32" slack="0"/>
+<pin id="62" dir="0" index="32" bw="32" slack="0"/>
+<pin id="63" dir="0" index="33" bw="32" slack="0"/>
+<pin id="64" dir="0" index="34" bw="32" slack="0"/>
+<pin id="65" dir="0" index="35" bw="32" slack="0"/>
+<pin id="66" dir="0" index="36" bw="32" slack="0"/>
+<pin id="67" dir="0" index="37" bw="32" slack="0"/>
+<pin id="68" dir="0" index="38" bw="32" slack="0"/>
+<pin id="69" dir="0" index="39" bw="32" slack="0"/>
+<pin id="70" dir="0" index="40" bw="32" slack="0"/>
+<pin id="71" dir="0" index="41" bw="32" slack="0"/>
+<pin id="72" dir="0" index="42" bw="32" slack="0"/>
+<pin id="73" dir="0" index="43" bw="32" slack="0"/>
+<pin id="74" dir="0" index="44" bw="32" slack="0"/>
+<pin id="75" dir="0" index="45" bw="32" slack="0"/>
+<pin id="76" dir="0" index="46" bw="32" slack="0"/>
+<pin id="77" dir="0" index="47" bw="32" slack="0"/>
+<pin id="78" dir="0" index="48" bw="32" slack="0"/>
+<pin id="79" dir="0" index="49" bw="32" slack="0"/>
+<pin id="80" dir="0" index="50" bw="32" slack="0"/>
+<pin id="81" dir="0" index="51" bw="32" slack="0"/>
+<pin id="82" dir="0" index="52" bw="32" slack="0"/>
+<pin id="83" dir="0" index="53" bw="32" slack="0"/>
+<pin id="84" dir="0" index="54" bw="32" slack="0"/>
+<pin id="85" dir="0" index="55" bw="32" slack="0"/>
+<pin id="86" dir="0" index="56" bw="32" slack="0"/>
+<pin id="87" dir="0" index="57" bw="32" slack="0"/>
+<pin id="88" dir="0" index="58" bw="32" slack="0"/>
+<pin id="89" dir="0" index="59" bw="32" slack="0"/>
+<pin id="90" dir="0" index="60" bw="32" slack="0"/>
+<pin id="91" dir="0" index="61" bw="32" slack="0"/>
+<pin id="92" dir="0" index="62" bw="32" slack="0"/>
+<pin id="93" dir="0" index="63" bw="32" slack="0"/>
+<pin id="94" dir="0" index="64" bw="32" slack="0"/>
+<pin id="95" dir="0" index="65" bw="32" slack="0"/>
+<pin id="96" dir="0" index="66" bw="32" slack="0"/>
+<pin id="97" dir="0" index="67" bw="32" slack="0"/>
+<pin id="98" dir="0" index="68" bw="32" slack="0"/>
+<pin id="99" dir="0" index="69" bw="32" slack="0"/>
+<pin id="100" dir="0" index="70" bw="32" slack="0"/>
+<pin id="101" dir="0" index="71" bw="32" slack="0"/>
+<pin id="102" dir="0" index="72" bw="32" slack="0"/>
+<pin id="103" dir="1" index="73" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="stg_70/2 "/>
+</bind>
+</comp>
+
+<comp id="113" class="1004" name="grp_DCT_MAT_Multiply_Loop_LoadRow_proc_fu_113">
+<pin_list>
+<pin id="114" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="115" dir="0" index="1" bw="32" slack="0"/>
+<pin id="116" dir="1" index="2" bw="2048" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret/1 "/>
+</bind>
+</comp>
+
+<comp id="119" class="1004" name="B_cached_0_0_channel_fu_119">
+<pin_list>
+<pin id="120" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="121" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1004" name="B_cached_0_1_channel_fu_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="126" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="129" class="1004" name="B_cached_0_2_channel_fu_129">
+<pin_list>
+<pin id="130" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="131" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="B_cached_0_3_channel_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="136" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="139" class="1004" name="B_cached_0_4_channel_fu_139">
+<pin_list>
+<pin id="140" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="141" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="144" class="1004" name="B_cached_0_5_channel_fu_144">
+<pin_list>
+<pin id="145" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="146" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="149" class="1004" name="B_cached_0_6_channel_fu_149">
+<pin_list>
+<pin id="150" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="151" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="B_cached_0_7_channel_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="156" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_0_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="B_cached_1_0_channel_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="161" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="164" class="1004" name="B_cached_1_1_channel_fu_164">
+<pin_list>
+<pin id="165" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="166" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="169" class="1004" name="B_cached_1_2_channel_fu_169">
+<pin_list>
+<pin id="170" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="171" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="174" class="1004" name="B_cached_1_3_channel_fu_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="176" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="179" class="1004" name="B_cached_1_4_channel_fu_179">
+<pin_list>
+<pin id="180" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="181" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1004" name="B_cached_1_5_channel_fu_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="186" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="189" class="1004" name="B_cached_1_6_channel_fu_189">
+<pin_list>
+<pin id="190" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="191" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="194" class="1004" name="B_cached_1_7_channel_fu_194">
+<pin_list>
+<pin id="195" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="196" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_1_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="199" class="1004" name="B_cached_2_0_channel_fu_199">
+<pin_list>
+<pin id="200" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="201" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="204" class="1004" name="B_cached_2_1_channel_fu_204">
+<pin_list>
+<pin id="205" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="206" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="209" class="1004" name="B_cached_2_2_channel_fu_209">
+<pin_list>
+<pin id="210" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="211" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="214" class="1004" name="B_cached_2_3_channel_fu_214">
+<pin_list>
+<pin id="215" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="216" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="219" class="1004" name="B_cached_2_4_channel_fu_219">
+<pin_list>
+<pin id="220" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="221" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="224" class="1004" name="B_cached_2_5_channel_fu_224">
+<pin_list>
+<pin id="225" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="226" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="229" class="1004" name="B_cached_2_6_channel_fu_229">
+<pin_list>
+<pin id="230" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="231" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="234" class="1004" name="B_cached_2_7_channel_fu_234">
+<pin_list>
+<pin id="235" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="236" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_2_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="239" class="1004" name="B_cached_3_0_channel_fu_239">
+<pin_list>
+<pin id="240" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="241" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="244" class="1004" name="B_cached_3_1_channel_fu_244">
+<pin_list>
+<pin id="245" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="246" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="249" class="1004" name="B_cached_3_2_channel_fu_249">
+<pin_list>
+<pin id="250" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="251" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="254" class="1004" name="B_cached_3_3_channel_fu_254">
+<pin_list>
+<pin id="255" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="256" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="259" class="1004" name="B_cached_3_4_channel_fu_259">
+<pin_list>
+<pin id="260" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="261" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="264" class="1004" name="B_cached_3_5_channel_fu_264">
+<pin_list>
+<pin id="265" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="266" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="269" class="1004" name="B_cached_3_6_channel_fu_269">
+<pin_list>
+<pin id="270" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="271" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="274" class="1004" name="B_cached_3_7_channel_fu_274">
+<pin_list>
+<pin id="275" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="276" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_3_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="279" class="1004" name="B_cached_4_0_channel_fu_279">
+<pin_list>
+<pin id="280" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="281" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="284" class="1004" name="B_cached_4_1_channel_fu_284">
+<pin_list>
+<pin id="285" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="286" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="289" class="1004" name="B_cached_4_2_channel_fu_289">
+<pin_list>
+<pin id="290" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="291" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="294" class="1004" name="B_cached_4_3_channel_fu_294">
+<pin_list>
+<pin id="295" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="296" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="299" class="1004" name="B_cached_4_4_channel_fu_299">
+<pin_list>
+<pin id="300" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="301" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="304" class="1004" name="B_cached_4_5_channel_fu_304">
+<pin_list>
+<pin id="305" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="306" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="309" class="1004" name="B_cached_4_6_channel_fu_309">
+<pin_list>
+<pin id="310" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="311" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="314" class="1004" name="B_cached_4_7_channel_fu_314">
+<pin_list>
+<pin id="315" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="316" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_4_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="319" class="1004" name="B_cached_5_0_channel_fu_319">
+<pin_list>
+<pin id="320" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="321" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="324" class="1004" name="B_cached_5_1_channel_fu_324">
+<pin_list>
+<pin id="325" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="326" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="329" class="1004" name="B_cached_5_2_channel_fu_329">
+<pin_list>
+<pin id="330" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="331" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="334" class="1004" name="B_cached_5_3_channel_fu_334">
+<pin_list>
+<pin id="335" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="336" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="339" class="1004" name="B_cached_5_4_channel_fu_339">
+<pin_list>
+<pin id="340" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="341" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="344" class="1004" name="B_cached_5_5_channel_fu_344">
+<pin_list>
+<pin id="345" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="346" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="349" class="1004" name="B_cached_5_6_channel_fu_349">
+<pin_list>
+<pin id="350" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="351" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="354" class="1004" name="B_cached_5_7_channel_fu_354">
+<pin_list>
+<pin id="355" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="356" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_5_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="359" class="1004" name="B_cached_6_0_channel_fu_359">
+<pin_list>
+<pin id="360" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="361" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="364" class="1004" name="B_cached_6_1_channel_fu_364">
+<pin_list>
+<pin id="365" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="366" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="369" class="1004" name="B_cached_6_2_channel_fu_369">
+<pin_list>
+<pin id="370" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="371" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="374" class="1004" name="B_cached_6_3_channel_fu_374">
+<pin_list>
+<pin id="375" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="376" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="379" class="1004" name="B_cached_6_4_channel_fu_379">
+<pin_list>
+<pin id="380" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="381" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="384" class="1004" name="B_cached_6_5_channel_fu_384">
+<pin_list>
+<pin id="385" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="386" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="389" class="1004" name="B_cached_6_6_channel_fu_389">
+<pin_list>
+<pin id="390" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="391" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="394" class="1004" name="B_cached_6_7_channel_fu_394">
+<pin_list>
+<pin id="395" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="396" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_6_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="399" class="1004" name="B_cached_7_0_channel_fu_399">
+<pin_list>
+<pin id="400" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="401" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_0_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="404" class="1004" name="B_cached_7_1_channel_fu_404">
+<pin_list>
+<pin id="405" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="406" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_1_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="409" class="1004" name="B_cached_7_2_channel_fu_409">
+<pin_list>
+<pin id="410" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="411" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_2_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="414" class="1004" name="B_cached_7_3_channel_fu_414">
+<pin_list>
+<pin id="415" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="416" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_3_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="419" class="1004" name="B_cached_7_4_channel_fu_419">
+<pin_list>
+<pin id="420" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="421" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_4_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="424" class="1004" name="B_cached_7_5_channel_fu_424">
+<pin_list>
+<pin id="425" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="426" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_5_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="429" class="1004" name="B_cached_7_6_channel_fu_429">
+<pin_list>
+<pin id="430" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="431" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_6_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="434" class="1004" name="B_cached_7_7_channel_fu_434">
+<pin_list>
+<pin id="435" dir="0" index="0" bw="2048" slack="0"/>
+<pin id="436" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="B_cached_7_7_channel/2 "/>
+</bind>
+</comp>
+
+<comp id="439" class="1005" name="B_cached_0_0_channel_reg_439">
+<pin_list>
+<pin id="440" dir="0" index="0" bw="32" slack="1"/>
+<pin id="441" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_0_channel "/>
+</bind>
+</comp>
+
+<comp id="444" class="1005" name="B_cached_0_1_channel_reg_444">
+<pin_list>
+<pin id="445" dir="0" index="0" bw="32" slack="1"/>
+<pin id="446" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_1_channel "/>
+</bind>
+</comp>
+
+<comp id="449" class="1005" name="B_cached_0_2_channel_reg_449">
+<pin_list>
+<pin id="450" dir="0" index="0" bw="32" slack="1"/>
+<pin id="451" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_2_channel "/>
+</bind>
+</comp>
+
+<comp id="454" class="1005" name="B_cached_0_3_channel_reg_454">
+<pin_list>
+<pin id="455" dir="0" index="0" bw="32" slack="1"/>
+<pin id="456" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_3_channel "/>
+</bind>
+</comp>
+
+<comp id="459" class="1005" name="B_cached_0_4_channel_reg_459">
+<pin_list>
+<pin id="460" dir="0" index="0" bw="32" slack="1"/>
+<pin id="461" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_4_channel "/>
+</bind>
+</comp>
+
+<comp id="464" class="1005" name="B_cached_0_5_channel_reg_464">
+<pin_list>
+<pin id="465" dir="0" index="0" bw="32" slack="1"/>
+<pin id="466" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_5_channel "/>
+</bind>
+</comp>
+
+<comp id="469" class="1005" name="B_cached_0_6_channel_reg_469">
+<pin_list>
+<pin id="470" dir="0" index="0" bw="32" slack="1"/>
+<pin id="471" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_6_channel "/>
+</bind>
+</comp>
+
+<comp id="474" class="1005" name="B_cached_0_7_channel_reg_474">
+<pin_list>
+<pin id="475" dir="0" index="0" bw="32" slack="1"/>
+<pin id="476" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_0_7_channel "/>
+</bind>
+</comp>
+
+<comp id="479" class="1005" name="B_cached_1_0_channel_reg_479">
+<pin_list>
+<pin id="480" dir="0" index="0" bw="32" slack="1"/>
+<pin id="481" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_0_channel "/>
+</bind>
+</comp>
+
+<comp id="484" class="1005" name="B_cached_1_1_channel_reg_484">
+<pin_list>
+<pin id="485" dir="0" index="0" bw="32" slack="1"/>
+<pin id="486" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_1_channel "/>
+</bind>
+</comp>
+
+<comp id="489" class="1005" name="B_cached_1_2_channel_reg_489">
+<pin_list>
+<pin id="490" dir="0" index="0" bw="32" slack="1"/>
+<pin id="491" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_2_channel "/>
+</bind>
+</comp>
+
+<comp id="494" class="1005" name="B_cached_1_3_channel_reg_494">
+<pin_list>
+<pin id="495" dir="0" index="0" bw="32" slack="1"/>
+<pin id="496" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_3_channel "/>
+</bind>
+</comp>
+
+<comp id="499" class="1005" name="B_cached_1_4_channel_reg_499">
+<pin_list>
+<pin id="500" dir="0" index="0" bw="32" slack="1"/>
+<pin id="501" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_4_channel "/>
+</bind>
+</comp>
+
+<comp id="504" class="1005" name="B_cached_1_5_channel_reg_504">
+<pin_list>
+<pin id="505" dir="0" index="0" bw="32" slack="1"/>
+<pin id="506" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_5_channel "/>
+</bind>
+</comp>
+
+<comp id="509" class="1005" name="B_cached_1_6_channel_reg_509">
+<pin_list>
+<pin id="510" dir="0" index="0" bw="32" slack="1"/>
+<pin id="511" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_6_channel "/>
+</bind>
+</comp>
+
+<comp id="514" class="1005" name="B_cached_1_7_channel_reg_514">
+<pin_list>
+<pin id="515" dir="0" index="0" bw="32" slack="1"/>
+<pin id="516" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_1_7_channel "/>
+</bind>
+</comp>
+
+<comp id="519" class="1005" name="B_cached_2_0_channel_reg_519">
+<pin_list>
+<pin id="520" dir="0" index="0" bw="32" slack="1"/>
+<pin id="521" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_0_channel "/>
+</bind>
+</comp>
+
+<comp id="524" class="1005" name="B_cached_2_1_channel_reg_524">
+<pin_list>
+<pin id="525" dir="0" index="0" bw="32" slack="1"/>
+<pin id="526" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_1_channel "/>
+</bind>
+</comp>
+
+<comp id="529" class="1005" name="B_cached_2_2_channel_reg_529">
+<pin_list>
+<pin id="530" dir="0" index="0" bw="32" slack="1"/>
+<pin id="531" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_2_channel "/>
+</bind>
+</comp>
+
+<comp id="534" class="1005" name="B_cached_2_3_channel_reg_534">
+<pin_list>
+<pin id="535" dir="0" index="0" bw="32" slack="1"/>
+<pin id="536" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_3_channel "/>
+</bind>
+</comp>
+
+<comp id="539" class="1005" name="B_cached_2_4_channel_reg_539">
+<pin_list>
+<pin id="540" dir="0" index="0" bw="32" slack="1"/>
+<pin id="541" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_4_channel "/>
+</bind>
+</comp>
+
+<comp id="544" class="1005" name="B_cached_2_5_channel_reg_544">
+<pin_list>
+<pin id="545" dir="0" index="0" bw="32" slack="1"/>
+<pin id="546" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_5_channel "/>
+</bind>
+</comp>
+
+<comp id="549" class="1005" name="B_cached_2_6_channel_reg_549">
+<pin_list>
+<pin id="550" dir="0" index="0" bw="32" slack="1"/>
+<pin id="551" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_6_channel "/>
+</bind>
+</comp>
+
+<comp id="554" class="1005" name="B_cached_2_7_channel_reg_554">
+<pin_list>
+<pin id="555" dir="0" index="0" bw="32" slack="1"/>
+<pin id="556" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_2_7_channel "/>
+</bind>
+</comp>
+
+<comp id="559" class="1005" name="B_cached_3_0_channel_reg_559">
+<pin_list>
+<pin id="560" dir="0" index="0" bw="32" slack="1"/>
+<pin id="561" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_0_channel "/>
+</bind>
+</comp>
+
+<comp id="564" class="1005" name="B_cached_3_1_channel_reg_564">
+<pin_list>
+<pin id="565" dir="0" index="0" bw="32" slack="1"/>
+<pin id="566" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_1_channel "/>
+</bind>
+</comp>
+
+<comp id="569" class="1005" name="B_cached_3_2_channel_reg_569">
+<pin_list>
+<pin id="570" dir="0" index="0" bw="32" slack="1"/>
+<pin id="571" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_2_channel "/>
+</bind>
+</comp>
+
+<comp id="574" class="1005" name="B_cached_3_3_channel_reg_574">
+<pin_list>
+<pin id="575" dir="0" index="0" bw="32" slack="1"/>
+<pin id="576" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_3_channel "/>
+</bind>
+</comp>
+
+<comp id="579" class="1005" name="B_cached_3_4_channel_reg_579">
+<pin_list>
+<pin id="580" dir="0" index="0" bw="32" slack="1"/>
+<pin id="581" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_4_channel "/>
+</bind>
+</comp>
+
+<comp id="584" class="1005" name="B_cached_3_5_channel_reg_584">
+<pin_list>
+<pin id="585" dir="0" index="0" bw="32" slack="1"/>
+<pin id="586" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_5_channel "/>
+</bind>
+</comp>
+
+<comp id="589" class="1005" name="B_cached_3_6_channel_reg_589">
+<pin_list>
+<pin id="590" dir="0" index="0" bw="32" slack="1"/>
+<pin id="591" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_6_channel "/>
+</bind>
+</comp>
+
+<comp id="594" class="1005" name="B_cached_3_7_channel_reg_594">
+<pin_list>
+<pin id="595" dir="0" index="0" bw="32" slack="1"/>
+<pin id="596" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_3_7_channel "/>
+</bind>
+</comp>
+
+<comp id="599" class="1005" name="B_cached_4_0_channel_reg_599">
+<pin_list>
+<pin id="600" dir="0" index="0" bw="32" slack="1"/>
+<pin id="601" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_0_channel "/>
+</bind>
+</comp>
+
+<comp id="604" class="1005" name="B_cached_4_1_channel_reg_604">
+<pin_list>
+<pin id="605" dir="0" index="0" bw="32" slack="1"/>
+<pin id="606" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_1_channel "/>
+</bind>
+</comp>
+
+<comp id="609" class="1005" name="B_cached_4_2_channel_reg_609">
+<pin_list>
+<pin id="610" dir="0" index="0" bw="32" slack="1"/>
+<pin id="611" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_2_channel "/>
+</bind>
+</comp>
+
+<comp id="614" class="1005" name="B_cached_4_3_channel_reg_614">
+<pin_list>
+<pin id="615" dir="0" index="0" bw="32" slack="1"/>
+<pin id="616" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_3_channel "/>
+</bind>
+</comp>
+
+<comp id="619" class="1005" name="B_cached_4_4_channel_reg_619">
+<pin_list>
+<pin id="620" dir="0" index="0" bw="32" slack="1"/>
+<pin id="621" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_4_channel "/>
+</bind>
+</comp>
+
+<comp id="624" class="1005" name="B_cached_4_5_channel_reg_624">
+<pin_list>
+<pin id="625" dir="0" index="0" bw="32" slack="1"/>
+<pin id="626" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_5_channel "/>
+</bind>
+</comp>
+
+<comp id="629" class="1005" name="B_cached_4_6_channel_reg_629">
+<pin_list>
+<pin id="630" dir="0" index="0" bw="32" slack="1"/>
+<pin id="631" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_6_channel "/>
+</bind>
+</comp>
+
+<comp id="634" class="1005" name="B_cached_4_7_channel_reg_634">
+<pin_list>
+<pin id="635" dir="0" index="0" bw="32" slack="1"/>
+<pin id="636" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_4_7_channel "/>
+</bind>
+</comp>
+
+<comp id="639" class="1005" name="B_cached_5_0_channel_reg_639">
+<pin_list>
+<pin id="640" dir="0" index="0" bw="32" slack="1"/>
+<pin id="641" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_0_channel "/>
+</bind>
+</comp>
+
+<comp id="644" class="1005" name="B_cached_5_1_channel_reg_644">
+<pin_list>
+<pin id="645" dir="0" index="0" bw="32" slack="1"/>
+<pin id="646" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_1_channel "/>
+</bind>
+</comp>
+
+<comp id="649" class="1005" name="B_cached_5_2_channel_reg_649">
+<pin_list>
+<pin id="650" dir="0" index="0" bw="32" slack="1"/>
+<pin id="651" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_2_channel "/>
+</bind>
+</comp>
+
+<comp id="654" class="1005" name="B_cached_5_3_channel_reg_654">
+<pin_list>
+<pin id="655" dir="0" index="0" bw="32" slack="1"/>
+<pin id="656" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_3_channel "/>
+</bind>
+</comp>
+
+<comp id="659" class="1005" name="B_cached_5_4_channel_reg_659">
+<pin_list>
+<pin id="660" dir="0" index="0" bw="32" slack="1"/>
+<pin id="661" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_4_channel "/>
+</bind>
+</comp>
+
+<comp id="664" class="1005" name="B_cached_5_5_channel_reg_664">
+<pin_list>
+<pin id="665" dir="0" index="0" bw="32" slack="1"/>
+<pin id="666" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_5_channel "/>
+</bind>
+</comp>
+
+<comp id="669" class="1005" name="B_cached_5_6_channel_reg_669">
+<pin_list>
+<pin id="670" dir="0" index="0" bw="32" slack="1"/>
+<pin id="671" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_6_channel "/>
+</bind>
+</comp>
+
+<comp id="674" class="1005" name="B_cached_5_7_channel_reg_674">
+<pin_list>
+<pin id="675" dir="0" index="0" bw="32" slack="1"/>
+<pin id="676" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_5_7_channel "/>
+</bind>
+</comp>
+
+<comp id="679" class="1005" name="B_cached_6_0_channel_reg_679">
+<pin_list>
+<pin id="680" dir="0" index="0" bw="32" slack="1"/>
+<pin id="681" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_0_channel "/>
+</bind>
+</comp>
+
+<comp id="684" class="1005" name="B_cached_6_1_channel_reg_684">
+<pin_list>
+<pin id="685" dir="0" index="0" bw="32" slack="1"/>
+<pin id="686" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_1_channel "/>
+</bind>
+</comp>
+
+<comp id="689" class="1005" name="B_cached_6_2_channel_reg_689">
+<pin_list>
+<pin id="690" dir="0" index="0" bw="32" slack="1"/>
+<pin id="691" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_2_channel "/>
+</bind>
+</comp>
+
+<comp id="694" class="1005" name="B_cached_6_3_channel_reg_694">
+<pin_list>
+<pin id="695" dir="0" index="0" bw="32" slack="1"/>
+<pin id="696" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_3_channel "/>
+</bind>
+</comp>
+
+<comp id="699" class="1005" name="B_cached_6_4_channel_reg_699">
+<pin_list>
+<pin id="700" dir="0" index="0" bw="32" slack="1"/>
+<pin id="701" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_4_channel "/>
+</bind>
+</comp>
+
+<comp id="704" class="1005" name="B_cached_6_5_channel_reg_704">
+<pin_list>
+<pin id="705" dir="0" index="0" bw="32" slack="1"/>
+<pin id="706" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_5_channel "/>
+</bind>
+</comp>
+
+<comp id="709" class="1005" name="B_cached_6_6_channel_reg_709">
+<pin_list>
+<pin id="710" dir="0" index="0" bw="32" slack="1"/>
+<pin id="711" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_6_channel "/>
+</bind>
+</comp>
+
+<comp id="714" class="1005" name="B_cached_6_7_channel_reg_714">
+<pin_list>
+<pin id="715" dir="0" index="0" bw="32" slack="1"/>
+<pin id="716" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_6_7_channel "/>
+</bind>
+</comp>
+
+<comp id="719" class="1005" name="B_cached_7_0_channel_reg_719">
+<pin_list>
+<pin id="720" dir="0" index="0" bw="32" slack="1"/>
+<pin id="721" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_0_channel "/>
+</bind>
+</comp>
+
+<comp id="724" class="1005" name="B_cached_7_1_channel_reg_724">
+<pin_list>
+<pin id="725" dir="0" index="0" bw="32" slack="1"/>
+<pin id="726" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_1_channel "/>
+</bind>
+</comp>
+
+<comp id="729" class="1005" name="B_cached_7_2_channel_reg_729">
+<pin_list>
+<pin id="730" dir="0" index="0" bw="32" slack="1"/>
+<pin id="731" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_2_channel "/>
+</bind>
+</comp>
+
+<comp id="734" class="1005" name="B_cached_7_3_channel_reg_734">
+<pin_list>
+<pin id="735" dir="0" index="0" bw="32" slack="1"/>
+<pin id="736" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_3_channel "/>
+</bind>
+</comp>
+
+<comp id="739" class="1005" name="B_cached_7_4_channel_reg_739">
+<pin_list>
+<pin id="740" dir="0" index="0" bw="32" slack="1"/>
+<pin id="741" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_4_channel "/>
+</bind>
+</comp>
+
+<comp id="744" class="1005" name="B_cached_7_5_channel_reg_744">
+<pin_list>
+<pin id="745" dir="0" index="0" bw="32" slack="1"/>
+<pin id="746" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_5_channel "/>
+</bind>
+</comp>
+
+<comp id="749" class="1005" name="B_cached_7_6_channel_reg_749">
+<pin_list>
+<pin id="750" dir="0" index="0" bw="32" slack="1"/>
+<pin id="751" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_6_channel "/>
+</bind>
+</comp>
+
+<comp id="754" class="1005" name="B_cached_7_7_channel_reg_754">
+<pin_list>
+<pin id="755" dir="0" index="0" bw="32" slack="1"/>
+<pin id="756" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="B_cached_7_7_channel "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="104"><net_src comp="20" pin="0"/><net_sink comp="29" pin=0"/></net>
+
+<net id="105"><net_src comp="2" pin="0"/><net_sink comp="29" pin=65"/></net>
+
+<net id="106"><net_src comp="4" pin="0"/><net_sink comp="29" pin=66"/></net>
+
+<net id="107"><net_src comp="6" pin="0"/><net_sink comp="29" pin=67"/></net>
+
+<net id="108"><net_src comp="8" pin="0"/><net_sink comp="29" pin=68"/></net>
+
+<net id="109"><net_src comp="10" pin="0"/><net_sink comp="29" pin=69"/></net>
+
+<net id="110"><net_src comp="12" pin="0"/><net_sink comp="29" pin=70"/></net>
+
+<net id="111"><net_src comp="14" pin="0"/><net_sink comp="29" pin=71"/></net>
+
+<net id="112"><net_src comp="16" pin="0"/><net_sink comp="29" pin=72"/></net>
+
+<net id="117"><net_src comp="18" pin="0"/><net_sink comp="113" pin=0"/></net>
+
+<net id="118"><net_src comp="0" pin="0"/><net_sink comp="113" pin=1"/></net>
+
+<net id="122"><net_src comp="113" pin="2"/><net_sink comp="119" pin=0"/></net>
+
+<net id="123"><net_src comp="119" pin="1"/><net_sink comp="29" pin=1"/></net>
+
+<net id="127"><net_src comp="113" pin="2"/><net_sink comp="124" pin=0"/></net>
+
+<net id="128"><net_src comp="124" pin="1"/><net_sink comp="29" pin=2"/></net>
+
+<net id="132"><net_src comp="113" pin="2"/><net_sink comp="129" pin=0"/></net>
+
+<net id="133"><net_src comp="129" pin="1"/><net_sink comp="29" pin=3"/></net>
+
+<net id="137"><net_src comp="113" pin="2"/><net_sink comp="134" pin=0"/></net>
+
+<net id="138"><net_src comp="134" pin="1"/><net_sink comp="29" pin=4"/></net>
+
+<net id="142"><net_src comp="113" pin="2"/><net_sink comp="139" pin=0"/></net>
+
+<net id="143"><net_src comp="139" pin="1"/><net_sink comp="29" pin=5"/></net>
+
+<net id="147"><net_src comp="113" pin="2"/><net_sink comp="144" pin=0"/></net>
+
+<net id="148"><net_src comp="144" pin="1"/><net_sink comp="29" pin=6"/></net>
+
+<net id="152"><net_src comp="113" pin="2"/><net_sink comp="149" pin=0"/></net>
+
+<net id="153"><net_src comp="149" pin="1"/><net_sink comp="29" pin=7"/></net>
+
+<net id="157"><net_src comp="113" pin="2"/><net_sink comp="154" pin=0"/></net>
+
+<net id="158"><net_src comp="154" pin="1"/><net_sink comp="29" pin=8"/></net>
+
+<net id="162"><net_src comp="113" pin="2"/><net_sink comp="159" pin=0"/></net>
+
+<net id="163"><net_src comp="159" pin="1"/><net_sink comp="29" pin=9"/></net>
+
+<net id="167"><net_src comp="113" pin="2"/><net_sink comp="164" pin=0"/></net>
+
+<net id="168"><net_src comp="164" pin="1"/><net_sink comp="29" pin=10"/></net>
+
+<net id="172"><net_src comp="113" pin="2"/><net_sink comp="169" pin=0"/></net>
+
+<net id="173"><net_src comp="169" pin="1"/><net_sink comp="29" pin=11"/></net>
+
+<net id="177"><net_src comp="113" pin="2"/><net_sink comp="174" pin=0"/></net>
+
+<net id="178"><net_src comp="174" pin="1"/><net_sink comp="29" pin=12"/></net>
+
+<net id="182"><net_src comp="113" pin="2"/><net_sink comp="179" pin=0"/></net>
+
+<net id="183"><net_src comp="179" pin="1"/><net_sink comp="29" pin=13"/></net>
+
+<net id="187"><net_src comp="113" pin="2"/><net_sink comp="184" pin=0"/></net>
+
+<net id="188"><net_src comp="184" pin="1"/><net_sink comp="29" pin=14"/></net>
+
+<net id="192"><net_src comp="113" pin="2"/><net_sink comp="189" pin=0"/></net>
+
+<net id="193"><net_src comp="189" pin="1"/><net_sink comp="29" pin=15"/></net>
+
+<net id="197"><net_src comp="113" pin="2"/><net_sink comp="194" pin=0"/></net>
+
+<net id="198"><net_src comp="194" pin="1"/><net_sink comp="29" pin=16"/></net>
+
+<net id="202"><net_src comp="113" pin="2"/><net_sink comp="199" pin=0"/></net>
+
+<net id="203"><net_src comp="199" pin="1"/><net_sink comp="29" pin=17"/></net>
+
+<net id="207"><net_src comp="113" pin="2"/><net_sink comp="204" pin=0"/></net>
+
+<net id="208"><net_src comp="204" pin="1"/><net_sink comp="29" pin=18"/></net>
+
+<net id="212"><net_src comp="113" pin="2"/><net_sink comp="209" pin=0"/></net>
+
+<net id="213"><net_src comp="209" pin="1"/><net_sink comp="29" pin=19"/></net>
+
+<net id="217"><net_src comp="113" pin="2"/><net_sink comp="214" pin=0"/></net>
+
+<net id="218"><net_src comp="214" pin="1"/><net_sink comp="29" pin=20"/></net>
+
+<net id="222"><net_src comp="113" pin="2"/><net_sink comp="219" pin=0"/></net>
+
+<net id="223"><net_src comp="219" pin="1"/><net_sink comp="29" pin=21"/></net>
+
+<net id="227"><net_src comp="113" pin="2"/><net_sink comp="224" pin=0"/></net>
+
+<net id="228"><net_src comp="224" pin="1"/><net_sink comp="29" pin=22"/></net>
+
+<net id="232"><net_src comp="113" pin="2"/><net_sink comp="229" pin=0"/></net>
+
+<net id="233"><net_src comp="229" pin="1"/><net_sink comp="29" pin=23"/></net>
+
+<net id="237"><net_src comp="113" pin="2"/><net_sink comp="234" pin=0"/></net>
+
+<net id="238"><net_src comp="234" pin="1"/><net_sink comp="29" pin=24"/></net>
+
+<net id="242"><net_src comp="113" pin="2"/><net_sink comp="239" pin=0"/></net>
+
+<net id="243"><net_src comp="239" pin="1"/><net_sink comp="29" pin=25"/></net>
+
+<net id="247"><net_src comp="113" pin="2"/><net_sink comp="244" pin=0"/></net>
+
+<net id="248"><net_src comp="244" pin="1"/><net_sink comp="29" pin=26"/></net>
+
+<net id="252"><net_src comp="113" pin="2"/><net_sink comp="249" pin=0"/></net>
+
+<net id="253"><net_src comp="249" pin="1"/><net_sink comp="29" pin=27"/></net>
+
+<net id="257"><net_src comp="113" pin="2"/><net_sink comp="254" pin=0"/></net>
+
+<net id="258"><net_src comp="254" pin="1"/><net_sink comp="29" pin=28"/></net>
+
+<net id="262"><net_src comp="113" pin="2"/><net_sink comp="259" pin=0"/></net>
+
+<net id="263"><net_src comp="259" pin="1"/><net_sink comp="29" pin=29"/></net>
+
+<net id="267"><net_src comp="113" pin="2"/><net_sink comp="264" pin=0"/></net>
+
+<net id="268"><net_src comp="264" pin="1"/><net_sink comp="29" pin=30"/></net>
+
+<net id="272"><net_src comp="113" pin="2"/><net_sink comp="269" pin=0"/></net>
+
+<net id="273"><net_src comp="269" pin="1"/><net_sink comp="29" pin=31"/></net>
+
+<net id="277"><net_src comp="113" pin="2"/><net_sink comp="274" pin=0"/></net>
+
+<net id="278"><net_src comp="274" pin="1"/><net_sink comp="29" pin=32"/></net>
+
+<net id="282"><net_src comp="113" pin="2"/><net_sink comp="279" pin=0"/></net>
+
+<net id="283"><net_src comp="279" pin="1"/><net_sink comp="29" pin=33"/></net>
+
+<net id="287"><net_src comp="113" pin="2"/><net_sink comp="284" pin=0"/></net>
+
+<net id="288"><net_src comp="284" pin="1"/><net_sink comp="29" pin=34"/></net>
+
+<net id="292"><net_src comp="113" pin="2"/><net_sink comp="289" pin=0"/></net>
+
+<net id="293"><net_src comp="289" pin="1"/><net_sink comp="29" pin=35"/></net>
+
+<net id="297"><net_src comp="113" pin="2"/><net_sink comp="294" pin=0"/></net>
+
+<net id="298"><net_src comp="294" pin="1"/><net_sink comp="29" pin=36"/></net>
+
+<net id="302"><net_src comp="113" pin="2"/><net_sink comp="299" pin=0"/></net>
+
+<net id="303"><net_src comp="299" pin="1"/><net_sink comp="29" pin=37"/></net>
+
+<net id="307"><net_src comp="113" pin="2"/><net_sink comp="304" pin=0"/></net>
+
+<net id="308"><net_src comp="304" pin="1"/><net_sink comp="29" pin=38"/></net>
+
+<net id="312"><net_src comp="113" pin="2"/><net_sink comp="309" pin=0"/></net>
+
+<net id="313"><net_src comp="309" pin="1"/><net_sink comp="29" pin=39"/></net>
+
+<net id="317"><net_src comp="113" pin="2"/><net_sink comp="314" pin=0"/></net>
+
+<net id="318"><net_src comp="314" pin="1"/><net_sink comp="29" pin=40"/></net>
+
+<net id="322"><net_src comp="113" pin="2"/><net_sink comp="319" pin=0"/></net>
+
+<net id="323"><net_src comp="319" pin="1"/><net_sink comp="29" pin=41"/></net>
+
+<net id="327"><net_src comp="113" pin="2"/><net_sink comp="324" pin=0"/></net>
+
+<net id="328"><net_src comp="324" pin="1"/><net_sink comp="29" pin=42"/></net>
+
+<net id="332"><net_src comp="113" pin="2"/><net_sink comp="329" pin=0"/></net>
+
+<net id="333"><net_src comp="329" pin="1"/><net_sink comp="29" pin=43"/></net>
+
+<net id="337"><net_src comp="113" pin="2"/><net_sink comp="334" pin=0"/></net>
+
+<net id="338"><net_src comp="334" pin="1"/><net_sink comp="29" pin=44"/></net>
+
+<net id="342"><net_src comp="113" pin="2"/><net_sink comp="339" pin=0"/></net>
+
+<net id="343"><net_src comp="339" pin="1"/><net_sink comp="29" pin=45"/></net>
+
+<net id="347"><net_src comp="113" pin="2"/><net_sink comp="344" pin=0"/></net>
+
+<net id="348"><net_src comp="344" pin="1"/><net_sink comp="29" pin=46"/></net>
+
+<net id="352"><net_src comp="113" pin="2"/><net_sink comp="349" pin=0"/></net>
+
+<net id="353"><net_src comp="349" pin="1"/><net_sink comp="29" pin=47"/></net>
+
+<net id="357"><net_src comp="113" pin="2"/><net_sink comp="354" pin=0"/></net>
+
+<net id="358"><net_src comp="354" pin="1"/><net_sink comp="29" pin=48"/></net>
+
+<net id="362"><net_src comp="113" pin="2"/><net_sink comp="359" pin=0"/></net>
+
+<net id="363"><net_src comp="359" pin="1"/><net_sink comp="29" pin=49"/></net>
+
+<net id="367"><net_src comp="113" pin="2"/><net_sink comp="364" pin=0"/></net>
+
+<net id="368"><net_src comp="364" pin="1"/><net_sink comp="29" pin=50"/></net>
+
+<net id="372"><net_src comp="113" pin="2"/><net_sink comp="369" pin=0"/></net>
+
+<net id="373"><net_src comp="369" pin="1"/><net_sink comp="29" pin=51"/></net>
+
+<net id="377"><net_src comp="113" pin="2"/><net_sink comp="374" pin=0"/></net>
+
+<net id="378"><net_src comp="374" pin="1"/><net_sink comp="29" pin=52"/></net>
+
+<net id="382"><net_src comp="113" pin="2"/><net_sink comp="379" pin=0"/></net>
+
+<net id="383"><net_src comp="379" pin="1"/><net_sink comp="29" pin=53"/></net>
+
+<net id="387"><net_src comp="113" pin="2"/><net_sink comp="384" pin=0"/></net>
+
+<net id="388"><net_src comp="384" pin="1"/><net_sink comp="29" pin=54"/></net>
+
+<net id="392"><net_src comp="113" pin="2"/><net_sink comp="389" pin=0"/></net>
+
+<net id="393"><net_src comp="389" pin="1"/><net_sink comp="29" pin=55"/></net>
+
+<net id="397"><net_src comp="113" pin="2"/><net_sink comp="394" pin=0"/></net>
+
+<net id="398"><net_src comp="394" pin="1"/><net_sink comp="29" pin=56"/></net>
+
+<net id="402"><net_src comp="113" pin="2"/><net_sink comp="399" pin=0"/></net>
+
+<net id="403"><net_src comp="399" pin="1"/><net_sink comp="29" pin=57"/></net>
+
+<net id="407"><net_src comp="113" pin="2"/><net_sink comp="404" pin=0"/></net>
+
+<net id="408"><net_src comp="404" pin="1"/><net_sink comp="29" pin=58"/></net>
+
+<net id="412"><net_src comp="113" pin="2"/><net_sink comp="409" pin=0"/></net>
+
+<net id="413"><net_src comp="409" pin="1"/><net_sink comp="29" pin=59"/></net>
+
+<net id="417"><net_src comp="113" pin="2"/><net_sink comp="414" pin=0"/></net>
+
+<net id="418"><net_src comp="414" pin="1"/><net_sink comp="29" pin=60"/></net>
+
+<net id="422"><net_src comp="113" pin="2"/><net_sink comp="419" pin=0"/></net>
+
+<net id="423"><net_src comp="419" pin="1"/><net_sink comp="29" pin=61"/></net>
+
+<net id="427"><net_src comp="113" pin="2"/><net_sink comp="424" pin=0"/></net>
+
+<net id="428"><net_src comp="424" pin="1"/><net_sink comp="29" pin=62"/></net>
+
+<net id="432"><net_src comp="113" pin="2"/><net_sink comp="429" pin=0"/></net>
+
+<net id="433"><net_src comp="429" pin="1"/><net_sink comp="29" pin=63"/></net>
+
+<net id="437"><net_src comp="113" pin="2"/><net_sink comp="434" pin=0"/></net>
+
+<net id="438"><net_src comp="434" pin="1"/><net_sink comp="29" pin=64"/></net>
+
+<net id="442"><net_src comp="119" pin="1"/><net_sink comp="439" pin=0"/></net>
+
+<net id="443"><net_src comp="439" pin="1"/><net_sink comp="29" pin=1"/></net>
+
+<net id="447"><net_src comp="124" pin="1"/><net_sink comp="444" pin=0"/></net>
+
+<net id="448"><net_src comp="444" pin="1"/><net_sink comp="29" pin=2"/></net>
+
+<net id="452"><net_src comp="129" pin="1"/><net_sink comp="449" pin=0"/></net>
+
+<net id="453"><net_src comp="449" pin="1"/><net_sink comp="29" pin=3"/></net>
+
+<net id="457"><net_src comp="134" pin="1"/><net_sink comp="454" pin=0"/></net>
+
+<net id="458"><net_src comp="454" pin="1"/><net_sink comp="29" pin=4"/></net>
+
+<net id="462"><net_src comp="139" pin="1"/><net_sink comp="459" pin=0"/></net>
+
+<net id="463"><net_src comp="459" pin="1"/><net_sink comp="29" pin=5"/></net>
+
+<net id="467"><net_src comp="144" pin="1"/><net_sink comp="464" pin=0"/></net>
+
+<net id="468"><net_src comp="464" pin="1"/><net_sink comp="29" pin=6"/></net>
+
+<net id="472"><net_src comp="149" pin="1"/><net_sink comp="469" pin=0"/></net>
+
+<net id="473"><net_src comp="469" pin="1"/><net_sink comp="29" pin=7"/></net>
+
+<net id="477"><net_src comp="154" pin="1"/><net_sink comp="474" pin=0"/></net>
+
+<net id="478"><net_src comp="474" pin="1"/><net_sink comp="29" pin=8"/></net>
+
+<net id="482"><net_src comp="159" pin="1"/><net_sink comp="479" pin=0"/></net>
+
+<net id="483"><net_src comp="479" pin="1"/><net_sink comp="29" pin=9"/></net>
+
+<net id="487"><net_src comp="164" pin="1"/><net_sink comp="484" pin=0"/></net>
+
+<net id="488"><net_src comp="484" pin="1"/><net_sink comp="29" pin=10"/></net>
+
+<net id="492"><net_src comp="169" pin="1"/><net_sink comp="489" pin=0"/></net>
+
+<net id="493"><net_src comp="489" pin="1"/><net_sink comp="29" pin=11"/></net>
+
+<net id="497"><net_src comp="174" pin="1"/><net_sink comp="494" pin=0"/></net>
+
+<net id="498"><net_src comp="494" pin="1"/><net_sink comp="29" pin=12"/></net>
+
+<net id="502"><net_src comp="179" pin="1"/><net_sink comp="499" pin=0"/></net>
+
+<net id="503"><net_src comp="499" pin="1"/><net_sink comp="29" pin=13"/></net>
+
+<net id="507"><net_src comp="184" pin="1"/><net_sink comp="504" pin=0"/></net>
+
+<net id="508"><net_src comp="504" pin="1"/><net_sink comp="29" pin=14"/></net>
+
+<net id="512"><net_src comp="189" pin="1"/><net_sink comp="509" pin=0"/></net>
+
+<net id="513"><net_src comp="509" pin="1"/><net_sink comp="29" pin=15"/></net>
+
+<net id="517"><net_src comp="194" pin="1"/><net_sink comp="514" pin=0"/></net>
+
+<net id="518"><net_src comp="514" pin="1"/><net_sink comp="29" pin=16"/></net>
+
+<net id="522"><net_src comp="199" pin="1"/><net_sink comp="519" pin=0"/></net>
+
+<net id="523"><net_src comp="519" pin="1"/><net_sink comp="29" pin=17"/></net>
+
+<net id="527"><net_src comp="204" pin="1"/><net_sink comp="524" pin=0"/></net>
+
+<net id="528"><net_src comp="524" pin="1"/><net_sink comp="29" pin=18"/></net>
+
+<net id="532"><net_src comp="209" pin="1"/><net_sink comp="529" pin=0"/></net>
+
+<net id="533"><net_src comp="529" pin="1"/><net_sink comp="29" pin=19"/></net>
+
+<net id="537"><net_src comp="214" pin="1"/><net_sink comp="534" pin=0"/></net>
+
+<net id="538"><net_src comp="534" pin="1"/><net_sink comp="29" pin=20"/></net>
+
+<net id="542"><net_src comp="219" pin="1"/><net_sink comp="539" pin=0"/></net>
+
+<net id="543"><net_src comp="539" pin="1"/><net_sink comp="29" pin=21"/></net>
+
+<net id="547"><net_src comp="224" pin="1"/><net_sink comp="544" pin=0"/></net>
+
+<net id="548"><net_src comp="544" pin="1"/><net_sink comp="29" pin=22"/></net>
+
+<net id="552"><net_src comp="229" pin="1"/><net_sink comp="549" pin=0"/></net>
+
+<net id="553"><net_src comp="549" pin="1"/><net_sink comp="29" pin=23"/></net>
+
+<net id="557"><net_src comp="234" pin="1"/><net_sink comp="554" pin=0"/></net>
+
+<net id="558"><net_src comp="554" pin="1"/><net_sink comp="29" pin=24"/></net>
+
+<net id="562"><net_src comp="239" pin="1"/><net_sink comp="559" pin=0"/></net>
+
+<net id="563"><net_src comp="559" pin="1"/><net_sink comp="29" pin=25"/></net>
+
+<net id="567"><net_src comp="244" pin="1"/><net_sink comp="564" pin=0"/></net>
+
+<net id="568"><net_src comp="564" pin="1"/><net_sink comp="29" pin=26"/></net>
+
+<net id="572"><net_src comp="249" pin="1"/><net_sink comp="569" pin=0"/></net>
+
+<net id="573"><net_src comp="569" pin="1"/><net_sink comp="29" pin=27"/></net>
+
+<net id="577"><net_src comp="254" pin="1"/><net_sink comp="574" pin=0"/></net>
+
+<net id="578"><net_src comp="574" pin="1"/><net_sink comp="29" pin=28"/></net>
+
+<net id="582"><net_src comp="259" pin="1"/><net_sink comp="579" pin=0"/></net>
+
+<net id="583"><net_src comp="579" pin="1"/><net_sink comp="29" pin=29"/></net>
+
+<net id="587"><net_src comp="264" pin="1"/><net_sink comp="584" pin=0"/></net>
+
+<net id="588"><net_src comp="584" pin="1"/><net_sink comp="29" pin=30"/></net>
+
+<net id="592"><net_src comp="269" pin="1"/><net_sink comp="589" pin=0"/></net>
+
+<net id="593"><net_src comp="589" pin="1"/><net_sink comp="29" pin=31"/></net>
+
+<net id="597"><net_src comp="274" pin="1"/><net_sink comp="594" pin=0"/></net>
+
+<net id="598"><net_src comp="594" pin="1"/><net_sink comp="29" pin=32"/></net>
+
+<net id="602"><net_src comp="279" pin="1"/><net_sink comp="599" pin=0"/></net>
+
+<net id="603"><net_src comp="599" pin="1"/><net_sink comp="29" pin=33"/></net>
+
+<net id="607"><net_src comp="284" pin="1"/><net_sink comp="604" pin=0"/></net>
+
+<net id="608"><net_src comp="604" pin="1"/><net_sink comp="29" pin=34"/></net>
+
+<net id="612"><net_src comp="289" pin="1"/><net_sink comp="609" pin=0"/></net>
+
+<net id="613"><net_src comp="609" pin="1"/><net_sink comp="29" pin=35"/></net>
+
+<net id="617"><net_src comp="294" pin="1"/><net_sink comp="614" pin=0"/></net>
+
+<net id="618"><net_src comp="614" pin="1"/><net_sink comp="29" pin=36"/></net>
+
+<net id="622"><net_src comp="299" pin="1"/><net_sink comp="619" pin=0"/></net>
+
+<net id="623"><net_src comp="619" pin="1"/><net_sink comp="29" pin=37"/></net>
+
+<net id="627"><net_src comp="304" pin="1"/><net_sink comp="624" pin=0"/></net>
+
+<net id="628"><net_src comp="624" pin="1"/><net_sink comp="29" pin=38"/></net>
+
+<net id="632"><net_src comp="309" pin="1"/><net_sink comp="629" pin=0"/></net>
+
+<net id="633"><net_src comp="629" pin="1"/><net_sink comp="29" pin=39"/></net>
+
+<net id="637"><net_src comp="314" pin="1"/><net_sink comp="634" pin=0"/></net>
+
+<net id="638"><net_src comp="634" pin="1"/><net_sink comp="29" pin=40"/></net>
+
+<net id="642"><net_src comp="319" pin="1"/><net_sink comp="639" pin=0"/></net>
+
+<net id="643"><net_src comp="639" pin="1"/><net_sink comp="29" pin=41"/></net>
+
+<net id="647"><net_src comp="324" pin="1"/><net_sink comp="644" pin=0"/></net>
+
+<net id="648"><net_src comp="644" pin="1"/><net_sink comp="29" pin=42"/></net>
+
+<net id="652"><net_src comp="329" pin="1"/><net_sink comp="649" pin=0"/></net>
+
+<net id="653"><net_src comp="649" pin="1"/><net_sink comp="29" pin=43"/></net>
+
+<net id="657"><net_src comp="334" pin="1"/><net_sink comp="654" pin=0"/></net>
+
+<net id="658"><net_src comp="654" pin="1"/><net_sink comp="29" pin=44"/></net>
+
+<net id="662"><net_src comp="339" pin="1"/><net_sink comp="659" pin=0"/></net>
+
+<net id="663"><net_src comp="659" pin="1"/><net_sink comp="29" pin=45"/></net>
+
+<net id="667"><net_src comp="344" pin="1"/><net_sink comp="664" pin=0"/></net>
+
+<net id="668"><net_src comp="664" pin="1"/><net_sink comp="29" pin=46"/></net>
+
+<net id="672"><net_src comp="349" pin="1"/><net_sink comp="669" pin=0"/></net>
+
+<net id="673"><net_src comp="669" pin="1"/><net_sink comp="29" pin=47"/></net>
+
+<net id="677"><net_src comp="354" pin="1"/><net_sink comp="674" pin=0"/></net>
+
+<net id="678"><net_src comp="674" pin="1"/><net_sink comp="29" pin=48"/></net>
+
+<net id="682"><net_src comp="359" pin="1"/><net_sink comp="679" pin=0"/></net>
+
+<net id="683"><net_src comp="679" pin="1"/><net_sink comp="29" pin=49"/></net>
+
+<net id="687"><net_src comp="364" pin="1"/><net_sink comp="684" pin=0"/></net>
+
+<net id="688"><net_src comp="684" pin="1"/><net_sink comp="29" pin=50"/></net>
+
+<net id="692"><net_src comp="369" pin="1"/><net_sink comp="689" pin=0"/></net>
+
+<net id="693"><net_src comp="689" pin="1"/><net_sink comp="29" pin=51"/></net>
+
+<net id="697"><net_src comp="374" pin="1"/><net_sink comp="694" pin=0"/></net>
+
+<net id="698"><net_src comp="694" pin="1"/><net_sink comp="29" pin=52"/></net>
+
+<net id="702"><net_src comp="379" pin="1"/><net_sink comp="699" pin=0"/></net>
+
+<net id="703"><net_src comp="699" pin="1"/><net_sink comp="29" pin=53"/></net>
+
+<net id="707"><net_src comp="384" pin="1"/><net_sink comp="704" pin=0"/></net>
+
+<net id="708"><net_src comp="704" pin="1"/><net_sink comp="29" pin=54"/></net>
+
+<net id="712"><net_src comp="389" pin="1"/><net_sink comp="709" pin=0"/></net>
+
+<net id="713"><net_src comp="709" pin="1"/><net_sink comp="29" pin=55"/></net>
+
+<net id="717"><net_src comp="394" pin="1"/><net_sink comp="714" pin=0"/></net>
+
+<net id="718"><net_src comp="714" pin="1"/><net_sink comp="29" pin=56"/></net>
+
+<net id="722"><net_src comp="399" pin="1"/><net_sink comp="719" pin=0"/></net>
+
+<net id="723"><net_src comp="719" pin="1"/><net_sink comp="29" pin=57"/></net>
+
+<net id="727"><net_src comp="404" pin="1"/><net_sink comp="724" pin=0"/></net>
+
+<net id="728"><net_src comp="724" pin="1"/><net_sink comp="29" pin=58"/></net>
+
+<net id="732"><net_src comp="409" pin="1"/><net_sink comp="729" pin=0"/></net>
+
+<net id="733"><net_src comp="729" pin="1"/><net_sink comp="29" pin=59"/></net>
+
+<net id="737"><net_src comp="414" pin="1"/><net_sink comp="734" pin=0"/></net>
+
+<net id="738"><net_src comp="734" pin="1"/><net_sink comp="29" pin=60"/></net>
+
+<net id="742"><net_src comp="419" pin="1"/><net_sink comp="739" pin=0"/></net>
+
+<net id="743"><net_src comp="739" pin="1"/><net_sink comp="29" pin=61"/></net>
+
+<net id="747"><net_src comp="424" pin="1"/><net_sink comp="744" pin=0"/></net>
+
+<net id="748"><net_src comp="744" pin="1"/><net_sink comp="29" pin=62"/></net>
+
+<net id="752"><net_src comp="429" pin="1"/><net_sink comp="749" pin=0"/></net>
+
+<net id="753"><net_src comp="749" pin="1"/><net_sink comp="29" pin=63"/></net>
+
+<net id="757"><net_src comp="434" pin="1"/><net_sink comp="754" pin=0"/></net>
+
+<net id="758"><net_src comp="754" pin="1"/><net_sink comp="29" pin=64"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+		B_cached_0_0_channel : 1
+		B_cached_0_1_channel : 1
+		B_cached_0_2_channel : 1
+		B_cached_0_3_channel : 1
+		B_cached_0_4_channel : 1
+		B_cached_0_5_channel : 1
+		B_cached_0_6_channel : 1
+		B_cached_0_7_channel : 1
+		B_cached_1_0_channel : 1
+		B_cached_1_1_channel : 1
+		B_cached_1_2_channel : 1
+		B_cached_1_3_channel : 1
+		B_cached_1_4_channel : 1
+		B_cached_1_5_channel : 1
+		B_cached_1_6_channel : 1
+		B_cached_1_7_channel : 1
+		B_cached_2_0_channel : 1
+		B_cached_2_1_channel : 1
+		B_cached_2_2_channel : 1
+		B_cached_2_3_channel : 1
+		B_cached_2_4_channel : 1
+		B_cached_2_5_channel : 1
+		B_cached_2_6_channel : 1
+		B_cached_2_7_channel : 1
+		B_cached_3_0_channel : 1
+		B_cached_3_1_channel : 1
+		B_cached_3_2_channel : 1
+		B_cached_3_3_channel : 1
+		B_cached_3_4_channel : 1
+		B_cached_3_5_channel : 1
+		B_cached_3_6_channel : 1
+		B_cached_3_7_channel : 1
+		B_cached_4_0_channel : 1
+		B_cached_4_1_channel : 1
+		B_cached_4_2_channel : 1
+		B_cached_4_3_channel : 1
+		B_cached_4_4_channel : 1
+		B_cached_4_5_channel : 1
+		B_cached_4_6_channel : 1
+		B_cached_4_7_channel : 1
+		B_cached_5_0_channel : 1
+		B_cached_5_1_channel : 1
+		B_cached_5_2_channel : 1
+		B_cached_5_3_channel : 1
+		B_cached_5_4_channel : 1
+		B_cached_5_5_channel : 1
+		B_cached_5_6_channel : 1
+		B_cached_5_7_channel : 1
+		B_cached_6_0_channel : 1
+		B_cached_6_1_channel : 1
+		B_cached_6_2_channel : 1
+		B_cached_6_3_channel : 1
+		B_cached_6_4_channel : 1
+		B_cached_6_5_channel : 1
+		B_cached_6_6_channel : 1
+		B_cached_6_7_channel : 1
+		B_cached_7_0_channel : 1
+		B_cached_7_1_channel : 1
+		B_cached_7_2_channel : 1
+		B_cached_7_3_channel : 1
+		B_cached_7_4_channel : 1
+		B_cached_7_5_channel : 1
+		B_cached_7_6_channel : 1
+		B_cached_7_7_channel : 1
+		stg_70 : 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------------------------------|---------|---------|---------|---------|
+| Operation|                Functional Unit                |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|-----------------------------------------------|---------|---------|---------|---------|
+|   call   |    grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29   |    40   |  25.136 |   6409  |   7252  |
+|          | grp_DCT_MAT_Multiply_Loop_LoadRow_proc_fu_113 |    0    | 102.115 |   4139  |   2089  |
+|----------|-----------------------------------------------|---------|---------|---------|---------|
+|          |          B_cached_0_0_channel_fu_119          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_1_channel_fu_124          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_2_channel_fu_129          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_3_channel_fu_134          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_4_channel_fu_139          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_5_channel_fu_144          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_6_channel_fu_149          |    0    |    0    |    0    |    0    |
+|          |          B_cached_0_7_channel_fu_154          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_0_channel_fu_159          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_1_channel_fu_164          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_2_channel_fu_169          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_3_channel_fu_174          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_4_channel_fu_179          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_5_channel_fu_184          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_6_channel_fu_189          |    0    |    0    |    0    |    0    |
+|          |          B_cached_1_7_channel_fu_194          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_0_channel_fu_199          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_1_channel_fu_204          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_2_channel_fu_209          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_3_channel_fu_214          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_4_channel_fu_219          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_5_channel_fu_224          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_6_channel_fu_229          |    0    |    0    |    0    |    0    |
+|          |          B_cached_2_7_channel_fu_234          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_0_channel_fu_239          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_1_channel_fu_244          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_2_channel_fu_249          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_3_channel_fu_254          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_4_channel_fu_259          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_5_channel_fu_264          |    0    |    0    |    0    |    0    |
+|          |          B_cached_3_6_channel_fu_269          |    0    |    0    |    0    |    0    |
+|extractvalue|          B_cached_3_7_channel_fu_274          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_0_channel_fu_279          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_1_channel_fu_284          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_2_channel_fu_289          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_3_channel_fu_294          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_4_channel_fu_299          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_5_channel_fu_304          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_6_channel_fu_309          |    0    |    0    |    0    |    0    |
+|          |          B_cached_4_7_channel_fu_314          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_0_channel_fu_319          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_1_channel_fu_324          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_2_channel_fu_329          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_3_channel_fu_334          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_4_channel_fu_339          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_5_channel_fu_344          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_6_channel_fu_349          |    0    |    0    |    0    |    0    |
+|          |          B_cached_5_7_channel_fu_354          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_0_channel_fu_359          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_1_channel_fu_364          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_2_channel_fu_369          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_3_channel_fu_374          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_4_channel_fu_379          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_5_channel_fu_384          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_6_channel_fu_389          |    0    |    0    |    0    |    0    |
+|          |          B_cached_6_7_channel_fu_394          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_0_channel_fu_399          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_1_channel_fu_404          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_2_channel_fu_409          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_3_channel_fu_414          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_4_channel_fu_419          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_5_channel_fu_424          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_6_channel_fu_429          |    0    |    0    |    0    |    0    |
+|          |          B_cached_7_7_channel_fu_434          |    0    |    0    |    0    |    0    |
+|----------|-----------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                               |    40   | 127.251 |  10548  |   9341  |
+|----------|-----------------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++----------------------------+--------+
+|                            |   FF   |
++----------------------------+--------+
+|B_cached_0_0_channel_reg_439|   32   |
+|B_cached_0_1_channel_reg_444|   32   |
+|B_cached_0_2_channel_reg_449|   32   |
+|B_cached_0_3_channel_reg_454|   32   |
+|B_cached_0_4_channel_reg_459|   32   |
+|B_cached_0_5_channel_reg_464|   32   |
+|B_cached_0_6_channel_reg_469|   32   |
+|B_cached_0_7_channel_reg_474|   32   |
+|B_cached_1_0_channel_reg_479|   32   |
+|B_cached_1_1_channel_reg_484|   32   |
+|B_cached_1_2_channel_reg_489|   32   |
+|B_cached_1_3_channel_reg_494|   32   |
+|B_cached_1_4_channel_reg_499|   32   |
+|B_cached_1_5_channel_reg_504|   32   |
+|B_cached_1_6_channel_reg_509|   32   |
+|B_cached_1_7_channel_reg_514|   32   |
+|B_cached_2_0_channel_reg_519|   32   |
+|B_cached_2_1_channel_reg_524|   32   |
+|B_cached_2_2_channel_reg_529|   32   |
+|B_cached_2_3_channel_reg_534|   32   |
+|B_cached_2_4_channel_reg_539|   32   |
+|B_cached_2_5_channel_reg_544|   32   |
+|B_cached_2_6_channel_reg_549|   32   |
+|B_cached_2_7_channel_reg_554|   32   |
+|B_cached_3_0_channel_reg_559|   32   |
+|B_cached_3_1_channel_reg_564|   32   |
+|B_cached_3_2_channel_reg_569|   32   |
+|B_cached_3_3_channel_reg_574|   32   |
+|B_cached_3_4_channel_reg_579|   32   |
+|B_cached_3_5_channel_reg_584|   32   |
+|B_cached_3_6_channel_reg_589|   32   |
+|B_cached_3_7_channel_reg_594|   32   |
+|B_cached_4_0_channel_reg_599|   32   |
+|B_cached_4_1_channel_reg_604|   32   |
+|B_cached_4_2_channel_reg_609|   32   |
+|B_cached_4_3_channel_reg_614|   32   |
+|B_cached_4_4_channel_reg_619|   32   |
+|B_cached_4_5_channel_reg_624|   32   |
+|B_cached_4_6_channel_reg_629|   32   |
+|B_cached_4_7_channel_reg_634|   32   |
+|B_cached_5_0_channel_reg_639|   32   |
+|B_cached_5_1_channel_reg_644|   32   |
+|B_cached_5_2_channel_reg_649|   32   |
+|B_cached_5_3_channel_reg_654|   32   |
+|B_cached_5_4_channel_reg_659|   32   |
+|B_cached_5_5_channel_reg_664|   32   |
+|B_cached_5_6_channel_reg_669|   32   |
+|B_cached_5_7_channel_reg_674|   32   |
+|B_cached_6_0_channel_reg_679|   32   |
+|B_cached_6_1_channel_reg_684|   32   |
+|B_cached_6_2_channel_reg_689|   32   |
+|B_cached_6_3_channel_reg_694|   32   |
+|B_cached_6_4_channel_reg_699|   32   |
+|B_cached_6_5_channel_reg_704|   32   |
+|B_cached_6_6_channel_reg_709|   32   |
+|B_cached_6_7_channel_reg_714|   32   |
+|B_cached_7_0_channel_reg_719|   32   |
+|B_cached_7_1_channel_reg_724|   32   |
+|B_cached_7_2_channel_reg_729|   32   |
+|B_cached_7_3_channel_reg_734|   32   |
+|B_cached_7_4_channel_reg_739|   32   |
+|B_cached_7_5_channel_reg_744|   32   |
+|B_cached_7_6_channel_reg_749|   32   |
+|B_cached_7_7_channel_reg_754|   32   |
++----------------------------+--------+
+|            Total           |  2048  |
++----------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------------------------|------|------|------|--------||---------||---------|
+|                   Comp                   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------------------------------|------|------|------|--------||---------||---------|
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p1  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p2  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p3  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p4  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p5  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p6  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p7  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p8  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p9  |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p10 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p11 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p12 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p13 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p14 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p15 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p16 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p17 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p18 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p19 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p20 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p21 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p22 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p23 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p24 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p25 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p26 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p27 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p28 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p29 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p30 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p31 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p32 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p33 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p34 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p35 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p36 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p37 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p38 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p39 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p40 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p41 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p42 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p43 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p44 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p45 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p46 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p47 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p48 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p49 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p50 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p51 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p52 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p53 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p54 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p55 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p56 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p57 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p58 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p59 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p60 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p61 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p62 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p63 |   2  |  32  |   64   ||    32   |
+| grp_DCT_MAT_Multiply_Loop_Row_proc_fu_29 |  p64 |   2  |  32  |   64   ||    32   |
+|------------------------------------------|------|------|------|--------||---------||---------|
+|                   Total                  |      |      |      |  4096  || 100.544 ||   2048  |
+|------------------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   40   |   127  |  10548 |  9341  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |   100  |    -   |  2048  |
+|  Register |    -   |    -   |  2048  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   40   |   227  |  12596 |  11389 |
++-----------+--------+--------+--------+--------+

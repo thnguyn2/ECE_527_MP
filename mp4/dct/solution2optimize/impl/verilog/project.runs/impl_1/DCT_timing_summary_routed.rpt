@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Fri Oct 30 08:03:09 2015
+| Date         : Fri Oct 30 11:31:43 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file DCT_timing_summary_routed.rpt -rpx DCT_timing_summary_routed.rpx
 | Design       : DCT
@@ -124,7 +124,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.596        0.000                      0                   91        0.087        0.000                      0                   91        4.500        0.000                       0                    37  
+      0.227        0.000                      0                33553        0.029        0.000                      0                33553        3.750        0.000                       0                 15960  
 
 
 All user specified timing constraints are met.
@@ -147,7 +147,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              5.596        0.000                      0                   91        0.087        0.000                      0                   91        4.500        0.000                       0                    37  
+ap_clk              0.227        0.000                      0                33553        0.029        0.000                      0                33553        3.750        0.000                       0                 15960  
 
 
 ------------------------------------------------------------------------------------------------
@@ -178,28 +178,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.596ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.087ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.227ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.029ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.596ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/R
+Slack (MET) :             0.227ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_3_1_reg_787_reg[31]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.529ns  (logic 2.454ns (25.752%)  route 7.075ns (74.248%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.168ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.542ns = ( 11.542 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -210,47 +210,42 @@ Slack (MET) :             5.596ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[31])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[31]
+                         net (fo=64, routed)          7.075    11.240    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[31]
+    SLICE_X83Y61         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_3_1_reg_787_reg[31]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X54Y77         FDRE (Setup_fdre_C_R)       -0.524    11.113    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]
+                         net (fo=15989, unset)        1.542    11.542    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X83Y61         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_3_1_reg_787_reg[31]/C
+                         clock pessimism              0.000    11.542    
+                         clock uncertainty           -0.035    11.507    
+    SLICE_X83Y61         FDRE (Setup_fdre_C_D)       -0.040    11.467    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_3_1_reg_787_reg[31]
   -------------------------------------------------------------------
-                         required time                         11.113    
-                         arrival time                          -5.516    
+                         required time                         11.467    
+                         arrival time                         -11.240    
   -------------------------------------------------------------------
-                         slack                                  5.596    
+                         slack                                  0.227    
 
-Slack (MET) :             5.596ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/R
+Slack (MET) :             0.265ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_4_1_reg_799_reg[12]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.440ns  (logic 2.454ns (25.997%)  route 6.986ns (74.003%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.167ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.543ns = ( 11.543 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -261,47 +256,42 @@ Slack (MET) :             5.596ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[12])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[12]
+                         net (fo=64, routed)          6.986    11.150    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[12]
+    SLICE_X87Y59         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_4_1_reg_799_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X54Y77         FDRE (Setup_fdre_C_R)       -0.524    11.113    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]
+                         net (fo=15989, unset)        1.543    11.543    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X87Y59         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_4_1_reg_799_reg[12]/C
+                         clock pessimism              0.000    11.543    
+                         clock uncertainty           -0.035    11.508    
+    SLICE_X87Y59         FDRE (Setup_fdre_C_D)       -0.093    11.415    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_4_1_reg_799_reg[12]
   -------------------------------------------------------------------
-                         required time                         11.113    
-                         arrival time                          -5.516    
+                         required time                         11.415    
+                         arrival time                         -11.150    
   -------------------------------------------------------------------
-                         slack                                  5.596    
+                         slack                                  0.265    
 
-Slack (MET) :             5.691ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/R
+Slack (MET) :             0.270ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[12]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.469ns  (logic 2.454ns (25.917%)  route 7.015ns (74.083%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.132ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.564ns = ( 11.564 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.014ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -312,47 +302,42 @@ Slack (MET) :             5.691ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[12])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[12]
+                         net (fo=64, routed)          7.015    11.179    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[12]
+    SLICE_X87Y48         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X55Y77         FDRE (Setup_fdre_C_R)       -0.429    11.208    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]
+                         net (fo=15989, unset)        1.564    11.564    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X87Y48         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[12]/C
+                         clock pessimism              0.014    11.578    
+                         clock uncertainty           -0.035    11.543    
+    SLICE_X87Y48         FDRE (Setup_fdre_C_D)       -0.093    11.450    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[12]
   -------------------------------------------------------------------
-                         required time                         11.208    
-                         arrival time                          -5.516    
+                         required time                         11.450    
+                         arrival time                         -11.179    
   -------------------------------------------------------------------
-                         slack                                  5.691    
+                         slack                                  0.270    
 
-Slack (MET) :             5.691ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/R
+Slack (MET) :             0.322ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_6_1_reg_835_reg[31]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.435ns  (logic 2.454ns (26.009%)  route 6.981ns (73.991%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.167ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.543ns = ( 11.543 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -363,47 +348,42 @@ Slack (MET) :             5.691ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[31])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[31]
+                         net (fo=64, routed)          6.981    11.146    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[31]
+    SLICE_X87Y60         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_6_1_reg_835_reg[31]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X55Y77         FDRE (Setup_fdre_C_R)       -0.429    11.208    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]
+                         net (fo=15989, unset)        1.543    11.543    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X87Y60         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_6_1_reg_835_reg[31]/C
+                         clock pessimism              0.000    11.543    
+                         clock uncertainty           -0.035    11.508    
+    SLICE_X87Y60         FDRE (Setup_fdre_C_D)       -0.040    11.468    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_6_1_reg_835_reg[31]
   -------------------------------------------------------------------
-                         required time                         11.208    
-                         arrival time                          -5.516    
+                         required time                         11.468    
+                         arrival time                         -11.146    
   -------------------------------------------------------------------
-                         slack                                  5.691    
+                         slack                                  0.322    
 
-Slack (MET) :             5.691ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/R
+Slack (MET) :             0.331ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.296ns  (logic 2.454ns (26.398%)  route 6.842ns (73.602%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.244ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.466ns = ( 11.466 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -414,47 +394,42 @@ Slack (MET) :             5.691ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[2])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[2]
+                         net (fo=64, routed)          6.842    11.007    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[2]
+    SLICE_X39Y71         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X55Y77         FDRE (Setup_fdre_C_R)       -0.429    11.208    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]
+                         net (fo=15989, unset)        1.466    11.466    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X39Y71         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[2]/C
+                         clock pessimism              0.000    11.466    
+                         clock uncertainty           -0.035    11.431    
+    SLICE_X39Y71         FDRE (Setup_fdre_C_D)       -0.093    11.338    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[2]
   -------------------------------------------------------------------
-                         required time                         11.208    
-                         arrival time                          -5.516    
+                         required time                         11.338    
+                         arrival time                         -11.007    
   -------------------------------------------------------------------
-                         slack                                  5.691    
+                         slack                                  0.331    
 
-Slack (MET) :             5.691ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[4]/R
+Slack (MET) :             0.333ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_7_1_reg_859_reg[12]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.373ns  (logic 2.454ns (26.180%)  route 6.919ns (73.820%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.165ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.545ns = ( 11.545 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -465,47 +440,42 @@ Slack (MET) :             5.691ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[4]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[12])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[12]
+                         net (fo=64, routed)          6.919    11.084    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[12]
+    SLICE_X83Y56         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_7_1_reg_859_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[4]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X55Y77         FDRE (Setup_fdre_C_R)       -0.429    11.208    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[4]
+                         net (fo=15989, unset)        1.545    11.545    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X83Y56         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_7_1_reg_859_reg[12]/C
+                         clock pessimism              0.000    11.545    
+                         clock uncertainty           -0.035    11.510    
+    SLICE_X83Y56         FDRE (Setup_fdre_C_D)       -0.093    11.417    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_7_7_1_reg_859_reg[12]
   -------------------------------------------------------------------
-                         required time                         11.208    
-                         arrival time                          -5.516    
+                         required time                         11.417    
+                         arrival time                         -11.084    
   -------------------------------------------------------------------
-                         slack                                  5.691    
+                         slack                                  0.333    
 
-Slack (MET) :             5.691ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/R
+Slack (MET) :             0.333ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_6_1_reg_559_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.822ns  (logic 1.126ns (29.459%)  route 2.696ns (70.541%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.521ns = ( 11.521 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.295ns  (logic 2.454ns (26.401%)  route 6.841ns (73.599%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.243ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.467ns = ( 11.467 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -516,47 +486,42 @@ Slack (MET) :             5.691ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.598     4.611    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X54Y78         LUT6 (Prop_lut6_I0_O)        0.332     4.943 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_1/O
-                         net (fo=7, routed)           0.574     5.516    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/R
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[2])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[2]
+                         net (fo=64, routed)          6.841    11.006    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[2]
+    SLICE_X37Y70         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_6_1_reg_559_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.521    11.521    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/C
-                         clock pessimism              0.151    11.672    
-                         clock uncertainty           -0.035    11.637    
-    SLICE_X55Y77         FDRE (Setup_fdre_C_R)       -0.429    11.208    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]
+                         net (fo=15989, unset)        1.467    11.467    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X37Y70         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_6_1_reg_559_reg[2]/C
+                         clock pessimism              0.000    11.467    
+                         clock uncertainty           -0.035    11.432    
+    SLICE_X37Y70         FDRE (Setup_fdre_C_D)       -0.093    11.339    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_6_1_reg_559_reg[2]
   -------------------------------------------------------------------
-                         required time                         11.208    
-                         arrival time                          -5.516    
+                         required time                         11.339    
+                         arrival time                         -11.006    
   -------------------------------------------------------------------
-                         slack                                  5.691    
+                         slack                                  0.333    
 
-Slack (MET) :             5.746ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+Slack (MET) :             0.346ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_1_1_reg_739_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/WEBWE[1]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.706ns  (logic 1.126ns (30.386%)  route 2.580ns (69.614%))
-  Logic Levels:           3  (LUT2=1 LUT3=1 LUT6=1)
-  Clock Path Skew:        0.019ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.562ns = ( 11.562 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.279ns  (logic 2.454ns (26.446%)  route 6.825ns (73.554%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.246ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.464ns = ( 11.464 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -567,48 +532,42 @@ Slack (MET) :             5.746ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.361     4.374    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X55Y78         LUT3 (Prop_lut3_I2_O)        0.332     4.706 r  DCT_Loop_1_proc_U0/ram_reg_i_8/O
-                         net (fo=4, routed)           0.694     5.400    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/WEBWE[0]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/WEBWE[1]
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[2])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[2]
+                         net (fo=64, routed)          6.825    10.990    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[2]
+    SLICE_X37Y72         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_1_1_reg_739_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.562    11.562    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism              0.151    11.713    
-                         clock uncertainty           -0.035    11.678    
-    RAMB18_X3Y30         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[1])
-                                                     -0.532    11.146    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
+                         net (fo=15989, unset)        1.464    11.464    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X37Y72         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_1_1_reg_739_reg[2]/C
+                         clock pessimism              0.000    11.464    
+                         clock uncertainty           -0.035    11.429    
+    SLICE_X37Y72         FDRE (Setup_fdre_C_D)       -0.093    11.336    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_1_1_reg_739_reg[2]
   -------------------------------------------------------------------
-                         required time                         11.146    
-                         arrival time                          -5.400    
+                         required time                         11.336    
+                         arrival time                         -10.990    
   -------------------------------------------------------------------
-                         slack                                  5.746    
+                         slack                                  0.346    
 
-Slack (MET) :             5.843ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+Slack (MET) :             0.386ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_0_1_reg_427_reg[12]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/WEBWE[0]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.609ns  (logic 1.126ns (31.196%)  route 2.483ns (68.804%))
-  Logic Levels:           3  (LUT2=1 LUT3=1 LUT6=1)
-  Clock Path Skew:        0.019ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.562ns = ( 11.562 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.322ns  (logic 2.454ns (26.326%)  route 6.868ns (73.674%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.164ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 11.546 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -619,48 +578,42 @@ Slack (MET) :             5.843ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.361     4.374    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X55Y78         LUT3 (Prop_lut3_I2_O)        0.332     4.706 r  DCT_Loop_1_proc_U0/ram_reg_i_8/O
-                         net (fo=4, routed)           0.597     5.303    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/WEBWE[0]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/WEBWE[0]
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[12])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[12]
+                         net (fo=64, routed)          6.868    11.032    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[12]
+    SLICE_X83Y52         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_0_1_reg_427_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.562    11.562    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism              0.151    11.713    
-                         clock uncertainty           -0.035    11.678    
-    RAMB18_X3Y30         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[0])
-                                                     -0.532    11.146    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
+                         net (fo=15989, unset)        1.546    11.546    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X83Y52         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_0_1_reg_427_reg[12]/C
+                         clock pessimism              0.000    11.546    
+                         clock uncertainty           -0.035    11.511    
+    SLICE_X83Y52         FDRE (Setup_fdre_C_D)       -0.093    11.418    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_0_1_reg_427_reg[12]
   -------------------------------------------------------------------
-                         required time                         11.146    
-                         arrival time                          -5.303    
+                         required time                         11.418    
+                         arrival time                         -11.032    
   -------------------------------------------------------------------
-                         slack                                  5.843    
+                         slack                                  0.386    
 
-Slack (MET) :             5.948ns  (required time - arrival time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+Slack (MET) :             0.393ns  (required time - arrival time)
+  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_3_1_reg_319_reg[27]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/WEBWE[2]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        3.504ns  (logic 1.126ns (32.132%)  route 2.378ns (67.868%))
-  Logic Levels:           3  (LUT2=1 LUT3=1 LUT6=1)
-  Clock Path Skew:        0.019ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.562ns = ( 11.562 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.694ns
-    Clock Pessimism Removal (CPR):    0.151ns
+  Data Path Delay:        9.369ns  (logic 2.454ns (26.194%)  route 6.915ns (73.806%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.141ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.555ns = ( 11.555 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.710ns
+    Clock Pessimism Removal (CPR):    0.014ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -671,33 +624,27 @@ Slack (MET) :             5.948ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.694     1.694    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
+                         net (fo=15989, unset)        1.710     1.710    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
   -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.518     2.212 f  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.717     2.929    DCT_Loop_1_proc_U0/Q[2]
-    SLICE_X55Y77         LUT6 (Prop_lut6_I1_O)        0.124     3.053 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_2/O
-                         net (fo=2, routed)           0.808     3.861    DCT_Loop_1_proc_U0/X_read_INST_0_i_2_n_0
-    SLICE_X55Y78         LUT2 (Prop_lut2_I0_O)        0.152     4.013 f  DCT_Loop_1_proc_U0/X_read_INST_0_i_1/O
-                         net (fo=6, routed)           0.361     4.374    DCT_Loop_1_proc_U0/X_read_INST_0_i_1_n_0
-    SLICE_X55Y78         LUT3 (Prop_lut3_I2_O)        0.332     4.706 r  DCT_Loop_1_proc_U0/ram_reg_i_8/O
-                         net (fo=4, routed)           0.492     5.198    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/WEBWE[0]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/WEBWE[2]
+    RAMB36_X2Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[27])
+                                                      2.454     4.164 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[27]
+                         net (fo=64, routed)          6.915    11.079    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[27]
+    SLICE_X67Y39         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_3_1_reg_319_reg[27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=36, unset)           1.562    11.562    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism              0.151    11.713    
-                         clock uncertainty           -0.035    11.678    
-    RAMB18_X3Y30         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_WEBWE[2])
-                                                     -0.532    11.146    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
+                         net (fo=15989, unset)        1.555    11.555    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X67Y39         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_3_1_reg_319_reg[27]/C
+                         clock pessimism              0.014    11.569    
+                         clock uncertainty           -0.035    11.534    
+    SLICE_X67Y39         FDRE (Setup_fdre_C_D)       -0.061    11.473    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_3_1_reg_319_reg[27]
   -------------------------------------------------------------------
-                         required time                         11.146    
-                         arrival time                          -5.198    
+                         required time                         11.473    
+                         arrival time                         -11.079    
   -------------------------------------------------------------------
-                         slack                                  5.948    
+                         slack                                  0.393    
 
 
 
@@ -705,407 +652,403 @@ Slack (MET) :             5.948ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.087ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/C
+Slack (MET) :             0.029ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216_reg[5]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[9]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.323ns  (logic 0.141ns (43.683%)  route 0.182ns (56.317%))
+  Data Path Delay:        0.356ns  (logic 0.141ns (39.576%)  route 0.215ns (60.424%))
   Logic Levels:           0  
-  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.871ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
+  Clock Path Skew:        0.257ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.891ns
+    Source Clock Delay      (SCD):    0.625ns
+    Clock Pessimism Removal (CPR):    0.009ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/C
+                         net (fo=15989, unset)        0.625     0.625    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X49Y126        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X55Y77         FDRE (Prop_fdre_C_Q)         0.141     0.706 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/Q
-                         net (fo=6, routed)           0.182     0.888    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRBWRADDR[4]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[9]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.871     0.871    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism             -0.254     0.617    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[9])
-                                                      0.183     0.800    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.800    
-                         arrival time                           0.888    
-  -------------------------------------------------------------------
-                         slack                                  0.087    
-
-Slack (MET) :             0.140ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[7]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.322ns  (logic 0.128ns (39.812%)  route 0.194ns (60.188%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.871ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X55Y77         FDRE (Prop_fdre_C_Q)         0.128     0.693 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/Q
-                         net (fo=8, routed)           0.194     0.887    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRBWRADDR[2]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[7]
+    SLICE_X49Y126        FDRE (Prop_fdre_C_Q)         0.141     0.766 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216_reg[5]/Q
+                         net (fo=1, routed)           0.215     0.981    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216[5]
+    SLICE_X53Y126        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.871     0.871    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism             -0.254     0.617    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[7])
-                                                      0.129     0.746    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
+                         net (fo=15989, unset)        0.891     0.891    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X53Y126        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[5]/C
+                         clock pessimism             -0.009     0.882    
+    SLICE_X53Y126        FDRE (Hold_fdre_C_D)         0.070     0.952    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[5]
   -------------------------------------------------------------------
-                         required time                         -0.746    
-                         arrival time                           0.887    
-  -------------------------------------------------------------------
-                         slack                                  0.140    
-
-Slack (MET) :             0.140ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.274ns  (logic 0.186ns (67.773%)  route 0.088ns (32.227%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.832ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X55Y77         FDRE (Prop_fdre_C_Q)         0.141     0.706 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/Q
-                         net (fo=4, routed)           0.088     0.794    DCT_Loop_1_proc_U0/Q[5]
-    SLICE_X54Y77         LUT4 (Prop_lut4_I3_O)        0.045     0.839 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[6]_i_2/O
-                         net (fo=1, routed)           0.000     0.839    DCT_Loop_1_proc_U0/read_idx_fu_67_p2[6]
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.832     0.832    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/C
-                         clock pessimism             -0.254     0.578    
-    SLICE_X54Y77         FDRE (Hold_fdre_C_D)         0.121     0.699    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]
-  -------------------------------------------------------------------
-                         required time                         -0.699    
-                         arrival time                           0.839    
-  -------------------------------------------------------------------
-                         slack                                  0.140    
-
-Slack (MET) :             0.143ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[11]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.379ns  (logic 0.141ns (37.217%)  route 0.238ns (62.783%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.871ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X55Y77         FDRE (Prop_fdre_C_Q)         0.141     0.706 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/Q
-                         net (fo=4, routed)           0.238     0.944    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRBWRADDR[6]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[11]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.871     0.871    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism             -0.254     0.617    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[11])
-                                                      0.183     0.800    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.800    
-                         arrival time                           0.944    
-  -------------------------------------------------------------------
-                         slack                                  0.143    
-
-Slack (MET) :             0.148ns  (arrival time - required time)
-  Source:                 Xbuff_U/iptr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[5]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.383ns  (logic 0.164ns (42.809%)  route 0.219ns (57.191%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.871ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    Xbuff_U/ap_clk
-    SLICE_X54Y78         FDRE                                         r  Xbuff_U/iptr_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y78         FDRE (Prop_fdre_C_Q)         0.164     0.729 r  Xbuff_U/iptr_reg[0]/Q
-                         net (fo=2, routed)           0.219     0.948    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRBWRADDR[0]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[5]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.871     0.871    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism             -0.254     0.617    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[5])
-                                                      0.183     0.800    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.800    
-                         arrival time                           0.948    
-  -------------------------------------------------------------------
-                         slack                                  0.148    
-
-Slack (MET) :             0.156ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[6]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.391ns  (logic 0.141ns (36.062%)  route 0.250ns (63.938%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.871ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X55Y77         FDRE (Prop_fdre_C_Q)         0.141     0.706 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/Q
-                         net (fo=10, routed)          0.250     0.956    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRBWRADDR[1]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[6]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.871     0.871    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism             -0.254     0.617    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[6])
-                                                      0.183     0.800    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.800    
-                         arrival time                           0.956    
-  -------------------------------------------------------------------
-                         slack                                  0.156    
-
-Slack (MET) :             0.158ns  (arrival time - required time)
-  Source:                 DCT_Loop_2_proc_U0/ap_CS_fsm_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ENARDEN
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.329ns  (logic 0.141ns (42.895%)  route 0.188ns (57.105%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.074ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.875ns
-    Source Clock Delay      (SCD):    0.566ns
-    Clock Pessimism Removal (CPR):    0.235ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.566     0.566    DCT_Loop_2_proc_U0/ap_clk
-    SLICE_X57Y77         FDRE                                         r  DCT_Loop_2_proc_U0/ap_CS_fsm_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X57Y77         FDRE (Prop_fdre_C_Q)         0.141     0.707 r  DCT_Loop_2_proc_U0/ap_CS_fsm_reg[1]/Q
-                         net (fo=13, routed)          0.188     0.895    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/Q[0]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ENARDEN
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.875     0.875    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKARDCLK
-                         clock pessimism             -0.235     0.640    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ENARDEN)
-                                                      0.096     0.736    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.736    
-                         arrival time                           0.895    
-  -------------------------------------------------------------------
-                         slack                                  0.158    
-
-Slack (MET) :             0.166ns  (arrival time - required time)
-  Source:                 Xbuff_U/tptr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRARDADDR[5]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.423ns  (logic 0.141ns (33.310%)  route 0.282ns (66.690%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.074ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.875ns
-    Source Clock Delay      (SCD):    0.566ns
-    Clock Pessimism Removal (CPR):    0.235ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.566     0.566    Xbuff_U/ap_clk
-    SLICE_X56Y77         FDRE                                         r  Xbuff_U/tptr_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X56Y77         FDRE (Prop_fdre_C_Q)         0.141     0.707 r  Xbuff_U/tptr_reg[0]/Q
-                         net (fo=2, routed)           0.282     0.989    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRARDADDR[0]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRARDADDR[5]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.875     0.875    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKARDCLK
-                         clock pessimism             -0.235     0.640    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[5])
-                                                      0.183     0.823    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.823    
-                         arrival time                           0.989    
-  -------------------------------------------------------------------
-                         slack                                  0.166    
-
-Slack (MET) :             0.177ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.323ns  (logic 0.189ns (58.590%)  route 0.134ns (41.410%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.832ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X55Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X55Y77         FDRE (Prop_fdre_C_Q)         0.141     0.706 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/Q
-                         net (fo=10, routed)          0.134     0.840    DCT_Loop_1_proc_U0/Q[0]
-    SLICE_X54Y77         LUT3 (Prop_lut3_I1_O)        0.048     0.888 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.888    DCT_Loop_1_proc_U0/read_idx_fu_67_p2[2]
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.832     0.832    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                         clock pessimism             -0.254     0.578    
-    SLICE_X54Y77         FDRE (Hold_fdre_C_D)         0.133     0.711    DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]
-  -------------------------------------------------------------------
-                         required time                         -0.711    
-                         arrival time                           0.888    
-  -------------------------------------------------------------------
-                         slack                                  0.177    
-
-Slack (MET) :             0.180ns  (arrival time - required time)
-  Source:                 DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[8]
-                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.416ns  (logic 0.164ns (39.457%)  route 0.252ns (60.543%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.871ns
-    Source Clock Delay      (SCD):    0.565ns
-    Clock Pessimism Removal (CPR):    0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.565     0.565    DCT_Loop_1_proc_U0/ap_clk
-    SLICE_X54Y77         FDRE                                         r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X54Y77         FDRE (Prop_fdre_C_Q)         0.164     0.729 r  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/Q
-                         net (fo=7, routed)           0.252     0.981    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ADDRBWRADDR[3]
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/ADDRBWRADDR[8]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=36, unset)           0.871     0.871    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ap_clk
-    RAMB18_X3Y30         RAMB18E1                                     r  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-                         clock pessimism             -0.254     0.617    
-    RAMB18_X3Y30         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[8])
-                                                      0.183     0.800    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg
-  -------------------------------------------------------------------
-                         required time                         -0.800    
+                         required time                         -0.952    
                          arrival time                           0.981    
   -------------------------------------------------------------------
-                         slack                                  0.180    
+                         slack                                  0.029    
+
+Slack (MET) :             0.030ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_2_reg_2231_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.356ns  (logic 0.141ns (39.576%)  route 0.215ns (60.424%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.260ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.905ns
+    Source Clock Delay      (SCD):    0.636ns
+    Clock Pessimism Removal (CPR):    0.009ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.636     0.636    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X49Y142        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_2_reg_2231_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y142        FDRE (Prop_fdre_C_Q)         0.141     0.777 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_2_reg_2231_reg[30]/Q
+                         net (fo=1, routed)           0.215     0.992    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_2_reg_2231[30]
+    SLICE_X52Y142        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.905     0.905    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X52Y142        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[30]/C
+                         clock pessimism             -0.009     0.896    
+    SLICE_X52Y142        FDRE (Hold_fdre_C_D)         0.066     0.962    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[30]
+  -------------------------------------------------------------------
+                         required time                         -0.962    
+                         arrival time                           0.992    
+  -------------------------------------------------------------------
+                         slack                                  0.030    
+
+Slack (MET) :             0.033ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it3_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.362ns  (logic 0.141ns (38.970%)  route 0.221ns (61.030%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.893ns
+    Source Clock Delay      (SCD):    0.625ns
+    Clock Pessimism Removal (CPR):    0.009ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.625     0.625    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X48Y126        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y126        FDRE (Prop_fdre_C_Q)         0.141     0.766 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2_reg[5]/Q
+                         net (fo=1, routed)           0.221     0.987    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it2[5]
+    SLICE_X53Y127        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it3_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.893     0.893    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X53Y127        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it3_reg[5]/C
+                         clock pessimism             -0.009     0.884    
+    SLICE_X53Y127        FDRE (Hold_fdre_C_D)         0.070     0.954    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_2_reg_2231_pp0_it3_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -0.954    
+                         arrival time                           0.987    
+  -------------------------------------------------------------------
+                         slack                                  0.033    
+
+Slack (MET) :             0.033ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_B/EXP_DET_LUT.EXP_ALL_ONE_DEL/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.390ns  (logic 0.186ns (47.660%)  route 0.204ns (52.340%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.904ns
+    Source Clock Delay      (SCD):    0.630ns
+    Clock Pessimism Removal (CPR):    0.009ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.630     0.630    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_B/EXP_DET_LUT.EXP_ALL_ONE_DEL/i_pipe/aclk
+    SLICE_X52Y135        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_B/EXP_DET_LUT.EXP_ALL_ONE_DEL/i_pipe/opt_has_pipe.first_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y135        FDRE (Prop_fdre_C_Q)         0.141     0.771 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_B/EXP_DET_LUT.EXP_ALL_ONE_DEL/i_pipe/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=5, routed)           0.204     0.975    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_A/EXP_DET_LUT.EXP_ALL_ZERO_DEL/i_pipe/b_exp_flt_all_one
+    SLICE_X49Y134        LUT4 (Prop_lut4_I2_O)        0.045     1.020 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/COND_DET_A/EXP_DET_LUT.EXP_ALL_ZERO_DEL/i_pipe/opt_has_pipe.first_q[0]_i_1__1/O
+                         net (fo=1, routed)           0.000     1.020    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/D[0]
+    SLICE_X49Y134        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.904     0.904    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X49Y134        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                         clock pessimism             -0.009     0.895    
+    SLICE_X49Y134        FDRE (Hold_fdre_C_D)         0.092     0.987    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.987    
+                         arrival time                           1.020    
+  -------------------------------------------------------------------
+                         slack                                  0.033    
+
+Slack (MET) :             0.034ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/tmp_9_2_reg_1578_reg[25]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/din1_buf1_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.377ns  (logic 0.141ns (37.419%)  route 0.236ns (62.581%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.277ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.829ns
+    Source Clock Delay      (SCD):    0.552ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.552     0.552    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_clk
+    SLICE_X51Y50         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/tmp_9_2_reg_1578_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y50         FDRE (Prop_fdre_C_Q)         0.141     0.693 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/tmp_9_2_reg_1578_reg[25]/Q
+                         net (fo=1, routed)           0.236     0.929    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/tmp_9_2_reg_1578_reg[31][25]
+    SLICE_X41Y49         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/din1_buf1_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.829     0.829    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/ap_clk
+    SLICE_X41Y49         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/din1_buf1_reg[25]/C
+                         clock pessimism              0.000     0.829    
+    SLICE_X41Y49         FDRE (Hold_fdre_C_D)         0.066     0.895    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/din1_buf1_reg[25]
+  -------------------------------------------------------------------
+                         required time                         -0.895    
+                         arrival time                           0.929    
+  -------------------------------------------------------------------
+                         slack                                  0.034    
+
+Slack (MET) :             0.035ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/temp_1_7_reg_2296_reg[18]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DIADI[18]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.386ns  (logic 0.164ns (42.479%)  route 0.222ns (57.521%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.055ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.946ns
+    Source Clock Delay      (SCD):    0.636ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.636     0.636    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X32Y134        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/temp_1_7_reg_2296_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y134        FDRE (Prop_fdre_C_Q)         0.164     0.800 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/temp_1_7_reg_2296_reg[18]/Q
+                         net (fo=1, routed)           0.222     1.022    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/temp_1_7_reg_2296_reg[31][18]
+    RAMB36_X2Y26         RAMB36E1                                     r  Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DIADI[18]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.946     0.946    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB36_X2Y26         RAMB36E1                                     r  Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
+                         clock pessimism             -0.255     0.691    
+    RAMB36_X2Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[18])
+                                                      0.296     0.987    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg
+  -------------------------------------------------------------------
+                         required time                         -0.987    
+                         arrival time                           1.022    
+  -------------------------------------------------------------------
+                         slack                                  0.035    
+
+Slack (MET) :             0.035ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.395ns  (logic 0.268ns (67.898%)  route 0.127ns (32.102%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.255ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.845ns
+    Source Clock Delay      (SCD):    0.590ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.590     0.590    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/aclk
+    SLICE_X31Y49         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y49         FDRE (Prop_fdre_C_Q)         0.141     0.731 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]/Q
+                         net (fo=2, routed)           0.127     0.858    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/EXP_OFF.LRG_EXP_DELAY_n_11
+    SLICE_X31Y51         CARRY4 (Prop_carry4_DI[2]_O[3])
+                                                      0.127     0.985 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/opt_has_pipe.first_q_reg[3]_i_1__0/O[3]
+                         net (fo=1, routed)           0.000     0.985    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/minusOp[3]
+    SLICE_X31Y51         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.845     0.845    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/aclk
+    SLICE_X31Y51         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]/C
+                         clock pessimism              0.000     0.845    
+    SLICE_X31Y51         FDRE (Hold_fdre_C_D)         0.105     0.950    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U7/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -0.950    
+                         arrival time                           0.985    
+  -------------------------------------------------------------------
+                         slack                                  0.035    
+
+Slack (MET) :             0.040ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.363ns  (logic 0.141ns (38.885%)  route 0.222ns (61.115%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.257ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.895ns
+    Source Clock Delay      (SCD):    0.629ns
+    Clock Pessimism Removal (CPR):    0.009ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.629     0.629    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X48Y130        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y130        FDRE (Prop_fdre_C_Q)         0.141     0.770 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216_reg[11]/Q
+                         net (fo=1, routed)           0.222     0.992    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_1_reg_2216[11]
+    SLICE_X52Y129        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.895     0.895    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
+    SLICE_X52Y129        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[11]/C
+                         clock pessimism             -0.009     0.886    
+    SLICE_X52Y129        FDRE (Hold_fdre_C_D)         0.066     0.952    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_1_reg_2216_pp0_it2_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -0.952    
+                         arrival time                           0.992    
+  -------------------------------------------------------------------
+                         slack                                  0.040    
+
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[31]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_U0/B_cached_5_3_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_5_3_channel_ram/SRL_SIG_reg[2][31]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.071%)  route 0.115ns (44.929%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.032ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.840ns
+    Source Clock Delay      (SCD):    0.573ns
+    Clock Pessimism Removal (CPR):    0.235ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.573     0.573    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X61Y66         FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y66         FDRE (Prop_fdre_C_Q)         0.141     0.714 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[31]/Q
+                         net (fo=1, routed)           0.115     0.829    DCT_MAT_Multiply_U0/B_cached_5_3_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_5_3_channel_ram/ap_return_43[31]
+    SLICE_X58Y66         SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_5_3_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_5_3_channel_ram/SRL_SIG_reg[2][31]_srl3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.840     0.840    DCT_MAT_Multiply_U0/B_cached_5_3_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_5_3_channel_ram/ap_clk
+    SLICE_X58Y66         SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_5_3_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_5_3_channel_ram/SRL_SIG_reg[2][31]_srl3/CLK
+                         clock pessimism             -0.235     0.605    
+    SLICE_X58Y66         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.788    DCT_MAT_Multiply_U0/B_cached_5_3_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_5_3_channel_ram/SRL_SIG_reg[2][31]_srl3
+  -------------------------------------------------------------------
+                         required time                         -0.788    
+                         arrival time                           0.829    
+  -------------------------------------------------------------------
+                         slack                                  0.041    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_4_6_1_reg_559_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_MAT_Multiply_1_U0/B_cached_4_6_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel_ram/SRL_SIG_reg[2][15]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.241ns  (logic 0.141ns (58.505%)  route 0.100ns (41.495%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.854ns
+    Source Clock Delay      (SCD):    0.583ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.583     0.583    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
+    SLICE_X89Y98         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_4_6_1_reg_559_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X89Y98         FDRE (Prop_fdre_C_Q)         0.141     0.724 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_4_6_1_reg_559_reg[15]/Q
+                         net (fo=1, routed)           0.100     0.824    DCT_MAT_Multiply_1_U0/B_cached_4_6_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel_ram/ap_return_38[15]
+    SLICE_X86Y97         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_4_6_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel_ram/SRL_SIG_reg[2][15]_srl3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=15989, unset)        0.854     0.854    DCT_MAT_Multiply_1_U0/B_cached_4_6_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel_ram/ap_clk
+    SLICE_X86Y97         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_4_6_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel_ram/SRL_SIG_reg[2][15]_srl3/CLK
+                         clock pessimism             -0.255     0.599    
+    SLICE_X86Y97         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.782    DCT_MAT_Multiply_1_U0/B_cached_4_6_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel_ram/SRL_SIG_reg[2][15]_srl3
+  -------------------------------------------------------------------
+                         required time                         -0.782    
+                         arrival time                           0.824    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
 
 
 
@@ -1118,37 +1061,37 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X3Y30  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKARDCLK
-Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB18_X3Y30  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-Min Period        n/a     FDSE/C              n/a            1.000         10.000      9.000      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[1]/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X55Y78  DCT_Loop_1_proc_U0/ap_done_reg_reg/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X54Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/C
-Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[4]/C
-Low Pulse Width   Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-Low Pulse Width   Fast    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[1]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[1]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y78  DCT_Loop_1_proc_U0/ap_done_reg_reg/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y78  DCT_Loop_1_proc_U0/ap_done_reg_reg/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0_ap_start_reg/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0_ap_start_reg/C
-Low Pulse Width   Fast    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X57Y77  DCT_Loop_2_proc_U0/ap_CS_fsm_reg[0]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X57Y77  DCT_Loop_2_proc_U0/ap_CS_fsm_reg[1]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[1]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[2]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[3]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[4]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[5]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y77  DCT_Loop_1_proc_U0/read_idx_0_i_i_reg_44_reg[6]/C
-High Pulse Width  Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-High Pulse Width  Fast    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y78  DCT_Loop_1_proc_U0/ap_CS_fsm_reg[1]/C
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X4Y40   DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X4Y40   DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y8    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y8    Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y8    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y8    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y26   Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y26   Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.545         10.000      7.455      DSP48_X3Y52    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.545         10.000      7.455      DSP48_X2Y54    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U184/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_14_14/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_14_14/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_14_14/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_14_14/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_15_15/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X30Y99   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_15_15/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_0_0/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_0_0/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_10_10/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_10_10/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_11_11/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_11_11/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_12_12/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y110  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_12_12/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y109  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_24_24/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X36Y109  temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_24_24/SP/CLK
 
 
 

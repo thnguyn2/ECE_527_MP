@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_Loop_1_proc'" level="0">
-<item name = "Date">Fri Oct 30 07:58:50 2015
+<item name = "Date">Fri Oct 30 11:21:08 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -75,7 +75,7 @@
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="read_idx_fu_67_p2">+, 0, 0, 7, 7, 1</column>
 <column name="ap_sig_bdd_53">and, 0, 0, 1, 1, 1</column>
-<column name="exitcond9_fu_61_p2">icmp, 0, 0, 3, 7, 7</column>
+<column name="exitcond1_fu_61_p2">icmp, 0, 0, 3, 7, 7</column>
 <column name="ap_sig_bdd_62">or, 0, 0, 1, 1, 1</column>
 </table>
 </item>

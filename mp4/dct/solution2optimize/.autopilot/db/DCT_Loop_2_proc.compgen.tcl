@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 3 \
+    id 2 \
     name Xbuff \
     reset_level 1 \
     sync_rst true \
@@ -26,20 +26,24 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Direct connection:
+# XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 2 \
-    name Y \
-    type fifo \
-    dir O \
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3 \
+    name Xmat \
     reset_level 1 \
     sync_rst true \
-    corename dc_Y \
+    dir O \
+    corename Xmat \
     op interface \
-    ports { Y_din { O 32 vector } Y_full_n { I 1 bit } Y_write { O 1 bit } } \
+    ports { Xmat_address0 { O 6 vector } Xmat_ce0 { O 1 bit } Xmat_we0 { O 1 bit } Xmat_d0 { O 32 vector } } \
 } "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'Xmat'"
 }
+}
+
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

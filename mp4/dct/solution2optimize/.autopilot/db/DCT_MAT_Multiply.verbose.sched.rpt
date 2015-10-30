@@ -1,0 +1,363 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_MAT_Multiply'
+================================================================
+* Date:           Fri Oct 30 11:20:56 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.68|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  178|  178|  111|  111| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 3, States = { 1 2 3 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: call_ret [2/2] 0.00ns
+codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply_Loop_LoadRow_proc([64 x float]* nocapture %B) readonly
+
+
+ <State 2>: 0.00ns
+ST_2: call_ret [1/2] 0.00ns
+codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply_Loop_LoadRow_proc([64 x float]* nocapture %B) readonly
+
+ST_2: B_cached_0_0_channel [1/1] 0.00ns
+codeRepl:2  %B_cached_0_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 0
+
+ST_2: B_cached_0_1_channel [1/1] 0.00ns
+codeRepl:3  %B_cached_0_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 1
+
+ST_2: B_cached_0_2_channel [1/1] 0.00ns
+codeRepl:4  %B_cached_0_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 2
+
+ST_2: B_cached_0_3_channel [1/1] 0.00ns
+codeRepl:5  %B_cached_0_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 3
+
+ST_2: B_cached_0_4_channel [1/1] 0.00ns
+codeRepl:6  %B_cached_0_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 4
+
+ST_2: B_cached_0_5_channel [1/1] 0.00ns
+codeRepl:7  %B_cached_0_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 5
+
+ST_2: B_cached_0_6_channel [1/1] 0.00ns
+codeRepl:8  %B_cached_0_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 6
+
+ST_2: B_cached_0_7_channel [1/1] 0.00ns
+codeRepl:9  %B_cached_0_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 7
+
+ST_2: B_cached_1_0_channel [1/1] 0.00ns
+codeRepl:10  %B_cached_1_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 8
+
+ST_2: B_cached_1_1_channel [1/1] 0.00ns
+codeRepl:11  %B_cached_1_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 9
+
+ST_2: B_cached_1_2_channel [1/1] 0.00ns
+codeRepl:12  %B_cached_1_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 10
+
+ST_2: B_cached_1_3_channel [1/1] 0.00ns
+codeRepl:13  %B_cached_1_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 11
+
+ST_2: B_cached_1_4_channel [1/1] 0.00ns
+codeRepl:14  %B_cached_1_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 12
+
+ST_2: B_cached_1_5_channel [1/1] 0.00ns
+codeRepl:15  %B_cached_1_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 13
+
+ST_2: B_cached_1_6_channel [1/1] 0.00ns
+codeRepl:16  %B_cached_1_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 14
+
+ST_2: B_cached_1_7_channel [1/1] 0.00ns
+codeRepl:17  %B_cached_1_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 15
+
+ST_2: B_cached_2_0_channel [1/1] 0.00ns
+codeRepl:18  %B_cached_2_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 16
+
+ST_2: B_cached_2_1_channel [1/1] 0.00ns
+codeRepl:19  %B_cached_2_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 17
+
+ST_2: B_cached_2_2_channel [1/1] 0.00ns
+codeRepl:20  %B_cached_2_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 18
+
+ST_2: B_cached_2_3_channel [1/1] 0.00ns
+codeRepl:21  %B_cached_2_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 19
+
+ST_2: B_cached_2_4_channel [1/1] 0.00ns
+codeRepl:22  %B_cached_2_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 20
+
+ST_2: B_cached_2_5_channel [1/1] 0.00ns
+codeRepl:23  %B_cached_2_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 21
+
+ST_2: B_cached_2_6_channel [1/1] 0.00ns
+codeRepl:24  %B_cached_2_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 22
+
+ST_2: B_cached_2_7_channel [1/1] 0.00ns
+codeRepl:25  %B_cached_2_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 23
+
+ST_2: B_cached_3_0_channel [1/1] 0.00ns
+codeRepl:26  %B_cached_3_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 24
+
+ST_2: B_cached_3_1_channel [1/1] 0.00ns
+codeRepl:27  %B_cached_3_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 25
+
+ST_2: B_cached_3_2_channel [1/1] 0.00ns
+codeRepl:28  %B_cached_3_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 26
+
+ST_2: B_cached_3_3_channel [1/1] 0.00ns
+codeRepl:29  %B_cached_3_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 27
+
+ST_2: B_cached_3_4_channel [1/1] 0.00ns
+codeRepl:30  %B_cached_3_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 28
+
+ST_2: B_cached_3_5_channel [1/1] 0.00ns
+codeRepl:31  %B_cached_3_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 29
+
+ST_2: B_cached_3_6_channel [1/1] 0.00ns
+codeRepl:32  %B_cached_3_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 30
+
+ST_2: B_cached_3_7_channel [1/1] 0.00ns
+codeRepl:33  %B_cached_3_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 31
+
+ST_2: B_cached_4_0_channel [1/1] 0.00ns
+codeRepl:34  %B_cached_4_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 32
+
+ST_2: B_cached_4_1_channel [1/1] 0.00ns
+codeRepl:35  %B_cached_4_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 33
+
+ST_2: B_cached_4_2_channel [1/1] 0.00ns
+codeRepl:36  %B_cached_4_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 34
+
+ST_2: B_cached_4_3_channel [1/1] 0.00ns
+codeRepl:37  %B_cached_4_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 35
+
+ST_2: B_cached_4_4_channel [1/1] 0.00ns
+codeRepl:38  %B_cached_4_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 36
+
+ST_2: B_cached_4_5_channel [1/1] 0.00ns
+codeRepl:39  %B_cached_4_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 37
+
+ST_2: B_cached_4_6_channel [1/1] 0.00ns
+codeRepl:40  %B_cached_4_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 38
+
+ST_2: B_cached_4_7_channel [1/1] 0.00ns
+codeRepl:41  %B_cached_4_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 39
+
+ST_2: B_cached_5_0_channel [1/1] 0.00ns
+codeRepl:42  %B_cached_5_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 40
+
+ST_2: B_cached_5_1_channel [1/1] 0.00ns
+codeRepl:43  %B_cached_5_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 41
+
+ST_2: B_cached_5_2_channel [1/1] 0.00ns
+codeRepl:44  %B_cached_5_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 42
+
+ST_2: B_cached_5_3_channel [1/1] 0.00ns
+codeRepl:45  %B_cached_5_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 43
+
+ST_2: B_cached_5_4_channel [1/1] 0.00ns
+codeRepl:46  %B_cached_5_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 44
+
+ST_2: B_cached_5_5_channel [1/1] 0.00ns
+codeRepl:47  %B_cached_5_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 45
+
+ST_2: B_cached_5_6_channel [1/1] 0.00ns
+codeRepl:48  %B_cached_5_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 46
+
+ST_2: B_cached_5_7_channel [1/1] 0.00ns
+codeRepl:49  %B_cached_5_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 47
+
+ST_2: B_cached_6_0_channel [1/1] 0.00ns
+codeRepl:50  %B_cached_6_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 48
+
+ST_2: B_cached_6_1_channel [1/1] 0.00ns
+codeRepl:51  %B_cached_6_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 49
+
+ST_2: B_cached_6_2_channel [1/1] 0.00ns
+codeRepl:52  %B_cached_6_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 50
+
+ST_2: B_cached_6_3_channel [1/1] 0.00ns
+codeRepl:53  %B_cached_6_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 51
+
+ST_2: B_cached_6_4_channel [1/1] 0.00ns
+codeRepl:54  %B_cached_6_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 52
+
+ST_2: B_cached_6_5_channel [1/1] 0.00ns
+codeRepl:55  %B_cached_6_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 53
+
+ST_2: B_cached_6_6_channel [1/1] 0.00ns
+codeRepl:56  %B_cached_6_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 54
+
+ST_2: B_cached_6_7_channel [1/1] 0.00ns
+codeRepl:57  %B_cached_6_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 55
+
+ST_2: B_cached_7_0_channel [1/1] 0.00ns
+codeRepl:58  %B_cached_7_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 56
+
+ST_2: B_cached_7_1_channel [1/1] 0.00ns
+codeRepl:59  %B_cached_7_1_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 57
+
+ST_2: B_cached_7_2_channel [1/1] 0.00ns
+codeRepl:60  %B_cached_7_2_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 58
+
+ST_2: B_cached_7_3_channel [1/1] 0.00ns
+codeRepl:61  %B_cached_7_3_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 59
+
+ST_2: B_cached_7_4_channel [1/1] 0.00ns
+codeRepl:62  %B_cached_7_4_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 60
+
+ST_2: B_cached_7_5_channel [1/1] 0.00ns
+codeRepl:63  %B_cached_7_5_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 61
+
+ST_2: B_cached_7_6_channel [1/1] 0.00ns
+codeRepl:64  %B_cached_7_6_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 62
+
+ST_2: B_cached_7_7_channel [1/1] 0.00ns
+codeRepl:65  %B_cached_7_7_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 63
+
+ST_2: stg_70 [2/2] 0.00ns
+codeRepl:66  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc(float %B_cached_0_0_channel, float %B_cached_0_1_channel, float %B_cached_0_2_channel, float %B_cached_0_3_channel, float %B_cached_0_4_channel, float %B_cached_0_5_channel, float %B_cached_0_6_channel, float %B_cached_0_7_channel, float %B_cached_1_0_channel, float %B_cached_1_1_channel, float %B_cached_1_2_channel, float %B_cached_1_3_channel, float %B_cached_1_4_channel, float %B_cached_1_5_channel, float %B_cached_1_6_channel, float %B_cached_1_7_channel, float %B_cached_2_0_channel, float %B_cached_2_1_channel, float %B_cached_2_2_channel, float %B_cached_2_3_channel, float %B_cached_2_4_channel, float %B_cached_2_5_channel, float %B_cached_2_6_channel, float %B_cached_2_7_channel, float %B_cached_3_0_channel, float %B_cached_3_1_channel, float %B_cached_3_2_channel, float %B_cached_3_3_channel, float %B_cached_3_4_channel, float %B_cached_3_5_channel, float %B_cached_3_6_channel, float %B_cached_3_7_channel, float %B_cached_4_0_channel, float %B_cached_4_1_channel, float %B_cached_4_2_channel, float %B_cached_4_3_channel, float %B_cached_4_4_channel, float %B_cached_4_5_channel, float %B_cached_4_6_channel, float %B_cached_4_7_channel, float %B_cached_5_0_channel, float %B_cached_5_1_channel, float %B_cached_5_2_channel, float %B_cached_5_3_channel, float %B_cached_5_4_channel, float %B_cached_5_5_channel, float %B_cached_5_6_channel, float %B_cached_5_7_channel, float %B_cached_6_0_channel, float %B_cached_6_1_channel, float %B_cached_6_2_channel, float %B_cached_6_3_channel, float %B_cached_6_4_channel, float %B_cached_6_5_channel, float %B_cached_6_6_channel, float %B_cached_6_7_channel, float %B_cached_7_0_channel, float %B_cached_7_1_channel, float %B_cached_7_2_channel, float %B_cached_7_3_channel, float %B_cached_7_4_channel, float %B_cached_7_5_channel, float %B_cached_7_6_channel, float %B_cached_7_7_channel, [8 x float]* %C_0, [8 x float]* %C_1, [8 x float]* %C_2, [8 x float]* %C_3, [8 x float]* %C_4, [8 x float]* %C_5, [8 x float]* %C_6, [8 x float]* %C_7)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_71 [1/1] 0.00ns
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_3: stg_72 [1/2] 0.00ns
+codeRepl:66  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc(float %B_cached_0_0_channel, float %B_cached_0_1_channel, float %B_cached_0_2_channel, float %B_cached_0_3_channel, float %B_cached_0_4_channel, float %B_cached_0_5_channel, float %B_cached_0_6_channel, float %B_cached_0_7_channel, float %B_cached_1_0_channel, float %B_cached_1_1_channel, float %B_cached_1_2_channel, float %B_cached_1_3_channel, float %B_cached_1_4_channel, float %B_cached_1_5_channel, float %B_cached_1_6_channel, float %B_cached_1_7_channel, float %B_cached_2_0_channel, float %B_cached_2_1_channel, float %B_cached_2_2_channel, float %B_cached_2_3_channel, float %B_cached_2_4_channel, float %B_cached_2_5_channel, float %B_cached_2_6_channel, float %B_cached_2_7_channel, float %B_cached_3_0_channel, float %B_cached_3_1_channel, float %B_cached_3_2_channel, float %B_cached_3_3_channel, float %B_cached_3_4_channel, float %B_cached_3_5_channel, float %B_cached_3_6_channel, float %B_cached_3_7_channel, float %B_cached_4_0_channel, float %B_cached_4_1_channel, float %B_cached_4_2_channel, float %B_cached_4_3_channel, float %B_cached_4_4_channel, float %B_cached_4_5_channel, float %B_cached_4_6_channel, float %B_cached_4_7_channel, float %B_cached_5_0_channel, float %B_cached_5_1_channel, float %B_cached_5_2_channel, float %B_cached_5_3_channel, float %B_cached_5_4_channel, float %B_cached_5_5_channel, float %B_cached_5_6_channel, float %B_cached_5_7_channel, float %B_cached_6_0_channel, float %B_cached_6_1_channel, float %B_cached_6_2_channel, float %B_cached_6_3_channel, float %B_cached_6_4_channel, float %B_cached_6_5_channel, float %B_cached_6_6_channel, float %B_cached_6_7_channel, float %B_cached_7_0_channel, float %B_cached_7_1_channel, float %B_cached_7_2_channel, float %B_cached_7_3_channel, float %B_cached_7_4_channel, float %B_cached_7_5_channel, float %B_cached_7_6_channel, float %B_cached_7_7_channel, [8 x float]* %C_0, [8 x float]* %C_1, [8 x float]* %C_2, [8 x float]* %C_3, [8 x float]* %C_4, [8 x float]* %C_5, [8 x float]* %C_6, [8 x float]* %C_7)
+
+ST_3: stg_73 [1/1] 0.00ns
+codeRepl:67  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

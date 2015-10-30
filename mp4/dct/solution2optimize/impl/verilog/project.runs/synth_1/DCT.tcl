@@ -8,20 +8,172 @@ create_project -in_memory -part xc7z020clg484-1
 
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.cache/wt [current_project]
 set_property parent.project_path E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+read_ip e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fadd_3_full_dsp_32/DCT_ap_fadd_3_full_dsp_32.xci
+set_property is_locked true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fadd_3_full_dsp_32/DCT_ap_fadd_3_full_dsp_32.xci]
+
+read_ip e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/DCT_ap_fmul_2_max_dsp_32.xci
+set_property is_locked true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/DCT_ap_fmul_2_max_dsp_32.xci]
+
 read_verilog -library xil_defaultlib {
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fadd_32ns_32ns_32_5_full_dsp.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fmul_32ns_32ns_32_4_max_dsp.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_mux_8to1_sel3_32_1.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_LoadRow_pr.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_LoadRow_proc.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_temp_0_memcore.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xbuff_memcore.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xmat_memcore.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_1_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_2_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_4_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_5_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_6_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_0_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_1_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_2_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_3_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_4_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_5_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_6_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_0_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_1_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_2_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_3_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_4_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_5_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_6_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_7_channel.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_2_proc.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_temp_0.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xbuff.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xmat.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v
 }
 read_xdc E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.xdc
 set_property used_in_implementation false [get_files E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 synth_design -top DCT -part xc7z020clg484-1 -no_iobuf -mode out_of_context
 write_checkpoint -noxdef DCT.dcp
 catch { report_utilization -file DCT_utilization_synth.rpt -pb DCT_utilization_synth.pb }

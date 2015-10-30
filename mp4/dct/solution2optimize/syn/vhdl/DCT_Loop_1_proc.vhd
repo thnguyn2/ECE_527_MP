@@ -50,7 +50,7 @@ architecture behav of DCT_Loop_1_proc is
     signal read_idx_fu_67_p2 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_sig_cseq_ST_st2_fsm_1 : STD_LOGIC;
     signal ap_sig_bdd_46 : BOOLEAN;
-    signal exitcond9_fu_61_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal exitcond1_fu_61_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_sig_bdd_53 : BOOLEAN;
     signal read_idx_0_i_i_reg_44 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_sig_bdd_62 : BOOLEAN;
@@ -85,7 +85,7 @@ begin
             else
                 if ((ap_const_logic_1 = ap_continue)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not(ap_sig_bdd_53) and not((exitcond9_fu_61_p2 = ap_const_lv1_0)))) then 
+                elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not(ap_sig_bdd_53) and not((exitcond1_fu_61_p2 = ap_const_lv1_0)))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -97,7 +97,7 @@ begin
     read_idx_0_i_i_reg_44_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond9_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53))) then 
+            if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond1_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53))) then 
                 read_idx_0_i_i_reg_44 <= read_idx_fu_67_p2;
             elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not(ap_sig_bdd_62))) then 
                 read_idx_0_i_i_reg_44 <= ap_const_lv7_0;
@@ -106,7 +106,7 @@ begin
     end process;
 
     -- the next state (ap_NS_fsm) of the state machine. --
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, exitcond9_fu_61_p2, ap_sig_bdd_53, ap_sig_bdd_62)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, exitcond1_fu_61_p2, ap_sig_bdd_53, ap_sig_bdd_62)
     begin
         case ap_CS_fsm is
             when ap_ST_st1_fsm_0 => 
@@ -116,9 +116,9 @@ begin
                     ap_NS_fsm <= ap_ST_st1_fsm_0;
                 end if;
             when ap_ST_st2_fsm_1 => 
-                if ((not(ap_sig_bdd_53) and not((exitcond9_fu_61_p2 = ap_const_lv1_0)))) then
+                if ((not(ap_sig_bdd_53) and not((exitcond1_fu_61_p2 = ap_const_lv1_0)))) then
                     ap_NS_fsm <= ap_ST_st1_fsm_0;
-                elsif (((exitcond9_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53))) then
+                elsif (((exitcond1_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53))) then
                     ap_NS_fsm <= ap_ST_st2_fsm_1;
                 else
                     ap_NS_fsm <= ap_ST_st2_fsm_1;
@@ -129,9 +129,9 @@ begin
     end process;
 
     -- X_read assign process. --
-    X_read_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1, exitcond9_fu_61_p2, ap_sig_bdd_53)
+    X_read_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1, exitcond1_fu_61_p2, ap_sig_bdd_53)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond9_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond1_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53))) then 
             X_read <= ap_const_logic_1;
         else 
             X_read <= ap_const_logic_0;
@@ -153,9 +153,9 @@ begin
     Xbuff_d0 <= X_dout;
 
     -- Xbuff_we0 assign process. --
-    Xbuff_we0_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1, exitcond9_fu_61_p2, ap_sig_bdd_53)
+    Xbuff_we0_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1, exitcond1_fu_61_p2, ap_sig_bdd_53)
     begin
-        if ((((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond9_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53)))) then 
+        if ((((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond1_fu_61_p2 = ap_const_lv1_0) and not(ap_sig_bdd_53)))) then 
             Xbuff_we0 <= ap_const_logic_1;
         else 
             Xbuff_we0 <= ap_const_logic_0;
@@ -164,9 +164,9 @@ begin
 
 
     -- ap_done assign process. --
-    ap_done_assign_proc : process(ap_done_reg, ap_sig_cseq_ST_st2_fsm_1, exitcond9_fu_61_p2, ap_sig_bdd_53)
+    ap_done_assign_proc : process(ap_done_reg, ap_sig_cseq_ST_st2_fsm_1, exitcond1_fu_61_p2, ap_sig_bdd_53)
     begin
-        if (((ap_const_logic_1 = ap_done_reg) or ((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not(ap_sig_bdd_53) and not((exitcond9_fu_61_p2 = ap_const_lv1_0))))) then 
+        if (((ap_const_logic_1 = ap_done_reg) or ((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not(ap_sig_bdd_53) and not((exitcond1_fu_61_p2 = ap_const_lv1_0))))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -186,9 +186,9 @@ begin
 
 
     -- ap_ready assign process. --
-    ap_ready_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1, exitcond9_fu_61_p2, ap_sig_bdd_53)
+    ap_ready_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1, exitcond1_fu_61_p2, ap_sig_bdd_53)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not(ap_sig_bdd_53) and not((exitcond9_fu_61_p2 = ap_const_lv1_0)))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not(ap_sig_bdd_53) and not((exitcond1_fu_61_p2 = ap_const_lv1_0)))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -211,9 +211,9 @@ begin
 
 
     -- ap_sig_bdd_53 assign process. --
-    ap_sig_bdd_53_assign_proc : process(X_empty_n, exitcond9_fu_61_p2)
+    ap_sig_bdd_53_assign_proc : process(X_empty_n, exitcond1_fu_61_p2)
     begin
-                ap_sig_bdd_53 <= ((X_empty_n = ap_const_logic_0) and (exitcond9_fu_61_p2 = ap_const_lv1_0));
+                ap_sig_bdd_53 <= ((X_empty_n = ap_const_logic_0) and (exitcond1_fu_61_p2 = ap_const_lv1_0));
     end process;
 
 
@@ -245,7 +245,7 @@ begin
         end if; 
     end process;
 
-    exitcond9_fu_61_p2 <= "1" when (read_idx_0_i_i_reg_44 = ap_const_lv7_41) else "0";
+    exitcond1_fu_61_p2 <= "1" when (read_idx_0_i_i_reg_44 = ap_const_lv7_41) else "0";
     p_0_rec_i_i_cast_fu_56_p1 <= std_logic_vector(resize(unsigned(read_idx_0_i_i_reg_44),64));
     read_idx_fu_67_p2 <= std_logic_vector(unsigned(read_idx_0_i_i_reg_44) + unsigned(ap_const_lv7_1));
 end behav;

@@ -65,7 +65,7 @@ reg    ap_sig_bdd_21;
 wire   [6:0] read_idx_fu_67_p2;
 reg    ap_sig_cseq_ST_st2_fsm_1;
 reg    ap_sig_bdd_46;
-wire   [0:0] exitcond9_fu_61_p2;
+wire   [0:0] exitcond1_fu_61_p2;
 reg    ap_sig_bdd_53;
 reg   [6:0] read_idx_0_i_i_reg_44;
 reg    ap_sig_bdd_62;
@@ -93,7 +93,7 @@ begin : ap_ret_ap_done_reg
     end else begin
         if ((ap_const_logic_1 == ap_continue)) begin
             ap_done_reg <= ap_const_logic_0;
-        end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~ap_sig_bdd_53 & ~(exitcond9_fu_61_p2 == ap_const_lv1_0))) begin
+        end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~ap_sig_bdd_53 & ~(exitcond1_fu_61_p2 == ap_const_lv1_0))) begin
             ap_done_reg <= ap_const_logic_1;
         end
     end
@@ -102,7 +102,7 @@ end
 /// assign process. ///
 always @(posedge ap_clk)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond9_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond1_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
         read_idx_0_i_i_reg_44 <= read_idx_fu_67_p2;
     end else if (((ap_const_logic_1 == ap_sig_cseq_ST_st1_fsm_0) & ~ap_sig_bdd_62)) begin
         read_idx_0_i_i_reg_44 <= ap_const_lv7_0;
@@ -110,9 +110,9 @@ begin
 end
 
 /// X_read assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or exitcond9_fu_61_p2 or ap_sig_bdd_53)
+always @ (ap_sig_cseq_ST_st2_fsm_1 or exitcond1_fu_61_p2 or ap_sig_bdd_53)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond9_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond1_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
         X_read = ap_const_logic_1;
     end else begin
         X_read = ap_const_logic_0;
@@ -130,9 +130,9 @@ begin
 end
 
 /// Xbuff_we0 assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or exitcond9_fu_61_p2 or ap_sig_bdd_53)
+always @ (ap_sig_cseq_ST_st2_fsm_1 or exitcond1_fu_61_p2 or ap_sig_bdd_53)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond9_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond1_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
         Xbuff_we0 = ap_const_logic_1;
     end else begin
         Xbuff_we0 = ap_const_logic_0;
@@ -140,9 +140,9 @@ begin
 end
 
 /// ap_done assign process. ///
-always @ (ap_done_reg or ap_sig_cseq_ST_st2_fsm_1 or exitcond9_fu_61_p2 or ap_sig_bdd_53)
+always @ (ap_done_reg or ap_sig_cseq_ST_st2_fsm_1 or exitcond1_fu_61_p2 or ap_sig_bdd_53)
 begin
-    if (((ap_const_logic_1 == ap_done_reg) | ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~ap_sig_bdd_53 & ~(exitcond9_fu_61_p2 == ap_const_lv1_0)))) begin
+    if (((ap_const_logic_1 == ap_done_reg) | ((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~ap_sig_bdd_53 & ~(exitcond1_fu_61_p2 == ap_const_lv1_0)))) begin
         ap_done = ap_const_logic_1;
     end else begin
         ap_done = ap_const_logic_0;
@@ -160,9 +160,9 @@ begin
 end
 
 /// ap_ready assign process. ///
-always @ (ap_sig_cseq_ST_st2_fsm_1 or exitcond9_fu_61_p2 or ap_sig_bdd_53)
+always @ (ap_sig_cseq_ST_st2_fsm_1 or exitcond1_fu_61_p2 or ap_sig_bdd_53)
 begin
-    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~ap_sig_bdd_53 & ~(exitcond9_fu_61_p2 == ap_const_lv1_0))) begin
+    if (((ap_const_logic_1 == ap_sig_cseq_ST_st2_fsm_1) & ~ap_sig_bdd_53 & ~(exitcond1_fu_61_p2 == ap_const_lv1_0))) begin
         ap_ready = ap_const_logic_1;
     end else begin
         ap_ready = ap_const_logic_0;
@@ -189,7 +189,7 @@ begin
     end
 end
 /// the next state (ap_NS_fsm) of the state machine. ///
-always @ (ap_CS_fsm or exitcond9_fu_61_p2 or ap_sig_bdd_53 or ap_sig_bdd_62)
+always @ (ap_CS_fsm or exitcond1_fu_61_p2 or ap_sig_bdd_53 or ap_sig_bdd_62)
 begin
     case (ap_CS_fsm)
         ap_ST_st1_fsm_0 : 
@@ -202,9 +202,9 @@ begin
         end
         ap_ST_st2_fsm_1 : 
         begin
-            if ((~ap_sig_bdd_53 & ~(exitcond9_fu_61_p2 == ap_const_lv1_0))) begin
+            if ((~ap_sig_bdd_53 & ~(exitcond1_fu_61_p2 == ap_const_lv1_0))) begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
-            end else if (((exitcond9_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
+            end else if (((exitcond1_fu_61_p2 == ap_const_lv1_0) & ~ap_sig_bdd_53)) begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
             end else begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
@@ -233,9 +233,9 @@ begin
 end
 
 /// ap_sig_bdd_53 assign process. ///
-always @ (X_empty_n or exitcond9_fu_61_p2)
+always @ (X_empty_n or exitcond1_fu_61_p2)
 begin
-    ap_sig_bdd_53 = ((X_empty_n == ap_const_logic_0) & (exitcond9_fu_61_p2 == ap_const_lv1_0));
+    ap_sig_bdd_53 = ((X_empty_n == ap_const_logic_0) & (exitcond1_fu_61_p2 == ap_const_lv1_0));
 end
 
 /// ap_sig_bdd_62 assign process. ///
@@ -243,7 +243,7 @@ always @ (ap_start or ap_done_reg)
 begin
     ap_sig_bdd_62 = ((ap_start == ap_const_logic_0) | (ap_done_reg == ap_const_logic_1));
 end
-assign exitcond9_fu_61_p2 = (read_idx_0_i_i_reg_44 == ap_const_lv7_41? 1'b1: 1'b0);
+assign exitcond1_fu_61_p2 = (read_idx_0_i_i_reg_44 == ap_const_lv7_41? 1'b1: 1'b0);
 assign p_0_rec_i_i_cast_fu_56_p1 = read_idx_0_i_i_reg_44;
 assign read_idx_fu_67_p2 = (read_idx_0_i_i_reg_44 + ap_const_lv7_1);
 

@@ -11,7 +11,7 @@
 
 <trans id="18" from="2" to="2">
 <condition id="9">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -110,10 +110,10 @@ newFuncRoot:1  br label %0
 
 <node id="9" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-:3  %exitcond9 = icmp eq i7 %read_idx_0_i_i, -63
+:3  %exitcond1 = icmp eq i7 %read_idx_0_i_i, -63
 
 ]]></node>
-<StgValue><ssdm name="exitcond9"/></StgValue>
+<StgValue><ssdm name="exitcond1"/></StgValue>
 </operation>
 
 <operation id="9" st_id="2" stage="1" lat="1">
@@ -140,7 +140,7 @@ newFuncRoot:1  br label %0
 
 <node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:5  br i1 %exitcond9, label %.preheader.exitStub, label %1
+:5  br i1 %exitcond1, label %.preheader9.exitStub, label %1
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -150,7 +150,7 @@ newFuncRoot:1  br label %0
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -166,7 +166,7 @@ newFuncRoot:1  br label %0
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -182,7 +182,7 @@ newFuncRoot:1  br label %0
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -198,7 +198,7 @@ newFuncRoot:1  br label %0
 <core>RAM</core>
 <MemPortIdVec>0 </MemPortIdVec>
 <condition id="3">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -214,7 +214,7 @@ newFuncRoot:1  br label %0
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -230,13 +230,13 @@ newFuncRoot:1  br label %0
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="5">
-<or_exp><and_exp><literal name="exitcond9" val="1"/>
+<or_exp><and_exp><literal name="exitcond1" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <node id="19" bw="0">
 <![CDATA[
-.preheader.exitStub:0  ret void
+.preheader9.exitStub:0  ret void
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -287,7 +287,7 @@ newFuncRoot:1  br label %0
 <dataflow id="38" from="read_idx" to="read_idx_0_i_i" fromId="9" toId="5">
 <BackEdge/>
 <condition id="16">
-<or_exp><and_exp><literal name="exitcond9" val="0"/>
+<or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
 </condition>
 </dataflow>
@@ -304,15 +304,15 @@ newFuncRoot:1  br label %0
 </dataflow>
 <dataflow id="46" from="stg_43" to="empty" fromId="43" toId="7">
 </dataflow>
-<dataflow id="47" from="read_idx_0_i_i" to="exitcond9" fromId="5" toId="8">
+<dataflow id="47" from="read_idx_0_i_i" to="exitcond1" fromId="5" toId="8">
 </dataflow>
-<dataflow id="49" from="stg_48" to="exitcond9" fromId="48" toId="8">
+<dataflow id="49" from="stg_48" to="exitcond1" fromId="48" toId="8">
 </dataflow>
 <dataflow id="50" from="read_idx_0_i_i" to="read_idx" fromId="5" toId="9">
 </dataflow>
 <dataflow id="52" from="stg_51" to="read_idx" fromId="51" toId="9">
 </dataflow>
-<dataflow id="53" from="exitcond9" to="stg_10" fromId="8" toId="10">
+<dataflow id="53" from="exitcond1" to="stg_10" fromId="8" toId="10">
 </dataflow>
 <dataflow id="55" from="_ssdm_op_Read.ap_fifo.i32P" to="tempin" fromId="54" toId="11">
 </dataflow>
@@ -330,7 +330,7 @@ newFuncRoot:1  br label %0
 </dataflow>
 <dataflow id="63" from="Xbuff_addr" to="stg_14" fromId="13" toId="14">
 </dataflow>
-<dataflow id="64" from="exitcond9" to="stg_2" fromId="8" toId="2">
+<dataflow id="64" from="exitcond1" to="stg_2" fromId="8" toId="2">
 </dataflow>
 </dataflows>
 

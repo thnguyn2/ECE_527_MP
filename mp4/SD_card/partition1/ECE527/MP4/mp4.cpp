@@ -119,7 +119,9 @@ if ((fdr<0)||(fdw<0))
 }
 
 unsigned char rcvBuf[sizeof(float)*64];//Buffer for the received data
+unsigned char hw_dctBuf[sizeof(float)*64];//Buffer for receiving the dct transformed data
 Mat rcvBlock (8,8,CV_32F,rcvBuf);//Image defined on the top of the buffer
+Mat hw_dctBlock(8,8,CV_32F,hw_dctBuf);
 //---------------------------------------------------
 
 if(argc < 2)
@@ -184,6 +186,10 @@ decompImg = Mat(imgSP.rows,imgSP.cols,CV_32S,0.00);
 //Iterate over rows and cols of image matrix
 //Extract and compute 8x8 blocks
 cout << "...Testing IO connection...\n";
+int op_mode; //Mode of the operation 0,1,2,3 which defines what operations to be performed on the PL
+int dummy_data=255; //A dummy data piece since the Xillybus is off by 1 cycle
+int dummy_read;
+op_mode = 0;
 for(int i=0; i<imgSP.rows; i+=8)
 {
     for(int j=0; j<imgSP.cols; j+=8)
@@ -208,26 +214,28 @@ for(int i=0; i<imgSP.rows; i+=8)
         //Compute DCT of block
         //Time operation
         gettimeofday(&tdctStart,NULL);
-
-/*
-	//---Modified source code for sending data over the xillybus--
-	opfile.write(reinterpret_cast<void*>(block.data),sizeof(float)*64*block.channels());
-	opfile.flush(); //Make sure the data is flushed-Important to make sure that the data is being sent
-	ipfile.read(reinterpret_cast<void**>(rcvBuf),sizeof(float)*64);//Test data read back
-*/
 	write(fdw,(void*)(block.data),sizeof(float)*64);
-	read(fdr,(void*)rcvBuf,sizeof(float)*64);
+	write(fdw,(void*)&dummy_data,sizeof(dummy_data));
 	//--End of modification--
+	//These lines are for printing out the results of the transform
+	
+	//hard ware dct block
+	read(fdr,(void*)hw_dctBuf,sizeof(float)*64);//Read the buffer for dct performed on hardware
+	read(fdr,(void*)&dummy_read,sizeof(dummy_read));//A dummy number
 
+
+	//Software dct block
+	dct(block,dctBlock);//Check to see if the data is sent back correctly or not
+	//Compare software and hardware dct results
 	if ((i==0)&&(j==0))
 	{
-		cout << 10.0;
-		cout << block.at<float>(0,0);
-		cout << "\n";
-		cout << rcvBlock.at<float>(0,0);
+		for (int m=0;m<8;m++)
+			for (int n=0;n<8;n++)
+			{
+				printf("DCT [%d,%d]: HW: %f, SW: %f \n",m,n,hw_dctBlock.at<float>(m,n),dctBlock.at<float>(m,n));
+			}
 	}
-	dct(rcvBlock,dctBlock);//Check to see if the data is sent back correctly or not
-	//            dct(block,dctBlock);
+
 
         gettimeofday(&tdctEnd, NULL);
         timersub(&tdctEnd,&tdctStart,&tdctDiff);
@@ -240,8 +248,9 @@ for(int i=0; i<imgSP.rows; i+=8)
 
             //Quantization involves dividing elements by corresponding elements in qunat matrix
             //Converting to 32bit signed integer performs rounding function and produces integer output
-            divide(dctBlock,quant,freqQ);
-            freqQ.convertTo(freqQ, CV_32S);
+//            divide(dctBlock,quant,freqQ);
+	  divide(hw_dctBlock,quant,freqQ);  
+          freqQ.convertTo(freqQ, CV_32S);
 
         gettimeofday(&tquantEnd, NULL);
         timersub(&tquantEnd,&tquantStart,&tquantDiff);

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_1_proc'
 ================================================================
-* Date:           Fri Oct 30 07:58:50 2015
+* Date:           Fri Oct 30 11:20:45 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -128,7 +128,7 @@ IsGatedGlobalClock: 0
 1 --> 
 	2  / true
 2 --> 
-	2  / (!exitcond9)
+	2  / (!exitcond1)
 * FSM state operations: 
 
  <State 1>: 1.57ns
@@ -149,14 +149,14 @@ ST_2: p_0_rec_i_i_cast [1/1] 0.00ns
 ST_2: empty [1/1] 0.00ns
 :2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 65, i64 65, i64 65) nounwind
 
-ST_2: exitcond9 [1/1] 1.97ns
-:3  %exitcond9 = icmp eq i7 %read_idx_0_i_i, -63
+ST_2: exitcond1 [1/1] 1.97ns
+:3  %exitcond1 = icmp eq i7 %read_idx_0_i_i, -63
 
 ST_2: read_idx [1/1] 1.72ns
 :4  %read_idx = add i7 %read_idx_0_i_i, 1
 
 ST_2: stg_10 [1/1] 0.00ns
-:5  br i1 %exitcond9, label %.preheader.exitStub, label %1
+:5  br i1 %exitcond1, label %.preheader9.exitStub, label %1
 
 ST_2: tempin [1/1] 4.38ns
 :0  %tempin = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X) nounwind
@@ -174,7 +174,7 @@ ST_2: stg_15 [1/1] 0.00ns
 :4  br label %0
 
 ST_2: stg_16 [1/1] 0.00ns
-.preheader.exitStub:0  ret void
+.preheader9.exitStub:0  ret void
 
 
 

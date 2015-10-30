@@ -149,7 +149,7 @@
               <name>p_0_rec_i_i_cast</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -164,7 +164,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>23</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -187,10 +187,10 @@
             <Obj>
               <type>0</type>
               <id>9</id>
-              <name>exitcond9</name>
+              <name>exitcond1</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -205,13 +205,13 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>23</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>exitcond9_fu_61_p2</rtlName>
+              <rtlName>exitcond1_fu_61_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -232,7 +232,7 @@
               <name>read_idx</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -247,7 +247,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>23</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -274,7 +274,7 @@
               <name/>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -289,7 +289,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>23</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -317,7 +317,7 @@
               <name>tempin</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>29</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -332,7 +332,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>25</second>
+                      <second>29</second>
                     </item>
                   </second>
                 </item>
@@ -359,7 +359,7 @@
               <name>tmp_i</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>30</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -374,7 +374,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>26</second>
+                      <second>30</second>
                     </item>
                   </second>
                 </item>
@@ -400,7 +400,7 @@
               <name>Xbuff_addr</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>30</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -415,7 +415,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>26</second>
+                      <second>30</second>
                     </item>
                   </second>
                 </item>
@@ -443,7 +443,7 @@
               <name/>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>30</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -458,7 +458,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>26</second>
+                      <second>30</second>
                     </item>
                   </second>
                 </item>
@@ -485,7 +485,7 @@
               <name/>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>DCT</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -500,7 +500,7 @@
                         <first>dct/dct.c</first>
                         <second>DCT</second>
                       </first>
-                      <second>23</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -725,7 +725,7 @@
           <Obj>
             <type>3</type>
             <id>20</id>
-            <name>.preheader.exitStub</name>
+            <name>.preheader9.exitStub</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -1181,7 +1181,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond9_fu_61_p2 ( icmp ) </first>
+          <first>exitcond1_fu_61_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1354,7 +1354,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>exitcond9_fu_61_p2 ( icmp ) </first>
+          <first>exitcond1_fu_61_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1583,7 +1583,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond9_fu_61</first>
+        <first>exitcond1_fu_61</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

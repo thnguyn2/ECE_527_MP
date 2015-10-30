@@ -47,7 +47,7 @@ struct DCT_Loop_1_proc : public sc_module {
     sc_signal< sc_lv<7> > read_idx_fu_67_p2;
     sc_signal< sc_logic > ap_sig_cseq_ST_st2_fsm_1;
     sc_signal< bool > ap_sig_bdd_46;
-    sc_signal< sc_lv<1> > exitcond9_fu_61_p2;
+    sc_signal< sc_lv<1> > exitcond1_fu_61_p2;
     sc_signal< bool > ap_sig_bdd_53;
     sc_signal< sc_lv<7> > read_idx_0_i_i_reg_44;
     sc_signal< bool > ap_sig_bdd_62;
@@ -80,7 +80,7 @@ struct DCT_Loop_1_proc : public sc_module {
     void thread_ap_sig_bdd_62();
     void thread_ap_sig_cseq_ST_st1_fsm_0();
     void thread_ap_sig_cseq_ST_st2_fsm_1();
-    void thread_exitcond9_fu_61_p2();
+    void thread_exitcond1_fu_61_p2();
     void thread_p_0_rec_i_i_cast_fu_56_p1();
     void thread_read_idx_fu_67_p2();
     void thread_ap_NS_fsm();

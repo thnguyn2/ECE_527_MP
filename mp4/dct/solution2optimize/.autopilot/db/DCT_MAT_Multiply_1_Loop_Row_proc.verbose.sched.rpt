@@ -1,0 +1,1511 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_Row_proc'
+================================================================
+* Date:           Fri Oct 30 11:21:06 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.64|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  300|  300|  300|  300|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |           |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_Col  |  298|  298|        47|          4|          1|    64|    yes   |
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 47
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 49
+* Pipeline: 1
+  Pipeline-0: II = 4, D = 47, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	49  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	2  / true
+49 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: p_read_64 [1/1] 0.00ns
+newFuncRoot:0  %p_read_64 = call float @_ssdm_op_Read.ap_auto.float(float %p_read63)
+
+ST_1: p_read_65 [1/1] 0.00ns
+newFuncRoot:1  %p_read_65 = call float @_ssdm_op_Read.ap_auto.float(float %p_read62)
+
+ST_1: p_read_66 [1/1] 0.00ns
+newFuncRoot:2  %p_read_66 = call float @_ssdm_op_Read.ap_auto.float(float %p_read61)
+
+ST_1: p_read_67 [1/1] 0.00ns
+newFuncRoot:3  %p_read_67 = call float @_ssdm_op_Read.ap_auto.float(float %p_read60)
+
+ST_1: p_read_68 [1/1] 0.00ns
+newFuncRoot:4  %p_read_68 = call float @_ssdm_op_Read.ap_auto.float(float %p_read59)
+
+ST_1: p_read_69 [1/1] 0.00ns
+newFuncRoot:5  %p_read_69 = call float @_ssdm_op_Read.ap_auto.float(float %p_read58)
+
+ST_1: p_read_70 [1/1] 0.00ns
+newFuncRoot:6  %p_read_70 = call float @_ssdm_op_Read.ap_auto.float(float %p_read57)
+
+ST_1: p_read_71 [1/1] 0.00ns
+newFuncRoot:7  %p_read_71 = call float @_ssdm_op_Read.ap_auto.float(float %p_read56)
+
+ST_1: p_read_72 [1/1] 0.00ns
+newFuncRoot:8  %p_read_72 = call float @_ssdm_op_Read.ap_auto.float(float %p_read55)
+
+ST_1: p_read_73 [1/1] 0.00ns
+newFuncRoot:9  %p_read_73 = call float @_ssdm_op_Read.ap_auto.float(float %p_read54)
+
+ST_1: p_read_74 [1/1] 0.00ns
+newFuncRoot:10  %p_read_74 = call float @_ssdm_op_Read.ap_auto.float(float %p_read53)
+
+ST_1: p_read_75 [1/1] 0.00ns
+newFuncRoot:11  %p_read_75 = call float @_ssdm_op_Read.ap_auto.float(float %p_read52)
+
+ST_1: p_read_76 [1/1] 0.00ns
+newFuncRoot:12  %p_read_76 = call float @_ssdm_op_Read.ap_auto.float(float %p_read51)
+
+ST_1: p_read_77 [1/1] 0.00ns
+newFuncRoot:13  %p_read_77 = call float @_ssdm_op_Read.ap_auto.float(float %p_read50)
+
+ST_1: p_read_78 [1/1] 0.00ns
+newFuncRoot:14  %p_read_78 = call float @_ssdm_op_Read.ap_auto.float(float %p_read49)
+
+ST_1: p_read_79 [1/1] 0.00ns
+newFuncRoot:15  %p_read_79 = call float @_ssdm_op_Read.ap_auto.float(float %p_read48)
+
+ST_1: p_read_80 [1/1] 0.00ns
+newFuncRoot:16  %p_read_80 = call float @_ssdm_op_Read.ap_auto.float(float %p_read47)
+
+ST_1: p_read_81 [1/1] 0.00ns
+newFuncRoot:17  %p_read_81 = call float @_ssdm_op_Read.ap_auto.float(float %p_read46)
+
+ST_1: p_read_82 [1/1] 0.00ns
+newFuncRoot:18  %p_read_82 = call float @_ssdm_op_Read.ap_auto.float(float %p_read45)
+
+ST_1: p_read_83 [1/1] 0.00ns
+newFuncRoot:19  %p_read_83 = call float @_ssdm_op_Read.ap_auto.float(float %p_read44)
+
+ST_1: p_read_84 [1/1] 0.00ns
+newFuncRoot:20  %p_read_84 = call float @_ssdm_op_Read.ap_auto.float(float %p_read43)
+
+ST_1: p_read_85 [1/1] 0.00ns
+newFuncRoot:21  %p_read_85 = call float @_ssdm_op_Read.ap_auto.float(float %p_read42)
+
+ST_1: p_read_86 [1/1] 0.00ns
+newFuncRoot:22  %p_read_86 = call float @_ssdm_op_Read.ap_auto.float(float %p_read41)
+
+ST_1: p_read_87 [1/1] 0.00ns
+newFuncRoot:23  %p_read_87 = call float @_ssdm_op_Read.ap_auto.float(float %p_read40)
+
+ST_1: p_read_88 [1/1] 0.00ns
+newFuncRoot:24  %p_read_88 = call float @_ssdm_op_Read.ap_auto.float(float %p_read39)
+
+ST_1: p_read_89 [1/1] 0.00ns
+newFuncRoot:25  %p_read_89 = call float @_ssdm_op_Read.ap_auto.float(float %p_read38)
+
+ST_1: p_read_90 [1/1] 0.00ns
+newFuncRoot:26  %p_read_90 = call float @_ssdm_op_Read.ap_auto.float(float %p_read37)
+
+ST_1: p_read_91 [1/1] 0.00ns
+newFuncRoot:27  %p_read_91 = call float @_ssdm_op_Read.ap_auto.float(float %p_read36)
+
+ST_1: p_read_92 [1/1] 0.00ns
+newFuncRoot:28  %p_read_92 = call float @_ssdm_op_Read.ap_auto.float(float %p_read35)
+
+ST_1: p_read_93 [1/1] 0.00ns
+newFuncRoot:29  %p_read_93 = call float @_ssdm_op_Read.ap_auto.float(float %p_read34)
+
+ST_1: p_read_94 [1/1] 0.00ns
+newFuncRoot:30  %p_read_94 = call float @_ssdm_op_Read.ap_auto.float(float %p_read33)
+
+ST_1: p_read_95 [1/1] 0.00ns
+newFuncRoot:31  %p_read_95 = call float @_ssdm_op_Read.ap_auto.float(float %p_read32)
+
+ST_1: p_read_96 [1/1] 0.00ns
+newFuncRoot:32  %p_read_96 = call float @_ssdm_op_Read.ap_auto.float(float %p_read31)
+
+ST_1: p_read_97 [1/1] 0.00ns
+newFuncRoot:33  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_read30)
+
+ST_1: p_read_98 [1/1] 0.00ns
+newFuncRoot:34  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_read29)
+
+ST_1: p_read_99 [1/1] 0.00ns
+newFuncRoot:35  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_read28)
+
+ST_1: p_read_100 [1/1] 0.00ns
+newFuncRoot:36  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_read27)
+
+ST_1: p_read_101 [1/1] 0.00ns
+newFuncRoot:37  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_read26)
+
+ST_1: p_read_102 [1/1] 0.00ns
+newFuncRoot:38  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_read25)
+
+ST_1: p_read_103 [1/1] 0.00ns
+newFuncRoot:39  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_read24)
+
+ST_1: p_read_104 [1/1] 0.00ns
+newFuncRoot:40  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_read23)
+
+ST_1: p_read_105 [1/1] 0.00ns
+newFuncRoot:41  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_read22)
+
+ST_1: p_read_106 [1/1] 0.00ns
+newFuncRoot:42  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_read21)
+
+ST_1: p_read_107 [1/1] 0.00ns
+newFuncRoot:43  %p_read_107 = call float @_ssdm_op_Read.ap_auto.float(float %p_read20)
+
+ST_1: p_read_108 [1/1] 0.00ns
+newFuncRoot:44  %p_read_108 = call float @_ssdm_op_Read.ap_auto.float(float %p_read19)
+
+ST_1: p_read_109 [1/1] 0.00ns
+newFuncRoot:45  %p_read_109 = call float @_ssdm_op_Read.ap_auto.float(float %p_read18)
+
+ST_1: p_read_110 [1/1] 0.00ns
+newFuncRoot:46  %p_read_110 = call float @_ssdm_op_Read.ap_auto.float(float %p_read17)
+
+ST_1: p_read_111 [1/1] 0.00ns
+newFuncRoot:47  %p_read_111 = call float @_ssdm_op_Read.ap_auto.float(float %p_read16)
+
+ST_1: p_read_112 [1/1] 0.00ns
+newFuncRoot:48  %p_read_112 = call float @_ssdm_op_Read.ap_auto.float(float %p_read15)
+
+ST_1: p_read_113 [1/1] 0.00ns
+newFuncRoot:49  %p_read_113 = call float @_ssdm_op_Read.ap_auto.float(float %p_read14)
+
+ST_1: p_read_114 [1/1] 0.00ns
+newFuncRoot:50  %p_read_114 = call float @_ssdm_op_Read.ap_auto.float(float %p_read13)
+
+ST_1: p_read_115 [1/1] 0.00ns
+newFuncRoot:51  %p_read_115 = call float @_ssdm_op_Read.ap_auto.float(float %p_read12)
+
+ST_1: p_read_116 [1/1] 0.00ns
+newFuncRoot:52  %p_read_116 = call float @_ssdm_op_Read.ap_auto.float(float %p_read11)
+
+ST_1: p_read_117 [1/1] 0.00ns
+newFuncRoot:53  %p_read_117 = call float @_ssdm_op_Read.ap_auto.float(float %p_read10)
+
+ST_1: p_read_118 [1/1] 0.00ns
+newFuncRoot:54  %p_read_118 = call float @_ssdm_op_Read.ap_auto.float(float %p_read9)
+
+ST_1: p_read_119 [1/1] 0.00ns
+newFuncRoot:55  %p_read_119 = call float @_ssdm_op_Read.ap_auto.float(float %p_read8)
+
+ST_1: p_read_120 [1/1] 0.00ns
+newFuncRoot:56  %p_read_120 = call float @_ssdm_op_Read.ap_auto.float(float %p_read7)
+
+ST_1: p_read_121 [1/1] 0.00ns
+newFuncRoot:57  %p_read_121 = call float @_ssdm_op_Read.ap_auto.float(float %p_read6)
+
+ST_1: p_read_122 [1/1] 0.00ns
+newFuncRoot:58  %p_read_122 = call float @_ssdm_op_Read.ap_auto.float(float %p_read5)
+
+ST_1: p_read_123 [1/1] 0.00ns
+newFuncRoot:59  %p_read_123 = call float @_ssdm_op_Read.ap_auto.float(float %p_read4)
+
+ST_1: p_read_124 [1/1] 0.00ns
+newFuncRoot:60  %p_read_124 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)
+
+ST_1: p_read_125 [1/1] 0.00ns
+newFuncRoot:61  %p_read_125 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)
+
+ST_1: p_read_126 [1/1] 0.00ns
+newFuncRoot:62  %p_read_126 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)
+
+ST_1: p_read391 [1/1] 0.00ns
+newFuncRoot:63  %p_read391 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
+
+ST_1: A_addr [1/1] 0.00ns
+newFuncRoot:64  %A_addr = getelementptr [8 x float]* %A, i64 0, i64 0
+
+ST_1: A1_addr [1/1] 0.00ns
+newFuncRoot:65  %A1_addr = getelementptr [8 x float]* %A1, i64 0, i64 0
+
+ST_1: A2_addr [1/1] 0.00ns
+newFuncRoot:66  %A2_addr = getelementptr [8 x float]* %A2, i64 0, i64 0
+
+ST_1: A3_addr [1/1] 0.00ns
+newFuncRoot:67  %A3_addr = getelementptr [8 x float]* %A3, i64 0, i64 0
+
+ST_1: A4_addr [1/1] 0.00ns
+newFuncRoot:68  %A4_addr = getelementptr [8 x float]* %A4, i64 0, i64 0
+
+ST_1: A5_addr [1/1] 0.00ns
+newFuncRoot:69  %A5_addr = getelementptr [8 x float]* %A5, i64 0, i64 0
+
+ST_1: A6_addr [1/1] 0.00ns
+newFuncRoot:70  %A6_addr = getelementptr [8 x float]* %A6, i64 0, i64 0
+
+ST_1: A7_addr [1/1] 0.00ns
+newFuncRoot:71  %A7_addr = getelementptr [8 x float]* %A7, i64 0, i64 0
+
+ST_1: A_addr_1 [1/1] 0.00ns
+newFuncRoot:72  %A_addr_1 = getelementptr [8 x float]* %A, i64 0, i64 1
+
+ST_1: A1_addr_1 [1/1] 0.00ns
+newFuncRoot:73  %A1_addr_1 = getelementptr [8 x float]* %A1, i64 0, i64 1
+
+ST_1: A2_addr_1 [1/1] 0.00ns
+newFuncRoot:74  %A2_addr_1 = getelementptr [8 x float]* %A2, i64 0, i64 1
+
+ST_1: A3_addr_1 [1/1] 0.00ns
+newFuncRoot:75  %A3_addr_1 = getelementptr [8 x float]* %A3, i64 0, i64 1
+
+ST_1: A4_addr_1 [1/1] 0.00ns
+newFuncRoot:76  %A4_addr_1 = getelementptr [8 x float]* %A4, i64 0, i64 1
+
+ST_1: A5_addr_1 [1/1] 0.00ns
+newFuncRoot:77  %A5_addr_1 = getelementptr [8 x float]* %A5, i64 0, i64 1
+
+ST_1: A6_addr_1 [1/1] 0.00ns
+newFuncRoot:78  %A6_addr_1 = getelementptr [8 x float]* %A6, i64 0, i64 1
+
+ST_1: A7_addr_1 [1/1] 0.00ns
+newFuncRoot:79  %A7_addr_1 = getelementptr [8 x float]* %A7, i64 0, i64 1
+
+ST_1: A_addr_2 [1/1] 0.00ns
+newFuncRoot:80  %A_addr_2 = getelementptr [8 x float]* %A, i64 0, i64 2
+
+ST_1: A1_addr_2 [1/1] 0.00ns
+newFuncRoot:81  %A1_addr_2 = getelementptr [8 x float]* %A1, i64 0, i64 2
+
+ST_1: A2_addr_2 [1/1] 0.00ns
+newFuncRoot:82  %A2_addr_2 = getelementptr [8 x float]* %A2, i64 0, i64 2
+
+ST_1: A3_addr_2 [1/1] 0.00ns
+newFuncRoot:83  %A3_addr_2 = getelementptr [8 x float]* %A3, i64 0, i64 2
+
+ST_1: A4_addr_2 [1/1] 0.00ns
+newFuncRoot:84  %A4_addr_2 = getelementptr [8 x float]* %A4, i64 0, i64 2
+
+ST_1: A5_addr_2 [1/1] 0.00ns
+newFuncRoot:85  %A5_addr_2 = getelementptr [8 x float]* %A5, i64 0, i64 2
+
+ST_1: A6_addr_2 [1/1] 0.00ns
+newFuncRoot:86  %A6_addr_2 = getelementptr [8 x float]* %A6, i64 0, i64 2
+
+ST_1: A7_addr_2 [1/1] 0.00ns
+newFuncRoot:87  %A7_addr_2 = getelementptr [8 x float]* %A7, i64 0, i64 2
+
+ST_1: A_addr_3 [1/1] 0.00ns
+newFuncRoot:88  %A_addr_3 = getelementptr [8 x float]* %A, i64 0, i64 3
+
+ST_1: A1_addr_3 [1/1] 0.00ns
+newFuncRoot:89  %A1_addr_3 = getelementptr [8 x float]* %A1, i64 0, i64 3
+
+ST_1: A2_addr_3 [1/1] 0.00ns
+newFuncRoot:90  %A2_addr_3 = getelementptr [8 x float]* %A2, i64 0, i64 3
+
+ST_1: A3_addr_3 [1/1] 0.00ns
+newFuncRoot:91  %A3_addr_3 = getelementptr [8 x float]* %A3, i64 0, i64 3
+
+ST_1: A4_addr_3 [1/1] 0.00ns
+newFuncRoot:92  %A4_addr_3 = getelementptr [8 x float]* %A4, i64 0, i64 3
+
+ST_1: A5_addr_3 [1/1] 0.00ns
+newFuncRoot:93  %A5_addr_3 = getelementptr [8 x float]* %A5, i64 0, i64 3
+
+ST_1: A6_addr_3 [1/1] 0.00ns
+newFuncRoot:94  %A6_addr_3 = getelementptr [8 x float]* %A6, i64 0, i64 3
+
+ST_1: A7_addr_3 [1/1] 0.00ns
+newFuncRoot:95  %A7_addr_3 = getelementptr [8 x float]* %A7, i64 0, i64 3
+
+ST_1: A_addr_4 [1/1] 0.00ns
+newFuncRoot:96  %A_addr_4 = getelementptr [8 x float]* %A, i64 0, i64 4
+
+ST_1: A1_addr_4 [1/1] 0.00ns
+newFuncRoot:97  %A1_addr_4 = getelementptr [8 x float]* %A1, i64 0, i64 4
+
+ST_1: A2_addr_4 [1/1] 0.00ns
+newFuncRoot:98  %A2_addr_4 = getelementptr [8 x float]* %A2, i64 0, i64 4
+
+ST_1: A3_addr_4 [1/1] 0.00ns
+newFuncRoot:99  %A3_addr_4 = getelementptr [8 x float]* %A3, i64 0, i64 4
+
+ST_1: A4_addr_4 [1/1] 0.00ns
+newFuncRoot:100  %A4_addr_4 = getelementptr [8 x float]* %A4, i64 0, i64 4
+
+ST_1: A5_addr_4 [1/1] 0.00ns
+newFuncRoot:101  %A5_addr_4 = getelementptr [8 x float]* %A5, i64 0, i64 4
+
+ST_1: A6_addr_4 [1/1] 0.00ns
+newFuncRoot:102  %A6_addr_4 = getelementptr [8 x float]* %A6, i64 0, i64 4
+
+ST_1: A7_addr_4 [1/1] 0.00ns
+newFuncRoot:103  %A7_addr_4 = getelementptr [8 x float]* %A7, i64 0, i64 4
+
+ST_1: A_addr_5 [1/1] 0.00ns
+newFuncRoot:104  %A_addr_5 = getelementptr [8 x float]* %A, i64 0, i64 5
+
+ST_1: A1_addr_5 [1/1] 0.00ns
+newFuncRoot:105  %A1_addr_5 = getelementptr [8 x float]* %A1, i64 0, i64 5
+
+ST_1: A2_addr_5 [1/1] 0.00ns
+newFuncRoot:106  %A2_addr_5 = getelementptr [8 x float]* %A2, i64 0, i64 5
+
+ST_1: A3_addr_5 [1/1] 0.00ns
+newFuncRoot:107  %A3_addr_5 = getelementptr [8 x float]* %A3, i64 0, i64 5
+
+ST_1: A4_addr_5 [1/1] 0.00ns
+newFuncRoot:108  %A4_addr_5 = getelementptr [8 x float]* %A4, i64 0, i64 5
+
+ST_1: A5_addr_5 [1/1] 0.00ns
+newFuncRoot:109  %A5_addr_5 = getelementptr [8 x float]* %A5, i64 0, i64 5
+
+ST_1: A6_addr_5 [1/1] 0.00ns
+newFuncRoot:110  %A6_addr_5 = getelementptr [8 x float]* %A6, i64 0, i64 5
+
+ST_1: A7_addr_5 [1/1] 0.00ns
+newFuncRoot:111  %A7_addr_5 = getelementptr [8 x float]* %A7, i64 0, i64 5
+
+ST_1: A_addr_6 [1/1] 0.00ns
+newFuncRoot:112  %A_addr_6 = getelementptr [8 x float]* %A, i64 0, i64 6
+
+ST_1: A1_addr_6 [1/1] 0.00ns
+newFuncRoot:113  %A1_addr_6 = getelementptr [8 x float]* %A1, i64 0, i64 6
+
+ST_1: A2_addr_6 [1/1] 0.00ns
+newFuncRoot:114  %A2_addr_6 = getelementptr [8 x float]* %A2, i64 0, i64 6
+
+ST_1: A3_addr_6 [1/1] 0.00ns
+newFuncRoot:115  %A3_addr_6 = getelementptr [8 x float]* %A3, i64 0, i64 6
+
+ST_1: A4_addr_6 [1/1] 0.00ns
+newFuncRoot:116  %A4_addr_6 = getelementptr [8 x float]* %A4, i64 0, i64 6
+
+ST_1: A5_addr_6 [1/1] 0.00ns
+newFuncRoot:117  %A5_addr_6 = getelementptr [8 x float]* %A5, i64 0, i64 6
+
+ST_1: A6_addr_6 [1/1] 0.00ns
+newFuncRoot:118  %A6_addr_6 = getelementptr [8 x float]* %A6, i64 0, i64 6
+
+ST_1: A7_addr_6 [1/1] 0.00ns
+newFuncRoot:119  %A7_addr_6 = getelementptr [8 x float]* %A7, i64 0, i64 6
+
+ST_1: A_addr_7 [1/1] 0.00ns
+newFuncRoot:120  %A_addr_7 = getelementptr [8 x float]* %A, i64 0, i64 7
+
+ST_1: A1_addr_7 [1/1] 0.00ns
+newFuncRoot:121  %A1_addr_7 = getelementptr [8 x float]* %A1, i64 0, i64 7
+
+ST_1: A2_addr_7 [1/1] 0.00ns
+newFuncRoot:122  %A2_addr_7 = getelementptr [8 x float]* %A2, i64 0, i64 7
+
+ST_1: A3_addr_7 [1/1] 0.00ns
+newFuncRoot:123  %A3_addr_7 = getelementptr [8 x float]* %A3, i64 0, i64 7
+
+ST_1: A4_addr_7 [1/1] 0.00ns
+newFuncRoot:124  %A4_addr_7 = getelementptr [8 x float]* %A4, i64 0, i64 7
+
+ST_1: A5_addr_7 [1/1] 0.00ns
+newFuncRoot:125  %A5_addr_7 = getelementptr [8 x float]* %A5, i64 0, i64 7
+
+ST_1: A6_addr_7 [1/1] 0.00ns
+newFuncRoot:126  %A6_addr_7 = getelementptr [8 x float]* %A6, i64 0, i64 7
+
+ST_1: A7_addr_7 [1/1] 0.00ns
+newFuncRoot:127  %A7_addr_7 = getelementptr [8 x float]* %A7, i64 0, i64 7
+
+ST_1: stg_178 [1/1] 1.57ns
+newFuncRoot:128  br label %0
+
+
+ <State 2>: 2.39ns
+ST_2: indvar_flatten [1/1] 0.00ns
+:0  %indvar_flatten = phi i7 [ 0, %newFuncRoot ], [ %indvar_flatten_next, %.preheader ]
+
+ST_2: i_1 [1/1] 0.00ns
+:1  %i_1 = phi i4 [ 0, %newFuncRoot ], [ %i_1_mid2, %.preheader ]
+
+ST_2: j_1 [1/1] 0.00ns
+:2  %j_1 = phi i4 [ 0, %newFuncRoot ], [ %j, %.preheader ]
+
+ST_2: exitcond_flatten [1/1] 1.97ns
+:3  %exitcond_flatten = icmp eq i7 %indvar_flatten, -64
+
+ST_2: indvar_flatten_next [1/1] 1.72ns
+:4  %indvar_flatten_next = add i7 %indvar_flatten, 1
+
+ST_2: stg_184 [1/1] 0.00ns
+:5  br i1 %exitcond_flatten, label %.exitStub, label %.preheader
+
+ST_2: A_load [2/2] 2.39ns
+.preheader:10  %A_load = load float* %A_addr, align 4
+
+ST_2: A1_load [2/2] 2.39ns
+.preheader:11  %A1_load = load float* %A1_addr, align 4
+
+ST_2: A2_load [2/2] 2.39ns
+.preheader:12  %A2_load = load float* %A2_addr, align 4
+
+ST_2: A3_load [2/2] 2.39ns
+.preheader:13  %A3_load = load float* %A3_addr, align 4
+
+ST_2: A4_load [2/2] 2.39ns
+.preheader:14  %A4_load = load float* %A4_addr, align 4
+
+ST_2: A5_load [2/2] 2.39ns
+.preheader:15  %A5_load = load float* %A5_addr, align 4
+
+ST_2: A6_load [2/2] 2.39ns
+.preheader:16  %A6_load = load float* %A6_addr, align 4
+
+ST_2: A7_load [2/2] 2.39ns
+.preheader:17  %A7_load = load float* %A7_addr, align 4
+
+ST_2: A_load_1 [2/2] 2.39ns
+.preheader:23  %A_load_1 = load float* %A_addr_1, align 4
+
+ST_2: A1_load_1 [2/2] 2.39ns
+.preheader:24  %A1_load_1 = load float* %A1_addr_1, align 4
+
+ST_2: A2_load_1 [2/2] 2.39ns
+.preheader:25  %A2_load_1 = load float* %A2_addr_1, align 4
+
+ST_2: A3_load_1 [2/2] 2.39ns
+.preheader:26  %A3_load_1 = load float* %A3_addr_1, align 4
+
+ST_2: A4_load_1 [2/2] 2.39ns
+.preheader:27  %A4_load_1 = load float* %A4_addr_1, align 4
+
+ST_2: A5_load_1 [2/2] 2.39ns
+.preheader:28  %A5_load_1 = load float* %A5_addr_1, align 4
+
+ST_2: A6_load_1 [2/2] 2.39ns
+.preheader:29  %A6_load_1 = load float* %A6_addr_1, align 4
+
+ST_2: A7_load_1 [2/2] 2.39ns
+.preheader:30  %A7_load_1 = load float* %A7_addr_1, align 4
+
+
+ <State 3>: 5.19ns
+ST_3: exitcond [1/1] 1.88ns
+.preheader:2  %exitcond = icmp eq i4 %j_1, -8
+
+ST_3: j_1_mid2 [1/1] 1.37ns
+.preheader:3  %j_1_mid2 = select i1 %exitcond, i4 0, i4 %j_1
+
+ST_3: i [1/1] 0.80ns
+.preheader:4  %i = add i4 1, %i_1
+
+ST_3: i_1_mid2 [1/1] 1.37ns
+.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1
+
+ST_3: tmp_32 [1/1] 0.00ns
+.preheader:6  %tmp_32 = trunc i4 %i_1_mid2 to i3
+
+ST_3: A_load [1/2] 2.39ns
+.preheader:10  %A_load = load float* %A_addr, align 4
+
+ST_3: A1_load [1/2] 2.39ns
+.preheader:11  %A1_load = load float* %A1_addr, align 4
+
+ST_3: A2_load [1/2] 2.39ns
+.preheader:12  %A2_load = load float* %A2_addr, align 4
+
+ST_3: A3_load [1/2] 2.39ns
+.preheader:13  %A3_load = load float* %A3_addr, align 4
+
+ST_3: A4_load [1/2] 2.39ns
+.preheader:14  %A4_load = load float* %A4_addr, align 4
+
+ST_3: A5_load [1/2] 2.39ns
+.preheader:15  %A5_load = load float* %A5_addr, align 4
+
+ST_3: A6_load [1/2] 2.39ns
+.preheader:16  %A6_load = load float* %A6_addr, align 4
+
+ST_3: A7_load [1/2] 2.39ns
+.preheader:17  %A7_load = load float* %A7_addr, align 4
+
+ST_3: tmp [1/1] 1.94ns
+.preheader:18  %tmp = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load, float %A1_load, float %A2_load, float %A3_load, float %A4_load, float %A5_load, float %A6_load, float %A7_load, i3 %tmp_32)
+
+ST_3: tmp_33 [1/1] 0.00ns
+.preheader:19  %tmp_33 = trunc i4 %j_1_mid2 to i3
+
+ST_3: A_load_1 [1/2] 2.39ns
+.preheader:23  %A_load_1 = load float* %A_addr_1, align 4
+
+ST_3: A1_load_1 [1/2] 2.39ns
+.preheader:24  %A1_load_1 = load float* %A1_addr_1, align 4
+
+ST_3: A2_load_1 [1/2] 2.39ns
+.preheader:25  %A2_load_1 = load float* %A2_addr_1, align 4
+
+ST_3: A3_load_1 [1/2] 2.39ns
+.preheader:26  %A3_load_1 = load float* %A3_addr_1, align 4
+
+ST_3: A4_load_1 [1/2] 2.39ns
+.preheader:27  %A4_load_1 = load float* %A4_addr_1, align 4
+
+ST_3: A5_load_1 [1/2] 2.39ns
+.preheader:28  %A5_load_1 = load float* %A5_addr_1, align 4
+
+ST_3: A6_load_1 [1/2] 2.39ns
+.preheader:29  %A6_load_1 = load float* %A6_addr_1, align 4
+
+ST_3: A7_load_1 [1/2] 2.39ns
+.preheader:30  %A7_load_1 = load float* %A7_addr_1, align 4
+
+ST_3: tmp_18 [1/1] 1.94ns
+.preheader:31  %tmp_18 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_1, float %A1_load_1, float %A2_load_1, float %A3_load_1, float %A4_load_1, float %A5_load_1, float %A6_load_1, float %A7_load_1, i3 %tmp_32)
+
+ST_3: A_load_2 [2/2] 2.39ns
+.preheader:35  %A_load_2 = load float* %A_addr_2, align 4
+
+ST_3: A1_load_2 [2/2] 2.39ns
+.preheader:36  %A1_load_2 = load float* %A1_addr_2, align 4
+
+ST_3: A2_load_2 [2/2] 2.39ns
+.preheader:37  %A2_load_2 = load float* %A2_addr_2, align 4
+
+ST_3: A3_load_2 [2/2] 2.39ns
+.preheader:38  %A3_load_2 = load float* %A3_addr_2, align 4
+
+ST_3: A4_load_2 [2/2] 2.39ns
+.preheader:39  %A4_load_2 = load float* %A4_addr_2, align 4
+
+ST_3: A5_load_2 [2/2] 2.39ns
+.preheader:40  %A5_load_2 = load float* %A5_addr_2, align 4
+
+ST_3: A6_load_2 [2/2] 2.39ns
+.preheader:41  %A6_load_2 = load float* %A6_addr_2, align 4
+
+ST_3: A7_load_2 [2/2] 2.39ns
+.preheader:42  %A7_load_2 = load float* %A7_addr_2, align 4
+
+ST_3: A_load_3 [2/2] 2.39ns
+.preheader:47  %A_load_3 = load float* %A_addr_3, align 4
+
+ST_3: A1_load_3 [2/2] 2.39ns
+.preheader:48  %A1_load_3 = load float* %A1_addr_3, align 4
+
+ST_3: A2_load_3 [2/2] 2.39ns
+.preheader:49  %A2_load_3 = load float* %A2_addr_3, align 4
+
+ST_3: A3_load_3 [2/2] 2.39ns
+.preheader:50  %A3_load_3 = load float* %A3_addr_3, align 4
+
+ST_3: A4_load_3 [2/2] 2.39ns
+.preheader:51  %A4_load_3 = load float* %A4_addr_3, align 4
+
+ST_3: A5_load_3 [2/2] 2.39ns
+.preheader:52  %A5_load_3 = load float* %A5_addr_3, align 4
+
+ST_3: A6_load_3 [2/2] 2.39ns
+.preheader:53  %A6_load_3 = load float* %A6_addr_3, align 4
+
+ST_3: A7_load_3 [2/2] 2.39ns
+.preheader:54  %A7_load_3 = load float* %A7_addr_3, align 4
+
+
+ <State 4>: 7.64ns
+ST_4: tmp_s [1/1] 1.94ns
+.preheader:20  %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read391, float %p_read_126, float %p_read_125, float %p_read_124, float %p_read_123, float %p_read_122, float %p_read_121, float %p_read_120, i3 %tmp_33)
+
+ST_4: tmp_9 [4/4] 5.70ns
+.preheader:21  %tmp_9 = fmul float %tmp, %tmp_s
+
+ST_4: tmp_19 [1/1] 1.94ns
+.preheader:32  %tmp_19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_119, float %p_read_118, float %p_read_117, float %p_read_116, float %p_read_115, float %p_read_114, float %p_read_113, float %p_read_112, i3 %tmp_33)
+
+ST_4: tmp_9_1 [4/4] 5.70ns
+.preheader:33  %tmp_9_1 = fmul float %tmp_18, %tmp_19
+
+ST_4: A_load_2 [1/2] 2.39ns
+.preheader:35  %A_load_2 = load float* %A_addr_2, align 4
+
+ST_4: A1_load_2 [1/2] 2.39ns
+.preheader:36  %A1_load_2 = load float* %A1_addr_2, align 4
+
+ST_4: A2_load_2 [1/2] 2.39ns
+.preheader:37  %A2_load_2 = load float* %A2_addr_2, align 4
+
+ST_4: A3_load_2 [1/2] 2.39ns
+.preheader:38  %A3_load_2 = load float* %A3_addr_2, align 4
+
+ST_4: A4_load_2 [1/2] 2.39ns
+.preheader:39  %A4_load_2 = load float* %A4_addr_2, align 4
+
+ST_4: A5_load_2 [1/2] 2.39ns
+.preheader:40  %A5_load_2 = load float* %A5_addr_2, align 4
+
+ST_4: A6_load_2 [1/2] 2.39ns
+.preheader:41  %A6_load_2 = load float* %A6_addr_2, align 4
+
+ST_4: A7_load_2 [1/2] 2.39ns
+.preheader:42  %A7_load_2 = load float* %A7_addr_2, align 4
+
+ST_4: tmp_20 [1/1] 1.94ns
+.preheader:43  %tmp_20 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_2, float %A1_load_2, float %A2_load_2, float %A3_load_2, float %A4_load_2, float %A5_load_2, float %A6_load_2, float %A7_load_2, i3 %tmp_32)
+
+ST_4: A_load_3 [1/2] 2.39ns
+.preheader:47  %A_load_3 = load float* %A_addr_3, align 4
+
+ST_4: A1_load_3 [1/2] 2.39ns
+.preheader:48  %A1_load_3 = load float* %A1_addr_3, align 4
+
+ST_4: A2_load_3 [1/2] 2.39ns
+.preheader:49  %A2_load_3 = load float* %A2_addr_3, align 4
+
+ST_4: A3_load_3 [1/2] 2.39ns
+.preheader:50  %A3_load_3 = load float* %A3_addr_3, align 4
+
+ST_4: A4_load_3 [1/2] 2.39ns
+.preheader:51  %A4_load_3 = load float* %A4_addr_3, align 4
+
+ST_4: A5_load_3 [1/2] 2.39ns
+.preheader:52  %A5_load_3 = load float* %A5_addr_3, align 4
+
+ST_4: A6_load_3 [1/2] 2.39ns
+.preheader:53  %A6_load_3 = load float* %A6_addr_3, align 4
+
+ST_4: A7_load_3 [1/2] 2.39ns
+.preheader:54  %A7_load_3 = load float* %A7_addr_3, align 4
+
+ST_4: tmp_22 [1/1] 1.94ns
+.preheader:55  %tmp_22 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_3, float %A1_load_3, float %A2_load_3, float %A3_load_3, float %A4_load_3, float %A5_load_3, float %A6_load_3, float %A7_load_3, i3 %tmp_32)
+
+ST_4: A_load_4 [2/2] 2.39ns
+.preheader:59  %A_load_4 = load float* %A_addr_4, align 4
+
+ST_4: A1_load_4 [2/2] 2.39ns
+.preheader:60  %A1_load_4 = load float* %A1_addr_4, align 4
+
+ST_4: A2_load_4 [2/2] 2.39ns
+.preheader:61  %A2_load_4 = load float* %A2_addr_4, align 4
+
+ST_4: A3_load_4 [2/2] 2.39ns
+.preheader:62  %A3_load_4 = load float* %A3_addr_4, align 4
+
+ST_4: A4_load_4 [2/2] 2.39ns
+.preheader:63  %A4_load_4 = load float* %A4_addr_4, align 4
+
+ST_4: A5_load_4 [2/2] 2.39ns
+.preheader:64  %A5_load_4 = load float* %A5_addr_4, align 4
+
+ST_4: A6_load_4 [2/2] 2.39ns
+.preheader:65  %A6_load_4 = load float* %A6_addr_4, align 4
+
+ST_4: A7_load_4 [2/2] 2.39ns
+.preheader:66  %A7_load_4 = load float* %A7_addr_4, align 4
+
+ST_4: A_load_5 [2/2] 2.39ns
+.preheader:71  %A_load_5 = load float* %A_addr_5, align 4
+
+ST_4: A1_load_5 [2/2] 2.39ns
+.preheader:72  %A1_load_5 = load float* %A1_addr_5, align 4
+
+ST_4: A2_load_5 [2/2] 2.39ns
+.preheader:73  %A2_load_5 = load float* %A2_addr_5, align 4
+
+ST_4: A3_load_5 [2/2] 2.39ns
+.preheader:74  %A3_load_5 = load float* %A3_addr_5, align 4
+
+ST_4: A4_load_5 [2/2] 2.39ns
+.preheader:75  %A4_load_5 = load float* %A4_addr_5, align 4
+
+ST_4: A5_load_5 [2/2] 2.39ns
+.preheader:76  %A5_load_5 = load float* %A5_addr_5, align 4
+
+ST_4: A6_load_5 [2/2] 2.39ns
+.preheader:77  %A6_load_5 = load float* %A6_addr_5, align 4
+
+ST_4: A7_load_5 [2/2] 2.39ns
+.preheader:78  %A7_load_5 = load float* %A7_addr_5, align 4
+
+
+ <State 5>: 7.64ns
+ST_5: tmp_9 [3/4] 5.70ns
+.preheader:21  %tmp_9 = fmul float %tmp, %tmp_s
+
+ST_5: tmp_9_1 [3/4] 5.70ns
+.preheader:33  %tmp_9_1 = fmul float %tmp_18, %tmp_19
+
+ST_5: tmp_21 [1/1] 1.94ns
+.preheader:44  %tmp_21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_111, float %p_read_110, float %p_read_109, float %p_read_108, float %p_read_107, float %p_read_106, float %p_read_105, float %p_read_104, i3 %tmp_33)
+
+ST_5: tmp_9_2 [4/4] 5.70ns
+.preheader:45  %tmp_9_2 = fmul float %tmp_20, %tmp_21
+
+ST_5: tmp_23 [1/1] 1.94ns
+.preheader:56  %tmp_23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_103, float %p_read_102, float %p_read_101, float %p_read_100, float %p_read_99, float %p_read_98, float %p_read_97, float %p_read_96, i3 %tmp_33)
+
+ST_5: tmp_9_3 [4/4] 5.70ns
+.preheader:57  %tmp_9_3 = fmul float %tmp_22, %tmp_23
+
+ST_5: A_load_4 [1/2] 2.39ns
+.preheader:59  %A_load_4 = load float* %A_addr_4, align 4
+
+ST_5: A1_load_4 [1/2] 2.39ns
+.preheader:60  %A1_load_4 = load float* %A1_addr_4, align 4
+
+ST_5: A2_load_4 [1/2] 2.39ns
+.preheader:61  %A2_load_4 = load float* %A2_addr_4, align 4
+
+ST_5: A3_load_4 [1/2] 2.39ns
+.preheader:62  %A3_load_4 = load float* %A3_addr_4, align 4
+
+ST_5: A4_load_4 [1/2] 2.39ns
+.preheader:63  %A4_load_4 = load float* %A4_addr_4, align 4
+
+ST_5: A5_load_4 [1/2] 2.39ns
+.preheader:64  %A5_load_4 = load float* %A5_addr_4, align 4
+
+ST_5: A6_load_4 [1/2] 2.39ns
+.preheader:65  %A6_load_4 = load float* %A6_addr_4, align 4
+
+ST_5: A7_load_4 [1/2] 2.39ns
+.preheader:66  %A7_load_4 = load float* %A7_addr_4, align 4
+
+ST_5: tmp_24 [1/1] 1.94ns
+.preheader:67  %tmp_24 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_4, float %A1_load_4, float %A2_load_4, float %A3_load_4, float %A4_load_4, float %A5_load_4, float %A6_load_4, float %A7_load_4, i3 %tmp_32)
+
+ST_5: A_load_5 [1/2] 2.39ns
+.preheader:71  %A_load_5 = load float* %A_addr_5, align 4
+
+ST_5: A1_load_5 [1/2] 2.39ns
+.preheader:72  %A1_load_5 = load float* %A1_addr_5, align 4
+
+ST_5: A2_load_5 [1/2] 2.39ns
+.preheader:73  %A2_load_5 = load float* %A2_addr_5, align 4
+
+ST_5: A3_load_5 [1/2] 2.39ns
+.preheader:74  %A3_load_5 = load float* %A3_addr_5, align 4
+
+ST_5: A4_load_5 [1/2] 2.39ns
+.preheader:75  %A4_load_5 = load float* %A4_addr_5, align 4
+
+ST_5: A5_load_5 [1/2] 2.39ns
+.preheader:76  %A5_load_5 = load float* %A5_addr_5, align 4
+
+ST_5: A6_load_5 [1/2] 2.39ns
+.preheader:77  %A6_load_5 = load float* %A6_addr_5, align 4
+
+ST_5: A7_load_5 [1/2] 2.39ns
+.preheader:78  %A7_load_5 = load float* %A7_addr_5, align 4
+
+ST_5: tmp_26 [1/1] 1.94ns
+.preheader:79  %tmp_26 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_5, float %A1_load_5, float %A2_load_5, float %A3_load_5, float %A4_load_5, float %A5_load_5, float %A6_load_5, float %A7_load_5, i3 %tmp_32)
+
+ST_5: A_load_6 [2/2] 2.39ns
+.preheader:83  %A_load_6 = load float* %A_addr_6, align 4
+
+ST_5: A1_load_6 [2/2] 2.39ns
+.preheader:84  %A1_load_6 = load float* %A1_addr_6, align 4
+
+ST_5: A2_load_6 [2/2] 2.39ns
+.preheader:85  %A2_load_6 = load float* %A2_addr_6, align 4
+
+ST_5: A3_load_6 [2/2] 2.39ns
+.preheader:86  %A3_load_6 = load float* %A3_addr_6, align 4
+
+ST_5: A4_load_6 [2/2] 2.39ns
+.preheader:87  %A4_load_6 = load float* %A4_addr_6, align 4
+
+ST_5: A5_load_6 [2/2] 2.39ns
+.preheader:88  %A5_load_6 = load float* %A5_addr_6, align 4
+
+ST_5: A6_load_6 [2/2] 2.39ns
+.preheader:89  %A6_load_6 = load float* %A6_addr_6, align 4
+
+ST_5: A7_load_6 [2/2] 2.39ns
+.preheader:90  %A7_load_6 = load float* %A7_addr_6, align 4
+
+ST_5: A_load_7 [2/2] 2.39ns
+.preheader:95  %A_load_7 = load float* %A_addr_7, align 4
+
+ST_5: A1_load_7 [2/2] 2.39ns
+.preheader:96  %A1_load_7 = load float* %A1_addr_7, align 4
+
+ST_5: A2_load_7 [2/2] 2.39ns
+.preheader:97  %A2_load_7 = load float* %A2_addr_7, align 4
+
+ST_5: A3_load_7 [2/2] 2.39ns
+.preheader:98  %A3_load_7 = load float* %A3_addr_7, align 4
+
+ST_5: A4_load_7 [2/2] 2.39ns
+.preheader:99  %A4_load_7 = load float* %A4_addr_7, align 4
+
+ST_5: A5_load_7 [2/2] 2.39ns
+.preheader:100  %A5_load_7 = load float* %A5_addr_7, align 4
+
+ST_5: A6_load_7 [2/2] 2.39ns
+.preheader:101  %A6_load_7 = load float* %A6_addr_7, align 4
+
+ST_5: A7_load_7 [2/2] 2.39ns
+.preheader:102  %A7_load_7 = load float* %A7_addr_7, align 4
+
+
+ <State 6>: 7.64ns
+ST_6: tmp_9 [2/4] 5.70ns
+.preheader:21  %tmp_9 = fmul float %tmp, %tmp_s
+
+ST_6: tmp_9_1 [2/4] 5.70ns
+.preheader:33  %tmp_9_1 = fmul float %tmp_18, %tmp_19
+
+ST_6: tmp_9_2 [3/4] 5.70ns
+.preheader:45  %tmp_9_2 = fmul float %tmp_20, %tmp_21
+
+ST_6: tmp_9_3 [3/4] 5.70ns
+.preheader:57  %tmp_9_3 = fmul float %tmp_22, %tmp_23
+
+ST_6: tmp_25 [1/1] 1.94ns
+.preheader:68  %tmp_25 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_95, float %p_read_94, float %p_read_93, float %p_read_92, float %p_read_91, float %p_read_90, float %p_read_89, float %p_read_88, i3 %tmp_33)
+
+ST_6: tmp_9_4 [4/4] 5.70ns
+.preheader:69  %tmp_9_4 = fmul float %tmp_24, %tmp_25
+
+ST_6: tmp_27 [1/1] 1.94ns
+.preheader:80  %tmp_27 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_87, float %p_read_86, float %p_read_85, float %p_read_84, float %p_read_83, float %p_read_82, float %p_read_81, float %p_read_80, i3 %tmp_33)
+
+ST_6: tmp_9_5 [4/4] 5.70ns
+.preheader:81  %tmp_9_5 = fmul float %tmp_26, %tmp_27
+
+ST_6: A_load_6 [1/2] 2.39ns
+.preheader:83  %A_load_6 = load float* %A_addr_6, align 4
+
+ST_6: A1_load_6 [1/2] 2.39ns
+.preheader:84  %A1_load_6 = load float* %A1_addr_6, align 4
+
+ST_6: A2_load_6 [1/2] 2.39ns
+.preheader:85  %A2_load_6 = load float* %A2_addr_6, align 4
+
+ST_6: A3_load_6 [1/2] 2.39ns
+.preheader:86  %A3_load_6 = load float* %A3_addr_6, align 4
+
+ST_6: A4_load_6 [1/2] 2.39ns
+.preheader:87  %A4_load_6 = load float* %A4_addr_6, align 4
+
+ST_6: A5_load_6 [1/2] 2.39ns
+.preheader:88  %A5_load_6 = load float* %A5_addr_6, align 4
+
+ST_6: A6_load_6 [1/2] 2.39ns
+.preheader:89  %A6_load_6 = load float* %A6_addr_6, align 4
+
+ST_6: A7_load_6 [1/2] 2.39ns
+.preheader:90  %A7_load_6 = load float* %A7_addr_6, align 4
+
+ST_6: tmp_28 [1/1] 1.94ns
+.preheader:91  %tmp_28 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_6, float %A1_load_6, float %A2_load_6, float %A3_load_6, float %A4_load_6, float %A5_load_6, float %A6_load_6, float %A7_load_6, i3 %tmp_32)
+
+ST_6: A_load_7 [1/2] 2.39ns
+.preheader:95  %A_load_7 = load float* %A_addr_7, align 4
+
+ST_6: A1_load_7 [1/2] 2.39ns
+.preheader:96  %A1_load_7 = load float* %A1_addr_7, align 4
+
+ST_6: A2_load_7 [1/2] 2.39ns
+.preheader:97  %A2_load_7 = load float* %A2_addr_7, align 4
+
+ST_6: A3_load_7 [1/2] 2.39ns
+.preheader:98  %A3_load_7 = load float* %A3_addr_7, align 4
+
+ST_6: A4_load_7 [1/2] 2.39ns
+.preheader:99  %A4_load_7 = load float* %A4_addr_7, align 4
+
+ST_6: A5_load_7 [1/2] 2.39ns
+.preheader:100  %A5_load_7 = load float* %A5_addr_7, align 4
+
+ST_6: A6_load_7 [1/2] 2.39ns
+.preheader:101  %A6_load_7 = load float* %A6_addr_7, align 4
+
+ST_6: A7_load_7 [1/2] 2.39ns
+.preheader:102  %A7_load_7 = load float* %A7_addr_7, align 4
+
+ST_6: tmp_30 [1/1] 1.94ns
+.preheader:103  %tmp_30 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_7, float %A1_load_7, float %A2_load_7, float %A3_load_7, float %A4_load_7, float %A5_load_7, float %A6_load_7, float %A7_load_7, i3 %tmp_32)
+
+ST_6: j [1/1] 0.80ns
+.preheader:115  %j = add i4 1, %j_1_mid2
+
+
+ <State 7>: 7.64ns
+ST_7: tmp_9 [1/4] 5.70ns
+.preheader:21  %tmp_9 = fmul float %tmp, %tmp_s
+
+ST_7: tmp_9_1 [1/4] 5.70ns
+.preheader:33  %tmp_9_1 = fmul float %tmp_18, %tmp_19
+
+ST_7: tmp_9_2 [2/4] 5.70ns
+.preheader:45  %tmp_9_2 = fmul float %tmp_20, %tmp_21
+
+ST_7: tmp_9_3 [2/4] 5.70ns
+.preheader:57  %tmp_9_3 = fmul float %tmp_22, %tmp_23
+
+ST_7: tmp_9_4 [3/4] 5.70ns
+.preheader:69  %tmp_9_4 = fmul float %tmp_24, %tmp_25
+
+ST_7: tmp_9_5 [3/4] 5.70ns
+.preheader:81  %tmp_9_5 = fmul float %tmp_26, %tmp_27
+
+ST_7: tmp_29 [1/1] 1.94ns
+.preheader:92  %tmp_29 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_79, float %p_read_78, float %p_read_77, float %p_read_76, float %p_read_75, float %p_read_74, float %p_read_73, float %p_read_72, i3 %tmp_33)
+
+ST_7: tmp_9_6 [4/4] 5.70ns
+.preheader:93  %tmp_9_6 = fmul float %tmp_28, %tmp_29
+
+ST_7: tmp_31 [1/1] 1.94ns
+.preheader:104  %tmp_31 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_71, float %p_read_70, float %p_read_69, float %p_read_68, float %p_read_67, float %p_read_66, float %p_read_65, float %p_read_64, i3 %tmp_33)
+
+ST_7: tmp_9_7 [4/4] 5.70ns
+.preheader:105  %tmp_9_7 = fmul float %tmp_30, %tmp_31
+
+
+ <State 8>: 7.26ns
+ST_8: temp_1 [5/5] 7.26ns
+.preheader:22  %temp_1 = fadd float %tmp_9, 0.000000e+00
+
+ST_8: tmp_9_2 [1/4] 5.70ns
+.preheader:45  %tmp_9_2 = fmul float %tmp_20, %tmp_21
+
+ST_8: tmp_9_3 [1/4] 5.70ns
+.preheader:57  %tmp_9_3 = fmul float %tmp_22, %tmp_23
+
+ST_8: tmp_9_4 [2/4] 5.70ns
+.preheader:69  %tmp_9_4 = fmul float %tmp_24, %tmp_25
+
+ST_8: tmp_9_5 [2/4] 5.70ns
+.preheader:81  %tmp_9_5 = fmul float %tmp_26, %tmp_27
+
+ST_8: tmp_9_6 [3/4] 5.70ns
+.preheader:93  %tmp_9_6 = fmul float %tmp_28, %tmp_29
+
+ST_8: tmp_9_7 [3/4] 5.70ns
+.preheader:105  %tmp_9_7 = fmul float %tmp_30, %tmp_31
+
+
+ <State 9>: 7.26ns
+ST_9: temp_1 [4/5] 7.26ns
+.preheader:22  %temp_1 = fadd float %tmp_9, 0.000000e+00
+
+ST_9: tmp_9_4 [1/4] 5.70ns
+.preheader:69  %tmp_9_4 = fmul float %tmp_24, %tmp_25
+
+ST_9: tmp_9_5 [1/4] 5.70ns
+.preheader:81  %tmp_9_5 = fmul float %tmp_26, %tmp_27
+
+ST_9: tmp_9_6 [2/4] 5.70ns
+.preheader:93  %tmp_9_6 = fmul float %tmp_28, %tmp_29
+
+ST_9: tmp_9_7 [2/4] 5.70ns
+.preheader:105  %tmp_9_7 = fmul float %tmp_30, %tmp_31
+
+
+ <State 10>: 7.26ns
+ST_10: temp_1 [3/5] 7.26ns
+.preheader:22  %temp_1 = fadd float %tmp_9, 0.000000e+00
+
+ST_10: tmp_9_6 [1/4] 5.70ns
+.preheader:93  %tmp_9_6 = fmul float %tmp_28, %tmp_29
+
+ST_10: tmp_9_7 [1/4] 5.70ns
+.preheader:105  %tmp_9_7 = fmul float %tmp_30, %tmp_31
+
+
+ <State 11>: 7.26ns
+ST_11: temp_1 [2/5] 7.26ns
+.preheader:22  %temp_1 = fadd float %tmp_9, 0.000000e+00
+
+
+ <State 12>: 7.26ns
+ST_12: temp_1 [1/5] 7.26ns
+.preheader:22  %temp_1 = fadd float %tmp_9, 0.000000e+00
+
+
+ <State 13>: 7.26ns
+ST_13: temp_1_1 [5/5] 7.26ns
+.preheader:34  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+
+
+ <State 14>: 7.26ns
+ST_14: temp_1_1 [4/5] 7.26ns
+.preheader:34  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+
+
+ <State 15>: 7.26ns
+ST_15: temp_1_1 [3/5] 7.26ns
+.preheader:34  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+
+
+ <State 16>: 7.26ns
+ST_16: temp_1_1 [2/5] 7.26ns
+.preheader:34  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+
+
+ <State 17>: 7.26ns
+ST_17: temp_1_1 [1/5] 7.26ns
+.preheader:34  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+
+
+ <State 18>: 7.26ns
+ST_18: temp_1_2 [5/5] 7.26ns
+.preheader:46  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+
+
+ <State 19>: 7.26ns
+ST_19: temp_1_2 [4/5] 7.26ns
+.preheader:46  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+
+
+ <State 20>: 7.26ns
+ST_20: temp_1_2 [3/5] 7.26ns
+.preheader:46  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+
+
+ <State 21>: 7.26ns
+ST_21: temp_1_2 [2/5] 7.26ns
+.preheader:46  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+
+
+ <State 22>: 7.26ns
+ST_22: temp_1_2 [1/5] 7.26ns
+.preheader:46  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+
+
+ <State 23>: 7.26ns
+ST_23: temp_1_3 [5/5] 7.26ns
+.preheader:58  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+
+
+ <State 24>: 7.26ns
+ST_24: temp_1_3 [4/5] 7.26ns
+.preheader:58  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+
+
+ <State 25>: 7.26ns
+ST_25: temp_1_3 [3/5] 7.26ns
+.preheader:58  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+
+
+ <State 26>: 7.26ns
+ST_26: temp_1_3 [2/5] 7.26ns
+.preheader:58  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+
+
+ <State 27>: 7.26ns
+ST_27: temp_1_3 [1/5] 7.26ns
+.preheader:58  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+
+
+ <State 28>: 7.26ns
+ST_28: temp_1_4 [5/5] 7.26ns
+.preheader:70  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+
+
+ <State 29>: 7.26ns
+ST_29: temp_1_4 [4/5] 7.26ns
+.preheader:70  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+
+
+ <State 30>: 7.26ns
+ST_30: temp_1_4 [3/5] 7.26ns
+.preheader:70  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+
+
+ <State 31>: 7.26ns
+ST_31: temp_1_4 [2/5] 7.26ns
+.preheader:70  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+
+
+ <State 32>: 7.26ns
+ST_32: temp_1_4 [1/5] 7.26ns
+.preheader:70  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+
+
+ <State 33>: 7.26ns
+ST_33: temp_1_5 [5/5] 7.26ns
+.preheader:82  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+
+
+ <State 34>: 7.26ns
+ST_34: temp_1_5 [4/5] 7.26ns
+.preheader:82  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+
+
+ <State 35>: 7.26ns
+ST_35: temp_1_5 [3/5] 7.26ns
+.preheader:82  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+
+
+ <State 36>: 7.26ns
+ST_36: temp_1_5 [2/5] 7.26ns
+.preheader:82  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+
+
+ <State 37>: 7.26ns
+ST_37: temp_1_5 [1/5] 7.26ns
+.preheader:82  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+
+
+ <State 38>: 7.26ns
+ST_38: temp_1_6 [5/5] 7.26ns
+.preheader:94  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+
+
+ <State 39>: 7.26ns
+ST_39: temp_1_6 [4/5] 7.26ns
+.preheader:94  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+
+
+ <State 40>: 7.26ns
+ST_40: temp_1_6 [3/5] 7.26ns
+.preheader:94  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+
+
+ <State 41>: 7.26ns
+ST_41: temp_1_6 [2/5] 7.26ns
+.preheader:94  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+
+
+ <State 42>: 7.26ns
+ST_42: temp_1_6 [1/5] 7.26ns
+.preheader:94  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+
+
+ <State 43>: 7.26ns
+ST_43: temp_1_7 [5/5] 7.26ns
+.preheader:106  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+
+
+ <State 44>: 7.26ns
+ST_44: temp_1_7 [4/5] 7.26ns
+.preheader:106  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+
+
+ <State 45>: 7.26ns
+ST_45: temp_1_7 [3/5] 7.26ns
+.preheader:106  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+
+
+ <State 46>: 7.26ns
+ST_46: temp_1_7 [2/5] 7.26ns
+.preheader:106  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+
+
+ <State 47>: 7.26ns
+ST_47: temp_1_7 [1/5] 7.26ns
+.preheader:106  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+
+
+ <State 48>: 4.43ns
+ST_48: stg_408 [1/1] 0.00ns
+.preheader:0  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @str4)
+
+ST_48: empty [1/1] 0.00ns
+.preheader:1  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)
+
+ST_48: stg_410 [1/1] 0.00ns
+.preheader:7  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind
+
+ST_48: tmp_2 [1/1] 0.00ns
+.preheader:8  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5)
+
+ST_48: stg_412 [1/1] 0.00ns
+.preheader:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_48: tmp_6_trn_cast [1/1] 0.00ns
+.preheader:107  %tmp_6_trn_cast = zext i4 %j_1_mid2 to i8
+
+ST_48: tmp_8 [1/1] 0.00ns
+.preheader:108  %tmp_8 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0)
+
+ST_48: p_addr_cast [1/1] 0.00ns
+.preheader:109  %p_addr_cast = zext i7 %tmp_8 to i8
+
+ST_48: p_addr1 [1/1] 1.72ns
+.preheader:110  %p_addr1 = add i8 %p_addr_cast, %tmp_6_trn_cast
+
+ST_48: tmp_10 [1/1] 0.00ns
+.preheader:111  %tmp_10 = zext i8 %p_addr1 to i64
+
+ST_48: C_addr [1/1] 0.00ns
+.preheader:112  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_10
+
+ST_48: stg_419 [1/1] 2.71ns
+.preheader:113  store float %temp_1_7, float* %C_addr, align 4
+
+ST_48: empty_8 [1/1] 0.00ns
+.preheader:114  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2)
+
+ST_48: stg_421 [1/1] 0.00ns
+.preheader:116  br label %0
+
+
+ <State 49>: 0.00ns
+ST_49: stg_422 [1/1] 0.00ns
+.exitStub:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
