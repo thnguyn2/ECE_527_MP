@@ -77,6 +77,11 @@
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/matrixmath.h</location>
 		</link>
 		<link>
+			<name>testbench/test.c</name>
+			<type>1</type>
+			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/test.c</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>Z:/Documents/UIUC/ECE527/ECE_527_MP/mp4/dct/solution1/solution1.directive</location>
