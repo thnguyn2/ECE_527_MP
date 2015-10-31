@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_Loop_Row_proc'
 ================================================================
-* Date:           Fri Oct 30 16:49:40 2015
+* Date:           Fri Oct 30 22:33:06 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -252,34 +252,34 @@
     |temp_1_6_reg_2384             |  32|   0|   32|          0|
     |temp_1_7_reg_2389             |  32|   0|   32|          0|
     |temp_1_reg_2354               |  32|   0|   32|          0|
+    |tmp_10_1_reg_2309             |  32|   0|   32|          0|
+    |tmp_10_2_reg_2324             |  32|   0|   32|          0|
+    |tmp_10_3_reg_2329             |  32|   0|   32|          0|
+    |tmp_10_4_reg_2334             |  32|   0|   32|          0|
+    |tmp_10_5_reg_2339             |  32|   0|   32|          0|
+    |tmp_10_6_reg_2344             |  32|   0|   32|          0|
+    |tmp_10_7_reg_2349             |  32|   0|   32|          0|
     |tmp_10_reg_2269               |  32|   0|   32|          0|
     |tmp_12_reg_2274               |  32|   0|   32|          0|
     |tmp_14_reg_2289               |  32|   0|   32|          0|
     |tmp_16_reg_2294               |  32|   0|   32|          0|
     |tmp_18_reg_2211               |   3|   0|    3|          0|
     |tmp_19_reg_2222               |   3|   0|    3|          0|
-    |tmp_2_reg_2234                |  32|   0|   32|          0|
-    |tmp_3_reg_2304                |  32|   0|   32|          0|
-    |tmp_5_reg_2249                |  32|   0|   32|          0|
-    |tmp_9_1_reg_2309              |  32|   0|   32|          0|
-    |tmp_9_2_reg_2324              |  32|   0|   32|          0|
-    |tmp_9_3_reg_2329              |  32|   0|   32|          0|
-    |tmp_9_4_reg_2334              |  32|   0|   32|          0|
-    |tmp_9_5_reg_2339              |  32|   0|   32|          0|
-    |tmp_9_6_reg_2344              |  32|   0|   32|          0|
-    |tmp_9_7_reg_2349              |  32|   0|   32|          0|
+    |tmp_2_reg_2304                |  32|   0|   32|          0|
+    |tmp_3_reg_2234                |  32|   0|   32|          0|
+    |tmp_6_reg_2249                |  32|   0|   32|          0|
     |tmp_reg_2217                  |  32|   0|   32|          0|
     |tmp_s_reg_2254                |  32|   0|   32|          0|
     |exitcond_flatten_reg_2191     |   0|   1|    1|          0|
     |j_1_mid2_reg_2200             |   0|   4|    4|          0|
+    |tmp_10_1_reg_2309             |   0|  32|   32|          0|
+    |tmp_10_2_reg_2324             |   0|  32|   32|          0|
+    |tmp_10_3_reg_2329             |   0|  32|   32|          0|
+    |tmp_10_4_reg_2334             |   0|  32|   32|          0|
+    |tmp_10_5_reg_2339             |   0|  32|   32|          0|
+    |tmp_10_6_reg_2344             |   0|  32|   32|          0|
+    |tmp_10_7_reg_2349             |   0|  32|   32|          0|
     |tmp_18_reg_2211               |   0|   3|    3|          0|
-    |tmp_9_1_reg_2309              |   0|  32|   32|          0|
-    |tmp_9_2_reg_2324              |   0|  32|   32|          0|
-    |tmp_9_3_reg_2329              |   0|  32|   32|          0|
-    |tmp_9_4_reg_2334              |   0|  32|   32|          0|
-    |tmp_9_5_reg_2339              |   0|  32|   32|          0|
-    |tmp_9_6_reg_2344              |   0|  32|   32|          0|
-    |tmp_9_7_reg_2349              |   0|  32|   32|          0|
     +------------------------------+----+----+-----+-----------+
     |Total                         | 828| 232| 1252|        192|
     +------------------------------+----+----+-----+-----------+
@@ -1108,8 +1108,8 @@ ST_3: A_6_load_1 [1/2] 2.39ns
 ST_3: A_7_load_1 [1/2] 2.39ns
 .preheader:31  %A_7_load_1 = load float* %A_7_addr_1, align 4
 
-ST_3: tmp_2 [1/1] 1.94ns
-.preheader:32  %tmp_2 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_1, float %A_1_load_1, float %A_2_load_1, float %A_3_load_1, float %A_4_load_1, float %A_5_load_1, float %A_6_load_1, float %A_7_load_1, i3 %tmp_18)
+ST_3: tmp_3 [1/1] 1.94ns
+.preheader:32  %tmp_3 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_1, float %A_1_load_1, float %A_2_load_1, float %A_3_load_1, float %A_4_load_1, float %A_5_load_1, float %A_6_load_1, float %A_7_load_1, i3 %tmp_18)
 
 ST_3: A_0_load_2 [2/2] 2.39ns
 .preheader:36  %A_0_load_2 = load float* %A_0_addr_2, align 4
@@ -1164,14 +1164,14 @@ ST_3: A_7_load_3 [2/2] 2.39ns
 ST_4: tmp_1 [1/1] 1.94ns
 .preheader:21  %tmp_1 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read433, float %p_read_63, float %p_read_62, float %p_read_61, float %p_read_60, float %p_read_59, float %p_read_58, float %p_read_57, i3 %tmp_19)
 
-ST_4: tmp_3 [4/4] 5.70ns
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+ST_4: tmp_2 [4/4] 5.70ns
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
 ST_4: tmp_4 [1/1] 1.94ns
 .preheader:33  %tmp_4 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_56, float %p_read_55, float %p_read_54, float %p_read_53, float %p_read_52, float %p_read_51, float %p_read_50, float %p_read_49, i3 %tmp_19)
 
-ST_4: tmp_9_1 [4/4] 5.70ns
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+ST_4: tmp_10_1 [4/4] 5.70ns
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
 ST_4: A_0_load_2 [1/2] 2.39ns
 .preheader:36  %A_0_load_2 = load float* %A_0_addr_2, align 4
@@ -1197,8 +1197,8 @@ ST_4: A_6_load_2 [1/2] 2.39ns
 ST_4: A_7_load_2 [1/2] 2.39ns
 .preheader:43  %A_7_load_2 = load float* %A_7_addr_2, align 4
 
-ST_4: tmp_5 [1/1] 1.94ns
-.preheader:44  %tmp_5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_2, float %A_1_load_2, float %A_2_load_2, float %A_3_load_2, float %A_4_load_2, float %A_5_load_2, float %A_6_load_2, float %A_7_load_2, i3 %tmp_18)
+ST_4: tmp_6 [1/1] 1.94ns
+.preheader:44  %tmp_6 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_2, float %A_1_load_2, float %A_2_load_2, float %A_3_load_2, float %A_4_load_2, float %A_5_load_2, float %A_6_load_2, float %A_7_load_2, i3 %tmp_18)
 
 ST_4: A_0_load_3 [1/2] 2.39ns
 .preheader:48  %A_0_load_3 = load float* %A_0_addr_3, align 4
@@ -1277,23 +1277,23 @@ ST_4: A_7_load_5 [2/2] 2.39ns
 
 
  <State 5>: 7.64ns
-ST_5: tmp_3 [3/4] 5.70ns
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+ST_5: tmp_2 [3/4] 5.70ns
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
-ST_5: tmp_9_1 [3/4] 5.70ns
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+ST_5: tmp_10_1 [3/4] 5.70ns
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
-ST_5: tmp_8 [1/1] 1.94ns
-.preheader:45  %tmp_8 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_48, float %p_read_47, float %p_read_46, float %p_read_45, float %p_read_44, float %p_read_43, float %p_read_42, float %p_read_41, i3 %tmp_19)
+ST_5: tmp_9 [1/1] 1.94ns
+.preheader:45  %tmp_9 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_48, float %p_read_47, float %p_read_46, float %p_read_45, float %p_read_44, float %p_read_43, float %p_read_42, float %p_read_41, i3 %tmp_19)
 
-ST_5: tmp_9_2 [4/4] 5.70ns
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+ST_5: tmp_10_2 [4/4] 5.70ns
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
-ST_5: tmp_7 [1/1] 1.94ns
-.preheader:57  %tmp_7 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_40, float %p_read_39, float %p_read_38, float %p_read_37, float %p_read_36, float %p_read_35, float %p_read_34, float %p_read_33, i3 %tmp_19)
+ST_5: tmp_5 [1/1] 1.94ns
+.preheader:57  %tmp_5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_40, float %p_read_39, float %p_read_38, float %p_read_37, float %p_read_36, float %p_read_35, float %p_read_34, float %p_read_33, i3 %tmp_19)
 
-ST_5: tmp_9_3 [4/4] 5.70ns
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+ST_5: tmp_10_3 [4/4] 5.70ns
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
 ST_5: A_0_load_4 [1/2] 2.39ns
 .preheader:60  %A_0_load_4 = load float* %A_0_addr_4, align 4
@@ -1423,32 +1423,32 @@ branch7133:1  br label %ifBlock
 
 
  <State 6>: 7.64ns
-ST_6: tmp_9 [1/1] 0.00ns
-.preheader:8  %tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5)
+ST_6: tmp_7 [1/1] 0.00ns
+.preheader:8  %tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5)
 
-ST_6: tmp_3 [2/4] 5.70ns
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+ST_6: tmp_2 [2/4] 5.70ns
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
-ST_6: tmp_9_1 [2/4] 5.70ns
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+ST_6: tmp_10_1 [2/4] 5.70ns
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
-ST_6: tmp_9_2 [3/4] 5.70ns
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+ST_6: tmp_10_2 [3/4] 5.70ns
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
-ST_6: tmp_9_3 [3/4] 5.70ns
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+ST_6: tmp_10_3 [3/4] 5.70ns
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
 ST_6: tmp_11 [1/1] 1.94ns
 .preheader:69  %tmp_11 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_32, float %p_read_31, float %p_read_30, float %p_read_29, float %p_read_28, float %p_read_27, float %p_read_26, float %p_read_25, i3 %tmp_19)
 
-ST_6: tmp_9_4 [4/4] 5.70ns
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+ST_6: tmp_10_4 [4/4] 5.70ns
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
 ST_6: tmp_13 [1/1] 1.94ns
 .preheader:81  %tmp_13 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_24, float %p_read_23, float %p_read_22, float %p_read_21, float %p_read_20, float %p_read_19, float %p_read_18, float %p_read_17, i3 %tmp_19)
 
-ST_6: tmp_9_5 [4/4] 5.70ns
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+ST_6: tmp_10_5 [4/4] 5.70ns
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
 ST_6: A_0_load_6 [1/2] 2.39ns
 .preheader:84  %A_0_load_6 = load float* %A_0_addr_6, align 4
@@ -1516,7 +1516,7 @@ ST_6: stg_354 [1/1] 1.91ns
   ]
 
 ST_6: empty_11 [1/1] 0.00ns
-ifBlock:0  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_9)
+ifBlock:0  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_7)
 
 ST_6: j [1/1] 0.80ns
 ifBlock:1  %j = add i4 %j_1_mid2, 1
@@ -1526,271 +1526,271 @@ ifBlock:2  br label %0
 
 
  <State 7>: 7.64ns
-ST_7: tmp_3 [1/4] 5.70ns
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+ST_7: tmp_2 [1/4] 5.70ns
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
-ST_7: tmp_9_1 [1/4] 5.70ns
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+ST_7: tmp_10_1 [1/4] 5.70ns
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
-ST_7: tmp_9_2 [2/4] 5.70ns
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+ST_7: tmp_10_2 [2/4] 5.70ns
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
-ST_7: tmp_9_3 [2/4] 5.70ns
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+ST_7: tmp_10_3 [2/4] 5.70ns
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
-ST_7: tmp_9_4 [3/4] 5.70ns
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+ST_7: tmp_10_4 [3/4] 5.70ns
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
-ST_7: tmp_9_5 [3/4] 5.70ns
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+ST_7: tmp_10_5 [3/4] 5.70ns
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
 ST_7: tmp_15 [1/1] 1.94ns
 .preheader:93  %tmp_15 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_16, float %p_read_15, float %p_read_14, float %p_read_13, float %p_read_12, float %p_read_11, float %p_read_10, float %p_read_9, i3 %tmp_19)
 
-ST_7: tmp_9_6 [4/4] 5.70ns
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+ST_7: tmp_10_6 [4/4] 5.70ns
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
 ST_7: tmp_17 [1/1] 1.94ns
 .preheader:105  %tmp_17 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_8, float %p_read_7, float %p_read_6, float %p_read_5, float %p_read_4, float %p_read_3, float %p_read_2, float %p_read_1, i3 %tmp_19)
 
-ST_7: tmp_9_7 [4/4] 5.70ns
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+ST_7: tmp_10_7 [4/4] 5.70ns
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 
  <State 8>: 7.26ns
 ST_8: temp_1 [5/5] 7.26ns
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
-ST_8: tmp_9_2 [1/4] 5.70ns
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+ST_8: tmp_10_2 [1/4] 5.70ns
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
-ST_8: tmp_9_3 [1/4] 5.70ns
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+ST_8: tmp_10_3 [1/4] 5.70ns
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
-ST_8: tmp_9_4 [2/4] 5.70ns
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+ST_8: tmp_10_4 [2/4] 5.70ns
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
-ST_8: tmp_9_5 [2/4] 5.70ns
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+ST_8: tmp_10_5 [2/4] 5.70ns
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
-ST_8: tmp_9_6 [3/4] 5.70ns
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+ST_8: tmp_10_6 [3/4] 5.70ns
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
-ST_8: tmp_9_7 [3/4] 5.70ns
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+ST_8: tmp_10_7 [3/4] 5.70ns
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 
  <State 9>: 7.26ns
 ST_9: temp_1 [4/5] 7.26ns
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
-ST_9: tmp_9_4 [1/4] 5.70ns
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+ST_9: tmp_10_4 [1/4] 5.70ns
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
-ST_9: tmp_9_5 [1/4] 5.70ns
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+ST_9: tmp_10_5 [1/4] 5.70ns
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
-ST_9: tmp_9_6 [2/4] 5.70ns
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+ST_9: tmp_10_6 [2/4] 5.70ns
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
-ST_9: tmp_9_7 [2/4] 5.70ns
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+ST_9: tmp_10_7 [2/4] 5.70ns
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 
  <State 10>: 7.26ns
 ST_10: temp_1 [3/5] 7.26ns
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
-ST_10: tmp_9_6 [1/4] 5.70ns
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+ST_10: tmp_10_6 [1/4] 5.70ns
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
-ST_10: tmp_9_7 [1/4] 5.70ns
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+ST_10: tmp_10_7 [1/4] 5.70ns
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 
  <State 11>: 7.26ns
 ST_11: temp_1 [2/5] 7.26ns
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 
  <State 12>: 7.26ns
 ST_12: temp_1 [1/5] 7.26ns
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 
  <State 13>: 7.26ns
 ST_13: temp_1_1 [5/5] 7.26ns
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 
  <State 14>: 7.26ns
 ST_14: temp_1_1 [4/5] 7.26ns
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 
  <State 15>: 7.26ns
 ST_15: temp_1_1 [3/5] 7.26ns
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 
  <State 16>: 7.26ns
 ST_16: temp_1_1 [2/5] 7.26ns
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 
  <State 17>: 7.26ns
 ST_17: temp_1_1 [1/5] 7.26ns
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 
  <State 18>: 7.26ns
 ST_18: temp_1_2 [5/5] 7.26ns
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 
  <State 19>: 7.26ns
 ST_19: temp_1_2 [4/5] 7.26ns
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 
  <State 20>: 7.26ns
 ST_20: temp_1_2 [3/5] 7.26ns
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 
  <State 21>: 7.26ns
 ST_21: temp_1_2 [2/5] 7.26ns
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 
  <State 22>: 7.26ns
 ST_22: temp_1_2 [1/5] 7.26ns
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 
  <State 23>: 7.26ns
 ST_23: temp_1_3 [5/5] 7.26ns
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 
  <State 24>: 7.26ns
 ST_24: temp_1_3 [4/5] 7.26ns
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 
  <State 25>: 7.26ns
 ST_25: temp_1_3 [3/5] 7.26ns
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 
  <State 26>: 7.26ns
 ST_26: temp_1_3 [2/5] 7.26ns
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 
  <State 27>: 7.26ns
 ST_27: temp_1_3 [1/5] 7.26ns
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 
  <State 28>: 7.26ns
 ST_28: temp_1_4 [5/5] 7.26ns
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 
  <State 29>: 7.26ns
 ST_29: temp_1_4 [4/5] 7.26ns
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 
  <State 30>: 7.26ns
 ST_30: temp_1_4 [3/5] 7.26ns
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 
  <State 31>: 7.26ns
 ST_31: temp_1_4 [2/5] 7.26ns
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 
  <State 32>: 7.26ns
 ST_32: temp_1_4 [1/5] 7.26ns
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 
  <State 33>: 7.26ns
 ST_33: temp_1_5 [5/5] 7.26ns
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 
  <State 34>: 7.26ns
 ST_34: temp_1_5 [4/5] 7.26ns
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 
  <State 35>: 7.26ns
 ST_35: temp_1_5 [3/5] 7.26ns
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 
  <State 36>: 7.26ns
 ST_36: temp_1_5 [2/5] 7.26ns
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 
  <State 37>: 7.26ns
 ST_37: temp_1_5 [1/5] 7.26ns
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 
  <State 38>: 7.26ns
 ST_38: temp_1_6 [5/5] 7.26ns
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 
  <State 39>: 7.26ns
 ST_39: temp_1_6 [4/5] 7.26ns
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 
  <State 40>: 7.26ns
 ST_40: temp_1_6 [3/5] 7.26ns
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 
  <State 41>: 7.26ns
 ST_41: temp_1_6 [2/5] 7.26ns
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 
  <State 42>: 7.26ns
 ST_42: temp_1_6 [1/5] 7.26ns
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 
  <State 43>: 7.26ns
 ST_43: temp_1_7 [5/5] 7.26ns
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 
  <State 44>: 7.26ns
 ST_44: temp_1_7 [4/5] 7.26ns
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 
  <State 45>: 7.26ns
 ST_45: temp_1_7 [3/5] 7.26ns
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 
  <State 46>: 7.26ns
 ST_46: temp_1_7 [2/5] 7.26ns
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 
  <State 47>: 7.26ns
 ST_47: temp_1_7 [1/5] 7.26ns
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 
  <State 48>: 2.39ns
@@ -1804,34 +1804,34 @@ ST_48: stg_422 [1/1] 0.00ns
 .preheader:7  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind
 
 ST_48: stg_423 [1/1] 0.00ns
-.preheader:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+.preheader:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
-ST_48: tmp_6 [1/1] 0.00ns
-.preheader:10  %tmp_6 = zext i4 %j_1_mid2 to i64
+ST_48: tmp_8 [1/1] 0.00ns
+.preheader:10  %tmp_8 = zext i4 %j_1_mid2 to i64
 
 ST_48: C_0_addr [1/1] 0.00ns
-.preheader:108  %C_0_addr = getelementptr [8 x float]* %C_0, i64 0, i64 %tmp_6
+.preheader:108  %C_0_addr = getelementptr [8 x float]* %C_0, i64 0, i64 %tmp_8
 
 ST_48: C_1_addr [1/1] 0.00ns
-.preheader:109  %C_1_addr = getelementptr [8 x float]* %C_1, i64 0, i64 %tmp_6
+.preheader:109  %C_1_addr = getelementptr [8 x float]* %C_1, i64 0, i64 %tmp_8
 
 ST_48: C_2_addr [1/1] 0.00ns
-.preheader:110  %C_2_addr = getelementptr [8 x float]* %C_2, i64 0, i64 %tmp_6
+.preheader:110  %C_2_addr = getelementptr [8 x float]* %C_2, i64 0, i64 %tmp_8
 
 ST_48: C_3_addr [1/1] 0.00ns
-.preheader:111  %C_3_addr = getelementptr [8 x float]* %C_3, i64 0, i64 %tmp_6
+.preheader:111  %C_3_addr = getelementptr [8 x float]* %C_3, i64 0, i64 %tmp_8
 
 ST_48: C_4_addr [1/1] 0.00ns
-.preheader:112  %C_4_addr = getelementptr [8 x float]* %C_4, i64 0, i64 %tmp_6
+.preheader:112  %C_4_addr = getelementptr [8 x float]* %C_4, i64 0, i64 %tmp_8
 
 ST_48: C_5_addr [1/1] 0.00ns
-.preheader:113  %C_5_addr = getelementptr [8 x float]* %C_5, i64 0, i64 %tmp_6
+.preheader:113  %C_5_addr = getelementptr [8 x float]* %C_5, i64 0, i64 %tmp_8
 
 ST_48: C_6_addr [1/1] 0.00ns
-.preheader:114  %C_6_addr = getelementptr [8 x float]* %C_6, i64 0, i64 %tmp_6
+.preheader:114  %C_6_addr = getelementptr [8 x float]* %C_6, i64 0, i64 %tmp_8
 
 ST_48: C_7_addr [1/1] 0.00ns
-.preheader:115  %C_7_addr = getelementptr [8 x float]* %C_7, i64 0, i64 %tmp_6
+.preheader:115  %C_7_addr = getelementptr [8 x float]* %C_7, i64 0, i64 %tmp_8
 
 ST_48: stg_433 [1/1] 2.39ns
 branch6132:0  store float %temp_1_7, float* %C_6_addr, align 4
@@ -1876,86 +1876,86 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ A_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917bf0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917c80; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917d10; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917da0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917e30; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917ec0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917f50; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ A_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917fe0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
-Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918070; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918100; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918190; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read3]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918220; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read4]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9182b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read5]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918340; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read6]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9183d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read7]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918460; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read8]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9184f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read9]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918580; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read10]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918610; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read11]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918720; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read12]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9187b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read13]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918840; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read14]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9188d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read15]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918960; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read16]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9189f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read17]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918a80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read18]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918b10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read19]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918ba0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read20]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918c30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read21]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918cc0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read22]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918d50; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read23]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918de0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read24]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918e70; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read25]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918f00; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read26]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc918f90; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read27]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919020; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read28]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9190b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read29]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919140; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read30]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9191d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read31]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919260; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read32]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9192f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read33]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919380; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read34]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919410; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read35]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9194a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read36]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919530; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read37]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9195c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read38]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919650; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read39]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9196e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read40]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919770; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read41]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919800; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read42]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919890; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read43]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919920; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read44]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc9199b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read45]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919a40; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read46]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919ad0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read47]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919b60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read48]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919bf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read49]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919c80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read50]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919d10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read51]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919da0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read52]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919e30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read53]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919ec0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read54]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919f50; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read55]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc919fe0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read56]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a070; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read57]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a100; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read58]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a190; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read59]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a220; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read60]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a2b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read61]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a340; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read62]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a3d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ p_read63]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91a460; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ C_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a4f0; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a580; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a610; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a720; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a7b0; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a840; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a8d0; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ C_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91a960; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ A_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d360; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d3f0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d480; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d510; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d5a0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d630; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d6c0; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ A_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2d750; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2d7e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2d870; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2d900; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read3]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2d990; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read4]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2da20; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read5]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2dab0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read6]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2db40; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read7]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2dbd0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read8]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2dc60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read9]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2dcf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read10]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2de00; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read11]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2de90; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read12]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2df20; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read13]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2dfb0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read14]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e040; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read15]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e0d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read16]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e160; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read17]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e1f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read18]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e280; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read19]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e310; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read20]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e3a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read21]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e430; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read22]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e4c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read23]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e550; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read24]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e5e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read25]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e670; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read26]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e700; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read27]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e790; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read28]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e820; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read29]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e8b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read30]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e940; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read31]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2e9d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read32]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2ea60; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read33]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2eaf0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read34]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2eb80; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read35]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2ec10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read36]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2eca0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read37]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2ed30; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read38]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2edc0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read39]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2ee50; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read40]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2eee0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read41]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2ef70; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read42]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f000; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read43]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f090; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read44]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f120; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read45]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f1b0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read46]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f240; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read47]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f2d0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read48]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f360; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read49]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f3f0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read50]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f480; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read51]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f510; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read52]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f5a0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read53]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f630; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read54]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f6c0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read55]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f750; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read56]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f7e0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read57]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f870; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read58]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f900; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read59]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2f990; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read60]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2fa20; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read61]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2fab0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read62]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2fb40; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read63]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xce2fbd0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ C_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xce2fc60; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xce2fcf0; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa0e0; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa170; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa200; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa290; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa320; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ C_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa3b0; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -2120,7 +2120,7 @@ A_4_load_1          (load             ) [ 00000000000000000000000000000000000000
 A_5_load_1          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_6_load_1          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_7_load_1          (load             ) [ 00000000000000000000000000000000000000000000000000]
-tmp_2               (mux              ) [ 00111111000000000000000000000000000000000000000000]
+tmp_3               (mux              ) [ 00111111000000000000000000000000000000000000000000]
 tmp_1               (mux              ) [ 00110111000000000000000000000000000000000000000000]
 tmp_4               (mux              ) [ 00110111000000000000000000000000000000000000000000]
 A_0_load_2          (load             ) [ 00000000000000000000000000000000000000000000000000]
@@ -2131,7 +2131,7 @@ A_4_load_2          (load             ) [ 00000000000000000000000000000000000000
 A_5_load_2          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_6_load_2          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_7_load_2          (load             ) [ 00000000000000000000000000000000000000000000000000]
-tmp_5               (mux              ) [ 00111111100000000000000000000000000000000000000000]
+tmp_6               (mux              ) [ 00111111100000000000000000000000000000000000000000]
 A_0_load_3          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_1_load_3          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_2_load_3          (load             ) [ 00000000000000000000000000000000000000000000000000]
@@ -2141,8 +2141,8 @@ A_5_load_3          (load             ) [ 00000000000000000000000000000000000000
 A_6_load_3          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_7_load_3          (load             ) [ 00000000000000000000000000000000000000000000000000]
 tmp_s               (mux              ) [ 00111111100000000000000000000000000000000000000000]
-tmp_8               (mux              ) [ 00111011100000000000000000000000000000000000000000]
-tmp_7               (mux              ) [ 00111011100000000000000000000000000000000000000000]
+tmp_9               (mux              ) [ 00111011100000000000000000000000000000000000000000]
+tmp_5               (mux              ) [ 00111011100000000000000000000000000000000000000000]
 A_0_load_4          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_1_load_4          (load             ) [ 00000000000000000000000000000000000000000000000000]
 A_2_load_4          (load             ) [ 00000000000000000000000000000000000000000000000000]
@@ -2169,7 +2169,7 @@ stg_323             (br               ) [ 00000000000000000000000000000000000000
 stg_324             (br               ) [ 00000000000000000000000000000000000000000000000000]
 stg_325             (br               ) [ 00000000000000000000000000000000000000000000000000]
 stg_326             (br               ) [ 00000000000000000000000000000000000000000000000000]
-tmp_9               (specregionbegin  ) [ 00000000000000000000000000000000000000000000000000]
+tmp_7               (specregionbegin  ) [ 00000000000000000000000000000000000000000000000000]
 tmp_11              (mux              ) [ 00011101110000000000000000000000000000000000000000]
 tmp_13              (mux              ) [ 00011101110000000000000000000000000000000000000000]
 A_0_load_6          (load             ) [ 00000000000000000000000000000000000000000000000000]
@@ -2194,16 +2194,16 @@ stg_354             (switch           ) [ 00000000000000000000000000000000000000
 empty_11            (specregionend    ) [ 00000000000000000000000000000000000000000000000000]
 j                   (add              ) [ 01111111111111111111111111111111111111111111111110]
 stg_357             (br               ) [ 01111111111111111111111111111111111111111111111110]
-tmp_3               (fmul             ) [ 00111100111110000000000000000000000000000000000000]
-tmp_9_1             (fmul             ) [ 00111100111111111100000000000000000000000000000000]
+tmp_2               (fmul             ) [ 00111100111110000000000000000000000000000000000000]
+tmp_10_1            (fmul             ) [ 00111100111111111100000000000000000000000000000000]
 tmp_15              (mux              ) [ 00101100111000000000000000000000000000000000000000]
 tmp_17              (mux              ) [ 00101100111000000000000000000000000000000000000000]
-tmp_9_2             (fmul             ) [ 00111100011111111111111000000000000000000000000000]
-tmp_9_3             (fmul             ) [ 00111100011111111111111111110000000000000000000000]
-tmp_9_4             (fmul             ) [ 00111100001111111111111111111111100000000000000000]
-tmp_9_5             (fmul             ) [ 00111100001111111111111111111111111111000000000000]
-tmp_9_6             (fmul             ) [ 00111100000111111111111111111111111111111110000000]
-tmp_9_7             (fmul             ) [ 00111100000111111111111111111111111111111111111100]
+tmp_10_2            (fmul             ) [ 00111100011111111111111000000000000000000000000000]
+tmp_10_3            (fmul             ) [ 00111100011111111111111111110000000000000000000000]
+tmp_10_4            (fmul             ) [ 00111100001111111111111111111111100000000000000000]
+tmp_10_5            (fmul             ) [ 00111100001111111111111111111111111111000000000000]
+tmp_10_6            (fmul             ) [ 00111100000111111111111111111111111111111110000000]
+tmp_10_7            (fmul             ) [ 00111100000111111111111111111111111111111111111100]
 temp_1              (fadd             ) [ 00111100000001111100000000000000000000000000000000]
 temp_1_1            (fadd             ) [ 00111100000000000011111000000000000000000000000000]
 temp_1_2            (fadd             ) [ 00111100000000000000000111110000000000000000000000]
@@ -2216,7 +2216,7 @@ stg_420             (specloopname     ) [ 00000000000000000000000000000000000000
 empty               (speclooptripcount) [ 00000000000000000000000000000000000000000000000000]
 stg_422             (specloopname     ) [ 00000000000000000000000000000000000000000000000000]
 stg_423             (specpipeline     ) [ 00000000000000000000000000000000000000000000000000]
-tmp_6               (zext             ) [ 00000000000000000000000000000000000000000000000000]
+tmp_8               (zext             ) [ 00000000000000000000000000000000000000000000000000]
 C_0_addr            (getelementptr    ) [ 00000000000000000000000000000000000000000000000000]
 C_1_addr            (getelementptr    ) [ 00000000000000000000000000000000000000000000000000]
 C_2_addr            (getelementptr    ) [ 00000000000000000000000000000000000000000000000000]
@@ -3286,7 +3286,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 <pin id="229" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str"/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -5314,7 +5314,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="fmul(13) " fcode="fmul"/>
-<opset="tmp_3/4 tmp_9_2/5 tmp_9_4/6 tmp_9_6/7 "/>
+<opset="tmp_2/4 tmp_10_2/5 tmp_10_4/6 tmp_10_6/7 "/>
 </bind>
 </comp>
 
@@ -5326,7 +5326,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="fmul(13) " fcode="fmul"/>
-<opset="tmp_9_1/4 tmp_9_3/5 tmp_9_5/6 tmp_9_7/7 "/>
+<opset="tmp_10_1/4 tmp_10_3/5 tmp_10_5/6 tmp_10_7/7 "/>
 </bind>
 </comp>
 
@@ -5346,7 +5346,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="mux(1186) " fcode="mux"/>
-<opset="tmp/3 tmp_5/4 tmp_10/5 tmp_14/6 "/>
+<opset="tmp/3 tmp_6/4 tmp_10/5 tmp_14/6 "/>
 </bind>
 </comp>
 
@@ -5366,7 +5366,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="mux(1186) " fcode="mux"/>
-<opset="tmp_2/3 tmp_s/4 tmp_12/5 tmp_16/6 "/>
+<opset="tmp_3/3 tmp_s/4 tmp_12/5 tmp_16/6 "/>
 </bind>
 </comp>
 
@@ -5506,7 +5506,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1451" class="1004" name="tmp_8_fu_1451">
+<comp id="1451" class="1004" name="tmp_9_fu_1451">
 <pin_list>
 <pin id="1452" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1453" dir="0" index="1" bw="32" slack="4"/>
@@ -5522,11 +5522,11 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="mux(1186) " fcode="mux"/>
-<opset="tmp_8/5 "/>
+<opset="tmp_9/5 "/>
 </bind>
 </comp>
 
-<comp id="1465" class="1004" name="tmp_7_fu_1465">
+<comp id="1465" class="1004" name="tmp_5_fu_1465">
 <pin_list>
 <pin id="1466" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1467" dir="0" index="1" bw="32" slack="4"/>
@@ -5542,7 +5542,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="mux(1186) " fcode="mux"/>
-<opset="tmp_7/5 "/>
+<opset="tmp_5/5 "/>
 </bind>
 </comp>
 
@@ -5638,14 +5638,14 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1540" class="1004" name="tmp_6_fu_1540">
+<comp id="1540" class="1004" name="tmp_8_fu_1540">
 <pin_list>
 <pin id="1541" dir="0" index="0" bw="4" slack="45"/>
 <pin id="1542" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_6/48 "/>
+<opset="tmp_8/48 "/>
 </bind>
 </comp>
 
@@ -6999,13 +6999,13 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2234" class="1005" name="tmp_2_reg_2234">
+<comp id="2234" class="1005" name="tmp_3_reg_2234">
 <pin_list>
 <pin id="2235" dir="0" index="0" bw="32" slack="1"/>
 <pin id="2236" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_2 "/>
+<opset="tmp_3 "/>
 </bind>
 </comp>
 
@@ -7029,13 +7029,13 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2249" class="1005" name="tmp_5_reg_2249">
+<comp id="2249" class="1005" name="tmp_6_reg_2249">
 <pin_list>
 <pin id="2250" dir="0" index="0" bw="32" slack="1"/>
 <pin id="2251" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_5 "/>
+<opset="tmp_6 "/>
 </bind>
 </comp>
 
@@ -7049,23 +7049,23 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2259" class="1005" name="tmp_8_reg_2259">
+<comp id="2259" class="1005" name="tmp_9_reg_2259">
 <pin_list>
 <pin id="2260" dir="0" index="0" bw="32" slack="1"/>
 <pin id="2261" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_8 "/>
+<opset="tmp_9 "/>
 </bind>
 </comp>
 
-<comp id="2264" class="1005" name="tmp_7_reg_2264">
+<comp id="2264" class="1005" name="tmp_5_reg_2264">
 <pin_list>
 <pin id="2265" dir="0" index="0" bw="32" slack="1"/>
 <pin id="2266" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_7 "/>
+<opset="tmp_5 "/>
 </bind>
 </comp>
 
@@ -7139,23 +7139,23 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2304" class="1005" name="tmp_3_reg_2304">
+<comp id="2304" class="1005" name="tmp_2_reg_2304">
 <pin_list>
 <pin id="2305" dir="0" index="0" bw="32" slack="1"/>
 <pin id="2306" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_3 "/>
+<opset="tmp_2 "/>
 </bind>
 </comp>
 
-<comp id="2309" class="1005" name="tmp_9_1_reg_2309">
+<comp id="2309" class="1005" name="tmp_10_1_reg_2309">
 <pin_list>
 <pin id="2310" dir="0" index="0" bw="32" slack="6"/>
 <pin id="2311" dir="1" index="1" bw="32" slack="6"/>
 </pin_list>
 <bind>
-<opset="tmp_9_1 "/>
+<opset="tmp_10_1 "/>
 </bind>
 </comp>
 
@@ -7179,63 +7179,63 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2324" class="1005" name="tmp_9_2_reg_2324">
+<comp id="2324" class="1005" name="tmp_10_2_reg_2324">
 <pin_list>
 <pin id="2325" dir="0" index="0" bw="32" slack="10"/>
 <pin id="2326" dir="1" index="1" bw="32" slack="10"/>
 </pin_list>
 <bind>
-<opset="tmp_9_2 "/>
+<opset="tmp_10_2 "/>
 </bind>
 </comp>
 
-<comp id="2329" class="1005" name="tmp_9_3_reg_2329">
+<comp id="2329" class="1005" name="tmp_10_3_reg_2329">
 <pin_list>
 <pin id="2330" dir="0" index="0" bw="32" slack="15"/>
 <pin id="2331" dir="1" index="1" bw="32" slack="15"/>
 </pin_list>
 <bind>
-<opset="tmp_9_3 "/>
+<opset="tmp_10_3 "/>
 </bind>
 </comp>
 
-<comp id="2334" class="1005" name="tmp_9_4_reg_2334">
+<comp id="2334" class="1005" name="tmp_10_4_reg_2334">
 <pin_list>
 <pin id="2335" dir="0" index="0" bw="32" slack="19"/>
 <pin id="2336" dir="1" index="1" bw="32" slack="19"/>
 </pin_list>
 <bind>
-<opset="tmp_9_4 "/>
+<opset="tmp_10_4 "/>
 </bind>
 </comp>
 
-<comp id="2339" class="1005" name="tmp_9_5_reg_2339">
+<comp id="2339" class="1005" name="tmp_10_5_reg_2339">
 <pin_list>
 <pin id="2340" dir="0" index="0" bw="32" slack="24"/>
 <pin id="2341" dir="1" index="1" bw="32" slack="24"/>
 </pin_list>
 <bind>
-<opset="tmp_9_5 "/>
+<opset="tmp_10_5 "/>
 </bind>
 </comp>
 
-<comp id="2344" class="1005" name="tmp_9_6_reg_2344">
+<comp id="2344" class="1005" name="tmp_10_6_reg_2344">
 <pin_list>
 <pin id="2345" dir="0" index="0" bw="32" slack="28"/>
 <pin id="2346" dir="1" index="1" bw="32" slack="28"/>
 </pin_list>
 <bind>
-<opset="tmp_9_6 "/>
+<opset="tmp_10_6 "/>
 </bind>
 </comp>
 
-<comp id="2349" class="1005" name="tmp_9_7_reg_2349">
+<comp id="2349" class="1005" name="tmp_10_7_reg_2349">
 <pin_list>
 <pin id="2350" dir="0" index="0" bw="32" slack="33"/>
 <pin id="2351" dir="1" index="1" bw="32" slack="33"/>
 </pin_list>
 <bind>
-<opset="tmp_9_7 "/>
+<opset="tmp_10_7 "/>
 </bind>
 </comp>
 
@@ -8883,26 +8883,26 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 		tmp_18 : 2
 		tmp : 3
 		tmp_19 : 2
-		tmp_2 : 3
+		tmp_3 : 3
 	State 4
-		tmp_3 : 1
-		tmp_9_1 : 1
-		tmp_5 : 1
+		tmp_2 : 1
+		tmp_10_1 : 1
+		tmp_6 : 1
 		tmp_s : 1
 	State 5
-		tmp_9_2 : 1
-		tmp_9_3 : 1
+		tmp_10_2 : 1
+		tmp_10_3 : 1
 		tmp_10 : 1
 		tmp_12 : 1
 	State 6
-		tmp_9_4 : 1
-		tmp_9_5 : 1
+		tmp_10_4 : 1
+		tmp_10_5 : 1
 		tmp_14 : 1
 		tmp_16 : 1
 		empty_11 : 1
 	State 7
-		tmp_9_6 : 1
-		tmp_9_7 : 1
+		tmp_10_6 : 1
+		tmp_10_7 : 1
 	State 8
 	State 9
 	State 10
@@ -8978,8 +8978,8 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 |          |         grp_fu_1352         |    0    |    32   |    64   |
 |          |        tmp_1_fu_1423        |    0    |    32   |    64   |
 |          |        tmp_4_fu_1437        |    0    |    32   |    64   |
-|    mux   |        tmp_8_fu_1451        |    0    |    32   |    64   |
-|          |        tmp_7_fu_1465        |    0    |    32   |    64   |
+|    mux   |        tmp_9_fu_1451        |    0    |    32   |    64   |
+|          |        tmp_5_fu_1465        |    0    |    32   |    64   |
 |          |        tmp_11_fu_1479       |    0    |    32   |    64   |
 |          |        tmp_13_fu_1493       |    0    |    32   |    64   |
 |          |        tmp_15_fu_1512       |    0    |    32   |    64   |
@@ -9066,7 +9066,7 @@ stg_441             (ret              ) [ 00000000000000000000000000000000000000
 |   trunc  |        tmp_18_fu_1413       |    0    |    0    |    0    |
 |          |        tmp_19_fu_1419       |    0    |    0    |    0    |
 |----------|-----------------------------|---------|---------|---------|
-|   zext   |        tmp_6_fu_1540        |    0    |    0    |    0    |
+|   zext   |        tmp_8_fu_1540        |    0    |    0    |    0    |
 |----------|-----------------------------|---------|---------|---------|
 |   Total  |                             |    10   |   1016  |   2090  |
 |----------|-----------------------------|---------|---------|---------|
@@ -9222,6 +9222,13 @@ N/A
 |      temp_1_6_reg_2384     |   32   |
 |      temp_1_7_reg_2389     |   32   |
 |       temp_1_reg_2354      |   32   |
+|      tmp_10_1_reg_2309     |   32   |
+|      tmp_10_2_reg_2324     |   32   |
+|      tmp_10_3_reg_2329     |   32   |
+|      tmp_10_4_reg_2334     |   32   |
+|      tmp_10_5_reg_2339     |   32   |
+|      tmp_10_6_reg_2344     |   32   |
+|      tmp_10_7_reg_2349     |   32   |
 |       tmp_10_reg_2269      |   32   |
 |       tmp_11_reg_2279      |   32   |
 |       tmp_12_reg_2274      |   32   |
@@ -9233,19 +9240,12 @@ N/A
 |       tmp_18_reg_2211      |    3   |
 |       tmp_19_reg_2222      |    3   |
 |       tmp_1_reg_2239       |   32   |
-|       tmp_2_reg_2234       |   32   |
-|       tmp_3_reg_2304       |   32   |
+|       tmp_2_reg_2304       |   32   |
+|       tmp_3_reg_2234       |   32   |
 |       tmp_4_reg_2244       |   32   |
-|       tmp_5_reg_2249       |   32   |
-|       tmp_7_reg_2264       |   32   |
-|       tmp_8_reg_2259       |   32   |
-|      tmp_9_1_reg_2309      |   32   |
-|      tmp_9_2_reg_2324      |   32   |
-|      tmp_9_3_reg_2329      |   32   |
-|      tmp_9_4_reg_2334      |   32   |
-|      tmp_9_5_reg_2339      |   32   |
-|      tmp_9_6_reg_2344      |   32   |
-|      tmp_9_7_reg_2349      |   32   |
+|       tmp_5_reg_2264       |   32   |
+|       tmp_6_reg_2249       |   32   |
+|       tmp_9_reg_2259       |   32   |
 |        tmp_reg_2217        |   32   |
 |       tmp_s_reg_2254       |   32   |
 +----------------------------+--------+

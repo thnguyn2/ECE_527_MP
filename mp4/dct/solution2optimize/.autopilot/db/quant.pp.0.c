@@ -217,7 +217,8 @@ void DOT_Multiply(float A[8][8],
 
 void DOT_Divide(float A[8][8],
   float B[8][8], float C[8][8]);
-# 6 "dct/quant.h" 2
+# 5 "dct/quant.h" 2
+
 
 
 
@@ -226,7 +227,8 @@ void DOT_Divide(float A[8][8],
 void Quant(float X[8][8],
   unsigned char function,
   float Y[8][8]);
-# 3 "dct/quant.c" 2
+# 2 "dct/quant.c" 2
+
 
 
 const float QMatrix[8][8] = {

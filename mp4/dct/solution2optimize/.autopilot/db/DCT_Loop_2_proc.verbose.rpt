@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_2_proc'
 ================================================================
-* Date:           Fri Oct 30 16:49:36 2015
+* Date:           Fri Oct 30 22:33:03 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -85,7 +85,7 @@
     |colidx_1_fu_128_p2   |     +    |      0|  0|   4|           4|           1|
     |p_addr1_fu_148_p2    |     +    |      0|  0|   8|           8|           8|
     |rowidx_1_fu_78_p2    |     +    |      0|  0|   4|           4|           1|
-    |tmp_6_fu_134_p2      |     +    |      0|  0|   7|           7|           7|
+    |tmp_7_fu_134_p2      |     +    |      0|  0|   7|           7|           7|
     |exitcond3_fu_122_p2  |   icmp   |      0|  0|   2|           4|           5|
     |exitcond4_fu_72_p2   |   icmp   |      0|  0|   2|           4|           5|
     |ap_sig_bdd_82        |    or    |      0|  0|   1|           1|           1|
@@ -254,34 +254,34 @@ ST_3: colidx_1 [1/1] 0.80ns
 ST_3: stg_24 [1/1] 0.00ns
 .preheader:5  br i1 %exitcond3, label %.preheader9, label %0
 
-ST_3: tmp_6 [1/1] 1.72ns
-:0  %tmp_6 = add i7 %idx_cast, %colidx_cast
+ST_3: tmp_7 [1/1] 1.72ns
+:0  %tmp_7 = add i7 %idx_cast, %colidx_cast
 
-ST_3: tmp_7 [1/1] 0.00ns
-:1  %tmp_7 = zext i7 %tmp_6 to i64
+ST_3: tmp_8 [1/1] 0.00ns
+:1  %tmp_8 = zext i7 %tmp_7 to i64
 
 ST_3: Xbuff_addr [1/1] 0.00ns
-:2  %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp_7
+:2  %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp_8
 
 ST_3: Xbuff_load [2/2] 2.71ns
 :3  %Xbuff_load = load float* %Xbuff_addr, align 4
 
-ST_3: tmp_8_trn_cast [1/1] 0.00ns
-:4  %tmp_8_trn_cast = zext i4 %colidx to i8
+ST_3: tmp_9_trn_cast [1/1] 0.00ns
+:4  %tmp_9_trn_cast = zext i4 %colidx to i8
 
 ST_3: p_addr1 [1/1] 1.72ns
-:5  %p_addr1 = add i8 %tmp_8_trn_cast, %p_addr_cast
+:5  %p_addr1 = add i8 %tmp_9_trn_cast, %p_addr_cast
 
 
  <State 4>: 5.42ns
 ST_4: Xbuff_load [1/2] 2.71ns
 :3  %Xbuff_load = load float* %Xbuff_addr, align 4
 
-ST_4: tmp_8 [1/1] 0.00ns
-:6  %tmp_8 = zext i8 %p_addr1 to i64
+ST_4: tmp_6 [1/1] 0.00ns
+:6  %tmp_6 = zext i8 %p_addr1 to i64
 
 ST_4: Xmat_addr [1/1] 0.00ns
-:7  %Xmat_addr = getelementptr [64 x float]* %Xmat, i64 0, i64 %tmp_8
+:7  %Xmat_addr = getelementptr [64 x float]* %Xmat, i64 0, i64 %tmp_6
 
 ST_4: stg_34 [1/1] 2.71ns
 :8  store float %Xbuff_load, float* %Xmat_addr, align 4
@@ -303,8 +303,8 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ Xbuff]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc91acc0; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ Xmat]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91ad50; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ Xbuff]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xfdfa710; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ Xmat]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa7a0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -331,13 +331,13 @@ exitcond3      (icmp             ) [ 00111]
 empty_9        (speclooptripcount) [ 00000]
 colidx_1       (add              ) [ 00111]
 stg_24         (br               ) [ 01111]
-tmp_6          (add              ) [ 00000]
-tmp_7          (zext             ) [ 00000]
+tmp_7          (add              ) [ 00000]
+tmp_8          (zext             ) [ 00000]
 Xbuff_addr     (getelementptr    ) [ 00001]
-tmp_8_trn_cast (zext             ) [ 00000]
+tmp_9_trn_cast (zext             ) [ 00000]
 p_addr1        (add              ) [ 00001]
 Xbuff_load     (load             ) [ 00000]
-tmp_8          (zext             ) [ 00000]
+tmp_6          (zext             ) [ 00000]
 Xmat_addr      (getelementptr    ) [ 00000]
 stg_34         (store            ) [ 00000]
 stg_35         (br               ) [ 00111]
@@ -684,7 +684,7 @@ stg_35         (br               ) [ 00111]
 </bind>
 </comp>
 
-<comp id="134" class="1004" name="tmp_6_fu_134">
+<comp id="134" class="1004" name="tmp_7_fu_134">
 <pin_list>
 <pin id="135" dir="0" index="0" bw="6" slack="1"/>
 <pin id="136" dir="0" index="1" bw="4" slack="0"/>
@@ -692,29 +692,29 @@ stg_35         (br               ) [ 00111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_6/3 "/>
+<opset="tmp_7/3 "/>
 </bind>
 </comp>
 
-<comp id="139" class="1004" name="tmp_7_fu_139">
+<comp id="139" class="1004" name="tmp_8_fu_139">
 <pin_list>
 <pin id="140" dir="0" index="0" bw="7" slack="0"/>
 <pin id="141" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_7/3 "/>
+<opset="tmp_8/3 "/>
 </bind>
 </comp>
 
-<comp id="144" class="1004" name="tmp_8_trn_cast_fu_144">
+<comp id="144" class="1004" name="tmp_9_trn_cast_fu_144">
 <pin_list>
 <pin id="145" dir="0" index="0" bw="4" slack="0"/>
 <pin id="146" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_8_trn_cast/3 "/>
+<opset="tmp_9_trn_cast/3 "/>
 </bind>
 </comp>
 
@@ -730,14 +730,14 @@ stg_35         (br               ) [ 00111]
 </bind>
 </comp>
 
-<comp id="153" class="1004" name="tmp_8_fu_153">
+<comp id="153" class="1004" name="tmp_6_fu_153">
 <pin_list>
 <pin id="154" dir="0" index="0" bw="8" slack="1"/>
 <pin id="155" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_8/4 "/>
+<opset="tmp_6/4 "/>
 </bind>
 </comp>
 
@@ -926,11 +926,11 @@ stg_35         (br               ) [ 00111]
 		exitcond3 : 1
 		colidx_1 : 1
 		stg_24 : 2
-		tmp_6 : 2
-		tmp_7 : 3
+		tmp_7 : 2
+		tmp_8 : 3
 		Xbuff_addr : 4
 		Xbuff_load : 5
-		tmp_8_trn_cast : 1
+		tmp_9_trn_cast : 1
 		p_addr1 : 2
 	State 4
 		Xmat_addr : 1
@@ -947,7 +947,7 @@ stg_35         (br               ) [ 00111]
 |----------|-----------------------|---------|---------|
 |          |     rowidx_1_fu_78    |    0    |    4    |
 |    add   |    colidx_1_fu_128    |    0    |    4    |
-|          |      tmp_6_fu_134     |    0    |    6    |
+|          |      tmp_7_fu_134     |    0    |    6    |
 |          |     p_addr1_fu_148    |    0    |    7    |
 |----------|-----------------------|---------|---------|
 |   icmp   |    exitcond4_fu_72    |    0    |    2    |
@@ -963,9 +963,9 @@ stg_35         (br               ) [ 00111]
 |          |    idx_cast_fu_102    |    0    |    0    |
 |          |   p_addr_cast_fu_114  |    0    |    0    |
 |   zext   |   colidx_cast_fu_118  |    0    |    0    |
-|          |      tmp_7_fu_139     |    0    |    0    |
-|          | tmp_8_trn_cast_fu_144 |    0    |    0    |
-|          |      tmp_8_fu_153     |    0    |    0    |
+|          |      tmp_8_fu_139     |    0    |    0    |
+|          | tmp_9_trn_cast_fu_144 |    0    |    0    |
+|          |      tmp_6_fu_153     |    0    |    0    |
 |----------|-----------------------|---------|---------|
 |   Total  |                       |    0    |    25   |
 |----------|-----------------------|---------|---------|

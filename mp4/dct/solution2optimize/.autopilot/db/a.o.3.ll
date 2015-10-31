@@ -2,24 +2,16 @@
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-w64-mingw32"
 
-@QMatrix = constant [64 x float] [float 1.600000e+01, float 1.100000e+01, float 1.000000e+01, float 1.600000e+01, float 2.400000e+01, float 4.000000e+01, float 5.100000e+01, float 6.100000e+01, float 1.200000e+01, float 1.200000e+01, float 1.400000e+01, float 1.900000e+01, float 2.600000e+01, float 5.800000e+01, float 6.000000e+01, float 5.500000e+01, float 1.400000e+01, float 1.300000e+01, float 1.600000e+01, float 2.400000e+01, float 4.000000e+01, float 5.700000e+01, float 6.900000e+01, float 5.600000e+01, float 1.400000e+01, float 1.700000e+01, float 2.200000e+01, float 2.900000e+01, float 5.100000e+01, float 8.700000e+01, float 8.000000e+01, float 6.200000e+01, float 1.800000e+01, float 2.200000e+01, float 3.700000e+01, float 5.600000e+01, float 6.800000e+01, float 1.090000e+02, float 1.030000e+02, float 7.700000e+01, float 2.400000e+01, float 3.500000e+01, float 5.500000e+01, float 6.400000e+01, float 8.100000e+01, float 1.040000e+02, float 1.130000e+02, float 9.200000e+01, float 4.900000e+01, float 6.400000e+01, float 7.800000e+01, float 8.700000e+01, float 1.030000e+02, float 1.210000e+02, float 1.200000e+02, float 1.010000e+02, float 7.200000e+01, float 9.200000e+01, float 9.500000e+01, float 9.800000e+01, float 1.120000e+02, float 1.000000e+02, float 1.030000e+02, float 9.900000e+01] ; [#uses=2 type=[64 x float]*]
-@p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=6 type=[1 x i8]*]
-@p_str3 = private unnamed_addr constant [8 x i8] c"LoadCol\00", align 1 ; [#uses=6 type=[8 x i8]*]
+@p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=16 type=[1 x i8]*]
+@p_str1 = private unnamed_addr constant [8 x i8] c"ap_fifo\00", align 1 ; [#uses=4 type=[8 x i8]*]
+@p_str2 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1 ; [#uses=1 type=[13 x i8]*]
+@p_str3 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=6 type=[1 x i8]*]
+@p_str36 = private unnamed_addr constant [8 x i8] c"LoadCol\00", align 1 ; [#uses=6 type=[8 x i8]*]
 @p_str5 = private unnamed_addr constant [4 x i8] c"Col\00", align 1 ; [#uses=6 type=[4 x i8]*]
 @p_str8 = private unnamed_addr constant [4 x i8] c"row\00", align 1 ; [#uses=6 type=[4 x i8]*]
 @p_str9 = private unnamed_addr constant [4 x i8] c"col\00", align 1 ; [#uses=2 type=[4 x i8]*]
-@p_str10 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=16 type=[1 x i8]*]
-@p_str111 = private unnamed_addr constant [8 x i8] c"ap_fifo\00", align 1 ; [#uses=4 type=[8 x i8]*]
-@p_str212 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1 ; [#uses=1 type=[13 x i8]*]
+@QMatrix = constant [64 x float] [float 1.600000e+01, float 1.100000e+01, float 1.000000e+01, float 1.600000e+01, float 2.400000e+01, float 4.000000e+01, float 5.100000e+01, float 6.100000e+01, float 1.200000e+01, float 1.200000e+01, float 1.400000e+01, float 1.900000e+01, float 2.600000e+01, float 5.800000e+01, float 6.000000e+01, float 5.500000e+01, float 1.400000e+01, float 1.300000e+01, float 1.600000e+01, float 2.400000e+01, float 4.000000e+01, float 5.700000e+01, float 6.900000e+01, float 5.600000e+01, float 1.400000e+01, float 1.700000e+01, float 2.200000e+01, float 2.900000e+01, float 5.100000e+01, float 8.700000e+01, float 8.000000e+01, float 6.200000e+01, float 1.800000e+01, float 2.200000e+01, float 3.700000e+01, float 5.600000e+01, float 6.800000e+01, float 1.090000e+02, float 1.030000e+02, float 7.700000e+01, float 2.400000e+01, float 3.500000e+01, float 5.500000e+01, float 6.400000e+01, float 8.100000e+01, float 1.040000e+02, float 1.130000e+02, float 9.200000e+01, float 4.900000e+01, float 6.400000e+01, float 7.800000e+01, float 8.700000e+01, float 1.030000e+02, float 1.210000e+02, float 1.200000e+02, float 1.010000e+02, float 7.200000e+01, float 9.200000e+01, float 9.500000e+01, float 9.800000e+01, float 1.120000e+02, float 1.000000e+02, float 1.030000e+02, float 9.900000e+01] ; [#uses=2 type=[64 x float]*]
 @str = internal constant [4 x i8] c"DCT\00"       ; [#uses=1 type=[4 x i8]*]
-@T_0 = constant [8 x float] [float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000] ; [#uses=4 type=[8 x float]*]
-@T_1 = constant [8 x float] [float 0x3FDF6297C0000000, float 0x3FDA9B6620000000, float 0x3FD1C73B40000000, float 0x3FB8F8B840000000, float 0xBFB8F8B840000000, float 0xBFD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFDF6297C0000000] ; [#uses=4 type=[8 x float]*]
-@T_2 = constant [8 x float] [float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0xBFC87DE2A0000000, float 0xBFDD906BE0000000, float 0xBFDD906BE0000000, float 0xBFC87DE2A0000000, float 0x3FC87DE2A0000000, float 0x3FDD906BE0000000] ; [#uses=4 type=[8 x float]*]
-@T_3 = constant [8 x float] [float 0x3FDA9B6620000000, float 0xBFB8F8B840000000, float 0xBFDF6297C0000000, float 0xBFD1C73B40000000, float 0x3FD1C73B40000000, float 0x3FDF6297C0000000, float 0x3FB8F8B840000000, float 0xBFDA9B6620000000] ; [#uses=4 type=[8 x float]*]
-@T_4 = constant [8 x float] [float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000] ; [#uses=4 type=[8 x float]*]
-@T_5 = constant [8 x float] [float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0x3FB8F8B840000000, float 0x3FDA9B6620000000, float 0xBFDA9B6620000000, float 0xBFB8F8B840000000, float 0x3FDF6297C0000000, float 0xBFD1C73B40000000] ; [#uses=4 type=[8 x float]*]
-@T_6 = constant [8 x float] [float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0x3FDD906BE0000000, float 0xBFC87DE2A0000000, float 0xBFC87DE2A0000000, float 0x3FDD906BE0000000, float 0xBFDD906BE0000000, float 0x3FC87DE2A0000000] ; [#uses=4 type=[8 x float]*]
-@T_7 = constant [8 x float] [float 0x3FB8F8B840000000, float 0xBFD1C73B40000000, float 0x3FDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDF6297C0000000, float 0xBFDA9B6620000000, float 0x3FD1C73B40000000, float 0xBFB8F8B840000000] ; [#uses=4 type=[8 x float]*]
 @Tinv_0 = constant [8 x float] [float 0x3FD6A09E60000000, float 0x3FDF6297C0000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000, float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000] ; [#uses=4 type=[8 x float]*]
 @Tinv_1 = constant [8 x float] [float 0x3FD6A09E60000000, float 0x3FDA9B6620000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000, float 0xBFD6A09E60000000, float 0xBFDF6297C0000000, float 0xBFDD906BE0000000, float 0xBFD1C73B40000000] ; [#uses=4 type=[8 x float]*]
 @Tinv_2 = constant [8 x float] [float 0x3FD6A09E60000000, float 0x3FD1C73B40000000, float 0xBFC87DE2A0000000, float 0xBFDF6297C0000000, float 0xBFD6A09E60000000, float 0x3FB8F8B840000000, float 0x3FDD906BE0000000, float 0x3FDA9B6620000000] ; [#uses=4 type=[8 x float]*]
@@ -28,45 +20,32 @@ target triple = "x86_64-w64-mingw32"
 @Tinv_5 = constant [8 x float] [float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0xBFC87DE2A0000000, float 0x3FDF6297C0000000, float 0xBFD6A09E60000000, float 0xBFB8F8B840000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000] ; [#uses=4 type=[8 x float]*]
 @Tinv_6 = constant [8 x float] [float 0x3FD6A09E60000000, float 0xBFDA9B6620000000, float 0x3FC87DE2A0000000, float 0x3FB8F8B840000000, float 0xBFD6A09E60000000, float 0x3FDF6297C0000000, float 0xBFDD906BE0000000, float 0x3FD1C73B40000000] ; [#uses=4 type=[8 x float]*]
 @Tinv_7 = constant [8 x float] [float 0x3FD6A09E60000000, float 0xBFDF6297C0000000, float 0x3FDD906BE0000000, float 0xBFDA9B6620000000, float 0x3FD6A09E60000000, float 0xBFD1C73B40000000, float 0x3FC87DE2A0000000, float 0xBFB8F8B840000000] ; [#uses=4 type=[8 x float]*]
+@T_0 = constant [8 x float] [float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000] ; [#uses=4 type=[8 x float]*]
+@T_1 = constant [8 x float] [float 0x3FDF6297C0000000, float 0x3FDA9B6620000000, float 0x3FD1C73B40000000, float 0x3FB8F8B840000000, float 0xBFB8F8B840000000, float 0xBFD1C73B40000000, float 0xBFDA9B6620000000, float 0xBFDF6297C0000000] ; [#uses=4 type=[8 x float]*]
+@T_2 = constant [8 x float] [float 0x3FDD906BE0000000, float 0x3FC87DE2A0000000, float 0xBFC87DE2A0000000, float 0xBFDD906BE0000000, float 0xBFDD906BE0000000, float 0xBFC87DE2A0000000, float 0x3FC87DE2A0000000, float 0x3FDD906BE0000000] ; [#uses=4 type=[8 x float]*]
+@T_3 = constant [8 x float] [float 0x3FDA9B6620000000, float 0xBFB8F8B840000000, float 0xBFDF6297C0000000, float 0xBFD1C73B40000000, float 0x3FD1C73B40000000, float 0x3FDF6297C0000000, float 0x3FB8F8B840000000, float 0xBFDA9B6620000000] ; [#uses=4 type=[8 x float]*]
+@T_4 = constant [8 x float] [float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000, float 0x3FD6A09E60000000, float 0xBFD6A09E60000000, float 0xBFD6A09E60000000, float 0x3FD6A09E60000000] ; [#uses=4 type=[8 x float]*]
+@T_5 = constant [8 x float] [float 0x3FD1C73B40000000, float 0xBFDF6297C0000000, float 0x3FB8F8B840000000, float 0x3FDA9B6620000000, float 0xBFDA9B6620000000, float 0xBFB8F8B840000000, float 0x3FDF6297C0000000, float 0xBFD1C73B40000000] ; [#uses=4 type=[8 x float]*]
+@T_6 = constant [8 x float] [float 0x3FC87DE2A0000000, float 0xBFDD906BE0000000, float 0x3FDD906BE0000000, float 0xBFC87DE2A0000000, float 0xBFC87DE2A0000000, float 0x3FDD906BE0000000, float 0xBFDD906BE0000000, float 0x3FC87DE2A0000000] ; [#uses=4 type=[8 x float]*]
+@T_7 = constant [8 x float] [float 0x3FB8F8B840000000, float 0xBFD1C73B40000000, float 0x3FDA9B6620000000, float 0xBFDF6297C0000000, float 0x3FDF6297C0000000, float 0xBFDA9B6620000000, float 0x3FD1C73B40000000, float 0xBFB8F8B840000000] ; [#uses=4 type=[8 x float]*]
 @str1 = internal constant [16 x i8] c"LoadRow_LoadCol\00" ; [#uses=1 type=[16 x i8]*]
 @str2 = internal constant [8 x i8] c"Row_Col\00"  ; [#uses=1 type=[8 x i8]*]
 @str3 = internal constant [16 x i8] c"LoadRow_LoadCol\00" ; [#uses=1 type=[16 x i8]*]
 @str4 = internal constant [8 x i8] c"Row_Col\00"  ; [#uses=1 type=[8 x i8]*]
 
-; [#uses=3]
-declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
-
-; [#uses=3]
-define weak void @_ssdm_op_SpecDataflowPipeline(...) nounwind {
-entry:
-  ret void
-}
-
-; [#uses=12]
-define weak void @_ssdm_op_SpecLoopName(...) nounwind {
-entry:
-  ret void
-}
-
-; [#uses=4]
-define weak void @_ssdm_op_SpecPipeline(...) nounwind {
-entry:
-  ret void
-}
-
 ; [#uses=0]
 define void @DCT(i32* %X, i32* %Y) nounwind uwtable {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str10) nounwind, !dbg !0 ; [debug line = 9:1]
+  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !0 ; [debug line = 9:1]
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %X) nounwind, !map !10
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !16
   call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
   %Xbuff = alloca [66 x float], align 16          ; [#uses=2 type=[66 x float]*]
   %Xmat = alloca [64 x float], align 4            ; [#uses=2 type=[64 x float]*]
   %Ymat = alloca [64 x float], align 4            ; [#uses=2 type=[64 x float]*]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind, !dbg !20 ; [debug line = 10:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind, !dbg !21 ; [debug line = 11:1]
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str212, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind, !dbg !22 ; [debug line = 12:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !20 ; [debug line = 10:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !21 ; [debug line = 11:1]
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind, !dbg !22 ; [debug line = 12:1]
   call void @llvm.dbg.value(metadata !{i32* %X}, i64 0, metadata !23), !dbg !24 ; [debug line = 7:15] [debug variable = X]
   call void @llvm.dbg.value(metadata !{i32* %Y}, i64 0, metadata !25), !dbg !26 ; [debug line = 7:22] [debug variable = Y]
   call void @llvm.dbg.declare(metadata !{[64 x float]* %Xmat}, metadata !27), !dbg !32 ; [debug line = 17:8] [debug variable = Xmat]
@@ -80,8 +59,29 @@ codeRepl:
   ret void, !dbg !35                              ; [debug line = 102:1]
 }
 
+; [#uses=3]
+declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
+
+; [#uses=3]
+define weak void @_ssdm_op_SpecDataflowPipeline(...) nounwind {
+entry:
+  ret void
+}
+
 ; [#uses=5]
 define weak void @_ssdm_op_SpecInterface(...) nounwind {
+entry:
+  ret void
+}
+
+; [#uses=12]
+define weak void @_ssdm_op_SpecLoopName(...) nounwind {
+entry:
+  ret void
+}
+
+; [#uses=4]
+define weak void @_ssdm_op_SpecPipeline(...) nounwind {
 entry:
   ret void
 }
@@ -122,7 +122,7 @@ entry:
 ; [#uses=4]
 define internal fastcc void @DCT_MAT_Multiply([8 x float]* nocapture %A_0, [8 x float]* nocapture %A_1, [8 x float]* nocapture %A_2, [8 x float]* nocapture %A_3, [8 x float]* nocapture %A_4, [8 x float]* nocapture %A_5, [8 x float]* nocapture %A_6, [8 x float]* nocapture %A_7, [64 x float]* nocapture %B, [8 x float]* nocapture %C_0, [8 x float]* nocapture %C_1, [8 x float]* nocapture %C_2, [8 x float]* nocapture %C_3, [8 x float]* nocapture %C_4, [8 x float]* nocapture %C_5, [8 x float]* nocapture %C_6, [8 x float]* nocapture %C_7) {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !36 ; [debug line = 7:1]
+  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str3) nounwind, !dbg !36 ; [debug line = 7:1]
   call void @llvm.dbg.value(metadata !{[8 x float]* %A_0}, i64 0, metadata !45), !dbg !48 ; [debug line = 4:25] [debug variable = A[0]]
   call void @llvm.dbg.value(metadata !{[8 x float]* %A_1}, i64 0, metadata !49), !dbg !48 ; [debug line = 4:25] [debug variable = A[1]]
   call void @llvm.dbg.value(metadata !{[8 x float]* %A_2}, i64 0, metadata !50), !dbg !48 ; [debug line = 4:25] [debug variable = A[2]]
@@ -212,7 +212,7 @@ codeRepl:
 ; [#uses=4]
 define internal fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %A, [8 x float]* nocapture %A1, [8 x float]* nocapture %A2, [8 x float]* nocapture %A3, [8 x float]* nocapture %A4, [8 x float]* nocapture %A5, [8 x float]* nocapture %A6, [8 x float]* nocapture %A7, [8 x float]* nocapture %B_0, [8 x float]* nocapture %B_1, [8 x float]* nocapture %B_2, [8 x float]* nocapture %B_3, [8 x float]* nocapture %B_4, [8 x float]* nocapture %B_5, [8 x float]* nocapture %B_6, [8 x float]* nocapture %B_7, [64 x float]* nocapture %C) {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind, !dbg !36 ; [debug line = 7:1]
+  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str3) nounwind, !dbg !36 ; [debug line = 7:1]
   call void @llvm.dbg.value(metadata !{[8 x float]* %B_0}, i64 0, metadata !69), !dbg !57 ; [debug line = 5:9] [debug variable = B[0]]
   call void @llvm.dbg.value(metadata !{[8 x float]* %B_1}, i64 0, metadata !70), !dbg !57 ; [debug line = 5:9] [debug variable = B[1]]
   call void @llvm.dbg.value(metadata !{[8 x float]* %B_2}, i64 0, metadata !71), !dbg !57 ; [debug line = 5:9] [debug variable = B[2]]
@@ -308,7 +308,7 @@ define internal fastcc void @DCT_Quant([64 x float]* nocapture %X, i1 %function,
 
 ; <label>:1                                       ; preds = %.preheader2
   call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind, !dbg !97 ; [debug line = 66:27@24:3]
-  %tmp_4_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8), !dbg !97 ; [#uses=1 type=i32] [debug line = 66:27@24:3]
+  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8), !dbg !97 ; [#uses=1 type=i32] [debug line = 66:27@24:3]
   %tmp = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_i, i3 0) ; [#uses=1 type=i7]
   %p_addr2_cast = zext i7 %tmp to i8, !dbg !99    ; [#uses=1 type=i8] [debug line = 67:13@24:3]
   br label %2, !dbg !99                           ; [debug line = 67:13@24:3]
@@ -329,14 +329,14 @@ define internal fastcc void @DCT_Quant([64 x float]* nocapture %X, i1 %function,
   %X_load = load float* %X_addr, align 4, !dbg !104 ; [#uses=1 type=float] [debug line = 68:4@24:3]
   %QMatrix_addr = getelementptr [64 x float]* @QMatrix, i64 0, i64 %tmp_2, !dbg !104 ; [#uses=1 type=float*] [debug line = 68:4@24:3]
   %QMatrix_load = load float* %QMatrix_addr, align 4, !dbg !104 ; [#uses=1 type=float] [debug line = 68:4@24:3]
-  %tmp_1_i = fmul float %X_load, %QMatrix_load, !dbg !104 ; [#uses=1 type=float] [debug line = 68:4@24:3]
+  %tmp_5_i = fmul float %X_load, %QMatrix_load, !dbg !104 ; [#uses=1 type=float] [debug line = 68:4@24:3]
   %Y_addr = getelementptr [64 x float]* %Y, i64 0, i64 %tmp_2, !dbg !104 ; [#uses=1 type=float*] [debug line = 68:4@24:3]
-  store float %tmp_1_i, float* %Y_addr, align 4, !dbg !104 ; [debug line = 68:4@24:3]
+  store float %tmp_5_i, float* %Y_addr, align 4, !dbg !104 ; [debug line = 68:4@24:3]
   call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !105), !dbg !101 ; [debug line = 67:23@24:3] [debug variable = j]
   br label %2, !dbg !101                          ; [debug line = 67:23@24:3]
 
 ; <label>:4                                       ; preds = %2
-  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_4_i), !dbg !106 ; [#uses=0 type=i32] [debug line = 70:2@24:3]
+  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_3_i), !dbg !106 ; [#uses=0 type=i32] [debug line = 70:2@24:3]
   call void @llvm.dbg.value(metadata !{i4 %i}, i64 0, metadata !107), !dbg !96 ; [debug line = 66:22@24:3] [debug variable = i]
   br label %.preheader2, !dbg !96                 ; [debug line = 66:22@24:3]
 
@@ -349,35 +349,35 @@ define internal fastcc void @DCT_Quant([64 x float]* nocapture %X, i1 %function,
 
 ; <label>:5                                       ; preds = %.preheader
   call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind, !dbg !114 ; [debug line = 77:27@28:3]
-  %tmp_1_i4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8), !dbg !114 ; [#uses=1 type=i32] [debug line = 77:27@28:3]
+  %tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8), !dbg !114 ; [#uses=1 type=i32] [debug line = 77:27@28:3]
   %tmp_1 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_i2, i3 0) ; [#uses=1 type=i7]
   %p_addr_cast = zext i7 %tmp_1 to i8, !dbg !116  ; [#uses=1 type=i8] [debug line = 78:13@28:3]
   br label %6, !dbg !116                          ; [debug line = 78:13@28:3]
 
 ; <label>:6                                       ; preds = %7, %5
-  %j_i6 = phi i4 [ 0, %5 ], [ %j_1, %7 ]          ; [#uses=3 type=i4]
-  %exitcond_i7 = icmp eq i4 %j_i6, -8, !dbg !116  ; [#uses=1 type=i1] [debug line = 78:13@28:3]
+  %j_i5 = phi i4 [ 0, %5 ], [ %j_1, %7 ]          ; [#uses=3 type=i4]
+  %exitcond_i6 = icmp eq i4 %j_i5, -8, !dbg !116  ; [#uses=1 type=i1] [debug line = 78:13@28:3]
   %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) ; [#uses=0 type=i32]
-  %j_1 = add i4 %j_i6, 1, !dbg !118               ; [#uses=1 type=i4] [debug line = 78:23@28:3]
-  br i1 %exitcond_i7, label %8, label %7, !dbg !116 ; [debug line = 78:13@28:3]
+  %j_1 = add i4 %j_i5, 1, !dbg !118               ; [#uses=1 type=i4] [debug line = 78:23@28:3]
+  br i1 %exitcond_i6, label %8, label %7, !dbg !116 ; [debug line = 78:13@28:3]
 
 ; <label>:7                                       ; preds = %6
   call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str9) nounwind, !dbg !119 ; [debug line = 78:28@28:3]
-  %tmp_i8_trn_cast = zext i4 %j_i6 to i8, !dbg !121 ; [#uses=1 type=i8] [debug line = 79:4@28:3]
-  %p_addr1 = add i8 %tmp_i8_trn_cast, %p_addr_cast, !dbg !121 ; [#uses=1 type=i8] [debug line = 79:4@28:3]
+  %tmp_i7_trn_cast = zext i4 %j_i5 to i8, !dbg !121 ; [#uses=1 type=i8] [debug line = 79:4@28:3]
+  %p_addr1 = add i8 %tmp_i7_trn_cast, %p_addr_cast, !dbg !121 ; [#uses=1 type=i8] [debug line = 79:4@28:3]
   %tmp_3 = zext i8 %p_addr1 to i64, !dbg !121     ; [#uses=3 type=i64] [debug line = 79:4@28:3]
   %X_addr_1 = getelementptr [64 x float]* %X, i64 0, i64 %tmp_3, !dbg !121 ; [#uses=1 type=float*] [debug line = 79:4@28:3]
   %X_load_1 = load float* %X_addr_1, align 4, !dbg !121 ; [#uses=1 type=float] [debug line = 79:4@28:3]
   %QMatrix_addr_1 = getelementptr [64 x float]* @QMatrix, i64 0, i64 %tmp_3, !dbg !121 ; [#uses=1 type=float*] [debug line = 79:4@28:3]
   %QMatrix_load_1 = load float* %QMatrix_addr_1, align 4, !dbg !121 ; [#uses=1 type=float] [debug line = 79:4@28:3]
-  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1, !dbg !121 ; [#uses=1 type=float] [debug line = 79:4@28:3]
+  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1, !dbg !121 ; [#uses=1 type=float] [debug line = 79:4@28:3]
   %Y_addr_1 = getelementptr [64 x float]* %Y, i64 0, i64 %tmp_3, !dbg !121 ; [#uses=1 type=float*] [debug line = 79:4@28:3]
-  store float %tmp_2_i, float* %Y_addr_1, align 4, !dbg !121 ; [debug line = 79:4@28:3]
+  store float %tmp_3_i1, float* %Y_addr_1, align 4, !dbg !121 ; [debug line = 79:4@28:3]
   call void @llvm.dbg.value(metadata !{i4 %j_1}, i64 0, metadata !122), !dbg !118 ; [debug line = 78:23@28:3] [debug variable = j]
   br label %6, !dbg !118                          ; [debug line = 78:23@28:3]
 
 ; <label>:8                                       ; preds = %6
-  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i4), !dbg !123 ; [#uses=0 type=i32] [debug line = 81:2@28:3]
+  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i), !dbg !123 ; [#uses=0 type=i32] [debug line = 81:2@28:3]
   call void @llvm.dbg.value(metadata !{i4 %i_1}, i64 0, metadata !124), !dbg !113 ; [debug line = 77:22@28:3] [debug variable = i]
   br label %.preheader, !dbg !113                 ; [debug line = 77:22@28:3]
 
@@ -420,14 +420,14 @@ newFuncRoot:
 
 ; <label>:0                                       ; preds = %.preheader
   call void @llvm.dbg.value(metadata !{i6 %idx}, i64 0, metadata !135), !dbg !133 ; [debug line = 39:4] [debug variable = idx]
-  %tmp_6 = add i7 %idx_cast, %colidx_cast, !dbg !136 ; [#uses=1 type=i7] [debug line = 40:4]
-  %tmp_7 = zext i7 %tmp_6 to i64, !dbg !136       ; [#uses=1 type=i64] [debug line = 40:4]
-  %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp_7, !dbg !136 ; [#uses=1 type=float*] [debug line = 40:4]
+  %tmp_7 = add i7 %idx_cast, %colidx_cast, !dbg !136 ; [#uses=1 type=i7] [debug line = 40:4]
+  %tmp_8 = zext i7 %tmp_7 to i64, !dbg !136       ; [#uses=1 type=i64] [debug line = 40:4]
+  %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp_8, !dbg !136 ; [#uses=1 type=float*] [debug line = 40:4]
   %Xbuff_load = load float* %Xbuff_addr, align 4, !dbg !136 ; [#uses=1 type=float] [debug line = 40:4]
-  %tmp_8_trn_cast = zext i4 %colidx to i8, !dbg !136 ; [#uses=1 type=i8] [debug line = 40:4]
-  %p_addr1 = add i8 %tmp_8_trn_cast, %p_addr_cast, !dbg !136 ; [#uses=1 type=i8] [debug line = 40:4]
-  %tmp_8 = zext i8 %p_addr1 to i64, !dbg !136     ; [#uses=1 type=i64] [debug line = 40:4]
-  %Xmat_addr = getelementptr [64 x float]* %Xmat, i64 0, i64 %tmp_8, !dbg !136 ; [#uses=1 type=float*] [debug line = 40:4]
+  %tmp_9_trn_cast = zext i4 %colidx to i8, !dbg !136 ; [#uses=1 type=i8] [debug line = 40:4]
+  %p_addr1 = add i8 %tmp_9_trn_cast, %p_addr_cast, !dbg !136 ; [#uses=1 type=i8] [debug line = 40:4]
+  %tmp_6 = zext i8 %p_addr1 to i64, !dbg !136     ; [#uses=1 type=i64] [debug line = 40:4]
+  %Xmat_addr = getelementptr [64 x float]* %Xmat, i64 0, i64 %tmp_6, !dbg !136 ; [#uses=1 type=float*] [debug line = 40:4]
   store float %Xbuff_load, float* %Xmat_addr, align 4, !dbg !136 ; [debug line = 40:4]
   call void @llvm.dbg.value(metadata !{i4 %colidx_1}, i64 0, metadata !137), !dbg !132 ; [debug line = 37:26] [debug variable = colidx]
   br label %.preheader, !dbg !132                 ; [debug line = 37:26]
@@ -513,15 +513,15 @@ newFuncRoot:
   %i4 = add i4 1, %i_0_i_i, !dbg !142             ; [#uses=1 type=i4] [debug line = 11:26]
   %i_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 %i4, i4 %i_0_i_i ; [#uses=3 type=i4]
   %tmp_1 = trunc i4 %i_0_i_i_mid2 to i3           ; [#uses=1 type=i3]
-  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind, !dbg !143 ; [debug line = 12:32]
-  %tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3), !dbg !143 ; [#uses=1 type=i32] [debug line = 12:32]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind, !dbg !145 ; [debug line = 13:1]
-  %tmp_3_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8 ; [#uses=1 type=i8]
+  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str36) nounwind, !dbg !143 ; [debug line = 12:32]
+  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str36), !dbg !143 ; [#uses=1 type=i32] [debug line = 12:32]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind, !dbg !145 ; [debug line = 13:1]
+  %tmp_7_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8 ; [#uses=1 type=i8]
   %tmp = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_0_i_i_mid2, i3 0) ; [#uses=1 type=i7]
   %p_addr_cast = zext i7 %tmp to i8, !dbg !146    ; [#uses=1 type=i8] [debug line = 13:4]
-  %p_addr1 = add i8 %p_addr_cast, %tmp_3_i_trn_cast, !dbg !146 ; [#uses=1 type=i8] [debug line = 13:4]
-  %tmp_9 = zext i8 %p_addr1 to i64, !dbg !146     ; [#uses=1 type=i64] [debug line = 13:4]
-  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_9, !dbg !146 ; [#uses=1 type=float*] [debug line = 13:4]
+  %p_addr1 = add i8 %p_addr_cast, %tmp_7_i_trn_cast, !dbg !146 ; [#uses=1 type=i8] [debug line = 13:4]
+  %tmp_7 = zext i8 %p_addr1 to i64, !dbg !146     ; [#uses=1 type=i64] [debug line = 13:4]
+  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_7, !dbg !146 ; [#uses=1 type=float*] [debug line = 13:4]
   %B_cached_7_0 = load float* %B_addr, align 4, !dbg !146 ; [#uses=64 type=float] [debug line = 13:4]
   call void @llvm.dbg.value(metadata !{float %B_cached_7_0}, i64 0, metadata !147), !dbg !146 ; [debug line = 13:4] [debug variable = B_cached[7][0]]
   call void @llvm.dbg.value(metadata !{float %B_cached_7_0}, i64 0, metadata !149), !dbg !146 ; [debug line = 13:4] [debug variable = B_cached[6][0]]
@@ -679,7 +679,7 @@ branch097:                                        ; preds = %branch71, %branch70
   %B_cached_7_6_2 = phi float [ %B_cached_7_6_1, %branch15 ], [ %B_cached_7_6_1, %branch14 ], [ %B_cached_7_6_1, %branch13 ], [ %B_cached_7_6_1, %branch12 ], [ %B_cached_7_6_1, %branch11 ], [ %B_cached_7_6_1, %branch10 ], [ %B_cached_7_6_1, %branch9 ], [ %B_cached_7_6_1, %branch0 ], [ %B_cached_7_6_1, %branch23 ], [ %B_cached_7_6_1, %branch22 ], [ %B_cached_7_6_1, %branch21 ], [ %B_cached_7_6_1, %branch20 ], [ %B_cached_7_6_1, %branch19 ], [ %B_cached_7_6_1, %branch18 ], [ %B_cached_7_6_1, %branch17 ], [ %B_cached_7_6_1, %branch1 ], [ %B_cached_7_6_1, %branch31 ], [ %B_cached_7_6_1, %branch30 ], [ %B_cached_7_6_1, %branch29 ], [ %B_cached_7_6_1, %branch28 ], [ %B_cached_7_6_1, %branch27 ], [ %B_cached_7_6_1, %branch26 ], [ %B_cached_7_6_1, %branch25 ], [ %B_cached_7_6_1, %branch2 ], [ %B_cached_7_6_1, %branch39 ], [ %B_cached_7_6_1, %branch38 ], [ %B_cached_7_6_1, %branch37 ], [ %B_cached_7_6_1, %branch36 ], [ %B_cached_7_6_1, %branch35 ], [ %B_cached_7_6_1, %branch34 ], [ %B_cached_7_6_1, %branch33 ], [ %B_cached_7_6_1, %branch3 ], [ %B_cached_7_6_1, %branch47 ], [ %B_cached_7_6_1, %branch46 ], [ %B_cached_7_6_1, %branch45 ], [ %B_cached_7_6_1, %branch44 ], [ %B_cached_7_6_1, %branch43 ], [ %B_cached_7_6_1, %branch42 ], [ %B_cached_7_6_1, %branch41 ], [ %B_cached_7_6_1, %branch4 ], [ %B_cached_7_6_1, %branch55 ], [ %B_cached_7_6_1, %branch54 ], [ %B_cached_7_6_1, %branch53 ], [ %B_cached_7_6_1, %branch52 ], [ %B_cached_7_6_1, %branch51 ], [ %B_cached_7_6_1, %branch50 ], [ %B_cached_7_6_1, %branch49 ], [ %B_cached_7_6_1, %branch5 ], [ %B_cached_7_6_1, %branch63 ], [ %B_cached_7_6_1, %branch62 ], [ %B_cached_7_6_1, %branch61 ], [ %B_cached_7_6_1, %branch60 ], [ %B_cached_7_6_1, %branch59 ], [ %B_cached_7_6_1, %branch58 ], [ %B_cached_7_6_1, %branch57 ], [ %B_cached_7_6_1, %branch6 ], [ %B_cached_7_6_1, %branch71 ], [ %B_cached_7_0, %branch70 ], [ %B_cached_7_6_1, %branch69 ], [ %B_cached_7_6_1, %branch68 ], [ %B_cached_7_6_1, %branch67 ], [ %B_cached_7_6_1, %branch66 ], [ %B_cached_7_6_1, %branch65 ], [ %B_cached_7_6_1, %branch7 ] ; [#uses=1 type=float]
   %B_cached_3_6_2 = phi float [ %B_cached_3_6_1, %branch15 ], [ %B_cached_3_6_1, %branch14 ], [ %B_cached_3_6_1, %branch13 ], [ %B_cached_3_6_1, %branch12 ], [ %B_cached_3_6_1, %branch11 ], [ %B_cached_3_6_1, %branch10 ], [ %B_cached_3_6_1, %branch9 ], [ %B_cached_3_6_1, %branch0 ], [ %B_cached_3_6_1, %branch23 ], [ %B_cached_3_6_1, %branch22 ], [ %B_cached_3_6_1, %branch21 ], [ %B_cached_3_6_1, %branch20 ], [ %B_cached_3_6_1, %branch19 ], [ %B_cached_3_6_1, %branch18 ], [ %B_cached_3_6_1, %branch17 ], [ %B_cached_3_6_1, %branch1 ], [ %B_cached_3_6_1, %branch31 ], [ %B_cached_3_6_1, %branch30 ], [ %B_cached_3_6_1, %branch29 ], [ %B_cached_3_6_1, %branch28 ], [ %B_cached_3_6_1, %branch27 ], [ %B_cached_3_6_1, %branch26 ], [ %B_cached_3_6_1, %branch25 ], [ %B_cached_3_6_1, %branch2 ], [ %B_cached_3_6_1, %branch39 ], [ %B_cached_7_0, %branch38 ], [ %B_cached_3_6_1, %branch37 ], [ %B_cached_3_6_1, %branch36 ], [ %B_cached_3_6_1, %branch35 ], [ %B_cached_3_6_1, %branch34 ], [ %B_cached_3_6_1, %branch33 ], [ %B_cached_3_6_1, %branch3 ], [ %B_cached_3_6_1, %branch47 ], [ %B_cached_3_6_1, %branch46 ], [ %B_cached_3_6_1, %branch45 ], [ %B_cached_3_6_1, %branch44 ], [ %B_cached_3_6_1, %branch43 ], [ %B_cached_3_6_1, %branch42 ], [ %B_cached_3_6_1, %branch41 ], [ %B_cached_3_6_1, %branch4 ], [ %B_cached_3_6_1, %branch55 ], [ %B_cached_3_6_1, %branch54 ], [ %B_cached_3_6_1, %branch53 ], [ %B_cached_3_6_1, %branch52 ], [ %B_cached_3_6_1, %branch51 ], [ %B_cached_3_6_1, %branch50 ], [ %B_cached_3_6_1, %branch49 ], [ %B_cached_3_6_1, %branch5 ], [ %B_cached_3_6_1, %branch63 ], [ %B_cached_3_6_1, %branch62 ], [ %B_cached_3_6_1, %branch61 ], [ %B_cached_3_6_1, %branch60 ], [ %B_cached_3_6_1, %branch59 ], [ %B_cached_3_6_1, %branch58 ], [ %B_cached_3_6_1, %branch57 ], [ %B_cached_3_6_1, %branch6 ], [ %B_cached_3_6_1, %branch71 ], [ %B_cached_3_6_1, %branch70 ], [ %B_cached_3_6_1, %branch69 ], [ %B_cached_3_6_1, %branch68 ], [ %B_cached_3_6_1, %branch67 ], [ %B_cached_3_6_1, %branch66 ], [ %B_cached_3_6_1, %branch65 ], [ %B_cached_3_6_1, %branch7 ] ; [#uses=1 type=float]
   %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_cached_7_7_1, %branch14 ], [ %B_cached_7_7_1, %branch13 ], [ %B_cached_7_7_1, %branch12 ], [ %B_cached_7_7_1, %branch11 ], [ %B_cached_7_7_1, %branch10 ], [ %B_cached_7_7_1, %branch9 ], [ %B_cached_7_7_1, %branch0 ], [ %B_cached_7_7_1, %branch23 ], [ %B_cached_7_7_1, %branch22 ], [ %B_cached_7_7_1, %branch21 ], [ %B_cached_7_7_1, %branch20 ], [ %B_cached_7_7_1, %branch19 ], [ %B_cached_7_7_1, %branch18 ], [ %B_cached_7_7_1, %branch17 ], [ %B_cached_7_7_1, %branch1 ], [ %B_cached_7_7_1, %branch31 ], [ %B_cached_7_7_1, %branch30 ], [ %B_cached_7_7_1, %branch29 ], [ %B_cached_7_7_1, %branch28 ], [ %B_cached_7_7_1, %branch27 ], [ %B_cached_7_7_1, %branch26 ], [ %B_cached_7_7_1, %branch25 ], [ %B_cached_7_7_1, %branch2 ], [ %B_cached_7_7_1, %branch39 ], [ %B_cached_7_7_1, %branch38 ], [ %B_cached_7_7_1, %branch37 ], [ %B_cached_7_7_1, %branch36 ], [ %B_cached_7_7_1, %branch35 ], [ %B_cached_7_7_1, %branch34 ], [ %B_cached_7_7_1, %branch33 ], [ %B_cached_7_7_1, %branch3 ], [ %B_cached_7_7_1, %branch47 ], [ %B_cached_7_7_1, %branch46 ], [ %B_cached_7_7_1, %branch45 ], [ %B_cached_7_7_1, %branch44 ], [ %B_cached_7_7_1, %branch43 ], [ %B_cached_7_7_1, %branch42 ], [ %B_cached_7_7_1, %branch41 ], [ %B_cached_7_7_1, %branch4 ], [ %B_cached_7_7_1, %branch55 ], [ %B_cached_7_7_1, %branch54 ], [ %B_cached_7_7_1, %branch53 ], [ %B_cached_7_7_1, %branch52 ], [ %B_cached_7_7_1, %branch51 ], [ %B_cached_7_7_1, %branch50 ], [ %B_cached_7_7_1, %branch49 ], [ %B_cached_7_7_1, %branch5 ], [ %B_cached_7_7_1, %branch63 ], [ %B_cached_7_7_1, %branch62 ], [ %B_cached_7_7_1, %branch61 ], [ %B_cached_7_7_1, %branch60 ], [ %B_cached_7_7_1, %branch59 ], [ %B_cached_7_7_1, %branch58 ], [ %B_cached_7_7_1, %branch57 ], [ %B_cached_7_7_1, %branch6 ], [ %B_cached_7_0, %branch71 ], [ %B_cached_7_7_1, %branch70 ], [ %B_cached_7_7_1, %branch69 ], [ %B_cached_7_7_1, %branch68 ], [ %B_cached_7_7_1, %branch67 ], [ %B_cached_7_7_1, %branch66 ], [ %B_cached_7_7_1, %branch65 ], [ %B_cached_7_7_1, %branch7 ] ; [#uses=1 type=float]
-  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_8), !dbg !156 ; [#uses=0 type=i32] [debug line = 14:3]
+  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str36, i32 %tmp_6), !dbg !156 ; [#uses=0 type=i32] [debug line = 14:3]
   %j = add i4 %j_0_i_i_mid2, 1, !dbg !157         ; [#uses=1 type=i4] [debug line = 12:27]
   call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !158) nounwind, !dbg !157 ; [debug line = 12:27] [debug variable = j]
   br label %0, !dbg !157                          ; [debug line = 12:27]
@@ -1142,9 +1142,9 @@ newFuncRoot:
   %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1 ; [#uses=2 type=i4]
   %tmp_18 = trunc i4 %i_1_mid2 to i3              ; [#uses=9 type=i3]
   call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind, !dbg !220 ; [debug line = 19:4]
-  %tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5), !dbg !220 ; [#uses=1 type=i32] [debug line = 19:4]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind, !dbg !222 ; [debug line = 20:1]
-  %tmp_6 = zext i4 %j_1_mid2 to i64, !dbg !223    ; [#uses=8 type=i64] [debug line = 25:5]
+  %tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5), !dbg !220 ; [#uses=1 type=i32] [debug line = 19:4]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind, !dbg !222 ; [debug line = 20:1]
+  %tmp_8 = zext i4 %j_1_mid2 to i64, !dbg !223    ; [#uses=8 type=i64] [debug line = 25:5]
   %A_0_load = load float* %A_0_addr, align 4      ; [#uses=1 type=float]
   %A_1_load = load float* %A_1_addr, align 4      ; [#uses=1 type=float]
   %A_2_load = load float* %A_2_addr, align 4      ; [#uses=1 type=float]
@@ -1156,8 +1156,8 @@ newFuncRoot:
   %tmp = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load, float %A_1_load, float %A_2_load, float %A_3_load, float %A_4_load, float %A_5_load, float %A_6_load, float %A_7_load, i3 %tmp_18) ; [#uses=1 type=float]
   %tmp_19 = trunc i4 %j_1_mid2 to i3              ; [#uses=8 type=i3]
   %tmp_1 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read433, float %p_read_63, float %p_read_62, float %p_read_61, float %p_read_60, float %p_read_59, float %p_read_58, float %p_read_57, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_3 = fmul float %tmp, %tmp_1, !dbg !223     ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1 = fadd float %tmp_3, 0.000000e+00, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_2 = fmul float %tmp, %tmp_1, !dbg !223     ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1 = fadd float %tmp_2, 0.000000e+00, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_1 = load float* %A_0_addr_1, align 4  ; [#uses=1 type=float]
   %A_1_load_1 = load float* %A_1_addr_1, align 4  ; [#uses=1 type=float]
   %A_2_load_1 = load float* %A_2_addr_1, align 4  ; [#uses=1 type=float]
@@ -1166,10 +1166,10 @@ newFuncRoot:
   %A_5_load_1 = load float* %A_5_addr_1, align 4  ; [#uses=1 type=float]
   %A_6_load_1 = load float* %A_6_addr_1, align 4  ; [#uses=1 type=float]
   %A_7_load_1 = load float* %A_7_addr_1, align 4  ; [#uses=1 type=float]
-  %tmp_2 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_1, float %A_1_load_1, float %A_2_load_1, float %A_3_load_1, float %A_4_load_1, float %A_5_load_1, float %A_6_load_1, float %A_7_load_1, i3 %tmp_18) ; [#uses=1 type=float]
+  %tmp_3 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_1, float %A_1_load_1, float %A_2_load_1, float %A_3_load_1, float %A_4_load_1, float %A_5_load_1, float %A_6_load_1, float %A_7_load_1, i3 %tmp_18) ; [#uses=1 type=float]
   %tmp_4 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_56, float %p_read_55, float %p_read_54, float %p_read_53, float %p_read_52, float %p_read_51, float %p_read_50, float %p_read_49, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_1 = fmul float %tmp_2, %tmp_4, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_1 = fadd float %temp_1, %tmp_9_1, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_1 = fmul float %tmp_3, %tmp_4, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_1 = fadd float %temp_1, %tmp_10_1, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_2 = load float* %A_0_addr_2, align 4  ; [#uses=1 type=float]
   %A_1_load_2 = load float* %A_1_addr_2, align 4  ; [#uses=1 type=float]
   %A_2_load_2 = load float* %A_2_addr_2, align 4  ; [#uses=1 type=float]
@@ -1178,10 +1178,10 @@ newFuncRoot:
   %A_5_load_2 = load float* %A_5_addr_2, align 4  ; [#uses=1 type=float]
   %A_6_load_2 = load float* %A_6_addr_2, align 4  ; [#uses=1 type=float]
   %A_7_load_2 = load float* %A_7_addr_2, align 4  ; [#uses=1 type=float]
-  %tmp_5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_2, float %A_1_load_2, float %A_2_load_2, float %A_3_load_2, float %A_4_load_2, float %A_5_load_2, float %A_6_load_2, float %A_7_load_2, i3 %tmp_18) ; [#uses=1 type=float]
-  %tmp_8 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_48, float %p_read_47, float %p_read_46, float %p_read_45, float %p_read_44, float %p_read_43, float %p_read_42, float %p_read_41, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_2 = fmul float %tmp_5, %tmp_8, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_6 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_2, float %A_1_load_2, float %A_2_load_2, float %A_3_load_2, float %A_4_load_2, float %A_5_load_2, float %A_6_load_2, float %A_7_load_2, i3 %tmp_18) ; [#uses=1 type=float]
+  %tmp_9 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_48, float %p_read_47, float %p_read_46, float %p_read_45, float %p_read_44, float %p_read_43, float %p_read_42, float %p_read_41, i3 %tmp_19) ; [#uses=1 type=float]
+  %tmp_10_2 = fmul float %tmp_6, %tmp_9, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_3 = load float* %A_0_addr_3, align 4  ; [#uses=1 type=float]
   %A_1_load_3 = load float* %A_1_addr_3, align 4  ; [#uses=1 type=float]
   %A_2_load_3 = load float* %A_2_addr_3, align 4  ; [#uses=1 type=float]
@@ -1191,9 +1191,9 @@ newFuncRoot:
   %A_6_load_3 = load float* %A_6_addr_3, align 4  ; [#uses=1 type=float]
   %A_7_load_3 = load float* %A_7_addr_3, align 4  ; [#uses=1 type=float]
   %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_3, float %A_1_load_3, float %A_2_load_3, float %A_3_load_3, float %A_4_load_3, float %A_5_load_3, float %A_6_load_3, float %A_7_load_3, i3 %tmp_18) ; [#uses=1 type=float]
-  %tmp_7 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_40, float %p_read_39, float %p_read_38, float %p_read_37, float %p_read_36, float %p_read_35, float %p_read_34, float %p_read_33, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_3 = fmul float %tmp_s, %tmp_7, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_40, float %p_read_39, float %p_read_38, float %p_read_37, float %p_read_36, float %p_read_35, float %p_read_34, float %p_read_33, i3 %tmp_19) ; [#uses=1 type=float]
+  %tmp_10_3 = fmul float %tmp_s, %tmp_5, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_4 = load float* %A_0_addr_4, align 4  ; [#uses=1 type=float]
   %A_1_load_4 = load float* %A_1_addr_4, align 4  ; [#uses=1 type=float]
   %A_2_load_4 = load float* %A_2_addr_4, align 4  ; [#uses=1 type=float]
@@ -1204,8 +1204,8 @@ newFuncRoot:
   %A_7_load_4 = load float* %A_7_addr_4, align 4  ; [#uses=1 type=float]
   %tmp_10 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_4, float %A_1_load_4, float %A_2_load_4, float %A_3_load_4, float %A_4_load_4, float %A_5_load_4, float %A_6_load_4, float %A_7_load_4, i3 %tmp_18) ; [#uses=1 type=float]
   %tmp_11 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_32, float %p_read_31, float %p_read_30, float %p_read_29, float %p_read_28, float %p_read_27, float %p_read_26, float %p_read_25, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_4 = fmul float %tmp_10, %tmp_11, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_4 = fmul float %tmp_10, %tmp_11, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_5 = load float* %A_0_addr_5, align 4  ; [#uses=1 type=float]
   %A_1_load_5 = load float* %A_1_addr_5, align 4  ; [#uses=1 type=float]
   %A_2_load_5 = load float* %A_2_addr_5, align 4  ; [#uses=1 type=float]
@@ -1216,8 +1216,8 @@ newFuncRoot:
   %A_7_load_5 = load float* %A_7_addr_5, align 4  ; [#uses=1 type=float]
   %tmp_12 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_5, float %A_1_load_5, float %A_2_load_5, float %A_3_load_5, float %A_4_load_5, float %A_5_load_5, float %A_6_load_5, float %A_7_load_5, i3 %tmp_18) ; [#uses=1 type=float]
   %tmp_13 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_24, float %p_read_23, float %p_read_22, float %p_read_21, float %p_read_20, float %p_read_19, float %p_read_18, float %p_read_17, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_5 = fmul float %tmp_12, %tmp_13, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_5 = fmul float %tmp_12, %tmp_13, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_6 = load float* %A_0_addr_6, align 4  ; [#uses=1 type=float]
   %A_1_load_6 = load float* %A_1_addr_6, align 4  ; [#uses=1 type=float]
   %A_2_load_6 = load float* %A_2_addr_6, align 4  ; [#uses=1 type=float]
@@ -1228,8 +1228,8 @@ newFuncRoot:
   %A_7_load_6 = load float* %A_7_addr_6, align 4  ; [#uses=1 type=float]
   %tmp_14 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_6, float %A_1_load_6, float %A_2_load_6, float %A_3_load_6, float %A_4_load_6, float %A_5_load_6, float %A_6_load_6, float %A_7_load_6, i3 %tmp_18) ; [#uses=1 type=float]
   %tmp_15 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_16, float %p_read_15, float %p_read_14, float %p_read_13, float %p_read_12, float %p_read_11, float %p_read_10, float %p_read_9, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_6 = fmul float %tmp_14, %tmp_15, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_6 = fmul float %tmp_14, %tmp_15, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_0_load_7 = load float* %A_0_addr_7, align 4  ; [#uses=1 type=float]
   %A_1_load_7 = load float* %A_1_addr_7, align 4  ; [#uses=1 type=float]
   %A_2_load_7 = load float* %A_2_addr_7, align 4  ; [#uses=1 type=float]
@@ -1240,16 +1240,16 @@ newFuncRoot:
   %A_7_load_7 = load float* %A_7_addr_7, align 4  ; [#uses=1 type=float]
   %tmp_16 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_7, float %A_1_load_7, float %A_2_load_7, float %A_3_load_7, float %A_4_load_7, float %A_5_load_7, float %A_6_load_7, float %A_7_load_7, i3 %tmp_18) ; [#uses=1 type=float]
   %tmp_17 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_8, float %p_read_7, float %p_read_6, float %p_read_5, float %p_read_4, float %p_read_3, float %p_read_2, float %p_read_1, i3 %tmp_19) ; [#uses=1 type=float]
-  %tmp_9_7 = fmul float %tmp_16, %tmp_17, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7, !dbg !223 ; [#uses=8 type=float] [debug line = 25:5]
-  %C_0_addr = getelementptr [8 x float]* %C_0, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_1_addr = getelementptr [8 x float]* %C_1, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_2_addr = getelementptr [8 x float]* %C_2, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_3_addr = getelementptr [8 x float]* %C_3, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_4_addr = getelementptr [8 x float]* %C_4, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_5_addr = getelementptr [8 x float]* %C_5, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_6_addr = getelementptr [8 x float]* %C_6, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
-  %C_7_addr = getelementptr [8 x float]* %C_7, i64 0, i64 %tmp_6, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %tmp_10_7 = fmul float %tmp_16, %tmp_17, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7, !dbg !223 ; [#uses=8 type=float] [debug line = 25:5]
+  %C_0_addr = getelementptr [8 x float]* %C_0, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_1_addr = getelementptr [8 x float]* %C_1, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_2_addr = getelementptr [8 x float]* %C_2, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_3_addr = getelementptr [8 x float]* %C_3, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_4_addr = getelementptr [8 x float]* %C_4, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_5_addr = getelementptr [8 x float]* %C_5, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_6_addr = getelementptr [8 x float]* %C_6, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %C_7_addr = getelementptr [8 x float]* %C_7, i64 0, i64 %tmp_8, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
   switch i3 %tmp_18, label %branch7133 [
     i3 0, label %branch0126
     i3 1, label %branch1127
@@ -1269,7 +1269,7 @@ newFuncRoot:
   br i1 %exitcond_flatten, label %.exitStub, label %.preheader
 
 ifBlock:                                          ; preds = %branch7133, %branch6132, %branch5131, %branch4130, %branch3129, %branch2128, %branch1127, %branch0126
-  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_9), !dbg !227 ; [#uses=0 type=i32] [debug line = 28:3]
+  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_7), !dbg !227 ; [#uses=0 type=i32] [debug line = 28:3]
   %j = add i4 %j_1_mid2, 1, !dbg !228             ; [#uses=1 type=i4] [debug line = 18:23]
   call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !158), !dbg !228 ; [debug line = 18:23] [debug variable = j]
   br label %0
@@ -1387,25 +1387,25 @@ newFuncRoot:
   %i = add i4 1, %i_0_i_i, !dbg !142              ; [#uses=1 type=i4] [debug line = 11:26]
   %i_0_i_i_mid2 = select i1 %exitcond3_i_i, i4 %i, i4 %i_0_i_i ; [#uses=2 type=i4]
   %tmp = trunc i4 %i_0_i_i_mid2 to i3             ; [#uses=2 type=i3]
-  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind, !dbg !143 ; [debug line = 12:32]
-  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3), !dbg !143 ; [#uses=1 type=i32] [debug line = 12:32]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind, !dbg !145 ; [debug line = 13:1]
-  %tmp_3_i = zext i4 %j_0_i_i_mid2 to i64, !dbg !146 ; [#uses=8 type=i64] [debug line = 13:4]
-  %B_0_addr = getelementptr [8 x float]* %B_0, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str36) nounwind, !dbg !143 ; [debug line = 12:32]
+  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str36), !dbg !143 ; [#uses=1 type=i32] [debug line = 12:32]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind, !dbg !145 ; [debug line = 13:1]
+  %tmp_7_i = zext i4 %j_0_i_i_mid2 to i64, !dbg !146 ; [#uses=8 type=i64] [debug line = 13:4]
+  %B_0_addr = getelementptr [8 x float]* %B_0, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_0_load = load float* %B_0_addr, align 4      ; [#uses=1 type=float]
-  %B_1_addr = getelementptr [8 x float]* %B_1, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_1_addr = getelementptr [8 x float]* %B_1, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_1_load = load float* %B_1_addr, align 4      ; [#uses=1 type=float]
-  %B_2_addr = getelementptr [8 x float]* %B_2, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_2_addr = getelementptr [8 x float]* %B_2, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_2_load = load float* %B_2_addr, align 4      ; [#uses=1 type=float]
-  %B_3_addr = getelementptr [8 x float]* %B_3, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_3_addr = getelementptr [8 x float]* %B_3, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_3_load = load float* %B_3_addr, align 4      ; [#uses=1 type=float]
-  %B_4_addr = getelementptr [8 x float]* %B_4, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_4_addr = getelementptr [8 x float]* %B_4, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_4_load = load float* %B_4_addr, align 4      ; [#uses=1 type=float]
-  %B_5_addr = getelementptr [8 x float]* %B_5, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_5_addr = getelementptr [8 x float]* %B_5, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_5_load = load float* %B_5_addr, align 4      ; [#uses=1 type=float]
-  %B_6_addr = getelementptr [8 x float]* %B_6, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_6_addr = getelementptr [8 x float]* %B_6, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_6_load = load float* %B_6_addr, align 4      ; [#uses=1 type=float]
-  %B_7_addr = getelementptr [8 x float]* %B_7, i64 0, i64 %tmp_3_i ; [#uses=1 type=float*]
+  %B_7_addr = getelementptr [8 x float]* %B_7, i64 0, i64 %tmp_7_i ; [#uses=1 type=float*]
   %B_7_load = load float* %B_7_addr, align 4      ; [#uses=1 type=float]
   %B_cached_7_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %B_0_load, float %B_1_load, float %B_2_load, float %B_3_load, float %B_4_load, float %B_5_load, float %B_6_load, float %B_7_load, i3 %tmp) ; [#uses=64 type=float]
   call void @llvm.dbg.value(metadata !{float %B_cached_7_0}, i64 0, metadata !147), !dbg !146 ; [debug line = 13:4] [debug variable = B_cached[7][0]]
@@ -1564,7 +1564,7 @@ branch097:                                        ; preds = %branch71, %branch70
   %B_cached_7_6_2 = phi float [ %B_cached_7_6_1, %branch15 ], [ %B_cached_7_6_1, %branch14 ], [ %B_cached_7_6_1, %branch13 ], [ %B_cached_7_6_1, %branch12 ], [ %B_cached_7_6_1, %branch11 ], [ %B_cached_7_6_1, %branch10 ], [ %B_cached_7_6_1, %branch9 ], [ %B_cached_7_6_1, %branch0 ], [ %B_cached_7_6_1, %branch23 ], [ %B_cached_7_6_1, %branch22 ], [ %B_cached_7_6_1, %branch21 ], [ %B_cached_7_6_1, %branch20 ], [ %B_cached_7_6_1, %branch19 ], [ %B_cached_7_6_1, %branch18 ], [ %B_cached_7_6_1, %branch17 ], [ %B_cached_7_6_1, %branch1 ], [ %B_cached_7_6_1, %branch31 ], [ %B_cached_7_6_1, %branch30 ], [ %B_cached_7_6_1, %branch29 ], [ %B_cached_7_6_1, %branch28 ], [ %B_cached_7_6_1, %branch27 ], [ %B_cached_7_6_1, %branch26 ], [ %B_cached_7_6_1, %branch25 ], [ %B_cached_7_6_1, %branch2 ], [ %B_cached_7_6_1, %branch39 ], [ %B_cached_7_6_1, %branch38 ], [ %B_cached_7_6_1, %branch37 ], [ %B_cached_7_6_1, %branch36 ], [ %B_cached_7_6_1, %branch35 ], [ %B_cached_7_6_1, %branch34 ], [ %B_cached_7_6_1, %branch33 ], [ %B_cached_7_6_1, %branch3 ], [ %B_cached_7_6_1, %branch47 ], [ %B_cached_7_6_1, %branch46 ], [ %B_cached_7_6_1, %branch45 ], [ %B_cached_7_6_1, %branch44 ], [ %B_cached_7_6_1, %branch43 ], [ %B_cached_7_6_1, %branch42 ], [ %B_cached_7_6_1, %branch41 ], [ %B_cached_7_6_1, %branch4 ], [ %B_cached_7_6_1, %branch55 ], [ %B_cached_7_6_1, %branch54 ], [ %B_cached_7_6_1, %branch53 ], [ %B_cached_7_6_1, %branch52 ], [ %B_cached_7_6_1, %branch51 ], [ %B_cached_7_6_1, %branch50 ], [ %B_cached_7_6_1, %branch49 ], [ %B_cached_7_6_1, %branch5 ], [ %B_cached_7_6_1, %branch63 ], [ %B_cached_7_6_1, %branch62 ], [ %B_cached_7_6_1, %branch61 ], [ %B_cached_7_6_1, %branch60 ], [ %B_cached_7_6_1, %branch59 ], [ %B_cached_7_6_1, %branch58 ], [ %B_cached_7_6_1, %branch57 ], [ %B_cached_7_6_1, %branch6 ], [ %B_cached_7_6_1, %branch71 ], [ %B_cached_7_0, %branch70 ], [ %B_cached_7_6_1, %branch69 ], [ %B_cached_7_6_1, %branch68 ], [ %B_cached_7_6_1, %branch67 ], [ %B_cached_7_6_1, %branch66 ], [ %B_cached_7_6_1, %branch65 ], [ %B_cached_7_6_1, %branch7 ] ; [#uses=1 type=float]
   %B_cached_3_6_2 = phi float [ %B_cached_3_6_1, %branch15 ], [ %B_cached_3_6_1, %branch14 ], [ %B_cached_3_6_1, %branch13 ], [ %B_cached_3_6_1, %branch12 ], [ %B_cached_3_6_1, %branch11 ], [ %B_cached_3_6_1, %branch10 ], [ %B_cached_3_6_1, %branch9 ], [ %B_cached_3_6_1, %branch0 ], [ %B_cached_3_6_1, %branch23 ], [ %B_cached_3_6_1, %branch22 ], [ %B_cached_3_6_1, %branch21 ], [ %B_cached_3_6_1, %branch20 ], [ %B_cached_3_6_1, %branch19 ], [ %B_cached_3_6_1, %branch18 ], [ %B_cached_3_6_1, %branch17 ], [ %B_cached_3_6_1, %branch1 ], [ %B_cached_3_6_1, %branch31 ], [ %B_cached_3_6_1, %branch30 ], [ %B_cached_3_6_1, %branch29 ], [ %B_cached_3_6_1, %branch28 ], [ %B_cached_3_6_1, %branch27 ], [ %B_cached_3_6_1, %branch26 ], [ %B_cached_3_6_1, %branch25 ], [ %B_cached_3_6_1, %branch2 ], [ %B_cached_3_6_1, %branch39 ], [ %B_cached_7_0, %branch38 ], [ %B_cached_3_6_1, %branch37 ], [ %B_cached_3_6_1, %branch36 ], [ %B_cached_3_6_1, %branch35 ], [ %B_cached_3_6_1, %branch34 ], [ %B_cached_3_6_1, %branch33 ], [ %B_cached_3_6_1, %branch3 ], [ %B_cached_3_6_1, %branch47 ], [ %B_cached_3_6_1, %branch46 ], [ %B_cached_3_6_1, %branch45 ], [ %B_cached_3_6_1, %branch44 ], [ %B_cached_3_6_1, %branch43 ], [ %B_cached_3_6_1, %branch42 ], [ %B_cached_3_6_1, %branch41 ], [ %B_cached_3_6_1, %branch4 ], [ %B_cached_3_6_1, %branch55 ], [ %B_cached_3_6_1, %branch54 ], [ %B_cached_3_6_1, %branch53 ], [ %B_cached_3_6_1, %branch52 ], [ %B_cached_3_6_1, %branch51 ], [ %B_cached_3_6_1, %branch50 ], [ %B_cached_3_6_1, %branch49 ], [ %B_cached_3_6_1, %branch5 ], [ %B_cached_3_6_1, %branch63 ], [ %B_cached_3_6_1, %branch62 ], [ %B_cached_3_6_1, %branch61 ], [ %B_cached_3_6_1, %branch60 ], [ %B_cached_3_6_1, %branch59 ], [ %B_cached_3_6_1, %branch58 ], [ %B_cached_3_6_1, %branch57 ], [ %B_cached_3_6_1, %branch6 ], [ %B_cached_3_6_1, %branch71 ], [ %B_cached_3_6_1, %branch70 ], [ %B_cached_3_6_1, %branch69 ], [ %B_cached_3_6_1, %branch68 ], [ %B_cached_3_6_1, %branch67 ], [ %B_cached_3_6_1, %branch66 ], [ %B_cached_3_6_1, %branch65 ], [ %B_cached_3_6_1, %branch7 ] ; [#uses=1 type=float]
   %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_cached_7_7_1, %branch14 ], [ %B_cached_7_7_1, %branch13 ], [ %B_cached_7_7_1, %branch12 ], [ %B_cached_7_7_1, %branch11 ], [ %B_cached_7_7_1, %branch10 ], [ %B_cached_7_7_1, %branch9 ], [ %B_cached_7_7_1, %branch0 ], [ %B_cached_7_7_1, %branch23 ], [ %B_cached_7_7_1, %branch22 ], [ %B_cached_7_7_1, %branch21 ], [ %B_cached_7_7_1, %branch20 ], [ %B_cached_7_7_1, %branch19 ], [ %B_cached_7_7_1, %branch18 ], [ %B_cached_7_7_1, %branch17 ], [ %B_cached_7_7_1, %branch1 ], [ %B_cached_7_7_1, %branch31 ], [ %B_cached_7_7_1, %branch30 ], [ %B_cached_7_7_1, %branch29 ], [ %B_cached_7_7_1, %branch28 ], [ %B_cached_7_7_1, %branch27 ], [ %B_cached_7_7_1, %branch26 ], [ %B_cached_7_7_1, %branch25 ], [ %B_cached_7_7_1, %branch2 ], [ %B_cached_7_7_1, %branch39 ], [ %B_cached_7_7_1, %branch38 ], [ %B_cached_7_7_1, %branch37 ], [ %B_cached_7_7_1, %branch36 ], [ %B_cached_7_7_1, %branch35 ], [ %B_cached_7_7_1, %branch34 ], [ %B_cached_7_7_1, %branch33 ], [ %B_cached_7_7_1, %branch3 ], [ %B_cached_7_7_1, %branch47 ], [ %B_cached_7_7_1, %branch46 ], [ %B_cached_7_7_1, %branch45 ], [ %B_cached_7_7_1, %branch44 ], [ %B_cached_7_7_1, %branch43 ], [ %B_cached_7_7_1, %branch42 ], [ %B_cached_7_7_1, %branch41 ], [ %B_cached_7_7_1, %branch4 ], [ %B_cached_7_7_1, %branch55 ], [ %B_cached_7_7_1, %branch54 ], [ %B_cached_7_7_1, %branch53 ], [ %B_cached_7_7_1, %branch52 ], [ %B_cached_7_7_1, %branch51 ], [ %B_cached_7_7_1, %branch50 ], [ %B_cached_7_7_1, %branch49 ], [ %B_cached_7_7_1, %branch5 ], [ %B_cached_7_7_1, %branch63 ], [ %B_cached_7_7_1, %branch62 ], [ %B_cached_7_7_1, %branch61 ], [ %B_cached_7_7_1, %branch60 ], [ %B_cached_7_7_1, %branch59 ], [ %B_cached_7_7_1, %branch58 ], [ %B_cached_7_7_1, %branch57 ], [ %B_cached_7_7_1, %branch6 ], [ %B_cached_7_0, %branch71 ], [ %B_cached_7_7_1, %branch70 ], [ %B_cached_7_7_1, %branch69 ], [ %B_cached_7_7_1, %branch68 ], [ %B_cached_7_7_1, %branch67 ], [ %B_cached_7_7_1, %branch66 ], [ %B_cached_7_7_1, %branch65 ], [ %B_cached_7_7_1, %branch7 ] ; [#uses=1 type=float]
-  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_s), !dbg !156 ; [#uses=0 type=i32] [debug line = 14:3]
+  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str36, i32 %tmp_s), !dbg !156 ; [#uses=0 type=i32] [debug line = 14:3]
   %j = add i4 %j_0_i_i_mid2, 1, !dbg !157         ; [#uses=1 type=i4] [debug line = 12:27]
   call void @llvm.dbg.value(metadata !{i4 %j}, i64 0, metadata !158) nounwind, !dbg !157 ; [debug line = 12:27] [debug variable = j]
   br label %0, !dbg !157                          ; [debug line = 12:27]
@@ -2028,7 +2028,7 @@ newFuncRoot:
   %tmp_32 = trunc i4 %i_1_mid2 to i3              ; [#uses=8 type=i3]
   call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str5) nounwind, !dbg !220 ; [debug line = 19:4]
   %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5), !dbg !220 ; [#uses=1 type=i32] [debug line = 19:4]
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind, !dbg !222 ; [debug line = 20:1]
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind, !dbg !222 ; [debug line = 20:1]
   %A_load = load float* %A_addr, align 4          ; [#uses=1 type=float]
   %A1_load = load float* %A1_addr, align 4        ; [#uses=1 type=float]
   %A2_load = load float* %A2_addr, align 4        ; [#uses=1 type=float]
@@ -2040,8 +2040,8 @@ newFuncRoot:
   %tmp = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load, float %A1_load, float %A2_load, float %A3_load, float %A4_load, float %A5_load, float %A6_load, float %A7_load, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_33 = trunc i4 %j_1_mid2 to i3              ; [#uses=8 type=i3]
   %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read391, float %p_read_126, float %p_read_125, float %p_read_124, float %p_read_123, float %p_read_122, float %p_read_121, float %p_read_120, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9 = fmul float %tmp, %tmp_s, !dbg !223     ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1 = fadd float %tmp_9, 0.000000e+00, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_3 = fmul float %tmp, %tmp_s, !dbg !223     ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1 = fadd float %tmp_3, 0.000000e+00, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_1 = load float* %A_addr_1, align 4      ; [#uses=1 type=float]
   %A1_load_1 = load float* %A1_addr_1, align 4    ; [#uses=1 type=float]
   %A2_load_1 = load float* %A2_addr_1, align 4    ; [#uses=1 type=float]
@@ -2052,8 +2052,8 @@ newFuncRoot:
   %A7_load_1 = load float* %A7_addr_1, align 4    ; [#uses=1 type=float]
   %tmp_18 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_1, float %A1_load_1, float %A2_load_1, float %A3_load_1, float %A4_load_1, float %A5_load_1, float %A6_load_1, float %A7_load_1, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_119, float %p_read_118, float %p_read_117, float %p_read_116, float %p_read_115, float %p_read_114, float %p_read_113, float %p_read_112, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_1 = fmul float %tmp_18, %tmp_19, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_1 = fadd float %temp_1, %tmp_9_1, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_1 = fmul float %tmp_18, %tmp_19, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_1 = fadd float %temp_1, %tmp_10_1, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_2 = load float* %A_addr_2, align 4      ; [#uses=1 type=float]
   %A1_load_2 = load float* %A1_addr_2, align 4    ; [#uses=1 type=float]
   %A2_load_2 = load float* %A2_addr_2, align 4    ; [#uses=1 type=float]
@@ -2064,8 +2064,8 @@ newFuncRoot:
   %A7_load_2 = load float* %A7_addr_2, align 4    ; [#uses=1 type=float]
   %tmp_20 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_2, float %A1_load_2, float %A2_load_2, float %A3_load_2, float %A4_load_2, float %A5_load_2, float %A6_load_2, float %A7_load_2, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_111, float %p_read_110, float %p_read_109, float %p_read_108, float %p_read_107, float %p_read_106, float %p_read_105, float %p_read_104, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_2 = fmul float %tmp_20, %tmp_21, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_2 = fmul float %tmp_20, %tmp_21, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_3 = load float* %A_addr_3, align 4      ; [#uses=1 type=float]
   %A1_load_3 = load float* %A1_addr_3, align 4    ; [#uses=1 type=float]
   %A2_load_3 = load float* %A2_addr_3, align 4    ; [#uses=1 type=float]
@@ -2076,8 +2076,8 @@ newFuncRoot:
   %A7_load_3 = load float* %A7_addr_3, align 4    ; [#uses=1 type=float]
   %tmp_22 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_3, float %A1_load_3, float %A2_load_3, float %A3_load_3, float %A4_load_3, float %A5_load_3, float %A6_load_3, float %A7_load_3, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_103, float %p_read_102, float %p_read_101, float %p_read_100, float %p_read_99, float %p_read_98, float %p_read_97, float %p_read_96, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_3 = fmul float %tmp_22, %tmp_23, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_3 = fmul float %tmp_22, %tmp_23, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_4 = load float* %A_addr_4, align 4      ; [#uses=1 type=float]
   %A1_load_4 = load float* %A1_addr_4, align 4    ; [#uses=1 type=float]
   %A2_load_4 = load float* %A2_addr_4, align 4    ; [#uses=1 type=float]
@@ -2088,8 +2088,8 @@ newFuncRoot:
   %A7_load_4 = load float* %A7_addr_4, align 4    ; [#uses=1 type=float]
   %tmp_24 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_4, float %A1_load_4, float %A2_load_4, float %A3_load_4, float %A4_load_4, float %A5_load_4, float %A6_load_4, float %A7_load_4, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_25 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_95, float %p_read_94, float %p_read_93, float %p_read_92, float %p_read_91, float %p_read_90, float %p_read_89, float %p_read_88, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_4 = fmul float %tmp_24, %tmp_25, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_4 = fmul float %tmp_24, %tmp_25, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_5 = load float* %A_addr_5, align 4      ; [#uses=1 type=float]
   %A1_load_5 = load float* %A1_addr_5, align 4    ; [#uses=1 type=float]
   %A2_load_5 = load float* %A2_addr_5, align 4    ; [#uses=1 type=float]
@@ -2100,8 +2100,8 @@ newFuncRoot:
   %A7_load_5 = load float* %A7_addr_5, align 4    ; [#uses=1 type=float]
   %tmp_26 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_5, float %A1_load_5, float %A2_load_5, float %A3_load_5, float %A4_load_5, float %A5_load_5, float %A6_load_5, float %A7_load_5, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_27 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_87, float %p_read_86, float %p_read_85, float %p_read_84, float %p_read_83, float %p_read_82, float %p_read_81, float %p_read_80, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_5 = fmul float %tmp_26, %tmp_27, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_5 = fmul float %tmp_26, %tmp_27, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_6 = load float* %A_addr_6, align 4      ; [#uses=1 type=float]
   %A1_load_6 = load float* %A1_addr_6, align 4    ; [#uses=1 type=float]
   %A2_load_6 = load float* %A2_addr_6, align 4    ; [#uses=1 type=float]
@@ -2112,8 +2112,8 @@ newFuncRoot:
   %A7_load_6 = load float* %A7_addr_6, align 4    ; [#uses=1 type=float]
   %tmp_28 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_6, float %A1_load_6, float %A2_load_6, float %A3_load_6, float %A4_load_6, float %A5_load_6, float %A6_load_6, float %A7_load_6, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_29 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_79, float %p_read_78, float %p_read_77, float %p_read_76, float %p_read_75, float %p_read_74, float %p_read_73, float %p_read_72, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_6 = fmul float %tmp_28, %tmp_29, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_10_6 = fmul float %tmp_28, %tmp_29, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
   %A_load_7 = load float* %A_addr_7, align 4      ; [#uses=1 type=float]
   %A1_load_7 = load float* %A1_addr_7, align 4    ; [#uses=1 type=float]
   %A2_load_7 = load float* %A2_addr_7, align 4    ; [#uses=1 type=float]
@@ -2124,14 +2124,14 @@ newFuncRoot:
   %A7_load_7 = load float* %A7_addr_7, align 4    ; [#uses=1 type=float]
   %tmp_30 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_load_7, float %A1_load_7, float %A2_load_7, float %A3_load_7, float %A4_load_7, float %A5_load_7, float %A6_load_7, float %A7_load_7, i3 %tmp_32) ; [#uses=1 type=float]
   %tmp_31 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_71, float %p_read_70, float %p_read_69, float %p_read_68, float %p_read_67, float %p_read_66, float %p_read_65, float %p_read_64, i3 %tmp_33) ; [#uses=1 type=float]
-  %tmp_9_7 = fmul float %tmp_30, %tmp_31, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
-  %tmp_6_trn_cast = zext i4 %j_1_mid2 to i8       ; [#uses=1 type=i8]
-  %tmp_10 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0) ; [#uses=1 type=i7]
-  %p_addr_cast = zext i7 %tmp_10 to i8, !dbg !226 ; [#uses=1 type=i8] [debug line = 27:4]
-  %p_addr1 = add i8 %p_addr_cast, %tmp_6_trn_cast, !dbg !226 ; [#uses=1 type=i8] [debug line = 27:4]
-  %tmp_11 = zext i8 %p_addr1 to i64, !dbg !226    ; [#uses=1 type=i64] [debug line = 27:4]
-  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_11, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
+  %tmp_10_7 = fmul float %tmp_30, %tmp_31, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7, !dbg !223 ; [#uses=1 type=float] [debug line = 25:5]
+  %tmp_8_trn_cast = zext i4 %j_1_mid2 to i8       ; [#uses=1 type=i8]
+  %tmp_8 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0) ; [#uses=1 type=i7]
+  %p_addr_cast = zext i7 %tmp_8 to i8, !dbg !226  ; [#uses=1 type=i8] [debug line = 27:4]
+  %p_addr1 = add i8 %p_addr_cast, %tmp_8_trn_cast, !dbg !226 ; [#uses=1 type=i8] [debug line = 27:4]
+  %tmp_9 = zext i8 %p_addr1 to i64, !dbg !226     ; [#uses=1 type=i64] [debug line = 27:4]
+  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_9, !dbg !226 ; [#uses=1 type=float*] [debug line = 27:4]
   store float %temp_1_7, float* %C_addr, align 4, !dbg !226 ; [debug line = 27:4]
   %empty_13 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2), !dbg !227 ; [#uses=0 type=i32] [debug line = 28:3]
   %j = add i4 1, %j_1_mid2, !dbg !228             ; [#uses=1 type=i4] [debug line = 18:23]
@@ -2206,7 +2206,7 @@ newFuncRoot:
 ; [#uses=1]
 define internal fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %p_read, [64 x float]* nocapture %Ymat) {
 newFuncRoot:
-  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
   %p_read_128 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read) ; [#uses=1 type=i32]
   br label %0
 
@@ -2223,8 +2223,8 @@ newFuncRoot:
 _ifconv:                                          ; preds = %0
   %tmp = call i1 @_ssdm_op_BitSelect.i1.i7.i32(i7 %write_idx, i32 6), !dbg !252 ; [#uses=1 type=i1] [debug line = 84:3]
   %tmp_34 = trunc i7 %write_idx to i6             ; [#uses=1 type=i6]
-  %tmp_12 = zext i6 %tmp_34 to i64, !dbg !254     ; [#uses=1 type=i64] [debug line = 88:4]
-  %Ymat_addr = getelementptr [64 x float]* %Ymat, i64 0, i64 %tmp_12, !dbg !254 ; [#uses=1 type=float*] [debug line = 88:4]
+  %tmp_10 = zext i6 %tmp_34 to i64, !dbg !254     ; [#uses=1 type=i64] [debug line = 88:4]
+  %Ymat_addr = getelementptr [64 x float]* %Ymat, i64 0, i64 %tmp_10, !dbg !254 ; [#uses=1 type=float*] [debug line = 88:4]
   %Ymat_load = load float* %Ymat_addr, align 4, !dbg !254 ; [#uses=1 type=float] [debug line = 88:4]
   %tempval = bitcast float %Ymat_load to i32, !dbg !254 ; [#uses=1 type=i32] [debug line = 88:4]
   call void @llvm.dbg.value(metadata !{i32 %tempval}, i64 0, metadata !256), !dbg !254 ; [debug line = 88:4] [debug variable = tempval]
@@ -2277,7 +2277,7 @@ case7:                                            ; preds = %entry
 define internal fastcc { i32, i32 } @DCT_Loop_1_proc(i32* %X, [66 x float]* nocapture %Xbuff) {
 newFuncRoot:
   %opt_type_02_loc_loc_loc0 = alloca i32, align 4 ; [#uses=3 type=i32*]
-  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
+  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
   call void @llvm.dbg.declare(metadata !{[66 x float]* %Xbuff}, metadata !259), !dbg !263 ; [debug line = 15:8] [debug variable = Xbuff]
   br label %0
 
@@ -2303,8 +2303,8 @@ newFuncRoot:
   call void @llvm.dbg.value(metadata !{i32 %opt_type}, i64 0, metadata !273), !dbg !269 ; [debug line = 30:3] [debug variable = tempin]
   %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %p_0_rec_i_i_cast, !dbg !270 ; [#uses=1 type=float*] [debug line = 31:3]
   store float %tmp_i, float* %Xbuff_addr, align 4, !dbg !270 ; [debug line = 31:3]
-  %tmp_3_i = icmp eq i7 %read_idx_0_i_i, 1, !dbg !267 ; [#uses=1 type=i1] [debug line = 32:3]
-  %tempin_0_opt_type_02_i_i = select i1 %tmp_3_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1, !dbg !267 ; [#uses=1 type=i32] [debug line = 32:3]
+  %tmp_2_i = icmp eq i7 %read_idx_0_i_i, 1, !dbg !267 ; [#uses=1 type=i1] [debug line = 32:3]
+  %tempin_0_opt_type_02_i_i = select i1 %tmp_2_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1, !dbg !267 ; [#uses=1 type=i32] [debug line = 32:3]
   call void @llvm.dbg.value(metadata !{i7 %read_idx}, i64 0, metadata !274), !dbg !266 ; [debug line = 27:30] [debug variable = read_idx]
   store i32 %tempin_0_opt_type_02_i_i, i32* %opt_type_02_loc_loc_loc0, align 4
   br label %0, !dbg !266                          ; [debug line = 27:30]

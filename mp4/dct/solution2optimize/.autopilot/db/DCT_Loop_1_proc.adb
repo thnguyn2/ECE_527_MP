@@ -550,7 +550,7 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>tmp_3_i</name>
+              <name>tmp_2_i</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>32</lineNumber>
@@ -574,7 +574,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_i_fu_89_p2</rtlName>
+              <rtlName>tmp_2_i_fu_89_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1724,7 +1724,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_3_i_fu_89_p2 ( icmp ) </first>
+          <first>tmp_2_i_fu_89_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1917,7 +1917,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_3_i_fu_89_p2 ( icmp ) </first>
+          <first>tmp_2_i_fu_89_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2315,7 +2315,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_i_fu_89</first>
+        <first>tmp_2_i_fu_89</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

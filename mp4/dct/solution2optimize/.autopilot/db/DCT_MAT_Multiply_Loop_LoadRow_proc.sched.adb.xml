@@ -219,10 +219,10 @@ newFuncRoot:0  br label %0
 
 <node id="85" bw="8" op_0_bw="4">
 <![CDATA[
-.reset:10  %tmp_3_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8
+.reset:10  %tmp_7_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8
 
 ]]></node>
-<StgValue><ssdm name="tmp_3_i_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_7_i_trn_cast"/></StgValue>
 </operation>
 
 <operation id="17" st_id="2" stage="1" lat="1">
@@ -267,7 +267,7 @@ newFuncRoot:0  br label %0
 
 <node id="88" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.reset:13  %p_addr1 = add i8 %p_addr_cast, %tmp_3_i_trn_cast
+.reset:13  %p_addr1 = add i8 %p_addr_cast, %tmp_7_i_trn_cast
 
 ]]></node>
 <StgValue><ssdm name="p_addr1"/></StgValue>
@@ -283,10 +283,10 @@ newFuncRoot:0  br label %0
 
 <node id="89" bw="64" op_0_bw="8">
 <![CDATA[
-.reset:14  %tmp_9 = zext i8 %p_addr1 to i64
+.reset:14  %tmp_7 = zext i8 %p_addr1 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="21" st_id="2" stage="1" lat="1">
@@ -299,7 +299,7 @@ newFuncRoot:0  br label %0
 
 <node id="90" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_9
+.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_7
 
 ]]></node>
 <StgValue><ssdm name="B_addr"/></StgValue>
@@ -1397,7 +1397,7 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="82" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind
+.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str36) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1413,10 +1413,10 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="83" bw="32" op_0_bw="32" op_1_bw="8">
 <![CDATA[
-.reset:8  %tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3)
+.reset:8  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str36)
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="95" st_id="3" stage="1" lat="1">
@@ -1429,7 +1429,7 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="84" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
 <![CDATA[
-.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -3789,7 +3789,7 @@ branch097:63  %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_c
 
 <node id="287" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-branch097:64  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_8)
+branch097:64  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str36, i32 %tmp_6)
 
 ]]></node>
 <StgValue><ssdm name="empty_10"/></StgValue>

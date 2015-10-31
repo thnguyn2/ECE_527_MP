@@ -3486,7 +3486,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>tmp_3_i</name>
+						<name>tmp_7_i</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>13</lineNumber>

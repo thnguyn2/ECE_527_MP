@@ -749,48 +749,6 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>tmp_6</name>
-              <fileName>dct/dct.c</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>40</lineNumber>
-              <contextFuncName>DCT</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>dct/dct.c</first>
-                        <second>DCT</second>
-                      </first>
-                      <second>40</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>tmp_6_fu_134_p2</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>7</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>82</item>
-            <item>83</item>
-          </oprand_edges>
-          <opcode>add</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_21">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>27</id>
               <name>tmp_7</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
@@ -815,7 +773,49 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_fu_139_p1</rtlName>
+              <rtlName>tmp_7_fu_134_p2</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>7</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>82</item>
+            <item>83</item>
+          </oprand_edges>
+          <opcode>add</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_21">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>27</id>
+              <name>tmp_8</name>
+              <fileName>dct/dct.c</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>40</lineNumber>
+              <contextFuncName>DCT</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>dct/dct.c</first>
+                        <second>DCT</second>
+                      </first>
+                      <second>40</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>tmp_8_fu_139_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -916,7 +916,7 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>tmp_8_trn_cast</name>
+              <name>tmp_9_trn_cast</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>40</lineNumber>
@@ -940,7 +940,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_trn_cast_fu_144_p1</rtlName>
+              <rtlName>tmp_9_trn_cast_fu_144_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -999,7 +999,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>tmp_8</name>
+              <name>tmp_6</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>40</lineNumber>
@@ -1023,7 +1023,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_153_p1</rtlName>
+              <rtlName>tmp_6_fu_153_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2447,7 +2447,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_6_fu_134_p2 ( + ) </first>
+          <first>tmp_7_fu_134_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2782,7 +2782,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_6_fu_134_p2 ( + ) </first>
+          <first>tmp_7_fu_134_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3354,23 +3354,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_6_fu_134</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>26</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_7_fu_139</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>27</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_8_fu_153</first>
+        <first>tmp_6_fu_153</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3378,7 +3362,23 @@
         </second>
       </item>
       <item>
-        <first>tmp_8_trn_cast_fu_144</first>
+        <first>tmp_7_fu_134</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>26</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_8_fu_139</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>27</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_trn_cast_fu_144</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_Quant'" level="0">
-<item name = "Date">Fri Oct 30 16:49:36 2015
+<item name = "Date">Fri Oct 30 22:33:03 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -87,7 +87,7 @@
 <column name="p_addr3_fu_261_p2">+, 0, 0, 8, 8, 8</column>
 <column name="exitcond1_i3_fu_171_p2">icmp, 0, 0, 2, 4, 5</column>
 <column name="exitcond1_i_fu_195_p2">icmp, 0, 0, 2, 4, 5</column>
-<column name="exitcond_i7_fu_219_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="exitcond_i6_fu_219_p2">icmp, 0, 0, 2, 4, 5</column>
 <column name="exitcond_i_fu_245_p2">icmp, 0, 0, 2, 4, 5</column>
 </table>
 </item>
@@ -100,7 +100,7 @@
 <column name="ap_NS_fsm">21, 27, 1, 27</column>
 <column name="i_i2_reg_102">4, 2, 4, 8</column>
 <column name="i_i_reg_113">4, 2, 4, 8</column>
-<column name="j_i6_reg_124">4, 2, 4, 8</column>
+<column name="j_i5_reg_124">4, 2, 4, 8</column>
 <column name="j_i_reg_135">4, 2, 4, 8</column>
 </table>
 </item>
@@ -112,14 +112,14 @@
 <column name="i_i_reg_113">4, 0, 4, 0</column>
 <column name="i_reg_292">4, 0, 4, 0</column>
 <column name="j_1_reg_305">4, 0, 4, 0</column>
-<column name="j_i6_reg_124">4, 0, 4, 0</column>
+<column name="j_i5_reg_124">4, 0, 4, 0</column>
 <column name="j_i_reg_135">4, 0, 4, 0</column>
 <column name="j_reg_334">4, 0, 4, 0</column>
 <column name="p_addr2_cast_reg_297">4, 0, 8, 4</column>
 <column name="p_addr_cast_reg_284">4, 0, 8, 4</column>
 <column name="reg_159">32, 0, 32, 0</column>
-<column name="tmp_2_i_reg_326">32, 0, 32, 0</column>
 <column name="tmp_2_reg_339">8, 0, 64, 56</column>
+<column name="tmp_3_i1_reg_326">32, 0, 32, 0</column>
 <column name="tmp_3_reg_310">8, 0, 64, 56</column>
 </table>
 </item>

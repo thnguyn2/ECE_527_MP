@@ -265,7 +265,7 @@ codeRepl:15  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_lo
 
 <node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
 <![CDATA[
-codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str10) nounwind
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -325,7 +325,7 @@ codeRepl:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
 
 <node id="27" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind
+codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -340,7 +340,7 @@ codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str11
 
 <node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-codeRepl:8  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind
+codeRepl:8  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -355,7 +355,7 @@ codeRepl:8  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str11
 
 <node id="29" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str212, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind
+codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -603,7 +603,7 @@ codeRepl:16  ret void
 </dataflow>
 <dataflow id="128" from="stg_127" to="stg_21" fromId="127" toId="21">
 </dataflow>
-<dataflow id="130" from="p_str10" to="stg_21" fromId="129" toId="21">
+<dataflow id="130" from="p_str" to="stg_21" fromId="129" toId="21">
 </dataflow>
 <dataflow id="132" from="_ssdm_op_SpecBitsMap" to="stg_22" fromId="131" toId="22">
 </dataflow>
@@ -621,7 +621,7 @@ codeRepl:16  ret void
 </dataflow>
 <dataflow id="142" from="X" to="stg_25" fromId="38" toId="25">
 </dataflow>
-<dataflow id="144" from="p_str111" to="stg_25" fromId="143" toId="25">
+<dataflow id="144" from="p_str1" to="stg_25" fromId="143" toId="25">
 </dataflow>
 <dataflow id="146" from="stg_145" to="stg_25" fromId="145" toId="25">
 </dataflow>
@@ -631,17 +631,17 @@ codeRepl:16  ret void
 </dataflow>
 <dataflow id="149" from="stg_145" to="stg_25" fromId="145" toId="25">
 </dataflow>
-<dataflow id="150" from="p_str10" to="stg_25" fromId="129" toId="25">
+<dataflow id="150" from="p_str" to="stg_25" fromId="129" toId="25">
 </dataflow>
-<dataflow id="151" from="p_str10" to="stg_25" fromId="129" toId="25">
+<dataflow id="151" from="p_str" to="stg_25" fromId="129" toId="25">
 </dataflow>
-<dataflow id="152" from="p_str10" to="stg_25" fromId="129" toId="25">
+<dataflow id="152" from="p_str" to="stg_25" fromId="129" toId="25">
 </dataflow>
 <dataflow id="153" from="_ssdm_op_SpecInterface" to="stg_26" fromId="140" toId="26">
 </dataflow>
 <dataflow id="154" from="Y" to="stg_26" fromId="39" toId="26">
 </dataflow>
-<dataflow id="155" from="p_str111" to="stg_26" fromId="143" toId="26">
+<dataflow id="155" from="p_str1" to="stg_26" fromId="143" toId="26">
 </dataflow>
 <dataflow id="156" from="stg_145" to="stg_26" fromId="145" toId="26">
 </dataflow>
@@ -651,17 +651,17 @@ codeRepl:16  ret void
 </dataflow>
 <dataflow id="159" from="stg_145" to="stg_26" fromId="145" toId="26">
 </dataflow>
-<dataflow id="160" from="p_str10" to="stg_26" fromId="129" toId="26">
+<dataflow id="160" from="p_str" to="stg_26" fromId="129" toId="26">
 </dataflow>
-<dataflow id="161" from="p_str10" to="stg_26" fromId="129" toId="26">
+<dataflow id="161" from="p_str" to="stg_26" fromId="129" toId="26">
 </dataflow>
-<dataflow id="162" from="p_str10" to="stg_26" fromId="129" toId="26">
+<dataflow id="162" from="p_str" to="stg_26" fromId="129" toId="26">
 </dataflow>
 <dataflow id="163" from="_ssdm_op_SpecInterface" to="stg_27" fromId="140" toId="27">
 </dataflow>
 <dataflow id="164" from="stg_145" to="stg_27" fromId="145" toId="27">
 </dataflow>
-<dataflow id="166" from="p_str212" to="stg_27" fromId="165" toId="27">
+<dataflow id="166" from="p_str2" to="stg_27" fromId="165" toId="27">
 </dataflow>
 <dataflow id="167" from="stg_145" to="stg_27" fromId="145" toId="27">
 </dataflow>
@@ -671,11 +671,11 @@ codeRepl:16  ret void
 </dataflow>
 <dataflow id="170" from="stg_145" to="stg_27" fromId="145" toId="27">
 </dataflow>
-<dataflow id="171" from="p_str10" to="stg_27" fromId="129" toId="27">
+<dataflow id="171" from="p_str" to="stg_27" fromId="129" toId="27">
 </dataflow>
-<dataflow id="172" from="p_str10" to="stg_27" fromId="129" toId="27">
+<dataflow id="172" from="p_str" to="stg_27" fromId="129" toId="27">
 </dataflow>
-<dataflow id="173" from="p_str10" to="stg_27" fromId="129" toId="27">
+<dataflow id="173" from="p_str" to="stg_27" fromId="129" toId="27">
 </dataflow>
 <dataflow id="174" from="DCT_Loop_3_proc1" to="stg_28" fromId="120" toId="28">
 </dataflow>

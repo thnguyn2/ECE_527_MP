@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Quant'
 ================================================================
-* Date:           Fri Oct 30 16:48:57 2015
+* Date:           Fri Oct 30 22:32:23 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -134,8 +134,8 @@ IsGatedGlobalClock: 0
 	3  / (!function_read & !exitcond1_i3)
 	22  / (function_read & !exitcond1_i)
 3 --> 
-	4  / (!exitcond_i7)
-	2  / (exitcond_i7)
+	4  / (!exitcond_i6)
+	2  / (exitcond_i6)
 4 --> 
 	5  / true
 5 --> 
@@ -212,8 +212,8 @@ ST_2: stg_33 [1/1] 0.00ns
 ST_2: stg_34 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind
 
-ST_2: tmp_1_i4 [1/1] 0.00ns
-:1  %tmp_1_i4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
+ST_2: tmp_1_i [1/1] 0.00ns
+:1  %tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
 
 ST_2: tmp_1 [1/1] 0.00ns
 :2  %tmp_1 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_i2, i3 0)
@@ -242,8 +242,8 @@ ST_2: stg_43 [1/1] 0.00ns
 ST_2: stg_44 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind
 
-ST_2: tmp_4_i [1/1] 0.00ns
-:1  %tmp_4_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
+ST_2: tmp_3_i [1/1] 0.00ns
+:1  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
 
 ST_2: tmp [1/1] 0.00ns
 :2  %tmp = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_i, i3 0)
@@ -259,26 +259,26 @@ DOT_Multiply.exit:0  ret void
 
 
  <State 3>: 4.43ns
-ST_3: j_i6 [1/1] 0.00ns
-:0  %j_i6 = phi i4 [ 0, %5 ], [ %j_1, %7 ]
+ST_3: j_i5 [1/1] 0.00ns
+:0  %j_i5 = phi i4 [ 0, %5 ], [ %j_1, %7 ]
 
-ST_3: exitcond_i7 [1/1] 1.88ns
-:1  %exitcond_i7 = icmp eq i4 %j_i6, -8
+ST_3: exitcond_i6 [1/1] 1.88ns
+:1  %exitcond_i6 = icmp eq i4 %j_i5, -8
 
 ST_3: empty_7 [1/1] 0.00ns
 :2  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
 
 ST_3: j_1 [1/1] 0.80ns
-:3  %j_1 = add i4 %j_i6, 1
+:3  %j_1 = add i4 %j_i5, 1
 
 ST_3: stg_54 [1/1] 0.00ns
-:4  br i1 %exitcond_i7, label %8, label %7
+:4  br i1 %exitcond_i6, label %8, label %7
 
-ST_3: tmp_i8_trn_cast [1/1] 0.00ns
-:1  %tmp_i8_trn_cast = zext i4 %j_i6 to i8
+ST_3: tmp_i7_trn_cast [1/1] 0.00ns
+:1  %tmp_i7_trn_cast = zext i4 %j_i5 to i8
 
 ST_3: p_addr1 [1/1] 1.72ns
-:2  %p_addr1 = add i8 %tmp_i8_trn_cast, %p_addr_cast
+:2  %p_addr1 = add i8 %tmp_i7_trn_cast, %p_addr_cast
 
 ST_3: tmp_3 [1/1] 0.00ns
 :3  %tmp_3 = zext i8 %p_addr1 to i64
@@ -290,7 +290,7 @@ ST_3: X_load_1 [2/2] 2.71ns
 :5  %X_load_1 = load float* %X_addr_1, align 4
 
 ST_3: empty_8 [1/1] 0.00ns
-:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i4)
+:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i)
 
 ST_3: stg_61 [1/1] 0.00ns
 :1  br label %.preheader
@@ -311,83 +311,83 @@ ST_4: QMatrix_load_1 [2/2] 2.39ns
 ST_5: QMatrix_load_1 [1/2] 2.39ns
 :7  %QMatrix_load_1 = load float* %QMatrix_addr_1, align 4
 
-ST_5: tmp_2_i [16/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_5: tmp_3_i1 [16/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 6>: 6.08ns
-ST_6: tmp_2_i [15/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_6: tmp_3_i1 [15/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 7>: 6.08ns
-ST_7: tmp_2_i [14/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_7: tmp_3_i1 [14/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 8>: 6.08ns
-ST_8: tmp_2_i [13/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_8: tmp_3_i1 [13/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 9>: 6.08ns
-ST_9: tmp_2_i [12/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_9: tmp_3_i1 [12/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 10>: 6.08ns
-ST_10: tmp_2_i [11/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_10: tmp_3_i1 [11/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 11>: 6.08ns
-ST_11: tmp_2_i [10/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_11: tmp_3_i1 [10/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 12>: 6.08ns
-ST_12: tmp_2_i [9/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_12: tmp_3_i1 [9/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 13>: 6.08ns
-ST_13: tmp_2_i [8/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_13: tmp_3_i1 [8/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 14>: 6.08ns
-ST_14: tmp_2_i [7/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_14: tmp_3_i1 [7/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 15>: 6.08ns
-ST_15: tmp_2_i [6/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_15: tmp_3_i1 [6/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 16>: 6.08ns
-ST_16: tmp_2_i [5/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_16: tmp_3_i1 [5/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 17>: 6.08ns
-ST_17: tmp_2_i [4/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_17: tmp_3_i1 [4/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 18>: 6.08ns
-ST_18: tmp_2_i [3/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_18: tmp_3_i1 [3/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 19>: 6.08ns
-ST_19: tmp_2_i [2/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_19: tmp_3_i1 [2/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 20>: 6.08ns
-ST_20: tmp_2_i [1/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_20: tmp_3_i1 [1/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 21>: 2.71ns
@@ -398,7 +398,7 @@ ST_21: Y_addr_1 [1/1] 0.00ns
 :9  %Y_addr_1 = getelementptr [64 x float]* %Y, i64 0, i64 %tmp_3
 
 ST_21: stg_84 [1/1] 2.71ns
-:10  store float %tmp_2_i, float* %Y_addr_1, align 4
+:10  store float %tmp_3_i1, float* %Y_addr_1, align 4
 
 ST_21: stg_85 [1/1] 0.00ns
 :11  br label %6
@@ -442,7 +442,7 @@ ST_22: QMatrix_load [2/2] 2.39ns
 :7  %QMatrix_load = load float* %QMatrix_addr, align 4
 
 ST_22: empty_5 [1/1] 0.00ns
-:0  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_4_i)
+:0  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_3_i)
 
 ST_22: stg_99 [1/1] 0.00ns
 :1  br label %.preheader2
@@ -455,32 +455,32 @@ ST_23: X_load [1/2] 2.71ns
 ST_23: QMatrix_load [1/2] 2.39ns
 :7  %QMatrix_load = load float* %QMatrix_addr, align 4
 
-ST_23: tmp_1_i [4/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_23: tmp_5_i [4/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 
  <State 24>: 5.70ns
-ST_24: tmp_1_i [3/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_24: tmp_5_i [3/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 
  <State 25>: 5.70ns
-ST_25: tmp_1_i [2/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_25: tmp_5_i [2/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 
  <State 26>: 8.41ns
 ST_26: stg_105 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str9) nounwind
 
-ST_26: tmp_1_i [1/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_26: tmp_5_i [1/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 ST_26: Y_addr [1/1] 0.00ns
 :9  %Y_addr = getelementptr [64 x float]* %Y, i64 0, i64 %tmp_2
 
 ST_26: stg_108 [1/1] 2.71ns
-:10  store float %tmp_1_i, float* %Y_addr, align 4
+:10  store float %tmp_5_i, float* %Y_addr, align 4
 
 ST_26: stg_109 [1/1] 0.00ns
 :11  br label %2

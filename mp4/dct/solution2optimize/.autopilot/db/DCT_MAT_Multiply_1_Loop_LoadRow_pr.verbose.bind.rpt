@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'
 ================================================================
-* Date:           Fri Oct 30 16:49:33 2015
+* Date:           Fri Oct 30 22:32:59 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -163,53 +163,53 @@ ST_2: exitcond3_i_i [1/1] 1.88ns
 ST_2: j_0_i_i_mid2 [1/1] 1.37ns
 .reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i, i4 0, i4 %j_0_i_i
 
-ST_2: tmp_3_i [1/1] 0.00ns
-.reset:10  %tmp_3_i = zext i4 %j_0_i_i_mid2 to i64
+ST_2: tmp_7_i [1/1] 0.00ns
+.reset:10  %tmp_7_i = zext i4 %j_0_i_i_mid2 to i64
 
 ST_2: B_0_addr [1/1] 0.00ns
-.reset:11  %B_0_addr = getelementptr [8 x float]* %B_0, i64 0, i64 %tmp_3_i
+.reset:11  %B_0_addr = getelementptr [8 x float]* %B_0, i64 0, i64 %tmp_7_i
 
 ST_2: B_0_load [2/2] 2.39ns
 .reset:12  %B_0_load = load float* %B_0_addr, align 4
 
 ST_2: B_1_addr [1/1] 0.00ns
-.reset:13  %B_1_addr = getelementptr [8 x float]* %B_1, i64 0, i64 %tmp_3_i
+.reset:13  %B_1_addr = getelementptr [8 x float]* %B_1, i64 0, i64 %tmp_7_i
 
 ST_2: B_1_load [2/2] 2.39ns
 .reset:14  %B_1_load = load float* %B_1_addr, align 4
 
 ST_2: B_2_addr [1/1] 0.00ns
-.reset:15  %B_2_addr = getelementptr [8 x float]* %B_2, i64 0, i64 %tmp_3_i
+.reset:15  %B_2_addr = getelementptr [8 x float]* %B_2, i64 0, i64 %tmp_7_i
 
 ST_2: B_2_load [2/2] 2.39ns
 .reset:16  %B_2_load = load float* %B_2_addr, align 4
 
 ST_2: B_3_addr [1/1] 0.00ns
-.reset:17  %B_3_addr = getelementptr [8 x float]* %B_3, i64 0, i64 %tmp_3_i
+.reset:17  %B_3_addr = getelementptr [8 x float]* %B_3, i64 0, i64 %tmp_7_i
 
 ST_2: B_3_load [2/2] 2.39ns
 .reset:18  %B_3_load = load float* %B_3_addr, align 4
 
 ST_2: B_4_addr [1/1] 0.00ns
-.reset:19  %B_4_addr = getelementptr [8 x float]* %B_4, i64 0, i64 %tmp_3_i
+.reset:19  %B_4_addr = getelementptr [8 x float]* %B_4, i64 0, i64 %tmp_7_i
 
 ST_2: B_4_load [2/2] 2.39ns
 .reset:20  %B_4_load = load float* %B_4_addr, align 4
 
 ST_2: B_5_addr [1/1] 0.00ns
-.reset:21  %B_5_addr = getelementptr [8 x float]* %B_5, i64 0, i64 %tmp_3_i
+.reset:21  %B_5_addr = getelementptr [8 x float]* %B_5, i64 0, i64 %tmp_7_i
 
 ST_2: B_5_load [2/2] 2.39ns
 .reset:22  %B_5_load = load float* %B_5_addr, align 4
 
 ST_2: B_6_addr [1/1] 0.00ns
-.reset:23  %B_6_addr = getelementptr [8 x float]* %B_6, i64 0, i64 %tmp_3_i
+.reset:23  %B_6_addr = getelementptr [8 x float]* %B_6, i64 0, i64 %tmp_7_i
 
 ST_2: B_6_load [2/2] 2.39ns
 .reset:24  %B_6_load = load float* %B_6_addr, align 4
 
 ST_2: B_7_addr [1/1] 0.00ns
-.reset:25  %B_7_addr = getelementptr [8 x float]* %B_7, i64 0, i64 %tmp_3_i
+.reset:25  %B_7_addr = getelementptr [8 x float]* %B_7, i64 0, i64 %tmp_7_i
 
 ST_2: B_7_load [2/2] 2.39ns
 .reset:26  %B_7_load = load float* %B_7_addr, align 4
@@ -436,13 +436,13 @@ ST_3: tmp [1/1] 0.00ns
 .reset:6  %tmp = trunc i4 %i_0_i_i_mid2 to i3
 
 ST_3: stg_102 [1/1] 0.00ns
-.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind
+.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str36) nounwind
 
 ST_3: tmp_s [1/1] 0.00ns
-.reset:8  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3)
+.reset:8  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str36)
 
 ST_3: stg_104 [1/1] 0.00ns
-.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
 ST_3: B_0_load [1/2] 2.39ns
 .reset:12  %B_0_load = load float* %B_0_addr, align 4
@@ -931,7 +931,7 @@ ST_3: B_cached_7_7_2 [1/1] 0.00ns
 branch097:63  %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_cached_7_7_1, %branch14 ], [ %B_cached_7_7_1, %branch13 ], [ %B_cached_7_7_1, %branch12 ], [ %B_cached_7_7_1, %branch11 ], [ %B_cached_7_7_1, %branch10 ], [ %B_cached_7_7_1, %branch9 ], [ %B_cached_7_7_1, %branch0 ], [ %B_cached_7_7_1, %branch23 ], [ %B_cached_7_7_1, %branch22 ], [ %B_cached_7_7_1, %branch21 ], [ %B_cached_7_7_1, %branch20 ], [ %B_cached_7_7_1, %branch19 ], [ %B_cached_7_7_1, %branch18 ], [ %B_cached_7_7_1, %branch17 ], [ %B_cached_7_7_1, %branch1 ], [ %B_cached_7_7_1, %branch31 ], [ %B_cached_7_7_1, %branch30 ], [ %B_cached_7_7_1, %branch29 ], [ %B_cached_7_7_1, %branch28 ], [ %B_cached_7_7_1, %branch27 ], [ %B_cached_7_7_1, %branch26 ], [ %B_cached_7_7_1, %branch25 ], [ %B_cached_7_7_1, %branch2 ], [ %B_cached_7_7_1, %branch39 ], [ %B_cached_7_7_1, %branch38 ], [ %B_cached_7_7_1, %branch37 ], [ %B_cached_7_7_1, %branch36 ], [ %B_cached_7_7_1, %branch35 ], [ %B_cached_7_7_1, %branch34 ], [ %B_cached_7_7_1, %branch33 ], [ %B_cached_7_7_1, %branch3 ], [ %B_cached_7_7_1, %branch47 ], [ %B_cached_7_7_1, %branch46 ], [ %B_cached_7_7_1, %branch45 ], [ %B_cached_7_7_1, %branch44 ], [ %B_cached_7_7_1, %branch43 ], [ %B_cached_7_7_1, %branch42 ], [ %B_cached_7_7_1, %branch41 ], [ %B_cached_7_7_1, %branch4 ], [ %B_cached_7_7_1, %branch55 ], [ %B_cached_7_7_1, %branch54 ], [ %B_cached_7_7_1, %branch53 ], [ %B_cached_7_7_1, %branch52 ], [ %B_cached_7_7_1, %branch51 ], [ %B_cached_7_7_1, %branch50 ], [ %B_cached_7_7_1, %branch49 ], [ %B_cached_7_7_1, %branch5 ], [ %B_cached_7_7_1, %branch63 ], [ %B_cached_7_7_1, %branch62 ], [ %B_cached_7_7_1, %branch61 ], [ %B_cached_7_7_1, %branch60 ], [ %B_cached_7_7_1, %branch59 ], [ %B_cached_7_7_1, %branch58 ], [ %B_cached_7_7_1, %branch57 ], [ %B_cached_7_7_1, %branch6 ], [ %B_cached_7_0, %branch71 ], [ %B_cached_7_7_1, %branch70 ], [ %B_cached_7_7_1, %branch69 ], [ %B_cached_7_7_1, %branch68 ], [ %B_cached_7_7_1, %branch67 ], [ %B_cached_7_7_1, %branch66 ], [ %B_cached_7_7_1, %branch65 ], [ %B_cached_7_7_1, %branch7 ]
 
 ST_3: empty_12 [1/1] 0.00ns
-branch097:64  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_s)
+branch097:64  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str36, i32 %tmp_s)
 
 ST_3: stg_244 [1/1] 0.00ns
 branch097:66  br label %0
@@ -1147,14 +1147,14 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ B_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc916de0; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc916e70; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc916f00; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc916f90; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917020; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc9170b0; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc917140; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ B_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc9171d0; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c550; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c5e0; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c670; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c700; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_4]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c790; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_5]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c820; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_6]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c8b0; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ B_7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xce2c940; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -1168,7 +1168,7 @@ exitcond_flatten    (icmp             ) [ 00110]
 indvar_flatten_next (add              ) [ 01110]
 exitcond3_i_i       (icmp             ) [ 00110]
 j_0_i_i_mid2        (select           ) [ 00000]
-tmp_3_i             (zext             ) [ 00000]
+tmp_7_i             (zext             ) [ 00000]
 B_0_addr            (getelementptr    ) [ 00110]
 B_1_addr            (getelementptr    ) [ 00110]
 B_2_addr            (getelementptr    ) [ 00110]
@@ -1656,7 +1656,7 @@ stg_309             (ret              ) [ 00000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
+<StgValue><ssdm name="p_str36"/></StgValue>
 </bind>
 </comp>
 
@@ -1701,7 +1701,7 @@ stg_309             (ret              ) [ 00000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str"/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -13124,14 +13124,14 @@ stg_309             (ret              ) [ 00000]
 </bind>
 </comp>
 
-<comp id="13668" class="1004" name="tmp_3_i_fu_13668">
+<comp id="13668" class="1004" name="tmp_7_i_fu_13668">
 <pin_list>
 <pin id="13669" dir="0" index="0" bw="4" slack="0"/>
 <pin id="13670" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_3_i/2 "/>
+<opset="tmp_7_i/2 "/>
 </bind>
 </comp>
 
@@ -23411,7 +23411,7 @@ stg_309             (ret              ) [ 00000]
 		indvar_flatten_next : 1
 		exitcond3_i_i : 1
 		j_0_i_i_mid2 : 2
-		tmp_3_i : 3
+		tmp_7_i : 3
 		B_0_addr : 4
 		B_0_load : 5
 		B_1_addr : 4
@@ -23588,7 +23588,7 @@ stg_309             (ret              ) [ 00000]
 |   icmp   |   exitcond_flatten_fu_13642  |    0    |    3    |
 |          |    exitcond3_i_i_fu_13654    |    0    |    2    |
 |----------|------------------------------|---------|---------|
-|   zext   |       tmp_3_i_fu_13668       |    0    |    0    |
+|   zext   |       tmp_7_i_fu_13668       |    0    |    0    |
 |----------|------------------------------|---------|---------|
 |   trunc  |        tmp_20_fu_13680       |    0    |    0    |
 |          |         tmp_fu_13703         |    0    |    0    |

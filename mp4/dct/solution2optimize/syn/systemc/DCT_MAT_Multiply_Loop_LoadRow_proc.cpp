@@ -45,7 +45,7 @@ DCT_MAT_Multiply_Loop_LoadRow_proc::DCT_MAT_Multiply_Loop_LoadRow_proc(sc_module
     SC_METHOD(thread_B_address0);
     sensitive << ( ap_sig_cseq_ST_pp0_stg0_fsm_1 );
     sensitive << ( ap_reg_ppiten_pp0_it0 );
-    sensitive << ( tmp_9_fu_13674_p1 );
+    sensitive << ( tmp_7_fu_13674_p1 );
 
     SC_METHOD(thread_B_cached_0_0_2_phi_fu_6248_p128);
     sensitive << ( B_q0 );
@@ -1146,7 +1146,7 @@ DCT_MAT_Multiply_Loop_LoadRow_proc::DCT_MAT_Multiply_Loop_LoadRow_proc(sc_module
 
     SC_METHOD(thread_p_addr1_fu_13668_p2);
     sensitive << ( p_addr_cast_fu_13664_p1 );
-    sensitive << ( tmp_3_i_trn_cast_fu_13652_p1 );
+    sensitive << ( tmp_7_i_trn_cast_fu_13652_p1 );
 
     SC_METHOD(thread_p_addr_cast_fu_13664_p1);
     sensitive << ( tmp_fu_13656_p3 );
@@ -1157,11 +1157,11 @@ DCT_MAT_Multiply_Loop_LoadRow_proc::DCT_MAT_Multiply_Loop_LoadRow_proc(sc_module
     SC_METHOD(thread_tmp_2_fu_13679_p1);
     sensitive << ( j_0_i_i_mid2_fu_13626_p3 );
 
-    SC_METHOD(thread_tmp_3_i_trn_cast_fu_13652_p1);
-    sensitive << ( j_0_i_i_mid2_fu_13626_p3 );
-
-    SC_METHOD(thread_tmp_9_fu_13674_p1);
+    SC_METHOD(thread_tmp_7_fu_13674_p1);
     sensitive << ( p_addr1_fu_13668_p2 );
+
+    SC_METHOD(thread_tmp_7_i_trn_cast_fu_13652_p1);
+    sensitive << ( j_0_i_i_mid2_fu_13626_p3 );
 
     SC_METHOD(thread_tmp_fu_13656_p3);
     sensitive << ( i_0_i_i_mid2_fu_13640_p3 );
@@ -1476,13 +1476,13 @@ DCT_MAT_Multiply_Loop_LoadRow_proc::DCT_MAT_Multiply_Loop_LoadRow_proc(sc_module
     sc_trace(mVcdFile, ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1, "ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1");
     sc_trace(mVcdFile, ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1, "ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1");
     sc_trace(mVcdFile, ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1, "ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1");
-    sc_trace(mVcdFile, tmp_9_fu_13674_p1, "tmp_9_fu_13674_p1");
+    sc_trace(mVcdFile, tmp_7_fu_13674_p1, "tmp_7_fu_13674_p1");
     sc_trace(mVcdFile, exitcond3_i_i6_fu_13620_p2, "exitcond3_i_i6_fu_13620_p2");
     sc_trace(mVcdFile, i4_fu_13634_p2, "i4_fu_13634_p2");
     sc_trace(mVcdFile, j_0_i_i_mid2_fu_13626_p3, "j_0_i_i_mid2_fu_13626_p3");
     sc_trace(mVcdFile, tmp_fu_13656_p3, "tmp_fu_13656_p3");
     sc_trace(mVcdFile, p_addr_cast_fu_13664_p1, "p_addr_cast_fu_13664_p1");
-    sc_trace(mVcdFile, tmp_3_i_trn_cast_fu_13652_p1, "tmp_3_i_trn_cast_fu_13652_p1");
+    sc_trace(mVcdFile, tmp_7_i_trn_cast_fu_13652_p1, "tmp_7_i_trn_cast_fu_13652_p1");
     sc_trace(mVcdFile, p_addr1_fu_13668_p2, "p_addr1_fu_13668_p2");
     sc_trace(mVcdFile, ap_sig_cseq_ST_st4_fsm_2, "ap_sig_cseq_ST_st4_fsm_2");
     sc_trace(mVcdFile, ap_sig_bdd_3018, "ap_sig_bdd_3018");
@@ -1637,7 +1637,7 @@ void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_ap_clk_no_reset_() {
 }
 
 void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_B_address0() {
-    B_address0 =  (sc_lv<6>) (tmp_9_fu_13674_p1.read());
+    B_address0 =  (sc_lv<6>) (tmp_7_fu_13674_p1.read());
 }
 
 void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_B_cached_0_0_2_phi_fu_6248_p128() {
@@ -29402,7 +29402,7 @@ void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_j_fu_13683_p2() {
 }
 
 void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_p_addr1_fu_13668_p2() {
-    p_addr1_fu_13668_p2 = (!p_addr_cast_fu_13664_p1.read().is_01() || !tmp_3_i_trn_cast_fu_13652_p1.read().is_01())? sc_lv<8>(): (sc_biguint<8>(p_addr_cast_fu_13664_p1.read()) + sc_biguint<8>(tmp_3_i_trn_cast_fu_13652_p1.read()));
+    p_addr1_fu_13668_p2 = (!p_addr_cast_fu_13664_p1.read().is_01() || !tmp_7_i_trn_cast_fu_13652_p1.read().is_01())? sc_lv<8>(): (sc_biguint<8>(p_addr_cast_fu_13664_p1.read()) + sc_biguint<8>(tmp_7_i_trn_cast_fu_13652_p1.read()));
 }
 
 void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_p_addr_cast_fu_13664_p1() {
@@ -29417,12 +29417,12 @@ void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_tmp_2_fu_13679_p1() {
     tmp_2_fu_13679_p1 = j_0_i_i_mid2_fu_13626_p3.read().range(3-1, 0);
 }
 
-void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_tmp_3_i_trn_cast_fu_13652_p1() {
-    tmp_3_i_trn_cast_fu_13652_p1 = esl_zext<8,4>(j_0_i_i_mid2_fu_13626_p3.read());
+void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_tmp_7_fu_13674_p1() {
+    tmp_7_fu_13674_p1 = esl_zext<64,8>(p_addr1_fu_13668_p2.read());
 }
 
-void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_tmp_9_fu_13674_p1() {
-    tmp_9_fu_13674_p1 = esl_zext<64,8>(p_addr1_fu_13668_p2.read());
+void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_tmp_7_i_trn_cast_fu_13652_p1() {
+    tmp_7_i_trn_cast_fu_13652_p1 = esl_zext<8,4>(j_0_i_i_mid2_fu_13626_p3.read());
 }
 
 void DCT_MAT_Multiply_Loop_LoadRow_proc::thread_tmp_fu_13656_p3() {

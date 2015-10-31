@@ -2971,10 +2971,10 @@ newFuncRoot:128  br label %0
 
 <node id="250" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:32  %tmp_2 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_1, float %A_1_load_1, float %A_2_load_1, float %A_3_load_1, float %A_4_load_1, float %A_5_load_1, float %A_6_load_1, float %A_7_load_1, i3 %tmp_18)
+.preheader:32  %tmp_3 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_1, float %A_1_load_1, float %A_2_load_1, float %A_3_load_1, float %A_4_load_1, float %A_5_load_1, float %A_6_load_1, float %A_7_load_1, i3 %tmp_18)
 
 ]]></node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
 <operation id="225" st_id="3" stage="2" lat="2">
@@ -3262,10 +3262,10 @@ newFuncRoot:128  br label %0
 
 <node id="240" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="243" st_id="4" stage="1" lat="1">
@@ -3294,10 +3294,10 @@ newFuncRoot:128  br label %0
 
 <node id="252" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_1"/></StgValue>
+<StgValue><ssdm name="tmp_10_1"/></StgValue>
 </operation>
 
 <operation id="245" st_id="4" stage="1" lat="2">
@@ -3438,10 +3438,10 @@ newFuncRoot:128  br label %0
 
 <node id="262" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:44  %tmp_5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_2, float %A_1_load_2, float %A_2_load_2, float %A_3_load_2, float %A_4_load_2, float %A_5_load_2, float %A_6_load_2, float %A_7_load_2, i3 %tmp_18)
+.preheader:44  %tmp_6 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %A_0_load_2, float %A_1_load_2, float %A_2_load_2, float %A_3_load_2, float %A_4_load_2, float %A_5_load_2, float %A_6_load_2, float %A_7_load_2, i3 %tmp_18)
 
 ]]></node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="254" st_id="4" stage="1" lat="2">
@@ -3857,10 +3857,10 @@ newFuncRoot:128  br label %0
 
 <node id="240" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="280" st_id="5" stage="3" lat="4">
@@ -3873,10 +3873,10 @@ newFuncRoot:128  br label %0
 
 <node id="252" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_1"/></StgValue>
+<StgValue><ssdm name="tmp_10_1"/></StgValue>
 </operation>
 
 <operation id="281" st_id="5" stage="1" lat="1">
@@ -3889,10 +3889,10 @@ newFuncRoot:128  br label %0
 
 <node id="263" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:45  %tmp_8 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_48, float %p_read_47, float %p_read_46, float %p_read_45, float %p_read_44, float %p_read_43, float %p_read_42, float %p_read_41, i3 %tmp_19)
+.preheader:45  %tmp_9 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_48, float %p_read_47, float %p_read_46, float %p_read_45, float %p_read_44, float %p_read_43, float %p_read_42, float %p_read_41, i3 %tmp_19)
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 
 <operation id="282" st_id="5" stage="4" lat="4">
@@ -3905,10 +3905,10 @@ newFuncRoot:128  br label %0
 
 <node id="264" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_2"/></StgValue>
+<StgValue><ssdm name="tmp_10_2"/></StgValue>
 </operation>
 
 <operation id="283" st_id="5" stage="1" lat="1">
@@ -3921,10 +3921,10 @@ newFuncRoot:128  br label %0
 
 <node id="275" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:57  %tmp_7 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_40, float %p_read_39, float %p_read_38, float %p_read_37, float %p_read_36, float %p_read_35, float %p_read_34, float %p_read_33, i3 %tmp_19)
+.preheader:57  %tmp_5 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_40, float %p_read_39, float %p_read_38, float %p_read_37, float %p_read_36, float %p_read_35, float %p_read_34, float %p_read_33, i3 %tmp_19)
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="284" st_id="5" stage="4" lat="4">
@@ -3937,10 +3937,10 @@ newFuncRoot:128  br label %0
 
 <node id="276" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_3"/></StgValue>
+<StgValue><ssdm name="tmp_10_3"/></StgValue>
 </operation>
 
 <operation id="285" st_id="5" stage="1" lat="2">
@@ -4642,10 +4642,10 @@ branch7133:1  br label %ifBlock
 
 <node id="226" bw="32" op_0_bw="32" op_1_bw="8">
 <![CDATA[
-.preheader:8  %tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5)
+.preheader:8  %tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str5)
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="328" st_id="6" stage="2" lat="4">
@@ -4658,10 +4658,10 @@ branch7133:1  br label %ifBlock
 
 <node id="240" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="329" st_id="6" stage="2" lat="4">
@@ -4674,10 +4674,10 @@ branch7133:1  br label %ifBlock
 
 <node id="252" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_1"/></StgValue>
+<StgValue><ssdm name="tmp_10_1"/></StgValue>
 </operation>
 
 <operation id="330" st_id="6" stage="3" lat="4">
@@ -4690,10 +4690,10 @@ branch7133:1  br label %ifBlock
 
 <node id="264" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_2"/></StgValue>
+<StgValue><ssdm name="tmp_10_2"/></StgValue>
 </operation>
 
 <operation id="331" st_id="6" stage="3" lat="4">
@@ -4706,10 +4706,10 @@ branch7133:1  br label %ifBlock
 
 <node id="276" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_3"/></StgValue>
+<StgValue><ssdm name="tmp_10_3"/></StgValue>
 </operation>
 
 <operation id="332" st_id="6" stage="1" lat="1">
@@ -4738,10 +4738,10 @@ branch7133:1  br label %ifBlock
 
 <node id="288" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_4"/></StgValue>
+<StgValue><ssdm name="tmp_10_4"/></StgValue>
 </operation>
 
 <operation id="334" st_id="6" stage="1" lat="1">
@@ -4770,10 +4770,10 @@ branch7133:1  br label %ifBlock
 
 <node id="300" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_5"/></StgValue>
+<StgValue><ssdm name="tmp_10_5"/></StgValue>
 </operation>
 
 <operation id="336" st_id="6" stage="1" lat="2">
@@ -5098,7 +5098,7 @@ branch7133:1  br label %ifBlock
 
 <node id="360" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-ifBlock:0  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_9)
+ifBlock:0  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_7)
 
 ]]></node>
 <StgValue><ssdm name="empty_11"/></StgValue>
@@ -5149,10 +5149,10 @@ ifBlock:2  br label %0
 
 <node id="240" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:22  %tmp_3 = fmul float %tmp, %tmp_1
+.preheader:22  %tmp_2 = fmul float %tmp, %tmp_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="359" st_id="7" stage="1" lat="4">
@@ -5165,10 +5165,10 @@ ifBlock:2  br label %0
 
 <node id="252" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:34  %tmp_9_1 = fmul float %tmp_2, %tmp_4
+.preheader:34  %tmp_10_1 = fmul float %tmp_3, %tmp_4
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_1"/></StgValue>
+<StgValue><ssdm name="tmp_10_1"/></StgValue>
 </operation>
 
 <operation id="360" st_id="7" stage="2" lat="4">
@@ -5181,10 +5181,10 @@ ifBlock:2  br label %0
 
 <node id="264" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_2"/></StgValue>
+<StgValue><ssdm name="tmp_10_2"/></StgValue>
 </operation>
 
 <operation id="361" st_id="7" stage="2" lat="4">
@@ -5197,10 +5197,10 @@ ifBlock:2  br label %0
 
 <node id="276" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_3"/></StgValue>
+<StgValue><ssdm name="tmp_10_3"/></StgValue>
 </operation>
 
 <operation id="362" st_id="7" stage="3" lat="4">
@@ -5213,10 +5213,10 @@ ifBlock:2  br label %0
 
 <node id="288" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_4"/></StgValue>
+<StgValue><ssdm name="tmp_10_4"/></StgValue>
 </operation>
 
 <operation id="363" st_id="7" stage="3" lat="4">
@@ -5229,10 +5229,10 @@ ifBlock:2  br label %0
 
 <node id="300" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_5"/></StgValue>
+<StgValue><ssdm name="tmp_10_5"/></StgValue>
 </operation>
 
 <operation id="364" st_id="7" stage="1" lat="1">
@@ -5261,10 +5261,10 @@ ifBlock:2  br label %0
 
 <node id="312" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_6"/></StgValue>
+<StgValue><ssdm name="tmp_10_6"/></StgValue>
 </operation>
 
 <operation id="366" st_id="7" stage="1" lat="1">
@@ -5293,10 +5293,10 @@ ifBlock:2  br label %0
 
 <node id="324" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_7"/></StgValue>
+<StgValue><ssdm name="tmp_10_7"/></StgValue>
 </operation>
 </state>
 
@@ -5312,7 +5312,7 @@ ifBlock:2  br label %0
 
 <node id="241" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 ]]></node>
 <StgValue><ssdm name="temp_1"/></StgValue>
@@ -5328,10 +5328,10 @@ ifBlock:2  br label %0
 
 <node id="264" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:46  %tmp_9_2 = fmul float %tmp_5, %tmp_8
+.preheader:46  %tmp_10_2 = fmul float %tmp_6, %tmp_9
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_2"/></StgValue>
+<StgValue><ssdm name="tmp_10_2"/></StgValue>
 </operation>
 
 <operation id="370" st_id="8" stage="1" lat="4">
@@ -5344,10 +5344,10 @@ ifBlock:2  br label %0
 
 <node id="276" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:58  %tmp_9_3 = fmul float %tmp_s, %tmp_7
+.preheader:58  %tmp_10_3 = fmul float %tmp_s, %tmp_5
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_3"/></StgValue>
+<StgValue><ssdm name="tmp_10_3"/></StgValue>
 </operation>
 
 <operation id="371" st_id="8" stage="2" lat="4">
@@ -5360,10 +5360,10 @@ ifBlock:2  br label %0
 
 <node id="288" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_4"/></StgValue>
+<StgValue><ssdm name="tmp_10_4"/></StgValue>
 </operation>
 
 <operation id="372" st_id="8" stage="2" lat="4">
@@ -5376,10 +5376,10 @@ ifBlock:2  br label %0
 
 <node id="300" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_5"/></StgValue>
+<StgValue><ssdm name="tmp_10_5"/></StgValue>
 </operation>
 
 <operation id="373" st_id="8" stage="3" lat="4">
@@ -5392,10 +5392,10 @@ ifBlock:2  br label %0
 
 <node id="312" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_6"/></StgValue>
+<StgValue><ssdm name="tmp_10_6"/></StgValue>
 </operation>
 
 <operation id="374" st_id="8" stage="3" lat="4">
@@ -5408,10 +5408,10 @@ ifBlock:2  br label %0
 
 <node id="324" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_7"/></StgValue>
+<StgValue><ssdm name="tmp_10_7"/></StgValue>
 </operation>
 </state>
 
@@ -5427,7 +5427,7 @@ ifBlock:2  br label %0
 
 <node id="241" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 ]]></node>
 <StgValue><ssdm name="temp_1"/></StgValue>
@@ -5443,10 +5443,10 @@ ifBlock:2  br label %0
 
 <node id="288" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:70  %tmp_9_4 = fmul float %tmp_10, %tmp_11
+.preheader:70  %tmp_10_4 = fmul float %tmp_10, %tmp_11
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_4"/></StgValue>
+<StgValue><ssdm name="tmp_10_4"/></StgValue>
 </operation>
 
 <operation id="377" st_id="9" stage="1" lat="4">
@@ -5459,10 +5459,10 @@ ifBlock:2  br label %0
 
 <node id="300" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:82  %tmp_9_5 = fmul float %tmp_12, %tmp_13
+.preheader:82  %tmp_10_5 = fmul float %tmp_12, %tmp_13
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_5"/></StgValue>
+<StgValue><ssdm name="tmp_10_5"/></StgValue>
 </operation>
 
 <operation id="378" st_id="9" stage="2" lat="4">
@@ -5475,10 +5475,10 @@ ifBlock:2  br label %0
 
 <node id="312" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_6"/></StgValue>
+<StgValue><ssdm name="tmp_10_6"/></StgValue>
 </operation>
 
 <operation id="379" st_id="9" stage="2" lat="4">
@@ -5491,10 +5491,10 @@ ifBlock:2  br label %0
 
 <node id="324" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_7"/></StgValue>
+<StgValue><ssdm name="tmp_10_7"/></StgValue>
 </operation>
 </state>
 
@@ -5510,7 +5510,7 @@ ifBlock:2  br label %0
 
 <node id="241" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 ]]></node>
 <StgValue><ssdm name="temp_1"/></StgValue>
@@ -5526,10 +5526,10 @@ ifBlock:2  br label %0
 
 <node id="312" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:94  %tmp_9_6 = fmul float %tmp_14, %tmp_15
+.preheader:94  %tmp_10_6 = fmul float %tmp_14, %tmp_15
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_6"/></StgValue>
+<StgValue><ssdm name="tmp_10_6"/></StgValue>
 </operation>
 
 <operation id="382" st_id="10" stage="1" lat="4">
@@ -5542,10 +5542,10 @@ ifBlock:2  br label %0
 
 <node id="324" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:106  %tmp_9_7 = fmul float %tmp_16, %tmp_17
+.preheader:106  %tmp_10_7 = fmul float %tmp_16, %tmp_17
 
 ]]></node>
-<StgValue><ssdm name="tmp_9_7"/></StgValue>
+<StgValue><ssdm name="tmp_10_7"/></StgValue>
 </operation>
 </state>
 
@@ -5561,7 +5561,7 @@ ifBlock:2  br label %0
 
 <node id="241" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 ]]></node>
 <StgValue><ssdm name="temp_1"/></StgValue>
@@ -5580,7 +5580,7 @@ ifBlock:2  br label %0
 
 <node id="241" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:23  %temp_1 = fadd float %tmp_3, 0.000000e+00
+.preheader:23  %temp_1 = fadd float %tmp_2, 0.000000e+00
 
 ]]></node>
 <StgValue><ssdm name="temp_1"/></StgValue>
@@ -5599,7 +5599,7 @@ ifBlock:2  br label %0
 
 <node id="253" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 ]]></node>
 <StgValue><ssdm name="temp_1_1"/></StgValue>
@@ -5618,7 +5618,7 @@ ifBlock:2  br label %0
 
 <node id="253" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 ]]></node>
 <StgValue><ssdm name="temp_1_1"/></StgValue>
@@ -5637,7 +5637,7 @@ ifBlock:2  br label %0
 
 <node id="253" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 ]]></node>
 <StgValue><ssdm name="temp_1_1"/></StgValue>
@@ -5656,7 +5656,7 @@ ifBlock:2  br label %0
 
 <node id="253" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 ]]></node>
 <StgValue><ssdm name="temp_1_1"/></StgValue>
@@ -5675,7 +5675,7 @@ ifBlock:2  br label %0
 
 <node id="253" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_9_1
+.preheader:35  %temp_1_1 = fadd float %temp_1, %tmp_10_1
 
 ]]></node>
 <StgValue><ssdm name="temp_1_1"/></StgValue>
@@ -5694,7 +5694,7 @@ ifBlock:2  br label %0
 
 <node id="265" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 ]]></node>
 <StgValue><ssdm name="temp_1_2"/></StgValue>
@@ -5713,7 +5713,7 @@ ifBlock:2  br label %0
 
 <node id="265" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 ]]></node>
 <StgValue><ssdm name="temp_1_2"/></StgValue>
@@ -5732,7 +5732,7 @@ ifBlock:2  br label %0
 
 <node id="265" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 ]]></node>
 <StgValue><ssdm name="temp_1_2"/></StgValue>
@@ -5751,7 +5751,7 @@ ifBlock:2  br label %0
 
 <node id="265" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 ]]></node>
 <StgValue><ssdm name="temp_1_2"/></StgValue>
@@ -5770,7 +5770,7 @@ ifBlock:2  br label %0
 
 <node id="265" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_9_2
+.preheader:47  %temp_1_2 = fadd float %temp_1_1, %tmp_10_2
 
 ]]></node>
 <StgValue><ssdm name="temp_1_2"/></StgValue>
@@ -5789,7 +5789,7 @@ ifBlock:2  br label %0
 
 <node id="277" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 ]]></node>
 <StgValue><ssdm name="temp_1_3"/></StgValue>
@@ -5808,7 +5808,7 @@ ifBlock:2  br label %0
 
 <node id="277" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 ]]></node>
 <StgValue><ssdm name="temp_1_3"/></StgValue>
@@ -5827,7 +5827,7 @@ ifBlock:2  br label %0
 
 <node id="277" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 ]]></node>
 <StgValue><ssdm name="temp_1_3"/></StgValue>
@@ -5846,7 +5846,7 @@ ifBlock:2  br label %0
 
 <node id="277" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 ]]></node>
 <StgValue><ssdm name="temp_1_3"/></StgValue>
@@ -5865,7 +5865,7 @@ ifBlock:2  br label %0
 
 <node id="277" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_9_3
+.preheader:59  %temp_1_3 = fadd float %temp_1_2, %tmp_10_3
 
 ]]></node>
 <StgValue><ssdm name="temp_1_3"/></StgValue>
@@ -5884,7 +5884,7 @@ ifBlock:2  br label %0
 
 <node id="289" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 ]]></node>
 <StgValue><ssdm name="temp_1_4"/></StgValue>
@@ -5903,7 +5903,7 @@ ifBlock:2  br label %0
 
 <node id="289" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 ]]></node>
 <StgValue><ssdm name="temp_1_4"/></StgValue>
@@ -5922,7 +5922,7 @@ ifBlock:2  br label %0
 
 <node id="289" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 ]]></node>
 <StgValue><ssdm name="temp_1_4"/></StgValue>
@@ -5941,7 +5941,7 @@ ifBlock:2  br label %0
 
 <node id="289" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 ]]></node>
 <StgValue><ssdm name="temp_1_4"/></StgValue>
@@ -5960,7 +5960,7 @@ ifBlock:2  br label %0
 
 <node id="289" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_9_4
+.preheader:71  %temp_1_4 = fadd float %temp_1_3, %tmp_10_4
 
 ]]></node>
 <StgValue><ssdm name="temp_1_4"/></StgValue>
@@ -5979,7 +5979,7 @@ ifBlock:2  br label %0
 
 <node id="301" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 ]]></node>
 <StgValue><ssdm name="temp_1_5"/></StgValue>
@@ -5998,7 +5998,7 @@ ifBlock:2  br label %0
 
 <node id="301" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 ]]></node>
 <StgValue><ssdm name="temp_1_5"/></StgValue>
@@ -6017,7 +6017,7 @@ ifBlock:2  br label %0
 
 <node id="301" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 ]]></node>
 <StgValue><ssdm name="temp_1_5"/></StgValue>
@@ -6036,7 +6036,7 @@ ifBlock:2  br label %0
 
 <node id="301" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 ]]></node>
 <StgValue><ssdm name="temp_1_5"/></StgValue>
@@ -6055,7 +6055,7 @@ ifBlock:2  br label %0
 
 <node id="301" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_9_5
+.preheader:83  %temp_1_5 = fadd float %temp_1_4, %tmp_10_5
 
 ]]></node>
 <StgValue><ssdm name="temp_1_5"/></StgValue>
@@ -6074,7 +6074,7 @@ ifBlock:2  br label %0
 
 <node id="313" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 ]]></node>
 <StgValue><ssdm name="temp_1_6"/></StgValue>
@@ -6093,7 +6093,7 @@ ifBlock:2  br label %0
 
 <node id="313" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 ]]></node>
 <StgValue><ssdm name="temp_1_6"/></StgValue>
@@ -6112,7 +6112,7 @@ ifBlock:2  br label %0
 
 <node id="313" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 ]]></node>
 <StgValue><ssdm name="temp_1_6"/></StgValue>
@@ -6131,7 +6131,7 @@ ifBlock:2  br label %0
 
 <node id="313" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 ]]></node>
 <StgValue><ssdm name="temp_1_6"/></StgValue>
@@ -6150,7 +6150,7 @@ ifBlock:2  br label %0
 
 <node id="313" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_9_6
+.preheader:95  %temp_1_6 = fadd float %temp_1_5, %tmp_10_6
 
 ]]></node>
 <StgValue><ssdm name="temp_1_6"/></StgValue>
@@ -6169,7 +6169,7 @@ ifBlock:2  br label %0
 
 <node id="325" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 ]]></node>
 <StgValue><ssdm name="temp_1_7"/></StgValue>
@@ -6188,7 +6188,7 @@ ifBlock:2  br label %0
 
 <node id="325" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 ]]></node>
 <StgValue><ssdm name="temp_1_7"/></StgValue>
@@ -6207,7 +6207,7 @@ ifBlock:2  br label %0
 
 <node id="325" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 ]]></node>
 <StgValue><ssdm name="temp_1_7"/></StgValue>
@@ -6226,7 +6226,7 @@ ifBlock:2  br label %0
 
 <node id="325" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 ]]></node>
 <StgValue><ssdm name="temp_1_7"/></StgValue>
@@ -6245,7 +6245,7 @@ ifBlock:2  br label %0
 
 <node id="325" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_9_7
+.preheader:107  %temp_1_7 = fadd float %temp_1_6, %tmp_10_7
 
 ]]></node>
 <StgValue><ssdm name="temp_1_7"/></StgValue>
@@ -6312,7 +6312,7 @@ ifBlock:2  br label %0
 
 <node id="227" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
 <![CDATA[
-.preheader:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+.preheader:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -6328,10 +6328,10 @@ ifBlock:2  br label %0
 
 <node id="228" bw="64" op_0_bw="4">
 <![CDATA[
-.preheader:10  %tmp_6 = zext i4 %j_1_mid2 to i64
+.preheader:10  %tmp_8 = zext i4 %j_1_mid2 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="425" st_id="48" stage="1" lat="1">
@@ -6344,7 +6344,7 @@ ifBlock:2  br label %0
 
 <node id="326" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:108  %C_0_addr = getelementptr [8 x float]* %C_0, i64 0, i64 %tmp_6
+.preheader:108  %C_0_addr = getelementptr [8 x float]* %C_0, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_0_addr"/></StgValue>
@@ -6360,7 +6360,7 @@ ifBlock:2  br label %0
 
 <node id="327" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:109  %C_1_addr = getelementptr [8 x float]* %C_1, i64 0, i64 %tmp_6
+.preheader:109  %C_1_addr = getelementptr [8 x float]* %C_1, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_1_addr"/></StgValue>
@@ -6376,7 +6376,7 @@ ifBlock:2  br label %0
 
 <node id="328" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:110  %C_2_addr = getelementptr [8 x float]* %C_2, i64 0, i64 %tmp_6
+.preheader:110  %C_2_addr = getelementptr [8 x float]* %C_2, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_2_addr"/></StgValue>
@@ -6392,7 +6392,7 @@ ifBlock:2  br label %0
 
 <node id="329" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:111  %C_3_addr = getelementptr [8 x float]* %C_3, i64 0, i64 %tmp_6
+.preheader:111  %C_3_addr = getelementptr [8 x float]* %C_3, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_3_addr"/></StgValue>
@@ -6408,7 +6408,7 @@ ifBlock:2  br label %0
 
 <node id="330" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:112  %C_4_addr = getelementptr [8 x float]* %C_4, i64 0, i64 %tmp_6
+.preheader:112  %C_4_addr = getelementptr [8 x float]* %C_4, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_4_addr"/></StgValue>
@@ -6424,7 +6424,7 @@ ifBlock:2  br label %0
 
 <node id="331" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:113  %C_5_addr = getelementptr [8 x float]* %C_5, i64 0, i64 %tmp_6
+.preheader:113  %C_5_addr = getelementptr [8 x float]* %C_5, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_5_addr"/></StgValue>
@@ -6440,7 +6440,7 @@ ifBlock:2  br label %0
 
 <node id="332" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:114  %C_6_addr = getelementptr [8 x float]* %C_6, i64 0, i64 %tmp_6
+.preheader:114  %C_6_addr = getelementptr [8 x float]* %C_6, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_6_addr"/></StgValue>
@@ -6456,7 +6456,7 @@ ifBlock:2  br label %0
 
 <node id="333" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:115  %C_7_addr = getelementptr [8 x float]* %C_7, i64 0, i64 %tmp_6
+.preheader:115  %C_7_addr = getelementptr [8 x float]* %C_7, i64 0, i64 %tmp_8
 
 ]]></node>
 <StgValue><ssdm name="C_7_addr"/></StgValue>

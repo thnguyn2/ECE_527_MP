@@ -1042,7 +1042,7 @@ codeRepl:66  call fastcc void @DCT_MAT_Multiply.1_Loop_Row_proc([8 x float]* noc
 
 <node id="18" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
 <![CDATA[
-codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str3) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1470,7 +1470,7 @@ codeRepl:67  ret void
 </dataflow>
 <dataflow id="255" from="stg_254" to="stg_71" fromId="254" toId="71">
 </dataflow>
-<dataflow id="257" from="p_str" to="stg_71" fromId="256" toId="71">
+<dataflow id="257" from="p_str3" to="stg_71" fromId="256" toId="71">
 </dataflow>
 <dataflow id="258" from="DCT_MAT_Multiply.1_Loop_Row_proc" to="stg_72" fromId="177" toId="72">
 </dataflow>

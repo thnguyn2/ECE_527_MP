@@ -5,13 +5,13 @@
 ############################################################
 open_project dct
 set_top DCT
-add_files dct/coeff.h
-add_files dct/dct.c
-add_files dct/dct.h
-add_files dct/matrixmath.c
-add_files dct/matrixmath.h
-add_files dct/quant.c
 add_files dct/quant.h
+add_files dct/quant.c
+add_files dct/matrixmath.h
+add_files dct/matrixmath.c
+add_files dct/dct.h
+add_files dct/dct.c
+add_files dct/coeff.h
 open_solution "solution3opt"
 set_part {xc7z020clg484-1}
 create_clock -period 10 -name default

@@ -113,9 +113,9 @@ DCT_Loop_1_proc::DCT_Loop_1_proc(sc_module_name name) : sc_module(name), mVcdFil
     SC_METHOD(thread_tempin_0_opt_type_02_i_i_fu_95_p3);
     sensitive << ( X_dout );
     sensitive << ( opt_type_02_loc_loc_loc0_fu_30 );
-    sensitive << ( tmp_3_i_fu_89_p2 );
+    sensitive << ( tmp_2_i_fu_89_p2 );
 
-    SC_METHOD(thread_tmp_3_i_fu_89_p2);
+    SC_METHOD(thread_tmp_2_i_fu_89_p2);
     sensitive << ( ap_sig_cseq_ST_st2_fsm_1 );
     sensitive << ( exitcond1_fu_72_p2 );
     sensitive << ( ap_sig_bdd_56 );
@@ -169,7 +169,7 @@ DCT_Loop_1_proc::DCT_Loop_1_proc(sc_module_name name) : sc_module(name), mVcdFil
     sc_trace(mVcdFile, p_0_rec_i_i_cast_fu_67_p1, "p_0_rec_i_i_cast_fu_67_p1");
     sc_trace(mVcdFile, opt_type_02_loc_loc_loc0_fu_30, "opt_type_02_loc_loc_loc0_fu_30");
     sc_trace(mVcdFile, tempin_0_opt_type_02_i_i_fu_95_p3, "tempin_0_opt_type_02_i_i_fu_95_p3");
-    sc_trace(mVcdFile, tmp_3_i_fu_89_p2, "tmp_3_i_fu_89_p2");
+    sc_trace(mVcdFile, tmp_2_i_fu_89_p2, "tmp_2_i_fu_89_p2");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -332,11 +332,11 @@ void DCT_Loop_1_proc::thread_read_idx_fu_78_p2() {
 }
 
 void DCT_Loop_1_proc::thread_tempin_0_opt_type_02_i_i_fu_95_p3() {
-    tempin_0_opt_type_02_i_i_fu_95_p3 = (!tmp_3_i_fu_89_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_3_i_fu_89_p2.read()[0].to_bool())? X_dout.read(): opt_type_02_loc_loc_loc0_fu_30.read());
+    tempin_0_opt_type_02_i_i_fu_95_p3 = (!tmp_2_i_fu_89_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_i_fu_89_p2.read()[0].to_bool())? X_dout.read(): opt_type_02_loc_loc_loc0_fu_30.read());
 }
 
-void DCT_Loop_1_proc::thread_tmp_3_i_fu_89_p2() {
-    tmp_3_i_fu_89_p2 = (!read_idx_0_i_i_reg_52.read().is_01() || !ap_const_lv7_1.is_01())? sc_lv<1>(): sc_lv<1>(read_idx_0_i_i_reg_52.read() == ap_const_lv7_1);
+void DCT_Loop_1_proc::thread_tmp_2_i_fu_89_p2() {
+    tmp_2_i_fu_89_p2 = (!read_idx_0_i_i_reg_52.read().is_01() || !ap_const_lv7_1.is_01())? sc_lv<1>(): sc_lv<1>(read_idx_0_i_i_reg_52.read() == ap_const_lv7_1);
 }
 
 void DCT_Loop_1_proc::thread_ap_NS_fsm() {

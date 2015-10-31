@@ -78,9 +78,9 @@ struct DCT_Quant : public sc_module {
     sc_signal< bool > ap_sig_bdd_135;
     sc_signal< sc_lv<64> > tmp_3_fu_240_p1;
     sc_signal< sc_lv<64> > tmp_3_reg_310;
-    sc_signal< sc_lv<1> > exitcond_i7_fu_219_p2;
+    sc_signal< sc_lv<1> > exitcond_i6_fu_219_p2;
     sc_signal< sc_lv<32> > grp_fu_154_p2;
-    sc_signal< sc_lv<32> > tmp_2_i_reg_326;
+    sc_signal< sc_lv<32> > tmp_3_i1_reg_326;
     sc_signal< sc_logic > ap_sig_cseq_ST_st20_fsm_19;
     sc_signal< bool > ap_sig_bdd_153;
     sc_signal< sc_lv<4> > j_fu_251_p2;
@@ -92,7 +92,7 @@ struct DCT_Quant : public sc_module {
     sc_signal< sc_lv<1> > exitcond_i_fu_245_p2;
     sc_signal< sc_lv<4> > i_i2_reg_102;
     sc_signal< sc_lv<4> > i_i_reg_113;
-    sc_signal< sc_lv<4> > j_i6_reg_124;
+    sc_signal< sc_lv<4> > j_i5_reg_124;
     sc_signal< sc_logic > ap_sig_cseq_ST_st21_fsm_20;
     sc_signal< bool > ap_sig_bdd_191;
     sc_signal< sc_lv<4> > j_i_reg_135;
@@ -105,7 +105,7 @@ struct DCT_Quant : public sc_module {
     sc_signal< sc_lv<32> > grp_fu_154_p1;
     sc_signal< sc_lv<7> > tmp_1_fu_183_p3;
     sc_signal< sc_lv<7> > tmp_fu_207_p3;
-    sc_signal< sc_lv<8> > tmp_i8_trn_cast_fu_231_p1;
+    sc_signal< sc_lv<8> > tmp_i7_trn_cast_fu_231_p1;
     sc_signal< sc_lv<8> > p_addr1_fu_235_p2;
     sc_signal< sc_lv<8> > tmp_i_trn_cast_fu_257_p1;
     sc_signal< sc_lv<8> > p_addr3_fu_261_p2;
@@ -191,7 +191,7 @@ struct DCT_Quant : public sc_module {
     void thread_ap_sig_cseq_ST_st5_fsm_4();
     void thread_exitcond1_i3_fu_171_p2();
     void thread_exitcond1_i_fu_195_p2();
-    void thread_exitcond_i7_fu_219_p2();
+    void thread_exitcond_i6_fu_219_p2();
     void thread_exitcond_i_fu_245_p2();
     void thread_function_read_read_fu_36_p2();
     void thread_grp_fu_147_ce();
@@ -212,7 +212,7 @@ struct DCT_Quant : public sc_module {
     void thread_tmp_2_fu_266_p1();
     void thread_tmp_3_fu_240_p1();
     void thread_tmp_fu_207_p3();
-    void thread_tmp_i8_trn_cast_fu_231_p1();
+    void thread_tmp_i7_trn_cast_fu_231_p1();
     void thread_tmp_i_trn_cast_fu_257_p1();
     void thread_ap_NS_fsm();
 };

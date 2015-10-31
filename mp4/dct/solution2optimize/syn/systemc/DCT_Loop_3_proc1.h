@@ -54,7 +54,7 @@ struct DCT_Loop_3_proc1 : public sc_module {
     sc_signal< sc_lv<7> > write_idx_reg_59;
     sc_signal< sc_logic > ap_sig_cseq_ST_st3_fsm_2;
     sc_signal< bool > ap_sig_bdd_73;
-    sc_signal< sc_lv<64> > tmp_12_fu_95_p1;
+    sc_signal< sc_lv<64> > tmp_10_fu_95_p1;
     sc_signal< sc_lv<6> > tmp_34_fu_91_p1;
     sc_signal< sc_lv<32> > tempval_fu_100_p1;
     sc_signal< sc_lv<3> > ap_NS_fsm;
@@ -90,7 +90,7 @@ struct DCT_Loop_3_proc1 : public sc_module {
     void thread_ap_sig_cseq_ST_st3_fsm_2();
     void thread_exitcond_fu_71_p2();
     void thread_tempval_fu_100_p1();
-    void thread_tmp_12_fu_95_p1();
+    void thread_tmp_10_fu_95_p1();
     void thread_tmp_34_fu_91_p1();
     void thread_write_idx_1_fu_77_p2();
     void thread_ap_NS_fsm();

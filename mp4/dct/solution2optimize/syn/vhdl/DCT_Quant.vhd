@@ -108,9 +108,9 @@ architecture behav of DCT_Quant is
     signal ap_sig_bdd_135 : BOOLEAN;
     signal tmp_3_fu_240_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal tmp_3_reg_310 : STD_LOGIC_VECTOR (63 downto 0);
-    signal exitcond_i7_fu_219_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal exitcond_i6_fu_219_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal grp_fu_154_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_2_i_reg_326 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_3_i1_reg_326 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_cseq_ST_st20_fsm_19 : STD_LOGIC;
     signal ap_sig_bdd_153 : BOOLEAN;
     signal j_fu_251_p2 : STD_LOGIC_VECTOR (3 downto 0);
@@ -122,7 +122,7 @@ architecture behav of DCT_Quant is
     signal exitcond_i_fu_245_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal i_i2_reg_102 : STD_LOGIC_VECTOR (3 downto 0);
     signal i_i_reg_113 : STD_LOGIC_VECTOR (3 downto 0);
-    signal j_i6_reg_124 : STD_LOGIC_VECTOR (3 downto 0);
+    signal j_i5_reg_124 : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_sig_cseq_ST_st21_fsm_20 : STD_LOGIC;
     signal ap_sig_bdd_191 : BOOLEAN;
     signal j_i_reg_135 : STD_LOGIC_VECTOR (3 downto 0);
@@ -135,7 +135,7 @@ architecture behav of DCT_Quant is
     signal grp_fu_154_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_1_fu_183_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal tmp_fu_207_p3 : STD_LOGIC_VECTOR (6 downto 0);
-    signal tmp_i8_trn_cast_fu_231_p1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_i7_trn_cast_fu_231_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal p_addr1_fu_235_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp_i_trn_cast_fu_257_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal p_addr3_fu_261_p2 : STD_LOGIC_VECTOR (7 downto 0);
@@ -258,7 +258,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not((ap_start = ap_const_logic_0)) and (function_read_read_fu_36_p2 = ap_const_lv1_0))) then 
                 i_i2_reg_102 <= ap_const_lv4_0;
-            elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and not((ap_const_lv1_0 = exitcond_i7_fu_219_p2)))) then 
+            elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and not((ap_const_lv1_0 = exitcond_i6_fu_219_p2)))) then 
                 i_i2_reg_102 <= i_1_reg_279;
             end if; 
         end if;
@@ -276,14 +276,14 @@ begin
         end if;
     end process;
 
-    -- j_i6_reg_124 assign process. --
-    j_i6_reg_124_assign_proc : process (ap_clk)
+    -- j_i5_reg_124 assign process. --
+    j_i5_reg_124_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_sig_cseq_ST_st21_fsm_20)) then 
-                j_i6_reg_124 <= j_1_reg_305;
+                j_i5_reg_124 <= j_1_reg_305;
             elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (function_read_read_fu_36_p2 = ap_const_lv1_0) and (ap_const_lv1_0 = exitcond1_i3_fu_171_p2))) then 
-                j_i6_reg_124 <= ap_const_lv4_0;
+                j_i5_reg_124 <= ap_const_lv4_0;
             end if; 
         end if;
     end process;
@@ -374,16 +374,6 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19)) then
-                tmp_2_i_reg_326 <= grp_fu_154_p2;
-            end if;
-        end if;
-    end process;
-
-    -- assign process. --
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st22_fsm_21) and (ap_const_lv1_0 = exitcond_i_fu_245_p2))) then
                     tmp_2_reg_339(7 downto 0) <= tmp_2_fu_266_p1(7 downto 0);
             end if;
@@ -394,7 +384,17 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and (ap_const_lv1_0 = exitcond_i7_fu_219_p2))) then
+            if ((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19)) then
+                tmp_3_i1_reg_326 <= grp_fu_154_p2;
+            end if;
+        end if;
+    end process;
+
+    -- assign process. --
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and (ap_const_lv1_0 = exitcond_i6_fu_219_p2))) then
                     tmp_3_reg_310(7 downto 0) <= tmp_3_fu_240_p1(7 downto 0);
             end if;
         end if;
@@ -407,7 +407,7 @@ begin
     tmp_2_reg_339(63 downto 8) <= "00000000000000000000000000000000000000000000000000000000";
 
     -- the next state (ap_NS_fsm) of the state machine. --
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, function_read_read_fu_36_p2, exitcond1_i3_fu_171_p2, exitcond1_i_fu_195_p2, exitcond_i7_fu_219_p2, exitcond_i_fu_245_p2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, function_read_read_fu_36_p2, exitcond1_i3_fu_171_p2, exitcond1_i_fu_195_p2, exitcond_i6_fu_219_p2, exitcond_i_fu_245_p2)
     begin
         case ap_CS_fsm is
             when ap_ST_st1_fsm_0 => 
@@ -425,7 +425,7 @@ begin
                     ap_NS_fsm <= ap_ST_st3_fsm_2;
                 end if;
             when ap_ST_st3_fsm_2 => 
-                if (not((ap_const_lv1_0 = exitcond_i7_fu_219_p2))) then
+                if (not((ap_const_lv1_0 = exitcond_i6_fu_219_p2))) then
                     ap_NS_fsm <= ap_ST_st2_fsm_1;
                 else
                     ap_NS_fsm <= ap_ST_st4_fsm_3;
@@ -558,12 +558,12 @@ begin
 
 
     -- Y_d0 assign process. --
-    Y_d0_assign_proc : process(tmp_2_i_reg_326, ap_sig_cseq_ST_st21_fsm_20, ap_sig_cseq_ST_st26_fsm_25, grp_fu_147_p2)
+    Y_d0_assign_proc : process(tmp_3_i1_reg_326, ap_sig_cseq_ST_st21_fsm_20, ap_sig_cseq_ST_st26_fsm_25, grp_fu_147_p2)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st26_fsm_25)) then 
             Y_d0 <= grp_fu_147_p2;
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st21_fsm_20)) then 
-            Y_d0 <= tmp_2_i_reg_326;
+            Y_d0 <= tmp_3_i1_reg_326;
         else 
             Y_d0 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
@@ -795,7 +795,7 @@ begin
 
     exitcond1_i3_fu_171_p2 <= "1" when (i_i2_reg_102 = ap_const_lv4_8) else "0";
     exitcond1_i_fu_195_p2 <= "1" when (i_i_reg_113 = ap_const_lv4_8) else "0";
-    exitcond_i7_fu_219_p2 <= "1" when (j_i6_reg_124 = ap_const_lv4_8) else "0";
+    exitcond_i6_fu_219_p2 <= "1" when (j_i5_reg_124 = ap_const_lv4_8) else "0";
     exitcond_i_fu_245_p2 <= "1" when (j_i_reg_135 = ap_const_lv4_8) else "0";
     function_read_read_fu_36_p2 <= function_r;
     grp_fu_147_ce <= ap_const_logic_1;
@@ -806,9 +806,9 @@ begin
     grp_fu_154_p1 <= QMatrix_q0;
     i_1_fu_177_p2 <= std_logic_vector(unsigned(i_i2_reg_102) + unsigned(ap_const_lv4_1));
     i_fu_201_p2 <= std_logic_vector(unsigned(i_i_reg_113) + unsigned(ap_const_lv4_1));
-    j_1_fu_225_p2 <= std_logic_vector(unsigned(j_i6_reg_124) + unsigned(ap_const_lv4_1));
+    j_1_fu_225_p2 <= std_logic_vector(unsigned(j_i5_reg_124) + unsigned(ap_const_lv4_1));
     j_fu_251_p2 <= std_logic_vector(unsigned(j_i_reg_135) + unsigned(ap_const_lv4_1));
-    p_addr1_fu_235_p2 <= std_logic_vector(unsigned(tmp_i8_trn_cast_fu_231_p1) + unsigned(p_addr_cast_reg_284));
+    p_addr1_fu_235_p2 <= std_logic_vector(unsigned(tmp_i7_trn_cast_fu_231_p1) + unsigned(p_addr_cast_reg_284));
     p_addr2_cast_fu_215_p1 <= std_logic_vector(resize(unsigned(tmp_fu_207_p3),8));
     p_addr3_fu_261_p2 <= std_logic_vector(unsigned(tmp_i_trn_cast_fu_257_p1) + unsigned(p_addr2_cast_reg_297));
     p_addr_cast_fu_191_p1 <= std_logic_vector(resize(unsigned(tmp_1_fu_183_p3),8));
@@ -816,6 +816,6 @@ begin
     tmp_2_fu_266_p1 <= std_logic_vector(resize(unsigned(p_addr3_fu_261_p2),64));
     tmp_3_fu_240_p1 <= std_logic_vector(resize(unsigned(p_addr1_fu_235_p2),64));
     tmp_fu_207_p3 <= (i_i_reg_113 & ap_const_lv3_0);
-    tmp_i8_trn_cast_fu_231_p1 <= std_logic_vector(resize(unsigned(j_i6_reg_124),8));
+    tmp_i7_trn_cast_fu_231_p1 <= std_logic_vector(resize(unsigned(j_i5_reg_124),8));
     tmp_i_trn_cast_fu_257_p1 <= std_logic_vector(resize(unsigned(j_i_reg_135),8));
 end behav;

@@ -1042,7 +1042,7 @@ codeRepl:66  call fastcc void @DCT_MAT_Multiply_Loop_Row_proc([8 x float]* %A_0,
 
 <node id="18" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8">
 <![CDATA[
-codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str3) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

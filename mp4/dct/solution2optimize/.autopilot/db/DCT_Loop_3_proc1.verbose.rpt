@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_3_proc1'
 ================================================================
-* Date:           Fri Oct 30 16:49:46 2015
+* Date:           Fri Oct 30 22:33:12 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -178,7 +178,7 @@ IsGatedGlobalClock: 0
 
  <State 1>: 1.57ns
 ST_1: stg_4 [1/1] 0.00ns
-newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
 ST_1: p_read_128 [1/1] 0.00ns
 newFuncRoot:1  %p_read_128 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)
@@ -209,11 +209,11 @@ _ifconv:0  %tmp = call i1 @_ssdm_op_BitSelect.i1.i7.i32(i7 %write_idx, i32 6)
 ST_2: tmp_34 [1/1] 0.00ns
 _ifconv:1  %tmp_34 = trunc i7 %write_idx to i6
 
-ST_2: tmp_12 [1/1] 0.00ns
-_ifconv:2  %tmp_12 = zext i6 %tmp_34 to i64
+ST_2: tmp_10 [1/1] 0.00ns
+_ifconv:2  %tmp_10 = zext i6 %tmp_34 to i64
 
 ST_2: Ymat_addr [1/1] 0.00ns
-_ifconv:3  %Ymat_addr = getelementptr [64 x float]* %Ymat, i64 0, i64 %tmp_12
+_ifconv:3  %Ymat_addr = getelementptr [64 x float]* %Ymat, i64 0, i64 %tmp_10
 
 ST_2: Ymat_load [2/2] 2.71ns
 _ifconv:4  %Ymat_load = load float* %Ymat_addr, align 4
@@ -252,9 +252,9 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x9339e80; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x9339f10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ Ymat]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x9339fa0; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x8e5e6f0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x8e5e780; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ Ymat]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x8e5e810; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -271,7 +271,7 @@ write_idx_1 (add              ) [ 0111]
 stg_11      (br               ) [ 0000]
 tmp         (bitselect        ) [ 0001]
 tmp_34      (trunc            ) [ 0000]
-tmp_12      (zext             ) [ 0000]
+tmp_10      (zext             ) [ 0000]
 Ymat_addr   (getelementptr    ) [ 0001]
 stg_17      (ret              ) [ 0000]
 Ymat_load   (load             ) [ 0000]
@@ -326,7 +326,7 @@ stg_22      (br               ) [ 0111]
 <pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str111"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -344,7 +344,7 @@ stg_22      (br               ) [ 0111]
 <pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10"/></StgValue>
+<StgValue><ssdm name="p_str"/></StgValue>
 </bind>
 </comp>
 
@@ -560,14 +560,14 @@ stg_22      (br               ) [ 0111]
 </bind>
 </comp>
 
-<comp id="95" class="1004" name="tmp_12_fu_95">
+<comp id="95" class="1004" name="tmp_10_fu_95">
 <pin_list>
 <pin id="96" dir="0" index="0" bw="6" slack="0"/>
 <pin id="97" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_12/2 "/>
+<opset="tmp_10/2 "/>
 </bind>
 </comp>
 
@@ -714,7 +714,7 @@ stg_22      (br               ) [ 0111]
 		stg_11 : 2
 		tmp : 1
 		tmp_34 : 1
-		tmp_12 : 2
+		tmp_10 : 2
 		Ymat_addr : 3
 		Ymat_load : 4
 	State 3
@@ -745,7 +745,7 @@ stg_22      (br               ) [ 0111]
 |----------|-----------------------|---------|---------|
 |   trunc  |      tmp_34_fu_91     |    0    |    0    |
 |----------|-----------------------|---------|---------|
-|   zext   |      tmp_12_fu_95     |    0    |    0    |
+|   zext   |      tmp_10_fu_95     |    0    |    0    |
 |----------|-----------------------|---------|---------|
 |   Total  |                       |    0    |    42   |
 |----------|-----------------------|---------|---------|

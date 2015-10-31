@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_Row_proc'" level="0">
-<item name = "Date">Fri Oct 30 16:49:44 2015
+<item name = "Date">Fri Oct 30 22:33:10 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -232,6 +232,13 @@
 <column name="temp_1_6_reg_2291">32, 0, 32, 0</column>
 <column name="temp_1_7_reg_2296">32, 0, 32, 0</column>
 <column name="temp_1_reg_2261">32, 0, 32, 0</column>
+<column name="tmp_10_1_reg_2216">32, 0, 32, 0</column>
+<column name="tmp_10_2_reg_2231">32, 0, 32, 0</column>
+<column name="tmp_10_3_reg_2236">32, 0, 32, 0</column>
+<column name="tmp_10_4_reg_2241">32, 0, 32, 0</column>
+<column name="tmp_10_5_reg_2246">32, 0, 32, 0</column>
+<column name="tmp_10_6_reg_2251">32, 0, 32, 0</column>
+<column name="tmp_10_7_reg_2256">32, 0, 32, 0</column>
 <column name="tmp_18_reg_2141">32, 0, 32, 0</column>
 <column name="tmp_20_reg_2156">32, 0, 32, 0</column>
 <column name="tmp_22_reg_2161">32, 0, 32, 0</column>
@@ -241,25 +248,18 @@
 <column name="tmp_30_reg_2201">32, 0, 32, 0</column>
 <column name="tmp_32_reg_2118">3, 0, 3, 0</column>
 <column name="tmp_33_reg_2129">3, 0, 3, 0</column>
-<column name="tmp_9_1_reg_2216">32, 0, 32, 0</column>
-<column name="tmp_9_2_reg_2231">32, 0, 32, 0</column>
-<column name="tmp_9_3_reg_2236">32, 0, 32, 0</column>
-<column name="tmp_9_4_reg_2241">32, 0, 32, 0</column>
-<column name="tmp_9_5_reg_2246">32, 0, 32, 0</column>
-<column name="tmp_9_6_reg_2251">32, 0, 32, 0</column>
-<column name="tmp_9_7_reg_2256">32, 0, 32, 0</column>
-<column name="tmp_9_reg_2211">32, 0, 32, 0</column>
+<column name="tmp_3_reg_2211">32, 0, 32, 0</column>
 <column name="tmp_reg_2124">32, 0, 32, 0</column>
 <column name="exitcond_flatten_reg_2097">0, 1, 1, 0</column>
 <column name="i_1_mid2_reg_2112">0, 4, 4, 0</column>
 <column name="j_1_mid2_reg_2106">0, 4, 4, 0</column>
-<column name="tmp_9_1_reg_2216">0, 32, 32, 0</column>
-<column name="tmp_9_2_reg_2231">0, 32, 32, 0</column>
-<column name="tmp_9_3_reg_2236">0, 32, 32, 0</column>
-<column name="tmp_9_4_reg_2241">0, 32, 32, 0</column>
-<column name="tmp_9_5_reg_2246">0, 32, 32, 0</column>
-<column name="tmp_9_6_reg_2251">0, 32, 32, 0</column>
-<column name="tmp_9_7_reg_2256">0, 32, 32, 0</column>
+<column name="tmp_10_1_reg_2216">0, 32, 32, 0</column>
+<column name="tmp_10_2_reg_2231">0, 32, 32, 0</column>
+<column name="tmp_10_3_reg_2236">0, 32, 32, 0</column>
+<column name="tmp_10_4_reg_2241">0, 32, 32, 0</column>
+<column name="tmp_10_5_reg_2246">0, 32, 32, 0</column>
+<column name="tmp_10_6_reg_2251">0, 32, 32, 0</column>
+<column name="tmp_10_7_reg_2256">0, 32, 32, 0</column>
 </table>
 </item>
 </section>

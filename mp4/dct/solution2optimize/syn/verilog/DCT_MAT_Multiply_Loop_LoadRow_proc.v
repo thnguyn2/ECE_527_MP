@@ -403,13 +403,13 @@ wire   [31:0] ap_reg_phiprechg_B_cached_7_5_2_reg_12811pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1;
-wire   [63:0] tmp_9_fu_13674_p1;
+wire   [63:0] tmp_7_fu_13674_p1;
 wire   [0:0] exitcond3_i_i6_fu_13620_p2;
 wire   [3:0] i4_fu_13634_p2;
 wire   [3:0] j_0_i_i_mid2_fu_13626_p3;
 wire   [6:0] tmp_fu_13656_p3;
 wire   [7:0] p_addr_cast_fu_13664_p1;
-wire   [7:0] tmp_3_i_trn_cast_fu_13652_p1;
+wire   [7:0] tmp_7_i_trn_cast_fu_13652_p1;
 wire   [7:0] p_addr1_fu_13668_p2;
 reg    ap_sig_cseq_ST_st4_fsm_2;
 reg    ap_sig_bdd_3018;
@@ -1474,7 +1474,7 @@ begin
     endcase
 end
 
-assign B_address0 = tmp_9_fu_13674_p1;
+assign B_address0 = tmp_7_fu_13674_p1;
 assign ap_reg_phiprechg_B_cached_0_0_2_reg_6244pp0_it1 = 'bx;
 assign ap_reg_phiprechg_B_cached_0_1_2_reg_5647pp0_it1 = 'bx;
 assign ap_reg_phiprechg_B_cached_0_2_2_reg_5050pp0_it1 = 'bx;
@@ -1634,12 +1634,12 @@ assign i_0_i_i_mid2_fu_13640_p3 = ((exitcond3_i_i6_fu_13620_p2[0:0]===1'b1)? i4_
 assign indvar_flatten_next_fu_13614_p2 = (indvar_flatten_reg_70 + ap_const_lv7_1);
 assign j_0_i_i_mid2_fu_13626_p3 = ((exitcond3_i_i6_fu_13620_p2[0:0]===1'b1)? ap_const_lv4_0: j_0_i_i_reg_92);
 assign j_fu_13683_p2 = (j_0_i_i_mid2_fu_13626_p3 + ap_const_lv4_1);
-assign p_addr1_fu_13668_p2 = (p_addr_cast_fu_13664_p1 + tmp_3_i_trn_cast_fu_13652_p1);
+assign p_addr1_fu_13668_p2 = (p_addr_cast_fu_13664_p1 + tmp_7_i_trn_cast_fu_13652_p1);
 assign p_addr_cast_fu_13664_p1 = tmp_fu_13656_p3;
 assign tmp_1_fu_13648_p1 = i_0_i_i_mid2_fu_13640_p3[2:0];
 assign tmp_2_fu_13679_p1 = j_0_i_i_mid2_fu_13626_p3[2:0];
-assign tmp_3_i_trn_cast_fu_13652_p1 = j_0_i_i_mid2_fu_13626_p3;
-assign tmp_9_fu_13674_p1 = p_addr1_fu_13668_p2;
+assign tmp_7_fu_13674_p1 = p_addr1_fu_13668_p2;
+assign tmp_7_i_trn_cast_fu_13652_p1 = j_0_i_i_mid2_fu_13626_p3;
 assign tmp_fu_13656_p3 = {{i_0_i_i_mid2_fu_13640_p3}, {ap_const_lv3_0}};
 
 

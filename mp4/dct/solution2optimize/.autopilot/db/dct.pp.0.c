@@ -217,7 +217,8 @@ void DOT_Multiply(float A[8][8],
 
 void DOT_Divide(float A[8][8],
   float B[8][8], float C[8][8]);
-# 6 "dct/dct.h" 2
+# 5 "dct/dct.h" 2
+
 
 
 

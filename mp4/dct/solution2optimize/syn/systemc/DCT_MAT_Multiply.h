@@ -410,10 +410,6 @@ struct DCT_MAT_Multiply : public sc_module {
     sc_signal< sc_lv<32> > DCT_MAT_Multiply_Loop_LoadRow_proc_U0_ap_return_63;
     sc_signal< sc_logic > DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_pipo_status;
     sc_signal< sc_logic > DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_pipo_update;
-    sc_signal< sc_logic > ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_4_channel;
-    sc_signal< sc_logic > B_cached_0_4_channel_full_n;
-    sc_signal< sc_logic > ap_reg_ready_B_cached_0_4_channel_full_n;
-    sc_signal< sc_logic > ap_sig_ready_B_cached_0_4_channel_full_n;
     sc_signal< sc_logic > ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_1_channel;
     sc_signal< sc_logic > B_cached_0_1_channel_full_n;
     sc_signal< sc_logic > ap_reg_ready_B_cached_0_1_channel_full_n;
@@ -430,6 +426,10 @@ struct DCT_MAT_Multiply : public sc_module {
     sc_signal< sc_logic > B_cached_0_3_channel_full_n;
     sc_signal< sc_logic > ap_reg_ready_B_cached_0_3_channel_full_n;
     sc_signal< sc_logic > ap_sig_ready_B_cached_0_3_channel_full_n;
+    sc_signal< sc_logic > ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_4_channel;
+    sc_signal< sc_logic > B_cached_0_4_channel_full_n;
+    sc_signal< sc_logic > ap_reg_ready_B_cached_0_4_channel_full_n;
+    sc_signal< sc_logic > ap_sig_ready_B_cached_0_4_channel_full_n;
     sc_signal< sc_logic > ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_5_channel;
     sc_signal< sc_logic > B_cached_0_5_channel_full_n;
     sc_signal< sc_logic > ap_reg_ready_B_cached_0_5_channel_full_n;

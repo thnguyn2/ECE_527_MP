@@ -89,15 +89,15 @@ reg    ap_sig_bdd_82;
 reg   [3:0] colidx_reg_60;
 reg    ap_sig_cseq_ST_st4_fsm_3;
 reg    ap_sig_bdd_94;
-wire   [63:0] tmp_7_fu_139_p1;
-wire   [63:0] tmp_8_fu_153_p1;
+wire   [63:0] tmp_8_fu_139_p1;
+wire   [63:0] tmp_6_fu_153_p1;
 wire   [2:0] tmp_fu_84_p1;
 wire   [5:0] tmp_4_fu_88_p3;
 wire   [5:0] idx_fu_96_p2;
 wire   [6:0] tmp_5_fu_106_p3;
 wire   [6:0] colidx_cast_fu_118_p1;
-wire   [6:0] tmp_6_fu_134_p2;
-wire   [7:0] tmp_8_trn_cast_fu_144_p1;
+wire   [6:0] tmp_7_fu_134_p2;
+wire   [7:0] tmp_9_trn_cast_fu_144_p1;
 reg   [3:0] ap_NS_fsm;
 
 
@@ -318,8 +318,8 @@ begin
     endcase
 end
 
-assign Xbuff_address0 = tmp_7_fu_139_p1;
-assign Xmat_address0 = tmp_8_fu_153_p1;
+assign Xbuff_address0 = tmp_8_fu_139_p1;
+assign Xmat_address0 = tmp_6_fu_153_p1;
 assign Xmat_d0 = Xbuff_q0;
 
 /// ap_sig_bdd_23 assign process. ///
@@ -357,15 +357,15 @@ assign exitcond3_fu_122_p2 = (colidx_reg_60 == ap_const_lv4_8? 1'b1: 1'b0);
 assign exitcond4_fu_72_p2 = (rowidx_reg_49 == ap_const_lv4_8? 1'b1: 1'b0);
 assign idx_cast_fu_102_p1 = idx_fu_96_p2;
 assign idx_fu_96_p2 = (tmp_4_fu_88_p3 | ap_const_lv6_2);
-assign p_addr1_fu_148_p2 = (tmp_8_trn_cast_fu_144_p1 + p_addr_cast_reg_170);
+assign p_addr1_fu_148_p2 = (tmp_9_trn_cast_fu_144_p1 + p_addr_cast_reg_170);
 assign p_addr_cast_fu_114_p1 = tmp_5_fu_106_p3;
 assign rowidx_1_fu_78_p2 = (rowidx_reg_49 + ap_const_lv4_1);
 assign tmp_4_fu_88_p3 = {{tmp_fu_84_p1}, {ap_const_lv3_0}};
 assign tmp_5_fu_106_p3 = {{rowidx_reg_49}, {ap_const_lv3_0}};
-assign tmp_6_fu_134_p2 = (idx_cast_reg_165 + colidx_cast_fu_118_p1);
-assign tmp_7_fu_139_p1 = tmp_6_fu_134_p2;
-assign tmp_8_fu_153_p1 = p_addr1_reg_188;
-assign tmp_8_trn_cast_fu_144_p1 = colidx_reg_60;
+assign tmp_6_fu_153_p1 = p_addr1_reg_188;
+assign tmp_7_fu_134_p2 = (idx_cast_reg_165 + colidx_cast_fu_118_p1);
+assign tmp_8_fu_139_p1 = tmp_7_fu_134_p2;
+assign tmp_9_trn_cast_fu_144_p1 = colidx_reg_60;
 assign tmp_fu_84_p1 = rowidx_reg_49[2:0];
 always @ (posedge ap_clk)
 begin

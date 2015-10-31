@@ -219,10 +219,10 @@ newFuncRoot:0  br label %0
 
 <node id="85" bw="8" op_0_bw="4">
 <![CDATA[
-.reset:10  %tmp_3_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8
+.reset:10  %tmp_7_i_trn_cast = zext i4 %j_0_i_i_mid2 to i8
 
 ]]></node>
-<StgValue><ssdm name="tmp_3_i_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_7_i_trn_cast"/></StgValue>
 </operation>
 
 <operation id="17" st_id="2" stage="1" lat="1">
@@ -267,7 +267,7 @@ newFuncRoot:0  br label %0
 
 <node id="88" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.reset:13  %p_addr1 = add i8 %p_addr_cast, %tmp_3_i_trn_cast
+.reset:13  %p_addr1 = add i8 %p_addr_cast, %tmp_7_i_trn_cast
 
 ]]></node>
 <StgValue><ssdm name="p_addr1"/></StgValue>
@@ -283,10 +283,10 @@ newFuncRoot:0  br label %0
 
 <node id="89" bw="64" op_0_bw="8">
 <![CDATA[
-.reset:14  %tmp_9 = zext i8 %p_addr1 to i64
+.reset:14  %tmp_7 = zext i8 %p_addr1 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="21" st_id="2" stage="1" lat="1">
@@ -299,7 +299,7 @@ newFuncRoot:0  br label %0
 
 <node id="90" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_9
+.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_7
 
 ]]></node>
 <StgValue><ssdm name="B_addr"/></StgValue>
@@ -1397,7 +1397,7 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="82" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind
+.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str36) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1413,10 +1413,10 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="83" bw="32" op_0_bw="32" op_1_bw="8">
 <![CDATA[
-.reset:8  %tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3)
+.reset:8  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str36)
 
 ]]></node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="95" st_id="3" stage="1" lat="1">
@@ -1429,7 +1429,7 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="84" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="8">
 <![CDATA[
-.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -3789,7 +3789,7 @@ branch097:63  %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_c
 
 <node id="287" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-branch097:64  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_8)
+branch097:64  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str36, i32 %tmp_6)
 
 ]]></node>
 <StgValue><ssdm name="empty_10"/></StgValue>
@@ -4882,7 +4882,7 @@ branch097:66  br label %0
 </dataflow>
 <dataflow id="335" from="i_0_i_i_mid2" to="tmp_1" fromId="14" toId="15">
 </dataflow>
-<dataflow id="336" from="j_0_i_i_mid2" to="tmp_3_i_trn_cast" fromId="12" toId="16">
+<dataflow id="336" from="j_0_i_i_mid2" to="tmp_7_i_trn_cast" fromId="12" toId="16">
 </dataflow>
 <dataflow id="338" from="_ssdm_op_BitConcatenate.i7.i4.i3" to="tmp" fromId="337" toId="17">
 </dataflow>
@@ -4894,15 +4894,15 @@ branch097:66  br label %0
 </dataflow>
 <dataflow id="343" from="p_addr_cast" to="p_addr1" fromId="18" toId="19">
 </dataflow>
-<dataflow id="344" from="tmp_3_i_trn_cast" to="p_addr1" fromId="16" toId="19">
+<dataflow id="344" from="tmp_7_i_trn_cast" to="p_addr1" fromId="16" toId="19">
 </dataflow>
-<dataflow id="345" from="p_addr1" to="tmp_9" fromId="19" toId="20">
+<dataflow id="345" from="p_addr1" to="tmp_7" fromId="19" toId="20">
 </dataflow>
 <dataflow id="346" from="B" to="B_addr" fromId="302" toId="21">
 </dataflow>
 <dataflow id="348" from="stg_347" to="B_addr" fromId="347" toId="21">
 </dataflow>
-<dataflow id="349" from="tmp_9" to="B_addr" fromId="20" toId="21">
+<dataflow id="349" from="tmp_7" to="B_addr" fromId="20" toId="21">
 </dataflow>
 <dataflow id="350" from="B_addr" to="B_cached_7_0" fromId="21" toId="22">
 </dataflow>
@@ -6032,11 +6032,11 @@ branch097:66  br label %0
 </dataflow>
 <dataflow id="636" from="_ssdm_op_SpecLoopName" to="stg_93" fromId="626" toId="93">
 </dataflow>
-<dataflow id="638" from="p_str3" to="stg_93" fromId="637" toId="93">
+<dataflow id="638" from="p_str36" to="stg_93" fromId="637" toId="93">
 </dataflow>
-<dataflow id="640" from="_ssdm_op_SpecRegionBegin" to="tmp_8" fromId="639" toId="94">
+<dataflow id="640" from="_ssdm_op_SpecRegionBegin" to="tmp_6" fromId="639" toId="94">
 </dataflow>
-<dataflow id="641" from="p_str3" to="tmp_8" fromId="637" toId="94">
+<dataflow id="641" from="p_str36" to="tmp_6" fromId="637" toId="94">
 </dataflow>
 <dataflow id="643" from="_ssdm_op_SpecPipeline" to="stg_95" fromId="642" toId="95">
 </dataflow>
@@ -6048,7 +6048,7 @@ branch097:66  br label %0
 </dataflow>
 <dataflow id="649" from="stg_648" to="stg_95" fromId="648" toId="95">
 </dataflow>
-<dataflow id="651" from="p_str" to="stg_95" fromId="650" toId="95">
+<dataflow id="651" from="p_str3" to="stg_95" fromId="650" toId="95">
 </dataflow>
 <dataflow id="652" from="B_addr" to="B_cached_7_0" fromId="21" toId="96">
 </dataflow>
@@ -53286,9 +53286,9 @@ branch097:66  br label %0
 </dataflow>
 <dataflow id="8910" from="_ssdm_op_SpecRegionEnd" to="empty_10" fromId="8909" toId="225">
 </dataflow>
-<dataflow id="8911" from="p_str3" to="empty_10" fromId="637" toId="225">
+<dataflow id="8911" from="p_str36" to="empty_10" fromId="637" toId="225">
 </dataflow>
-<dataflow id="8912" from="tmp_8" to="empty_10" fromId="94" toId="225">
+<dataflow id="8912" from="tmp_6" to="empty_10" fromId="94" toId="225">
 </dataflow>
 <dataflow id="8914" from="stg_8913" to="mrv" fromId="8913" toId="227">
 </dataflow>

@@ -76,7 +76,7 @@ reg    ap_sig_bdd_65;
 wire   [63:0] p_0_rec_i_i_cast_fu_67_p1;
 reg   [31:0] opt_type_02_loc_loc_loc0_fu_30;
 wire   [31:0] tempin_0_opt_type_02_i_i_fu_95_p3;
-wire   [0:0] tmp_3_i_fu_89_p2;
+wire   [0:0] tmp_2_i_fu_89_p2;
 reg   [1:0] ap_NS_fsm;
 
 
@@ -263,8 +263,8 @@ end
 assign exitcond1_fu_72_p2 = (read_idx_0_i_i_reg_52 == ap_const_lv7_42? 1'b1: 1'b0);
 assign p_0_rec_i_i_cast_fu_67_p1 = read_idx_0_i_i_reg_52;
 assign read_idx_fu_78_p2 = (read_idx_0_i_i_reg_52 + ap_const_lv7_1);
-assign tempin_0_opt_type_02_i_i_fu_95_p3 = ((tmp_3_i_fu_89_p2[0:0]===1'b1)? X_dout: opt_type_02_loc_loc_loc0_fu_30);
-assign tmp_3_i_fu_89_p2 = (read_idx_0_i_i_reg_52 == ap_const_lv7_1? 1'b1: 1'b0);
+assign tempin_0_opt_type_02_i_i_fu_95_p3 = ((tmp_2_i_fu_89_p2[0:0]===1'b1)? X_dout: opt_type_02_loc_loc_loc0_fu_30);
+assign tmp_2_i_fu_89_p2 = (read_idx_0_i_i_reg_52 == ap_const_lv7_1? 1'b1: 1'b0);
 
 
 endmodule //DCT_Loop_1_proc

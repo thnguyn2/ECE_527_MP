@@ -56,7 +56,7 @@ struct DCT_Loop_1_proc : public sc_module {
     sc_signal< sc_lv<64> > p_0_rec_i_i_cast_fu_67_p1;
     sc_signal< sc_lv<32> > opt_type_02_loc_loc_loc0_fu_30;
     sc_signal< sc_lv<32> > tempin_0_opt_type_02_i_i_fu_95_p3;
-    sc_signal< sc_lv<1> > tmp_3_i_fu_89_p2;
+    sc_signal< sc_lv<1> > tmp_2_i_fu_89_p2;
     sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -91,7 +91,7 @@ struct DCT_Loop_1_proc : public sc_module {
     void thread_p_0_rec_i_i_cast_fu_67_p1();
     void thread_read_idx_fu_78_p2();
     void thread_tempin_0_opt_type_02_i_i_fu_95_p3();
-    void thread_tmp_3_i_fu_89_p2();
+    void thread_tmp_2_i_fu_89_p2();
     void thread_ap_NS_fsm();
 };
 

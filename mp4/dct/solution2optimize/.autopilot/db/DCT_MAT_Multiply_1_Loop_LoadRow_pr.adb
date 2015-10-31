@@ -3486,7 +3486,7 @@
             <Obj>
               <type>0</type>
               <id>92</id>
-              <name>tmp_3_i</name>
+              <name>tmp_7_i</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -3510,7 +3510,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_i_fu_13668_p1</rtlName>
+              <rtlName>tmp_7_i_fu_13668_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -87065,7 +87065,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_i_fu_13668</first>
+        <first>tmp_7_i_fu_13668</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

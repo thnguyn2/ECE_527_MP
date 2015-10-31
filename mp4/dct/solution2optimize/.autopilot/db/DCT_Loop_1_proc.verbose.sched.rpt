@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_1_proc'
 ================================================================
-* Date:           Fri Oct 30 16:48:57 2015
+* Date:           Fri Oct 30 22:32:23 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -136,7 +136,7 @@ ST_1: opt_type_02_loc_loc_loc0 [1/1] 0.00ns
 newFuncRoot:0  %opt_type_02_loc_loc_loc0 = alloca i32, align 4
 
 ST_1: stg_4 [1/1] 0.00ns
-newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
 ST_1: stg_5 [1/1] 1.57ns
 newFuncRoot:2  br label %0
@@ -176,11 +176,11 @@ ST_2: Xbuff_addr [1/1] 0.00ns
 ST_2: stg_16 [1/1] 2.71ns
 :4  store float %tmp_i, float* %Xbuff_addr, align 4
 
-ST_2: tmp_3_i [1/1] 1.97ns
-:5  %tmp_3_i = icmp eq i7 %read_idx_0_i_i, 1
+ST_2: tmp_2_i [1/1] 1.97ns
+:5  %tmp_2_i = icmp eq i7 %read_idx_0_i_i, 1
 
 ST_2: tempin_0_opt_type_02_i_i [1/1] 1.37ns
-:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_3_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1
+:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_2_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1
 
 ST_2: stg_19 [1/1] 0.00ns
 :7  store i32 %tempin_0_opt_type_02_i_i, i32* %opt_type_02_loc_loc_loc0, align 4

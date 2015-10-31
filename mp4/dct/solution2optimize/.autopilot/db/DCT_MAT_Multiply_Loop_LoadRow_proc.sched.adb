@@ -3290,7 +3290,7 @@
 					<Obj>
 						<type>0</type>
 						<id>85</id>
-						<name>tmp_3_i_trn_cast</name>
+						<name>tmp_7_i_trn_cast</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -3457,7 +3457,7 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>tmp_9</name>
+						<name>tmp_7</name>
 						<fileName>dct/matrixmath.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>13</lineNumber>

@@ -27,14 +27,14 @@
 
 <trans id="112" from="3" to="4">
 <condition id="49">
-<or_exp><and_exp><literal name="exitcond_i7" val="0"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
 <trans id="132" from="3" to="2">
 <condition id="71">
-<or_exp><and_exp><literal name="exitcond_i7" val="1"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -333,10 +333,10 @@
 
 <node id="15" bw="32" op_0_bw="32" op_1_bw="8">
 <![CDATA[
-:1  %tmp_1_i4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
+:1  %tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_i4"/></StgValue>
+<StgValue><ssdm name="tmp_1_i"/></StgValue>
 </operation>
 
 <operation id="36" st_id="2" stage="1" lat="1">
@@ -498,10 +498,10 @@
 
 <node id="49" bw="32" op_0_bw="32" op_1_bw="8">
 <![CDATA[
-:1  %tmp_4_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
+:1  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
 
 ]]></node>
-<StgValue><ssdm name="tmp_4_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i"/></StgValue>
 </operation>
 
 <operation id="46" st_id="2" stage="1" lat="1">
@@ -586,10 +586,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="20" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-:0  %j_i6 = phi i4 [ 0, %5 ], [ %j_1, %7 ]
+:0  %j_i5 = phi i4 [ 0, %5 ], [ %j_1, %7 ]
 
 ]]></node>
-<StgValue><ssdm name="j_i6"/></StgValue>
+<StgValue><ssdm name="j_i5"/></StgValue>
 </operation>
 
 <operation id="51" st_id="3" stage="1" lat="1">
@@ -601,10 +601,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="21" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:1  %exitcond_i7 = icmp eq i4 %j_i6, -8
+:1  %exitcond_i6 = icmp eq i4 %j_i5, -8
 
 ]]></node>
-<StgValue><ssdm name="exitcond_i7"/></StgValue>
+<StgValue><ssdm name="exitcond_i6"/></StgValue>
 </operation>
 
 <operation id="52" st_id="3" stage="1" lat="1">
@@ -631,7 +631,7 @@ DOT_Multiply.exit:0  ret void
 
 <node id="23" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:3  %j_1 = add i4 %j_i6, 1
+:3  %j_1 = add i4 %j_i5, 1
 
 ]]></node>
 <StgValue><ssdm name="j_1"/></StgValue>
@@ -646,7 +646,7 @@ DOT_Multiply.exit:0  ret void
 
 <node id="24" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:4  br i1 %exitcond_i7, label %8, label %7
+:4  br i1 %exitcond_i6, label %8, label %7
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -656,29 +656,29 @@ DOT_Multiply.exit:0  ret void
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="16">
-<or_exp><and_exp><literal name="exitcond_i7" val="0"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <node id="27" bw="8" op_0_bw="4">
 <![CDATA[
-:1  %tmp_i8_trn_cast = zext i4 %j_i6 to i8
+:1  %tmp_i7_trn_cast = zext i4 %j_i5 to i8
 
 ]]></node>
-<StgValue><ssdm name="tmp_i8_trn_cast"/></StgValue>
+<StgValue><ssdm name="tmp_i7_trn_cast"/></StgValue>
 </operation>
 
 <operation id="56" st_id="3" stage="1" lat="1">
 <core>AddSub</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="16">
-<or_exp><and_exp><literal name="exitcond_i7" val="0"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <node id="28" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-:2  %p_addr1 = add i8 %tmp_i8_trn_cast, %p_addr_cast
+:2  %p_addr1 = add i8 %tmp_i7_trn_cast, %p_addr_cast
 
 ]]></node>
 <StgValue><ssdm name="p_addr1"/></StgValue>
@@ -688,7 +688,7 @@ DOT_Multiply.exit:0  ret void
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="16">
-<or_exp><and_exp><literal name="exitcond_i7" val="0"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -704,7 +704,7 @@ DOT_Multiply.exit:0  ret void
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="16">
-<or_exp><and_exp><literal name="exitcond_i7" val="0"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -720,7 +720,7 @@ DOT_Multiply.exit:0  ret void
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="16">
-<or_exp><and_exp><literal name="exitcond_i7" val="0"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -736,13 +736,13 @@ DOT_Multiply.exit:0  ret void
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="18">
-<or_exp><and_exp><literal name="exitcond_i7" val="1"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <node id="39" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i4)
+:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i)
 
 ]]></node>
 <StgValue><ssdm name="empty_8"/></StgValue>
@@ -752,7 +752,7 @@ DOT_Multiply.exit:0  ret void
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="18">
-<or_exp><and_exp><literal name="exitcond_i7" val="1"/>
+<or_exp><and_exp><literal name="exitcond_i6" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -839,10 +839,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -857,10 +857,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -875,10 +875,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -893,10 +893,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -911,10 +911,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -929,10 +929,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -947,10 +947,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -965,10 +965,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -983,10 +983,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1001,10 +1001,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1019,10 +1019,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1037,10 +1037,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1055,10 +1055,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1073,10 +1073,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1091,10 +1091,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1109,10 +1109,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="34" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 ]]></node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i1"/></StgValue>
 </operation>
 </state>
 
@@ -1157,7 +1157,7 @@ DOT_Multiply.exit:0  ret void
 
 <node id="36" bw="0" op_0_bw="32" op_1_bw="6">
 <![CDATA[
-:10  store float %tmp_2_i, float* %Y_addr_1, align 4
+:10  store float %tmp_3_i1, float* %Y_addr_1, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1378,7 +1378,7 @@ DOT_Multiply.exit:0  ret void
 
 <node id="73" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-:0  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_4_i)
+:0  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_3_i)
 
 ]]></node>
 <StgValue><ssdm name="empty_5"/></StgValue>
@@ -1442,10 +1442,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="68" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
+<StgValue><ssdm name="tmp_5_i"/></StgValue>
 </operation>
 </state>
 
@@ -1460,10 +1460,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="68" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
+<StgValue><ssdm name="tmp_5_i"/></StgValue>
 </operation>
 </state>
 
@@ -1478,10 +1478,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="68" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
+<StgValue><ssdm name="tmp_5_i"/></StgValue>
 </operation>
 </state>
 
@@ -1511,10 +1511,10 @@ DOT_Multiply.exit:0  ret void
 
 <node id="68" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
+<StgValue><ssdm name="tmp_5_i"/></StgValue>
 </operation>
 
 <operation id="107" st_id="26" stage="1" lat="1">
@@ -1541,7 +1541,7 @@ DOT_Multiply.exit:0  ret void
 
 <node id="70" bw="0" op_0_bw="32" op_1_bw="6">
 <![CDATA[
-:10  store float %tmp_1_i, float* %Y_addr, align 4
+:10  store float %tmp_5_i, float* %Y_addr, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

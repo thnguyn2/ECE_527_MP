@@ -3290,7 +3290,7 @@
             <Obj>
               <type>0</type>
               <id>85</id>
-              <name>tmp_3_i_trn_cast</name>
+              <name>tmp_7_i_trn_cast</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>12</lineNumber>
@@ -3314,7 +3314,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_i_trn_cast_fu_13652_p1</rtlName>
+              <rtlName>tmp_7_i_trn_cast_fu_13652_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -3457,7 +3457,7 @@
             <Obj>
               <type>0</type>
               <id>89</id>
-              <name>tmp_9</name>
+              <name>tmp_7</name>
               <fileName>dct/matrixmath.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -3481,7 +3481,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_9_fu_13674_p1</rtlName>
+              <rtlName>tmp_7_fu_13674_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -85949,19 +85949,19 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_i_trn_cast_fu_13652</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>85</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_9_fu_13674</first>
+        <first>tmp_7_fu_13674</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>89</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_7_i_trn_cast_fu_13652</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>85</item>
         </second>
       </item>
       <item>

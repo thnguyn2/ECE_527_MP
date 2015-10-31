@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'
 ================================================================
-* Date:           Fri Oct 30 16:49:32 2015
+* Date:           Fri Oct 30 22:32:59 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -163,53 +163,53 @@ ST_2: exitcond3_i_i [1/1] 1.88ns
 ST_2: j_0_i_i_mid2 [1/1] 1.37ns
 .reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i, i4 0, i4 %j_0_i_i
 
-ST_2: tmp_3_i [1/1] 0.00ns
-.reset:10  %tmp_3_i = zext i4 %j_0_i_i_mid2 to i64
+ST_2: tmp_7_i [1/1] 0.00ns
+.reset:10  %tmp_7_i = zext i4 %j_0_i_i_mid2 to i64
 
 ST_2: B_0_addr [1/1] 0.00ns
-.reset:11  %B_0_addr = getelementptr [8 x float]* %B_0, i64 0, i64 %tmp_3_i
+.reset:11  %B_0_addr = getelementptr [8 x float]* %B_0, i64 0, i64 %tmp_7_i
 
 ST_2: B_0_load [2/2] 2.39ns
 .reset:12  %B_0_load = load float* %B_0_addr, align 4
 
 ST_2: B_1_addr [1/1] 0.00ns
-.reset:13  %B_1_addr = getelementptr [8 x float]* %B_1, i64 0, i64 %tmp_3_i
+.reset:13  %B_1_addr = getelementptr [8 x float]* %B_1, i64 0, i64 %tmp_7_i
 
 ST_2: B_1_load [2/2] 2.39ns
 .reset:14  %B_1_load = load float* %B_1_addr, align 4
 
 ST_2: B_2_addr [1/1] 0.00ns
-.reset:15  %B_2_addr = getelementptr [8 x float]* %B_2, i64 0, i64 %tmp_3_i
+.reset:15  %B_2_addr = getelementptr [8 x float]* %B_2, i64 0, i64 %tmp_7_i
 
 ST_2: B_2_load [2/2] 2.39ns
 .reset:16  %B_2_load = load float* %B_2_addr, align 4
 
 ST_2: B_3_addr [1/1] 0.00ns
-.reset:17  %B_3_addr = getelementptr [8 x float]* %B_3, i64 0, i64 %tmp_3_i
+.reset:17  %B_3_addr = getelementptr [8 x float]* %B_3, i64 0, i64 %tmp_7_i
 
 ST_2: B_3_load [2/2] 2.39ns
 .reset:18  %B_3_load = load float* %B_3_addr, align 4
 
 ST_2: B_4_addr [1/1] 0.00ns
-.reset:19  %B_4_addr = getelementptr [8 x float]* %B_4, i64 0, i64 %tmp_3_i
+.reset:19  %B_4_addr = getelementptr [8 x float]* %B_4, i64 0, i64 %tmp_7_i
 
 ST_2: B_4_load [2/2] 2.39ns
 .reset:20  %B_4_load = load float* %B_4_addr, align 4
 
 ST_2: B_5_addr [1/1] 0.00ns
-.reset:21  %B_5_addr = getelementptr [8 x float]* %B_5, i64 0, i64 %tmp_3_i
+.reset:21  %B_5_addr = getelementptr [8 x float]* %B_5, i64 0, i64 %tmp_7_i
 
 ST_2: B_5_load [2/2] 2.39ns
 .reset:22  %B_5_load = load float* %B_5_addr, align 4
 
 ST_2: B_6_addr [1/1] 0.00ns
-.reset:23  %B_6_addr = getelementptr [8 x float]* %B_6, i64 0, i64 %tmp_3_i
+.reset:23  %B_6_addr = getelementptr [8 x float]* %B_6, i64 0, i64 %tmp_7_i
 
 ST_2: B_6_load [2/2] 2.39ns
 .reset:24  %B_6_load = load float* %B_6_addr, align 4
 
 ST_2: B_7_addr [1/1] 0.00ns
-.reset:25  %B_7_addr = getelementptr [8 x float]* %B_7, i64 0, i64 %tmp_3_i
+.reset:25  %B_7_addr = getelementptr [8 x float]* %B_7, i64 0, i64 %tmp_7_i
 
 ST_2: B_7_load [2/2] 2.39ns
 .reset:26  %B_7_load = load float* %B_7_addr, align 4
@@ -436,13 +436,13 @@ ST_3: tmp [1/1] 0.00ns
 .reset:6  %tmp = trunc i4 %i_0_i_i_mid2 to i3
 
 ST_3: stg_102 [1/1] 0.00ns
-.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind
+.reset:7  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str36) nounwind
 
 ST_3: tmp_s [1/1] 0.00ns
-.reset:8  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3)
+.reset:8  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str36)
 
 ST_3: stg_104 [1/1] 0.00ns
-.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+.reset:9  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
 ST_3: B_0_load [1/2] 2.39ns
 .reset:12  %B_0_load = load float* %B_0_addr, align 4
@@ -931,7 +931,7 @@ ST_3: B_cached_7_7_2 [1/1] 0.00ns
 branch097:63  %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_cached_7_7_1, %branch14 ], [ %B_cached_7_7_1, %branch13 ], [ %B_cached_7_7_1, %branch12 ], [ %B_cached_7_7_1, %branch11 ], [ %B_cached_7_7_1, %branch10 ], [ %B_cached_7_7_1, %branch9 ], [ %B_cached_7_7_1, %branch0 ], [ %B_cached_7_7_1, %branch23 ], [ %B_cached_7_7_1, %branch22 ], [ %B_cached_7_7_1, %branch21 ], [ %B_cached_7_7_1, %branch20 ], [ %B_cached_7_7_1, %branch19 ], [ %B_cached_7_7_1, %branch18 ], [ %B_cached_7_7_1, %branch17 ], [ %B_cached_7_7_1, %branch1 ], [ %B_cached_7_7_1, %branch31 ], [ %B_cached_7_7_1, %branch30 ], [ %B_cached_7_7_1, %branch29 ], [ %B_cached_7_7_1, %branch28 ], [ %B_cached_7_7_1, %branch27 ], [ %B_cached_7_7_1, %branch26 ], [ %B_cached_7_7_1, %branch25 ], [ %B_cached_7_7_1, %branch2 ], [ %B_cached_7_7_1, %branch39 ], [ %B_cached_7_7_1, %branch38 ], [ %B_cached_7_7_1, %branch37 ], [ %B_cached_7_7_1, %branch36 ], [ %B_cached_7_7_1, %branch35 ], [ %B_cached_7_7_1, %branch34 ], [ %B_cached_7_7_1, %branch33 ], [ %B_cached_7_7_1, %branch3 ], [ %B_cached_7_7_1, %branch47 ], [ %B_cached_7_7_1, %branch46 ], [ %B_cached_7_7_1, %branch45 ], [ %B_cached_7_7_1, %branch44 ], [ %B_cached_7_7_1, %branch43 ], [ %B_cached_7_7_1, %branch42 ], [ %B_cached_7_7_1, %branch41 ], [ %B_cached_7_7_1, %branch4 ], [ %B_cached_7_7_1, %branch55 ], [ %B_cached_7_7_1, %branch54 ], [ %B_cached_7_7_1, %branch53 ], [ %B_cached_7_7_1, %branch52 ], [ %B_cached_7_7_1, %branch51 ], [ %B_cached_7_7_1, %branch50 ], [ %B_cached_7_7_1, %branch49 ], [ %B_cached_7_7_1, %branch5 ], [ %B_cached_7_7_1, %branch63 ], [ %B_cached_7_7_1, %branch62 ], [ %B_cached_7_7_1, %branch61 ], [ %B_cached_7_7_1, %branch60 ], [ %B_cached_7_7_1, %branch59 ], [ %B_cached_7_7_1, %branch58 ], [ %B_cached_7_7_1, %branch57 ], [ %B_cached_7_7_1, %branch6 ], [ %B_cached_7_0, %branch71 ], [ %B_cached_7_7_1, %branch70 ], [ %B_cached_7_7_1, %branch69 ], [ %B_cached_7_7_1, %branch68 ], [ %B_cached_7_7_1, %branch67 ], [ %B_cached_7_7_1, %branch66 ], [ %B_cached_7_7_1, %branch65 ], [ %B_cached_7_7_1, %branch7 ]
 
 ST_3: empty_12 [1/1] 0.00ns
-branch097:64  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_s)
+branch097:64  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str36, i32 %tmp_s)
 
 ST_3: stg_244 [1/1] 0.00ns
 branch097:66  br label %0

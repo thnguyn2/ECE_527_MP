@@ -330,13 +330,13 @@ architecture behav of DCT_MAT_Multiply_Loop_LoadRow_proc is
     signal ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_9_fu_13674_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_7_fu_13674_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal exitcond3_i_i6_fu_13620_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal i4_fu_13634_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal j_0_i_i_mid2_fu_13626_p3 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_fu_13656_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal p_addr_cast_fu_13664_p1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_3_i_trn_cast_fu_13652_p1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_7_i_trn_cast_fu_13652_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal p_addr1_fu_13668_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_sig_cseq_ST_st4_fsm_2 : STD_LOGIC;
     signal ap_sig_bdd_3018 : BOOLEAN;
@@ -574,7 +574,7 @@ begin
                 ap_NS_fsm <= "XXX";
         end case;
     end process;
-    B_address0 <= tmp_9_fu_13674_p1(6 - 1 downto 0);
+    B_address0 <= tmp_7_fu_13674_p1(6 - 1 downto 0);
 
     -- B_cached_0_0_2_phi_fu_6248_p128 assign process. --
     B_cached_0_0_2_phi_fu_6248_p128_assign_proc : process(B_q0, B_cached_0_0_1_reg_427, exitcond_flatten_reg_14073, ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it1, tmp_1_reg_14087, tmp_2_reg_14096, ap_reg_phiprechg_B_cached_0_0_2_reg_6244pp0_it1)
@@ -1662,11 +1662,11 @@ begin
         ap_const_lv4_0 when (exitcond3_i_i6_fu_13620_p2(0) = '1') else 
         j_0_i_i_reg_92;
     j_fu_13683_p2 <= std_logic_vector(unsigned(j_0_i_i_mid2_fu_13626_p3) + unsigned(ap_const_lv4_1));
-    p_addr1_fu_13668_p2 <= std_logic_vector(unsigned(p_addr_cast_fu_13664_p1) + unsigned(tmp_3_i_trn_cast_fu_13652_p1));
+    p_addr1_fu_13668_p2 <= std_logic_vector(unsigned(p_addr_cast_fu_13664_p1) + unsigned(tmp_7_i_trn_cast_fu_13652_p1));
     p_addr_cast_fu_13664_p1 <= std_logic_vector(resize(unsigned(tmp_fu_13656_p3),8));
     tmp_1_fu_13648_p1 <= i_0_i_i_mid2_fu_13640_p3(3 - 1 downto 0);
     tmp_2_fu_13679_p1 <= j_0_i_i_mid2_fu_13626_p3(3 - 1 downto 0);
-    tmp_3_i_trn_cast_fu_13652_p1 <= std_logic_vector(resize(unsigned(j_0_i_i_mid2_fu_13626_p3),8));
-    tmp_9_fu_13674_p1 <= std_logic_vector(resize(unsigned(p_addr1_fu_13668_p2),64));
+    tmp_7_fu_13674_p1 <= std_logic_vector(resize(unsigned(p_addr1_fu_13668_p2),64));
+    tmp_7_i_trn_cast_fu_13652_p1 <= std_logic_vector(resize(unsigned(j_0_i_i_mid2_fu_13626_p3),8));
     tmp_fu_13656_p3 <= (i_0_i_i_mid2_fu_13640_p3 & ap_const_lv3_0);
 end behav;

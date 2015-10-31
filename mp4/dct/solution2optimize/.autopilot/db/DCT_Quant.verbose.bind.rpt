@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Quant'
 ================================================================
-* Date:           Fri Oct 30 16:48:57 2015
+* Date:           Fri Oct 30 22:32:24 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -134,8 +134,8 @@ IsGatedGlobalClock: 0
 	3  / (!function_read & !exitcond1_i3)
 	22  / (function_read & !exitcond1_i)
 3 --> 
-	4  / (!exitcond_i7)
-	2  / (exitcond_i7)
+	4  / (!exitcond_i6)
+	2  / (exitcond_i6)
 4 --> 
 	5  / true
 5 --> 
@@ -212,8 +212,8 @@ ST_2: stg_33 [1/1] 0.00ns
 ST_2: stg_34 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind
 
-ST_2: tmp_1_i4 [1/1] 0.00ns
-:1  %tmp_1_i4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
+ST_2: tmp_1_i [1/1] 0.00ns
+:1  %tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
 
 ST_2: tmp_1 [1/1] 0.00ns
 :2  %tmp_1 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_i2, i3 0)
@@ -242,8 +242,8 @@ ST_2: stg_43 [1/1] 0.00ns
 ST_2: stg_44 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind
 
-ST_2: tmp_4_i [1/1] 0.00ns
-:1  %tmp_4_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
+ST_2: tmp_3_i [1/1] 0.00ns
+:1  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8)
 
 ST_2: tmp [1/1] 0.00ns
 :2  %tmp = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_i, i3 0)
@@ -259,26 +259,26 @@ DOT_Multiply.exit:0  ret void
 
 
  <State 3>: 4.43ns
-ST_3: j_i6 [1/1] 0.00ns
-:0  %j_i6 = phi i4 [ 0, %5 ], [ %j_1, %7 ]
+ST_3: j_i5 [1/1] 0.00ns
+:0  %j_i5 = phi i4 [ 0, %5 ], [ %j_1, %7 ]
 
-ST_3: exitcond_i7 [1/1] 1.88ns
-:1  %exitcond_i7 = icmp eq i4 %j_i6, -8
+ST_3: exitcond_i6 [1/1] 1.88ns
+:1  %exitcond_i6 = icmp eq i4 %j_i5, -8
 
 ST_3: empty_7 [1/1] 0.00ns
 :2  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
 
 ST_3: j_1 [1/1] 0.80ns
-:3  %j_1 = add i4 %j_i6, 1
+:3  %j_1 = add i4 %j_i5, 1
 
 ST_3: stg_54 [1/1] 0.00ns
-:4  br i1 %exitcond_i7, label %8, label %7
+:4  br i1 %exitcond_i6, label %8, label %7
 
-ST_3: tmp_i8_trn_cast [1/1] 0.00ns
-:1  %tmp_i8_trn_cast = zext i4 %j_i6 to i8
+ST_3: tmp_i7_trn_cast [1/1] 0.00ns
+:1  %tmp_i7_trn_cast = zext i4 %j_i5 to i8
 
 ST_3: p_addr1 [1/1] 1.72ns
-:2  %p_addr1 = add i8 %tmp_i8_trn_cast, %p_addr_cast
+:2  %p_addr1 = add i8 %tmp_i7_trn_cast, %p_addr_cast
 
 ST_3: tmp_3 [1/1] 0.00ns
 :3  %tmp_3 = zext i8 %p_addr1 to i64
@@ -290,7 +290,7 @@ ST_3: X_load_1 [2/2] 2.71ns
 :5  %X_load_1 = load float* %X_addr_1, align 4
 
 ST_3: empty_8 [1/1] 0.00ns
-:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i4)
+:0  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1_i)
 
 ST_3: stg_61 [1/1] 0.00ns
 :1  br label %.preheader
@@ -311,83 +311,83 @@ ST_4: QMatrix_load_1 [2/2] 2.39ns
 ST_5: QMatrix_load_1 [1/2] 2.39ns
 :7  %QMatrix_load_1 = load float* %QMatrix_addr_1, align 4
 
-ST_5: tmp_2_i [16/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_5: tmp_3_i1 [16/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 6>: 6.08ns
-ST_6: tmp_2_i [15/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_6: tmp_3_i1 [15/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 7>: 6.08ns
-ST_7: tmp_2_i [14/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_7: tmp_3_i1 [14/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 8>: 6.08ns
-ST_8: tmp_2_i [13/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_8: tmp_3_i1 [13/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 9>: 6.08ns
-ST_9: tmp_2_i [12/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_9: tmp_3_i1 [12/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 10>: 6.08ns
-ST_10: tmp_2_i [11/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_10: tmp_3_i1 [11/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 11>: 6.08ns
-ST_11: tmp_2_i [10/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_11: tmp_3_i1 [10/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 12>: 6.08ns
-ST_12: tmp_2_i [9/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_12: tmp_3_i1 [9/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 13>: 6.08ns
-ST_13: tmp_2_i [8/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_13: tmp_3_i1 [8/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 14>: 6.08ns
-ST_14: tmp_2_i [7/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_14: tmp_3_i1 [7/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 15>: 6.08ns
-ST_15: tmp_2_i [6/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_15: tmp_3_i1 [6/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 16>: 6.08ns
-ST_16: tmp_2_i [5/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_16: tmp_3_i1 [5/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 17>: 6.08ns
-ST_17: tmp_2_i [4/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_17: tmp_3_i1 [4/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 18>: 6.08ns
-ST_18: tmp_2_i [3/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_18: tmp_3_i1 [3/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 19>: 6.08ns
-ST_19: tmp_2_i [2/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_19: tmp_3_i1 [2/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 20>: 6.08ns
-ST_20: tmp_2_i [1/16] 6.08ns
-:8  %tmp_2_i = fdiv float %X_load_1, %QMatrix_load_1
+ST_20: tmp_3_i1 [1/16] 6.08ns
+:8  %tmp_3_i1 = fdiv float %X_load_1, %QMatrix_load_1
 
 
  <State 21>: 2.71ns
@@ -398,7 +398,7 @@ ST_21: Y_addr_1 [1/1] 0.00ns
 :9  %Y_addr_1 = getelementptr [64 x float]* %Y, i64 0, i64 %tmp_3
 
 ST_21: stg_84 [1/1] 2.71ns
-:10  store float %tmp_2_i, float* %Y_addr_1, align 4
+:10  store float %tmp_3_i1, float* %Y_addr_1, align 4
 
 ST_21: stg_85 [1/1] 0.00ns
 :11  br label %6
@@ -442,7 +442,7 @@ ST_22: QMatrix_load [2/2] 2.39ns
 :7  %QMatrix_load = load float* %QMatrix_addr, align 4
 
 ST_22: empty_5 [1/1] 0.00ns
-:0  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_4_i)
+:0  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_3_i)
 
 ST_22: stg_99 [1/1] 0.00ns
 :1  br label %.preheader2
@@ -455,32 +455,32 @@ ST_23: X_load [1/2] 2.71ns
 ST_23: QMatrix_load [1/2] 2.39ns
 :7  %QMatrix_load = load float* %QMatrix_addr, align 4
 
-ST_23: tmp_1_i [4/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_23: tmp_5_i [4/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 
  <State 24>: 5.70ns
-ST_24: tmp_1_i [3/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_24: tmp_5_i [3/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 
  <State 25>: 5.70ns
-ST_25: tmp_1_i [2/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_25: tmp_5_i [2/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 
  <State 26>: 8.41ns
 ST_26: stg_105 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str9) nounwind
 
-ST_26: tmp_1_i [1/4] 5.70ns
-:8  %tmp_1_i = fmul float %X_load, %QMatrix_load
+ST_26: tmp_5_i [1/4] 5.70ns
+:8  %tmp_5_i = fmul float %X_load, %QMatrix_load
 
 ST_26: Y_addr [1/1] 0.00ns
 :9  %Y_addr = getelementptr [64 x float]* %Y, i64 0, i64 %tmp_2
 
 ST_26: stg_108 [1/1] 2.71ns
-:10  store float %tmp_1_i, float* %Y_addr, align 4
+:10  store float %tmp_5_i, float* %Y_addr, align 4
 
 ST_26: stg_109 [1/1] 0.00ns
 :11  br label %2
@@ -499,10 +499,10 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ X]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xc91aa80; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ function_r]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xc91ab10; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xc91aba0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ QMatrix]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=1; mode=0xc91ac30; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ X]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0xfdfa4d0; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ function_r]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0xfdfa560; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ Y]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; mode=0xfdfa5f0; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ QMatrix]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=1; mode=0xfdfa680; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -517,7 +517,7 @@ empty_6         (speclooptripcount) [ 000000000000000000000000000]
 i_1             (add              ) [ 011111111111111111111111111]
 stg_33          (br               ) [ 000000000000000000000000000]
 stg_34          (specloopname     ) [ 000000000000000000000000000]
-tmp_1_i4        (specregionbegin  ) [ 000111111111111111111100000]
+tmp_1_i         (specregionbegin  ) [ 000111111111111111111100000]
 tmp_1           (bitconcatenate   ) [ 000000000000000000000000000]
 p_addr_cast     (zext             ) [ 000111111111111111111100000]
 stg_38          (br               ) [ 001111111111111111111111111]
@@ -527,17 +527,17 @@ empty           (speclooptripcount) [ 000000000000000000000000000]
 i               (add              ) [ 011111111111111111111111111]
 stg_43          (br               ) [ 000000000000000000000000000]
 stg_44          (specloopname     ) [ 000000000000000000000000000]
-tmp_4_i         (specregionbegin  ) [ 000000000000000000000011111]
+tmp_3_i         (specregionbegin  ) [ 000000000000000000000011111]
 tmp             (bitconcatenate   ) [ 000000000000000000000000000]
 p_addr2_cast    (zext             ) [ 000000000000000000000011111]
 stg_48          (br               ) [ 001111111111111111111111111]
 stg_49          (ret              ) [ 000000000000000000000000000]
-j_i6            (phi              ) [ 000100000000000000000000000]
-exitcond_i7     (icmp             ) [ 001111111111111111111111111]
+j_i5            (phi              ) [ 000100000000000000000000000]
+exitcond_i6     (icmp             ) [ 001111111111111111111111111]
 empty_7         (speclooptripcount) [ 000000000000000000000000000]
 j_1             (add              ) [ 001111111111111111111111111]
 stg_54          (br               ) [ 000000000000000000000000000]
-tmp_i8_trn_cast (zext             ) [ 000000000000000000000000000]
+tmp_i7_trn_cast (zext             ) [ 000000000000000000000000000]
 p_addr1         (add              ) [ 000000000000000000000000000]
 tmp_3           (zext             ) [ 000011111111111111111100000]
 X_addr_1        (getelementptr    ) [ 000010000000000000000000000]
@@ -546,7 +546,7 @@ stg_61          (br               ) [ 011111111111111111111111111]
 X_load_1        (load             ) [ 000001111111111111111000000]
 QMatrix_addr_1  (getelementptr    ) [ 000001000000000000000000000]
 QMatrix_load_1  (load             ) [ 000000111111111111111000000]
-tmp_2_i         (fdiv             ) [ 000000000000000000000100000]
+tmp_3_i1        (fdiv             ) [ 000000000000000000000100000]
 stg_82          (specloopname     ) [ 000000000000000000000000000]
 Y_addr_1        (getelementptr    ) [ 000000000000000000000000000]
 stg_84          (store            ) [ 000000000000000000000000000]
@@ -566,7 +566,7 @@ stg_99          (br               ) [ 011111111111111111111111111]
 X_load          (load             ) [ 000000000000000000000000111]
 QMatrix_load    (load             ) [ 000000000000000000000000111]
 stg_105         (specloopname     ) [ 000000000000000000000000000]
-tmp_1_i         (fmul             ) [ 000000000000000000000000000]
+tmp_5_i         (fmul             ) [ 000000000000000000000000000]
 Y_addr          (getelementptr    ) [ 000000000000000000000000000]
 stg_108         (store            ) [ 000000000000000000000000000]
 stg_109         (br               ) [ 001111111111111111111111111]
@@ -914,17 +914,17 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="124" class="1005" name="j_i6_reg_124">
+<comp id="124" class="1005" name="j_i5_reg_124">
 <pin_list>
 <pin id="125" dir="0" index="0" bw="4" slack="1"/>
 <pin id="126" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
-<opset="j_i6 (phireg) "/>
+<opset="j_i5 (phireg) "/>
 </bind>
 </comp>
 
-<comp id="128" class="1004" name="j_i6_phi_fu_128">
+<comp id="128" class="1004" name="j_i5_phi_fu_128">
 <pin_list>
 <pin id="129" dir="0" index="0" bw="1" slack="1"/>
 <pin id="130" dir="0" index="1" bw="0" slack="2147483647"/>
@@ -934,7 +934,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="j_i6/3 "/>
+<opset="j_i5/3 "/>
 </bind>
 </comp>
 
@@ -970,7 +970,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="fmul(13) " fcode="fmul"/>
-<opset="tmp_1_i/23 "/>
+<opset="tmp_5_i/23 "/>
 </bind>
 </comp>
 
@@ -982,7 +982,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="fdiv(16) " fcode="fdiv"/>
-<opset="tmp_2_i/5 "/>
+<opset="tmp_3_i1/5 "/>
 </bind>
 </comp>
 
@@ -1102,7 +1102,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="219" class="1004" name="exitcond_i7_fu_219">
+<comp id="219" class="1004" name="exitcond_i6_fu_219">
 <pin_list>
 <pin id="220" dir="0" index="0" bw="4" slack="0"/>
 <pin id="221" dir="0" index="1" bw="4" slack="0"/>
@@ -1110,7 +1110,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="exitcond_i7/3 "/>
+<opset="exitcond_i6/3 "/>
 </bind>
 </comp>
 
@@ -1126,14 +1126,14 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="231" class="1004" name="tmp_i8_trn_cast_fu_231">
+<comp id="231" class="1004" name="tmp_i7_trn_cast_fu_231">
 <pin_list>
 <pin id="232" dir="0" index="0" bw="4" slack="0"/>
 <pin id="233" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_i8_trn_cast/3 "/>
+<opset="tmp_i7_trn_cast/3 "/>
 </bind>
 </comp>
 
@@ -1308,13 +1308,13 @@ stg_109         (br               ) [ 001111111111111111111111111]
 </bind>
 </comp>
 
-<comp id="326" class="1005" name="tmp_2_i_reg_326">
+<comp id="326" class="1005" name="tmp_3_i1_reg_326">
 <pin_list>
 <pin id="327" dir="0" index="0" bw="32" slack="1"/>
 <pin id="328" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_2_i "/>
+<opset="tmp_3_i1 "/>
 </bind>
 </comp>
 
@@ -1580,10 +1580,10 @@ stg_109         (br               ) [ 001111111111111111111111111]
 		tmp : 1
 		p_addr2_cast : 2
 	State 3
-		exitcond_i7 : 1
+		exitcond_i6 : 1
 		j_1 : 1
 		stg_54 : 2
-		tmp_i8_trn_cast : 1
+		tmp_i7_trn_cast : 1
 		p_addr1 : 2
 		tmp_3 : 3
 		X_addr_1 : 4
@@ -1591,7 +1591,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 	State 4
 		QMatrix_load_1 : 1
 	State 5
-		tmp_2_i : 1
+		tmp_3_i1 : 1
 	State 6
 	State 7
 	State 8
@@ -1621,7 +1621,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 		QMatrix_addr : 4
 		QMatrix_load : 5
 	State 23
-		tmp_1_i : 1
+		tmp_5_i : 1
 	State 24
 	State 25
 	State 26
@@ -1649,7 +1649,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 |----------|--------------------------|---------|---------|---------|
 |          |    exitcond1_i3_fu_171   |    0    |    0    |    2    |
 |   icmp   |    exitcond1_i_fu_195    |    0    |    0    |    2    |
-|          |    exitcond_i7_fu_219    |    0    |    0    |    2    |
+|          |    exitcond_i6_fu_219    |    0    |    0    |    2    |
 |          |     exitcond_i_fu_245    |    0    |    0    |    2    |
 |----------|--------------------------|---------|---------|---------|
 |   read   | function_read_read_fu_36 |    0    |    0    |    0    |
@@ -1659,7 +1659,7 @@ stg_109         (br               ) [ 001111111111111111111111111]
 |----------|--------------------------|---------|---------|---------|
 |          |    p_addr_cast_fu_191    |    0    |    0    |    0    |
 |          |    p_addr2_cast_fu_215   |    0    |    0    |    0    |
-|   zext   |  tmp_i8_trn_cast_fu_231  |    0    |    0    |    0    |
+|   zext   |  tmp_i7_trn_cast_fu_231  |    0    |    0    |    0    |
 |          |       tmp_3_fu_240       |    0    |    0    |    0    |
 |          |   tmp_i_trn_cast_fu_257  |    0    |    0    |    0    |
 |          |       tmp_2_fu_266       |    0    |    0    |    0    |
@@ -1684,15 +1684,15 @@ N/A
 |      i_i_reg_113     |    4   |
 |       i_reg_292      |    4   |
 |      j_1_reg_305     |    4   |
-|     j_i6_reg_124     |    4   |
+|     j_i5_reg_124     |    4   |
 |      j_i_reg_135     |    4   |
 |       j_reg_334      |    4   |
 | p_addr2_cast_reg_297 |    8   |
 |  p_addr_cast_reg_284 |    8   |
 |        reg_159       |   32   |
 |        reg_165       |   32   |
-|    tmp_2_i_reg_326   |   32   |
 |     tmp_2_reg_339    |   64   |
+|   tmp_3_i1_reg_326   |   32   |
 |     tmp_3_reg_310    |   64   |
 +----------------------+--------+
 |         Total        |   297  |

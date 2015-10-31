@@ -351,7 +351,7 @@ architecture behav of DCT_MAT_Multiply_1_Loop_LoadRow_pr is
     signal ap_reg_phiprechg_B_cached_7_6_2_reg_13047pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_phiprechg_B_cached_3_6_2_reg_13245pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_phiprechg_B_cached_7_7_2_reg_13443pp0_it1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_3_i_fu_13668_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_7_i_fu_13668_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal j_0_i_i_mid2_fu_13660_p3 : STD_LOGIC_VECTOR (3 downto 0);
     signal i_fu_13690_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal B_cached_7_0_fu_13707_p1 : STD_LOGIC_VECTOR (31 downto 0);
@@ -643,7 +643,7 @@ begin
                 ap_NS_fsm <= "XXX";
         end case;
     end process;
-    B_0_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_0_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_0_ce0 assign process. --
     B_0_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -655,7 +655,7 @@ begin
         end if; 
     end process;
 
-    B_1_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_1_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_1_ce0 assign process. --
     B_1_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -667,7 +667,7 @@ begin
         end if; 
     end process;
 
-    B_2_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_2_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_2_ce0 assign process. --
     B_2_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -679,7 +679,7 @@ begin
         end if; 
     end process;
 
-    B_3_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_3_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_3_ce0 assign process. --
     B_3_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -691,7 +691,7 @@ begin
         end if; 
     end process;
 
-    B_4_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_4_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_4_ce0 assign process. --
     B_4_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -703,7 +703,7 @@ begin
         end if; 
     end process;
 
-    B_5_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_5_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_5_ce0 assign process. --
     B_5_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -715,7 +715,7 @@ begin
         end if; 
     end process;
 
-    B_6_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_6_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_6_ce0 assign process. --
     B_6_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -727,7 +727,7 @@ begin
         end if; 
     end process;
 
-    B_7_address0 <= tmp_3_i_fu_13668_p1(3 - 1 downto 0);
+    B_7_address0 <= tmp_7_i_fu_13668_p1(3 - 1 downto 0);
 
     -- B_7_ce0 assign process. --
     B_7_ce0_assign_proc : process(ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it0)
@@ -1814,6 +1814,6 @@ begin
         j_0_i_i_reg_179;
     j_fu_13684_p2 <= std_logic_vector(unsigned(j_0_i_i_mid2_fu_13660_p3) + unsigned(ap_const_lv4_1));
     tmp_20_fu_13680_p1 <= j_0_i_i_mid2_fu_13660_p3(3 - 1 downto 0);
-    tmp_3_i_fu_13668_p1 <= std_logic_vector(resize(unsigned(j_0_i_i_mid2_fu_13660_p3),64));
+    tmp_7_i_fu_13668_p1 <= std_logic_vector(resize(unsigned(j_0_i_i_mid2_fu_13660_p3),64));
     tmp_fu_13703_p1 <= i_0_i_i_mid2_fu_13696_p3(3 - 1 downto 0);
 end behav;

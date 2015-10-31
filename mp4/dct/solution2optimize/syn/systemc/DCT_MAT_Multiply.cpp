@@ -2010,11 +2010,11 @@ DCT_MAT_Multiply::DCT_MAT_Multiply(sc_module_name name) : sc_module(name), mVcdF
     sensitive << ( B_q0 );
 
     SC_METHOD(thread_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_ap_continue);
-    sensitive << ( ap_sig_ready_B_cached_0_4_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_1_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_0_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_2_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_3_channel_full_n );
+    sensitive << ( ap_sig_ready_B_cached_0_4_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_5_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_6_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_1_2_channel_full_n );
@@ -2999,11 +2999,11 @@ DCT_MAT_Multiply::DCT_MAT_Multiply(sc_module_name name) : sc_module(name), mVcdF
     sensitive << ( ap_sig_ready_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_ap_ready );
     sensitive << ( ap_sig_ready_DCT_MAT_Multiply_Loop_Row_proc_U0_ap_ready );
 
-    ap_reg_ready_B_cached_0_4_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_1_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_0_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_2_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_3_channel_full_n = SC_LOGIC_0;
+    ap_reg_ready_B_cached_0_4_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_5_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_6_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_1_2_channel_full_n = SC_LOGIC_0;
@@ -3329,10 +3329,6 @@ DCT_MAT_Multiply::DCT_MAT_Multiply(sc_module_name name) : sc_module(name), mVcdF
     sc_trace(mVcdFile, DCT_MAT_Multiply_Loop_LoadRow_proc_U0_ap_return_63, "DCT_MAT_Multiply_Loop_LoadRow_proc_U0_ap_return_63");
     sc_trace(mVcdFile, DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_pipo_status, "DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_pipo_status");
     sc_trace(mVcdFile, DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_pipo_update, "DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_pipo_update");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_4_channel, "ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_4_channel");
-    sc_trace(mVcdFile, B_cached_0_4_channel_full_n, "B_cached_0_4_channel_full_n");
-    sc_trace(mVcdFile, ap_reg_ready_B_cached_0_4_channel_full_n, "ap_reg_ready_B_cached_0_4_channel_full_n");
-    sc_trace(mVcdFile, ap_sig_ready_B_cached_0_4_channel_full_n, "ap_sig_ready_B_cached_0_4_channel_full_n");
     sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_1_channel, "ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_1_channel");
     sc_trace(mVcdFile, B_cached_0_1_channel_full_n, "B_cached_0_1_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_1_channel_full_n, "ap_reg_ready_B_cached_0_1_channel_full_n");
@@ -3349,6 +3345,10 @@ DCT_MAT_Multiply::DCT_MAT_Multiply(sc_module_name name) : sc_module(name), mVcdF
     sc_trace(mVcdFile, B_cached_0_3_channel_full_n, "B_cached_0_3_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_3_channel_full_n, "ap_reg_ready_B_cached_0_3_channel_full_n");
     sc_trace(mVcdFile, ap_sig_ready_B_cached_0_3_channel_full_n, "ap_sig_ready_B_cached_0_3_channel_full_n");
+    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_4_channel, "ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_4_channel");
+    sc_trace(mVcdFile, B_cached_0_4_channel_full_n, "B_cached_0_4_channel_full_n");
+    sc_trace(mVcdFile, ap_reg_ready_B_cached_0_4_channel_full_n, "ap_reg_ready_B_cached_0_4_channel_full_n");
+    sc_trace(mVcdFile, ap_sig_ready_B_cached_0_4_channel_full_n, "ap_sig_ready_B_cached_0_4_channel_full_n");
     sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_5_channel, "ap_chn_write_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_cached_0_5_channel");
     sc_trace(mVcdFile, B_cached_0_5_channel_full_n, "B_cached_0_5_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_5_channel_full_n, "ap_reg_ready_B_cached_0_5_channel_full_n");
@@ -6538,11 +6538,11 @@ void DCT_MAT_Multiply::thread_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_B_q0() {
 }
 
 void DCT_MAT_Multiply::thread_DCT_MAT_Multiply_Loop_LoadRow_proc_U0_ap_continue() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_4_channel_full_n.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_1_channel_full_n.read()) && 
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_1_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_0_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_2_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_3_channel_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_4_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_5_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_6_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_2_channel_full_n.read()) && 

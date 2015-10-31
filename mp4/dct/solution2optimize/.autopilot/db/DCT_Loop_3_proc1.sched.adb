@@ -399,7 +399,7 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>tmp_12</name>
+						<name>tmp_10</name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>88</lineNumber>

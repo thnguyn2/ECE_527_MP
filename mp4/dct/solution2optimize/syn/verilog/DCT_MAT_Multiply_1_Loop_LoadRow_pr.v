@@ -452,7 +452,7 @@ wire   [31:0] ap_reg_phiprechg_B_cached_7_5_2_reg_12849pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_7_6_2_reg_13047pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_3_6_2_reg_13245pp0_it1;
 wire   [31:0] ap_reg_phiprechg_B_cached_7_7_2_reg_13443pp0_it1;
-wire   [63:0] tmp_3_i_fu_13668_p1;
+wire   [63:0] tmp_7_i_fu_13668_p1;
 wire   [3:0] j_0_i_i_mid2_fu_13660_p3;
 wire   [3:0] i_fu_13690_p2;
 wire   [31:0] B_cached_7_0_fu_13707_p1;
@@ -1605,14 +1605,14 @@ begin
     endcase
 end
 
-assign B_0_address0 = tmp_3_i_fu_13668_p1;
-assign B_1_address0 = tmp_3_i_fu_13668_p1;
-assign B_2_address0 = tmp_3_i_fu_13668_p1;
-assign B_3_address0 = tmp_3_i_fu_13668_p1;
-assign B_4_address0 = tmp_3_i_fu_13668_p1;
-assign B_5_address0 = tmp_3_i_fu_13668_p1;
-assign B_6_address0 = tmp_3_i_fu_13668_p1;
-assign B_7_address0 = tmp_3_i_fu_13668_p1;
+assign B_0_address0 = tmp_7_i_fu_13668_p1;
+assign B_1_address0 = tmp_7_i_fu_13668_p1;
+assign B_2_address0 = tmp_7_i_fu_13668_p1;
+assign B_3_address0 = tmp_7_i_fu_13668_p1;
+assign B_4_address0 = tmp_7_i_fu_13668_p1;
+assign B_5_address0 = tmp_7_i_fu_13668_p1;
+assign B_6_address0 = tmp_7_i_fu_13668_p1;
+assign B_7_address0 = tmp_7_i_fu_13668_p1;
 assign B_cached_7_0_fu_13707_p1 = B_0_q0;
 assign B_cached_7_0_fu_13707_p2 = B_1_q0;
 assign B_cached_7_0_fu_13707_p3 = B_2_q0;
@@ -1782,7 +1782,7 @@ assign indvar_flatten_next_fu_13648_p2 = (indvar_flatten_reg_168 + ap_const_lv7_
 assign j_0_i_i_mid2_fu_13660_p3 = ((exitcond3_i_i_fu_13654_p2[0:0]===1'b1)? ap_const_lv4_0: j_0_i_i_reg_179);
 assign j_fu_13684_p2 = (j_0_i_i_mid2_fu_13660_p3 + ap_const_lv4_1);
 assign tmp_20_fu_13680_p1 = j_0_i_i_mid2_fu_13660_p3[2:0];
-assign tmp_3_i_fu_13668_p1 = j_0_i_i_mid2_fu_13660_p3;
+assign tmp_7_i_fu_13668_p1 = j_0_i_i_mid2_fu_13660_p3;
 assign tmp_fu_13703_p1 = i_0_i_i_mid2_fu_13696_p3[2:0];
 
 

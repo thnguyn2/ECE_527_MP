@@ -399,7 +399,7 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>tmp_12</name>
+              <name>tmp_10</name>
               <fileName>dct/dct.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>88</lineNumber>
@@ -423,7 +423,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_12_fu_95_p1</rtlName>
+              <rtlName>tmp_10_fu_95_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2003,7 +2003,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_12_fu_95</first>
+        <first>tmp_10_fu_95</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

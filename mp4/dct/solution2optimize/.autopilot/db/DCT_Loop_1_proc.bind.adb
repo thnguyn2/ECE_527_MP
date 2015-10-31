@@ -550,7 +550,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>tmp_3_i</name>
+						<name>tmp_2_i</name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>32</lineNumber>
@@ -2019,7 +2019,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_3_i_fu_89</first>
+			<first>tmp_2_i_fu_89</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

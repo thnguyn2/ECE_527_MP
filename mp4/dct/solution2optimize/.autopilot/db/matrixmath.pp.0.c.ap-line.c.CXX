@@ -10,4 +10,4 @@
 #pragma line 1 "<built-in>" 2 ::: 192
 #pragma line 1 "dct/matrixmath.c" 2 ::: 193
 #pragma line 1 "dct/matrixmath.h" 1 ::: 195
-#pragma line 3 "dct/matrixmath.c" 2 ::: 214
+#pragma line 2 "dct/matrixmath.c" 2 ::: 214

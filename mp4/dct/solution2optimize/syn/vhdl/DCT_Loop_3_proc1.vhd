@@ -60,7 +60,7 @@ architecture behav of DCT_Loop_3_proc1 is
     signal write_idx_reg_59 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_sig_cseq_ST_st3_fsm_2 : STD_LOGIC;
     signal ap_sig_bdd_73 : BOOLEAN;
-    signal tmp_12_fu_95_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_10_fu_95_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal tmp_34_fu_91_p1 : STD_LOGIC_VECTOR (5 downto 0);
     signal tempval_fu_100_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
@@ -173,7 +173,7 @@ begin
         end if; 
     end process;
 
-    Ymat_address0 <= tmp_12_fu_95_p1(6 - 1 downto 0);
+    Ymat_address0 <= tmp_10_fu_95_p1(6 - 1 downto 0);
 
     -- Ymat_ce0 assign process. --
     Ymat_ce0_assign_proc : process(ap_sig_cseq_ST_st2_fsm_1)
@@ -281,7 +281,7 @@ begin
 
     exitcond_fu_71_p2 <= "1" when (write_idx_reg_59 = ap_const_lv7_41) else "0";
     tempval_fu_100_p1 <= Ymat_q0;
-    tmp_12_fu_95_p1 <= std_logic_vector(resize(unsigned(tmp_34_fu_91_p1),64));
+    tmp_10_fu_95_p1 <= std_logic_vector(resize(unsigned(tmp_34_fu_91_p1),64));
     tmp_34_fu_91_p1 <= write_idx_reg_59(6 - 1 downto 0);
     write_idx_1_fu_77_p2 <= std_logic_vector(unsigned(write_idx_reg_59) + unsigned(ap_const_lv7_1));
 end behav;

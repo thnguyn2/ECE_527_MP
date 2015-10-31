@@ -47,7 +47,7 @@ newFuncRoot:0  %opt_type_02_loc_loc_loc0 = alloca i32, align 4
 
 <node id="4" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -251,10 +251,10 @@ newFuncRoot:2  br label %0
 
 <node id="19" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-:5  %tmp_3_i = icmp eq i7 %read_idx_0_i_i, 1
+:5  %tmp_2_i = icmp eq i7 %read_idx_0_i_i, 1
 
 ]]></node>
-<StgValue><ssdm name="tmp_3_i"/></StgValue>
+<StgValue><ssdm name="tmp_2_i"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -267,7 +267,7 @@ newFuncRoot:2  br label %0
 
 <node id="20" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_3_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1
+:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_2_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1
 
 ]]></node>
 <StgValue><ssdm name="tempin_0_opt_type_02_i_i"/></StgValue>
@@ -390,7 +390,7 @@ newFuncRoot:2  br label %0
 </dataflow>
 <dataflow id="33" from="X" to="stg_4" fromId="27" toId="4">
 </dataflow>
-<dataflow id="35" from="p_str111" to="stg_4" fromId="34" toId="4">
+<dataflow id="35" from="p_str1" to="stg_4" fromId="34" toId="4">
 </dataflow>
 <dataflow id="37" from="stg_36" to="stg_4" fromId="36" toId="4">
 </dataflow>
@@ -400,11 +400,11 @@ newFuncRoot:2  br label %0
 </dataflow>
 <dataflow id="40" from="stg_36" to="stg_4" fromId="36" toId="4">
 </dataflow>
-<dataflow id="42" from="p_str10" to="stg_4" fromId="41" toId="4">
+<dataflow id="42" from="p_str" to="stg_4" fromId="41" toId="4">
 </dataflow>
-<dataflow id="43" from="p_str10" to="stg_4" fromId="41" toId="4">
+<dataflow id="43" from="p_str" to="stg_4" fromId="41" toId="4">
 </dataflow>
-<dataflow id="44" from="p_str10" to="stg_4" fromId="41" toId="4">
+<dataflow id="44" from="p_str" to="stg_4" fromId="41" toId="4">
 </dataflow>
 <dataflow id="46" from="stg_45" to="read_idx_0_i_i" fromId="45" toId="6">
 <condition id="15">
@@ -461,11 +461,11 @@ newFuncRoot:2  br label %0
 </dataflow>
 <dataflow id="74" from="Xbuff_addr" to="stg_16" fromId="15" toId="16">
 </dataflow>
-<dataflow id="75" from="read_idx_0_i_i" to="tmp_3_i" fromId="6" toId="17">
+<dataflow id="75" from="read_idx_0_i_i" to="tmp_2_i" fromId="6" toId="17">
 </dataflow>
-<dataflow id="76" from="stg_61" to="tmp_3_i" fromId="61" toId="17">
+<dataflow id="76" from="stg_61" to="tmp_2_i" fromId="61" toId="17">
 </dataflow>
-<dataflow id="77" from="tmp_3_i" to="tempin_0_opt_type_02_i_i" fromId="17" toId="18">
+<dataflow id="77" from="tmp_2_i" to="tempin_0_opt_type_02_i_i" fromId="17" toId="18">
 </dataflow>
 <dataflow id="78" from="opt_type" to="tempin_0_opt_type_02_i_i" fromId="13" toId="18">
 </dataflow>

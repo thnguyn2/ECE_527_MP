@@ -212,7 +212,8 @@ void DOT_Multiply(float A[8][8],
 #pragma empty_line
 void DOT_Divide(float A[8][8],
   float B[8][8], float C[8][8]);
-#pragma line 3 "dct/matrixmath.c" 2
+#pragma line 2 "dct/matrixmath.c" 2
+#pragma empty_line
 #pragma empty_line
 void MAT_Multiply(float A[8][8],
   float B[8][8], float C[8][8])

@@ -11,5 +11,5 @@
 #pragma line 1 "dct/quant.c" 2 ::: 193
 #pragma line 1 "dct/quant.h" 1 ::: 195
 #pragma line 1 "dct/matrixmath.h" 1 ::: 200
-#pragma line 6 "dct/quant.h" 2 ::: 219
-#pragma line 3 "dct/quant.c" 2 ::: 228
+#pragma line 5 "dct/quant.h" 2 ::: 219
+#pragma line 2 "dct/quant.c" 2 ::: 229

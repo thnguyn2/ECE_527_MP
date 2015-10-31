@@ -749,7 +749,7 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>tmp_6</name>
+						<name>tmp_7</name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>40</lineNumber>
@@ -791,7 +791,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>tmp_7</name>
+						<name>tmp_8</name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>40</lineNumber>
@@ -916,7 +916,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_8_trn_cast</name>
+						<name>tmp_9_trn_cast</name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>40</lineNumber>
@@ -999,7 +999,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_8</name>
+						<name>tmp_6</name>
 						<fileName>dct/dct.c</fileName>
 						<fileDirectory>e:/Ubuntu_source_code_data/ECE_527_MP/mp4</fileDirectory>
 						<lineNumber>40</lineNumber>
@@ -2874,23 +2874,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_6_fu_134</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>26</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_7_fu_139</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>27</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_8_fu_153</first>
+			<first>tmp_6_fu_153</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2898,7 +2882,23 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_8_trn_cast_fu_144</first>
+			<first>tmp_7_fu_134</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>26</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_8_fu_139</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>27</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_9_trn_cast_fu_144</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

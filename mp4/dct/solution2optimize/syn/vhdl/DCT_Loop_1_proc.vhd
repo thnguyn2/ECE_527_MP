@@ -59,7 +59,7 @@ architecture behav of DCT_Loop_1_proc is
     signal p_0_rec_i_i_cast_fu_67_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal opt_type_02_loc_loc_loc0_fu_30 : STD_LOGIC_VECTOR (31 downto 0);
     signal tempin_0_opt_type_02_i_i_fu_95_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_3_i_fu_89_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_2_i_fu_89_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
 
 
@@ -266,7 +266,7 @@ begin
     p_0_rec_i_i_cast_fu_67_p1 <= std_logic_vector(resize(unsigned(read_idx_0_i_i_reg_52),64));
     read_idx_fu_78_p2 <= std_logic_vector(unsigned(read_idx_0_i_i_reg_52) + unsigned(ap_const_lv7_1));
     tempin_0_opt_type_02_i_i_fu_95_p3 <= 
-        X_dout when (tmp_3_i_fu_89_p2(0) = '1') else 
+        X_dout when (tmp_2_i_fu_89_p2(0) = '1') else 
         opt_type_02_loc_loc_loc0_fu_30;
-    tmp_3_i_fu_89_p2 <= "1" when (read_idx_0_i_i_reg_52 = ap_const_lv7_1) else "0";
+    tmp_2_i_fu_89_p2 <= "1" when (read_idx_0_i_i_reg_52 = ap_const_lv7_1) else "0";
 end behav;

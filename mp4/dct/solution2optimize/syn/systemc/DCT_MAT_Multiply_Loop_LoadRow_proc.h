@@ -315,13 +315,13 @@ struct DCT_MAT_Multiply_Loop_LoadRow_proc : public sc_module {
     sc_signal< sc_lv<32> > ap_reg_phiprechg_B_cached_7_6_2_reg_13010pp0_it1;
     sc_signal< sc_lv<32> > ap_reg_phiprechg_B_cached_3_6_2_reg_13209pp0_it1;
     sc_signal< sc_lv<32> > ap_reg_phiprechg_B_cached_7_7_2_reg_13408pp0_it1;
-    sc_signal< sc_lv<64> > tmp_9_fu_13674_p1;
+    sc_signal< sc_lv<64> > tmp_7_fu_13674_p1;
     sc_signal< sc_lv<1> > exitcond3_i_i6_fu_13620_p2;
     sc_signal< sc_lv<4> > i4_fu_13634_p2;
     sc_signal< sc_lv<4> > j_0_i_i_mid2_fu_13626_p3;
     sc_signal< sc_lv<7> > tmp_fu_13656_p3;
     sc_signal< sc_lv<8> > p_addr_cast_fu_13664_p1;
-    sc_signal< sc_lv<8> > tmp_3_i_trn_cast_fu_13652_p1;
+    sc_signal< sc_lv<8> > tmp_7_i_trn_cast_fu_13652_p1;
     sc_signal< sc_lv<8> > p_addr1_fu_13668_p2;
     sc_signal< sc_logic > ap_sig_cseq_ST_st4_fsm_2;
     sc_signal< bool > ap_sig_bdd_3018;
@@ -567,8 +567,8 @@ struct DCT_MAT_Multiply_Loop_LoadRow_proc : public sc_module {
     void thread_p_addr_cast_fu_13664_p1();
     void thread_tmp_1_fu_13648_p1();
     void thread_tmp_2_fu_13679_p1();
-    void thread_tmp_3_i_trn_cast_fu_13652_p1();
-    void thread_tmp_9_fu_13674_p1();
+    void thread_tmp_7_fu_13674_p1();
+    void thread_tmp_7_i_trn_cast_fu_13652_p1();
     void thread_tmp_fu_13656_p3();
     void thread_ap_NS_fsm();
 };
