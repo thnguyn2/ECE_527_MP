@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_2_proc'
 ================================================================
-* Date:           Fri Oct 30 14:22:51 2015
+* Date:           Fri Oct 30 16:48:57 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -161,20 +161,20 @@ ST_2: stg_10 [1/1] 0.00ns
 ST_2: tmp [1/1] 0.00ns
 .preheader.preheader:0  %tmp = trunc i4 %rowidx to i3
 
-ST_2: tmp_2 [1/1] 0.00ns
-.preheader.preheader:1  %tmp_2 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %tmp, i3 0)
+ST_2: tmp_4 [1/1] 0.00ns
+.preheader.preheader:1  %tmp_4 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %tmp, i3 0)
 
 ST_2: idx [1/1] 0.00ns
-.preheader.preheader:2  %idx = or i6 %tmp_2, 2
+.preheader.preheader:2  %idx = or i6 %tmp_4, 2
 
 ST_2: idx_cast [1/1] 0.00ns
 .preheader.preheader:3  %idx_cast = zext i6 %idx to i7
 
-ST_2: tmp_1 [1/1] 0.00ns
-.preheader.preheader:4  %tmp_1 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %rowidx, i3 0)
+ST_2: tmp_5 [1/1] 0.00ns
+.preheader.preheader:4  %tmp_5 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %rowidx, i3 0)
 
 ST_2: p_addr_cast [1/1] 0.00ns
-.preheader.preheader:5  %p_addr_cast = zext i7 %tmp_1 to i8
+.preheader.preheader:5  %p_addr_cast = zext i7 %tmp_5 to i8
 
 ST_2: stg_17 [1/1] 1.57ns
 .preheader.preheader:6  br label %.preheader
@@ -193,8 +193,8 @@ ST_3: colidx_cast [1/1] 0.00ns
 ST_3: exitcond3 [1/1] 1.88ns
 .preheader:2  %exitcond3 = icmp eq i4 %colidx, -8
 
-ST_3: empty_4 [1/1] 0.00ns
-.preheader:3  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
+ST_3: empty_9 [1/1] 0.00ns
+.preheader:3  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind
 
 ST_3: colidx_1 [1/1] 0.80ns
 .preheader:4  %colidx_1 = add i4 %colidx, 1
@@ -202,34 +202,34 @@ ST_3: colidx_1 [1/1] 0.80ns
 ST_3: stg_24 [1/1] 0.00ns
 .preheader:5  br i1 %exitcond3, label %.preheader9, label %0
 
-ST_3: tmp_5 [1/1] 1.72ns
-:0  %tmp_5 = add i7 %idx_cast, %colidx_cast
+ST_3: tmp_6 [1/1] 1.72ns
+:0  %tmp_6 = add i7 %idx_cast, %colidx_cast
 
-ST_3: tmp_6 [1/1] 0.00ns
-:1  %tmp_6 = zext i7 %tmp_5 to i64
+ST_3: tmp_7 [1/1] 0.00ns
+:1  %tmp_7 = zext i7 %tmp_6 to i64
 
 ST_3: Xbuff_addr [1/1] 0.00ns
-:2  %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp_6
+:2  %Xbuff_addr = getelementptr inbounds [66 x float]* %Xbuff, i64 0, i64 %tmp_7
 
 ST_3: Xbuff_load [2/2] 2.71ns
 :3  %Xbuff_load = load float* %Xbuff_addr, align 4
 
-ST_3: tmp_7_trn_cast [1/1] 0.00ns
-:4  %tmp_7_trn_cast = zext i4 %colidx to i8
+ST_3: tmp_8_trn_cast [1/1] 0.00ns
+:4  %tmp_8_trn_cast = zext i4 %colidx to i8
 
 ST_3: p_addr1 [1/1] 1.72ns
-:5  %p_addr1 = add i8 %tmp_7_trn_cast, %p_addr_cast
+:5  %p_addr1 = add i8 %tmp_8_trn_cast, %p_addr_cast
 
 
  <State 4>: 5.42ns
 ST_4: Xbuff_load [1/2] 2.71ns
 :3  %Xbuff_load = load float* %Xbuff_addr, align 4
 
-ST_4: tmp_3 [1/1] 0.00ns
-:6  %tmp_3 = zext i8 %p_addr1 to i64
+ST_4: tmp_8 [1/1] 0.00ns
+:6  %tmp_8 = zext i8 %p_addr1 to i64
 
 ST_4: Xmat_addr [1/1] 0.00ns
-:7  %Xmat_addr = getelementptr [64 x float]* %Xmat, i64 0, i64 %tmp_3
+:7  %Xmat_addr = getelementptr [64 x float]* %Xmat, i64 0, i64 %tmp_8
 
 ST_4: stg_34 [1/1] 2.71ns
 :8  store float %Xbuff_load, float* %Xmat_addr, align 4

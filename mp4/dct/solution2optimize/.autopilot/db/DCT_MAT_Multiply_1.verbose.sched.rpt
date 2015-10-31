@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1'
 ================================================================
-* Date:           Fri Oct 30 14:23:12 2015
+* Date:           Fri Oct 30 16:49:34 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -130,12 +130,12 @@ IsGatedGlobalClock: 0
 
  <State 1>: 0.00ns
 ST_1: call_ret [2/2] 0.00ns
-codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply.1_Loop_LoadRow_pr()
+codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply.1_Loop_LoadRow_pr([8 x float]* %B_0, [8 x float]* %B_1, [8 x float]* %B_2, [8 x float]* %B_3, [8 x float]* %B_4, [8 x float]* %B_5, [8 x float]* %B_6, [8 x float]* %B_7)
 
 
  <State 2>: 0.00ns
 ST_2: call_ret [1/2] 0.00ns
-codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply.1_Loop_LoadRow_pr()
+codeRepl:1  %call_ret = call fastcc { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } @DCT_MAT_Multiply.1_Loop_LoadRow_pr([8 x float]* %B_0, [8 x float]* %B_1, [8 x float]* %B_2, [8 x float]* %B_3, [8 x float]* %B_4, [8 x float]* %B_5, [8 x float]* %B_6, [8 x float]* %B_7)
 
 ST_2: B_cached_0_0_channel [1/1] 0.00ns
 codeRepl:2  %B_cached_0_0_channel = extractvalue { float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float } %call_ret, 0

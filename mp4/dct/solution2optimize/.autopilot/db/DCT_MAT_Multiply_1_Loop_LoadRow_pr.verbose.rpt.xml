@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_LoadRow_pr'" level="0">
-<item name = "Date">Fri Oct 30 14:23:20 2015
+<item name = "Date">Fri Oct 30 16:49:43 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="default">10.00, 7.36, 1.25</column>
+<column name="default">10.00, 6.24, 1.25</column>
 </table>
 </item>
 </section>
@@ -47,25 +47,25 @@
 <section name = "Utilization Estimates" level="0">
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Expression">-, -, 0, 37</column>
+<column name="Expression">-, -, 0, 29</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, -, -, -</column>
-<column name="Memory">1, -, 0, 0</column>
-<column name="Multiplexer">-, -, -, 2069</column>
-<column name="Register">-, -, 2080, -</column>
+<column name="Instance">-, -, 32, 64</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 2065</column>
+<column name="Register">-, -, 2074, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">~0, 0, 1, 3</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 4</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DCT_mux_8to1_sel3_32_1_U186">DCT_mux_8to1_sel3_32_1, 0, 0, 32, 64</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="Tinv_U">DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv, 1, 0, 0, 64, 32, 1, 2048</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -74,168 +74,165 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="Tinv_addr3_fu_13668_p2">+, 0, 0, 8, 8, 8</column>
-<column name="i4_fu_13634_p2">+, 0, 0, 4, 1, 4</column>
-<column name="indvar_flatten_next_fu_13614_p2">+, 0, 0, 7, 7, 1</column>
-<column name="j_fu_13683_p2">+, 0, 0, 4, 4, 1</column>
-<column name="i_0_i_i_mid2_fu_13640_p3">Select, 0, 0, 4, 1, 4</column>
-<column name="j_0_i_i_mid2_fu_13626_p3">Select, 0, 0, 4, 1, 1</column>
-<column name="exitcond3_i_i6_fu_13620_p2">icmp, 0, 0, 2, 4, 5</column>
-<column name="exitcond_flatten_fu_13608_p2">icmp, 0, 0, 3, 7, 8</column>
-<column name="ap_sig_bdd_396">or, 0, 0, 1, 1, 1</column>
+<column name="i_fu_13690_p2">+, 0, 0, 4, 1, 4</column>
+<column name="indvar_flatten_next_fu_13648_p2">+, 0, 0, 7, 7, 1</column>
+<column name="j_fu_13684_p2">+, 0, 0, 4, 4, 1</column>
+<column name="i_0_i_i_mid2_fu_13696_p3">Select, 0, 0, 4, 1, 4</column>
+<column name="j_0_i_i_mid2_fu_13660_p3">Select, 0, 0, 4, 1, 1</column>
+<column name="exitcond3_i_i_fu_13654_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="exitcond_flatten_fu_13642_p2">icmp, 0, 0, 3, 7, 8</column>
+<column name="ap_sig_bdd_454">or, 0, 0, 1, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="B_cached_0_0_2_phi_fu_6248_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_1_2_phi_fu_5651_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_2_2_phi_fu_5054_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_3_2_phi_fu_4457_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_4_2_phi_fu_3860_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_5_2_phi_fu_3263_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_6_2_phi_fu_2666_p128">32, 3, 32, 96</column>
-<column name="B_cached_0_7_2_phi_fu_2069_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_0_2_phi_fu_1472_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_1_2_phi_fu_875_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_2_2_phi_fu_1074_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_3_2_phi_fu_1273_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_4_2_phi_fu_1671_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_5_2_phi_fu_1870_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_6_2_phi_fu_2268_p128">32, 3, 32, 96</column>
-<column name="B_cached_1_7_2_phi_fu_2467_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_0_2_phi_fu_2865_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_1_2_phi_fu_3064_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_2_2_phi_fu_3462_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_3_2_phi_fu_3661_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_4_2_phi_fu_4059_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_5_2_phi_fu_4258_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_6_2_phi_fu_4656_p128">32, 3, 32, 96</column>
-<column name="B_cached_2_7_2_phi_fu_4855_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_0_2_phi_fu_5253_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_1_2_phi_fu_5452_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_2_2_phi_fu_5850_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_3_2_phi_fu_6049_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_4_2_phi_fu_6447_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_5_2_phi_fu_6646_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_6_2_phi_fu_13213_p128">32, 3, 32, 96</column>
-<column name="B_cached_3_7_2_phi_fu_12616_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_0_2_phi_fu_12019_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_1_2_phi_fu_11422_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_2_2_phi_fu_10825_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_3_2_phi_fu_10228_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_4_2_phi_fu_9631_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_5_2_phi_fu_9034_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_6_2_phi_fu_8437_p128">32, 3, 32, 96</column>
-<column name="B_cached_4_7_2_phi_fu_7840_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_0_2_phi_fu_7243_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_1_2_phi_fu_6845_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_2_2_phi_fu_7044_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_3_2_phi_fu_7442_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_4_2_phi_fu_7641_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_5_2_phi_fu_8039_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_6_2_phi_fu_8238_p128">32, 3, 32, 96</column>
-<column name="B_cached_5_7_2_phi_fu_8636_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_0_2_phi_fu_8835_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_1_2_phi_fu_9233_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_2_2_phi_fu_9432_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_3_2_phi_fu_9830_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_4_2_phi_fu_10029_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_5_2_phi_fu_10427_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_6_2_phi_fu_10626_p128">32, 3, 32, 96</column>
-<column name="B_cached_6_7_2_phi_fu_11024_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_0_2_phi_fu_11223_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_1_2_phi_fu_11621_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_2_2_phi_fu_11820_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_3_2_phi_fu_12218_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_4_2_phi_fu_12417_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_5_2_phi_fu_12815_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_6_2_phi_fu_13014_p128">32, 3, 32, 96</column>
-<column name="B_cached_7_7_2_phi_fu_13412_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_0_2_phi_fu_6319_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_1_2_phi_fu_5725_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_2_2_phi_fu_5131_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_3_2_phi_fu_4537_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_4_2_phi_fu_3943_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_5_2_phi_fu_3349_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_6_2_phi_fu_2755_p128">32, 3, 32, 96</column>
+<column name="B_cached_0_7_2_phi_fu_2161_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_0_2_phi_fu_1567_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_1_2_phi_fu_973_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_2_2_phi_fu_1171_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_3_2_phi_fu_1369_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_4_2_phi_fu_1765_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_5_2_phi_fu_1963_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_6_2_phi_fu_2359_p128">32, 3, 32, 96</column>
+<column name="B_cached_1_7_2_phi_fu_2557_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_0_2_phi_fu_2953_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_1_2_phi_fu_3151_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_2_2_phi_fu_3547_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_3_2_phi_fu_3745_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_4_2_phi_fu_4141_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_5_2_phi_fu_4339_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_6_2_phi_fu_4735_p128">32, 3, 32, 96</column>
+<column name="B_cached_2_7_2_phi_fu_4933_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_0_2_phi_fu_5329_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_1_2_phi_fu_5527_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_2_2_phi_fu_5923_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_3_2_phi_fu_6121_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_4_2_phi_fu_6517_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_5_2_phi_fu_6715_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_6_2_phi_fu_13249_p128">32, 3, 32, 96</column>
+<column name="B_cached_3_7_2_phi_fu_12655_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_0_2_phi_fu_12061_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_1_2_phi_fu_11467_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_2_2_phi_fu_10873_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_3_2_phi_fu_10279_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_4_2_phi_fu_9685_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_5_2_phi_fu_9091_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_6_2_phi_fu_8497_p128">32, 3, 32, 96</column>
+<column name="B_cached_4_7_2_phi_fu_7903_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_0_2_phi_fu_7309_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_1_2_phi_fu_6913_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_2_2_phi_fu_7111_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_3_2_phi_fu_7507_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_4_2_phi_fu_7705_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_5_2_phi_fu_8101_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_6_2_phi_fu_8299_p128">32, 3, 32, 96</column>
+<column name="B_cached_5_7_2_phi_fu_8695_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_0_2_phi_fu_8893_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_1_2_phi_fu_9289_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_2_2_phi_fu_9487_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_3_2_phi_fu_9883_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_4_2_phi_fu_10081_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_5_2_phi_fu_10477_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_6_2_phi_fu_10675_p128">32, 3, 32, 96</column>
+<column name="B_cached_6_7_2_phi_fu_11071_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_0_2_phi_fu_11269_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_1_2_phi_fu_11665_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_2_2_phi_fu_11863_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_3_2_phi_fu_12259_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_4_2_phi_fu_12457_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_5_2_phi_fu_12853_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_6_2_phi_fu_13051_p128">32, 3, 32, 96</column>
+<column name="B_cached_7_7_2_phi_fu_13447_p128">32, 3, 32, 96</column>
 <column name="ap_NS_fsm">1, 4, 1, 4</column>
 <column name="ap_reg_ppiten_pp0_it1">1, 2, 1, 2</column>
-<column name="i_0_i_i_phi_fu_85_p4">4, 2, 4, 8</column>
-<column name="i_0_i_i_reg_81">4, 2, 4, 8</column>
-<column name="indvar_flatten_reg_70">7, 2, 7, 14</column>
-<column name="j_0_i_i_reg_92">4, 2, 4, 8</column>
+<column name="i_0_i_i_reg_190">4, 2, 4, 8</column>
+<column name="indvar_flatten_reg_168">7, 2, 7, 14</column>
+<column name="j_0_i_i_reg_179">4, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="B_cached_0_0_1_reg_427">32, 0, 32, 0</column>
-<column name="B_cached_0_1_1_reg_391">32, 0, 32, 0</column>
-<column name="B_cached_0_2_1_reg_355">32, 0, 32, 0</column>
-<column name="B_cached_0_3_1_reg_319">32, 0, 32, 0</column>
-<column name="B_cached_0_4_1_reg_283">32, 0, 32, 0</column>
-<column name="B_cached_0_5_1_reg_247">32, 0, 32, 0</column>
-<column name="B_cached_0_6_1_reg_211">32, 0, 32, 0</column>
-<column name="B_cached_0_7_1_reg_175">32, 0, 32, 0</column>
-<column name="B_cached_1_0_1_reg_139">32, 0, 32, 0</column>
-<column name="B_cached_1_1_1_reg_103">32, 0, 32, 0</column>
-<column name="B_cached_1_2_1_reg_115">32, 0, 32, 0</column>
-<column name="B_cached_1_3_1_reg_127">32, 0, 32, 0</column>
-<column name="B_cached_1_4_1_reg_151">32, 0, 32, 0</column>
-<column name="B_cached_1_5_1_reg_163">32, 0, 32, 0</column>
-<column name="B_cached_1_6_1_reg_187">32, 0, 32, 0</column>
-<column name="B_cached_1_7_1_reg_199">32, 0, 32, 0</column>
-<column name="B_cached_2_0_1_reg_223">32, 0, 32, 0</column>
-<column name="B_cached_2_1_1_reg_235">32, 0, 32, 0</column>
-<column name="B_cached_2_2_1_reg_259">32, 0, 32, 0</column>
-<column name="B_cached_2_3_1_reg_271">32, 0, 32, 0</column>
-<column name="B_cached_2_4_1_reg_295">32, 0, 32, 0</column>
-<column name="B_cached_2_5_1_reg_307">32, 0, 32, 0</column>
-<column name="B_cached_2_6_1_reg_331">32, 0, 32, 0</column>
-<column name="B_cached_2_7_1_reg_343">32, 0, 32, 0</column>
-<column name="B_cached_3_0_1_reg_367">32, 0, 32, 0</column>
-<column name="B_cached_3_1_1_reg_379">32, 0, 32, 0</column>
-<column name="B_cached_3_2_1_reg_403">32, 0, 32, 0</column>
-<column name="B_cached_3_3_1_reg_415">32, 0, 32, 0</column>
-<column name="B_cached_3_4_1_reg_439">32, 0, 32, 0</column>
-<column name="B_cached_3_5_1_reg_451">32, 0, 32, 0</column>
-<column name="B_cached_3_6_1_reg_847">32, 0, 32, 0</column>
-<column name="B_cached_3_7_1_reg_811">32, 0, 32, 0</column>
-<column name="B_cached_4_0_1_reg_775">32, 0, 32, 0</column>
-<column name="B_cached_4_1_1_reg_739">32, 0, 32, 0</column>
-<column name="B_cached_4_2_1_reg_703">32, 0, 32, 0</column>
-<column name="B_cached_4_3_1_reg_667">32, 0, 32, 0</column>
-<column name="B_cached_4_4_1_reg_631">32, 0, 32, 0</column>
-<column name="B_cached_4_5_1_reg_595">32, 0, 32, 0</column>
-<column name="B_cached_4_6_1_reg_559">32, 0, 32, 0</column>
-<column name="B_cached_4_7_1_reg_523">32, 0, 32, 0</column>
-<column name="B_cached_5_0_1_reg_487">32, 0, 32, 0</column>
-<column name="B_cached_5_1_1_reg_463">32, 0, 32, 0</column>
-<column name="B_cached_5_2_1_reg_475">32, 0, 32, 0</column>
-<column name="B_cached_5_3_1_reg_499">32, 0, 32, 0</column>
-<column name="B_cached_5_4_1_reg_511">32, 0, 32, 0</column>
-<column name="B_cached_5_5_1_reg_535">32, 0, 32, 0</column>
-<column name="B_cached_5_6_1_reg_547">32, 0, 32, 0</column>
-<column name="B_cached_5_7_1_reg_571">32, 0, 32, 0</column>
-<column name="B_cached_6_0_1_reg_583">32, 0, 32, 0</column>
-<column name="B_cached_6_1_1_reg_607">32, 0, 32, 0</column>
-<column name="B_cached_6_2_1_reg_619">32, 0, 32, 0</column>
-<column name="B_cached_6_3_1_reg_643">32, 0, 32, 0</column>
-<column name="B_cached_6_4_1_reg_655">32, 0, 32, 0</column>
-<column name="B_cached_6_5_1_reg_679">32, 0, 32, 0</column>
-<column name="B_cached_6_6_1_reg_691">32, 0, 32, 0</column>
-<column name="B_cached_6_7_1_reg_715">32, 0, 32, 0</column>
-<column name="B_cached_7_0_1_reg_727">32, 0, 32, 0</column>
-<column name="B_cached_7_1_1_reg_751">32, 0, 32, 0</column>
-<column name="B_cached_7_2_1_reg_763">32, 0, 32, 0</column>
-<column name="B_cached_7_3_1_reg_787">32, 0, 32, 0</column>
-<column name="B_cached_7_4_1_reg_799">32, 0, 32, 0</column>
-<column name="B_cached_7_5_1_reg_823">32, 0, 32, 0</column>
-<column name="B_cached_7_6_1_reg_835">32, 0, 32, 0</column>
-<column name="B_cached_7_7_1_reg_859">32, 0, 32, 0</column>
+<column name="B_cached_0_0_1_reg_525">32, 0, 32, 0</column>
+<column name="B_cached_0_1_1_reg_489">32, 0, 32, 0</column>
+<column name="B_cached_0_2_1_reg_453">32, 0, 32, 0</column>
+<column name="B_cached_0_3_1_reg_417">32, 0, 32, 0</column>
+<column name="B_cached_0_4_1_reg_381">32, 0, 32, 0</column>
+<column name="B_cached_0_5_1_reg_345">32, 0, 32, 0</column>
+<column name="B_cached_0_6_1_reg_309">32, 0, 32, 0</column>
+<column name="B_cached_0_7_1_reg_273">32, 0, 32, 0</column>
+<column name="B_cached_1_0_1_reg_237">32, 0, 32, 0</column>
+<column name="B_cached_1_1_1_reg_201">32, 0, 32, 0</column>
+<column name="B_cached_1_2_1_reg_213">32, 0, 32, 0</column>
+<column name="B_cached_1_3_1_reg_225">32, 0, 32, 0</column>
+<column name="B_cached_1_4_1_reg_249">32, 0, 32, 0</column>
+<column name="B_cached_1_5_1_reg_261">32, 0, 32, 0</column>
+<column name="B_cached_1_6_1_reg_285">32, 0, 32, 0</column>
+<column name="B_cached_1_7_1_reg_297">32, 0, 32, 0</column>
+<column name="B_cached_2_0_1_reg_321">32, 0, 32, 0</column>
+<column name="B_cached_2_1_1_reg_333">32, 0, 32, 0</column>
+<column name="B_cached_2_2_1_reg_357">32, 0, 32, 0</column>
+<column name="B_cached_2_3_1_reg_369">32, 0, 32, 0</column>
+<column name="B_cached_2_4_1_reg_393">32, 0, 32, 0</column>
+<column name="B_cached_2_5_1_reg_405">32, 0, 32, 0</column>
+<column name="B_cached_2_6_1_reg_429">32, 0, 32, 0</column>
+<column name="B_cached_2_7_1_reg_441">32, 0, 32, 0</column>
+<column name="B_cached_3_0_1_reg_465">32, 0, 32, 0</column>
+<column name="B_cached_3_1_1_reg_477">32, 0, 32, 0</column>
+<column name="B_cached_3_2_1_reg_501">32, 0, 32, 0</column>
+<column name="B_cached_3_3_1_reg_513">32, 0, 32, 0</column>
+<column name="B_cached_3_4_1_reg_537">32, 0, 32, 0</column>
+<column name="B_cached_3_5_1_reg_549">32, 0, 32, 0</column>
+<column name="B_cached_3_6_1_reg_945">32, 0, 32, 0</column>
+<column name="B_cached_3_7_1_reg_909">32, 0, 32, 0</column>
+<column name="B_cached_4_0_1_reg_873">32, 0, 32, 0</column>
+<column name="B_cached_4_1_1_reg_837">32, 0, 32, 0</column>
+<column name="B_cached_4_2_1_reg_801">32, 0, 32, 0</column>
+<column name="B_cached_4_3_1_reg_765">32, 0, 32, 0</column>
+<column name="B_cached_4_4_1_reg_729">32, 0, 32, 0</column>
+<column name="B_cached_4_5_1_reg_693">32, 0, 32, 0</column>
+<column name="B_cached_4_6_1_reg_657">32, 0, 32, 0</column>
+<column name="B_cached_4_7_1_reg_621">32, 0, 32, 0</column>
+<column name="B_cached_5_0_1_reg_585">32, 0, 32, 0</column>
+<column name="B_cached_5_1_1_reg_561">32, 0, 32, 0</column>
+<column name="B_cached_5_2_1_reg_573">32, 0, 32, 0</column>
+<column name="B_cached_5_3_1_reg_597">32, 0, 32, 0</column>
+<column name="B_cached_5_4_1_reg_609">32, 0, 32, 0</column>
+<column name="B_cached_5_5_1_reg_633">32, 0, 32, 0</column>
+<column name="B_cached_5_6_1_reg_645">32, 0, 32, 0</column>
+<column name="B_cached_5_7_1_reg_669">32, 0, 32, 0</column>
+<column name="B_cached_6_0_1_reg_681">32, 0, 32, 0</column>
+<column name="B_cached_6_1_1_reg_705">32, 0, 32, 0</column>
+<column name="B_cached_6_2_1_reg_717">32, 0, 32, 0</column>
+<column name="B_cached_6_3_1_reg_741">32, 0, 32, 0</column>
+<column name="B_cached_6_4_1_reg_753">32, 0, 32, 0</column>
+<column name="B_cached_6_5_1_reg_777">32, 0, 32, 0</column>
+<column name="B_cached_6_6_1_reg_789">32, 0, 32, 0</column>
+<column name="B_cached_6_7_1_reg_813">32, 0, 32, 0</column>
+<column name="B_cached_7_0_1_reg_825">32, 0, 32, 0</column>
+<column name="B_cached_7_1_1_reg_849">32, 0, 32, 0</column>
+<column name="B_cached_7_2_1_reg_861">32, 0, 32, 0</column>
+<column name="B_cached_7_3_1_reg_885">32, 0, 32, 0</column>
+<column name="B_cached_7_4_1_reg_897">32, 0, 32, 0</column>
+<column name="B_cached_7_5_1_reg_921">32, 0, 32, 0</column>
+<column name="B_cached_7_6_1_reg_933">32, 0, 32, 0</column>
+<column name="B_cached_7_7_1_reg_957">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it0">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
-<column name="exitcond_flatten_reg_14073">1, 0, 1, 0</column>
-<column name="i_0_i_i_mid2_reg_14082">4, 0, 4, 0</column>
-<column name="i_0_i_i_reg_81">4, 0, 4, 0</column>
-<column name="indvar_flatten_reg_70">7, 0, 7, 0</column>
-<column name="j_0_i_i_reg_92">4, 0, 4, 0</column>
-<column name="tmp_20_reg_14087">3, 0, 3, 0</column>
-<column name="tmp_21_reg_14096">3, 0, 3, 0</column>
+<column name="exitcond3_i_i_reg_14186">1, 0, 1, 0</column>
+<column name="exitcond_flatten_reg_14177">1, 0, 1, 0</column>
+<column name="i_0_i_i_reg_190">4, 0, 4, 0</column>
+<column name="indvar_flatten_reg_168">7, 0, 7, 0</column>
+<column name="j_0_i_i_reg_179">4, 0, 4, 0</column>
+<column name="tmp_20_reg_14231">3, 0, 3, 0</column>
 </table>
 </item>
 </section>
@@ -316,6 +313,30 @@
 <column name="ap_return_61">out, 32, ap_ctrl_hs, DCT_MAT_Multiply.1_Loop_LoadRow_pr, return value</column>
 <column name="ap_return_62">out, 32, ap_ctrl_hs, DCT_MAT_Multiply.1_Loop_LoadRow_pr, return value</column>
 <column name="ap_return_63">out, 32, ap_ctrl_hs, DCT_MAT_Multiply.1_Loop_LoadRow_pr, return value</column>
+<column name="B_0_address0">out, 3, ap_memory, B_0, array</column>
+<column name="B_0_ce0">out, 1, ap_memory, B_0, array</column>
+<column name="B_0_q0">in, 32, ap_memory, B_0, array</column>
+<column name="B_1_address0">out, 3, ap_memory, B_1, array</column>
+<column name="B_1_ce0">out, 1, ap_memory, B_1, array</column>
+<column name="B_1_q0">in, 32, ap_memory, B_1, array</column>
+<column name="B_2_address0">out, 3, ap_memory, B_2, array</column>
+<column name="B_2_ce0">out, 1, ap_memory, B_2, array</column>
+<column name="B_2_q0">in, 32, ap_memory, B_2, array</column>
+<column name="B_3_address0">out, 3, ap_memory, B_3, array</column>
+<column name="B_3_ce0">out, 1, ap_memory, B_3, array</column>
+<column name="B_3_q0">in, 32, ap_memory, B_3, array</column>
+<column name="B_4_address0">out, 3, ap_memory, B_4, array</column>
+<column name="B_4_ce0">out, 1, ap_memory, B_4, array</column>
+<column name="B_4_q0">in, 32, ap_memory, B_4, array</column>
+<column name="B_5_address0">out, 3, ap_memory, B_5, array</column>
+<column name="B_5_ce0">out, 1, ap_memory, B_5, array</column>
+<column name="B_5_q0">in, 32, ap_memory, B_5, array</column>
+<column name="B_6_address0">out, 3, ap_memory, B_6, array</column>
+<column name="B_6_ce0">out, 1, ap_memory, B_6, array</column>
+<column name="B_6_q0">in, 32, ap_memory, B_6, array</column>
+<column name="B_7_address0">out, 3, ap_memory, B_7, array</column>
+<column name="B_7_ce0">out, 1, ap_memory, B_7, array</column>
+<column name="B_7_q0">in, 32, ap_memory, B_7, array</column>
 </table>
 </item>
 </section>

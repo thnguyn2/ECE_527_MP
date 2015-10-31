@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT'
 ================================================================
-* Date:           Fri Oct 30 14:23:13 2015
+* Date:           Fri Oct 30 16:49:35 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -25,12 +25,12 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+----------+
-    |  Latency  |  Interval | Pipeline |
-    | min | max | min | max |   Type   |
-    +-----+-----+-----+-----+----------+
-    |  893|  893|  301|  301| dataflow |
-    +-----+-----+-----+-----+----------+
+    +-----+------+-----+------+----------+
+    |   Latency  |  Interval  | Pipeline |
+    | min |  max | min |  max |   Type   |
+    +-----+------+-----+------+----------+
+    |  347|  2320|  146|  1975| dataflow |
+    +-----+------+-----+------+----------+
 
     + Detail: 
         * Instance: 
@@ -115,10 +115,10 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 10
+* Number of FSM states: 8
 * Pipeline: 0
 * Dataflow Pipeline: 1
-  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+  DF-Pipeline-0: Size = 8, States = { 1 2 3 4 5 6 7 8 }
 
 * FSM state transitions: 
 1 --> 
@@ -136,10 +136,6 @@ IsGatedGlobalClock: 0
 7 --> 
 	8  / true
 8 --> 
-	9  / true
-9 --> 
-	10  / true
-10 --> 
 * FSM state operations: 
 
  <State 1>: 0.00ns
@@ -149,104 +145,76 @@ codeRepl:4  %Xbuff = alloca [66 x float], align 16
 ST_1: Xmat [1/1] 0.00ns
 codeRepl:5  %Xmat = alloca [64 x float], align 4
 
-ST_1: temp_0 [1/1] 0.00ns
-codeRepl:6  %temp_0 = alloca [8 x float], align 4
-
-ST_1: temp_1 [1/1] 0.00ns
-codeRepl:7  %temp_1 = alloca [8 x float], align 4
-
-ST_1: temp_2 [1/1] 0.00ns
-codeRepl:8  %temp_2 = alloca [8 x float], align 4
-
-ST_1: temp_3 [1/1] 0.00ns
-codeRepl:9  %temp_3 = alloca [8 x float], align 4
-
-ST_1: temp_4 [1/1] 0.00ns
-codeRepl:10  %temp_4 = alloca [8 x float], align 4
-
-ST_1: temp_5 [1/1] 0.00ns
-codeRepl:11  %temp_5 = alloca [8 x float], align 4
-
-ST_1: temp_6 [1/1] 0.00ns
-codeRepl:12  %temp_6 = alloca [8 x float], align 4
-
-ST_1: temp_7 [1/1] 0.00ns
-codeRepl:13  %temp_7 = alloca [8 x float], align 4
-
 ST_1: Ymat [1/1] 0.00ns
-codeRepl:14  %Ymat = alloca [64 x float], align 4
+codeRepl:6  %Ymat = alloca [64 x float], align 4
 
-ST_1: opt_type_02_loc_loc_loc_channe [2/2] 0.00ns
-codeRepl:18  %opt_type_02_loc_loc_loc_channe = call fastcc i32 @DCT_Loop_1_proc(i32* %X, [66 x float]* %Xbuff) nounwind
+ST_1: call_ret [2/2] 0.00ns
+codeRepl:10  %call_ret = call fastcc { i32, i32 } @DCT_Loop_1_proc(i32* %X, [66 x float]* %Xbuff) nounwind
 
 
  <State 2>: 0.00ns
-ST_2: opt_type_02_loc_loc_loc_channe [1/2] 0.00ns
-codeRepl:18  %opt_type_02_loc_loc_loc_channe = call fastcc i32 @DCT_Loop_1_proc(i32* %X, [66 x float]* %Xbuff) nounwind
+ST_2: call_ret [1/2] 0.00ns
+codeRepl:10  %call_ret = call fastcc { i32, i32 } @DCT_Loop_1_proc(i32* %X, [66 x float]* %Xbuff) nounwind
+
+ST_2: opt_type_02_loc_loc_loc_channe [1/1] 0.00ns
+codeRepl:11  %opt_type_02_loc_loc_loc_channe = extractvalue { i32, i32 } %call_ret, 0
+
+ST_2: opt_type_02_loc_loc_loc_channe_1 [1/1] 0.00ns
+codeRepl:12  %opt_type_02_loc_loc_loc_channe_1 = extractvalue { i32, i32 } %call_ret, 1
 
 
  <State 3>: 0.00ns
-ST_3: stg_24 [2/2] 0.00ns
-codeRepl:19  call fastcc void @DCT_Loop_2_proc([66 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
+ST_3: stg_16 [2/2] 0.00ns
+codeRepl:13  call fastcc void @DCT_Loop_2_proc([66 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
 
 
  <State 4>: 0.00ns
-ST_4: stg_25 [1/2] 0.00ns
-codeRepl:19  call fastcc void @DCT_Loop_2_proc([66 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
+ST_4: stg_17 [1/2] 0.00ns
+codeRepl:13  call fastcc void @DCT_Loop_2_proc([66 x float]* nocapture %Xbuff, [64 x float]* nocapture %Xmat) nounwind
 
 
- <State 5>: 0.00ns
-ST_5: stg_26 [2/2] 0.00ns
-codeRepl:20  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7) nounwind
+ <State 5>: 1.88ns
+ST_5: stg_18 [2/2] 1.88ns
+codeRepl:14  call fastcc void @DCT_Block__proc1(i32 %opt_type_02_loc_loc_loc_channe, [64 x float]* nocapture %Xmat, [64 x float]* nocapture %Ymat) nounwind
 
 
  <State 6>: 0.00ns
-ST_6: stg_27 [1/2] 0.00ns
-codeRepl:20  call fastcc void @DCT_MAT_Multiply([64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7) nounwind
+ST_6: stg_19 [1/2] 0.00ns
+codeRepl:14  call fastcc void @DCT_Block__proc1(i32 %opt_type_02_loc_loc_loc_channe, [64 x float]* nocapture %Xmat, [64 x float]* nocapture %Ymat) nounwind
 
 
  <State 7>: 0.00ns
-ST_7: stg_28 [2/2] 0.00ns
-codeRepl:21  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [64 x float]* nocapture %Ymat) nounwind
+ST_7: stg_20 [2/2] 0.00ns
+codeRepl:15  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_loc_loc_channe_1, [64 x float]* nocapture %Ymat) nounwind
 
 
  <State 8>: 0.00ns
-ST_8: stg_29 [1/2] 0.00ns
-codeRepl:21  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [64 x float]* nocapture %Ymat) nounwind
+ST_8: stg_21 [1/1] 0.00ns
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str10) nounwind
 
-
- <State 9>: 0.00ns
-ST_9: stg_30 [2/2] 0.00ns
-codeRepl:22  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_loc_loc_channe, [64 x float]* nocapture %Ymat) nounwind
-
-
- <State 10>: 0.00ns
-ST_10: stg_31 [1/1] 0.00ns
-codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str8) nounwind
-
-ST_10: stg_32 [1/1] 0.00ns
+ST_8: stg_22 [1/1] 0.00ns
 codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i32* %X) nounwind, !map !0
 
-ST_10: stg_33 [1/1] 0.00ns
+ST_8: stg_23 [1/1] 0.00ns
 codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Y) nounwind, !map !6
 
-ST_10: stg_34 [1/1] 0.00ns
+ST_8: stg_24 [1/1] 0.00ns
 codeRepl:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @str) nounwind
 
-ST_10: stg_35 [1/1] 0.00ns
-codeRepl:15  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+ST_8: stg_25 [1/1] 0.00ns
+codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind
 
-ST_10: stg_36 [1/1] 0.00ns
-codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+ST_8: stg_26 [1/1] 0.00ns
+codeRepl:8  call void (...)* @_ssdm_op_SpecInterface(i32* %Y, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind
 
-ST_10: stg_37 [1/1] 0.00ns
-codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str210, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+ST_8: stg_27 [1/1] 0.00ns
+codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str212, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10) nounwind
 
-ST_10: stg_38 [1/2] 0.00ns
-codeRepl:22  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_loc_loc_channe, [64 x float]* nocapture %Ymat) nounwind
+ST_8: stg_28 [1/2] 0.00ns
+codeRepl:15  call fastcc void @DCT_Loop_3_proc1(i32* %Y, i32 %opt_type_02_loc_loc_loc_channe_1, [64 x float]* nocapture %Ymat) nounwind
 
-ST_10: stg_39 [1/1] 0.00ns
-codeRepl:23  ret void
+ST_8: stg_29 [1/1] 0.00ns
+codeRepl:16  ret void
 
 
 
@@ -265,8 +233,6 @@ N/A
 	State 6
 	State 7
 	State 8
-	State 9
-	State 10
 
 
 ============================================================

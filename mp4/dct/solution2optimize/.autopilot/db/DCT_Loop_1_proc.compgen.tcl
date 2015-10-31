@@ -65,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_return \
     op interface \
-    ports { ap_return { O 32 vector } } \
+    ports { ap_return { O 1 vector } } \
 } "
 }
 

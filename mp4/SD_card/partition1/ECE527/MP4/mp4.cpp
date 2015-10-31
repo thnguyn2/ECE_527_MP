@@ -90,7 +90,7 @@ Mat dctBlock;
 Mat freqImg;
 Mat decompImg;
 Mat freqQ;
-
+//Output matrix to use for the Quantization in hardware
 //Image height and width
 int srcImgWidth;
 int srcImgHeight;
@@ -100,14 +100,6 @@ int imgHeight;
 //Compression data
 long int compressionCount=0;
 float compressionRatio;
-
-// ---Modified code for streaming data over the bus--
-/*
-std::ofstream opfile;
-opfile.open  ("/dev/xillybus_write_32", ofstream::out|ios::binary);//Read and write to the 32-bit xillybus
-std::ifstream ipfile;
-ipfile.open  ("/dev/xillybus_read_32", ifstream::in|ios::binary);
-*/
 
 int fdr, fdw;
 fdr = open("/dev/xillybus_read_32",O_RDONLY);
@@ -120,8 +112,10 @@ if ((fdr<0)||(fdw<0))
 
 unsigned char rcvBuf[sizeof(float)*64];//Buffer for the received data
 unsigned char hw_dctBuf[sizeof(float)*64];//Buffer for receiving the dct transformed data
+unsigned char hw_freqQBuf[sizeof(float)*64];//Buffer to hold the quantized data (freqQ) data
 Mat rcvBlock (8,8,CV_32F,rcvBuf);//Image defined on the top of the buffer
 Mat hw_dctBlock(8,8,CV_32F,hw_dctBuf);
+Mat hw_freqQ (8,8,CV_32F,hw_freqQBuf);
 //---------------------------------------------------
 
 if(argc < 2)
@@ -215,32 +209,34 @@ for(int i=0; i<imgSP.rows; i+=8)
         //Compute DCT of block
         //Time operation
         gettimeofday(&tdctStart,NULL);
-	op_mode = 1; //DCT
+	//Software dct block
+	dct(block,dctBlock);//Check to see if the data is sent back correctly or not
+
+	
+	op_mode = 0; //DCT
+	//hard ware dct block
 	write(fdw,(void*)&op_mode,sizeof(op_mode));//Write also the operation mode
 	write(fdw,(void*)(block.data),sizeof(float)*64);
 	write(fdw,(void*)&dummy_data,sizeof(dummy_data));
-	//--End of modification--
-	//These lines are for printing out the results of the transform
-	
-	//hard ware dct block
 	read(fdr,(void*)hw_dctBuf,sizeof(float)*64);//Read the buffer for dct performed on hardware
 	read(fdr,(void*)&op_mode_rcv,sizeof(op_mode_rcv));//A dummy number
+	//--End of modification--
 
-	//Software dct block
-	dct(block,dctBlock);//Check to see if the data is sent back correctly or not
+	/*
 	//Compare software and hardware dct results
-	if ((i==0)&&(j==0))
+	if ((i==32)&&(j==32))
 	{
 		for (int m=0;m<8;m++)
 			for (int n=0;n<8;n++)
 			{
 				printf("DCT [%d,%d]: HW: %f, SW: %f \n",m,n,hw_dctBlock.at<float>(m,n),dctBlock.at<float>(m,n));
 			}
-	printf("Opmode in: %d, Received value for the transformation mode: %d\n ",op_mode,op_mode_rcv);
-
-
+		printf("Opmode in: %d, Received value for the transformation mode: %d\n ",op_mode,op_mode_rcv);
 	}
-        gettimeofday(&tdctEnd, NULL);
+        */
+
+
+	gettimeofday(&tdctEnd, NULL);
         timersub(&tdctEnd,&tdctStart,&tdctDiff);
         timeDct += (tdctDiff.tv_sec*1000000.00) + tdctDiff.tv_usec;
         //End DCT
@@ -251,9 +247,33 @@ for(int i=0; i<imgSP.rows; i+=8)
 
             //Quantization involves dividing elements by corresponding elements in qunat matrix
             //Converting to 32bit signed integer performs rounding function and produces integer output
-//            divide(dctBlock,quant,freqQ);
-	  divide(hw_dctBlock,quant,freqQ);  
-          freqQ.convertTo(freqQ, CV_32S);
+
+        divide(dctBlock,quant,freqQ);//Software quantization
+	freqQ.convertTo(freqQ, CV_32S);
+
+	
+       	//Do quantization in the hardware by sending the block over the hardware
+	op_mode = 1; //Quantization
+	write(fdw,(void*)&op_mode,sizeof(op_mode));//Write also the operation mode
+	write(fdw,(void*)(hw_dctBlock.data),sizeof(float)*64);
+	write(fdw,(void*)&dummy_data,sizeof(dummy_data));
+	
+	read(fdr,(void*)hw_freqQBuf,sizeof(float)*64);//Read the buffer for dct performed on hardware
+	read(fdr,(void*)&op_mode_rcv,sizeof(op_mode_rcv));//A dummy number
+	//hw_freqQ.convertTo(hw_freqQ,CV_32S);//Convert into signed 32 bit numbers		
+
+
+	//Compare software and hardware quantization results
+	if ((i==24)&&(j==24))
+	{
+		for (int m=0;m<8;m++)
+			for (int n=0;n<8;n++)
+			{
+				printf("Quantization at [%d,%d]: input val: %f,  HW: %f, SW: %d \n",m,n,dctBlock.at<float>(m,n),hw_freqQ.at<float>(m,n),freqQ.at<int>(m,n));
+			}
+		printf("Opmode in: %d, Received value for op_mode mode: %d\n ",op_mode,op_mode_rcv);
+	}
+	//----End of modification for quantization-----       
 
         gettimeofday(&tquantEnd, NULL);
         timersub(&tquantEnd,&tquantStart,&tquantDiff);
@@ -266,8 +286,9 @@ for(int i=0; i<imgSP.rows; i+=8)
         for(int m=0; m<8; m++)
         for(int n=0; n<8; n++)
         {
-            freqImg.at<int>(i+m,j+n) = freqQ.at<int>(m,n);
-        }
+             // freqImg.at<int>(i+m,j+n) = freqQ.at<int>(m,n);//Copy the compressed patch into the frequency image
+            freqImg.at<int>(i+m,j+n)=(int)hw_freqQ.at<float>(m,n);
+	}
         gettimeofday(&tmatquantEnd, NULL);
         timersub(&tmatquantEnd,&tmatquantStart,&tmatquantDiff);
         timeMatquant += (tmatquantDiff.tv_sec*1000000.00) + tmatquantDiff.tv_usec;

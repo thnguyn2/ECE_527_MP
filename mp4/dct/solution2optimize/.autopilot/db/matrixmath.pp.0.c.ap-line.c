@@ -207,6 +207,11 @@ void MAT_Multiply(float A[8][8],
 #pragma empty_line
 void MAT_Multiply2(float A[8][8],
   float B[8][8], float C[8][8]);
+void DOT_Multiply(float A[8][8],
+  float B[8][8], float C[8][8]);
+#pragma empty_line
+void DOT_Divide(float A[8][8],
+  float B[8][8], float C[8][8]);
 #pragma line 3 "dct/matrixmath.c" 2
 #pragma empty_line
 void MAT_Multiply(float A[8][8],
@@ -265,4 +270,26 @@ void MAT_Multiply2(float A[8][8],
    }
    C[i][j] = temp;
   }
+}
+#pragma empty_line
+void DOT_Multiply(float A[8][8],
+  float B[8][8], float C[8][8])
+{
+ unsigned char i,j;
+ row: for (i=0; i<8; i++){
+  col: for (j=0; j<8; j++){
+   C[i][j] = A[i][j] * B[i][j];
+  }
+ }
+}
+#pragma empty_line
+void DOT_Divide(float A[8][8],
+  float B[8][8], float C[8][8])
+{
+ unsigned char i,j;
+ row: for (i=0; i<8; i++){
+  col: for (j=0; j<8; j++){
+   C[i][j] = A[i][j] / B[i][j];
+  }
+ }
 }

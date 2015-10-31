@@ -11,6 +11,12 @@ void MAT_Multiply(float A[MAT_SIZE][MAT_SIZE],
 
 void MAT_Multiply2(float A[MAT_SIZE][MAT_SIZE],
 		float B[MAT_SIZE][MAT_SIZE], float C[MAT_SIZE][MAT_SIZE]);
+void DOT_Multiply(float A[MAT_SIZE][MAT_SIZE],
+		float B[MAT_SIZE][MAT_SIZE], float C[MAT_SIZE][MAT_SIZE]);
+
+void DOT_Divide(float A[MAT_SIZE][MAT_SIZE],
+		float B[MAT_SIZE][MAT_SIZE], float C[MAT_SIZE][MAT_SIZE]);
+
 
 #endif
 

@@ -810,10 +810,10 @@ newFuncRoot:32  %p_read_96 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="107" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:33  %p_read3094 = call float @_ssdm_op_Read.ap_auto.float(float %p_read30)
+newFuncRoot:33  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_read30)
 
 ]]></node>
-<StgValue><ssdm name="p_read3094"/></StgValue>
+<StgValue><ssdm name="p_read_97"/></StgValue>
 </operation>
 
 <operation id="84" st_id="1" stage="1" lat="1">
@@ -825,10 +825,10 @@ newFuncRoot:33  %p_read3094 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="108" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:34  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_read29)
+newFuncRoot:34  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_read29)
 
 ]]></node>
-<StgValue><ssdm name="p_read_97"/></StgValue>
+<StgValue><ssdm name="p_read_98"/></StgValue>
 </operation>
 
 <operation id="85" st_id="1" stage="1" lat="1">
@@ -840,10 +840,10 @@ newFuncRoot:34  %p_read_97 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="109" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:35  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_read28)
+newFuncRoot:35  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_read28)
 
 ]]></node>
-<StgValue><ssdm name="p_read_98"/></StgValue>
+<StgValue><ssdm name="p_read_99"/></StgValue>
 </operation>
 
 <operation id="86" st_id="1" stage="1" lat="1">
@@ -855,10 +855,10 @@ newFuncRoot:35  %p_read_98 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="110" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:36  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_read27)
+newFuncRoot:36  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_read27)
 
 ]]></node>
-<StgValue><ssdm name="p_read_99"/></StgValue>
+<StgValue><ssdm name="p_read_100"/></StgValue>
 </operation>
 
 <operation id="87" st_id="1" stage="1" lat="1">
@@ -870,10 +870,10 @@ newFuncRoot:36  %p_read_99 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="111" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:37  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_read26)
+newFuncRoot:37  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_read26)
 
 ]]></node>
-<StgValue><ssdm name="p_read_100"/></StgValue>
+<StgValue><ssdm name="p_read_101"/></StgValue>
 </operation>
 
 <operation id="88" st_id="1" stage="1" lat="1">
@@ -885,10 +885,10 @@ newFuncRoot:37  %p_read_100 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="112" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:38  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_read25)
+newFuncRoot:38  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_read25)
 
 ]]></node>
-<StgValue><ssdm name="p_read_101"/></StgValue>
+<StgValue><ssdm name="p_read_102"/></StgValue>
 </operation>
 
 <operation id="89" st_id="1" stage="1" lat="1">
@@ -900,10 +900,10 @@ newFuncRoot:38  %p_read_101 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="113" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:39  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_read24)
+newFuncRoot:39  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_read24)
 
 ]]></node>
-<StgValue><ssdm name="p_read_102"/></StgValue>
+<StgValue><ssdm name="p_read_103"/></StgValue>
 </operation>
 
 <operation id="90" st_id="1" stage="1" lat="1">
@@ -915,10 +915,10 @@ newFuncRoot:39  %p_read_102 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="114" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:40  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_read23)
+newFuncRoot:40  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_read23)
 
 ]]></node>
-<StgValue><ssdm name="p_read_103"/></StgValue>
+<StgValue><ssdm name="p_read_104"/></StgValue>
 </operation>
 
 <operation id="91" st_id="1" stage="1" lat="1">
@@ -930,10 +930,10 @@ newFuncRoot:40  %p_read_103 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="115" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:41  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_read22)
+newFuncRoot:41  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_read22)
 
 ]]></node>
-<StgValue><ssdm name="p_read_104"/></StgValue>
+<StgValue><ssdm name="p_read_105"/></StgValue>
 </operation>
 
 <operation id="92" st_id="1" stage="1" lat="1">
@@ -945,10 +945,10 @@ newFuncRoot:41  %p_read_104 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="116" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:42  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_read21)
+newFuncRoot:42  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_read21)
 
 ]]></node>
-<StgValue><ssdm name="p_read_105"/></StgValue>
+<StgValue><ssdm name="p_read_106"/></StgValue>
 </operation>
 
 <operation id="93" st_id="1" stage="1" lat="1">
@@ -960,10 +960,10 @@ newFuncRoot:42  %p_read_105 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="117" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:43  %p_read2084 = call float @_ssdm_op_Read.ap_auto.float(float %p_read20)
+newFuncRoot:43  %p_read_107 = call float @_ssdm_op_Read.ap_auto.float(float %p_read20)
 
 ]]></node>
-<StgValue><ssdm name="p_read2084"/></StgValue>
+<StgValue><ssdm name="p_read_107"/></StgValue>
 </operation>
 
 <operation id="94" st_id="1" stage="1" lat="1">
@@ -975,10 +975,10 @@ newFuncRoot:43  %p_read2084 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="118" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:44  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_read19)
+newFuncRoot:44  %p_read_108 = call float @_ssdm_op_Read.ap_auto.float(float %p_read19)
 
 ]]></node>
-<StgValue><ssdm name="p_read_106"/></StgValue>
+<StgValue><ssdm name="p_read_108"/></StgValue>
 </operation>
 
 <operation id="95" st_id="1" stage="1" lat="1">
@@ -990,10 +990,10 @@ newFuncRoot:44  %p_read_106 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="119" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:45  %p_read_107 = call float @_ssdm_op_Read.ap_auto.float(float %p_read18)
+newFuncRoot:45  %p_read_109 = call float @_ssdm_op_Read.ap_auto.float(float %p_read18)
 
 ]]></node>
-<StgValue><ssdm name="p_read_107"/></StgValue>
+<StgValue><ssdm name="p_read_109"/></StgValue>
 </operation>
 
 <operation id="96" st_id="1" stage="1" lat="1">
@@ -1005,10 +1005,10 @@ newFuncRoot:45  %p_read_107 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="120" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:46  %p_read_108 = call float @_ssdm_op_Read.ap_auto.float(float %p_read17)
+newFuncRoot:46  %p_read_110 = call float @_ssdm_op_Read.ap_auto.float(float %p_read17)
 
 ]]></node>
-<StgValue><ssdm name="p_read_108"/></StgValue>
+<StgValue><ssdm name="p_read_110"/></StgValue>
 </operation>
 
 <operation id="97" st_id="1" stage="1" lat="1">
@@ -1020,10 +1020,10 @@ newFuncRoot:46  %p_read_108 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="121" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:47  %p_read_109 = call float @_ssdm_op_Read.ap_auto.float(float %p_read16)
+newFuncRoot:47  %p_read_111 = call float @_ssdm_op_Read.ap_auto.float(float %p_read16)
 
 ]]></node>
-<StgValue><ssdm name="p_read_109"/></StgValue>
+<StgValue><ssdm name="p_read_111"/></StgValue>
 </operation>
 
 <operation id="98" st_id="1" stage="1" lat="1">
@@ -1035,10 +1035,10 @@ newFuncRoot:47  %p_read_109 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="122" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:48  %p_read_110 = call float @_ssdm_op_Read.ap_auto.float(float %p_read15)
+newFuncRoot:48  %p_read_112 = call float @_ssdm_op_Read.ap_auto.float(float %p_read15)
 
 ]]></node>
-<StgValue><ssdm name="p_read_110"/></StgValue>
+<StgValue><ssdm name="p_read_112"/></StgValue>
 </operation>
 
 <operation id="99" st_id="1" stage="1" lat="1">
@@ -1050,10 +1050,10 @@ newFuncRoot:48  %p_read_110 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="123" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:49  %p_read_111 = call float @_ssdm_op_Read.ap_auto.float(float %p_read14)
+newFuncRoot:49  %p_read_113 = call float @_ssdm_op_Read.ap_auto.float(float %p_read14)
 
 ]]></node>
-<StgValue><ssdm name="p_read_111"/></StgValue>
+<StgValue><ssdm name="p_read_113"/></StgValue>
 </operation>
 
 <operation id="100" st_id="1" stage="1" lat="1">
@@ -1065,10 +1065,10 @@ newFuncRoot:49  %p_read_111 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="124" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:50  %p_read_112 = call float @_ssdm_op_Read.ap_auto.float(float %p_read13)
+newFuncRoot:50  %p_read_114 = call float @_ssdm_op_Read.ap_auto.float(float %p_read13)
 
 ]]></node>
-<StgValue><ssdm name="p_read_112"/></StgValue>
+<StgValue><ssdm name="p_read_114"/></StgValue>
 </operation>
 
 <operation id="101" st_id="1" stage="1" lat="1">
@@ -1080,10 +1080,10 @@ newFuncRoot:50  %p_read_112 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="125" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:51  %p_read_113 = call float @_ssdm_op_Read.ap_auto.float(float %p_read12)
+newFuncRoot:51  %p_read_115 = call float @_ssdm_op_Read.ap_auto.float(float %p_read12)
 
 ]]></node>
-<StgValue><ssdm name="p_read_113"/></StgValue>
+<StgValue><ssdm name="p_read_115"/></StgValue>
 </operation>
 
 <operation id="102" st_id="1" stage="1" lat="1">
@@ -1095,10 +1095,10 @@ newFuncRoot:51  %p_read_113 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="126" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:52  %p_read_114 = call float @_ssdm_op_Read.ap_auto.float(float %p_read11)
+newFuncRoot:52  %p_read_116 = call float @_ssdm_op_Read.ap_auto.float(float %p_read11)
 
 ]]></node>
-<StgValue><ssdm name="p_read_114"/></StgValue>
+<StgValue><ssdm name="p_read_116"/></StgValue>
 </operation>
 
 <operation id="103" st_id="1" stage="1" lat="1">
@@ -1110,10 +1110,10 @@ newFuncRoot:52  %p_read_114 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="127" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:53  %p_read1074 = call float @_ssdm_op_Read.ap_auto.float(float %p_read10)
+newFuncRoot:53  %p_read_117 = call float @_ssdm_op_Read.ap_auto.float(float %p_read10)
 
 ]]></node>
-<StgValue><ssdm name="p_read1074"/></StgValue>
+<StgValue><ssdm name="p_read_117"/></StgValue>
 </operation>
 
 <operation id="104" st_id="1" stage="1" lat="1">
@@ -1125,10 +1125,10 @@ newFuncRoot:53  %p_read1074 = call float @_ssdm_op_Read.ap_auto.float(float %p_r
 
 <node id="128" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:54  %p_read973 = call float @_ssdm_op_Read.ap_auto.float(float %p_read9)
+newFuncRoot:54  %p_read_118 = call float @_ssdm_op_Read.ap_auto.float(float %p_read9)
 
 ]]></node>
-<StgValue><ssdm name="p_read973"/></StgValue>
+<StgValue><ssdm name="p_read_118"/></StgValue>
 </operation>
 
 <operation id="105" st_id="1" stage="1" lat="1">
@@ -1140,10 +1140,10 @@ newFuncRoot:54  %p_read973 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="129" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:55  %p_read872 = call float @_ssdm_op_Read.ap_auto.float(float %p_read8)
+newFuncRoot:55  %p_read_119 = call float @_ssdm_op_Read.ap_auto.float(float %p_read8)
 
 ]]></node>
-<StgValue><ssdm name="p_read872"/></StgValue>
+<StgValue><ssdm name="p_read_119"/></StgValue>
 </operation>
 
 <operation id="106" st_id="1" stage="1" lat="1">
@@ -1155,10 +1155,10 @@ newFuncRoot:55  %p_read872 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="130" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:56  %p_read771 = call float @_ssdm_op_Read.ap_auto.float(float %p_read7)
+newFuncRoot:56  %p_read_120 = call float @_ssdm_op_Read.ap_auto.float(float %p_read7)
 
 ]]></node>
-<StgValue><ssdm name="p_read771"/></StgValue>
+<StgValue><ssdm name="p_read_120"/></StgValue>
 </operation>
 
 <operation id="107" st_id="1" stage="1" lat="1">
@@ -1170,10 +1170,10 @@ newFuncRoot:56  %p_read771 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="131" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:57  %p_read670 = call float @_ssdm_op_Read.ap_auto.float(float %p_read6)
+newFuncRoot:57  %p_read_121 = call float @_ssdm_op_Read.ap_auto.float(float %p_read6)
 
 ]]></node>
-<StgValue><ssdm name="p_read670"/></StgValue>
+<StgValue><ssdm name="p_read_121"/></StgValue>
 </operation>
 
 <operation id="108" st_id="1" stage="1" lat="1">
@@ -1185,10 +1185,10 @@ newFuncRoot:57  %p_read670 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="132" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:58  %p_read569 = call float @_ssdm_op_Read.ap_auto.float(float %p_read5)
+newFuncRoot:58  %p_read_122 = call float @_ssdm_op_Read.ap_auto.float(float %p_read5)
 
 ]]></node>
-<StgValue><ssdm name="p_read569"/></StgValue>
+<StgValue><ssdm name="p_read_122"/></StgValue>
 </operation>
 
 <operation id="109" st_id="1" stage="1" lat="1">
@@ -1200,10 +1200,10 @@ newFuncRoot:58  %p_read569 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="133" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:59  %p_read468 = call float @_ssdm_op_Read.ap_auto.float(float %p_read4)
+newFuncRoot:59  %p_read_123 = call float @_ssdm_op_Read.ap_auto.float(float %p_read4)
 
 ]]></node>
-<StgValue><ssdm name="p_read468"/></StgValue>
+<StgValue><ssdm name="p_read_123"/></StgValue>
 </operation>
 
 <operation id="110" st_id="1" stage="1" lat="1">
@@ -1215,10 +1215,10 @@ newFuncRoot:59  %p_read468 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="134" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:60  %p_read367 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)
+newFuncRoot:60  %p_read_124 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)
 
 ]]></node>
-<StgValue><ssdm name="p_read367"/></StgValue>
+<StgValue><ssdm name="p_read_124"/></StgValue>
 </operation>
 
 <operation id="111" st_id="1" stage="1" lat="1">
@@ -1230,10 +1230,10 @@ newFuncRoot:60  %p_read367 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="135" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:61  %p_read266 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)
+newFuncRoot:61  %p_read_125 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)
 
 ]]></node>
-<StgValue><ssdm name="p_read266"/></StgValue>
+<StgValue><ssdm name="p_read_125"/></StgValue>
 </operation>
 
 <operation id="112" st_id="1" stage="1" lat="1">
@@ -1245,10 +1245,10 @@ newFuncRoot:61  %p_read266 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="136" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:62  %p_read165 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)
+newFuncRoot:62  %p_read_126 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)
 
 ]]></node>
-<StgValue><ssdm name="p_read165"/></StgValue>
+<StgValue><ssdm name="p_read_126"/></StgValue>
 </operation>
 
 <operation id="113" st_id="1" stage="1" lat="1">
@@ -1260,10 +1260,10 @@ newFuncRoot:62  %p_read165 = call float @_ssdm_op_Read.ap_auto.float(float %p_re
 
 <node id="137" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:63  %p_read64 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
+newFuncRoot:63  %p_read391 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
 
 ]]></node>
-<StgValue><ssdm name="p_read64"/></StgValue>
+<StgValue><ssdm name="p_read391"/></StgValue>
 </operation>
 
 <operation id="114" st_id="1" stage="1" lat="1">
@@ -2635,10 +2635,10 @@ newFuncRoot:128  br label %0
 
 <node id="215" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.preheader:4  %i2 = add i4 1, %i_1
+.preheader:4  %i = add i4 1, %i_1
 
 ]]></node>
-<StgValue><ssdm name="i2"/></StgValue>
+<StgValue><ssdm name="i"/></StgValue>
 </operation>
 
 <operation id="204" st_id="3" stage="1" lat="1">
@@ -2651,7 +2651,7 @@ newFuncRoot:128  br label %0
 
 <node id="216" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i2, i4 %i_1
+.preheader:5  %i_1_mid2 = select i1 %exitcond, i4 %i, i4 %i_1
 
 ]]></node>
 <StgValue><ssdm name="i_1_mid2"/></StgValue>
@@ -3246,7 +3246,7 @@ newFuncRoot:128  br label %0
 
 <node id="231" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:20  %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read64, float %p_read165, float %p_read266, float %p_read367, float %p_read468, float %p_read569, float %p_read670, float %p_read771, i3 %tmp_33)
+.preheader:20  %tmp_s = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read391, float %p_read_126, float %p_read_125, float %p_read_124, float %p_read_123, float %p_read_122, float %p_read_121, float %p_read_120, i3 %tmp_33)
 
 ]]></node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -3278,7 +3278,7 @@ newFuncRoot:128  br label %0
 
 <node id="243" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:32  %tmp_19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read872, float %p_read973, float %p_read1074, float %p_read_114, float %p_read_113, float %p_read_112, float %p_read_111, float %p_read_110, i3 %tmp_33)
+.preheader:32  %tmp_19 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_119, float %p_read_118, float %p_read_117, float %p_read_116, float %p_read_115, float %p_read_114, float %p_read_113, float %p_read_112, i3 %tmp_33)
 
 ]]></node>
 <StgValue><ssdm name="tmp_19"/></StgValue>
@@ -3889,7 +3889,7 @@ newFuncRoot:128  br label %0
 
 <node id="255" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:44  %tmp_21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_109, float %p_read_108, float %p_read_107, float %p_read_106, float %p_read2084, float %p_read_105, float %p_read_104, float %p_read_103, i3 %tmp_33)
+.preheader:44  %tmp_21 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_111, float %p_read_110, float %p_read_109, float %p_read_108, float %p_read_107, float %p_read_106, float %p_read_105, float %p_read_104, i3 %tmp_33)
 
 ]]></node>
 <StgValue><ssdm name="tmp_21"/></StgValue>
@@ -3921,7 +3921,7 @@ newFuncRoot:128  br label %0
 
 <node id="267" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="3">
 <![CDATA[
-.preheader:56  %tmp_23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_102, float %p_read_101, float %p_read_100, float %p_read_99, float %p_read_98, float %p_read_97, float %p_read3094, float %p_read_96, i3 %tmp_33)
+.preheader:56  %tmp_23 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %p_read_103, float %p_read_102, float %p_read_101, float %p_read_100, float %p_read_99, float %p_read_98, float %p_read_97, float %p_read_96, i3 %tmp_33)
 
 ]]></node>
 <StgValue><ssdm name="tmp_23"/></StgValue>
@@ -6146,10 +6146,10 @@ newFuncRoot:128  br label %0
 
 <node id="319" bw="7" op_0_bw="7" op_1_bw="4" op_2_bw="3">
 <![CDATA[
-.preheader:108  %tmp_6 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0)
+.preheader:108  %tmp_10 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0)
 
 ]]></node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_10"/></StgValue>
 </operation>
 
 <operation id="415" st_id="48" stage="1" lat="1">
@@ -6162,7 +6162,7 @@ newFuncRoot:128  br label %0
 
 <node id="320" bw="8" op_0_bw="7">
 <![CDATA[
-.preheader:109  %p_addr_cast = zext i7 %tmp_6 to i8
+.preheader:109  %p_addr_cast = zext i7 %tmp_10 to i8
 
 ]]></node>
 <StgValue><ssdm name="p_addr_cast"/></StgValue>
@@ -6194,10 +6194,10 @@ newFuncRoot:128  br label %0
 
 <node id="322" bw="64" op_0_bw="8">
 <![CDATA[
-.preheader:111  %tmp_7 = zext i8 %p_addr1 to i64
+.preheader:111  %tmp_11 = zext i8 %p_addr1 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_11"/></StgValue>
 </operation>
 
 <operation id="418" st_id="48" stage="1" lat="1">
@@ -6210,7 +6210,7 @@ newFuncRoot:128  br label %0
 
 <node id="323" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader:112  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_7
+.preheader:112  %C_addr = getelementptr [64 x float]* %C, i64 0, i64 %tmp_11
 
 ]]></node>
 <StgValue><ssdm name="C_addr"/></StgValue>
@@ -6242,10 +6242,10 @@ newFuncRoot:128  br label %0
 
 <node id="325" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-.preheader:114  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2)
+.preheader:114  %empty_13 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str5, i32 %tmp_2)
 
 ]]></node>
-<StgValue><ssdm name="empty_8"/></StgValue>
+<StgValue><ssdm name="empty_13"/></StgValue>
 </operation>
 
 <operation id="421" st_id="48" stage="1" lat="1">

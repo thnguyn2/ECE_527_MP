@@ -46,7 +46,7 @@ DCT_Loop_3_proc1::DCT_Loop_3_proc1(sc_module_name name) : sc_module(name), mVcdF
 
     SC_METHOD(thread_Ymat_address0);
     sensitive << ( ap_sig_cseq_ST_st2_fsm_1 );
-    sensitive << ( tmp_8_fu_95_p1 );
+    sensitive << ( tmp_12_fu_95_p1 );
 
     SC_METHOD(thread_Ymat_ce0);
     sensitive << ( ap_sig_cseq_ST_st2_fsm_1 );
@@ -93,11 +93,11 @@ DCT_Loop_3_proc1::DCT_Loop_3_proc1(sc_module_name name) : sc_module(name), mVcdF
     SC_METHOD(thread_tempval_fu_100_p1);
     sensitive << ( Ymat_q0 );
 
+    SC_METHOD(thread_tmp_12_fu_95_p1);
+    sensitive << ( tmp_34_fu_91_p1 );
+
     SC_METHOD(thread_tmp_34_fu_91_p1);
     sensitive << ( write_idx_reg_59 );
-
-    SC_METHOD(thread_tmp_8_fu_95_p1);
-    sensitive << ( tmp_34_fu_91_p1 );
 
     SC_METHOD(thread_write_idx_1_fu_77_p2);
     sensitive << ( write_idx_reg_59 );
@@ -148,7 +148,7 @@ DCT_Loop_3_proc1::DCT_Loop_3_proc1(sc_module_name name) : sc_module(name), mVcdF
     sc_trace(mVcdFile, write_idx_reg_59, "write_idx_reg_59");
     sc_trace(mVcdFile, ap_sig_cseq_ST_st3_fsm_2, "ap_sig_cseq_ST_st3_fsm_2");
     sc_trace(mVcdFile, ap_sig_bdd_73, "ap_sig_bdd_73");
-    sc_trace(mVcdFile, tmp_8_fu_95_p1, "tmp_8_fu_95_p1");
+    sc_trace(mVcdFile, tmp_12_fu_95_p1, "tmp_12_fu_95_p1");
     sc_trace(mVcdFile, tmp_34_fu_91_p1, "tmp_34_fu_91_p1");
     sc_trace(mVcdFile, tempval_fu_100_p1, "tempval_fu_100_p1");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
@@ -208,7 +208,7 @@ void DCT_Loop_3_proc1::thread_Y_write() {
 }
 
 void DCT_Loop_3_proc1::thread_Ymat_address0() {
-    Ymat_address0 =  (sc_lv<6>) (tmp_8_fu_95_p1.read());
+    Ymat_address0 =  (sc_lv<6>) (tmp_12_fu_95_p1.read());
 }
 
 void DCT_Loop_3_proc1::thread_Ymat_ce0() {
@@ -295,12 +295,12 @@ void DCT_Loop_3_proc1::thread_tempval_fu_100_p1() {
     tempval_fu_100_p1 = Ymat_q0.read();
 }
 
-void DCT_Loop_3_proc1::thread_tmp_34_fu_91_p1() {
-    tmp_34_fu_91_p1 = write_idx_reg_59.read().range(6-1, 0);
+void DCT_Loop_3_proc1::thread_tmp_12_fu_95_p1() {
+    tmp_12_fu_95_p1 = esl_zext<64,6>(tmp_34_fu_91_p1.read());
 }
 
-void DCT_Loop_3_proc1::thread_tmp_8_fu_95_p1() {
-    tmp_8_fu_95_p1 = esl_zext<64,6>(tmp_34_fu_91_p1.read());
+void DCT_Loop_3_proc1::thread_tmp_34_fu_91_p1() {
+    tmp_34_fu_91_p1 = write_idx_reg_59.read().range(6-1, 0);
 }
 
 void DCT_Loop_3_proc1::thread_write_idx_1_fu_77_p2() {

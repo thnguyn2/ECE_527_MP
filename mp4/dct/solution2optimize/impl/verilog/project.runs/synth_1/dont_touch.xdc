@@ -8,3 +8,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DCT_ap_fadd_3_f
 
 # IP: ip/DCT_ap_fmul_2_max_dsp_32/DCT_ap_fmul_2_max_dsp_32.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DCT_ap_fmul_2_max_dsp_32 || ORIG_REF_NAME==DCT_ap_fmul_2_max_dsp_32}]
+
+# IP: ip/DCT_ap_fdiv_14_no_dsp_32/DCT_ap_fdiv_14_no_dsp_32.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DCT_ap_fdiv_14_no_dsp_32 || ORIG_REF_NAME==DCT_ap_fdiv_14_no_dsp_32}]

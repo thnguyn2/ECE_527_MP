@@ -1,91 +1,163 @@
 # This script segment is generated automatically by AutoPilot
 
-# Memory (RAM/ROM)  definition:
-set ID 182
-set MemName DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv
-set CoreName ap_simcore_mem
-set PortList { 1 }
-set DataWd 32
-set AddrRange 64
-set AddrWd 6
-set TrueReset 0
-set IsROM 1
-set ROMData { "00111110101101010000010011110011" "00111110111110110001010010111110" "00111110111011001000001101011111" "00111110110101001101101100110001" "00111110101101010000010011110011" "00111110100011100011100111011010" "00111110010000111110111100010101" "00111101110001111100010111000010" "00111110101101010000010011110011" "00111110110101001101101100110001" "00111110010000111110111100010101" "10111101110001111100010111000010" "10111110101101010000010011110011" "10111110111110110001010010111110" "10111110111011001000001101011111" "10111110100011100011100111011010" "00111110101101010000010011110011" "00111110100011100011100111011010" "10111110010000111110111100010101" "10111110111110110001010010111110" "10111110101101010000010011110011" "00111101110001111100010111000010" "00111110111011001000001101011111" "00111110110101001101101100110001" "00111110101101010000010011110011" "00111101110001111100010111000010" "10111110111011001000001101011111" "10111110100011100011100111011010" "00111110101101010000010011110011" "00111110110101001101101100110001" "10111110010000111110111100010101" "10111110111110110001010010111110" "00111110101101010000010011110011" "10111101110001111100010111000010" "10111110111011001000001101011111" "00111110100011100011100111011010" "00111110101101010000010011110011" "10111110110101001101101100110001" "10111110010000111110111100010101" "00111110111110110001010010111110" "00111110101101010000010011110011" "10111110100011100011100111011010" "10111110010000111110111100010101" "00111110111110110001010010111110" "10111110101101010000010011110011" "10111101110001111100010111000010" "00111110111011001000001101011111" "10111110110101001101101100110001" "00111110101101010000010011110011" "10111110110101001101101100110001" "00111110010000111110111100010101" "00111101110001111100010111000010" "10111110101101010000010011110011" "00111110111110110001010010111110" "10111110111011001000001101011111" "00111110100011100011100111011010" "00111110101101010000010011110011" "10111110111110110001010010111110" "00111110111011001000001101011111" "10111110110101001101101100110001" "00111110101101010000010011110011" "10111110100011100011100111011010" "00111110010000111110111100010101" "10111101110001111100010111000010" }
-set HasInitializer 1
-set Initializer $ROMData
-set NumOfStage 2
-set MaxLatency -1
-set DelayBudget 2.39
-set ClkPeriod 10
-set RegisteredInput 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
-    eval "ap_gen_simcore_mem { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 1 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-} else {
-    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-  ::AP::rtl_comp_handler $MemName
-}
-
-
-set CoreName ROM_nP
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_ROM"} {
-    eval "::AESL_LIB_VIRTEX::xil_gen_ROM { \
-    id ${ID} \
-    name ${MemName} \
-    corename ${CoreName}  \
-    op mem \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
-    port_num 1 \
-    port_list \{${PortList}\} \
-    data_wd ${DataWd} \
-    addr_wd ${AddrWd} \
-    addr_range ${AddrRange} \
-    true_reset ${TrueReset} \
-    delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
-    HasInitializer ${HasInitializer} \
-    rom_data \{${ROMData}\} \
- } "
-  } else {
-    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_ROM, check your platform lib"
-  }
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
     cg_default_interface_gen_bundle_begin
     AESL_LIB_XILADAPTER::native_axis_begin
 }
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 187 \
+    name B_0 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_0 \
+    op interface \
+    ports { B_0_address0 { O 3 vector } B_0_ce0 { O 1 bit } B_0_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_0'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 188 \
+    name B_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_1 \
+    op interface \
+    ports { B_1_address0 { O 3 vector } B_1_ce0 { O 1 bit } B_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 189 \
+    name B_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_2 \
+    op interface \
+    ports { B_2_address0 { O 3 vector } B_2_ce0 { O 1 bit } B_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 190 \
+    name B_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_3 \
+    op interface \
+    ports { B_3_address0 { O 3 vector } B_3_ce0 { O 1 bit } B_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 191 \
+    name B_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_4 \
+    op interface \
+    ports { B_4_address0 { O 3 vector } B_4_ce0 { O 1 bit } B_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 192 \
+    name B_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_5 \
+    op interface \
+    ports { B_5_address0 { O 3 vector } B_5_ce0 { O 1 bit } B_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 193 \
+    name B_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_6 \
+    op interface \
+    ports { B_6_address0 { O 3 vector } B_6_ce0 { O 1 bit } B_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 194 \
+    name B_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename B_7 \
+    op interface \
+    ports { B_7_address0 { O 3 vector } B_7_ce0 { O 1 bit } B_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B_7'"
+}
+}
+
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

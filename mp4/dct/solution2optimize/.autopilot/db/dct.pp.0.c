@@ -212,6 +212,11 @@ void MAT_Multiply(float A[8][8],
 
 void MAT_Multiply2(float A[8][8],
   float B[8][8], float C[8][8]);
+void DOT_Multiply(float A[8][8],
+  float B[8][8], float C[8][8]);
+
+void DOT_Divide(float A[8][8],
+  float B[8][8], float C[8][8]);
 # 6 "dct/dct.h" 2
 
 
@@ -248,7 +253,12 @@ const float Tinv[8][8] = {
 {0.35355339, -0.49039264, 0.46193977, -0.41573481, 0.35355339, -0.27778512, 0.19134172, -0.09754516}
 };
 # 5 "dct/dct.c" 2
-
+# 1 "dct/quant.h" 1
+# 11 "dct/quant.h"
+void Quant(float X[8][8],
+  unsigned char function,
+  float Y[8][8]);
+# 6 "dct/dct.c" 2
 
 void DCT(int *X,int *Y)
 {
@@ -261,6 +271,7 @@ void DCT(int *X,int *Y)
  float Xbuff[66]; //Buffer for the input data
  float Ybuff[65]; //Buffer for the output data
  float Xmat[8][8];
+ float Xmat2[8][8];
  float temp[8][8];
  float Ymat[8][8];//Output results
  float tempout;
@@ -284,11 +295,42 @@ void DCT(int *X,int *Y)
    idx = rowidx*8+colidx;
    Xmat[rowidx][colidx]=Xbuff[idx+2];//Read the data from the outer most buffer
   }
+ switch (opt_type)
+ {
+ case 0:
+  //Do DCT transform here.
+  MAT_Multiply(T,Xmat,temp);
+  MAT_Multiply(temp, Tinv, Ymat);
+  break;
+ case 1:
+  //Quantization here
+  Quant(Xmat,0,Ymat);
+  break;
+ case 2:
+  //Dequantization
+  Quant(Xmat,1,Ymat);
+  break;
+ case 3:
+  //IDCT
+  MAT_Multiply(Tinv,Xmat,temp);
+  MAT_Multiply(temp, T, Ymat);
+  break;
+ case 4:
+  //Compress (DCT+Quant)
+  MAT_Multiply(T,Xmat,temp);
+  MAT_Multiply(temp, Tinv, Xmat2);
+  Quant(Xmat2,0,Ymat);
+  break;
+ case 5:
+  //Decompress (IDCT+Dequant)
+  Quant(Xmat,1,Xmat2);
+  MAT_Multiply(Tinv,Xmat2,temp);
+  MAT_Multiply(temp, T, Ymat);
 
- //Do DCT transform here.
- MAT_Multiply(T,Xmat,temp);
- MAT_Multiply(temp, Tinv, Ymat);
-
+  break;
+ default:
+  break;
+ }
 
  //Do matrix multiplication here...
  //Prepare the write Buffer-There is no latency when writting from PL to PS
@@ -314,17 +356,3 @@ void DCT(int *X,int *Y)
  }
 
 }
-
- /*
-	float temp[MAT_SIZE][MAT_SIZE];
-	switch (function){
-	case FUNCTION_IDCT:
-		//MAT_Multiply(Tinv,Xmat,temp);
-		//MAT_Multiply2(temp, T, Ymat);
-
-		break;
-	case FUNCTION_DCT:
-	default:
-		break;
-	}
-	*/

@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Fri Oct 30 14:55:06 2015
-# Process ID: 10584
+# Start of session at: Fri Oct 30 16:51:13 2015
+# Process ID: 4688
 # Log file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/vivado.log
 # Journal file: E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip\vivado.jou
 #-----------------------------------------------------------
@@ -13,6 +13,8 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DCT_ap_fadd_3_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DCT_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DCT_ap_fdiv_14_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DCT_ap_fdiv_14_no_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DCT_ap_fmul_2_max_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DCT_ap_fmul_2_max_dsp_32'...
 ****** Webtalk v2015.1 (64-bit)
@@ -21,10 +23,10 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DCT_ap_fmul_2_max
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
 source E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl -notrace
-INFO: [Common 17-186] 'E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Fri Oct 30 14:55:29 2015. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Oct 30 14:55:29 2015...
-close_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 219.363 ; gain = 0.000
+INFO: [Common 17-186] 'E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/ip/tmp.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Fri Oct 30 16:51:31 2015. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 30 16:51:31 2015...
+close_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 225.426 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 14:55:29 2015...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 16:51:32 2015...

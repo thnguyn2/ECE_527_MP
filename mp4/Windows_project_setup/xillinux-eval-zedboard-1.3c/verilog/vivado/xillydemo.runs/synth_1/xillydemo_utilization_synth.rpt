@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Fri Oct 30 15:11:38 2015
+| Date         : Fri Oct 30 17:07:56 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file xillydemo_utilization_synth.rpt -pb xillydemo_utilization_synth.pb
 | Design       : xillydemo

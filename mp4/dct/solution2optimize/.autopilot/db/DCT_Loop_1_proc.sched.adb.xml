@@ -3,13 +3,13 @@
 
 <trans_list>
 
-<trans id="23" from="1" to="2">
+<trans id="25" from="1" to="2">
 <condition id="7">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="24" from="2" to="2">
+<trans id="26" from="2" to="2">
 <condition id="9">
 <or_exp><and_exp><literal name="exitcond1" val="0"/>
 </and_exp></or_exp>
@@ -32,10 +32,10 @@
 
 <node id="3" bw="32" op_0_bw="64">
 <![CDATA[
-newFuncRoot:0  %opt_type_02_loc_loc_out = alloca i32, align 4
+newFuncRoot:0  %opt_type_02_loc_loc_loc0 = alloca i32, align 4
 
 ]]></node>
-<StgValue><ssdm name="opt_type_02_loc_loc_out"/></StgValue>
+<StgValue><ssdm name="opt_type_02_loc_loc_loc0"/></StgValue>
 </operation>
 
 <operation id="4" st_id="1" stage="1" lat="1">
@@ -47,7 +47,7 @@ newFuncRoot:0  %opt_type_02_loc_loc_out = alloca i32, align 4
 
 <node id="4" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -171,10 +171,10 @@ newFuncRoot:2  br label %0
 
 <node id="14" bw="32" op_0_bw="32">
 <![CDATA[
-:0  %opt_type_02_loc_loc_out_load_1 = load i32* %opt_type_02_loc_loc_out, align 4
+:0  %opt_type_02_loc_loc_loc0_load_1 = load i32* %opt_type_02_loc_loc_loc0, align 4
 
 ]]></node>
-<StgValue><ssdm name="opt_type_02_loc_loc_out_load_1"/></StgValue>
+<StgValue><ssdm name="opt_type_02_loc_loc_loc0_load_1"/></StgValue>
 </operation>
 
 <operation id="13" st_id="2" stage="1" lat="1">
@@ -251,10 +251,10 @@ newFuncRoot:2  br label %0
 
 <node id="19" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-:5  %tmp_1_i = icmp eq i7 %read_idx_0_i_i, 1
+:5  %tmp_3_i = icmp eq i7 %read_idx_0_i_i, 1
 
 ]]></node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
+<StgValue><ssdm name="tmp_3_i"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -267,7 +267,7 @@ newFuncRoot:2  br label %0
 
 <node id="20" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_1_i, i32 %opt_type, i32 %opt_type_02_loc_loc_out_load_1
+:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_3_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1
 
 ]]></node>
 <StgValue><ssdm name="tempin_0_opt_type_02_i_i"/></StgValue>
@@ -283,7 +283,7 @@ newFuncRoot:2  br label %0
 
 <node id="21" bw="0" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:7  store i32 %tempin_0_opt_type_02_i_i, i32* %opt_type_02_loc_loc_out, align 4
+:7  store i32 %tempin_0_opt_type_02_i_i, i32* %opt_type_02_loc_loc_loc0, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -315,10 +315,10 @@ newFuncRoot:2  br label %0
 
 <node id="24" bw="32" op_0_bw="32">
 <![CDATA[
-.preheader9.exitStub:0  %opt_type_02_loc_loc_out_load = load i32* %opt_type_02_loc_loc_out, align 4
+.preheader9.exitStub:0  %opt_type_02_loc_loc_loc0_load = load i32* %opt_type_02_loc_loc_loc0, align 4
 
 ]]></node>
-<StgValue><ssdm name="opt_type_02_loc_loc_out_load"/></StgValue>
+<StgValue><ssdm name="opt_type_02_loc_loc_loc0_load"/></StgValue>
 </operation>
 
 <operation id="22" st_id="2" stage="1" lat="1">
@@ -329,9 +329,41 @@ newFuncRoot:2  br label %0
 </and_exp></or_exp>
 </condition>
 
-<node id="25" bw="0" op_0_bw="32">
+<node id="25" bw="64" op_0_bw="64" op_1_bw="32">
 <![CDATA[
-.preheader9.exitStub:1  ret i32 %opt_type_02_loc_loc_out_load
+.preheader9.exitStub:1  %mrv = insertvalue { i32, i32 } undef, i32 %opt_type_02_loc_loc_loc0_load, 0
+
+]]></node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="23" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp><literal name="exitcond1" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<node id="26" bw="64" op_0_bw="64" op_1_bw="32">
+<![CDATA[
+.preheader9.exitStub:2  %mrv_1 = insertvalue { i32, i32 } %mrv, i32 %opt_type_02_loc_loc_loc0_load, 1
+
+]]></node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="24" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp><literal name="exitcond1" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<node id="27" bw="0" op_0_bw="64">
+<![CDATA[
+.preheader9.exitStub:3  ret { i32, i32 } %mrv_1
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

@@ -139,10 +139,10 @@ newFuncRoot:0  br label %0
 
 <node id="77" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.reset:2  %exitcond3_i_i4 = icmp eq i4 %j_0_i_i, -8
+.reset:2  %exitcond3_i_i6 = icmp eq i4 %j_0_i_i, -8
 
 ]]></node>
-<StgValue><ssdm name="exitcond3_i_i4"/></StgValue>
+<StgValue><ssdm name="exitcond3_i_i6"/></StgValue>
 </operation>
 
 <operation id="12" st_id="2" stage="1" lat="1">
@@ -155,7 +155,7 @@ newFuncRoot:0  br label %0
 
 <node id="78" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i4, i4 0, i4 %j_0_i_i
+.reset:3  %j_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 0, i4 %j_0_i_i
 
 ]]></node>
 <StgValue><ssdm name="j_0_i_i_mid2"/></StgValue>
@@ -171,10 +171,10 @@ newFuncRoot:0  br label %0
 
 <node id="79" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-.reset:4  %i2 = add i4 1, %i_0_i_i
+.reset:4  %i4 = add i4 1, %i_0_i_i
 
 ]]></node>
-<StgValue><ssdm name="i2"/></StgValue>
+<StgValue><ssdm name="i4"/></StgValue>
 </operation>
 
 <operation id="14" st_id="2" stage="1" lat="1">
@@ -187,7 +187,7 @@ newFuncRoot:0  br label %0
 
 <node id="80" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i4, i4 %i2, i4 %i_0_i_i
+.reset:5  %i_0_i_i_mid2 = select i1 %exitcond3_i_i6, i4 %i4, i4 %i_0_i_i
 
 ]]></node>
 <StgValue><ssdm name="i_0_i_i_mid2"/></StgValue>
@@ -283,10 +283,10 @@ newFuncRoot:0  br label %0
 
 <node id="89" bw="64" op_0_bw="8">
 <![CDATA[
-.reset:14  %tmp_4 = zext i8 %p_addr1 to i64
+.reset:14  %tmp_9 = zext i8 %p_addr1 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 
 <operation id="21" st_id="2" stage="1" lat="1">
@@ -299,7 +299,7 @@ newFuncRoot:0  br label %0
 
 <node id="90" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_4
+.reset:15  %B_addr = getelementptr [64 x float]* %B, i64 0, i64 %tmp_9
 
 ]]></node>
 <StgValue><ssdm name="B_addr"/></StgValue>
@@ -331,10 +331,10 @@ newFuncRoot:0  br label %0
 
 <node id="92" bw="3" op_0_bw="4">
 <![CDATA[
-.reset:17  %tmp_3 = trunc i4 %j_0_i_i_mid2 to i3
+.reset:17  %tmp_2 = trunc i4 %j_0_i_i_mid2 to i3
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="24" st_id="2" stage="1" lat="1">
@@ -1413,10 +1413,10 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="83" bw="32" op_0_bw="32" op_1_bw="8">
 <![CDATA[
-.reset:8  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3)
+.reset:8  %tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3)
 
 ]]></node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="95" st_id="3" stage="1" lat="1">
@@ -1462,7 +1462,7 @@ branch097:65  %j = add i4 %j_0_i_i_mid2, 1
 
 <node id="95" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch6:0  switch i3 %tmp_3, label %branch63 [
+branch6:0  switch i3 %tmp_2, label %branch63 [
     i3 0, label %branch097
     i3 1, label %branch57
     i3 2, label %branch58
@@ -1482,7 +1482,7 @@ branch6:0  switch i3 %tmp_3, label %branch63 [
 <condition id="538">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1500,7 +1500,7 @@ branch62:0  br label %branch097
 <condition id="539">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1518,7 +1518,7 @@ branch61:0  br label %branch097
 <condition id="540">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1536,7 +1536,7 @@ branch60:0  br label %branch097
 <condition id="541">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1554,7 +1554,7 @@ branch59:0  br label %branch097
 <condition id="542">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1572,7 +1572,7 @@ branch58:0  br label %branch097
 <condition id="543">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1590,13 +1590,13 @@ branch57:0  br label %branch097
 <condition id="544">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="6"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1619,7 +1619,7 @@ branch63:0  br label %branch097
 
 <node id="111" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch5:0  switch i3 %tmp_3, label %branch55 [
+branch5:0  switch i3 %tmp_2, label %branch55 [
     i3 0, label %branch097
     i3 1, label %branch49
     i3 2, label %branch50
@@ -1639,7 +1639,7 @@ branch5:0  switch i3 %tmp_3, label %branch55 [
 <condition id="546">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1657,7 +1657,7 @@ branch54:0  br label %branch097
 <condition id="547">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1675,7 +1675,7 @@ branch53:0  br label %branch097
 <condition id="548">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1693,7 +1693,7 @@ branch52:0  br label %branch097
 <condition id="549">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1711,7 +1711,7 @@ branch51:0  br label %branch097
 <condition id="550">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1729,7 +1729,7 @@ branch50:0  br label %branch097
 <condition id="551">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1747,13 +1747,13 @@ branch49:0  br label %branch097
 <condition id="552">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="5"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1776,7 +1776,7 @@ branch55:0  br label %branch097
 
 <node id="127" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch4:0  switch i3 %tmp_3, label %branch47 [
+branch4:0  switch i3 %tmp_2, label %branch47 [
     i3 0, label %branch097
     i3 1, label %branch41
     i3 2, label %branch42
@@ -1796,7 +1796,7 @@ branch4:0  switch i3 %tmp_3, label %branch47 [
 <condition id="554">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1814,7 +1814,7 @@ branch46:0  br label %branch097
 <condition id="555">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1832,7 +1832,7 @@ branch45:0  br label %branch097
 <condition id="556">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1850,7 +1850,7 @@ branch44:0  br label %branch097
 <condition id="557">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1868,7 +1868,7 @@ branch43:0  br label %branch097
 <condition id="558">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1886,7 +1886,7 @@ branch42:0  br label %branch097
 <condition id="559">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1904,13 +1904,13 @@ branch41:0  br label %branch097
 <condition id="560">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="4"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1933,7 +1933,7 @@ branch47:0  br label %branch097
 
 <node id="143" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch3:0  switch i3 %tmp_3, label %branch39 [
+branch3:0  switch i3 %tmp_2, label %branch39 [
     i3 0, label %branch097
     i3 1, label %branch33
     i3 2, label %branch34
@@ -1953,7 +1953,7 @@ branch3:0  switch i3 %tmp_3, label %branch39 [
 <condition id="562">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1971,7 +1971,7 @@ branch38:0  br label %branch097
 <condition id="563">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1989,7 +1989,7 @@ branch37:0  br label %branch097
 <condition id="564">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2007,7 +2007,7 @@ branch36:0  br label %branch097
 <condition id="565">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2025,7 +2025,7 @@ branch35:0  br label %branch097
 <condition id="566">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2043,7 +2043,7 @@ branch34:0  br label %branch097
 <condition id="567">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2061,13 +2061,13 @@ branch33:0  br label %branch097
 <condition id="568">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="3"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2090,7 +2090,7 @@ branch39:0  br label %branch097
 
 <node id="159" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch2:0  switch i3 %tmp_3, label %branch31 [
+branch2:0  switch i3 %tmp_2, label %branch31 [
     i3 0, label %branch097
     i3 1, label %branch25
     i3 2, label %branch26
@@ -2110,7 +2110,7 @@ branch2:0  switch i3 %tmp_3, label %branch31 [
 <condition id="570">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2128,7 +2128,7 @@ branch30:0  br label %branch097
 <condition id="571">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2146,7 +2146,7 @@ branch29:0  br label %branch097
 <condition id="572">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2164,7 +2164,7 @@ branch28:0  br label %branch097
 <condition id="573">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2182,7 +2182,7 @@ branch27:0  br label %branch097
 <condition id="574">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2200,7 +2200,7 @@ branch26:0  br label %branch097
 <condition id="575">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2218,13 +2218,13 @@ branch25:0  br label %branch097
 <condition id="576">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="2"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2247,7 +2247,7 @@ branch31:0  br label %branch097
 
 <node id="175" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch1:0  switch i3 %tmp_3, label %branch23 [
+branch1:0  switch i3 %tmp_2, label %branch23 [
     i3 0, label %branch097
     i3 1, label %branch17
     i3 2, label %branch18
@@ -2267,7 +2267,7 @@ branch1:0  switch i3 %tmp_3, label %branch23 [
 <condition id="578">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2285,7 +2285,7 @@ branch22:0  br label %branch097
 <condition id="579">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2303,7 +2303,7 @@ branch21:0  br label %branch097
 <condition id="580">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2321,7 +2321,7 @@ branch20:0  br label %branch097
 <condition id="581">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2339,7 +2339,7 @@ branch19:0  br label %branch097
 <condition id="582">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2357,7 +2357,7 @@ branch18:0  br label %branch097
 <condition id="583">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2375,13 +2375,13 @@ branch17:0  br label %branch097
 <condition id="584">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="1"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2404,7 +2404,7 @@ branch23:0  br label %branch097
 
 <node id="191" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch0:0  switch i3 %tmp_3, label %branch15 [
+branch0:0  switch i3 %tmp_2, label %branch15 [
     i3 0, label %branch097
     i3 1, label %branch9
     i3 2, label %branch10
@@ -2424,7 +2424,7 @@ branch0:0  switch i3 %tmp_3, label %branch15 [
 <condition id="586">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2442,7 +2442,7 @@ branch14:0  br label %branch097
 <condition id="587">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2460,7 +2460,7 @@ branch13:0  br label %branch097
 <condition id="588">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2478,7 +2478,7 @@ branch12:0  br label %branch097
 <condition id="589">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2496,7 +2496,7 @@ branch11:0  br label %branch097
 <condition id="590">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2514,7 +2514,7 @@ branch10:0  br label %branch097
 <condition id="591">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2532,13 +2532,13 @@ branch9:0  br label %branch097
 <condition id="592">
 <or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
 <literal name="tmp_1" val="0"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2567,7 +2567,7 @@ branch15:0  br label %branch097
 
 <node id="207" bw="0" op_0_bw="3" op_1_bw="0" op_2_bw="3" op_3_bw="0" op_4_bw="3" op_5_bw="0" op_6_bw="3" op_7_bw="0" op_8_bw="3" op_9_bw="0" op_10_bw="3" op_11_bw="0" op_12_bw="3" op_13_bw="0" op_14_bw="3" op_15_bw="0">
 <![CDATA[
-branch7:0  switch i3 %tmp_3, label %branch71 [
+branch7:0  switch i3 %tmp_2, label %branch71 [
     i3 0, label %branch097
     i3 1, label %branch65
     i3 2, label %branch66
@@ -2593,7 +2593,7 @@ branch7:0  switch i3 %tmp_3, label %branch71 [
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="6"/>
+<literal name="tmp_2" val="6"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2617,7 +2617,7 @@ branch70:0  br label %branch097
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="5"/>
+<literal name="tmp_2" val="5"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2641,7 +2641,7 @@ branch69:0  br label %branch097
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="4"/>
+<literal name="tmp_2" val="4"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2665,7 +2665,7 @@ branch68:0  br label %branch097
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="3"/>
+<literal name="tmp_2" val="3"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2689,7 +2689,7 @@ branch67:0  br label %branch097
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="2"/>
+<literal name="tmp_2" val="2"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2713,7 +2713,7 @@ branch66:0  br label %branch097
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2737,13 +2737,13 @@ branch65:0  br label %branch097
 <literal name="tmp_1" val="!2"/>
 <literal name="tmp_1" val="!1"/>
 <literal name="tmp_1" val="!0"/>
-<literal name="tmp_3" val="!6"/>
-<literal name="tmp_3" val="!5"/>
-<literal name="tmp_3" val="!4"/>
-<literal name="tmp_3" val="!3"/>
-<literal name="tmp_3" val="!2"/>
-<literal name="tmp_3" val="!1"/>
-<literal name="tmp_3" val="!0"/>
+<literal name="tmp_2" val="!6"/>
+<literal name="tmp_2" val="!5"/>
+<literal name="tmp_2" val="!4"/>
+<literal name="tmp_2" val="!3"/>
+<literal name="tmp_2" val="!2"/>
+<literal name="tmp_2" val="!1"/>
+<literal name="tmp_2" val="!0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -3789,10 +3789,10 @@ branch097:63  %B_cached_7_7_2 = phi float [ %B_cached_7_7_1, %branch15 ], [ %B_c
 
 <node id="287" bw="32" op_0_bw="32" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-branch097:64  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_2)
+branch097:64  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_8)
 
 ]]></node>
-<StgValue><ssdm name="empty_5"/></StgValue>
+<StgValue><ssdm name="empty_10"/></StgValue>
 </operation>
 
 <operation id="226" st_id="3" stage="1" lat="1">

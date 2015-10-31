@@ -6,7 +6,7 @@ set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set C_modelName {DCT_Loop_1_proc}
-set C_modelType { int 32 }
+set C_modelType { int 64 }
 set C_modelArgList { 
 	{ X int 32 regular {fifo 0}  }
 	{ Xbuff float 32 regular {array 66 { 0 3 } 0 1 }  }
@@ -14,9 +14,9 @@ set C_modelArgList {
 set C_modelArgMapList {[ 
 	{ "Name" : "X", "interface" : "fifo", "bitwidth" : 32} , 
  	{ "Name" : "Xbuff", "interface" : "memory", "bitwidth" : 32} , 
- 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 32} ]}
+ 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 64} ]}
 # RTL Port declarations: 
-set portNum 15
+set portNum 16
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -32,7 +32,8 @@ set portList {
 	{ Xbuff_ce0 sc_out sc_logic 1 signal 1 } 
 	{ Xbuff_we0 sc_out sc_logic 1 signal 1 } 
 	{ Xbuff_d0 sc_out sc_lv 32 signal 1 } 
-	{ ap_return sc_out sc_lv 32 signal -1 } 
+	{ ap_return_0 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_1 sc_out sc_lv 32 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -49,7 +50,8 @@ set NewPortList {[
  	{ "name": "Xbuff_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Xbuff", "role": "ce0" }} , 
  	{ "name": "Xbuff_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Xbuff", "role": "we0" }} , 
  	{ "name": "Xbuff_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "Xbuff", "role": "d0" }} , 
- 	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
+ 	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
+ 	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }}  ]}
 set Spec2ImplPortList { 
 	X { ap_fifo {  { X_dout fifo_data 0 32 }  { X_empty_n fifo_status 0 1 }  { X_read fifo_update 1 1 } } }
 	Xbuff { ap_memory {  { Xbuff_address0 mem_address 1 7 }  { Xbuff_ce0 mem_ce 1 1 }  { Xbuff_we0 mem_we 1 1 }  { Xbuff_d0 mem_din 1 32 } } }

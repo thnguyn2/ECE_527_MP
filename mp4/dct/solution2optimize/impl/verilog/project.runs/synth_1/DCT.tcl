@@ -19,18 +19,19 @@ set_property is_locked true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4
 read_ip e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/DCT_ap_fmul_2_max_dsp_32.xci
 set_property is_locked true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fmul_2_max_dsp_32/DCT_ap_fmul_2_max_dsp_32.xci]
 
+read_ip e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fdiv_14_no_dsp_32/DCT_ap_fdiv_14_no_dsp_32.xci
+set_property is_locked true [get_files e:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/project.srcs/sources_1/ip/DCT_ap_fdiv_14_no_dsp_32/DCT_ap_fdiv_14_no_dsp_32.xci]
+
 read_verilog -library xil_defaultlib {
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fadd_32ns_32ns_32_5_full_dsp.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fmul_32ns_32ns_32_4_max_dsp.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_mux_8to1_sel3_32_1.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_fdiv_32ns_32ns_32_16.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_LoadRow_pr.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1_Loop_Row_proc.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_LoadRow_proc.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_Loop_Row_proc.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_temp_0_memcore.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xbuff_memcore.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xmat_memcore.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Quant_QMatrix.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_0_channel.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_1_channel.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_1_B_cached_0_2_channel.v
@@ -159,15 +160,37 @@ read_verilog -library xil_defaultlib {
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_5_channel.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_6_channel.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_MAT_Multiply_B_cached_7_7_channel.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_temp_0.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_0.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_1.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_2.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_3.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_4.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_5.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_6.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Tinv_7.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_0.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_1.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_2.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_3.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_4.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_5.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_6.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_T_7.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1_Xmat2.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Quant.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xbuff_memcore.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xmat_memcore.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Block_proc1.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_1_proc.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_2_proc.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Loop_3_proc1.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_MAT_Multiply_1.v
-  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_temp_0.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xbuff.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT_Xmat.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_opt_type_02_loc_loc_loc_channe.v
+  E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/FIFO_DCT_opt_type_02_loc_loc_loc_channe_1.v
   E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.v
 }
 read_xdc E:/Ubuntu_source_code_data/ECE_527_MP/mp4/dct/solution2optimize/impl/verilog/DCT.xdc

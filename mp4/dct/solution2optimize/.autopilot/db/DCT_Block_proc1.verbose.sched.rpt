@@ -1,0 +1,339 @@
+
+
+================================================================
+== Vivado HLS Report for 'DCT_Block_proc1'
+================================================================
+* Date:           Fri Oct 30 16:49:34 2015
+
+* Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
+* Project:        dct
+* Solution:       solution2optimize
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.46|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |    1|  1974|    1|  1974|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 13
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (p_read_127==5) | (p_read_127==4)
+	6  / (p_read_127!=5 & p_read_127!=4 & p_read_127!=3 & p_read_127!=2 & p_read_127!=1 & p_read_127!=0)
+	7  / (p_read_127==3)
+	10  / (p_read_127==2) | (p_read_127==1)
+	11  / (p_read_127==0)
+2 --> 
+	3  / (p_read_127==5) | (p_read_127==4)
+3 --> 
+	4  / (p_read_127==5) | (p_read_127==4)
+4 --> 
+	5  / (p_read_127==5) | (p_read_127==4)
+5 --> 
+	6  / (p_read_127==5) | (p_read_127==4)
+6 --> 
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	6  / true
+10 --> 
+	6  / (p_read_127==2) | (p_read_127==1)
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	6  / true
+* FSM state operations: 
+
+ <State 1>: 2.61ns
+ST_1: p_read_127 [1/1] 0.00ns
+newFuncRoot:0  %p_read_127 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)
+
+ST_1: Xmat2 [1/1] 0.00ns
+newFuncRoot:1  %Xmat2 = alloca [64 x float], align 4
+
+ST_1: temp_0 [1/1] 0.00ns
+newFuncRoot:2  %temp_0 = alloca [8 x float], align 4
+
+ST_1: temp_1 [1/1] 0.00ns
+newFuncRoot:3  %temp_1 = alloca [8 x float], align 4
+
+ST_1: temp_2 [1/1] 0.00ns
+newFuncRoot:4  %temp_2 = alloca [8 x float], align 4
+
+ST_1: temp_3 [1/1] 0.00ns
+newFuncRoot:5  %temp_3 = alloca [8 x float], align 4
+
+ST_1: temp_4 [1/1] 0.00ns
+newFuncRoot:6  %temp_4 = alloca [8 x float], align 4
+
+ST_1: temp_5 [1/1] 0.00ns
+newFuncRoot:7  %temp_5 = alloca [8 x float], align 4
+
+ST_1: temp_6 [1/1] 0.00ns
+newFuncRoot:8  %temp_6 = alloca [8 x float], align 4
+
+ST_1: temp_7 [1/1] 0.00ns
+newFuncRoot:9  %temp_7 = alloca [8 x float], align 4
+
+ST_1: stg_24 [1/1] 1.88ns
+newFuncRoot:10  switch i32 %p_read_127, label %._crit_edge [
+    i32 0, label %0
+    i32 1, label %1
+    i32 2, label %2
+    i32 3, label %3
+    i32 4, label %4
+    i32 5, label %5
+  ]
+
+ST_1: stg_25 [2/2] 2.61ns
+:0  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat, i1 true, [64 x float]* nocapture %Xmat2)
+
+ST_1: stg_26 [2/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+ST_1: stg_27 [2/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+ST_1: stg_28 [2/2] 2.61ns
+:0  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat, i1 true, [64 x float]* nocapture %Ymat)
+
+ST_1: stg_29 [2/2] 2.61ns
+:0  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat, i1 false, [64 x float]* nocapture %Ymat)
+
+ST_1: stg_30 [2/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_31 [1/2] 0.00ns
+:0  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat, i1 true, [64 x float]* nocapture %Xmat2)
+
+ST_2: stg_32 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_33 [2/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Xmat2, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+ST_3: stg_34 [2/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Xmat2)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_35 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Xmat2, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+ST_4: stg_36 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Xmat2)
+
+
+ <State 5>: 2.61ns
+ST_5: stg_37 [2/2] 0.00ns
+:2  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Ymat)
+
+ST_5: stg_38 [2/2] 2.61ns
+:2  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat2, i1 false, [64 x float]* nocapture %Ymat)
+
+
+ <State 6>: 0.00ns
+ST_6: stg_39 [1/2] 0.00ns
+:2  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Ymat)
+
+ST_6: stg_40 [1/1] 0.00ns
+:3  br label %._crit_edge
+
+ST_6: stg_41 [1/2] 0.00ns
+:2  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat2, i1 false, [64 x float]* nocapture %Ymat)
+
+ST_6: stg_42 [1/1] 0.00ns
+:3  br label %._crit_edge
+
+ST_6: stg_43 [1/1] 0.00ns
+._crit_edge:0  ret void
+
+
+ <State 7>: 0.00ns
+ST_7: stg_44 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+
+ <State 8>: 0.00ns
+ST_8: stg_45 [2/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Ymat)
+
+
+ <State 9>: 0.00ns
+ST_9: stg_46 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Ymat)
+
+ST_9: stg_47 [1/1] 0.00ns
+:2  br label %._crit_edge
+
+
+ <State 10>: 0.00ns
+ST_10: stg_48 [1/2] 0.00ns
+:0  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat, i1 true, [64 x float]* nocapture %Ymat)
+
+ST_10: stg_49 [1/1] 0.00ns
+:1  br label %._crit_edge
+
+ST_10: stg_50 [1/2] 0.00ns
+:0  call fastcc void @DCT_Quant([64 x float]* nocapture %Xmat, i1 false, [64 x float]* nocapture %Ymat)
+
+ST_10: stg_51 [1/1] 0.00ns
+:1  br label %._crit_edge
+
+
+ <State 11>: 0.00ns
+ST_11: stg_52 [1/2] 0.00ns
+:0  call fastcc void @DCT_MAT_Multiply([8 x float]* nocapture @T_0, [8 x float]* nocapture @T_1, [8 x float]* nocapture @T_2, [8 x float]* nocapture @T_3, [8 x float]* nocapture @T_4, [8 x float]* nocapture @T_5, [8 x float]* nocapture @T_6, [8 x float]* nocapture @T_7, [64 x float]* nocapture %Xmat, [8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7)
+
+
+ <State 12>: 0.00ns
+ST_12: stg_53 [2/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Ymat)
+
+
+ <State 13>: 0.00ns
+ST_13: stg_54 [1/2] 0.00ns
+:1  call fastcc void @DCT_MAT_Multiply.1([8 x float]* nocapture %temp_0, [8 x float]* nocapture %temp_1, [8 x float]* nocapture %temp_2, [8 x float]* nocapture %temp_3, [8 x float]* nocapture %temp_4, [8 x float]* nocapture %temp_5, [8 x float]* nocapture %temp_6, [8 x float]* nocapture %temp_7, [8 x float]* nocapture @Tinv_0, [8 x float]* nocapture @Tinv_1, [8 x float]* nocapture @Tinv_2, [8 x float]* nocapture @Tinv_3, [8 x float]* nocapture @Tinv_4, [8 x float]* nocapture @Tinv_5, [8 x float]* nocapture @Tinv_6, [8 x float]* nocapture @Tinv_7, [64 x float]* nocapture %Ymat)
+
+ST_13: stg_55 [1/1] 0.00ns
+:2  br label %._crit_edge
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

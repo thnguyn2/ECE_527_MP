@@ -6,6 +6,8 @@
     <originFiles name="dct.h" path="E:\Ubuntu_source_code_data\ECE_527_MP\mp4\dct\dct.h"/>
     <originFiles name="matrixmath.c" path="E:\Ubuntu_source_code_data\ECE_527_MP\mp4\dct\matrixmath.c"/>
     <originFiles name="matrixmath.h" path="E:\Ubuntu_source_code_data\ECE_527_MP\mp4\dct\matrixmath.h"/>
+    <originFiles name="quant.c" path="E:\Ubuntu_source_code_data\ECE_527_MP\mp4\dct\quant.c"/>
+    <originFiles name="quant.h" path="E:\Ubuntu_source_code_data\ECE_527_MP\mp4\dct\quant.h"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

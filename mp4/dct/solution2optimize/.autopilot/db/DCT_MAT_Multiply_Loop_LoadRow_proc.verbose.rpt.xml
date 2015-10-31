@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply_Loop_LoadRow_proc'" level="0">
-<item name = "Date">Fri Oct 30 14:23:16 2015
+<item name = "Date">Fri Oct 30 16:49:39 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -73,13 +73,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i2_fu_13634_p2">+, 0, 0, 4, 1, 4</column>
+<column name="i4_fu_13634_p2">+, 0, 0, 4, 1, 4</column>
 <column name="indvar_flatten_next_fu_13614_p2">+, 0, 0, 7, 7, 1</column>
 <column name="j_fu_13683_p2">+, 0, 0, 4, 4, 1</column>
 <column name="p_addr1_fu_13668_p2">+, 0, 0, 8, 8, 8</column>
 <column name="i_0_i_i_mid2_fu_13640_p3">Select, 0, 0, 4, 1, 4</column>
 <column name="j_0_i_i_mid2_fu_13626_p3">Select, 0, 0, 4, 1, 1</column>
-<column name="exitcond3_i_i4_fu_13620_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="exitcond3_i_i6_fu_13620_p2">icmp, 0, 0, 2, 4, 5</column>
 <column name="exitcond_flatten_fu_13608_p2">icmp, 0, 0, 3, 7, 8</column>
 <column name="ap_sig_bdd_395">or, 0, 0, 1, 1, 1</column>
 </table>
@@ -234,7 +234,7 @@
 <column name="indvar_flatten_reg_70">7, 0, 7, 0</column>
 <column name="j_0_i_i_reg_92">4, 0, 4, 0</column>
 <column name="tmp_1_reg_14087">3, 0, 3, 0</column>
-<column name="tmp_3_reg_14096">3, 0, 3, 0</column>
+<column name="tmp_2_reg_14096">3, 0, 3, 0</column>
 </table>
 </item>
 </section>

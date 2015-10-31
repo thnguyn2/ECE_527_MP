@@ -59,3 +59,25 @@ void MAT_Multiply2(float A[MAT_SIZE][MAT_SIZE],
 		}
 }
 
+void DOT_Multiply(float A[MAT_SIZE][MAT_SIZE],
+		float B[MAT_SIZE][MAT_SIZE], float C[MAT_SIZE][MAT_SIZE])
+{
+	unsigned char i,j;
+	row: for (i=0; i<MAT_SIZE; i++){
+		col: for (j=0; j<MAT_SIZE; j++){
+			C[i][j] = A[i][j] * B[i][j];
+		}
+	}
+}
+
+void DOT_Divide(float A[MAT_SIZE][MAT_SIZE],
+		float B[MAT_SIZE][MAT_SIZE], float C[MAT_SIZE][MAT_SIZE])
+{
+	unsigned char i,j;
+	row: for (i=0; i<MAT_SIZE; i++){
+		col: for (j=0; j<MAT_SIZE; j++){
+			C[i][j] = A[i][j] / B[i][j];
+		}
+	}
+}
+

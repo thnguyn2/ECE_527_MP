@@ -8,11 +8,27 @@ set isOneStateSeq 0
 set C_modelName {DCT_MAT_Multiply.1_Loop_LoadRow_pr}
 set C_modelType { int 2048 }
 set C_modelArgList { 
+	{ B_0 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_1 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_2 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_3 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_4 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_5 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_6 float 32 regular {array 8 { 1 3 } 1 1 }  }
+	{ B_7 float 32 regular {array 8 { 1 3 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 2048} ]}
+	{ "Name" : "B_0", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_1", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_2", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_3", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_4", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_5", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_6", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "B_7", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 2048} ]}
 # RTL Port declarations: 
-set portNum 71
+set portNum 95
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -21,6 +37,30 @@ set portList {
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
+	{ B_0_address0 sc_out sc_lv 3 signal 0 } 
+	{ B_0_ce0 sc_out sc_logic 1 signal 0 } 
+	{ B_0_q0 sc_in sc_lv 32 signal 0 } 
+	{ B_1_address0 sc_out sc_lv 3 signal 1 } 
+	{ B_1_ce0 sc_out sc_logic 1 signal 1 } 
+	{ B_1_q0 sc_in sc_lv 32 signal 1 } 
+	{ B_2_address0 sc_out sc_lv 3 signal 2 } 
+	{ B_2_ce0 sc_out sc_logic 1 signal 2 } 
+	{ B_2_q0 sc_in sc_lv 32 signal 2 } 
+	{ B_3_address0 sc_out sc_lv 3 signal 3 } 
+	{ B_3_ce0 sc_out sc_logic 1 signal 3 } 
+	{ B_3_q0 sc_in sc_lv 32 signal 3 } 
+	{ B_4_address0 sc_out sc_lv 3 signal 4 } 
+	{ B_4_ce0 sc_out sc_logic 1 signal 4 } 
+	{ B_4_q0 sc_in sc_lv 32 signal 4 } 
+	{ B_5_address0 sc_out sc_lv 3 signal 5 } 
+	{ B_5_ce0 sc_out sc_logic 1 signal 5 } 
+	{ B_5_q0 sc_in sc_lv 32 signal 5 } 
+	{ B_6_address0 sc_out sc_lv 3 signal 6 } 
+	{ B_6_ce0 sc_out sc_logic 1 signal 6 } 
+	{ B_6_q0 sc_in sc_lv 32 signal 6 } 
+	{ B_7_address0 sc_out sc_lv 3 signal 7 } 
+	{ B_7_ce0 sc_out sc_logic 1 signal 7 } 
+	{ B_7_q0 sc_in sc_lv 32 signal 7 } 
 	{ ap_return_0 sc_out sc_lv 32 signal -1 } 
 	{ ap_return_1 sc_out sc_lv 32 signal -1 } 
 	{ ap_return_2 sc_out sc_lv 32 signal -1 } 
@@ -94,6 +134,30 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "B_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_0", "role": "address0" }} , 
+ 	{ "name": "B_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_0", "role": "ce0" }} , 
+ 	{ "name": "B_0_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_0", "role": "q0" }} , 
+ 	{ "name": "B_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_1", "role": "address0" }} , 
+ 	{ "name": "B_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_1", "role": "ce0" }} , 
+ 	{ "name": "B_1_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_1", "role": "q0" }} , 
+ 	{ "name": "B_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_2", "role": "address0" }} , 
+ 	{ "name": "B_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_2", "role": "ce0" }} , 
+ 	{ "name": "B_2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_2", "role": "q0" }} , 
+ 	{ "name": "B_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_3", "role": "address0" }} , 
+ 	{ "name": "B_3_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_3", "role": "ce0" }} , 
+ 	{ "name": "B_3_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_3", "role": "q0" }} , 
+ 	{ "name": "B_4_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_4", "role": "address0" }} , 
+ 	{ "name": "B_4_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_4", "role": "ce0" }} , 
+ 	{ "name": "B_4_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_4", "role": "q0" }} , 
+ 	{ "name": "B_5_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_5", "role": "address0" }} , 
+ 	{ "name": "B_5_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_5", "role": "ce0" }} , 
+ 	{ "name": "B_5_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_5", "role": "q0" }} , 
+ 	{ "name": "B_6_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_6", "role": "address0" }} , 
+ 	{ "name": "B_6_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_6", "role": "ce0" }} , 
+ 	{ "name": "B_6_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_6", "role": "q0" }} , 
+ 	{ "name": "B_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "B_7", "role": "address0" }} , 
+ 	{ "name": "B_7_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B_7", "role": "ce0" }} , 
+ 	{ "name": "B_7_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B_7", "role": "q0" }} , 
  	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
  	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }} , 
  	{ "name": "ap_return_2", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_2", "role": "default" }} , 
@@ -159,4 +223,12 @@ set NewPortList {[
  	{ "name": "ap_return_62", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_62", "role": "default" }} , 
  	{ "name": "ap_return_63", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_63", "role": "default" }}  ]}
 set Spec2ImplPortList { 
+	B_0 { ap_memory {  { B_0_address0 mem_address 1 3 }  { B_0_ce0 mem_ce 1 1 }  { B_0_q0 mem_dout 0 32 } } }
+	B_1 { ap_memory {  { B_1_address0 mem_address 1 3 }  { B_1_ce0 mem_ce 1 1 }  { B_1_q0 mem_dout 0 32 } } }
+	B_2 { ap_memory {  { B_2_address0 mem_address 1 3 }  { B_2_ce0 mem_ce 1 1 }  { B_2_q0 mem_dout 0 32 } } }
+	B_3 { ap_memory {  { B_3_address0 mem_address 1 3 }  { B_3_ce0 mem_ce 1 1 }  { B_3_q0 mem_dout 0 32 } } }
+	B_4 { ap_memory {  { B_4_address0 mem_address 1 3 }  { B_4_ce0 mem_ce 1 1 }  { B_4_q0 mem_dout 0 32 } } }
+	B_5 { ap_memory {  { B_5_address0 mem_address 1 3 }  { B_5_ce0 mem_ce 1 1 }  { B_5_q0 mem_dout 0 32 } } }
+	B_6 { ap_memory {  { B_6_address0 mem_address 1 3 }  { B_6_ce0 mem_ce 1 1 }  { B_6_q0 mem_dout 0 32 } } }
+	B_7 { ap_memory {  { B_7_address0 mem_address 1 3 }  { B_7_ce0 mem_ce 1 1 }  { B_7_q0 mem_dout 0 32 } } }
 }

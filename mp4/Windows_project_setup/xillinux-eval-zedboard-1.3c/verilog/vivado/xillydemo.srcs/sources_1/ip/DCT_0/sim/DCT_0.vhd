@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: Matrix_transform:hls:DCT:1.0
--- IP Revision: 1510301454
+-- IP Revision: 1510301651
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

@@ -152,20 +152,20 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    DCT_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* DCT_fadd_32ns_32ns_32_5_full_dsp_U183;
-    DCT_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* DCT_fadd_32ns_32ns_32_5_full_dsp_U184;
-    DCT_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* DCT_fmul_32ns_32ns_32_4_max_dsp_U185;
-    DCT_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* DCT_fmul_32ns_32ns_32_4_max_dsp_U186;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U187;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U188;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U189;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U190;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U191;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U192;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U193;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U194;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U195;
-    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U196;
+    DCT_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* DCT_fadd_32ns_32ns_32_5_full_dsp_U195;
+    DCT_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* DCT_fadd_32ns_32ns_32_5_full_dsp_U196;
+    DCT_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* DCT_fmul_32ns_32ns_32_4_max_dsp_U197;
+    DCT_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* DCT_fmul_32ns_32ns_32_4_max_dsp_U198;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U199;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U200;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U201;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U202;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U203;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U204;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U205;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U206;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U207;
+    DCT_mux_8to1_sel3_32_1<1,1,32,32,32,32,32,32,32,32,3,32>* DCT_mux_8to1_sel3_32_1_U208;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<6> > ap_CS_fsm;
     sc_signal< sc_logic > ap_sig_cseq_ST_st1_fsm_0;
@@ -439,7 +439,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<7> > indvar_flatten_phi_fu_1174_p4;
     sc_signal< sc_lv<4> > i_1_phi_fu_1185_p4;
     sc_signal< sc_lv<4> > j_1_phi_fu_1197_p4;
-    sc_signal< sc_lv<64> > tmp_7_fu_1452_p1;
+    sc_signal< sc_lv<64> > tmp_11_fu_1452_p1;
     sc_signal< sc_lv<32> > grp_fu_1206_p0;
     sc_signal< sc_lv<32> > grp_fu_1206_p1;
     sc_signal< sc_lv<32> > grp_fu_1211_p0;
@@ -467,7 +467,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<32> > grp_fu_1244_p8;
     sc_signal< sc_lv<3> > grp_fu_1244_p9;
     sc_signal< sc_lv<1> > exitcond_fu_1277_p2;
-    sc_signal< sc_lv<4> > i2_fu_1291_p2;
+    sc_signal< sc_lv<4> > i_fu_1291_p2;
     sc_signal< sc_lv<32> > tmp_s_fu_1315_p1;
     sc_signal< sc_lv<32> > tmp_s_fu_1315_p2;
     sc_signal< sc_lv<32> > tmp_s_fu_1315_p3;
@@ -540,7 +540,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     sc_signal< sc_lv<32> > tmp_31_fu_1418_p7;
     sc_signal< sc_lv<32> > tmp_31_fu_1418_p8;
     sc_signal< sc_lv<3> > tmp_31_fu_1418_p9;
-    sc_signal< sc_lv<7> > tmp_6_fu_1435_p3;
+    sc_signal< sc_lv<7> > tmp_10_fu_1435_p3;
     sc_signal< sc_lv<8> > p_addr_cast_fu_1442_p1;
     sc_signal< sc_lv<8> > tmp_6_trn_cast_fu_1432_p1;
     sc_signal< sc_lv<8> > p_addr1_fu_1446_p2;
@@ -732,9 +732,9 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     void thread_grp_fu_1244_p7();
     void thread_grp_fu_1244_p8();
     void thread_grp_fu_1244_p9();
-    void thread_i2_fu_1291_p2();
     void thread_i_1_mid2_fu_1297_p3();
     void thread_i_1_phi_fu_1185_p4();
+    void thread_i_fu_1291_p2();
     void thread_indvar_flatten_next_fu_1271_p2();
     void thread_indvar_flatten_phi_fu_1174_p4();
     void thread_j_1_mid2_fu_1283_p3();
@@ -742,6 +742,8 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     void thread_j_fu_1399_p2();
     void thread_p_addr1_fu_1446_p2();
     void thread_p_addr_cast_fu_1442_p1();
+    void thread_tmp_10_fu_1435_p3();
+    void thread_tmp_11_fu_1452_p1();
     void thread_tmp_19_fu_1329_p1();
     void thread_tmp_19_fu_1329_p2();
     void thread_tmp_19_fu_1329_p3();
@@ -807,9 +809,7 @@ struct DCT_MAT_Multiply_1_Loop_Row_proc : public sc_module {
     void thread_tmp_31_fu_1418_p9();
     void thread_tmp_32_fu_1305_p1();
     void thread_tmp_33_fu_1311_p1();
-    void thread_tmp_6_fu_1435_p3();
     void thread_tmp_6_trn_cast_fu_1432_p1();
-    void thread_tmp_7_fu_1452_p1();
     void thread_tmp_s_fu_1315_p1();
     void thread_tmp_s_fu_1315_p2();
     void thread_tmp_s_fu_1315_p3();

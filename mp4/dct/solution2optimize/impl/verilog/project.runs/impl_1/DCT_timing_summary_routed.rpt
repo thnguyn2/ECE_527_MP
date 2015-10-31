@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-| Date         : Fri Oct 30 15:04:05 2015
+| Date         : Fri Oct 30 17:00:11 2015
 | Host         : zombie running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file DCT_timing_summary_routed.rpt -rpx DCT_timing_summary_routed.rpx
 | Design       : DCT
@@ -124,7 +124,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      0.296        0.000                      0                33656        0.028        0.000                      0                33656        3.750        0.000                       0                 16031  
+      0.284        0.000                      0                28447        0.031        0.000                      0                28447        3.750        0.000                       0                 14394  
 
 
 All user specified timing constraints are met.
@@ -147,7 +147,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              0.296        0.000                      0                33656        0.028        0.000                      0                33656        3.750        0.000                       0                 16031  
+ap_clk              0.284        0.000                      0                28447        0.031        0.000                      0                28447        3.750        0.000                       0                 14394  
 
 
 ------------------------------------------------------------------------------------------------
@@ -178,28 +178,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        0.296ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.028ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.284ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.031ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.296ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[28]/D
+Slack (MET) :             0.284ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.226ns  (logic 2.454ns (26.598%)  route 6.772ns (73.402%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.350ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.639ns = ( 11.639 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
+  Data Path Delay:        9.653ns  (logic 2.099ns (21.743%)  route 7.554ns (78.257%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.541ns = ( 11.541 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -210,42 +210,60 @@ Slack (MET) :             0.296ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[28])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[28]
-                         net (fo=64, routed)          6.772    11.247    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[28]
-    SLICE_X40Y122        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[28]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.688     9.690    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_25_25/A0
+    SLICE_X46Y25         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.156     9.846 r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_25_25/SP/O
+                         net (fo=1, routed)           1.167    11.013    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q00[25]
+    SLICE_X61Y23         LUT4 (Prop_lut4_I1_O)        0.355    11.368 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[25]_i_1/O
+                         net (fo=1, routed)           0.000    11.368    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/D[25]
+    SLICE_X61Y23         FDRE                                         r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.639    11.639    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X40Y122        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[28]/C
-                         clock pessimism              0.031    11.670    
-                         clock uncertainty           -0.035    11.635    
-    SLICE_X40Y122        FDRE (Setup_fdre_C_D)       -0.092    11.543    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[28]
+                         net (fo=14407, unset)        1.541    11.541    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X61Y23         FDRE                                         r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]/C
+                         clock pessimism              0.115    11.656    
+                         clock uncertainty           -0.035    11.621    
+    SLICE_X61Y23         FDRE (Setup_fdre_C_D)        0.032    11.653    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]
   -------------------------------------------------------------------
-                         required time                         11.543    
-                         arrival time                         -11.247    
+                         required time                         11.653    
+                         arrival time                         -11.368    
   -------------------------------------------------------------------
-                         slack                                  0.296    
+                         slack                                  0.284    
 
-Slack (MET) :             0.330ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_1_1_reg_463_reg[26]/D
+Slack (MET) :             0.392ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.188ns  (logic 2.454ns (26.710%)  route 6.734ns (73.290%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.354ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.635ns = ( 11.635 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
+  Data Path Delay:        9.543ns  (logic 2.088ns (21.880%)  route 7.455ns (78.120%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.539ns = ( 11.539 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -256,42 +274,60 @@ Slack (MET) :             0.330ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[26])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[26]
-                         net (fo=64, routed)          6.734    11.208    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[26]
-    SLICE_X47Y124        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_1_1_reg_463_reg[26]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.702     9.704    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_26_26/A0
+    SLICE_X46Y24         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.152     9.856 r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_26_26/SP/O
+                         net (fo=1, routed)           1.054    10.910    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_4[26]
+    SLICE_X61Y24         LUT4 (Prop_lut4_I1_O)        0.348    11.258 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[26]_i_1__4/O
+                         net (fo=1, routed)           0.000    11.258    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/D[26]
+    SLICE_X61Y24         FDRE                                         r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.635    11.635    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X47Y124        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_1_1_reg_463_reg[26]/C
-                         clock pessimism              0.031    11.666    
-                         clock uncertainty           -0.035    11.631    
-    SLICE_X47Y124        FDRE (Setup_fdre_C_D)       -0.093    11.538    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_1_1_reg_463_reg[26]
+                         net (fo=14407, unset)        1.539    11.539    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X61Y24         FDRE                                         r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]/C
+                         clock pessimism              0.115    11.654    
+                         clock uncertainty           -0.035    11.619    
+    SLICE_X61Y24         FDRE (Setup_fdre_C_D)        0.031    11.650    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]
   -------------------------------------------------------------------
-                         required time                         11.538    
-                         arrival time                         -11.208    
+                         required time                         11.650    
+                         arrival time                         -11.258    
   -------------------------------------------------------------------
-                         slack                                  0.330    
+                         slack                                  0.392    
 
-Slack (MET) :             0.335ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[26]/D
+Slack (MET) :             0.418ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[3]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.192ns  (logic 2.454ns (26.696%)  route 6.738ns (73.304%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.344ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.645ns = ( 11.645 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
+  Data Path Delay:        9.522ns  (logic 2.099ns (22.043%)  route 7.423ns (77.957%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.053ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.547ns = ( 11.547 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -302,42 +338,60 @@ Slack (MET) :             0.335ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[26])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[26]
-                         net (fo=64, routed)          6.738    11.213    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[26]
-    SLICE_X47Y116        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[26]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.699     7.873    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     7.997 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_0_0_i_2__6/O
+                         net (fo=384, routed)         1.930     9.927    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_3_3/A0
+    SLICE_X66Y40         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.156    10.083 r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_3_3/SP/O
+                         net (fo=1, routed)           0.799    10.882    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q00[3]
+    SLICE_X69Y30         LUT4 (Prop_lut4_I1_O)        0.355    11.237 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[3]_i_1/O
+                         net (fo=1, routed)           0.000    11.237    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/D[3]
+    SLICE_X69Y30         FDRE                                         r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.645    11.645    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X47Y116        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[26]/C
-                         clock pessimism              0.031    11.676    
-                         clock uncertainty           -0.035    11.641    
-    SLICE_X47Y116        FDRE (Setup_fdre_C_D)       -0.093    11.548    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_3_1_reg_667_reg[26]
+                         net (fo=14407, unset)        1.547    11.547    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X69Y30         FDRE                                         r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[3]/C
+                         clock pessimism              0.115    11.662    
+                         clock uncertainty           -0.035    11.627    
+    SLICE_X69Y30         FDRE (Setup_fdre_C_D)        0.029    11.656    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[3]
   -------------------------------------------------------------------
-                         required time                         11.548    
-                         arrival time                         -11.213    
+                         required time                         11.656    
+                         arrival time                         -11.237    
   -------------------------------------------------------------------
-                         slack                                  0.335    
+                         slack                                  0.418    
 
-Slack (MET) :             0.338ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_4_1_reg_511_reg[29]/D
+Slack (MET) :             0.447ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.257ns  (logic 2.454ns (26.509%)  route 6.803ns (73.491%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.353ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.636ns = ( 11.636 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
+  Data Path Delay:        9.491ns  (logic 1.836ns (19.345%)  route 7.655ns (80.655%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.544ns = ( 11.544 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -348,179 +402,59 @@ Slack (MET) :             0.338ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[29])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[29]
-                         net (fo=64, routed)          6.803    11.278    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[29]
-    SLICE_X36Y124        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_4_1_reg_511_reg[29]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.636    11.636    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X36Y124        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_4_1_reg_511_reg[29]/C
-                         clock pessimism              0.031    11.667    
-                         clock uncertainty           -0.035    11.632    
-    SLICE_X36Y124        FDRE (Setup_fdre_C_D)       -0.016    11.616    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_4_1_reg_511_reg[29]
-  -------------------------------------------------------------------
-                         required time                         11.616    
-                         arrival time                         -11.278    
-  -------------------------------------------------------------------
-                         slack                                  0.338    
-
-Slack (MET) :             0.339ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_4_1_reg_631_reg[26]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.190ns  (logic 2.454ns (26.702%)  route 6.736ns (73.298%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.342ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.647ns = ( 11.647 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[26])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[26]
-                         net (fo=64, routed)          6.736    11.211    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[26]
-    SLICE_X47Y114        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_4_1_reg_631_reg[26]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.626     9.628    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_27_27/A0
+    SLICE_X46Y22         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.124     9.752 r  DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_27_27/SP/O
+                         net (fo=1, routed)           1.330    11.082    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_3[27]
+    SLICE_X70Y22         LUT4 (Prop_lut4_I1_O)        0.124    11.206 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[27]_i_1__3/O
+                         net (fo=1, routed)           0.000    11.206    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/D[27]
+    SLICE_X70Y22         FDRE                                         r  DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.647    11.647    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X47Y114        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_4_1_reg_631_reg[26]/C
-                         clock pessimism              0.031    11.678    
-                         clock uncertainty           -0.035    11.643    
-    SLICE_X47Y114        FDRE (Setup_fdre_C_D)       -0.093    11.550    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_4_4_1_reg_631_reg[26]
+                         net (fo=14407, unset)        1.544    11.544    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X70Y22         FDRE                                         r  DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]/C
+                         clock pessimism              0.115    11.659    
+                         clock uncertainty           -0.035    11.624    
+    SLICE_X70Y22         FDRE (Setup_fdre_C_D)        0.029    11.653    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]
   -------------------------------------------------------------------
-                         required time                         11.550    
-                         arrival time                         -11.211    
+                         required time                         11.653    
+                         arrival time                         -11.206    
   -------------------------------------------------------------------
-                         slack                                  0.339    
+                         slack                                  0.447    
 
-Slack (MET) :             0.351ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.170ns  (logic 2.454ns (26.761%)  route 6.716ns (73.239%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.350ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.639ns = ( 11.639 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[1])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[1]
-                         net (fo=64, routed)          6.716    11.190    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[1]
-    SLICE_X43Y122        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.639    11.639    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X43Y122        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[1]/C
-                         clock pessimism              0.031    11.670    
-                         clock uncertainty           -0.035    11.635    
-    SLICE_X43Y122        FDRE (Setup_fdre_C_D)       -0.093    11.542    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[1]
-  -------------------------------------------------------------------
-                         required time                         11.542    
-                         arrival time                         -11.190    
-  -------------------------------------------------------------------
-                         slack                                  0.351    
-
-Slack (MET) :             0.356ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_0_1_reg_487_reg[29]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.210ns  (logic 2.454ns (26.644%)  route 6.756ns (73.356%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.353ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.636ns = ( 11.636 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[29])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[29]
-                         net (fo=64, routed)          6.756    11.231    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[29]
-    SLICE_X38Y124        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_0_1_reg_487_reg[29]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.636    11.636    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X38Y124        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_0_1_reg_487_reg[29]/C
-                         clock pessimism              0.031    11.667    
-                         clock uncertainty           -0.035    11.632    
-    SLICE_X38Y124        FDRE (Setup_fdre_C_D)       -0.045    11.587    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_0_1_reg_487_reg[29]
-  -------------------------------------------------------------------
-                         required time                         11.587    
-                         arrival time                         -11.231    
-  -------------------------------------------------------------------
-                         slack                                  0.356    
-
-Slack (MET) :             0.360ns  (required time - arrival time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/CLKARDCLK
+Slack (MET) :             0.474ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/ADDRBWRADDR[11]
                             (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_6_5_1_reg_679_reg[0]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.251ns  (logic 2.454ns (26.528%)  route 6.797ns (73.472%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.259ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.475ns = ( 11.475 - 10.000 ) 
-    Source Clock Delay      (SCD):    1.748ns
+  Data Path Delay:        8.749ns  (logic 1.945ns (22.231%)  route 6.804ns (77.769%))
+  Logic Levels:           8  (LUT2=2 LUT3=1 LUT5=1 LUT6=3 SRL16E=1)
+  Clock Path Skew:        -0.176ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.525ns = ( 11.525 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
     Clock Pessimism Removal (CPR):    0.014ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -532,42 +466,58 @@ Slack (MET) :             0.360ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.748     1.748    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/ap_clk
-    RAMB18_X3Y24         RAMB18E1                                     r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/CLKARDCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB18_X3Y24         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[0])
-                                                      2.454     4.202 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/DOADO[0]
-                         net (fo=64, routed)          6.797    10.999    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg[0]
-    SLICE_X39Y88         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_6_5_1_reg_679_reg[0]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.533     5.729    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X57Y19         LUT3 (Prop_lut3_I2_O)        0.124     5.853 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_19__1/O
+                         net (fo=10, routed)          0.483     6.336    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_19__1_n_2
+    SLICE_X59Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.460 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ap_CS_fsm[1]_i_2__2/O
+                         net (fo=15, routed)          0.916     7.376    DCT_Block_proc1_U0/grp_DCT_Quant_fu_193/DCT_fmul_32ns_32ns_32_4_max_dsp_U4/opt_type_02_loc_loc_loc0_fu_30_reg[1]
+    SLICE_X55Y24         LUT2 (Prop_lut2_I1_O)        0.149     7.525 f  DCT_Block_proc1_U0/grp_DCT_Quant_fu_193/DCT_fmul_32ns_32ns_32_4_max_dsp_U4/ram_reg_i_49/O
+                         net (fo=40, routed)          0.871     8.396    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ap_CS_fsm_reg[5]_0
+    SLICE_X47Y22         LUT6 (Prop_lut6_I1_O)        0.332     8.728 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_42__0/O
+                         net (fo=40, routed)          0.672     9.400    DCT_Block_proc1_U0/grp_DCT_Quant_fu_193/ap_CS_fsm_reg[9]_0
+    SLICE_X43Y20         LUT5 (Prop_lut5_I1_O)        0.124     9.524 r  DCT_Block_proc1_U0/grp_DCT_Quant_fu_193/ram_reg_i_2/O
+                         net (fo=1, routed)           0.940    10.464    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ADDRBWRADDR[6]
+    RAMB18_X2Y8          RAMB18E1                                     r  Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/ADDRBWRADDR[11]
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.475    11.475    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
-    SLICE_X39Y88         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_6_5_1_reg_679_reg[0]/C
-                         clock pessimism              0.014    11.489    
-                         clock uncertainty           -0.035    11.454    
-    SLICE_X39Y88         FDRE (Setup_fdre_C_D)       -0.095    11.359    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_6_5_1_reg_679_reg[0]
+                         net (fo=14407, unset)        1.525    11.525    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
+    RAMB18_X2Y8          RAMB18E1                                     r  Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         clock pessimism              0.014    11.539    
+                         clock uncertainty           -0.035    11.504    
+    RAMB18_X2Y8          RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[11])
+                                                     -0.566    10.938    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg
   -------------------------------------------------------------------
-                         required time                         11.359    
-                         arrival time                         -10.999    
+                         required time                         10.938    
+                         arrival time                         -10.464    
   -------------------------------------------------------------------
-                         slack                                  0.360    
+                         slack                                  0.474    
 
-Slack (MET) :             0.389ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[26]/D
+Slack (MET) :             0.481ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.162ns  (logic 2.454ns (26.784%)  route 6.708ns (73.216%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.352ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.637ns = ( 11.637 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
+  Data Path Delay:        9.455ns  (logic 1.836ns (19.419%)  route 7.619ns (80.581%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.540ns = ( 11.540 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -578,42 +528,60 @@ Slack (MET) :             0.389ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[26])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[26]
-                         net (fo=64, routed)          6.708    11.183    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[26]
-    SLICE_X45Y123        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[26]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.702     9.704    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_27_27/A0
+    SLICE_X46Y24         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.124     9.828 r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_27_27/SP/O
+                         net (fo=1, routed)           1.218    11.046    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_4[27]
+    SLICE_X65Y24         LUT4 (Prop_lut4_I1_O)        0.124    11.170 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[27]_i_1__4/O
+                         net (fo=1, routed)           0.000    11.170    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/D[27]
+    SLICE_X65Y24         FDRE                                         r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.637    11.637    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X45Y123        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[26]/C
-                         clock pessimism              0.031    11.668    
-                         clock uncertainty           -0.035    11.633    
-    SLICE_X45Y123        FDRE (Setup_fdre_C_D)       -0.061    11.572    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_7_1_reg_571_reg[26]
+                         net (fo=14407, unset)        1.540    11.540    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X65Y24         FDRE                                         r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]/C
+                         clock pessimism              0.115    11.655    
+                         clock uncertainty           -0.035    11.620    
+    SLICE_X65Y24         FDRE (Setup_fdre_C_D)        0.031    11.651    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[27]
   -------------------------------------------------------------------
-                         required time                         11.572    
-                         arrival time                         -11.183    
+                         required time                         11.651    
+                         arrival time                         -11.170    
   -------------------------------------------------------------------
-                         slack                                  0.389    
+                         slack                                  0.481    
 
-Slack (MET) :             0.392ns  (required time - arrival time)
-  Source:                 Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[26]/D
+Slack (MET) :             0.526ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        9.129ns  (logic 2.454ns (26.882%)  route 6.675ns (73.118%))
-  Logic Levels:           0  
-  Clock Path Skew:        -0.350ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.639ns = ( 11.639 - 10.000 ) 
-    Source Clock Delay      (SCD):    2.020ns
-    Clock Pessimism Removal (CPR):    0.031ns
+  Data Path Delay:        9.411ns  (logic 2.093ns (22.240%)  route 7.318ns (77.760%))
+  Logic Levels:           9  (LUT2=1 LUT4=4 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.541ns = ( 11.541 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -624,27 +592,237 @@ Slack (MET) :             0.392ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        2.020     2.020    Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X5Y20         RAMB36E1                                     r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    RAMB36_X5Y20         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[26])
-                                                      2.454     4.474 r  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DOBDO[26]
-                         net (fo=64, routed)          6.675    11.149    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ram_reg[26]
-    SLICE_X39Y122        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[26]/D
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 f  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 r  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.746     7.920    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_2
+    SLICE_X59Y27         LUT4 (Prop_lut4_I2_O)        0.124     8.044 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_3/O
+                         net (fo=384, routed)         1.589     9.633    DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_25_25/A2
+    SLICE_X46Y23         RAMD32 (Prop_ramd32_RADR2_O)
+                                                      0.150     9.783 r  DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_25_25/SP/O
+                         net (fo=1, routed)           0.988    10.771    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_6[25]
+    SLICE_X63Y23         LUT4 (Prop_lut4_I1_O)        0.355    11.126 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[25]_i_1__6/O
+                         net (fo=1, routed)           0.000    11.126    DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/D[25]
+    SLICE_X63Y23         FDRE                                         r  DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        1.639    11.639    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X39Y122        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[26]/C
-                         clock pessimism              0.031    11.670    
-                         clock uncertainty           -0.035    11.635    
-    SLICE_X39Y122        FDRE (Setup_fdre_C_D)       -0.093    11.542    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_5_3_1_reg_499_reg[26]
+                         net (fo=14407, unset)        1.541    11.541    DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X63Y23         FDRE                                         r  DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]/C
+                         clock pessimism              0.115    11.656    
+                         clock uncertainty           -0.035    11.621    
+    SLICE_X63Y23         FDRE (Setup_fdre_C_D)        0.031    11.652    DCT_Block_proc1_U0/temp_7_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[25]
   -------------------------------------------------------------------
-                         required time                         11.542    
-                         arrival time                         -11.149    
+                         required time                         11.652    
+                         arrival time                         -11.126    
   -------------------------------------------------------------------
-                         slack                                  0.392    
+                         slack                                  0.526    
+
+Slack (MET) :             0.527ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.412ns  (logic 2.088ns (22.185%)  route 7.324ns (77.815%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.542ns = ( 11.542 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.626     9.628    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_26_26/A0
+    SLICE_X46Y22         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.152     9.780 r  DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_26_26/SP/O
+                         net (fo=1, routed)           0.999    10.779    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_3[26]
+    SLICE_X60Y22         LUT4 (Prop_lut4_I1_O)        0.348    11.127 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[26]_i_1__3/O
+                         net (fo=1, routed)           0.000    11.127    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/D[26]
+    SLICE_X60Y22         FDRE                                         r  DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        1.542    11.542    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X60Y22         FDRE                                         r  DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]/C
+                         clock pessimism              0.115    11.657    
+                         clock uncertainty           -0.035    11.622    
+    SLICE_X60Y22         FDRE (Setup_fdre_C_D)        0.032    11.654    DCT_Block_proc1_U0/temp_4_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[26]
+  -------------------------------------------------------------------
+                         required time                         11.654    
+                         arrival time                         -11.127    
+  -------------------------------------------------------------------
+                         slack                                  0.527    
+
+Slack (MET) :             0.527ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.408ns  (logic 1.836ns (19.516%)  route 7.572ns (80.484%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.541ns = ( 11.541 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.521     9.523    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_16_16/A0
+    SLICE_X50Y25         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.124     9.647 r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_16_16/SP/O
+                         net (fo=1, routed)           1.352    10.999    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_4[16]
+    SLICE_X70Y25         LUT4 (Prop_lut4_I1_O)        0.124    11.123 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[16]_i_1__4/O
+                         net (fo=1, routed)           0.000    11.123    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/D[16]
+    SLICE_X70Y25         FDRE                                         r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        1.541    11.541    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X70Y25         FDRE                                         r  DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[16]/C
+                         clock pessimism              0.115    11.656    
+                         clock uncertainty           -0.035    11.621    
+    SLICE_X70Y25         FDRE (Setup_fdre_C_D)        0.029    11.650    DCT_Block_proc1_U0/temp_5_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[16]
+  -------------------------------------------------------------------
+                         required time                         11.650    
+                         arrival time                         -11.123    
+  -------------------------------------------------------------------
+                         slack                                  0.527    
+
+Slack (MET) :             0.529ns  (required time - arrival time)
+  Source:                 opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.412ns  (logic 2.099ns (22.301%)  route 7.313ns (77.699%))
+  Logic Levels:           9  (LUT2=2 LUT4=3 LUT6=2 RAMD32=1 SRL16E=1)
+  Clock Path Skew:        -0.053ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.547ns = ( 11.547 - 10.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        1.715     1.715    opt_type_02_loc_loc_loc_channe_U/ap_clk
+    SLICE_X55Y20         FDSE                                         r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y20         FDSE (Prop_fdse_C_Q)         0.456     2.171 r  opt_type_02_loc_loc_loc_channe_U/mOutPtr_reg[0]/Q
+                         net (fo=6, routed)           0.449     2.620    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/mOutPtr[0]
+    SLICE_X55Y19         LUT2 (Prop_lut2_I0_O)        0.124     2.744 r  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][0]_srl3_i_2__127/O
+                         net (fo=32, routed)          1.216     3.960    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/shiftReg_addr[0]
+    SLICE_X50Y18         SRL16E (Prop_srl16e_A0_Q)    0.157     4.117 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/SRL_SIG_reg[2][15]_srl3/Q
+                         net (fo=1, routed)           0.723     4.841    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/opt_type_02_loc_loc_loc_channe_dout[15]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.355     5.196 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1/O
+                         net (fo=2, routed)           0.731     5.927    opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_22__1_n_2
+    SLICE_X55Y19         LUT6 (Prop_lut6_I0_O)        0.124     6.051 f  opt_type_02_loc_loc_loc_channe_U/U_FIFO_DCT_opt_type_02_loc_loc_loc_channe_ram/ram_reg_i_55/O
+                         net (fo=5, routed)           0.612     6.663    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/opt_type_02_loc_loc_loc0_fu_30_reg[12]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I2_O)        0.124     6.787 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/q0[31]_i_4__1/O
+                         net (fo=31, routed)          0.262     7.050    DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ap_CS_fsm_reg[6]
+    SLICE_X56Y22         LUT4 (Prop_lut4_I3_O)        0.124     7.174 f  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/q0[31]_i_5/O
+                         net (fo=95, routed)          0.704     7.878    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ap_CS_fsm_reg[1]_1
+    SLICE_X59Y27         LUT2 (Prop_lut2_I1_O)        0.124     8.002 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/ram_reg_0_7_16_16_i_1/O
+                         net (fo=384, routed)         1.582     9.584    DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_17_17/A0
+    SLICE_X66Y36         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.156     9.740 r  DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_17_17/SP/O
+                         net (fo=1, routed)           1.032    10.772    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/temp_1_7_reg_2389_reg[31]_0[17]
+    SLICE_X72Y28         LUT4 (Prop_lut4_I1_O)        0.355    11.127 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_Block_proc1_temp_0_ram_U/q0[17]_i_1__0/O
+                         net (fo=1, routed)           0.000    11.127    DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/D[17]
+    SLICE_X72Y28         FDRE                                         r  DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        1.547    11.547    DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/ap_clk
+    SLICE_X72Y28         FDRE                                         r  DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[17]/C
+                         clock pessimism              0.115    11.662    
+                         clock uncertainty           -0.035    11.627    
+    SLICE_X72Y28         FDRE (Setup_fdre_C_D)        0.029    11.656    DCT_Block_proc1_U0/temp_1_U/DCT_Block_proc1_temp_0_ram_U/q0_reg[17]
+  -------------------------------------------------------------------
+                         required time                         11.656    
+                         arrival time                         -11.127    
+  -------------------------------------------------------------------
+                         slack                                  0.529    
 
 
 
@@ -652,250 +830,210 @@ Slack (MET) :             0.392ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.028ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[29]/C
+Slack (MET) :             0.031ns  (arrival time - required time)
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_0_1_reg_583_reg[15]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][29]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_0_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_0_channel_ram/SRL_SIG_reg[2][15]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.346ns  (logic 0.128ns (36.947%)  route 0.218ns (63.053%))
+  Data Path Delay:        0.422ns  (logic 0.128ns (30.299%)  route 0.294ns (69.701%))
   Logic Levels:           0  
-  Clock Path Skew:        0.256ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.804ns
-    Source Clock Delay      (SCD):    0.543ns
-    Clock Pessimism Removal (CPR):    0.005ns
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.851ns
+    Source Clock Delay      (SCD):    0.589ns
+    Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.543     0.543    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
-    SLICE_X47Y73         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[29]/C
+                         net (fo=14407, unset)        0.589     0.589    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X83Y48         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_0_1_reg_583_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X47Y73         FDRE (Prop_fdre_C_Q)         0.128     0.671 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[29]/Q
-                         net (fo=1, routed)           0.218     0.889    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/ap_return_7[29]
-    SLICE_X50Y73         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][29]_srl3/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.804     0.804    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/ap_clk
-    SLICE_X50Y73         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][29]_srl3/CLK
-                         clock pessimism             -0.005     0.799    
-    SLICE_X50Y73         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.062     0.861    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][29]_srl3
-  -------------------------------------------------------------------
-                         required time                         -0.861    
-                         arrival time                           0.889    
-  -------------------------------------------------------------------
-                         slack                                  0.028    
-
-Slack (MET) :             0.032ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_6_reg_2251_reg[16]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_6_reg_2251_pp0_it7_reg[16]_srl5/D
-                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.314ns  (logic 0.141ns (44.852%)  route 0.173ns (55.148%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.180ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.824ns
-    Source Clock Delay      (SCD):    0.639ns
-    Clock Pessimism Removal (CPR):    0.005ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.639     0.639    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
-    SLICE_X47Y100        FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_6_reg_2251_reg[16]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X47Y100        FDRE (Prop_fdre_C_Q)         0.141     0.780 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_6_reg_2251_reg[16]/Q
-                         net (fo=1, routed)           0.173     0.953    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/tmp_9_6_reg_2251[16]
-    SLICE_X46Y99         SRL16E                                       r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_6_reg_2251_pp0_it7_reg[16]_srl5/D
+    SLICE_X83Y48         FDRE (Prop_fdre_C_Q)         0.128     0.717 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_0_1_reg_583_reg[15]/Q
+                         net (fo=1, routed)           0.294     1.011    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_0_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_0_channel_ram/Q[15]
+    SLICE_X82Y57         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_0_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_0_channel_ram/SRL_SIG_reg[2][15]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.824     0.824    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
-    SLICE_X46Y99         SRL16E                                       r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_6_reg_2251_pp0_it7_reg[16]_srl5/CLK
-                         clock pessimism             -0.005     0.819    
-    SLICE_X46Y99         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.102     0.921    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_reg_ppstg_tmp_9_6_reg_2251_pp0_it7_reg[16]_srl5
+                         net (fo=14407, unset)        0.851     0.851    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_0_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_0_channel_ram/ap_clk
+    SLICE_X82Y57         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_0_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_0_channel_ram/SRL_SIG_reg[2][15]_srl3/CLK
+                         clock pessimism              0.000     0.851    
+    SLICE_X82Y57         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.129     0.980    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_0_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_0_channel_ram/SRL_SIG_reg[2][15]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.921    
-                         arrival time                           0.953    
+                         required time                         -0.980    
+                         arrival time                           1.011    
   -------------------------------------------------------------------
-                         slack                                  0.032    
+                         slack                                  0.031    
 
 Slack (MET) :             0.033ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/temp_1_7_reg_2296_reg[27]/C
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_2_1_reg_619_reg[24]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DIADI[27]
-                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_2_channel_ram/SRL_SIG_reg[2][24]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.386ns  (logic 0.164ns (42.481%)  route 0.222ns (57.519%))
+  Data Path Delay:        0.399ns  (logic 0.141ns (35.327%)  route 0.258ns (64.673%))
   Logic Levels:           0  
-  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.866ns
-    Source Clock Delay      (SCD):    0.558ns
-    Clock Pessimism Removal (CPR):    0.251ns
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.584ns
+    Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.558     0.558    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/ap_clk
-    SLICE_X32Y98         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/temp_1_7_reg_2296_reg[27]/C
+                         net (fo=14407, unset)        0.584     0.584    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X61Y46         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_2_1_reg_619_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y98         FDRE (Prop_fdre_C_Q)         0.164     0.722 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/temp_1_7_reg_2296_reg[27]/Q
-                         net (fo=1, routed)           0.222     0.944    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/temp_1_7_reg_2296_reg[31][27]
-    RAMB36_X2Y18         RAMB36E1                                     r  Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/DIADI[27]
+    SLICE_X61Y46         FDRE (Prop_fdre_C_Q)         0.141     0.725 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_2_1_reg_619_reg[24]/Q
+                         net (fo=1, routed)           0.258     0.983    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_2_channel_ram/Q[24]
+    SLICE_X62Y53         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_2_channel_ram/SRL_SIG_reg[2][24]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.866     0.866    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ap_clk
-    RAMB36_X2Y18         RAMB36E1                                     r  Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
-                         clock pessimism             -0.251     0.615    
-    RAMB36_X2Y18         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[27])
-                                                      0.296     0.911    Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg
+                         net (fo=14407, unset)        0.848     0.848    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_2_channel_ram/ap_clk
+    SLICE_X62Y53         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_2_channel_ram/SRL_SIG_reg[2][24]_srl3/CLK
+                         clock pessimism              0.000     0.848    
+    SLICE_X62Y53         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.102     0.950    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_2_channel_ram/SRL_SIG_reg[2][24]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.911    
-                         arrival time                           0.944    
+                         required time                         -0.950    
+                         arrival time                           0.983    
   -------------------------------------------------------------------
                          slack                                  0.033    
 
-Slack (MET) :             0.036ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[28]/C
+Slack (MET) :             0.038ns  (arrival time - required time)
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_5_0_1_reg_585_reg[23]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][28]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_5_0_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel_ram/SRL_SIG_reg[2][23]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.356ns  (logic 0.128ns (35.943%)  route 0.228ns (64.057%))
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.686%)  route 0.117ns (45.314%))
   Logic Levels:           0  
-  Clock Path Skew:        0.256ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.804ns
-    Source Clock Delay      (SCD):    0.543ns
-    Clock Pessimism Removal (CPR):    0.005ns
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.880ns
+    Source Clock Delay      (SCD):    0.609ns
+    Clock Pessimism Removal (CPR):    0.234ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.543     0.543    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
-    SLICE_X47Y73         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[28]/C
+                         net (fo=14407, unset)        0.609     0.609    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
+    SLICE_X91Y11         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_5_0_1_reg_585_reg[23]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X47Y73         FDRE (Prop_fdre_C_Q)         0.128     0.671 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[28]/Q
-                         net (fo=1, routed)           0.228     0.899    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/ap_return_7[28]
-    SLICE_X50Y73         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][28]_srl3/D
+    SLICE_X91Y11         FDRE (Prop_fdre_C_Q)         0.141     0.750 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_5_0_1_reg_585_reg[23]/Q
+                         net (fo=1, routed)           0.117     0.867    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_5_0_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel_ram/Q[19]
+    SLICE_X92Y11         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_5_0_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel_ram/SRL_SIG_reg[2][23]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.804     0.804    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/ap_clk
-    SLICE_X50Y73         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][28]_srl3/CLK
-                         clock pessimism             -0.005     0.799    
-    SLICE_X50Y73         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.064     0.863    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][28]_srl3
+                         net (fo=14407, unset)        0.880     0.880    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_5_0_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel_ram/ap_clk
+    SLICE_X92Y11         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_5_0_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel_ram/SRL_SIG_reg[2][23]_srl3/CLK
+                         clock pessimism             -0.234     0.646    
+    SLICE_X92Y11         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.829    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_5_0_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_5_0_channel_ram/SRL_SIG_reg[2][23]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.863    
-                         arrival time                           0.899    
+                         required time                         -0.829    
+                         arrival time                           0.867    
   -------------------------------------------------------------------
-                         slack                                  0.036    
+                         slack                                  0.038    
 
-Slack (MET) :             0.037ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[25]/C
+Slack (MET) :             0.038ns  (arrival time - required time)
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_7_1_reg_715_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][25]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_7_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_7_channel_ram/SRL_SIG_reg[2][7]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.349ns  (logic 0.128ns (36.727%)  route 0.221ns (63.273%))
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.070%)  route 0.115ns (44.930%))
   Logic Levels:           0  
-  Clock Path Skew:        0.256ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.804ns
-    Source Clock Delay      (SCD):    0.543ns
-    Clock Pessimism Removal (CPR):    0.005ns
+  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.854ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    0.234ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.543     0.543    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
-    SLICE_X47Y73         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[25]/C
+                         net (fo=14407, unset)        0.585     0.585    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X65Y49         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_7_1_reg_715_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X47Y73         FDRE (Prop_fdre_C_Q)         0.128     0.671 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_0_7_1_reg_175_reg[25]/Q
-                         net (fo=1, routed)           0.221     0.892    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/ap_return_7[25]
-    SLICE_X50Y73         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][25]_srl3/D
+    SLICE_X65Y49         FDRE (Prop_fdre_C_Q)         0.141     0.726 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_7_1_reg_715_reg[7]/Q
+                         net (fo=1, routed)           0.115     0.841    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_7_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_7_channel_ram/Q[7]
+    SLICE_X62Y48         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_7_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_7_channel_ram/SRL_SIG_reg[2][7]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.804     0.804    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/ap_clk
-    SLICE_X50Y73         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][25]_srl3/CLK
-                         clock pessimism             -0.005     0.799    
-    SLICE_X50Y73         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.056     0.855    DCT_MAT_Multiply_1_U0/B_cached_0_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_0_7_channel_ram/SRL_SIG_reg[2][25]_srl3
+                         net (fo=14407, unset)        0.854     0.854    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_7_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_7_channel_ram/ap_clk
+    SLICE_X62Y48         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_7_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_7_channel_ram/SRL_SIG_reg[2][7]_srl3/CLK
+                         clock pessimism             -0.234     0.620    
+    SLICE_X62Y48         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.803    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_7_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_7_channel_ram/SRL_SIG_reg[2][7]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.855    
-                         arrival time                           0.892    
+                         required time                         -0.803    
+                         arrival time                           0.841    
   -------------------------------------------------------------------
-                         slack                                  0.037    
+                         slack                                  0.038    
 
 Slack (MET) :             0.040ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_3_7_1_reg_811_reg[23]/C
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_7_5_1_reg_921_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_1_U0/B_cached_3_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel_ram/SRL_SIG_reg[2][23]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_5_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel_ram/SRL_SIG_reg[2][7]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.256ns  (logic 0.141ns (55.071%)  route 0.115ns (44.929%))
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.049%)  route 0.115ns (44.951%))
   Logic Levels:           0  
   Clock Path Skew:        0.033ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.842ns
-    Source Clock Delay      (SCD):    0.574ns
-    Clock Pessimism Removal (CPR):    0.235ns
+    Destination Clock Delay (DCD):    0.850ns
+    Source Clock Delay      (SCD):    0.583ns
+    Clock Pessimism Removal (CPR):    0.234ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.574     0.574    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
-    SLICE_X61Y63         FDRE                                         r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_3_7_1_reg_811_reg[23]/C
+                         net (fo=14407, unset)        0.583     0.583    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
+    SLICE_X81Y16         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_7_5_1_reg_921_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X61Y63         FDRE (Prop_fdre_C_Q)         0.141     0.715 r  DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_3_7_1_reg_811_reg[23]/Q
-                         net (fo=1, routed)           0.115     0.830    DCT_MAT_Multiply_1_U0/B_cached_3_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel_ram/ap_return_31[23]
-    SLICE_X58Y63         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_3_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel_ram/SRL_SIG_reg[2][23]_srl3/D
+    SLICE_X81Y16         FDRE (Prop_fdre_C_Q)         0.141     0.724 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_7_5_1_reg_921_reg[7]/Q
+                         net (fo=1, routed)           0.115     0.839    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_5_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel_ram/Q[4]
+    SLICE_X82Y17         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_5_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel_ram/SRL_SIG_reg[2][7]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.842     0.842    DCT_MAT_Multiply_1_U0/B_cached_3_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel_ram/ap_clk
-    SLICE_X58Y63         SRL16E                                       r  DCT_MAT_Multiply_1_U0/B_cached_3_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel_ram/SRL_SIG_reg[2][23]_srl3/CLK
-                         clock pessimism             -0.235     0.607    
-    SLICE_X58Y63         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.183     0.790    DCT_MAT_Multiply_1_U0/B_cached_3_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_3_7_channel_ram/SRL_SIG_reg[2][23]_srl3
+                         net (fo=14407, unset)        0.850     0.850    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_5_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel_ram/ap_clk
+    SLICE_X82Y17         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_5_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel_ram/SRL_SIG_reg[2][7]_srl3/CLK
+                         clock pessimism             -0.234     0.616    
+    SLICE_X82Y17         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.799    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_5_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_5_channel_ram/SRL_SIG_reg[2][7]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.790    
-                         arrival time                           0.830    
+                         required time                         -0.799    
+                         arrival time                           0.839    
   -------------------------------------------------------------------
                          slack                                  0.040    
 
 Slack (MET) :             0.041ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_2_6_1_reg_331_reg[15]/C
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_7_7_1_reg_957_reg[15]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/B_cached_2_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_6_channel_ram/SRL_SIG_reg[2][15]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_ram/SRL_SIG_reg[2][15]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
@@ -903,153 +1041,194 @@ Slack (MET) :             0.041ns  (arrival time - required time)
   Data Path Delay:        0.258ns  (logic 0.141ns (54.713%)  route 0.117ns (45.287%))
   Logic Levels:           0  
   Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.928ns
-    Source Clock Delay      (SCD):    0.656ns
-    Clock Pessimism Removal (CPR):    0.238ns
+    Destination Clock Delay (DCD):    0.852ns
+    Source Clock Delay      (SCD):    0.584ns
+    Clock Pessimism Removal (CPR):    0.234ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.656     0.656    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X85Y120        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_2_6_1_reg_331_reg[15]/C
+                         net (fo=14407, unset)        0.584     0.584    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/ap_clk
+    SLICE_X81Y15         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_7_7_1_reg_957_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X85Y120        FDRE (Prop_fdre_C_Q)         0.141     0.797 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_2_6_1_reg_331_reg[15]/Q
-                         net (fo=1, routed)           0.117     0.914    DCT_MAT_Multiply_U0/B_cached_2_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_6_channel_ram/ap_return_22[15]
-    SLICE_X86Y120        SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_2_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_6_channel_ram/SRL_SIG_reg[2][15]_srl3/D
+    SLICE_X81Y15         FDRE (Prop_fdre_C_Q)         0.141     0.725 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/B_cached_7_7_1_reg_957_reg[15]/Q
+                         net (fo=1, routed)           0.117     0.842    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_ram/Q[11]
+    SLICE_X82Y15         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_ram/SRL_SIG_reg[2][15]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.928     0.928    DCT_MAT_Multiply_U0/B_cached_2_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_6_channel_ram/ap_clk
-    SLICE_X86Y120        SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_2_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_6_channel_ram/SRL_SIG_reg[2][15]_srl3/CLK
-                         clock pessimism             -0.238     0.690    
-    SLICE_X86Y120        SRL16E (Hold_srl16e_CLK_D)
-                                                      0.183     0.873    DCT_MAT_Multiply_U0/B_cached_2_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_6_channel_ram/SRL_SIG_reg[2][15]_srl3
+                         net (fo=14407, unset)        0.852     0.852    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_ram/ap_clk
+    SLICE_X82Y15         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_ram/SRL_SIG_reg[2][15]_srl3/CLK
+                         clock pessimism             -0.234     0.618    
+    SLICE_X82Y15         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.801    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/B_cached_7_7_channel_U/U_FIFO_DCT_MAT_Multiply_1_B_cached_7_7_channel_ram/SRL_SIG_reg[2][15]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.873    
-                         arrival time                           0.914    
+                         required time                         -0.801    
+                         arrival time                           0.842    
   -------------------------------------------------------------------
                          slack                                  0.041    
 
 Slack (MET) :             0.041ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_3_6_1_reg_847_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_3_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_3_6_channel_ram/SRL_SIG_reg[2][7]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.353ns  (logic 0.164ns (46.406%)  route 0.189ns (53.594%))
+  Data Path Delay:        0.259ns  (logic 0.141ns (54.469%)  route 0.118ns (45.531%))
   Logic Levels:           0  
-  Clock Path Skew:        0.260ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.906ns
-    Source Clock Delay      (SCD):    0.637ns
-    Clock Pessimism Removal (CPR):    0.009ns
+  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.849ns
+    Source Clock Delay      (SCD):    0.579ns
+    Clock Pessimism Removal (CPR):    0.235ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.637     0.637    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/aclk
-    SLICE_X46Y109        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
+                         net (fo=14407, unset)        0.579     0.579    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X64Y52         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_3_6_1_reg_847_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X46Y109        FDRE (Prop_fdre_C_Q)         0.164     0.801 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/Q
-                         net (fo=1, routed)           0.189     0.990    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/first_q[1]
-    SLICE_X50Y104        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]/D
+    SLICE_X64Y52         FDRE (Prop_fdre_C_Q)         0.141     0.720 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_3_6_1_reg_847_reg[7]/Q
+                         net (fo=1, routed)           0.118     0.838    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_3_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_3_6_channel_ram/Q[7]
+    SLICE_X62Y51         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_3_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_3_6_channel_ram/SRL_SIG_reg[2][7]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.906     0.906    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/aclk
-    SLICE_X50Y104        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]/C
-                         clock pessimism             -0.009     0.897    
-    SLICE_X50Y104        FDRE (Hold_fdre_C_D)         0.052     0.949    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U11/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]
+                         net (fo=14407, unset)        0.849     0.849    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_3_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_3_6_channel_ram/ap_clk
+    SLICE_X62Y51         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_3_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_3_6_channel_ram/SRL_SIG_reg[2][7]_srl3/CLK
+                         clock pessimism             -0.235     0.614    
+    SLICE_X62Y51         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.797    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_3_6_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_3_6_channel_ram/SRL_SIG_reg[2][7]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.949    
-                         arrival time                           0.990    
+                         required time                         -0.797    
+                         arrival time                           0.838    
   -------------------------------------------------------------------
                          slack                                  0.041    
 
-Slack (MET) :             0.042ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[31]/C
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_1_1_reg_607_reg[16]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/B_cached_0_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_0_2_channel_ram/SRL_SIG_reg[2][31]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_1_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_1_channel_ram/SRL_SIG_reg[2][16]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.260ns  (logic 0.141ns (54.313%)  route 0.119ns (45.687%))
+  Data Path Delay:        0.407ns  (logic 0.141ns (34.618%)  route 0.266ns (65.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.990ns
-    Source Clock Delay      (SCD):    0.717ns
-    Clock Pessimism Removal (CPR):    0.238ns
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.852ns
+    Source Clock Delay      (SCD):    0.588ns
+    Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.717     0.717    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X110Y107       FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[31]/C
+                         net (fo=14407, unset)        0.588     0.588    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X79Y47         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_1_1_reg_607_reg[16]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y107       FDRE (Prop_fdre_C_Q)         0.141     0.858 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_0_2_1_reg_355_reg[31]/Q
-                         net (fo=1, routed)           0.119     0.977    DCT_MAT_Multiply_U0/B_cached_0_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_0_2_channel_ram/ap_return_2[31]
-    SLICE_X108Y107       SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_0_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_0_2_channel_ram/SRL_SIG_reg[2][31]_srl3/D
+    SLICE_X79Y47         FDRE (Prop_fdre_C_Q)         0.141     0.729 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_1_1_reg_607_reg[16]/Q
+                         net (fo=1, routed)           0.266     0.995    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_1_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_1_channel_ram/Q[16]
+    SLICE_X82Y56         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_1_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_1_channel_ram/SRL_SIG_reg[2][16]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.990     0.990    DCT_MAT_Multiply_U0/B_cached_0_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_0_2_channel_ram/ap_clk
-    SLICE_X108Y107       SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_0_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_0_2_channel_ram/SRL_SIG_reg[2][31]_srl3/CLK
-                         clock pessimism             -0.238     0.752    
-    SLICE_X108Y107       SRL16E (Hold_srl16e_CLK_D)
-                                                      0.183     0.935    DCT_MAT_Multiply_U0/B_cached_0_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_0_2_channel_ram/SRL_SIG_reg[2][31]_srl3
+                         net (fo=14407, unset)        0.852     0.852    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_1_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_1_channel_ram/ap_clk
+    SLICE_X82Y56         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_1_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_1_channel_ram/SRL_SIG_reg[2][16]_srl3/CLK
+                         clock pessimism              0.000     0.852    
+    SLICE_X82Y56         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.102     0.954    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_6_1_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_1_channel_ram/SRL_SIG_reg[2][16]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.935    
-                         arrival time                           0.977    
+                         required time                         -0.954    
+                         arrival time                           0.995    
   -------------------------------------------------------------------
-                         slack                                  0.042    
+                         slack                                  0.041    
 
-Slack (MET) :             0.042ns  (arrival time - required time)
-  Source:                 DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_4_1_reg_655_reg[23]/C
+Slack (MET) :             0.043ns  (arrival time - required time)
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_1_2_1_reg_115_reg[15]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            DCT_MAT_Multiply_U0/B_cached_6_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_4_channel_ram/SRL_SIG_reg[2][23]_srl3/D
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_1_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_1_2_channel_ram/SRL_SIG_reg[2][15]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.260ns  (logic 0.141ns (54.228%)  route 0.119ns (45.773%))
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.332%)  route 0.119ns (45.668%))
   Logic Levels:           0  
-  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.935ns
-    Source Clock Delay      (SCD):    0.662ns
-    Clock Pessimism Removal (CPR):    0.238ns
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.845ns
+    Source Clock Delay      (SCD):    0.576ns
+    Clock Pessimism Removal (CPR):    0.235ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.662     0.662    DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
-    SLICE_X64Y102        FDRE                                         r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_4_1_reg_655_reg[23]/C
+                         net (fo=14407, unset)        0.576     0.576    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X57Y55         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_1_2_1_reg_115_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X64Y102        FDRE (Prop_fdre_C_Q)         0.141     0.803 r  DCT_MAT_Multiply_U0/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_6_4_1_reg_655_reg[23]/Q
-                         net (fo=1, routed)           0.119     0.922    DCT_MAT_Multiply_U0/B_cached_6_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_4_channel_ram/ap_return_52[23]
-    SLICE_X62Y101        SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_6_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_4_channel_ram/SRL_SIG_reg[2][23]_srl3/D
+    SLICE_X57Y55         FDRE (Prop_fdre_C_Q)         0.141     0.717 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_1_2_1_reg_115_reg[15]/Q
+                         net (fo=1, routed)           0.119     0.836    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_1_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_1_2_channel_ram/Q[15]
+    SLICE_X54Y55         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_1_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_1_2_channel_ram/SRL_SIG_reg[2][15]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=16060, unset)        0.935     0.935    DCT_MAT_Multiply_U0/B_cached_6_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_4_channel_ram/ap_clk
-    SLICE_X62Y101        SRL16E                                       r  DCT_MAT_Multiply_U0/B_cached_6_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_4_channel_ram/SRL_SIG_reg[2][23]_srl3/CLK
-                         clock pessimism             -0.238     0.697    
-    SLICE_X62Y101        SRL16E (Hold_srl16e_CLK_D)
-                                                      0.183     0.880    DCT_MAT_Multiply_U0/B_cached_6_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_6_4_channel_ram/SRL_SIG_reg[2][23]_srl3
+                         net (fo=14407, unset)        0.845     0.845    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_1_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_1_2_channel_ram/ap_clk
+    SLICE_X54Y55         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_1_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_1_2_channel_ram/SRL_SIG_reg[2][15]_srl3/CLK
+                         clock pessimism             -0.235     0.610    
+    SLICE_X54Y55         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.793    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_1_2_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_1_2_channel_ram/SRL_SIG_reg[2][15]_srl3
   -------------------------------------------------------------------
-                         required time                         -0.880    
-                         arrival time                           0.922    
+                         required time                         -0.793    
+                         arrival time                           0.836    
   -------------------------------------------------------------------
-                         slack                                  0.042    
+                         slack                                  0.043    
+
+Slack (MET) :             0.043ns  (arrival time - required time)
+  Source:                 DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_2_4_1_reg_295_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_2_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_4_channel_ram/SRL_SIG_reg[2][15]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.332%)  route 0.119ns (45.668%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.828ns
+    Source Clock Delay      (SCD):    0.560ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        0.560     0.560    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/ap_clk
+    SLICE_X49Y45         FDRE                                         r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_2_4_1_reg_295_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y45         FDRE (Prop_fdre_C_Q)         0.141     0.701 r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/DCT_MAT_Multiply_Loop_LoadRow_proc_U0/B_cached_2_4_1_reg_295_reg[15]/Q
+                         net (fo=1, routed)           0.119     0.820    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_2_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_4_channel_ram/Q[15]
+    SLICE_X46Y45         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_2_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_4_channel_ram/SRL_SIG_reg[2][15]_srl3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=14407, unset)        0.828     0.828    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_2_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_4_channel_ram/ap_clk
+    SLICE_X46Y45         SRL16E                                       r  DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_2_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_4_channel_ram/SRL_SIG_reg[2][15]_srl3/CLK
+                         clock pessimism             -0.234     0.594    
+    SLICE_X46Y45         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.777    DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_fu_147/B_cached_2_4_channel_U/U_FIFO_DCT_MAT_Multiply_B_cached_2_4_channel_ram/SRL_SIG_reg[2][15]_srl3
+  -------------------------------------------------------------------
+                         required time                         -0.777    
+                         arrival time                           0.820    
+  -------------------------------------------------------------------
+                         slack                                  0.043    
 
 
 
@@ -1062,37 +1241,37 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y24   DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/CLKARDCLK
-Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y24   DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0/Tinv_U/DCT_MAT_Multiply_1_Loop_LoadRow_pr_Tinv_rom_U/q0_reg/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X5Y19   Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X5Y19   Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X5Y20   Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X5Y20   Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y18   Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y18   Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
-Min Period        n/a     DSP48E1/CLK         n/a            2.545         10.000      7.455      DSP48_X3Y36    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U183/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/CLK
-Min Period        n/a     DSP48E1/CLK         n/a            2.545         10.000      7.455      DSP48_X2Y38    DCT_MAT_Multiply_1_U0/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U184/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/DP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/SP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_14_14/DP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_14_14/SP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_15_15/DP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_15_15/SP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_16_16/DP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y80   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_16_16/SP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X100Y82  temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_28_28/DP/CLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X100Y82  temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_28_28/SP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_24_24/DP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_24_24/SP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_25_25/DP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_25_25/SP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_26_26/DP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_26_26/SP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_27_27/DP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X98Y79   temp_0_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_27_27/SP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X92Y81   temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/DP/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X92Y81   temp_1_U/gen_buffer[0].DCT_temp_0_memcore_U/DCT_temp_0_memcore_ram_U/ram_reg_0_7_13_13/SP/CLK
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X3Y11  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB18_X3Y11  Xbuff_U/DCT_Xbuff_memcore_U/DCT_Xbuff_memcore_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X3Y10  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB18_X3Y10  Xmat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X2Y8   Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB18_X2Y8   Ymat_U/DCT_Xmat_memcore_U/DCT_Xmat_memcore_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y8   DCT_Block_proc1_U0/Xmat2_U/DCT_Block_proc1_Xmat2_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X3Y8   DCT_Block_proc1_U0/Xmat2_U/DCT_Block_proc1_Xmat2_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.545         10.000      7.455      DSP48_X4Y12   DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U195/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.545         10.000      7.455      DSP48_X3Y12   DCT_Block_proc1_U0/grp_DCT_MAT_Multiply_1_fu_109/DCT_MAT_Multiply_1_Loop_Row_proc_U0/DCT_fadd_32ns_32ns_32_5_full_dsp_U196/DCT_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_16_16/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_16_16/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_16_16/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_16_16/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_17_17/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_17_17/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_17_17/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_17_17/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_18_18/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X62Y29  DCT_Block_proc1_U0/temp_0_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_18_18/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_13_13/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_13_13/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_14_14/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_14_14/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_15_15/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_15_15/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_1_1/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y27  DCT_Block_proc1_U0/temp_3_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_1_1/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X66Y41  DCT_Block_proc1_U0/temp_6_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_13_13/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X66Y41  DCT_Block_proc1_U0/temp_6_U/DCT_Block_proc1_temp_0_ram_U/ram_reg_0_7_13_13/SP/CLK
 
 
 

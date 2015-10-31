@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_MAT_Multiply_1_Loop_Row_proc'
 ================================================================
-* Date:           Fri Oct 30 14:23:20 2015
+* Date:           Fri Oct 30 16:49:44 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -72,20 +72,20 @@
     +---------------------------------------+----------------------------------+---------+-------+-----+-----+
     |                Instance               |              Module              | BRAM_18K| DSP48E|  FF | LUT |
     +---------------------------------------+----------------------------------+---------+-------+-----+-----+
-    |DCT_fadd_32ns_32ns_32_5_full_dsp_U183  |DCT_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
-    |DCT_fadd_32ns_32ns_32_5_full_dsp_U184  |DCT_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
-    |DCT_fmul_32ns_32ns_32_4_max_dsp_U185   |DCT_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
-    |DCT_fmul_32ns_32ns_32_4_max_dsp_U186   |DCT_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
-    |DCT_mux_8to1_sel3_32_1_U187            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U188            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U189            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U190            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U191            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U192            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U193            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U194            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U195            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
-    |DCT_mux_8to1_sel3_32_1_U196            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_fadd_32ns_32ns_32_5_full_dsp_U195  |DCT_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |DCT_fadd_32ns_32ns_32_5_full_dsp_U196  |DCT_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |DCT_fmul_32ns_32ns_32_4_max_dsp_U197   |DCT_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    |DCT_fmul_32ns_32ns_32_4_max_dsp_U198   |DCT_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    |DCT_mux_8to1_sel3_32_1_U199            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U200            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U201            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U202            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U203            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U204            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U205            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U206            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U207            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
+    |DCT_mux_8to1_sel3_32_1_U208            |DCT_mux_8to1_sel3_32_1            |        0|      0|   32|   64|
     +---------------------------------------+----------------------------------+---------+-------+-----+-----+
     |Total                                  |                                  |        0|     10| 1016| 2062|
     +---------------------------------------+----------------------------------+---------+-------+-----+-----+
@@ -100,7 +100,7 @@
     +--------------------------------+----------+-------+---+----+------------+------------+
     |          Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------------+----------+-------+---+----+------------+------------+
-    |i2_fu_1291_p2                   |     +    |      0|  0|   4|           1|           4|
+    |i_fu_1291_p2                    |     +    |      0|  0|   4|           1|           4|
     |indvar_flatten_next_fu_1271_p2  |     +    |      0|  0|   7|           7|           1|
     |j_fu_1399_p2                    |     +    |      0|  0|   4|           1|           4|
     |p_addr1_fu_1446_p2              |     +    |      0|  0|   8|           8|           8|

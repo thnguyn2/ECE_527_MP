@@ -74,7 +74,7 @@ wire   [0:0] exitcond_fu_71_p2;
 reg   [6:0] write_idx_reg_59;
 reg    ap_sig_cseq_ST_st3_fsm_2;
 reg    ap_sig_bdd_73;
-wire   [63:0] tmp_8_fu_95_p1;
+wire   [63:0] tmp_12_fu_95_p1;
 wire   [5:0] tmp_34_fu_91_p1;
 wire   [31:0] tempval_fu_100_p1;
 reg   [2:0] ap_NS_fsm;
@@ -247,7 +247,7 @@ begin
 end
 
 assign Y_din = ((tmp_reg_124[0:0]===1'b1)? p_read: tempval_fu_100_p1);
-assign Ymat_address0 = tmp_8_fu_95_p1;
+assign Ymat_address0 = tmp_12_fu_95_p1;
 
 /// ap_sig_bdd_22 assign process. ///
 always @ (ap_CS_fsm)
@@ -274,8 +274,8 @@ begin
 end
 assign exitcond_fu_71_p2 = (write_idx_reg_59 == ap_const_lv7_41? 1'b1: 1'b0);
 assign tempval_fu_100_p1 = Ymat_q0;
+assign tmp_12_fu_95_p1 = tmp_34_fu_91_p1;
 assign tmp_34_fu_91_p1 = write_idx_reg_59[5:0];
-assign tmp_8_fu_95_p1 = tmp_34_fu_91_p1;
 assign write_idx_1_fu_77_p2 = (write_idx_reg_59 + ap_const_lv7_1);
 
 

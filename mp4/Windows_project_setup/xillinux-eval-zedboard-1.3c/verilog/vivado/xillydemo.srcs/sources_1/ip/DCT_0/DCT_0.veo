@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: Matrix_transform:hls:DCT:1.0
-// IP Revision: 1510301454
+// IP Revision: 1510301651
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

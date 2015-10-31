@@ -15,7 +15,7 @@
 namespace ap_rtl {
 
 struct DCT_Loop_1_proc : public sc_module {
-    // Port declarations 15
+    // Port declarations 16
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
@@ -30,7 +30,8 @@ struct DCT_Loop_1_proc : public sc_module {
     sc_out< sc_logic > Xbuff_ce0;
     sc_out< sc_logic > Xbuff_we0;
     sc_out< sc_lv<32> > Xbuff_d0;
-    sc_out< sc_lv<32> > ap_return;
+    sc_out< sc_lv<32> > ap_return_0;
+    sc_out< sc_lv<32> > ap_return_1;
 
 
     // Module declarations
@@ -45,17 +46,17 @@ struct DCT_Loop_1_proc : public sc_module {
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_sig_cseq_ST_st1_fsm_0;
     sc_signal< bool > ap_sig_bdd_21;
-    sc_signal< sc_lv<7> > read_idx_fu_76_p2;
+    sc_signal< sc_lv<7> > read_idx_fu_78_p2;
     sc_signal< sc_logic > ap_sig_cseq_ST_st2_fsm_1;
-    sc_signal< bool > ap_sig_bdd_47;
-    sc_signal< sc_lv<1> > exitcond1_fu_70_p2;
-    sc_signal< bool > ap_sig_bdd_54;
-    sc_signal< sc_lv<7> > read_idx_0_i_i_reg_50;
-    sc_signal< bool > ap_sig_bdd_63;
-    sc_signal< sc_lv<64> > p_0_rec_i_i_cast_fu_65_p1;
-    sc_signal< sc_lv<32> > opt_type_02_loc_loc_out_fu_28;
-    sc_signal< sc_lv<32> > tempin_0_opt_type_02_i_i_fu_93_p3;
-    sc_signal< sc_lv<1> > tmp_1_i_fu_87_p2;
+    sc_signal< bool > ap_sig_bdd_49;
+    sc_signal< sc_lv<1> > exitcond1_fu_72_p2;
+    sc_signal< bool > ap_sig_bdd_56;
+    sc_signal< sc_lv<7> > read_idx_0_i_i_reg_52;
+    sc_signal< bool > ap_sig_bdd_65;
+    sc_signal< sc_lv<64> > p_0_rec_i_i_cast_fu_67_p1;
+    sc_signal< sc_lv<32> > opt_type_02_loc_loc_loc0_fu_30;
+    sc_signal< sc_lv<32> > tempin_0_opt_type_02_i_i_fu_95_p3;
+    sc_signal< sc_lv<1> > tmp_3_i_fu_89_p2;
     sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -78,18 +79,19 @@ struct DCT_Loop_1_proc : public sc_module {
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
-    void thread_ap_return();
+    void thread_ap_return_0();
+    void thread_ap_return_1();
     void thread_ap_sig_bdd_21();
-    void thread_ap_sig_bdd_47();
-    void thread_ap_sig_bdd_54();
-    void thread_ap_sig_bdd_63();
+    void thread_ap_sig_bdd_49();
+    void thread_ap_sig_bdd_56();
+    void thread_ap_sig_bdd_65();
     void thread_ap_sig_cseq_ST_st1_fsm_0();
     void thread_ap_sig_cseq_ST_st2_fsm_1();
-    void thread_exitcond1_fu_70_p2();
-    void thread_p_0_rec_i_i_cast_fu_65_p1();
-    void thread_read_idx_fu_76_p2();
-    void thread_tempin_0_opt_type_02_i_i_fu_93_p3();
-    void thread_tmp_1_i_fu_87_p2();
+    void thread_exitcond1_fu_72_p2();
+    void thread_p_0_rec_i_i_cast_fu_67_p1();
+    void thread_read_idx_fu_78_p2();
+    void thread_tempin_0_opt_type_02_i_i_fu_95_p3();
+    void thread_tmp_3_i_fu_89_p2();
     void thread_ap_NS_fsm();
 };
 

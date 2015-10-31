@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT_MAT_Multiply_Loop_Row_proc'" level="0">
-<item name = "Date">Fri Oct 30 14:23:01 2015
+<item name = "Date">Fri Oct 30 16:49:07 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">110, 110, 110, 110, none</column>
+<column name="">300, 300, 300, 300, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Row_Col">108, 108, 46, 1, 1, 64, yes</column>
+<column name="- Row_Col">298, 298, 47, 4, 1, 64, yes</column>
 </table>
 </item>
 </section>

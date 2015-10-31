@@ -16,8 +16,8 @@ const sc_lv<3> DCT_MAT_Multiply_1::ap_const_lv3_0 = "000";
 const sc_logic DCT_MAT_Multiply_1::ap_const_logic_0 = sc_dt::Log_0;
 const sc_lv<32> DCT_MAT_Multiply_1::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<6> DCT_MAT_Multiply_1::ap_const_lv6_0 = "000000";
-const bool DCT_MAT_Multiply_1::ap_true = true;
 const sc_logic DCT_MAT_Multiply_1::ap_const_logic_1 = sc_dt::Log_1;
+const bool DCT_MAT_Multiply_1::ap_true = true;
 
 DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), mVcdFile(0) {
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0 = new DCT_MAT_Multiply_1_Loop_LoadRow_pr("DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0");
@@ -28,6 +28,30 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->ap_continue(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue);
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->ap_idle(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_idle);
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->ap_ready(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_0_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_0_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_0_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_1_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_1_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_1_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_2_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_2_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_2_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_3_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_3_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_3_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_4_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_4_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_4_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_5_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_5_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_5_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_6_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_6_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_6_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_7_address0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_7_ce0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0);
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->B_7_q0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0);
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->ap_return_0(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_0);
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->ap_return_1(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_1);
     DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0->ap_return_2(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_2);
@@ -941,9 +965,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
 
     SC_METHOD(thread_A1_d1);
 
-    SC_METHOD(thread_A1_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update );
-
     SC_METHOD(thread_A1_we0);
 
     SC_METHOD(thread_A1_we1);
@@ -963,9 +984,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     SC_METHOD(thread_A2_d0);
 
     SC_METHOD(thread_A2_d1);
-
-    SC_METHOD(thread_A2_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update );
 
     SC_METHOD(thread_A2_we0);
 
@@ -987,9 +1005,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
 
     SC_METHOD(thread_A3_d1);
 
-    SC_METHOD(thread_A3_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update );
-
     SC_METHOD(thread_A3_we0);
 
     SC_METHOD(thread_A3_we1);
@@ -1009,9 +1024,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     SC_METHOD(thread_A4_d0);
 
     SC_METHOD(thread_A4_d1);
-
-    SC_METHOD(thread_A4_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update );
 
     SC_METHOD(thread_A4_we0);
 
@@ -1033,9 +1045,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
 
     SC_METHOD(thread_A5_d1);
 
-    SC_METHOD(thread_A5_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update );
-
     SC_METHOD(thread_A5_we0);
 
     SC_METHOD(thread_A5_we1);
@@ -1055,9 +1064,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     SC_METHOD(thread_A6_d0);
 
     SC_METHOD(thread_A6_d1);
-
-    SC_METHOD(thread_A6_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update );
 
     SC_METHOD(thread_A6_we0);
 
@@ -1079,9 +1085,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
 
     SC_METHOD(thread_A7_d1);
 
-    SC_METHOD(thread_A7_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update );
-
     SC_METHOD(thread_A7_we0);
 
     SC_METHOD(thread_A7_we1);
@@ -1102,12 +1105,153 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
 
     SC_METHOD(thread_A_d1);
 
-    SC_METHOD(thread_A_pipo_update);
-    sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update );
-
     SC_METHOD(thread_A_we0);
 
     SC_METHOD(thread_A_we1);
+
+    SC_METHOD(thread_B_0_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0 );
+
+    SC_METHOD(thread_B_0_address1);
+
+    SC_METHOD(thread_B_0_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0 );
+
+    SC_METHOD(thread_B_0_ce1);
+
+    SC_METHOD(thread_B_0_d0);
+
+    SC_METHOD(thread_B_0_d1);
+
+    SC_METHOD(thread_B_0_we0);
+
+    SC_METHOD(thread_B_0_we1);
+
+    SC_METHOD(thread_B_1_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0 );
+
+    SC_METHOD(thread_B_1_address1);
+
+    SC_METHOD(thread_B_1_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0 );
+
+    SC_METHOD(thread_B_1_ce1);
+
+    SC_METHOD(thread_B_1_d0);
+
+    SC_METHOD(thread_B_1_d1);
+
+    SC_METHOD(thread_B_1_we0);
+
+    SC_METHOD(thread_B_1_we1);
+
+    SC_METHOD(thread_B_2_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0 );
+
+    SC_METHOD(thread_B_2_address1);
+
+    SC_METHOD(thread_B_2_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0 );
+
+    SC_METHOD(thread_B_2_ce1);
+
+    SC_METHOD(thread_B_2_d0);
+
+    SC_METHOD(thread_B_2_d1);
+
+    SC_METHOD(thread_B_2_we0);
+
+    SC_METHOD(thread_B_2_we1);
+
+    SC_METHOD(thread_B_3_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0 );
+
+    SC_METHOD(thread_B_3_address1);
+
+    SC_METHOD(thread_B_3_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0 );
+
+    SC_METHOD(thread_B_3_ce1);
+
+    SC_METHOD(thread_B_3_d0);
+
+    SC_METHOD(thread_B_3_d1);
+
+    SC_METHOD(thread_B_3_we0);
+
+    SC_METHOD(thread_B_3_we1);
+
+    SC_METHOD(thread_B_4_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0 );
+
+    SC_METHOD(thread_B_4_address1);
+
+    SC_METHOD(thread_B_4_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0 );
+
+    SC_METHOD(thread_B_4_ce1);
+
+    SC_METHOD(thread_B_4_d0);
+
+    SC_METHOD(thread_B_4_d1);
+
+    SC_METHOD(thread_B_4_we0);
+
+    SC_METHOD(thread_B_4_we1);
+
+    SC_METHOD(thread_B_5_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0 );
+
+    SC_METHOD(thread_B_5_address1);
+
+    SC_METHOD(thread_B_5_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0 );
+
+    SC_METHOD(thread_B_5_ce1);
+
+    SC_METHOD(thread_B_5_d0);
+
+    SC_METHOD(thread_B_5_d1);
+
+    SC_METHOD(thread_B_5_we0);
+
+    SC_METHOD(thread_B_5_we1);
+
+    SC_METHOD(thread_B_6_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0 );
+
+    SC_METHOD(thread_B_6_address1);
+
+    SC_METHOD(thread_B_6_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0 );
+
+    SC_METHOD(thread_B_6_ce1);
+
+    SC_METHOD(thread_B_6_d0);
+
+    SC_METHOD(thread_B_6_d1);
+
+    SC_METHOD(thread_B_6_we0);
+
+    SC_METHOD(thread_B_6_we1);
+
+    SC_METHOD(thread_B_7_address0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0 );
+
+    SC_METHOD(thread_B_7_address1);
+
+    SC_METHOD(thread_B_7_ce0);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0 );
+
+    SC_METHOD(thread_B_7_ce1);
+
+    SC_METHOD(thread_B_7_d0);
+
+    SC_METHOD(thread_B_7_d1);
+
+    SC_METHOD(thread_B_7_we0);
+
+    SC_METHOD(thread_B_7_we1);
 
     SC_METHOD(thread_B_cached_0_0_channel_U_ap_dummy_ce);
 
@@ -1836,18 +1980,42 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
 
     SC_METHOD(thread_C_we1);
 
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0);
+    sensitive << ( B_0_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0);
+    sensitive << ( B_1_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0);
+    sensitive << ( B_2_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0);
+    sensitive << ( B_3_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0);
+    sensitive << ( B_4_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0);
+    sensitive << ( B_5_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0);
+    sensitive << ( B_6_q0 );
+
+    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0);
+    sensitive << ( B_7_q0 );
+
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue);
     sensitive << ( ap_sig_ready_B_cached_0_0_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_1_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_2_channel_full_n );
+    sensitive << ( ap_sig_ready_B_cached_0_6_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_3_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_4_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_5_channel_full_n );
-    sensitive << ( ap_sig_ready_B_cached_0_6_channel_full_n );
-    sensitive << ( ap_sig_ready_B_cached_1_2_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_0_7_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_1_0_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_1_1_channel_full_n );
+    sensitive << ( ap_sig_ready_B_cached_1_2_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_1_3_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_1_4_channel_full_n );
     sensitive << ( ap_sig_ready_B_cached_1_5_channel_full_n );
@@ -1903,12 +2071,7 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sensitive << ( ap_sig_ready_B_cached_7_7_channel_full_n );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start);
-    sensitive << ( ap_start );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status);
-    sensitive << ( A1_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update);
+    sensitive << ( ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q0);
     sensitive << ( A1_q0 );
@@ -1916,21 +2079,11 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q1);
     sensitive << ( A1_q1 );
 
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status);
-    sensitive << ( A2_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update);
-
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q0);
     sensitive << ( A2_q0 );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q1);
     sensitive << ( A2_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status);
-    sensitive << ( A3_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update);
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q0);
     sensitive << ( A3_q0 );
@@ -1938,21 +2091,11 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q1);
     sensitive << ( A3_q1 );
 
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status);
-    sensitive << ( A4_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update);
-
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q0);
     sensitive << ( A4_q0 );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q1);
     sensitive << ( A4_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status);
-    sensitive << ( A5_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update);
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q0);
     sensitive << ( A5_q0 );
@@ -1960,32 +2103,17 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q1);
     sensitive << ( A5_q1 );
 
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status);
-    sensitive << ( A6_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update);
-
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q0);
     sensitive << ( A6_q0 );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q1);
     sensitive << ( A6_q1 );
 
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status);
-    sensitive << ( A7_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update);
-
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q0);
     sensitive << ( A7_q0 );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q1);
     sensitive << ( A7_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status);
-    sensitive << ( A_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update);
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_q0);
     sensitive << ( A_q0 );
@@ -2002,7 +2130,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sensitive << ( ap_sig_hs_continue );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start);
-    sensitive << ( ap_start );
     sensitive << ( B_cached_0_0_channel_empty_n );
     sensitive << ( B_cached_0_1_channel_empty_n );
     sensitive << ( B_cached_0_2_channel_empty_n );
@@ -2067,6 +2194,7 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sensitive << ( B_cached_7_5_channel_empty_n );
     sensitive << ( B_cached_7_6_channel_empty_n );
     sensitive << ( B_cached_7_7_channel_empty_n );
+    sensitive << ( ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start );
 
     SC_METHOD(thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read);
     sensitive << ( B_cached_0_0_channel_dout );
@@ -2591,7 +2719,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sensitive << ( ap_sig_top_allready );
 
     SC_METHOD(thread_ap_sig_hs_continue);
-    sensitive << ( ap_continue );
 
     SC_METHOD(thread_ap_sig_hs_done);
     sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_done );
@@ -2852,20 +2979,37 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sensitive << ( B_cached_7_7_channel_full_n );
     sensitive << ( ap_reg_ready_B_cached_7_7_channel_full_n );
 
-    SC_METHOD(thread_ap_sig_top_allready);
+    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready);
+    sensitive << ( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready );
+    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready );
+
+    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready);
     sensitive << ( DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready );
+    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready );
+
+    SC_METHOD(thread_ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start);
+    sensitive << ( ap_start );
+    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready );
+
+    SC_METHOD(thread_ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start);
+    sensitive << ( ap_start );
+    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready );
+
+    SC_METHOD(thread_ap_sig_top_allready);
+    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready );
+    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready );
 
     ap_reg_ready_B_cached_0_0_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_1_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_2_channel_full_n = SC_LOGIC_0;
+    ap_reg_ready_B_cached_0_6_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_3_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_4_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_5_channel_full_n = SC_LOGIC_0;
-    ap_reg_ready_B_cached_0_6_channel_full_n = SC_LOGIC_0;
-    ap_reg_ready_B_cached_1_2_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_0_7_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_1_0_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_1_1_channel_full_n = SC_LOGIC_0;
+    ap_reg_ready_B_cached_1_2_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_1_3_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_1_4_channel_full_n = SC_LOGIC_0;
     ap_reg_ready_B_cached_1_5_channel_full_n = SC_LOGIC_0;
@@ -2921,6 +3065,8 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     ap_reg_ready_B_cached_7_7_channel_full_n = SC_LOGIC_0;
     ap_reg_procdone_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0 = SC_LOGIC_0;
     ap_reg_procdone_DCT_MAT_Multiply_1_Loop_Row_proc_U0 = SC_LOGIC_0;
+    ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = SC_LOGIC_0;
+    ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "DCT_MAT_Multiply_1_sc_trace_" << apTFileNum ++;
@@ -3009,6 +3155,86 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, A7_d1, "(port)A7_d1");
     sc_trace(mVcdFile, A7_q1, "(port)A7_q1");
     sc_trace(mVcdFile, A7_we1, "(port)A7_we1");
+    sc_trace(mVcdFile, B_0_address0, "(port)B_0_address0");
+    sc_trace(mVcdFile, B_0_ce0, "(port)B_0_ce0");
+    sc_trace(mVcdFile, B_0_d0, "(port)B_0_d0");
+    sc_trace(mVcdFile, B_0_q0, "(port)B_0_q0");
+    sc_trace(mVcdFile, B_0_we0, "(port)B_0_we0");
+    sc_trace(mVcdFile, B_0_address1, "(port)B_0_address1");
+    sc_trace(mVcdFile, B_0_ce1, "(port)B_0_ce1");
+    sc_trace(mVcdFile, B_0_d1, "(port)B_0_d1");
+    sc_trace(mVcdFile, B_0_q1, "(port)B_0_q1");
+    sc_trace(mVcdFile, B_0_we1, "(port)B_0_we1");
+    sc_trace(mVcdFile, B_1_address0, "(port)B_1_address0");
+    sc_trace(mVcdFile, B_1_ce0, "(port)B_1_ce0");
+    sc_trace(mVcdFile, B_1_d0, "(port)B_1_d0");
+    sc_trace(mVcdFile, B_1_q0, "(port)B_1_q0");
+    sc_trace(mVcdFile, B_1_we0, "(port)B_1_we0");
+    sc_trace(mVcdFile, B_1_address1, "(port)B_1_address1");
+    sc_trace(mVcdFile, B_1_ce1, "(port)B_1_ce1");
+    sc_trace(mVcdFile, B_1_d1, "(port)B_1_d1");
+    sc_trace(mVcdFile, B_1_q1, "(port)B_1_q1");
+    sc_trace(mVcdFile, B_1_we1, "(port)B_1_we1");
+    sc_trace(mVcdFile, B_2_address0, "(port)B_2_address0");
+    sc_trace(mVcdFile, B_2_ce0, "(port)B_2_ce0");
+    sc_trace(mVcdFile, B_2_d0, "(port)B_2_d0");
+    sc_trace(mVcdFile, B_2_q0, "(port)B_2_q0");
+    sc_trace(mVcdFile, B_2_we0, "(port)B_2_we0");
+    sc_trace(mVcdFile, B_2_address1, "(port)B_2_address1");
+    sc_trace(mVcdFile, B_2_ce1, "(port)B_2_ce1");
+    sc_trace(mVcdFile, B_2_d1, "(port)B_2_d1");
+    sc_trace(mVcdFile, B_2_q1, "(port)B_2_q1");
+    sc_trace(mVcdFile, B_2_we1, "(port)B_2_we1");
+    sc_trace(mVcdFile, B_3_address0, "(port)B_3_address0");
+    sc_trace(mVcdFile, B_3_ce0, "(port)B_3_ce0");
+    sc_trace(mVcdFile, B_3_d0, "(port)B_3_d0");
+    sc_trace(mVcdFile, B_3_q0, "(port)B_3_q0");
+    sc_trace(mVcdFile, B_3_we0, "(port)B_3_we0");
+    sc_trace(mVcdFile, B_3_address1, "(port)B_3_address1");
+    sc_trace(mVcdFile, B_3_ce1, "(port)B_3_ce1");
+    sc_trace(mVcdFile, B_3_d1, "(port)B_3_d1");
+    sc_trace(mVcdFile, B_3_q1, "(port)B_3_q1");
+    sc_trace(mVcdFile, B_3_we1, "(port)B_3_we1");
+    sc_trace(mVcdFile, B_4_address0, "(port)B_4_address0");
+    sc_trace(mVcdFile, B_4_ce0, "(port)B_4_ce0");
+    sc_trace(mVcdFile, B_4_d0, "(port)B_4_d0");
+    sc_trace(mVcdFile, B_4_q0, "(port)B_4_q0");
+    sc_trace(mVcdFile, B_4_we0, "(port)B_4_we0");
+    sc_trace(mVcdFile, B_4_address1, "(port)B_4_address1");
+    sc_trace(mVcdFile, B_4_ce1, "(port)B_4_ce1");
+    sc_trace(mVcdFile, B_4_d1, "(port)B_4_d1");
+    sc_trace(mVcdFile, B_4_q1, "(port)B_4_q1");
+    sc_trace(mVcdFile, B_4_we1, "(port)B_4_we1");
+    sc_trace(mVcdFile, B_5_address0, "(port)B_5_address0");
+    sc_trace(mVcdFile, B_5_ce0, "(port)B_5_ce0");
+    sc_trace(mVcdFile, B_5_d0, "(port)B_5_d0");
+    sc_trace(mVcdFile, B_5_q0, "(port)B_5_q0");
+    sc_trace(mVcdFile, B_5_we0, "(port)B_5_we0");
+    sc_trace(mVcdFile, B_5_address1, "(port)B_5_address1");
+    sc_trace(mVcdFile, B_5_ce1, "(port)B_5_ce1");
+    sc_trace(mVcdFile, B_5_d1, "(port)B_5_d1");
+    sc_trace(mVcdFile, B_5_q1, "(port)B_5_q1");
+    sc_trace(mVcdFile, B_5_we1, "(port)B_5_we1");
+    sc_trace(mVcdFile, B_6_address0, "(port)B_6_address0");
+    sc_trace(mVcdFile, B_6_ce0, "(port)B_6_ce0");
+    sc_trace(mVcdFile, B_6_d0, "(port)B_6_d0");
+    sc_trace(mVcdFile, B_6_q0, "(port)B_6_q0");
+    sc_trace(mVcdFile, B_6_we0, "(port)B_6_we0");
+    sc_trace(mVcdFile, B_6_address1, "(port)B_6_address1");
+    sc_trace(mVcdFile, B_6_ce1, "(port)B_6_ce1");
+    sc_trace(mVcdFile, B_6_d1, "(port)B_6_d1");
+    sc_trace(mVcdFile, B_6_q1, "(port)B_6_q1");
+    sc_trace(mVcdFile, B_6_we1, "(port)B_6_we1");
+    sc_trace(mVcdFile, B_7_address0, "(port)B_7_address0");
+    sc_trace(mVcdFile, B_7_ce0, "(port)B_7_ce0");
+    sc_trace(mVcdFile, B_7_d0, "(port)B_7_d0");
+    sc_trace(mVcdFile, B_7_q0, "(port)B_7_q0");
+    sc_trace(mVcdFile, B_7_we0, "(port)B_7_we0");
+    sc_trace(mVcdFile, B_7_address1, "(port)B_7_address1");
+    sc_trace(mVcdFile, B_7_ce1, "(port)B_7_ce1");
+    sc_trace(mVcdFile, B_7_d1, "(port)B_7_d1");
+    sc_trace(mVcdFile, B_7_q1, "(port)B_7_q1");
+    sc_trace(mVcdFile, B_7_we1, "(port)B_7_we1");
     sc_trace(mVcdFile, C_address0, "(port)C_address0");
     sc_trace(mVcdFile, C_ce0, "(port)C_ce0");
     sc_trace(mVcdFile, C_d0, "(port)C_d0");
@@ -3021,27 +3247,10 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, C_we1, "(port)C_we1");
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
-    sc_trace(mVcdFile, ap_start, "(port)ap_start");
-    sc_trace(mVcdFile, A_pipo_status, "(port)A_pipo_status");
-    sc_trace(mVcdFile, A_pipo_update, "(port)A_pipo_update");
-    sc_trace(mVcdFile, A1_pipo_status, "(port)A1_pipo_status");
-    sc_trace(mVcdFile, A1_pipo_update, "(port)A1_pipo_update");
-    sc_trace(mVcdFile, A2_pipo_status, "(port)A2_pipo_status");
-    sc_trace(mVcdFile, A2_pipo_update, "(port)A2_pipo_update");
-    sc_trace(mVcdFile, A3_pipo_status, "(port)A3_pipo_status");
-    sc_trace(mVcdFile, A3_pipo_update, "(port)A3_pipo_update");
-    sc_trace(mVcdFile, A4_pipo_status, "(port)A4_pipo_status");
-    sc_trace(mVcdFile, A4_pipo_update, "(port)A4_pipo_update");
-    sc_trace(mVcdFile, A5_pipo_status, "(port)A5_pipo_status");
-    sc_trace(mVcdFile, A5_pipo_update, "(port)A5_pipo_update");
-    sc_trace(mVcdFile, A6_pipo_status, "(port)A6_pipo_status");
-    sc_trace(mVcdFile, A6_pipo_update, "(port)A6_pipo_update");
-    sc_trace(mVcdFile, A7_pipo_status, "(port)A7_pipo_status");
-    sc_trace(mVcdFile, A7_pipo_update, "(port)A7_pipo_update");
     sc_trace(mVcdFile, C_pipo_status, "(port)C_pipo_status");
     sc_trace(mVcdFile, C_pipo_update, "(port)C_pipo_update");
-    sc_trace(mVcdFile, ap_continue, "(port)ap_continue");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
+    sc_trace(mVcdFile, ap_start, "(port)ap_start");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
     sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
 #endif
@@ -3051,6 +3260,30 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_idle, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_idle");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0");
+    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_0, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_0");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_1, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_1");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_2, "DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_2");
@@ -3127,6 +3360,10 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, B_cached_0_2_channel_full_n, "B_cached_0_2_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_2_channel_full_n, "ap_reg_ready_B_cached_0_2_channel_full_n");
     sc_trace(mVcdFile, ap_sig_ready_B_cached_0_2_channel_full_n, "ap_sig_ready_B_cached_0_2_channel_full_n");
+    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_6_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_6_channel");
+    sc_trace(mVcdFile, B_cached_0_6_channel_full_n, "B_cached_0_6_channel_full_n");
+    sc_trace(mVcdFile, ap_reg_ready_B_cached_0_6_channel_full_n, "ap_reg_ready_B_cached_0_6_channel_full_n");
+    sc_trace(mVcdFile, ap_sig_ready_B_cached_0_6_channel_full_n, "ap_sig_ready_B_cached_0_6_channel_full_n");
     sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_3_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_3_channel");
     sc_trace(mVcdFile, B_cached_0_3_channel_full_n, "B_cached_0_3_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_3_channel_full_n, "ap_reg_ready_B_cached_0_3_channel_full_n");
@@ -3139,14 +3376,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, B_cached_0_5_channel_full_n, "B_cached_0_5_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_5_channel_full_n, "ap_reg_ready_B_cached_0_5_channel_full_n");
     sc_trace(mVcdFile, ap_sig_ready_B_cached_0_5_channel_full_n, "ap_sig_ready_B_cached_0_5_channel_full_n");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_6_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_6_channel");
-    sc_trace(mVcdFile, B_cached_0_6_channel_full_n, "B_cached_0_6_channel_full_n");
-    sc_trace(mVcdFile, ap_reg_ready_B_cached_0_6_channel_full_n, "ap_reg_ready_B_cached_0_6_channel_full_n");
-    sc_trace(mVcdFile, ap_sig_ready_B_cached_0_6_channel_full_n, "ap_sig_ready_B_cached_0_6_channel_full_n");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_2_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_2_channel");
-    sc_trace(mVcdFile, B_cached_1_2_channel_full_n, "B_cached_1_2_channel_full_n");
-    sc_trace(mVcdFile, ap_reg_ready_B_cached_1_2_channel_full_n, "ap_reg_ready_B_cached_1_2_channel_full_n");
-    sc_trace(mVcdFile, ap_sig_ready_B_cached_1_2_channel_full_n, "ap_sig_ready_B_cached_1_2_channel_full_n");
     sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_7_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_7_channel");
     sc_trace(mVcdFile, B_cached_0_7_channel_full_n, "B_cached_0_7_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_0_7_channel_full_n, "ap_reg_ready_B_cached_0_7_channel_full_n");
@@ -3159,6 +3388,10 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, B_cached_1_1_channel_full_n, "B_cached_1_1_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_1_1_channel_full_n, "ap_reg_ready_B_cached_1_1_channel_full_n");
     sc_trace(mVcdFile, ap_sig_ready_B_cached_1_1_channel_full_n, "ap_sig_ready_B_cached_1_1_channel_full_n");
+    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_2_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_2_channel");
+    sc_trace(mVcdFile, B_cached_1_2_channel_full_n, "B_cached_1_2_channel_full_n");
+    sc_trace(mVcdFile, ap_reg_ready_B_cached_1_2_channel_full_n, "ap_reg_ready_B_cached_1_2_channel_full_n");
+    sc_trace(mVcdFile, ap_sig_ready_B_cached_1_2_channel_full_n, "ap_sig_ready_B_cached_1_2_channel_full_n");
     sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_3_channel, "ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_3_channel");
     sc_trace(mVcdFile, B_cached_1_3_channel_full_n, "B_cached_1_3_channel_full_n");
     sc_trace(mVcdFile, ap_reg_ready_B_cached_1_3_channel_full_n, "ap_reg_ready_B_cached_1_3_channel_full_n");
@@ -3492,22 +3725,6 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_ce0, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_ce0");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_we0, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_we0");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_d0, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_status, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_status");
     sc_trace(mVcdFile, DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_update, "DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_update");
     sc_trace(mVcdFile, ap_sig_hs_continue, "ap_sig_hs_continue");
@@ -3900,6 +4117,12 @@ DCT_MAT_Multiply_1::DCT_MAT_Multiply_1(sc_module_name name) : sc_module(name), m
     sc_trace(mVcdFile, ap_reg_procdone_DCT_MAT_Multiply_1_Loop_Row_proc_U0, "ap_reg_procdone_DCT_MAT_Multiply_1_Loop_Row_proc_U0");
     sc_trace(mVcdFile, ap_CS, "ap_CS");
     sc_trace(mVcdFile, ap_sig_top_allready, "ap_sig_top_allready");
+    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready, "ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready");
+    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready, "ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready");
+    sc_trace(mVcdFile, ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start, "ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start");
+    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready, "ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready");
+    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready, "ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready");
+    sc_trace(mVcdFile, ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start, "ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start");
 #endif
 
     }
@@ -4004,7 +4227,7 @@ void DCT_MAT_Multiply_1::thread_ap_clk_no_reset_() {
              esl_seteq<1,1,1>(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue.read(), ap_const_logic_1))) {
             ap_reg_ready_B_cached_0_0_channel_full_n = ap_const_logic_0;
         } else if ((esl_seteq<1,1,1>(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done.read(), ap_const_logic_1) && 
-                    esl_seteq<1,1,1>(B_cached_0_0_channel_full_n.read(), ap_const_logic_1))) {
+                    esl_seteq<1,1,1>(ap_const_logic_1, B_cached_0_0_channel_full_n.read()))) {
             ap_reg_ready_B_cached_0_0_channel_full_n = ap_const_logic_1;
         }
     }
@@ -4701,6 +4924,26 @@ void DCT_MAT_Multiply_1::thread_ap_clk_no_reset_() {
             ap_reg_ready_B_cached_7_7_channel_full_n = ap_const_logic_1;
         }
     }
+    if ( ap_rst.read() == ap_const_logic_1) {
+        ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_start.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_top_allready.read()))) {
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = ap_const_logic_0;
+        } else if (esl_seteq<1,1,1>(DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready.read(), ap_const_logic_1)) {
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = ap_const_logic_1;
+        }
+    }
+    if ( ap_rst.read() == ap_const_logic_1) {
+        ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_start.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_top_allready.read()))) {
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = ap_const_logic_0;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready.read())) {
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = ap_const_logic_1;
+        }
+    }
 }
 
 void DCT_MAT_Multiply_1::thread_A1_address0() {
@@ -4725,10 +4968,6 @@ void DCT_MAT_Multiply_1::thread_A1_d0() {
 
 void DCT_MAT_Multiply_1::thread_A1_d1() {
     A1_d1 = ap_const_lv32_0;
-}
-
-void DCT_MAT_Multiply_1::thread_A1_pipo_update() {
-    A1_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update.read();
 }
 
 void DCT_MAT_Multiply_1::thread_A1_we0() {
@@ -4763,10 +5002,6 @@ void DCT_MAT_Multiply_1::thread_A2_d1() {
     A2_d1 = ap_const_lv32_0;
 }
 
-void DCT_MAT_Multiply_1::thread_A2_pipo_update() {
-    A2_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update.read();
-}
-
 void DCT_MAT_Multiply_1::thread_A2_we0() {
     A2_we0 = ap_const_logic_0;
 }
@@ -4797,10 +5032,6 @@ void DCT_MAT_Multiply_1::thread_A3_d0() {
 
 void DCT_MAT_Multiply_1::thread_A3_d1() {
     A3_d1 = ap_const_lv32_0;
-}
-
-void DCT_MAT_Multiply_1::thread_A3_pipo_update() {
-    A3_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update.read();
 }
 
 void DCT_MAT_Multiply_1::thread_A3_we0() {
@@ -4835,10 +5066,6 @@ void DCT_MAT_Multiply_1::thread_A4_d1() {
     A4_d1 = ap_const_lv32_0;
 }
 
-void DCT_MAT_Multiply_1::thread_A4_pipo_update() {
-    A4_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update.read();
-}
-
 void DCT_MAT_Multiply_1::thread_A4_we0() {
     A4_we0 = ap_const_logic_0;
 }
@@ -4869,10 +5096,6 @@ void DCT_MAT_Multiply_1::thread_A5_d0() {
 
 void DCT_MAT_Multiply_1::thread_A5_d1() {
     A5_d1 = ap_const_lv32_0;
-}
-
-void DCT_MAT_Multiply_1::thread_A5_pipo_update() {
-    A5_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update.read();
 }
 
 void DCT_MAT_Multiply_1::thread_A5_we0() {
@@ -4907,10 +5130,6 @@ void DCT_MAT_Multiply_1::thread_A6_d1() {
     A6_d1 = ap_const_lv32_0;
 }
 
-void DCT_MAT_Multiply_1::thread_A6_pipo_update() {
-    A6_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update.read();
-}
-
 void DCT_MAT_Multiply_1::thread_A6_we0() {
     A6_we0 = ap_const_logic_0;
 }
@@ -4941,10 +5160,6 @@ void DCT_MAT_Multiply_1::thread_A7_d0() {
 
 void DCT_MAT_Multiply_1::thread_A7_d1() {
     A7_d1 = ap_const_lv32_0;
-}
-
-void DCT_MAT_Multiply_1::thread_A7_pipo_update() {
-    A7_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update.read();
 }
 
 void DCT_MAT_Multiply_1::thread_A7_we0() {
@@ -4979,16 +5194,268 @@ void DCT_MAT_Multiply_1::thread_A_d1() {
     A_d1 = ap_const_lv32_0;
 }
 
-void DCT_MAT_Multiply_1::thread_A_pipo_update() {
-    A_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update.read();
-}
-
 void DCT_MAT_Multiply_1::thread_A_we0() {
     A_we0 = ap_const_logic_0;
 }
 
 void DCT_MAT_Multiply_1::thread_A_we1() {
     A_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_address0() {
+    B_0_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_address1() {
+    B_0_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_ce0() {
+    B_0_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_ce1() {
+    B_0_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_d0() {
+    B_0_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_d1() {
+    B_0_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_we0() {
+    B_0_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_0_we1() {
+    B_0_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_address0() {
+    B_1_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_address1() {
+    B_1_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_ce0() {
+    B_1_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_ce1() {
+    B_1_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_d0() {
+    B_1_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_d1() {
+    B_1_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_we0() {
+    B_1_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_1_we1() {
+    B_1_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_address0() {
+    B_2_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_address1() {
+    B_2_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_ce0() {
+    B_2_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_ce1() {
+    B_2_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_d0() {
+    B_2_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_d1() {
+    B_2_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_we0() {
+    B_2_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_2_we1() {
+    B_2_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_address0() {
+    B_3_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_address1() {
+    B_3_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_ce0() {
+    B_3_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_ce1() {
+    B_3_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_d0() {
+    B_3_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_d1() {
+    B_3_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_we0() {
+    B_3_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_3_we1() {
+    B_3_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_address0() {
+    B_4_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_address1() {
+    B_4_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_ce0() {
+    B_4_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_ce1() {
+    B_4_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_d0() {
+    B_4_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_d1() {
+    B_4_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_we0() {
+    B_4_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_4_we1() {
+    B_4_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_address0() {
+    B_5_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_address1() {
+    B_5_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_ce0() {
+    B_5_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_ce1() {
+    B_5_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_d0() {
+    B_5_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_d1() {
+    B_5_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_we0() {
+    B_5_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_5_we1() {
+    B_5_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_address0() {
+    B_6_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_address1() {
+    B_6_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_ce0() {
+    B_6_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_ce1() {
+    B_6_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_d0() {
+    B_6_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_d1() {
+    B_6_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_we0() {
+    B_6_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_6_we1() {
+    B_6_we1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_address0() {
+    B_7_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_address1() {
+    B_7_address1 = ap_const_lv3_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_ce0() {
+    B_7_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_ce1() {
+    B_7_ce1 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_d0() {
+    B_7_d0 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_d1() {
+    B_7_d1 = ap_const_lv32_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_we0() {
+    B_7_we0 = ap_const_logic_0;
+}
+
+void DCT_MAT_Multiply_1::thread_B_7_we1() {
+    B_7_we1 = ap_const_logic_0;
 }
 
 void DCT_MAT_Multiply_1::thread_B_cached_0_0_channel_U_ap_dummy_ce() {
@@ -6051,18 +6518,50 @@ void DCT_MAT_Multiply_1::thread_C_we1() {
     C_we1 = ap_const_logic_0;
 }
 
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0 = B_0_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0 = B_1_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0 = B_2_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0 = B_3_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0 = B_4_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0 = B_5_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0 = B_6_q0.read();
+}
+
+void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0() {
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0 = B_7_q0.read();
+}
+
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue() {
-    if ((esl_seteq<1,1,1>(ap_sig_ready_B_cached_0_0_channel_full_n.read(), ap_const_logic_1) && 
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_0_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_1_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_2_channel_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_6_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_3_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_4_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_5_channel_full_n.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_6_channel_full_n.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_2_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_0_7_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_0_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_1_channel_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_2_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_3_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_4_channel_full_n.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_B_cached_1_5_channel_full_n.read()) && 
@@ -6123,15 +6622,7 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continu
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start() {
-    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_start.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status = A1_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update = ap_const_logic_0;
+    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start.read();
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q0() {
@@ -6142,28 +6633,12 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q1 = A1_q1.read();
 }
 
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status = A2_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update = ap_const_logic_0;
-}
-
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q0() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q0 = A2_q0.read();
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q1 = A2_q1.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status = A3_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update = ap_const_logic_0;
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q0() {
@@ -6174,28 +6649,12 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q1 = A3_q1.read();
 }
 
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status = A4_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update = ap_const_logic_0;
-}
-
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q0() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q0 = A4_q0.read();
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q1 = A4_q1.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status = A5_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update = ap_const_logic_0;
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q0() {
@@ -6206,14 +6665,6 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q1 = A5_q1.read();
 }
 
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status = A6_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update = ap_const_logic_0;
-}
-
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q0() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q0 = A6_q0.read();
 }
@@ -6222,28 +6673,12 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q1 = A6_q1.read();
 }
 
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status = A7_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update = ap_const_logic_0;
-}
-
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q0() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q0 = A7_q0.read();
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q1() {
     DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q1 = A7_q1.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status = A_pipo_status.read();
-}
-
-void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update = ap_const_logic_0;
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_q0() {
@@ -6267,7 +6702,7 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_continue(
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start() {
-    DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = (ap_start.read() & B_cached_0_0_channel_empty_n.read() & B_cached_0_1_channel_empty_n.read() & B_cached_0_2_channel_empty_n.read() & B_cached_0_3_channel_empty_n.read() & B_cached_0_4_channel_empty_n.read() & B_cached_0_5_channel_empty_n.read() & B_cached_0_6_channel_empty_n.read() & B_cached_0_7_channel_empty_n.read() & B_cached_1_0_channel_empty_n.read() & B_cached_1_1_channel_empty_n.read() & B_cached_1_2_channel_empty_n.read() & B_cached_1_3_channel_empty_n.read() & B_cached_1_4_channel_empty_n.read() & B_cached_1_5_channel_empty_n.read() & B_cached_1_6_channel_empty_n.read() & B_cached_1_7_channel_empty_n.read() & B_cached_2_0_channel_empty_n.read() & B_cached_2_1_channel_empty_n.read() & B_cached_2_2_channel_empty_n.read() & B_cached_2_3_channel_empty_n.read() & B_cached_2_4_channel_empty_n.read() & B_cached_2_5_channel_empty_n.read() & B_cached_2_6_channel_empty_n.read() & B_cached_2_7_channel_empty_n.read() & B_cached_3_0_channel_empty_n.read() & B_cached_3_1_channel_empty_n.read() & B_cached_3_2_channel_empty_n.read() & B_cached_3_3_channel_empty_n.read() & B_cached_3_4_channel_empty_n.read() & B_cached_3_5_channel_empty_n.read() & B_cached_3_6_channel_empty_n.read() & B_cached_3_7_channel_empty_n.read() & B_cached_4_0_channel_empty_n.read() & B_cached_4_1_channel_empty_n.read() & B_cached_4_2_channel_empty_n.read() & B_cached_4_3_channel_empty_n.read() & B_cached_4_4_channel_empty_n.read() & B_cached_4_5_channel_empty_n.read() & B_cached_4_6_channel_empty_n.read() & B_cached_4_7_channel_empty_n.read() & B_cached_5_0_channel_empty_n.read() & B_cached_5_1_channel_empty_n.read() & B_cached_5_2_channel_empty_n.read() & B_cached_5_3_channel_empty_n.read() & B_cached_5_4_channel_empty_n.read() & B_cached_5_5_channel_empty_n.read() & B_cached_5_6_channel_empty_n.read() & B_cached_5_7_channel_empty_n.read() & B_cached_6_0_channel_empty_n.read() & B_cached_6_1_channel_empty_n.read() & B_cached_6_2_channel_empty_n.read() & B_cached_6_3_channel_empty_n.read() & B_cached_6_4_channel_empty_n.read() & B_cached_6_5_channel_empty_n.read() & B_cached_6_6_channel_empty_n.read() & B_cached_6_7_channel_empty_n.read() & B_cached_7_0_channel_empty_n.read() & B_cached_7_1_channel_empty_n.read() & B_cached_7_2_channel_empty_n.read() & B_cached_7_3_channel_empty_n.read() & B_cached_7_4_channel_empty_n.read() & B_cached_7_5_channel_empty_n.read() & B_cached_7_6_channel_empty_n.read() & B_cached_7_7_channel_empty_n.read());
+    DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = (B_cached_0_0_channel_empty_n.read() & B_cached_0_1_channel_empty_n.read() & B_cached_0_2_channel_empty_n.read() & B_cached_0_3_channel_empty_n.read() & B_cached_0_4_channel_empty_n.read() & B_cached_0_5_channel_empty_n.read() & B_cached_0_6_channel_empty_n.read() & B_cached_0_7_channel_empty_n.read() & B_cached_1_0_channel_empty_n.read() & B_cached_1_1_channel_empty_n.read() & B_cached_1_2_channel_empty_n.read() & B_cached_1_3_channel_empty_n.read() & B_cached_1_4_channel_empty_n.read() & B_cached_1_5_channel_empty_n.read() & B_cached_1_6_channel_empty_n.read() & B_cached_1_7_channel_empty_n.read() & B_cached_2_0_channel_empty_n.read() & B_cached_2_1_channel_empty_n.read() & B_cached_2_2_channel_empty_n.read() & B_cached_2_3_channel_empty_n.read() & B_cached_2_4_channel_empty_n.read() & B_cached_2_5_channel_empty_n.read() & B_cached_2_6_channel_empty_n.read() & B_cached_2_7_channel_empty_n.read() & B_cached_3_0_channel_empty_n.read() & B_cached_3_1_channel_empty_n.read() & B_cached_3_2_channel_empty_n.read() & B_cached_3_3_channel_empty_n.read() & B_cached_3_4_channel_empty_n.read() & B_cached_3_5_channel_empty_n.read() & B_cached_3_6_channel_empty_n.read() & B_cached_3_7_channel_empty_n.read() & B_cached_4_0_channel_empty_n.read() & B_cached_4_1_channel_empty_n.read() & B_cached_4_2_channel_empty_n.read() & B_cached_4_3_channel_empty_n.read() & B_cached_4_4_channel_empty_n.read() & B_cached_4_5_channel_empty_n.read() & B_cached_4_6_channel_empty_n.read() & B_cached_4_7_channel_empty_n.read() & B_cached_5_0_channel_empty_n.read() & B_cached_5_1_channel_empty_n.read() & B_cached_5_2_channel_empty_n.read() & B_cached_5_3_channel_empty_n.read() & B_cached_5_4_channel_empty_n.read() & B_cached_5_5_channel_empty_n.read() & B_cached_5_6_channel_empty_n.read() & B_cached_5_7_channel_empty_n.read() & B_cached_6_0_channel_empty_n.read() & B_cached_6_1_channel_empty_n.read() & B_cached_6_2_channel_empty_n.read() & B_cached_6_3_channel_empty_n.read() & B_cached_6_4_channel_empty_n.read() & B_cached_6_5_channel_empty_n.read() & B_cached_6_6_channel_empty_n.read() & B_cached_6_7_channel_empty_n.read() & B_cached_7_0_channel_empty_n.read() & B_cached_7_1_channel_empty_n.read() & B_cached_7_2_channel_empty_n.read() & B_cached_7_3_channel_empty_n.read() & B_cached_7_4_channel_empty_n.read() & B_cached_7_5_channel_empty_n.read() & B_cached_7_6_channel_empty_n.read() & B_cached_7_7_channel_empty_n.read() & ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start.read());
 }
 
 void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read() {
@@ -6527,7 +6962,7 @@ void DCT_MAT_Multiply_1::thread_DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read9() {
 }
 
 void DCT_MAT_Multiply_1::thread_ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_0_channel() {
-    if (esl_seteq<1,1,1>(ap_reg_ready_B_cached_0_0_channel_full_n.read(), ap_const_logic_1)) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_B_cached_0_0_channel_full_n.read())) {
         ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_0_channel = ap_const_logic_0;
     } else {
         ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_0_channel = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done.read();
@@ -7120,7 +7555,7 @@ void DCT_MAT_Multiply_1::thread_ap_ready() {
 }
 
 void DCT_MAT_Multiply_1::thread_ap_sig_hs_continue() {
-    ap_sig_hs_continue = ap_continue.read();
+    ap_sig_hs_continue = ap_const_logic_1;
 }
 
 void DCT_MAT_Multiply_1::thread_ap_sig_hs_done() {
@@ -7643,8 +8078,47 @@ void DCT_MAT_Multiply_1::thread_ap_sig_ready_B_cached_7_7_channel_full_n() {
     }
 }
 
+void DCT_MAT_Multiply_1::thread_ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready() {
+    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready.read())) {
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready.read();
+    } else {
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = ap_const_logic_1;
+    }
+}
+
+void DCT_MAT_Multiply_1::thread_ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready() {
+    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready.read())) {
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready.read();
+    } else {
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = ap_const_logic_1;
+    }
+}
+
+void DCT_MAT_Multiply_1::thread_ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_start.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready.read()))) {
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_const_logic_1;
+    } else {
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_const_logic_0;
+    }
+}
+
+void DCT_MAT_Multiply_1::thread_ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_start.read()))) {
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = ap_const_logic_1;
+    } else {
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = ap_const_logic_0;
+    }
+}
+
 void DCT_MAT_Multiply_1::thread_ap_sig_top_allready() {
-    ap_sig_top_allready = DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready.read()))) {
+        ap_sig_top_allready = ap_const_logic_1;
+    } else {
+        ap_sig_top_allready = ap_const_logic_0;
+    }
 }
 
 }

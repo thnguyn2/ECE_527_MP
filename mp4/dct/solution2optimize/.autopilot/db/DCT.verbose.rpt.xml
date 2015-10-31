@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'DCT'" level="0">
-<item name = "Date">Fri Oct 30 14:23:22 2015
+<item name = "Date">Fri Oct 30 16:49:47 2015
 </item>
 <item name = "Version">2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)</item>
 <item name = "Project">dct</item>
@@ -24,18 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">893, 893, 301, 301, dataflow</column>
+<column name="">347, 2320, 146, 1975, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_DCT_Loop_1_proc_fu_119">DCT_Loop_1_proc, 67, 67, 67, 67, none</column>
-<column name="grp_DCT_Loop_2_proc_fu_127">DCT_Loop_2_proc, 145, 145, 145, 145, none</column>
-<column name="grp_DCT_MAT_Multiply_fu_83">DCT_MAT_Multiply, 178, 178, 111, 111, dataflow</column>
-<column name="grp_DCT_MAT_Multiply_1_fu_96">DCT_MAT_Multiply_1, 368, 368, 301, 301, dataflow</column>
-<column name="grp_DCT_Loop_3_proc1_fu_111">DCT_Loop_3_proc1, 131, 131, 131, 131, none</column>
+<column name="grp_DCT_Loop_1_proc_fu_130">DCT_Loop_1_proc, 67, 67, 67, 67, none</column>
+<column name="grp_DCT_Loop_2_proc_fu_138">DCT_Loop_2_proc, 145, 145, 145, 145, none</column>
+<column name="grp_DCT_Block_proc1_fu_81">DCT_Block_proc1, 1, 1974, 1, 1974, none</column>
+<column name="grp_DCT_Loop_3_proc1_fu_122">DCT_Loop_3_proc1, 131, 131, 131, 131, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,24 +51,23 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="Expression">-, -, 0, 2</column>
-<column name="FIFO">-, -, -, -</column>
-<column name="Instance">1, 50, 10763, 19711</column>
-<column name="Memory">6, -, 1024, 64</column>
-<column name="Multiplexer">-, -, -, 20</column>
-<column name="Register">-, -, 12, -</column>
+<column name="FIFO">0, -, 10, 88</column>
+<column name="Instance">2, 23, 11354, 18243</column>
+<column name="Memory">6, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 6</column>
+<column name="Register">-, -, 5, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">2, 22, 11, 37</specialColumn>
+<specialColumn name="Utilization (%)">2, 10, 10, 34</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DCT_Block_proc1_U0">DCT_Block_proc1, 2, 23, 11257, 18092</column>
 <column name="DCT_Loop_1_proc_U0">DCT_Loop_1_proc, 0, 0, 42, 55</column>
 <column name="DCT_Loop_2_proc_U0">DCT_Loop_2_proc, 0, 0, 36, 45</column>
 <column name="DCT_Loop_3_proc1_U0">DCT_Loop_3_proc1, 0, 0, 19, 51</column>
-<column name="DCT_MAT_Multiply_U0">DCT_MAT_Multiply, 0, 40, 6355, 11835</column>
-<column name="DCT_MAT_Multiply_1_U0">DCT_MAT_Multiply_1, 1, 10, 4311, 7725</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -77,48 +75,27 @@
 <column name="Xbuff_U">DCT_Xbuff, 2, 0, 0, 66, 32, 2, 4224</column>
 <column name="Xmat_U">DCT_Xmat, 2, 0, 0, 64, 32, 2, 4096</column>
 <column name="Ymat_U">DCT_Xmat, 2, 0, 0, 64, 32, 2, 4096</column>
-<column name="temp_0_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_1_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_2_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_3_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_4_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_5_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_6_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
-<column name="temp_7_U">DCT_temp_0, 0, 128, 8, 8, 32, 2, 512</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
-<column name="opt_type_02_loc_loc_loc_channe_U">0, 0, 0, 2, 32, 64</column>
+<column name="opt_type_02_loc_loc_loc_channe_1_U">0, 5, 44, 2, 32, 64</column>
+<column name="opt_type_02_loc_loc_loc_channe_U">0, 5, 44, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="DCT_Block_proc1_U0_ap_start">and, 0, 0, 1, 1, 1</column>
 <column name="DCT_Loop_3_proc1_U0_ap_start">and, 0, 0, 1, 1, 1</column>
-<column name="DCT_MAT_Multiply_1_U0_ap_start">and, 0, 0, 1, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_chn_write_DCT_Loop_1_proc_U0_Xbuff">1, 2, 1, 2</column>
 <column name="ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_0">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_1">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_2">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_3">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_4">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_5">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_6">1, 2, 1, 2</column>
-<column name="ap_chn_write_DCT_MAT_Multiply_U0_temp_7">1, 2, 1, 2</column>
+<column name="ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1">1, 2, 1, 2</column>
 <column name="ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status">1, 2, 1, 2</column>
-<column name="ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status">1, 2, 1, 2</column>
+<column name="ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n">1, 2, 1, 2</column>
 <column name="ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n">1, 2, 1, 2</column>
 </table>
 </item>
@@ -127,14 +104,7 @@
 <column name="DCT_Loop_1_proc_U0_ap_start">1, 0, 1, 0</column>
 <column name="ap_CS">1, 0, 1, 0</column>
 <column name="ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status">1, 0, 1, 0</column>
-<column name="ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status">1, 0, 1, 0</column>
+<column name="ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n">1, 0, 1, 0</column>
 <column name="ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n">1, 0, 1, 0</column>
 </table>
 </item>

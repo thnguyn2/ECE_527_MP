@@ -16,9 +16,6 @@ const sc_logic DCT::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic DCT::ap_const_logic_0 = sc_dt::Log_0;
 const sc_lv<32> DCT::ap_const_lv32_0 = "00000000000000000000000000000000";
 const bool DCT::ap_true = true;
-const sc_lv<3> DCT::ap_const_lv3_0 = "000";
-const sc_lv<3> DCT::ap_const_lv3_1 = "1";
-const sc_lv<32> DCT::ap_const_lv32_1 = "1";
 
 DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     Xbuff_U = new DCT_Xbuff("Xbuff_U");
@@ -59,206 +56,6 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     Xmat_U->i_write(Xmat_i_write);
     Xmat_U->t_empty_n(Xmat_t_empty_n);
     Xmat_U->t_read(Xmat_t_read);
-    temp_0_U = new DCT_temp_0("temp_0_U");
-    temp_0_U->clk(ap_clk);
-    temp_0_U->reset(ap_rst);
-    temp_0_U->i_address0(temp_0_i_address0);
-    temp_0_U->i_ce0(temp_0_i_ce0);
-    temp_0_U->i_we0(temp_0_i_we0);
-    temp_0_U->i_d0(temp_0_i_d0);
-    temp_0_U->i_q0(temp_0_i_q0);
-    temp_0_U->i_address1(temp_0_i_address1);
-    temp_0_U->i_ce1(temp_0_i_ce1);
-    temp_0_U->i_q1(temp_0_i_q1);
-    temp_0_U->t_address0(temp_0_t_address0);
-    temp_0_U->t_ce0(temp_0_t_ce0);
-    temp_0_U->t_we0(temp_0_t_we0);
-    temp_0_U->t_d0(temp_0_t_d0);
-    temp_0_U->t_q0(temp_0_t_q0);
-    temp_0_U->t_address1(temp_0_t_address1);
-    temp_0_U->t_ce1(temp_0_t_ce1);
-    temp_0_U->t_q1(temp_0_t_q1);
-    temp_0_U->i_ce(temp_0_U_ap_dummy_ce);
-    temp_0_U->t_ce(temp_0_U_ap_dummy_ce);
-    temp_0_U->i_full_n(temp_0_i_full_n);
-    temp_0_U->i_write(temp_0_i_write);
-    temp_0_U->t_empty_n(temp_0_t_empty_n);
-    temp_0_U->t_read(temp_0_t_read);
-    temp_1_U = new DCT_temp_0("temp_1_U");
-    temp_1_U->clk(ap_clk);
-    temp_1_U->reset(ap_rst);
-    temp_1_U->i_address0(temp_1_i_address0);
-    temp_1_U->i_ce0(temp_1_i_ce0);
-    temp_1_U->i_we0(temp_1_i_we0);
-    temp_1_U->i_d0(temp_1_i_d0);
-    temp_1_U->i_q0(temp_1_i_q0);
-    temp_1_U->i_address1(temp_1_i_address1);
-    temp_1_U->i_ce1(temp_1_i_ce1);
-    temp_1_U->i_q1(temp_1_i_q1);
-    temp_1_U->t_address0(temp_1_t_address0);
-    temp_1_U->t_ce0(temp_1_t_ce0);
-    temp_1_U->t_we0(temp_1_t_we0);
-    temp_1_U->t_d0(temp_1_t_d0);
-    temp_1_U->t_q0(temp_1_t_q0);
-    temp_1_U->t_address1(temp_1_t_address1);
-    temp_1_U->t_ce1(temp_1_t_ce1);
-    temp_1_U->t_q1(temp_1_t_q1);
-    temp_1_U->i_ce(temp_1_U_ap_dummy_ce);
-    temp_1_U->t_ce(temp_1_U_ap_dummy_ce);
-    temp_1_U->i_full_n(temp_1_i_full_n);
-    temp_1_U->i_write(temp_1_i_write);
-    temp_1_U->t_empty_n(temp_1_t_empty_n);
-    temp_1_U->t_read(temp_1_t_read);
-    temp_2_U = new DCT_temp_0("temp_2_U");
-    temp_2_U->clk(ap_clk);
-    temp_2_U->reset(ap_rst);
-    temp_2_U->i_address0(temp_2_i_address0);
-    temp_2_U->i_ce0(temp_2_i_ce0);
-    temp_2_U->i_we0(temp_2_i_we0);
-    temp_2_U->i_d0(temp_2_i_d0);
-    temp_2_U->i_q0(temp_2_i_q0);
-    temp_2_U->i_address1(temp_2_i_address1);
-    temp_2_U->i_ce1(temp_2_i_ce1);
-    temp_2_U->i_q1(temp_2_i_q1);
-    temp_2_U->t_address0(temp_2_t_address0);
-    temp_2_U->t_ce0(temp_2_t_ce0);
-    temp_2_U->t_we0(temp_2_t_we0);
-    temp_2_U->t_d0(temp_2_t_d0);
-    temp_2_U->t_q0(temp_2_t_q0);
-    temp_2_U->t_address1(temp_2_t_address1);
-    temp_2_U->t_ce1(temp_2_t_ce1);
-    temp_2_U->t_q1(temp_2_t_q1);
-    temp_2_U->i_ce(temp_2_U_ap_dummy_ce);
-    temp_2_U->t_ce(temp_2_U_ap_dummy_ce);
-    temp_2_U->i_full_n(temp_2_i_full_n);
-    temp_2_U->i_write(temp_2_i_write);
-    temp_2_U->t_empty_n(temp_2_t_empty_n);
-    temp_2_U->t_read(temp_2_t_read);
-    temp_3_U = new DCT_temp_0("temp_3_U");
-    temp_3_U->clk(ap_clk);
-    temp_3_U->reset(ap_rst);
-    temp_3_U->i_address0(temp_3_i_address0);
-    temp_3_U->i_ce0(temp_3_i_ce0);
-    temp_3_U->i_we0(temp_3_i_we0);
-    temp_3_U->i_d0(temp_3_i_d0);
-    temp_3_U->i_q0(temp_3_i_q0);
-    temp_3_U->i_address1(temp_3_i_address1);
-    temp_3_U->i_ce1(temp_3_i_ce1);
-    temp_3_U->i_q1(temp_3_i_q1);
-    temp_3_U->t_address0(temp_3_t_address0);
-    temp_3_U->t_ce0(temp_3_t_ce0);
-    temp_3_U->t_we0(temp_3_t_we0);
-    temp_3_U->t_d0(temp_3_t_d0);
-    temp_3_U->t_q0(temp_3_t_q0);
-    temp_3_U->t_address1(temp_3_t_address1);
-    temp_3_U->t_ce1(temp_3_t_ce1);
-    temp_3_U->t_q1(temp_3_t_q1);
-    temp_3_U->i_ce(temp_3_U_ap_dummy_ce);
-    temp_3_U->t_ce(temp_3_U_ap_dummy_ce);
-    temp_3_U->i_full_n(temp_3_i_full_n);
-    temp_3_U->i_write(temp_3_i_write);
-    temp_3_U->t_empty_n(temp_3_t_empty_n);
-    temp_3_U->t_read(temp_3_t_read);
-    temp_4_U = new DCT_temp_0("temp_4_U");
-    temp_4_U->clk(ap_clk);
-    temp_4_U->reset(ap_rst);
-    temp_4_U->i_address0(temp_4_i_address0);
-    temp_4_U->i_ce0(temp_4_i_ce0);
-    temp_4_U->i_we0(temp_4_i_we0);
-    temp_4_U->i_d0(temp_4_i_d0);
-    temp_4_U->i_q0(temp_4_i_q0);
-    temp_4_U->i_address1(temp_4_i_address1);
-    temp_4_U->i_ce1(temp_4_i_ce1);
-    temp_4_U->i_q1(temp_4_i_q1);
-    temp_4_U->t_address0(temp_4_t_address0);
-    temp_4_U->t_ce0(temp_4_t_ce0);
-    temp_4_U->t_we0(temp_4_t_we0);
-    temp_4_U->t_d0(temp_4_t_d0);
-    temp_4_U->t_q0(temp_4_t_q0);
-    temp_4_U->t_address1(temp_4_t_address1);
-    temp_4_U->t_ce1(temp_4_t_ce1);
-    temp_4_U->t_q1(temp_4_t_q1);
-    temp_4_U->i_ce(temp_4_U_ap_dummy_ce);
-    temp_4_U->t_ce(temp_4_U_ap_dummy_ce);
-    temp_4_U->i_full_n(temp_4_i_full_n);
-    temp_4_U->i_write(temp_4_i_write);
-    temp_4_U->t_empty_n(temp_4_t_empty_n);
-    temp_4_U->t_read(temp_4_t_read);
-    temp_5_U = new DCT_temp_0("temp_5_U");
-    temp_5_U->clk(ap_clk);
-    temp_5_U->reset(ap_rst);
-    temp_5_U->i_address0(temp_5_i_address0);
-    temp_5_U->i_ce0(temp_5_i_ce0);
-    temp_5_U->i_we0(temp_5_i_we0);
-    temp_5_U->i_d0(temp_5_i_d0);
-    temp_5_U->i_q0(temp_5_i_q0);
-    temp_5_U->i_address1(temp_5_i_address1);
-    temp_5_U->i_ce1(temp_5_i_ce1);
-    temp_5_U->i_q1(temp_5_i_q1);
-    temp_5_U->t_address0(temp_5_t_address0);
-    temp_5_U->t_ce0(temp_5_t_ce0);
-    temp_5_U->t_we0(temp_5_t_we0);
-    temp_5_U->t_d0(temp_5_t_d0);
-    temp_5_U->t_q0(temp_5_t_q0);
-    temp_5_U->t_address1(temp_5_t_address1);
-    temp_5_U->t_ce1(temp_5_t_ce1);
-    temp_5_U->t_q1(temp_5_t_q1);
-    temp_5_U->i_ce(temp_5_U_ap_dummy_ce);
-    temp_5_U->t_ce(temp_5_U_ap_dummy_ce);
-    temp_5_U->i_full_n(temp_5_i_full_n);
-    temp_5_U->i_write(temp_5_i_write);
-    temp_5_U->t_empty_n(temp_5_t_empty_n);
-    temp_5_U->t_read(temp_5_t_read);
-    temp_6_U = new DCT_temp_0("temp_6_U");
-    temp_6_U->clk(ap_clk);
-    temp_6_U->reset(ap_rst);
-    temp_6_U->i_address0(temp_6_i_address0);
-    temp_6_U->i_ce0(temp_6_i_ce0);
-    temp_6_U->i_we0(temp_6_i_we0);
-    temp_6_U->i_d0(temp_6_i_d0);
-    temp_6_U->i_q0(temp_6_i_q0);
-    temp_6_U->i_address1(temp_6_i_address1);
-    temp_6_U->i_ce1(temp_6_i_ce1);
-    temp_6_U->i_q1(temp_6_i_q1);
-    temp_6_U->t_address0(temp_6_t_address0);
-    temp_6_U->t_ce0(temp_6_t_ce0);
-    temp_6_U->t_we0(temp_6_t_we0);
-    temp_6_U->t_d0(temp_6_t_d0);
-    temp_6_U->t_q0(temp_6_t_q0);
-    temp_6_U->t_address1(temp_6_t_address1);
-    temp_6_U->t_ce1(temp_6_t_ce1);
-    temp_6_U->t_q1(temp_6_t_q1);
-    temp_6_U->i_ce(temp_6_U_ap_dummy_ce);
-    temp_6_U->t_ce(temp_6_U_ap_dummy_ce);
-    temp_6_U->i_full_n(temp_6_i_full_n);
-    temp_6_U->i_write(temp_6_i_write);
-    temp_6_U->t_empty_n(temp_6_t_empty_n);
-    temp_6_U->t_read(temp_6_t_read);
-    temp_7_U = new DCT_temp_0("temp_7_U");
-    temp_7_U->clk(ap_clk);
-    temp_7_U->reset(ap_rst);
-    temp_7_U->i_address0(temp_7_i_address0);
-    temp_7_U->i_ce0(temp_7_i_ce0);
-    temp_7_U->i_we0(temp_7_i_we0);
-    temp_7_U->i_d0(temp_7_i_d0);
-    temp_7_U->i_q0(temp_7_i_q0);
-    temp_7_U->i_address1(temp_7_i_address1);
-    temp_7_U->i_ce1(temp_7_i_ce1);
-    temp_7_U->i_q1(temp_7_i_q1);
-    temp_7_U->t_address0(temp_7_t_address0);
-    temp_7_U->t_ce0(temp_7_t_ce0);
-    temp_7_U->t_we0(temp_7_t_we0);
-    temp_7_U->t_d0(temp_7_t_d0);
-    temp_7_U->t_q0(temp_7_t_q0);
-    temp_7_U->t_address1(temp_7_t_address1);
-    temp_7_U->t_ce1(temp_7_t_ce1);
-    temp_7_U->t_q1(temp_7_t_q1);
-    temp_7_U->i_ce(temp_7_U_ap_dummy_ce);
-    temp_7_U->t_ce(temp_7_U_ap_dummy_ce);
-    temp_7_U->i_full_n(temp_7_i_full_n);
-    temp_7_U->i_write(temp_7_i_write);
-    temp_7_U->t_empty_n(temp_7_t_empty_n);
-    temp_7_U->t_read(temp_7_t_read);
     Ymat_U = new DCT_Xmat("Ymat_U");
     Ymat_U->clk(ap_clk);
     Ymat_U->reset(ap_rst);
@@ -293,7 +90,8 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     DCT_Loop_1_proc_U0->Xbuff_ce0(DCT_Loop_1_proc_U0_Xbuff_ce0);
     DCT_Loop_1_proc_U0->Xbuff_we0(DCT_Loop_1_proc_U0_Xbuff_we0);
     DCT_Loop_1_proc_U0->Xbuff_d0(DCT_Loop_1_proc_U0_Xbuff_d0);
-    DCT_Loop_1_proc_U0->ap_return(DCT_Loop_1_proc_U0_ap_return);
+    DCT_Loop_1_proc_U0->ap_return_0(DCT_Loop_1_proc_U0_ap_return_0);
+    DCT_Loop_1_proc_U0->ap_return_1(DCT_Loop_1_proc_U0_ap_return_1);
     DCT_Loop_2_proc_U0 = new DCT_Loop_2_proc("DCT_Loop_2_proc_U0");
     DCT_Loop_2_proc_U0->ap_clk(ap_clk);
     DCT_Loop_2_proc_U0->ap_rst(ap_rst);
@@ -309,238 +107,22 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     DCT_Loop_2_proc_U0->Xmat_ce0(DCT_Loop_2_proc_U0_Xmat_ce0);
     DCT_Loop_2_proc_U0->Xmat_we0(DCT_Loop_2_proc_U0_Xmat_we0);
     DCT_Loop_2_proc_U0->Xmat_d0(DCT_Loop_2_proc_U0_Xmat_d0);
-    DCT_MAT_Multiply_U0 = new DCT_MAT_Multiply("DCT_MAT_Multiply_U0");
-    DCT_MAT_Multiply_U0->B_address0(DCT_MAT_Multiply_U0_B_address0);
-    DCT_MAT_Multiply_U0->B_ce0(DCT_MAT_Multiply_U0_B_ce0);
-    DCT_MAT_Multiply_U0->B_d0(DCT_MAT_Multiply_U0_B_d0);
-    DCT_MAT_Multiply_U0->B_q0(DCT_MAT_Multiply_U0_B_q0);
-    DCT_MAT_Multiply_U0->B_we0(DCT_MAT_Multiply_U0_B_we0);
-    DCT_MAT_Multiply_U0->B_address1(DCT_MAT_Multiply_U0_B_address1);
-    DCT_MAT_Multiply_U0->B_ce1(DCT_MAT_Multiply_U0_B_ce1);
-    DCT_MAT_Multiply_U0->B_d1(DCT_MAT_Multiply_U0_B_d1);
-    DCT_MAT_Multiply_U0->B_q1(DCT_MAT_Multiply_U0_B_q1);
-    DCT_MAT_Multiply_U0->B_we1(DCT_MAT_Multiply_U0_B_we1);
-    DCT_MAT_Multiply_U0->C_0_address0(DCT_MAT_Multiply_U0_C_0_address0);
-    DCT_MAT_Multiply_U0->C_0_ce0(DCT_MAT_Multiply_U0_C_0_ce0);
-    DCT_MAT_Multiply_U0->C_0_d0(DCT_MAT_Multiply_U0_C_0_d0);
-    DCT_MAT_Multiply_U0->C_0_q0(DCT_MAT_Multiply_U0_C_0_q0);
-    DCT_MAT_Multiply_U0->C_0_we0(DCT_MAT_Multiply_U0_C_0_we0);
-    DCT_MAT_Multiply_U0->C_0_address1(DCT_MAT_Multiply_U0_C_0_address1);
-    DCT_MAT_Multiply_U0->C_0_ce1(DCT_MAT_Multiply_U0_C_0_ce1);
-    DCT_MAT_Multiply_U0->C_0_d1(DCT_MAT_Multiply_U0_C_0_d1);
-    DCT_MAT_Multiply_U0->C_0_q1(DCT_MAT_Multiply_U0_C_0_q1);
-    DCT_MAT_Multiply_U0->C_0_we1(DCT_MAT_Multiply_U0_C_0_we1);
-    DCT_MAT_Multiply_U0->C_1_address0(DCT_MAT_Multiply_U0_C_1_address0);
-    DCT_MAT_Multiply_U0->C_1_ce0(DCT_MAT_Multiply_U0_C_1_ce0);
-    DCT_MAT_Multiply_U0->C_1_d0(DCT_MAT_Multiply_U0_C_1_d0);
-    DCT_MAT_Multiply_U0->C_1_q0(DCT_MAT_Multiply_U0_C_1_q0);
-    DCT_MAT_Multiply_U0->C_1_we0(DCT_MAT_Multiply_U0_C_1_we0);
-    DCT_MAT_Multiply_U0->C_1_address1(DCT_MAT_Multiply_U0_C_1_address1);
-    DCT_MAT_Multiply_U0->C_1_ce1(DCT_MAT_Multiply_U0_C_1_ce1);
-    DCT_MAT_Multiply_U0->C_1_d1(DCT_MAT_Multiply_U0_C_1_d1);
-    DCT_MAT_Multiply_U0->C_1_q1(DCT_MAT_Multiply_U0_C_1_q1);
-    DCT_MAT_Multiply_U0->C_1_we1(DCT_MAT_Multiply_U0_C_1_we1);
-    DCT_MAT_Multiply_U0->C_2_address0(DCT_MAT_Multiply_U0_C_2_address0);
-    DCT_MAT_Multiply_U0->C_2_ce0(DCT_MAT_Multiply_U0_C_2_ce0);
-    DCT_MAT_Multiply_U0->C_2_d0(DCT_MAT_Multiply_U0_C_2_d0);
-    DCT_MAT_Multiply_U0->C_2_q0(DCT_MAT_Multiply_U0_C_2_q0);
-    DCT_MAT_Multiply_U0->C_2_we0(DCT_MAT_Multiply_U0_C_2_we0);
-    DCT_MAT_Multiply_U0->C_2_address1(DCT_MAT_Multiply_U0_C_2_address1);
-    DCT_MAT_Multiply_U0->C_2_ce1(DCT_MAT_Multiply_U0_C_2_ce1);
-    DCT_MAT_Multiply_U0->C_2_d1(DCT_MAT_Multiply_U0_C_2_d1);
-    DCT_MAT_Multiply_U0->C_2_q1(DCT_MAT_Multiply_U0_C_2_q1);
-    DCT_MAT_Multiply_U0->C_2_we1(DCT_MAT_Multiply_U0_C_2_we1);
-    DCT_MAT_Multiply_U0->C_3_address0(DCT_MAT_Multiply_U0_C_3_address0);
-    DCT_MAT_Multiply_U0->C_3_ce0(DCT_MAT_Multiply_U0_C_3_ce0);
-    DCT_MAT_Multiply_U0->C_3_d0(DCT_MAT_Multiply_U0_C_3_d0);
-    DCT_MAT_Multiply_U0->C_3_q0(DCT_MAT_Multiply_U0_C_3_q0);
-    DCT_MAT_Multiply_U0->C_3_we0(DCT_MAT_Multiply_U0_C_3_we0);
-    DCT_MAT_Multiply_U0->C_3_address1(DCT_MAT_Multiply_U0_C_3_address1);
-    DCT_MAT_Multiply_U0->C_3_ce1(DCT_MAT_Multiply_U0_C_3_ce1);
-    DCT_MAT_Multiply_U0->C_3_d1(DCT_MAT_Multiply_U0_C_3_d1);
-    DCT_MAT_Multiply_U0->C_3_q1(DCT_MAT_Multiply_U0_C_3_q1);
-    DCT_MAT_Multiply_U0->C_3_we1(DCT_MAT_Multiply_U0_C_3_we1);
-    DCT_MAT_Multiply_U0->C_4_address0(DCT_MAT_Multiply_U0_C_4_address0);
-    DCT_MAT_Multiply_U0->C_4_ce0(DCT_MAT_Multiply_U0_C_4_ce0);
-    DCT_MAT_Multiply_U0->C_4_d0(DCT_MAT_Multiply_U0_C_4_d0);
-    DCT_MAT_Multiply_U0->C_4_q0(DCT_MAT_Multiply_U0_C_4_q0);
-    DCT_MAT_Multiply_U0->C_4_we0(DCT_MAT_Multiply_U0_C_4_we0);
-    DCT_MAT_Multiply_U0->C_4_address1(DCT_MAT_Multiply_U0_C_4_address1);
-    DCT_MAT_Multiply_U0->C_4_ce1(DCT_MAT_Multiply_U0_C_4_ce1);
-    DCT_MAT_Multiply_U0->C_4_d1(DCT_MAT_Multiply_U0_C_4_d1);
-    DCT_MAT_Multiply_U0->C_4_q1(DCT_MAT_Multiply_U0_C_4_q1);
-    DCT_MAT_Multiply_U0->C_4_we1(DCT_MAT_Multiply_U0_C_4_we1);
-    DCT_MAT_Multiply_U0->C_5_address0(DCT_MAT_Multiply_U0_C_5_address0);
-    DCT_MAT_Multiply_U0->C_5_ce0(DCT_MAT_Multiply_U0_C_5_ce0);
-    DCT_MAT_Multiply_U0->C_5_d0(DCT_MAT_Multiply_U0_C_5_d0);
-    DCT_MAT_Multiply_U0->C_5_q0(DCT_MAT_Multiply_U0_C_5_q0);
-    DCT_MAT_Multiply_U0->C_5_we0(DCT_MAT_Multiply_U0_C_5_we0);
-    DCT_MAT_Multiply_U0->C_5_address1(DCT_MAT_Multiply_U0_C_5_address1);
-    DCT_MAT_Multiply_U0->C_5_ce1(DCT_MAT_Multiply_U0_C_5_ce1);
-    DCT_MAT_Multiply_U0->C_5_d1(DCT_MAT_Multiply_U0_C_5_d1);
-    DCT_MAT_Multiply_U0->C_5_q1(DCT_MAT_Multiply_U0_C_5_q1);
-    DCT_MAT_Multiply_U0->C_5_we1(DCT_MAT_Multiply_U0_C_5_we1);
-    DCT_MAT_Multiply_U0->C_6_address0(DCT_MAT_Multiply_U0_C_6_address0);
-    DCT_MAT_Multiply_U0->C_6_ce0(DCT_MAT_Multiply_U0_C_6_ce0);
-    DCT_MAT_Multiply_U0->C_6_d0(DCT_MAT_Multiply_U0_C_6_d0);
-    DCT_MAT_Multiply_U0->C_6_q0(DCT_MAT_Multiply_U0_C_6_q0);
-    DCT_MAT_Multiply_U0->C_6_we0(DCT_MAT_Multiply_U0_C_6_we0);
-    DCT_MAT_Multiply_U0->C_6_address1(DCT_MAT_Multiply_U0_C_6_address1);
-    DCT_MAT_Multiply_U0->C_6_ce1(DCT_MAT_Multiply_U0_C_6_ce1);
-    DCT_MAT_Multiply_U0->C_6_d1(DCT_MAT_Multiply_U0_C_6_d1);
-    DCT_MAT_Multiply_U0->C_6_q1(DCT_MAT_Multiply_U0_C_6_q1);
-    DCT_MAT_Multiply_U0->C_6_we1(DCT_MAT_Multiply_U0_C_6_we1);
-    DCT_MAT_Multiply_U0->C_7_address0(DCT_MAT_Multiply_U0_C_7_address0);
-    DCT_MAT_Multiply_U0->C_7_ce0(DCT_MAT_Multiply_U0_C_7_ce0);
-    DCT_MAT_Multiply_U0->C_7_d0(DCT_MAT_Multiply_U0_C_7_d0);
-    DCT_MAT_Multiply_U0->C_7_q0(DCT_MAT_Multiply_U0_C_7_q0);
-    DCT_MAT_Multiply_U0->C_7_we0(DCT_MAT_Multiply_U0_C_7_we0);
-    DCT_MAT_Multiply_U0->C_7_address1(DCT_MAT_Multiply_U0_C_7_address1);
-    DCT_MAT_Multiply_U0->C_7_ce1(DCT_MAT_Multiply_U0_C_7_ce1);
-    DCT_MAT_Multiply_U0->C_7_d1(DCT_MAT_Multiply_U0_C_7_d1);
-    DCT_MAT_Multiply_U0->C_7_q1(DCT_MAT_Multiply_U0_C_7_q1);
-    DCT_MAT_Multiply_U0->C_7_we1(DCT_MAT_Multiply_U0_C_7_we1);
-    DCT_MAT_Multiply_U0->ap_clk(ap_clk);
-    DCT_MAT_Multiply_U0->ap_rst(ap_rst);
-    DCT_MAT_Multiply_U0->B_pipo_status(DCT_MAT_Multiply_U0_B_pipo_status);
-    DCT_MAT_Multiply_U0->B_pipo_update(DCT_MAT_Multiply_U0_B_pipo_update);
-    DCT_MAT_Multiply_U0->C_0_pipo_status(DCT_MAT_Multiply_U0_C_0_pipo_status);
-    DCT_MAT_Multiply_U0->C_0_pipo_update(DCT_MAT_Multiply_U0_C_0_pipo_update);
-    DCT_MAT_Multiply_U0->C_1_pipo_status(DCT_MAT_Multiply_U0_C_1_pipo_status);
-    DCT_MAT_Multiply_U0->C_1_pipo_update(DCT_MAT_Multiply_U0_C_1_pipo_update);
-    DCT_MAT_Multiply_U0->C_2_pipo_status(DCT_MAT_Multiply_U0_C_2_pipo_status);
-    DCT_MAT_Multiply_U0->C_2_pipo_update(DCT_MAT_Multiply_U0_C_2_pipo_update);
-    DCT_MAT_Multiply_U0->C_3_pipo_status(DCT_MAT_Multiply_U0_C_3_pipo_status);
-    DCT_MAT_Multiply_U0->C_3_pipo_update(DCT_MAT_Multiply_U0_C_3_pipo_update);
-    DCT_MAT_Multiply_U0->C_4_pipo_status(DCT_MAT_Multiply_U0_C_4_pipo_status);
-    DCT_MAT_Multiply_U0->C_4_pipo_update(DCT_MAT_Multiply_U0_C_4_pipo_update);
-    DCT_MAT_Multiply_U0->C_5_pipo_status(DCT_MAT_Multiply_U0_C_5_pipo_status);
-    DCT_MAT_Multiply_U0->C_5_pipo_update(DCT_MAT_Multiply_U0_C_5_pipo_update);
-    DCT_MAT_Multiply_U0->C_6_pipo_status(DCT_MAT_Multiply_U0_C_6_pipo_status);
-    DCT_MAT_Multiply_U0->C_6_pipo_update(DCT_MAT_Multiply_U0_C_6_pipo_update);
-    DCT_MAT_Multiply_U0->C_7_pipo_status(DCT_MAT_Multiply_U0_C_7_pipo_status);
-    DCT_MAT_Multiply_U0->C_7_pipo_update(DCT_MAT_Multiply_U0_C_7_pipo_update);
-    DCT_MAT_Multiply_U0->ap_continue(DCT_MAT_Multiply_U0_ap_continue);
-    DCT_MAT_Multiply_U0->ap_done(DCT_MAT_Multiply_U0_ap_done);
-    DCT_MAT_Multiply_U0->ap_start(DCT_MAT_Multiply_U0_ap_start);
-    DCT_MAT_Multiply_U0->ap_idle(DCT_MAT_Multiply_U0_ap_idle);
-    DCT_MAT_Multiply_U0->ap_ready(DCT_MAT_Multiply_U0_ap_ready);
-    DCT_MAT_Multiply_1_U0 = new DCT_MAT_Multiply_1("DCT_MAT_Multiply_1_U0");
-    DCT_MAT_Multiply_1_U0->A_address0(DCT_MAT_Multiply_1_U0_A_address0);
-    DCT_MAT_Multiply_1_U0->A_ce0(DCT_MAT_Multiply_1_U0_A_ce0);
-    DCT_MAT_Multiply_1_U0->A_d0(DCT_MAT_Multiply_1_U0_A_d0);
-    DCT_MAT_Multiply_1_U0->A_q0(DCT_MAT_Multiply_1_U0_A_q0);
-    DCT_MAT_Multiply_1_U0->A_we0(DCT_MAT_Multiply_1_U0_A_we0);
-    DCT_MAT_Multiply_1_U0->A_address1(DCT_MAT_Multiply_1_U0_A_address1);
-    DCT_MAT_Multiply_1_U0->A_ce1(DCT_MAT_Multiply_1_U0_A_ce1);
-    DCT_MAT_Multiply_1_U0->A_d1(DCT_MAT_Multiply_1_U0_A_d1);
-    DCT_MAT_Multiply_1_U0->A_q1(DCT_MAT_Multiply_1_U0_A_q1);
-    DCT_MAT_Multiply_1_U0->A_we1(DCT_MAT_Multiply_1_U0_A_we1);
-    DCT_MAT_Multiply_1_U0->A1_address0(DCT_MAT_Multiply_1_U0_A1_address0);
-    DCT_MAT_Multiply_1_U0->A1_ce0(DCT_MAT_Multiply_1_U0_A1_ce0);
-    DCT_MAT_Multiply_1_U0->A1_d0(DCT_MAT_Multiply_1_U0_A1_d0);
-    DCT_MAT_Multiply_1_U0->A1_q0(DCT_MAT_Multiply_1_U0_A1_q0);
-    DCT_MAT_Multiply_1_U0->A1_we0(DCT_MAT_Multiply_1_U0_A1_we0);
-    DCT_MAT_Multiply_1_U0->A1_address1(DCT_MAT_Multiply_1_U0_A1_address1);
-    DCT_MAT_Multiply_1_U0->A1_ce1(DCT_MAT_Multiply_1_U0_A1_ce1);
-    DCT_MAT_Multiply_1_U0->A1_d1(DCT_MAT_Multiply_1_U0_A1_d1);
-    DCT_MAT_Multiply_1_U0->A1_q1(DCT_MAT_Multiply_1_U0_A1_q1);
-    DCT_MAT_Multiply_1_U0->A1_we1(DCT_MAT_Multiply_1_U0_A1_we1);
-    DCT_MAT_Multiply_1_U0->A2_address0(DCT_MAT_Multiply_1_U0_A2_address0);
-    DCT_MAT_Multiply_1_U0->A2_ce0(DCT_MAT_Multiply_1_U0_A2_ce0);
-    DCT_MAT_Multiply_1_U0->A2_d0(DCT_MAT_Multiply_1_U0_A2_d0);
-    DCT_MAT_Multiply_1_U0->A2_q0(DCT_MAT_Multiply_1_U0_A2_q0);
-    DCT_MAT_Multiply_1_U0->A2_we0(DCT_MAT_Multiply_1_U0_A2_we0);
-    DCT_MAT_Multiply_1_U0->A2_address1(DCT_MAT_Multiply_1_U0_A2_address1);
-    DCT_MAT_Multiply_1_U0->A2_ce1(DCT_MAT_Multiply_1_U0_A2_ce1);
-    DCT_MAT_Multiply_1_U0->A2_d1(DCT_MAT_Multiply_1_U0_A2_d1);
-    DCT_MAT_Multiply_1_U0->A2_q1(DCT_MAT_Multiply_1_U0_A2_q1);
-    DCT_MAT_Multiply_1_U0->A2_we1(DCT_MAT_Multiply_1_U0_A2_we1);
-    DCT_MAT_Multiply_1_U0->A3_address0(DCT_MAT_Multiply_1_U0_A3_address0);
-    DCT_MAT_Multiply_1_U0->A3_ce0(DCT_MAT_Multiply_1_U0_A3_ce0);
-    DCT_MAT_Multiply_1_U0->A3_d0(DCT_MAT_Multiply_1_U0_A3_d0);
-    DCT_MAT_Multiply_1_U0->A3_q0(DCT_MAT_Multiply_1_U0_A3_q0);
-    DCT_MAT_Multiply_1_U0->A3_we0(DCT_MAT_Multiply_1_U0_A3_we0);
-    DCT_MAT_Multiply_1_U0->A3_address1(DCT_MAT_Multiply_1_U0_A3_address1);
-    DCT_MAT_Multiply_1_U0->A3_ce1(DCT_MAT_Multiply_1_U0_A3_ce1);
-    DCT_MAT_Multiply_1_U0->A3_d1(DCT_MAT_Multiply_1_U0_A3_d1);
-    DCT_MAT_Multiply_1_U0->A3_q1(DCT_MAT_Multiply_1_U0_A3_q1);
-    DCT_MAT_Multiply_1_U0->A3_we1(DCT_MAT_Multiply_1_U0_A3_we1);
-    DCT_MAT_Multiply_1_U0->A4_address0(DCT_MAT_Multiply_1_U0_A4_address0);
-    DCT_MAT_Multiply_1_U0->A4_ce0(DCT_MAT_Multiply_1_U0_A4_ce0);
-    DCT_MAT_Multiply_1_U0->A4_d0(DCT_MAT_Multiply_1_U0_A4_d0);
-    DCT_MAT_Multiply_1_U0->A4_q0(DCT_MAT_Multiply_1_U0_A4_q0);
-    DCT_MAT_Multiply_1_U0->A4_we0(DCT_MAT_Multiply_1_U0_A4_we0);
-    DCT_MAT_Multiply_1_U0->A4_address1(DCT_MAT_Multiply_1_U0_A4_address1);
-    DCT_MAT_Multiply_1_U0->A4_ce1(DCT_MAT_Multiply_1_U0_A4_ce1);
-    DCT_MAT_Multiply_1_U0->A4_d1(DCT_MAT_Multiply_1_U0_A4_d1);
-    DCT_MAT_Multiply_1_U0->A4_q1(DCT_MAT_Multiply_1_U0_A4_q1);
-    DCT_MAT_Multiply_1_U0->A4_we1(DCT_MAT_Multiply_1_U0_A4_we1);
-    DCT_MAT_Multiply_1_U0->A5_address0(DCT_MAT_Multiply_1_U0_A5_address0);
-    DCT_MAT_Multiply_1_U0->A5_ce0(DCT_MAT_Multiply_1_U0_A5_ce0);
-    DCT_MAT_Multiply_1_U0->A5_d0(DCT_MAT_Multiply_1_U0_A5_d0);
-    DCT_MAT_Multiply_1_U0->A5_q0(DCT_MAT_Multiply_1_U0_A5_q0);
-    DCT_MAT_Multiply_1_U0->A5_we0(DCT_MAT_Multiply_1_U0_A5_we0);
-    DCT_MAT_Multiply_1_U0->A5_address1(DCT_MAT_Multiply_1_U0_A5_address1);
-    DCT_MAT_Multiply_1_U0->A5_ce1(DCT_MAT_Multiply_1_U0_A5_ce1);
-    DCT_MAT_Multiply_1_U0->A5_d1(DCT_MAT_Multiply_1_U0_A5_d1);
-    DCT_MAT_Multiply_1_U0->A5_q1(DCT_MAT_Multiply_1_U0_A5_q1);
-    DCT_MAT_Multiply_1_U0->A5_we1(DCT_MAT_Multiply_1_U0_A5_we1);
-    DCT_MAT_Multiply_1_U0->A6_address0(DCT_MAT_Multiply_1_U0_A6_address0);
-    DCT_MAT_Multiply_1_U0->A6_ce0(DCT_MAT_Multiply_1_U0_A6_ce0);
-    DCT_MAT_Multiply_1_U0->A6_d0(DCT_MAT_Multiply_1_U0_A6_d0);
-    DCT_MAT_Multiply_1_U0->A6_q0(DCT_MAT_Multiply_1_U0_A6_q0);
-    DCT_MAT_Multiply_1_U0->A6_we0(DCT_MAT_Multiply_1_U0_A6_we0);
-    DCT_MAT_Multiply_1_U0->A6_address1(DCT_MAT_Multiply_1_U0_A6_address1);
-    DCT_MAT_Multiply_1_U0->A6_ce1(DCT_MAT_Multiply_1_U0_A6_ce1);
-    DCT_MAT_Multiply_1_U0->A6_d1(DCT_MAT_Multiply_1_U0_A6_d1);
-    DCT_MAT_Multiply_1_U0->A6_q1(DCT_MAT_Multiply_1_U0_A6_q1);
-    DCT_MAT_Multiply_1_U0->A6_we1(DCT_MAT_Multiply_1_U0_A6_we1);
-    DCT_MAT_Multiply_1_U0->A7_address0(DCT_MAT_Multiply_1_U0_A7_address0);
-    DCT_MAT_Multiply_1_U0->A7_ce0(DCT_MAT_Multiply_1_U0_A7_ce0);
-    DCT_MAT_Multiply_1_U0->A7_d0(DCT_MAT_Multiply_1_U0_A7_d0);
-    DCT_MAT_Multiply_1_U0->A7_q0(DCT_MAT_Multiply_1_U0_A7_q0);
-    DCT_MAT_Multiply_1_U0->A7_we0(DCT_MAT_Multiply_1_U0_A7_we0);
-    DCT_MAT_Multiply_1_U0->A7_address1(DCT_MAT_Multiply_1_U0_A7_address1);
-    DCT_MAT_Multiply_1_U0->A7_ce1(DCT_MAT_Multiply_1_U0_A7_ce1);
-    DCT_MAT_Multiply_1_U0->A7_d1(DCT_MAT_Multiply_1_U0_A7_d1);
-    DCT_MAT_Multiply_1_U0->A7_q1(DCT_MAT_Multiply_1_U0_A7_q1);
-    DCT_MAT_Multiply_1_U0->A7_we1(DCT_MAT_Multiply_1_U0_A7_we1);
-    DCT_MAT_Multiply_1_U0->C_address0(DCT_MAT_Multiply_1_U0_C_address0);
-    DCT_MAT_Multiply_1_U0->C_ce0(DCT_MAT_Multiply_1_U0_C_ce0);
-    DCT_MAT_Multiply_1_U0->C_d0(DCT_MAT_Multiply_1_U0_C_d0);
-    DCT_MAT_Multiply_1_U0->C_q0(DCT_MAT_Multiply_1_U0_C_q0);
-    DCT_MAT_Multiply_1_U0->C_we0(DCT_MAT_Multiply_1_U0_C_we0);
-    DCT_MAT_Multiply_1_U0->C_address1(DCT_MAT_Multiply_1_U0_C_address1);
-    DCT_MAT_Multiply_1_U0->C_ce1(DCT_MAT_Multiply_1_U0_C_ce1);
-    DCT_MAT_Multiply_1_U0->C_d1(DCT_MAT_Multiply_1_U0_C_d1);
-    DCT_MAT_Multiply_1_U0->C_q1(DCT_MAT_Multiply_1_U0_C_q1);
-    DCT_MAT_Multiply_1_U0->C_we1(DCT_MAT_Multiply_1_U0_C_we1);
-    DCT_MAT_Multiply_1_U0->ap_clk(ap_clk);
-    DCT_MAT_Multiply_1_U0->ap_rst(ap_rst);
-    DCT_MAT_Multiply_1_U0->ap_start(DCT_MAT_Multiply_1_U0_ap_start);
-    DCT_MAT_Multiply_1_U0->A_pipo_status(DCT_MAT_Multiply_1_U0_A_pipo_status);
-    DCT_MAT_Multiply_1_U0->A_pipo_update(DCT_MAT_Multiply_1_U0_A_pipo_update);
-    DCT_MAT_Multiply_1_U0->A1_pipo_status(DCT_MAT_Multiply_1_U0_A1_pipo_status);
-    DCT_MAT_Multiply_1_U0->A1_pipo_update(DCT_MAT_Multiply_1_U0_A1_pipo_update);
-    DCT_MAT_Multiply_1_U0->A2_pipo_status(DCT_MAT_Multiply_1_U0_A2_pipo_status);
-    DCT_MAT_Multiply_1_U0->A2_pipo_update(DCT_MAT_Multiply_1_U0_A2_pipo_update);
-    DCT_MAT_Multiply_1_U0->A3_pipo_status(DCT_MAT_Multiply_1_U0_A3_pipo_status);
-    DCT_MAT_Multiply_1_U0->A3_pipo_update(DCT_MAT_Multiply_1_U0_A3_pipo_update);
-    DCT_MAT_Multiply_1_U0->A4_pipo_status(DCT_MAT_Multiply_1_U0_A4_pipo_status);
-    DCT_MAT_Multiply_1_U0->A4_pipo_update(DCT_MAT_Multiply_1_U0_A4_pipo_update);
-    DCT_MAT_Multiply_1_U0->A5_pipo_status(DCT_MAT_Multiply_1_U0_A5_pipo_status);
-    DCT_MAT_Multiply_1_U0->A5_pipo_update(DCT_MAT_Multiply_1_U0_A5_pipo_update);
-    DCT_MAT_Multiply_1_U0->A6_pipo_status(DCT_MAT_Multiply_1_U0_A6_pipo_status);
-    DCT_MAT_Multiply_1_U0->A6_pipo_update(DCT_MAT_Multiply_1_U0_A6_pipo_update);
-    DCT_MAT_Multiply_1_U0->A7_pipo_status(DCT_MAT_Multiply_1_U0_A7_pipo_status);
-    DCT_MAT_Multiply_1_U0->A7_pipo_update(DCT_MAT_Multiply_1_U0_A7_pipo_update);
-    DCT_MAT_Multiply_1_U0->C_pipo_status(DCT_MAT_Multiply_1_U0_C_pipo_status);
-    DCT_MAT_Multiply_1_U0->C_pipo_update(DCT_MAT_Multiply_1_U0_C_pipo_update);
-    DCT_MAT_Multiply_1_U0->ap_continue(DCT_MAT_Multiply_1_U0_ap_continue);
-    DCT_MAT_Multiply_1_U0->ap_done(DCT_MAT_Multiply_1_U0_ap_done);
-    DCT_MAT_Multiply_1_U0->ap_idle(DCT_MAT_Multiply_1_U0_ap_idle);
-    DCT_MAT_Multiply_1_U0->ap_ready(DCT_MAT_Multiply_1_U0_ap_ready);
+    DCT_Block_proc1_U0 = new DCT_Block_proc1("DCT_Block_proc1_U0");
+    DCT_Block_proc1_U0->ap_clk(ap_clk);
+    DCT_Block_proc1_U0->ap_rst(ap_rst);
+    DCT_Block_proc1_U0->ap_start(DCT_Block_proc1_U0_ap_start);
+    DCT_Block_proc1_U0->ap_done(DCT_Block_proc1_U0_ap_done);
+    DCT_Block_proc1_U0->ap_continue(DCT_Block_proc1_U0_ap_continue);
+    DCT_Block_proc1_U0->ap_idle(DCT_Block_proc1_U0_ap_idle);
+    DCT_Block_proc1_U0->ap_ready(DCT_Block_proc1_U0_ap_ready);
+    DCT_Block_proc1_U0->p_read(DCT_Block_proc1_U0_p_read);
+    DCT_Block_proc1_U0->Xmat_address0(DCT_Block_proc1_U0_Xmat_address0);
+    DCT_Block_proc1_U0->Xmat_ce0(DCT_Block_proc1_U0_Xmat_ce0);
+    DCT_Block_proc1_U0->Xmat_q0(DCT_Block_proc1_U0_Xmat_q0);
+    DCT_Block_proc1_U0->Ymat_address0(DCT_Block_proc1_U0_Ymat_address0);
+    DCT_Block_proc1_U0->Ymat_ce0(DCT_Block_proc1_U0_Ymat_ce0);
+    DCT_Block_proc1_U0->Ymat_we0(DCT_Block_proc1_U0_Ymat_we0);
+    DCT_Block_proc1_U0->Ymat_d0(DCT_Block_proc1_U0_Ymat_d0);
     DCT_Loop_3_proc1_U0 = new DCT_Loop_3_proc1("DCT_Loop_3_proc1_U0");
     DCT_Loop_3_proc1_U0->ap_clk(ap_clk);
     DCT_Loop_3_proc1_U0->ap_rst(ap_rst);
@@ -567,10 +149,37 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     opt_type_02_loc_loc_loc_channe_U->if_dout(opt_type_02_loc_loc_loc_channe_dout);
     opt_type_02_loc_loc_loc_channe_U->if_empty_n(opt_type_02_loc_loc_loc_channe_empty_n);
     opt_type_02_loc_loc_loc_channe_U->if_read(opt_type_02_loc_loc_loc_channe_read);
+    opt_type_02_loc_loc_loc_channe_1_U = new FIFO_DCT_opt_type_02_loc_loc_loc_channe_1("opt_type_02_loc_loc_loc_channe_1_U");
+    opt_type_02_loc_loc_loc_channe_1_U->clk(ap_clk);
+    opt_type_02_loc_loc_loc_channe_1_U->reset(ap_rst);
+    opt_type_02_loc_loc_loc_channe_1_U->if_read_ce(opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce);
+    opt_type_02_loc_loc_loc_channe_1_U->if_write_ce(opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce);
+    opt_type_02_loc_loc_loc_channe_1_U->if_din(opt_type_02_loc_loc_loc_channe_1_din);
+    opt_type_02_loc_loc_loc_channe_1_U->if_full_n(opt_type_02_loc_loc_loc_channe_1_full_n);
+    opt_type_02_loc_loc_loc_channe_1_U->if_write(opt_type_02_loc_loc_loc_channe_1_write);
+    opt_type_02_loc_loc_loc_channe_1_U->if_dout(opt_type_02_loc_loc_loc_channe_1_dout);
+    opt_type_02_loc_loc_loc_channe_1_U->if_empty_n(opt_type_02_loc_loc_loc_channe_1_empty_n);
+    opt_type_02_loc_loc_loc_channe_1_U->if_read(opt_type_02_loc_loc_loc_channe_1_read);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
     sensitive << ( ap_clk.pos() );
+
+    SC_METHOD(thread_DCT_Block_proc1_U0_Xmat_q0);
+    sensitive << ( Xmat_t_q0 );
+
+    SC_METHOD(thread_DCT_Block_proc1_U0_Ymat_pipo_status);
+    sensitive << ( Ymat_i_full_n );
+
+    SC_METHOD(thread_DCT_Block_proc1_U0_ap_continue);
+    sensitive << ( DCT_Block_proc1_U0_Ymat_pipo_status );
+
+    SC_METHOD(thread_DCT_Block_proc1_U0_ap_start);
+    sensitive << ( Xmat_t_empty_n );
+    sensitive << ( opt_type_02_loc_loc_loc_channe_empty_n );
+
+    SC_METHOD(thread_DCT_Block_proc1_U0_p_read);
+    sensitive << ( opt_type_02_loc_loc_loc_channe_dout );
 
     SC_METHOD(thread_DCT_Loop_1_proc_U0_X_dout);
     sensitive << ( X_dout );
@@ -584,6 +193,7 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_DCT_Loop_1_proc_U0_ap_continue);
     sensitive << ( ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status );
     sensitive << ( ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n );
+    sensitive << ( ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n );
 
     SC_METHOD(thread_DCT_Loop_2_proc_U0_Xbuff_q0);
     sensitive << ( Xbuff_t_q0 );
@@ -607,170 +217,10 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_DCT_Loop_3_proc1_U0_ap_start);
     sensitive << ( Ymat_t_empty_n );
-    sensitive << ( opt_type_02_loc_loc_loc_channe_empty_n );
+    sensitive << ( opt_type_02_loc_loc_loc_channe_1_empty_n );
 
     SC_METHOD(thread_DCT_Loop_3_proc1_U0_p_read);
-    sensitive << ( opt_type_02_loc_loc_loc_channe_dout );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A1_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A1_q0);
-    sensitive << ( temp_1_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A1_q1);
-    sensitive << ( temp_1_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A2_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A2_q0);
-    sensitive << ( temp_2_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A2_q1);
-    sensitive << ( temp_2_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A3_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A3_q0);
-    sensitive << ( temp_3_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A3_q1);
-    sensitive << ( temp_3_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A4_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A4_q0);
-    sensitive << ( temp_4_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A4_q1);
-    sensitive << ( temp_4_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A5_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A5_q0);
-    sensitive << ( temp_5_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A5_q1);
-    sensitive << ( temp_5_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A6_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A6_q0);
-    sensitive << ( temp_6_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A6_q1);
-    sensitive << ( temp_6_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A7_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A7_q0);
-    sensitive << ( temp_7_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A7_q1);
-    sensitive << ( temp_7_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A_q0);
-    sensitive << ( temp_0_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_A_q1);
-    sensitive << ( temp_0_t_q1 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_C_pipo_status);
-    sensitive << ( Ymat_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_C_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_C_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_ap_continue);
-    sensitive << ( DCT_MAT_Multiply_1_U0_C_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_1_U0_ap_start);
-    sensitive << ( temp_0_t_empty_n );
-    sensitive << ( temp_1_t_empty_n );
-    sensitive << ( temp_2_t_empty_n );
-    sensitive << ( temp_3_t_empty_n );
-    sensitive << ( temp_4_t_empty_n );
-    sensitive << ( temp_5_t_empty_n );
-    sensitive << ( temp_6_t_empty_n );
-    sensitive << ( temp_7_t_empty_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_B_pipo_status);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_B_q0);
-    sensitive << ( Xmat_t_q0 );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_B_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_0_pipo_status);
-    sensitive << ( temp_0_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_0_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_0_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_1_pipo_status);
-    sensitive << ( temp_1_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_1_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_1_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_2_pipo_status);
-    sensitive << ( temp_2_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_2_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_2_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_3_pipo_status);
-    sensitive << ( temp_3_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_3_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_3_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_4_pipo_status);
-    sensitive << ( temp_4_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_4_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_4_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_5_pipo_status);
-    sensitive << ( temp_5_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_5_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_5_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_6_pipo_status);
-    sensitive << ( temp_6_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_6_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_6_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_7_pipo_status);
-    sensitive << ( temp_7_i_full_n );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_7_q0);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_C_7_q1);
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_ap_continue);
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status );
-    sensitive << ( ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status );
-
-    SC_METHOD(thread_DCT_MAT_Multiply_U0_ap_start);
-    sensitive << ( Xmat_t_empty_n );
+    sensitive << ( opt_type_02_loc_loc_loc_channe_1_dout );
 
     SC_METHOD(thread_X_read);
     sensitive << ( DCT_Loop_1_proc_U0_X_read );
@@ -823,15 +273,15 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( DCT_Loop_2_proc_U0_ap_done );
 
     SC_METHOD(thread_Xmat_t_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_B_address0 );
+    sensitive << ( DCT_Block_proc1_U0_Xmat_address0 );
 
     SC_METHOD(thread_Xmat_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_B_ce0 );
+    sensitive << ( DCT_Block_proc1_U0_Xmat_ce0 );
 
     SC_METHOD(thread_Xmat_t_d0);
 
     SC_METHOD(thread_Xmat_t_read);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_ready );
+    sensitive << ( DCT_Block_proc1_U0_ap_ready );
 
     SC_METHOD(thread_Xmat_t_we0);
 
@@ -844,19 +294,19 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_Ymat_U_ap_dummy_ce);
 
     SC_METHOD(thread_Ymat_i_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_C_address0 );
+    sensitive << ( DCT_Block_proc1_U0_Ymat_address0 );
 
     SC_METHOD(thread_Ymat_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_C_ce0 );
+    sensitive << ( DCT_Block_proc1_U0_Ymat_ce0 );
 
     SC_METHOD(thread_Ymat_i_d0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_C_d0 );
+    sensitive << ( DCT_Block_proc1_U0_Ymat_d0 );
 
     SC_METHOD(thread_Ymat_i_we0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_C_we0 );
+    sensitive << ( DCT_Block_proc1_U0_Ymat_we0 );
 
     SC_METHOD(thread_Ymat_i_write);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_done );
+    sensitive << ( DCT_Block_proc1_U0_ap_done );
 
     SC_METHOD(thread_Ymat_t_address0);
     sensitive << ( DCT_Loop_3_proc1_U0_Ymat_address0 );
@@ -871,6 +321,9 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_Ymat_t_we0);
 
+    SC_METHOD(thread_ap_chn_write_DCT_Block_proc1_U0_Ymat);
+    sensitive << ( DCT_Block_proc1_U0_ap_done );
+
     SC_METHOD(thread_ap_chn_write_DCT_Loop_1_proc_U0_Xbuff);
     sensitive << ( DCT_Loop_1_proc_U0_ap_done );
     sensitive << ( ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status );
@@ -879,43 +332,12 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( DCT_Loop_1_proc_U0_ap_done );
     sensitive << ( ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n );
 
+    SC_METHOD(thread_ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1);
+    sensitive << ( DCT_Loop_1_proc_U0_ap_done );
+    sensitive << ( ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n );
+
     SC_METHOD(thread_ap_chn_write_DCT_Loop_2_proc_U0_Xmat);
     sensitive << ( DCT_Loop_2_proc_U0_ap_done );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_done );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_0);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_1);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_2);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_3);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_4);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_5);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_6);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status );
-
-    SC_METHOD(thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_7);
-    sensitive << ( DCT_MAT_Multiply_U0_ap_done );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status );
 
     SC_METHOD(thread_ap_sig_hs_continue);
 
@@ -926,404 +348,35 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( DCT_Loop_1_proc_U0_Xbuff_pipo_status );
     sensitive << ( ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status );
 
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_0_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_1_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_2_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_3_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_4_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_5_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_6_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status );
-
-    SC_METHOD(thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status);
-    sensitive << ( DCT_MAT_Multiply_U0_C_7_pipo_status );
-    sensitive << ( ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status );
+    SC_METHOD(thread_ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n);
+    sensitive << ( opt_type_02_loc_loc_loc_channe_1_full_n );
+    sensitive << ( ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n );
 
     SC_METHOD(thread_ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n);
     sensitive << ( opt_type_02_loc_loc_loc_channe_full_n );
     sensitive << ( ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n );
 
+    SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce);
+
+    SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_1_din);
+    sensitive << ( DCT_Loop_1_proc_U0_ap_return_1 );
+
+    SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_1_read);
+    sensitive << ( DCT_Loop_3_proc1_U0_ap_ready );
+
+    SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_1_write);
+    sensitive << ( ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1 );
+
     SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_U_ap_dummy_ce);
 
     SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_din);
-    sensitive << ( DCT_Loop_1_proc_U0_ap_return );
+    sensitive << ( DCT_Loop_1_proc_U0_ap_return_0 );
 
     SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_read);
-    sensitive << ( DCT_Loop_3_proc1_U0_ap_ready );
+    sensitive << ( DCT_Block_proc1_U0_ap_ready );
 
     SC_METHOD(thread_opt_type_02_loc_loc_loc_channe_write);
     sensitive << ( ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe );
-
-    SC_METHOD(thread_temp_0_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_0_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_0_address0 );
-
-    SC_METHOD(thread_temp_0_i_address1);
-
-    SC_METHOD(thread_temp_0_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_0_ce0 );
-
-    SC_METHOD(thread_temp_0_i_ce1);
-
-    SC_METHOD(thread_temp_0_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_0_d0 );
-
-    SC_METHOD(thread_temp_0_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_0_we0 );
-
-    SC_METHOD(thread_temp_0_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_0 );
-
-    SC_METHOD(thread_temp_0_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A_address0 );
-
-    SC_METHOD(thread_temp_0_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A_address1 );
-
-    SC_METHOD(thread_temp_0_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A_ce0 );
-
-    SC_METHOD(thread_temp_0_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A_ce1 );
-
-    SC_METHOD(thread_temp_0_t_d0);
-
-    SC_METHOD(thread_temp_0_t_d1);
-
-    SC_METHOD(thread_temp_0_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_0_t_we0);
-
-    SC_METHOD(thread_temp_0_t_we1);
-
-    SC_METHOD(thread_temp_1_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_1_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_1_address0 );
-
-    SC_METHOD(thread_temp_1_i_address1);
-
-    SC_METHOD(thread_temp_1_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_1_ce0 );
-
-    SC_METHOD(thread_temp_1_i_ce1);
-
-    SC_METHOD(thread_temp_1_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_1_d0 );
-
-    SC_METHOD(thread_temp_1_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_1_we0 );
-
-    SC_METHOD(thread_temp_1_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_1 );
-
-    SC_METHOD(thread_temp_1_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A1_address0 );
-
-    SC_METHOD(thread_temp_1_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A1_address1 );
-
-    SC_METHOD(thread_temp_1_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A1_ce0 );
-
-    SC_METHOD(thread_temp_1_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A1_ce1 );
-
-    SC_METHOD(thread_temp_1_t_d0);
-
-    SC_METHOD(thread_temp_1_t_d1);
-
-    SC_METHOD(thread_temp_1_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_1_t_we0);
-
-    SC_METHOD(thread_temp_1_t_we1);
-
-    SC_METHOD(thread_temp_2_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_2_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_2_address0 );
-
-    SC_METHOD(thread_temp_2_i_address1);
-
-    SC_METHOD(thread_temp_2_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_2_ce0 );
-
-    SC_METHOD(thread_temp_2_i_ce1);
-
-    SC_METHOD(thread_temp_2_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_2_d0 );
-
-    SC_METHOD(thread_temp_2_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_2_we0 );
-
-    SC_METHOD(thread_temp_2_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_2 );
-
-    SC_METHOD(thread_temp_2_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A2_address0 );
-
-    SC_METHOD(thread_temp_2_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A2_address1 );
-
-    SC_METHOD(thread_temp_2_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A2_ce0 );
-
-    SC_METHOD(thread_temp_2_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A2_ce1 );
-
-    SC_METHOD(thread_temp_2_t_d0);
-
-    SC_METHOD(thread_temp_2_t_d1);
-
-    SC_METHOD(thread_temp_2_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_2_t_we0);
-
-    SC_METHOD(thread_temp_2_t_we1);
-
-    SC_METHOD(thread_temp_3_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_3_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_3_address0 );
-
-    SC_METHOD(thread_temp_3_i_address1);
-
-    SC_METHOD(thread_temp_3_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_3_ce0 );
-
-    SC_METHOD(thread_temp_3_i_ce1);
-
-    SC_METHOD(thread_temp_3_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_3_d0 );
-
-    SC_METHOD(thread_temp_3_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_3_we0 );
-
-    SC_METHOD(thread_temp_3_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_3 );
-
-    SC_METHOD(thread_temp_3_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A3_address0 );
-
-    SC_METHOD(thread_temp_3_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A3_address1 );
-
-    SC_METHOD(thread_temp_3_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A3_ce0 );
-
-    SC_METHOD(thread_temp_3_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A3_ce1 );
-
-    SC_METHOD(thread_temp_3_t_d0);
-
-    SC_METHOD(thread_temp_3_t_d1);
-
-    SC_METHOD(thread_temp_3_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_3_t_we0);
-
-    SC_METHOD(thread_temp_3_t_we1);
-
-    SC_METHOD(thread_temp_4_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_4_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_4_address0 );
-
-    SC_METHOD(thread_temp_4_i_address1);
-
-    SC_METHOD(thread_temp_4_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_4_ce0 );
-
-    SC_METHOD(thread_temp_4_i_ce1);
-
-    SC_METHOD(thread_temp_4_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_4_d0 );
-
-    SC_METHOD(thread_temp_4_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_4_we0 );
-
-    SC_METHOD(thread_temp_4_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_4 );
-
-    SC_METHOD(thread_temp_4_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A4_address0 );
-
-    SC_METHOD(thread_temp_4_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A4_address1 );
-
-    SC_METHOD(thread_temp_4_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A4_ce0 );
-
-    SC_METHOD(thread_temp_4_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A4_ce1 );
-
-    SC_METHOD(thread_temp_4_t_d0);
-
-    SC_METHOD(thread_temp_4_t_d1);
-
-    SC_METHOD(thread_temp_4_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_4_t_we0);
-
-    SC_METHOD(thread_temp_4_t_we1);
-
-    SC_METHOD(thread_temp_5_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_5_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_5_address0 );
-
-    SC_METHOD(thread_temp_5_i_address1);
-
-    SC_METHOD(thread_temp_5_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_5_ce0 );
-
-    SC_METHOD(thread_temp_5_i_ce1);
-
-    SC_METHOD(thread_temp_5_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_5_d0 );
-
-    SC_METHOD(thread_temp_5_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_5_we0 );
-
-    SC_METHOD(thread_temp_5_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_5 );
-
-    SC_METHOD(thread_temp_5_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A5_address0 );
-
-    SC_METHOD(thread_temp_5_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A5_address1 );
-
-    SC_METHOD(thread_temp_5_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A5_ce0 );
-
-    SC_METHOD(thread_temp_5_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A5_ce1 );
-
-    SC_METHOD(thread_temp_5_t_d0);
-
-    SC_METHOD(thread_temp_5_t_d1);
-
-    SC_METHOD(thread_temp_5_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_5_t_we0);
-
-    SC_METHOD(thread_temp_5_t_we1);
-
-    SC_METHOD(thread_temp_6_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_6_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_6_address0 );
-
-    SC_METHOD(thread_temp_6_i_address1);
-
-    SC_METHOD(thread_temp_6_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_6_ce0 );
-
-    SC_METHOD(thread_temp_6_i_ce1);
-
-    SC_METHOD(thread_temp_6_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_6_d0 );
-
-    SC_METHOD(thread_temp_6_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_6_we0 );
-
-    SC_METHOD(thread_temp_6_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_6 );
-
-    SC_METHOD(thread_temp_6_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A6_address0 );
-
-    SC_METHOD(thread_temp_6_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A6_address1 );
-
-    SC_METHOD(thread_temp_6_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A6_ce0 );
-
-    SC_METHOD(thread_temp_6_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A6_ce1 );
-
-    SC_METHOD(thread_temp_6_t_d0);
-
-    SC_METHOD(thread_temp_6_t_d1);
-
-    SC_METHOD(thread_temp_6_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_6_t_we0);
-
-    SC_METHOD(thread_temp_6_t_we1);
-
-    SC_METHOD(thread_temp_7_U_ap_dummy_ce);
-
-    SC_METHOD(thread_temp_7_i_address0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_7_address0 );
-
-    SC_METHOD(thread_temp_7_i_address1);
-
-    SC_METHOD(thread_temp_7_i_ce0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_7_ce0 );
-
-    SC_METHOD(thread_temp_7_i_ce1);
-
-    SC_METHOD(thread_temp_7_i_d0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_7_d0 );
-
-    SC_METHOD(thread_temp_7_i_we0);
-    sensitive << ( DCT_MAT_Multiply_U0_C_7_we0 );
-
-    SC_METHOD(thread_temp_7_i_write);
-    sensitive << ( ap_chn_write_DCT_MAT_Multiply_U0_temp_7 );
-
-    SC_METHOD(thread_temp_7_t_address0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A7_address0 );
-
-    SC_METHOD(thread_temp_7_t_address1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A7_address1 );
-
-    SC_METHOD(thread_temp_7_t_ce0);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A7_ce0 );
-
-    SC_METHOD(thread_temp_7_t_ce1);
-    sensitive << ( DCT_MAT_Multiply_1_U0_A7_ce1 );
-
-    SC_METHOD(thread_temp_7_t_d0);
-
-    SC_METHOD(thread_temp_7_t_d1);
-
-    SC_METHOD(thread_temp_7_t_read);
-    sensitive << ( DCT_MAT_Multiply_1_U0_ap_ready );
-
-    SC_METHOD(thread_temp_7_t_we0);
-
-    SC_METHOD(thread_temp_7_t_we1);
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
@@ -1331,14 +384,7 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     DCT_Loop_1_proc_U0_ap_start = SC_LOGIC_0;
     ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status = SC_LOGIC_0;
     ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status = SC_LOGIC_0;
-    ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status = SC_LOGIC_0;
+    ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "DCT_sc_trace_" << apTFileNum ++;
@@ -1379,142 +425,6 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, Xmat_t_d0, "Xmat_t_d0");
     sc_trace(mVcdFile, Xmat_t_q0, "Xmat_t_q0");
     sc_trace(mVcdFile, Xmat_U_ap_dummy_ce, "Xmat_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_0_i_address0, "temp_0_i_address0");
-    sc_trace(mVcdFile, temp_0_i_ce0, "temp_0_i_ce0");
-    sc_trace(mVcdFile, temp_0_i_we0, "temp_0_i_we0");
-    sc_trace(mVcdFile, temp_0_i_d0, "temp_0_i_d0");
-    sc_trace(mVcdFile, temp_0_i_q0, "temp_0_i_q0");
-    sc_trace(mVcdFile, temp_0_i_address1, "temp_0_i_address1");
-    sc_trace(mVcdFile, temp_0_i_ce1, "temp_0_i_ce1");
-    sc_trace(mVcdFile, temp_0_i_q1, "temp_0_i_q1");
-    sc_trace(mVcdFile, temp_0_t_address0, "temp_0_t_address0");
-    sc_trace(mVcdFile, temp_0_t_ce0, "temp_0_t_ce0");
-    sc_trace(mVcdFile, temp_0_t_we0, "temp_0_t_we0");
-    sc_trace(mVcdFile, temp_0_t_d0, "temp_0_t_d0");
-    sc_trace(mVcdFile, temp_0_t_q0, "temp_0_t_q0");
-    sc_trace(mVcdFile, temp_0_t_address1, "temp_0_t_address1");
-    sc_trace(mVcdFile, temp_0_t_ce1, "temp_0_t_ce1");
-    sc_trace(mVcdFile, temp_0_t_q1, "temp_0_t_q1");
-    sc_trace(mVcdFile, temp_0_U_ap_dummy_ce, "temp_0_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_1_i_address0, "temp_1_i_address0");
-    sc_trace(mVcdFile, temp_1_i_ce0, "temp_1_i_ce0");
-    sc_trace(mVcdFile, temp_1_i_we0, "temp_1_i_we0");
-    sc_trace(mVcdFile, temp_1_i_d0, "temp_1_i_d0");
-    sc_trace(mVcdFile, temp_1_i_q0, "temp_1_i_q0");
-    sc_trace(mVcdFile, temp_1_i_address1, "temp_1_i_address1");
-    sc_trace(mVcdFile, temp_1_i_ce1, "temp_1_i_ce1");
-    sc_trace(mVcdFile, temp_1_i_q1, "temp_1_i_q1");
-    sc_trace(mVcdFile, temp_1_t_address0, "temp_1_t_address0");
-    sc_trace(mVcdFile, temp_1_t_ce0, "temp_1_t_ce0");
-    sc_trace(mVcdFile, temp_1_t_we0, "temp_1_t_we0");
-    sc_trace(mVcdFile, temp_1_t_d0, "temp_1_t_d0");
-    sc_trace(mVcdFile, temp_1_t_q0, "temp_1_t_q0");
-    sc_trace(mVcdFile, temp_1_t_address1, "temp_1_t_address1");
-    sc_trace(mVcdFile, temp_1_t_ce1, "temp_1_t_ce1");
-    sc_trace(mVcdFile, temp_1_t_q1, "temp_1_t_q1");
-    sc_trace(mVcdFile, temp_1_U_ap_dummy_ce, "temp_1_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_2_i_address0, "temp_2_i_address0");
-    sc_trace(mVcdFile, temp_2_i_ce0, "temp_2_i_ce0");
-    sc_trace(mVcdFile, temp_2_i_we0, "temp_2_i_we0");
-    sc_trace(mVcdFile, temp_2_i_d0, "temp_2_i_d0");
-    sc_trace(mVcdFile, temp_2_i_q0, "temp_2_i_q0");
-    sc_trace(mVcdFile, temp_2_i_address1, "temp_2_i_address1");
-    sc_trace(mVcdFile, temp_2_i_ce1, "temp_2_i_ce1");
-    sc_trace(mVcdFile, temp_2_i_q1, "temp_2_i_q1");
-    sc_trace(mVcdFile, temp_2_t_address0, "temp_2_t_address0");
-    sc_trace(mVcdFile, temp_2_t_ce0, "temp_2_t_ce0");
-    sc_trace(mVcdFile, temp_2_t_we0, "temp_2_t_we0");
-    sc_trace(mVcdFile, temp_2_t_d0, "temp_2_t_d0");
-    sc_trace(mVcdFile, temp_2_t_q0, "temp_2_t_q0");
-    sc_trace(mVcdFile, temp_2_t_address1, "temp_2_t_address1");
-    sc_trace(mVcdFile, temp_2_t_ce1, "temp_2_t_ce1");
-    sc_trace(mVcdFile, temp_2_t_q1, "temp_2_t_q1");
-    sc_trace(mVcdFile, temp_2_U_ap_dummy_ce, "temp_2_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_3_i_address0, "temp_3_i_address0");
-    sc_trace(mVcdFile, temp_3_i_ce0, "temp_3_i_ce0");
-    sc_trace(mVcdFile, temp_3_i_we0, "temp_3_i_we0");
-    sc_trace(mVcdFile, temp_3_i_d0, "temp_3_i_d0");
-    sc_trace(mVcdFile, temp_3_i_q0, "temp_3_i_q0");
-    sc_trace(mVcdFile, temp_3_i_address1, "temp_3_i_address1");
-    sc_trace(mVcdFile, temp_3_i_ce1, "temp_3_i_ce1");
-    sc_trace(mVcdFile, temp_3_i_q1, "temp_3_i_q1");
-    sc_trace(mVcdFile, temp_3_t_address0, "temp_3_t_address0");
-    sc_trace(mVcdFile, temp_3_t_ce0, "temp_3_t_ce0");
-    sc_trace(mVcdFile, temp_3_t_we0, "temp_3_t_we0");
-    sc_trace(mVcdFile, temp_3_t_d0, "temp_3_t_d0");
-    sc_trace(mVcdFile, temp_3_t_q0, "temp_3_t_q0");
-    sc_trace(mVcdFile, temp_3_t_address1, "temp_3_t_address1");
-    sc_trace(mVcdFile, temp_3_t_ce1, "temp_3_t_ce1");
-    sc_trace(mVcdFile, temp_3_t_q1, "temp_3_t_q1");
-    sc_trace(mVcdFile, temp_3_U_ap_dummy_ce, "temp_3_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_4_i_address0, "temp_4_i_address0");
-    sc_trace(mVcdFile, temp_4_i_ce0, "temp_4_i_ce0");
-    sc_trace(mVcdFile, temp_4_i_we0, "temp_4_i_we0");
-    sc_trace(mVcdFile, temp_4_i_d0, "temp_4_i_d0");
-    sc_trace(mVcdFile, temp_4_i_q0, "temp_4_i_q0");
-    sc_trace(mVcdFile, temp_4_i_address1, "temp_4_i_address1");
-    sc_trace(mVcdFile, temp_4_i_ce1, "temp_4_i_ce1");
-    sc_trace(mVcdFile, temp_4_i_q1, "temp_4_i_q1");
-    sc_trace(mVcdFile, temp_4_t_address0, "temp_4_t_address0");
-    sc_trace(mVcdFile, temp_4_t_ce0, "temp_4_t_ce0");
-    sc_trace(mVcdFile, temp_4_t_we0, "temp_4_t_we0");
-    sc_trace(mVcdFile, temp_4_t_d0, "temp_4_t_d0");
-    sc_trace(mVcdFile, temp_4_t_q0, "temp_4_t_q0");
-    sc_trace(mVcdFile, temp_4_t_address1, "temp_4_t_address1");
-    sc_trace(mVcdFile, temp_4_t_ce1, "temp_4_t_ce1");
-    sc_trace(mVcdFile, temp_4_t_q1, "temp_4_t_q1");
-    sc_trace(mVcdFile, temp_4_U_ap_dummy_ce, "temp_4_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_5_i_address0, "temp_5_i_address0");
-    sc_trace(mVcdFile, temp_5_i_ce0, "temp_5_i_ce0");
-    sc_trace(mVcdFile, temp_5_i_we0, "temp_5_i_we0");
-    sc_trace(mVcdFile, temp_5_i_d0, "temp_5_i_d0");
-    sc_trace(mVcdFile, temp_5_i_q0, "temp_5_i_q0");
-    sc_trace(mVcdFile, temp_5_i_address1, "temp_5_i_address1");
-    sc_trace(mVcdFile, temp_5_i_ce1, "temp_5_i_ce1");
-    sc_trace(mVcdFile, temp_5_i_q1, "temp_5_i_q1");
-    sc_trace(mVcdFile, temp_5_t_address0, "temp_5_t_address0");
-    sc_trace(mVcdFile, temp_5_t_ce0, "temp_5_t_ce0");
-    sc_trace(mVcdFile, temp_5_t_we0, "temp_5_t_we0");
-    sc_trace(mVcdFile, temp_5_t_d0, "temp_5_t_d0");
-    sc_trace(mVcdFile, temp_5_t_q0, "temp_5_t_q0");
-    sc_trace(mVcdFile, temp_5_t_address1, "temp_5_t_address1");
-    sc_trace(mVcdFile, temp_5_t_ce1, "temp_5_t_ce1");
-    sc_trace(mVcdFile, temp_5_t_q1, "temp_5_t_q1");
-    sc_trace(mVcdFile, temp_5_U_ap_dummy_ce, "temp_5_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_6_i_address0, "temp_6_i_address0");
-    sc_trace(mVcdFile, temp_6_i_ce0, "temp_6_i_ce0");
-    sc_trace(mVcdFile, temp_6_i_we0, "temp_6_i_we0");
-    sc_trace(mVcdFile, temp_6_i_d0, "temp_6_i_d0");
-    sc_trace(mVcdFile, temp_6_i_q0, "temp_6_i_q0");
-    sc_trace(mVcdFile, temp_6_i_address1, "temp_6_i_address1");
-    sc_trace(mVcdFile, temp_6_i_ce1, "temp_6_i_ce1");
-    sc_trace(mVcdFile, temp_6_i_q1, "temp_6_i_q1");
-    sc_trace(mVcdFile, temp_6_t_address0, "temp_6_t_address0");
-    sc_trace(mVcdFile, temp_6_t_ce0, "temp_6_t_ce0");
-    sc_trace(mVcdFile, temp_6_t_we0, "temp_6_t_we0");
-    sc_trace(mVcdFile, temp_6_t_d0, "temp_6_t_d0");
-    sc_trace(mVcdFile, temp_6_t_q0, "temp_6_t_q0");
-    sc_trace(mVcdFile, temp_6_t_address1, "temp_6_t_address1");
-    sc_trace(mVcdFile, temp_6_t_ce1, "temp_6_t_ce1");
-    sc_trace(mVcdFile, temp_6_t_q1, "temp_6_t_q1");
-    sc_trace(mVcdFile, temp_6_U_ap_dummy_ce, "temp_6_U_ap_dummy_ce");
-    sc_trace(mVcdFile, temp_7_i_address0, "temp_7_i_address0");
-    sc_trace(mVcdFile, temp_7_i_ce0, "temp_7_i_ce0");
-    sc_trace(mVcdFile, temp_7_i_we0, "temp_7_i_we0");
-    sc_trace(mVcdFile, temp_7_i_d0, "temp_7_i_d0");
-    sc_trace(mVcdFile, temp_7_i_q0, "temp_7_i_q0");
-    sc_trace(mVcdFile, temp_7_i_address1, "temp_7_i_address1");
-    sc_trace(mVcdFile, temp_7_i_ce1, "temp_7_i_ce1");
-    sc_trace(mVcdFile, temp_7_i_q1, "temp_7_i_q1");
-    sc_trace(mVcdFile, temp_7_t_address0, "temp_7_t_address0");
-    sc_trace(mVcdFile, temp_7_t_ce0, "temp_7_t_ce0");
-    sc_trace(mVcdFile, temp_7_t_we0, "temp_7_t_we0");
-    sc_trace(mVcdFile, temp_7_t_d0, "temp_7_t_d0");
-    sc_trace(mVcdFile, temp_7_t_q0, "temp_7_t_q0");
-    sc_trace(mVcdFile, temp_7_t_address1, "temp_7_t_address1");
-    sc_trace(mVcdFile, temp_7_t_ce1, "temp_7_t_ce1");
-    sc_trace(mVcdFile, temp_7_t_q1, "temp_7_t_q1");
-    sc_trace(mVcdFile, temp_7_U_ap_dummy_ce, "temp_7_U_ap_dummy_ce");
     sc_trace(mVcdFile, Ymat_i_address0, "Ymat_i_address0");
     sc_trace(mVcdFile, Ymat_i_ce0, "Ymat_i_ce0");
     sc_trace(mVcdFile, Ymat_i_we0, "Ymat_i_we0");
@@ -1538,7 +448,8 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Xbuff_ce0, "DCT_Loop_1_proc_U0_Xbuff_ce0");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Xbuff_we0, "DCT_Loop_1_proc_U0_Xbuff_we0");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Xbuff_d0, "DCT_Loop_1_proc_U0_Xbuff_d0");
-    sc_trace(mVcdFile, DCT_Loop_1_proc_U0_ap_return, "DCT_Loop_1_proc_U0_ap_return");
+    sc_trace(mVcdFile, DCT_Loop_1_proc_U0_ap_return_0, "DCT_Loop_1_proc_U0_ap_return_0");
+    sc_trace(mVcdFile, DCT_Loop_1_proc_U0_ap_return_1, "DCT_Loop_1_proc_U0_ap_return_1");
     sc_trace(mVcdFile, ap_chn_write_DCT_Loop_1_proc_U0_Xbuff, "ap_chn_write_DCT_Loop_1_proc_U0_Xbuff");
     sc_trace(mVcdFile, DCT_Loop_1_proc_U0_Xbuff_pipo_status, "DCT_Loop_1_proc_U0_Xbuff_pipo_status");
     sc_trace(mVcdFile, ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status, "ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status");
@@ -1547,6 +458,10 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_full_n, "opt_type_02_loc_loc_loc_channe_full_n");
     sc_trace(mVcdFile, ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n, "ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n");
     sc_trace(mVcdFile, ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n, "ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n");
+    sc_trace(mVcdFile, ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1, "ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_full_n, "opt_type_02_loc_loc_loc_channe_1_full_n");
+    sc_trace(mVcdFile, ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n, "ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n");
+    sc_trace(mVcdFile, ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n, "ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n");
     sc_trace(mVcdFile, DCT_Loop_2_proc_U0_ap_start, "DCT_Loop_2_proc_U0_ap_start");
     sc_trace(mVcdFile, DCT_Loop_2_proc_U0_ap_done, "DCT_Loop_2_proc_U0_ap_done");
     sc_trace(mVcdFile, DCT_Loop_2_proc_U0_ap_continue, "DCT_Loop_2_proc_U0_ap_continue");
@@ -1561,257 +476,21 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, DCT_Loop_2_proc_U0_Xmat_d0, "DCT_Loop_2_proc_U0_Xmat_d0");
     sc_trace(mVcdFile, ap_chn_write_DCT_Loop_2_proc_U0_Xmat, "ap_chn_write_DCT_Loop_2_proc_U0_Xmat");
     sc_trace(mVcdFile, DCT_Loop_2_proc_U0_Xmat_pipo_status, "DCT_Loop_2_proc_U0_Xmat_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_address0, "DCT_MAT_Multiply_U0_B_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_ce0, "DCT_MAT_Multiply_U0_B_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_d0, "DCT_MAT_Multiply_U0_B_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_q0, "DCT_MAT_Multiply_U0_B_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_we0, "DCT_MAT_Multiply_U0_B_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_address1, "DCT_MAT_Multiply_U0_B_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_ce1, "DCT_MAT_Multiply_U0_B_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_d1, "DCT_MAT_Multiply_U0_B_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_q1, "DCT_MAT_Multiply_U0_B_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_we1, "DCT_MAT_Multiply_U0_B_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_address0, "DCT_MAT_Multiply_U0_C_0_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_ce0, "DCT_MAT_Multiply_U0_C_0_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_d0, "DCT_MAT_Multiply_U0_C_0_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_q0, "DCT_MAT_Multiply_U0_C_0_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_we0, "DCT_MAT_Multiply_U0_C_0_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_address1, "DCT_MAT_Multiply_U0_C_0_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_ce1, "DCT_MAT_Multiply_U0_C_0_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_d1, "DCT_MAT_Multiply_U0_C_0_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_q1, "DCT_MAT_Multiply_U0_C_0_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_we1, "DCT_MAT_Multiply_U0_C_0_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_address0, "DCT_MAT_Multiply_U0_C_1_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_ce0, "DCT_MAT_Multiply_U0_C_1_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_d0, "DCT_MAT_Multiply_U0_C_1_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_q0, "DCT_MAT_Multiply_U0_C_1_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_we0, "DCT_MAT_Multiply_U0_C_1_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_address1, "DCT_MAT_Multiply_U0_C_1_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_ce1, "DCT_MAT_Multiply_U0_C_1_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_d1, "DCT_MAT_Multiply_U0_C_1_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_q1, "DCT_MAT_Multiply_U0_C_1_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_we1, "DCT_MAT_Multiply_U0_C_1_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_address0, "DCT_MAT_Multiply_U0_C_2_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_ce0, "DCT_MAT_Multiply_U0_C_2_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_d0, "DCT_MAT_Multiply_U0_C_2_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_q0, "DCT_MAT_Multiply_U0_C_2_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_we0, "DCT_MAT_Multiply_U0_C_2_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_address1, "DCT_MAT_Multiply_U0_C_2_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_ce1, "DCT_MAT_Multiply_U0_C_2_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_d1, "DCT_MAT_Multiply_U0_C_2_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_q1, "DCT_MAT_Multiply_U0_C_2_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_we1, "DCT_MAT_Multiply_U0_C_2_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_address0, "DCT_MAT_Multiply_U0_C_3_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_ce0, "DCT_MAT_Multiply_U0_C_3_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_d0, "DCT_MAT_Multiply_U0_C_3_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_q0, "DCT_MAT_Multiply_U0_C_3_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_we0, "DCT_MAT_Multiply_U0_C_3_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_address1, "DCT_MAT_Multiply_U0_C_3_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_ce1, "DCT_MAT_Multiply_U0_C_3_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_d1, "DCT_MAT_Multiply_U0_C_3_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_q1, "DCT_MAT_Multiply_U0_C_3_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_we1, "DCT_MAT_Multiply_U0_C_3_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_address0, "DCT_MAT_Multiply_U0_C_4_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_ce0, "DCT_MAT_Multiply_U0_C_4_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_d0, "DCT_MAT_Multiply_U0_C_4_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_q0, "DCT_MAT_Multiply_U0_C_4_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_we0, "DCT_MAT_Multiply_U0_C_4_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_address1, "DCT_MAT_Multiply_U0_C_4_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_ce1, "DCT_MAT_Multiply_U0_C_4_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_d1, "DCT_MAT_Multiply_U0_C_4_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_q1, "DCT_MAT_Multiply_U0_C_4_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_we1, "DCT_MAT_Multiply_U0_C_4_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_address0, "DCT_MAT_Multiply_U0_C_5_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_ce0, "DCT_MAT_Multiply_U0_C_5_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_d0, "DCT_MAT_Multiply_U0_C_5_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_q0, "DCT_MAT_Multiply_U0_C_5_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_we0, "DCT_MAT_Multiply_U0_C_5_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_address1, "DCT_MAT_Multiply_U0_C_5_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_ce1, "DCT_MAT_Multiply_U0_C_5_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_d1, "DCT_MAT_Multiply_U0_C_5_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_q1, "DCT_MAT_Multiply_U0_C_5_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_we1, "DCT_MAT_Multiply_U0_C_5_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_address0, "DCT_MAT_Multiply_U0_C_6_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_ce0, "DCT_MAT_Multiply_U0_C_6_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_d0, "DCT_MAT_Multiply_U0_C_6_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_q0, "DCT_MAT_Multiply_U0_C_6_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_we0, "DCT_MAT_Multiply_U0_C_6_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_address1, "DCT_MAT_Multiply_U0_C_6_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_ce1, "DCT_MAT_Multiply_U0_C_6_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_d1, "DCT_MAT_Multiply_U0_C_6_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_q1, "DCT_MAT_Multiply_U0_C_6_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_we1, "DCT_MAT_Multiply_U0_C_6_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_address0, "DCT_MAT_Multiply_U0_C_7_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_ce0, "DCT_MAT_Multiply_U0_C_7_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_d0, "DCT_MAT_Multiply_U0_C_7_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_q0, "DCT_MAT_Multiply_U0_C_7_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_we0, "DCT_MAT_Multiply_U0_C_7_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_address1, "DCT_MAT_Multiply_U0_C_7_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_ce1, "DCT_MAT_Multiply_U0_C_7_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_d1, "DCT_MAT_Multiply_U0_C_7_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_q1, "DCT_MAT_Multiply_U0_C_7_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_we1, "DCT_MAT_Multiply_U0_C_7_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_pipo_status, "DCT_MAT_Multiply_U0_B_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_B_pipo_update, "DCT_MAT_Multiply_U0_B_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_pipo_status, "DCT_MAT_Multiply_U0_C_0_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_0_pipo_update, "DCT_MAT_Multiply_U0_C_0_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_pipo_status, "DCT_MAT_Multiply_U0_C_1_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_1_pipo_update, "DCT_MAT_Multiply_U0_C_1_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_pipo_status, "DCT_MAT_Multiply_U0_C_2_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_2_pipo_update, "DCT_MAT_Multiply_U0_C_2_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_pipo_status, "DCT_MAT_Multiply_U0_C_3_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_3_pipo_update, "DCT_MAT_Multiply_U0_C_3_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_pipo_status, "DCT_MAT_Multiply_U0_C_4_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_4_pipo_update, "DCT_MAT_Multiply_U0_C_4_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_pipo_status, "DCT_MAT_Multiply_U0_C_5_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_5_pipo_update, "DCT_MAT_Multiply_U0_C_5_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_pipo_status, "DCT_MAT_Multiply_U0_C_6_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_6_pipo_update, "DCT_MAT_Multiply_U0_C_6_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_pipo_status, "DCT_MAT_Multiply_U0_C_7_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_C_7_pipo_update, "DCT_MAT_Multiply_U0_C_7_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_ap_continue, "DCT_MAT_Multiply_U0_ap_continue");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_ap_done, "DCT_MAT_Multiply_U0_ap_done");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_ap_start, "DCT_MAT_Multiply_U0_ap_start");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_ap_idle, "DCT_MAT_Multiply_U0_ap_idle");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_U0_ap_ready, "DCT_MAT_Multiply_U0_ap_ready");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_0, "ap_chn_write_DCT_MAT_Multiply_U0_temp_0");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_1, "ap_chn_write_DCT_MAT_Multiply_U0_temp_1");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_2, "ap_chn_write_DCT_MAT_Multiply_U0_temp_2");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_3, "ap_chn_write_DCT_MAT_Multiply_U0_temp_3");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_4, "ap_chn_write_DCT_MAT_Multiply_U0_temp_4");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_5, "ap_chn_write_DCT_MAT_Multiply_U0_temp_5");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_6, "ap_chn_write_DCT_MAT_Multiply_U0_temp_6");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_U0_temp_7, "ap_chn_write_DCT_MAT_Multiply_U0_temp_7");
-    sc_trace(mVcdFile, ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status, "ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status");
-    sc_trace(mVcdFile, ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status, "ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_address0, "DCT_MAT_Multiply_1_U0_A_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_ce0, "DCT_MAT_Multiply_1_U0_A_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_d0, "DCT_MAT_Multiply_1_U0_A_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_q0, "DCT_MAT_Multiply_1_U0_A_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_we0, "DCT_MAT_Multiply_1_U0_A_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_address1, "DCT_MAT_Multiply_1_U0_A_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_ce1, "DCT_MAT_Multiply_1_U0_A_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_d1, "DCT_MAT_Multiply_1_U0_A_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_q1, "DCT_MAT_Multiply_1_U0_A_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_we1, "DCT_MAT_Multiply_1_U0_A_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_address0, "DCT_MAT_Multiply_1_U0_A1_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_ce0, "DCT_MAT_Multiply_1_U0_A1_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_d0, "DCT_MAT_Multiply_1_U0_A1_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_q0, "DCT_MAT_Multiply_1_U0_A1_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_we0, "DCT_MAT_Multiply_1_U0_A1_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_address1, "DCT_MAT_Multiply_1_U0_A1_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_ce1, "DCT_MAT_Multiply_1_U0_A1_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_d1, "DCT_MAT_Multiply_1_U0_A1_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_q1, "DCT_MAT_Multiply_1_U0_A1_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_we1, "DCT_MAT_Multiply_1_U0_A1_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_address0, "DCT_MAT_Multiply_1_U0_A2_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_ce0, "DCT_MAT_Multiply_1_U0_A2_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_d0, "DCT_MAT_Multiply_1_U0_A2_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_q0, "DCT_MAT_Multiply_1_U0_A2_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_we0, "DCT_MAT_Multiply_1_U0_A2_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_address1, "DCT_MAT_Multiply_1_U0_A2_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_ce1, "DCT_MAT_Multiply_1_U0_A2_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_d1, "DCT_MAT_Multiply_1_U0_A2_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_q1, "DCT_MAT_Multiply_1_U0_A2_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_we1, "DCT_MAT_Multiply_1_U0_A2_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_address0, "DCT_MAT_Multiply_1_U0_A3_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_ce0, "DCT_MAT_Multiply_1_U0_A3_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_d0, "DCT_MAT_Multiply_1_U0_A3_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_q0, "DCT_MAT_Multiply_1_U0_A3_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_we0, "DCT_MAT_Multiply_1_U0_A3_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_address1, "DCT_MAT_Multiply_1_U0_A3_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_ce1, "DCT_MAT_Multiply_1_U0_A3_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_d1, "DCT_MAT_Multiply_1_U0_A3_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_q1, "DCT_MAT_Multiply_1_U0_A3_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_we1, "DCT_MAT_Multiply_1_U0_A3_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_address0, "DCT_MAT_Multiply_1_U0_A4_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_ce0, "DCT_MAT_Multiply_1_U0_A4_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_d0, "DCT_MAT_Multiply_1_U0_A4_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_q0, "DCT_MAT_Multiply_1_U0_A4_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_we0, "DCT_MAT_Multiply_1_U0_A4_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_address1, "DCT_MAT_Multiply_1_U0_A4_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_ce1, "DCT_MAT_Multiply_1_U0_A4_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_d1, "DCT_MAT_Multiply_1_U0_A4_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_q1, "DCT_MAT_Multiply_1_U0_A4_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_we1, "DCT_MAT_Multiply_1_U0_A4_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_address0, "DCT_MAT_Multiply_1_U0_A5_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_ce0, "DCT_MAT_Multiply_1_U0_A5_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_d0, "DCT_MAT_Multiply_1_U0_A5_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_q0, "DCT_MAT_Multiply_1_U0_A5_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_we0, "DCT_MAT_Multiply_1_U0_A5_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_address1, "DCT_MAT_Multiply_1_U0_A5_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_ce1, "DCT_MAT_Multiply_1_U0_A5_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_d1, "DCT_MAT_Multiply_1_U0_A5_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_q1, "DCT_MAT_Multiply_1_U0_A5_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_we1, "DCT_MAT_Multiply_1_U0_A5_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_address0, "DCT_MAT_Multiply_1_U0_A6_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_ce0, "DCT_MAT_Multiply_1_U0_A6_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_d0, "DCT_MAT_Multiply_1_U0_A6_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_q0, "DCT_MAT_Multiply_1_U0_A6_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_we0, "DCT_MAT_Multiply_1_U0_A6_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_address1, "DCT_MAT_Multiply_1_U0_A6_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_ce1, "DCT_MAT_Multiply_1_U0_A6_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_d1, "DCT_MAT_Multiply_1_U0_A6_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_q1, "DCT_MAT_Multiply_1_U0_A6_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_we1, "DCT_MAT_Multiply_1_U0_A6_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_address0, "DCT_MAT_Multiply_1_U0_A7_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_ce0, "DCT_MAT_Multiply_1_U0_A7_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_d0, "DCT_MAT_Multiply_1_U0_A7_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_q0, "DCT_MAT_Multiply_1_U0_A7_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_we0, "DCT_MAT_Multiply_1_U0_A7_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_address1, "DCT_MAT_Multiply_1_U0_A7_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_ce1, "DCT_MAT_Multiply_1_U0_A7_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_d1, "DCT_MAT_Multiply_1_U0_A7_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_q1, "DCT_MAT_Multiply_1_U0_A7_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_we1, "DCT_MAT_Multiply_1_U0_A7_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_address0, "DCT_MAT_Multiply_1_U0_C_address0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_ce0, "DCT_MAT_Multiply_1_U0_C_ce0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_d0, "DCT_MAT_Multiply_1_U0_C_d0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_q0, "DCT_MAT_Multiply_1_U0_C_q0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_we0, "DCT_MAT_Multiply_1_U0_C_we0");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_address1, "DCT_MAT_Multiply_1_U0_C_address1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_ce1, "DCT_MAT_Multiply_1_U0_C_ce1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_d1, "DCT_MAT_Multiply_1_U0_C_d1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_q1, "DCT_MAT_Multiply_1_U0_C_q1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_we1, "DCT_MAT_Multiply_1_U0_C_we1");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_ap_start, "DCT_MAT_Multiply_1_U0_ap_start");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_pipo_status, "DCT_MAT_Multiply_1_U0_A_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A_pipo_update, "DCT_MAT_Multiply_1_U0_A_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_pipo_status, "DCT_MAT_Multiply_1_U0_A1_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A1_pipo_update, "DCT_MAT_Multiply_1_U0_A1_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_pipo_status, "DCT_MAT_Multiply_1_U0_A2_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A2_pipo_update, "DCT_MAT_Multiply_1_U0_A2_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_pipo_status, "DCT_MAT_Multiply_1_U0_A3_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A3_pipo_update, "DCT_MAT_Multiply_1_U0_A3_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_pipo_status, "DCT_MAT_Multiply_1_U0_A4_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A4_pipo_update, "DCT_MAT_Multiply_1_U0_A4_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_pipo_status, "DCT_MAT_Multiply_1_U0_A5_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A5_pipo_update, "DCT_MAT_Multiply_1_U0_A5_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_pipo_status, "DCT_MAT_Multiply_1_U0_A6_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A6_pipo_update, "DCT_MAT_Multiply_1_U0_A6_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_pipo_status, "DCT_MAT_Multiply_1_U0_A7_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_A7_pipo_update, "DCT_MAT_Multiply_1_U0_A7_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_pipo_status, "DCT_MAT_Multiply_1_U0_C_pipo_status");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_C_pipo_update, "DCT_MAT_Multiply_1_U0_C_pipo_update");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_ap_continue, "DCT_MAT_Multiply_1_U0_ap_continue");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_ap_done, "DCT_MAT_Multiply_1_U0_ap_done");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_ap_idle, "DCT_MAT_Multiply_1_U0_ap_idle");
-    sc_trace(mVcdFile, DCT_MAT_Multiply_1_U0_ap_ready, "DCT_MAT_Multiply_1_U0_ap_ready");
-    sc_trace(mVcdFile, ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat, "ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_ap_start, "DCT_Block_proc1_U0_ap_start");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_ap_done, "DCT_Block_proc1_U0_ap_done");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_ap_continue, "DCT_Block_proc1_U0_ap_continue");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_ap_idle, "DCT_Block_proc1_U0_ap_idle");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_ap_ready, "DCT_Block_proc1_U0_ap_ready");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_p_read, "DCT_Block_proc1_U0_p_read");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Xmat_address0, "DCT_Block_proc1_U0_Xmat_address0");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Xmat_ce0, "DCT_Block_proc1_U0_Xmat_ce0");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Xmat_q0, "DCT_Block_proc1_U0_Xmat_q0");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Ymat_address0, "DCT_Block_proc1_U0_Ymat_address0");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Ymat_ce0, "DCT_Block_proc1_U0_Ymat_ce0");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Ymat_we0, "DCT_Block_proc1_U0_Ymat_we0");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Ymat_d0, "DCT_Block_proc1_U0_Ymat_d0");
+    sc_trace(mVcdFile, ap_chn_write_DCT_Block_proc1_U0_Ymat, "ap_chn_write_DCT_Block_proc1_U0_Ymat");
+    sc_trace(mVcdFile, DCT_Block_proc1_U0_Ymat_pipo_status, "DCT_Block_proc1_U0_Ymat_pipo_status");
     sc_trace(mVcdFile, DCT_Loop_3_proc1_U0_ap_start, "DCT_Loop_3_proc1_U0_ap_start");
     sc_trace(mVcdFile, DCT_Loop_3_proc1_U0_ap_done, "DCT_Loop_3_proc1_U0_ap_done");
     sc_trace(mVcdFile, DCT_Loop_3_proc1_U0_ap_continue, "DCT_Loop_3_proc1_U0_ap_continue");
@@ -1833,54 +512,6 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, Xmat_i_write, "Xmat_i_write");
     sc_trace(mVcdFile, Xmat_t_empty_n, "Xmat_t_empty_n");
     sc_trace(mVcdFile, Xmat_t_read, "Xmat_t_read");
-    sc_trace(mVcdFile, temp_0_i_full_n, "temp_0_i_full_n");
-    sc_trace(mVcdFile, temp_0_i_write, "temp_0_i_write");
-    sc_trace(mVcdFile, temp_0_t_empty_n, "temp_0_t_empty_n");
-    sc_trace(mVcdFile, temp_0_t_read, "temp_0_t_read");
-    sc_trace(mVcdFile, temp_0_t_d1, "temp_0_t_d1");
-    sc_trace(mVcdFile, temp_0_t_we1, "temp_0_t_we1");
-    sc_trace(mVcdFile, temp_1_i_full_n, "temp_1_i_full_n");
-    sc_trace(mVcdFile, temp_1_i_write, "temp_1_i_write");
-    sc_trace(mVcdFile, temp_1_t_empty_n, "temp_1_t_empty_n");
-    sc_trace(mVcdFile, temp_1_t_read, "temp_1_t_read");
-    sc_trace(mVcdFile, temp_1_t_d1, "temp_1_t_d1");
-    sc_trace(mVcdFile, temp_1_t_we1, "temp_1_t_we1");
-    sc_trace(mVcdFile, temp_2_i_full_n, "temp_2_i_full_n");
-    sc_trace(mVcdFile, temp_2_i_write, "temp_2_i_write");
-    sc_trace(mVcdFile, temp_2_t_empty_n, "temp_2_t_empty_n");
-    sc_trace(mVcdFile, temp_2_t_read, "temp_2_t_read");
-    sc_trace(mVcdFile, temp_2_t_d1, "temp_2_t_d1");
-    sc_trace(mVcdFile, temp_2_t_we1, "temp_2_t_we1");
-    sc_trace(mVcdFile, temp_3_i_full_n, "temp_3_i_full_n");
-    sc_trace(mVcdFile, temp_3_i_write, "temp_3_i_write");
-    sc_trace(mVcdFile, temp_3_t_empty_n, "temp_3_t_empty_n");
-    sc_trace(mVcdFile, temp_3_t_read, "temp_3_t_read");
-    sc_trace(mVcdFile, temp_3_t_d1, "temp_3_t_d1");
-    sc_trace(mVcdFile, temp_3_t_we1, "temp_3_t_we1");
-    sc_trace(mVcdFile, temp_4_i_full_n, "temp_4_i_full_n");
-    sc_trace(mVcdFile, temp_4_i_write, "temp_4_i_write");
-    sc_trace(mVcdFile, temp_4_t_empty_n, "temp_4_t_empty_n");
-    sc_trace(mVcdFile, temp_4_t_read, "temp_4_t_read");
-    sc_trace(mVcdFile, temp_4_t_d1, "temp_4_t_d1");
-    sc_trace(mVcdFile, temp_4_t_we1, "temp_4_t_we1");
-    sc_trace(mVcdFile, temp_5_i_full_n, "temp_5_i_full_n");
-    sc_trace(mVcdFile, temp_5_i_write, "temp_5_i_write");
-    sc_trace(mVcdFile, temp_5_t_empty_n, "temp_5_t_empty_n");
-    sc_trace(mVcdFile, temp_5_t_read, "temp_5_t_read");
-    sc_trace(mVcdFile, temp_5_t_d1, "temp_5_t_d1");
-    sc_trace(mVcdFile, temp_5_t_we1, "temp_5_t_we1");
-    sc_trace(mVcdFile, temp_6_i_full_n, "temp_6_i_full_n");
-    sc_trace(mVcdFile, temp_6_i_write, "temp_6_i_write");
-    sc_trace(mVcdFile, temp_6_t_empty_n, "temp_6_t_empty_n");
-    sc_trace(mVcdFile, temp_6_t_read, "temp_6_t_read");
-    sc_trace(mVcdFile, temp_6_t_d1, "temp_6_t_d1");
-    sc_trace(mVcdFile, temp_6_t_we1, "temp_6_t_we1");
-    sc_trace(mVcdFile, temp_7_i_full_n, "temp_7_i_full_n");
-    sc_trace(mVcdFile, temp_7_i_write, "temp_7_i_write");
-    sc_trace(mVcdFile, temp_7_t_empty_n, "temp_7_t_empty_n");
-    sc_trace(mVcdFile, temp_7_t_read, "temp_7_t_read");
-    sc_trace(mVcdFile, temp_7_t_d1, "temp_7_t_d1");
-    sc_trace(mVcdFile, temp_7_t_we1, "temp_7_t_we1");
     sc_trace(mVcdFile, Ymat_i_full_n, "Ymat_i_full_n");
     sc_trace(mVcdFile, Ymat_i_write, "Ymat_i_write");
     sc_trace(mVcdFile, Ymat_t_empty_n, "Ymat_t_empty_n");
@@ -1891,6 +522,12 @@ DCT::DCT(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_dout, "opt_type_02_loc_loc_loc_channe_dout");
     sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_empty_n, "opt_type_02_loc_loc_loc_channe_empty_n");
     sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_read, "opt_type_02_loc_loc_loc_channe_read");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce, "opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_din, "opt_type_02_loc_loc_loc_channe_1_din");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_write, "opt_type_02_loc_loc_loc_channe_1_write");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_dout, "opt_type_02_loc_loc_loc_channe_1_dout");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_empty_n, "opt_type_02_loc_loc_loc_channe_1_empty_n");
+    sc_trace(mVcdFile, opt_type_02_loc_loc_loc_channe_1_read, "opt_type_02_loc_loc_loc_channe_1_read");
     sc_trace(mVcdFile, ap_CS, "ap_CS");
     sc_trace(mVcdFile, ap_sig_hs_done, "ap_sig_hs_done");
 #endif
@@ -1910,21 +547,13 @@ DCT::~DCT() {
     mHdltvoutHandle.close();
     delete Xbuff_U;
     delete Xmat_U;
-    delete temp_0_U;
-    delete temp_1_U;
-    delete temp_2_U;
-    delete temp_3_U;
-    delete temp_4_U;
-    delete temp_5_U;
-    delete temp_6_U;
-    delete temp_7_U;
     delete Ymat_U;
     delete DCT_Loop_1_proc_U0;
     delete DCT_Loop_2_proc_U0;
-    delete DCT_MAT_Multiply_U0;
-    delete DCT_MAT_Multiply_1_U0;
+    delete DCT_Block_proc1_U0;
     delete DCT_Loop_3_proc1_U0;
     delete opt_type_02_loc_loc_loc_channe_U;
+    delete opt_type_02_loc_loc_loc_channe_1_U;
 }
 
 void DCT::thread_ap_clk_no_reset_() {
@@ -1946,91 +575,14 @@ void DCT::thread_ap_clk_no_reset_() {
         }
     }
     if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status = ap_const_logic_0;
+        ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n = ap_const_logic_0;
     } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_0_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_1_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_2_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_3_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_4_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_5_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_6_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status = ap_const_logic_1;
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-             esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_continue.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status = ap_const_logic_0;
-        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_ap_done.read()) && 
-                    esl_seteq<1,1,1>(ap_const_logic_1, DCT_MAT_Multiply_U0_C_7_pipo_status.read()))) {
-            ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status = ap_const_logic_1;
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_Loop_1_proc_U0_ap_done.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_1, DCT_Loop_1_proc_U0_ap_continue.read()))) {
+            ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n = ap_const_logic_0;
+        } else if ((esl_seteq<1,1,1>(ap_const_logic_1, DCT_Loop_1_proc_U0_ap_done.read()) && 
+                    esl_seteq<1,1,1>(ap_const_logic_1, opt_type_02_loc_loc_loc_channe_1_full_n.read()))) {
+            ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n = ap_const_logic_1;
         }
     }
     if ( ap_rst.read() == ap_const_logic_1) {
@@ -2044,6 +596,26 @@ void DCT::thread_ap_clk_no_reset_() {
             ap_reg_ready_opt_type_02_loc_loc_loc_channe_full_n = ap_const_logic_1;
         }
     }
+}
+
+void DCT::thread_DCT_Block_proc1_U0_Xmat_q0() {
+    DCT_Block_proc1_U0_Xmat_q0 = Xmat_t_q0.read();
+}
+
+void DCT::thread_DCT_Block_proc1_U0_Ymat_pipo_status() {
+    DCT_Block_proc1_U0_Ymat_pipo_status = Ymat_i_full_n.read();
+}
+
+void DCT::thread_DCT_Block_proc1_U0_ap_continue() {
+    DCT_Block_proc1_U0_ap_continue = DCT_Block_proc1_U0_Ymat_pipo_status.read();
+}
+
+void DCT::thread_DCT_Block_proc1_U0_ap_start() {
+    DCT_Block_proc1_U0_ap_start = (Xmat_t_empty_n.read() & opt_type_02_loc_loc_loc_channe_empty_n.read());
+}
+
+void DCT::thread_DCT_Block_proc1_U0_p_read() {
+    DCT_Block_proc1_U0_p_read = opt_type_02_loc_loc_loc_channe_dout.read();
 }
 
 void DCT::thread_DCT_Loop_1_proc_U0_X_dout() {
@@ -2060,7 +632,8 @@ void DCT::thread_DCT_Loop_1_proc_U0_Xbuff_pipo_status() {
 
 void DCT::thread_DCT_Loop_1_proc_U0_ap_continue() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n.read()))) {
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n.read()))) {
         DCT_Loop_1_proc_U0_ap_continue = ap_const_logic_1;
     } else {
         DCT_Loop_1_proc_U0_ap_continue = ap_const_logic_0;
@@ -2096,254 +669,11 @@ void DCT::thread_DCT_Loop_3_proc1_U0_ap_continue() {
 }
 
 void DCT::thread_DCT_Loop_3_proc1_U0_ap_start() {
-    DCT_Loop_3_proc1_U0_ap_start = (Ymat_t_empty_n.read() & opt_type_02_loc_loc_loc_channe_empty_n.read());
+    DCT_Loop_3_proc1_U0_ap_start = (Ymat_t_empty_n.read() & opt_type_02_loc_loc_loc_channe_1_empty_n.read());
 }
 
 void DCT::thread_DCT_Loop_3_proc1_U0_p_read() {
-    DCT_Loop_3_proc1_U0_p_read = opt_type_02_loc_loc_loc_channe_dout.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A1_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A1_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A1_q0() {
-    DCT_MAT_Multiply_1_U0_A1_q0 = temp_1_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A1_q1() {
-    DCT_MAT_Multiply_1_U0_A1_q1 = temp_1_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A2_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A2_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A2_q0() {
-    DCT_MAT_Multiply_1_U0_A2_q0 = temp_2_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A2_q1() {
-    DCT_MAT_Multiply_1_U0_A2_q1 = temp_2_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A3_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A3_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A3_q0() {
-    DCT_MAT_Multiply_1_U0_A3_q0 = temp_3_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A3_q1() {
-    DCT_MAT_Multiply_1_U0_A3_q1 = temp_3_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A4_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A4_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A4_q0() {
-    DCT_MAT_Multiply_1_U0_A4_q0 = temp_4_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A4_q1() {
-    DCT_MAT_Multiply_1_U0_A4_q1 = temp_4_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A5_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A5_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A5_q0() {
-    DCT_MAT_Multiply_1_U0_A5_q0 = temp_5_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A5_q1() {
-    DCT_MAT_Multiply_1_U0_A5_q1 = temp_5_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A6_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A6_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A6_q0() {
-    DCT_MAT_Multiply_1_U0_A6_q0 = temp_6_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A6_q1() {
-    DCT_MAT_Multiply_1_U0_A6_q1 = temp_6_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A7_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A7_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A7_q0() {
-    DCT_MAT_Multiply_1_U0_A7_q0 = temp_7_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A7_q1() {
-    DCT_MAT_Multiply_1_U0_A7_q1 = temp_7_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A_pipo_status() {
-    DCT_MAT_Multiply_1_U0_A_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A_q0() {
-    DCT_MAT_Multiply_1_U0_A_q0 = temp_0_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_A_q1() {
-    DCT_MAT_Multiply_1_U0_A_q1 = temp_0_t_q1.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_C_pipo_status() {
-    DCT_MAT_Multiply_1_U0_C_pipo_status = Ymat_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_C_q0() {
-    DCT_MAT_Multiply_1_U0_C_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_C_q1() {
-    DCT_MAT_Multiply_1_U0_C_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_ap_continue() {
-    DCT_MAT_Multiply_1_U0_ap_continue = DCT_MAT_Multiply_1_U0_C_pipo_status.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_1_U0_ap_start() {
-    DCT_MAT_Multiply_1_U0_ap_start = (temp_0_t_empty_n.read() & temp_1_t_empty_n.read() & temp_2_t_empty_n.read() & temp_3_t_empty_n.read() & temp_4_t_empty_n.read() & temp_5_t_empty_n.read() & temp_6_t_empty_n.read() & temp_7_t_empty_n.read());
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_B_pipo_status() {
-    DCT_MAT_Multiply_U0_B_pipo_status = ap_const_logic_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_B_q0() {
-    DCT_MAT_Multiply_U0_B_q0 = Xmat_t_q0.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_B_q1() {
-    DCT_MAT_Multiply_U0_B_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_0_pipo_status() {
-    DCT_MAT_Multiply_U0_C_0_pipo_status = temp_0_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_0_q0() {
-    DCT_MAT_Multiply_U0_C_0_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_0_q1() {
-    DCT_MAT_Multiply_U0_C_0_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_1_pipo_status() {
-    DCT_MAT_Multiply_U0_C_1_pipo_status = temp_1_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_1_q0() {
-    DCT_MAT_Multiply_U0_C_1_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_1_q1() {
-    DCT_MAT_Multiply_U0_C_1_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_2_pipo_status() {
-    DCT_MAT_Multiply_U0_C_2_pipo_status = temp_2_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_2_q0() {
-    DCT_MAT_Multiply_U0_C_2_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_2_q1() {
-    DCT_MAT_Multiply_U0_C_2_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_3_pipo_status() {
-    DCT_MAT_Multiply_U0_C_3_pipo_status = temp_3_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_3_q0() {
-    DCT_MAT_Multiply_U0_C_3_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_3_q1() {
-    DCT_MAT_Multiply_U0_C_3_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_4_pipo_status() {
-    DCT_MAT_Multiply_U0_C_4_pipo_status = temp_4_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_4_q0() {
-    DCT_MAT_Multiply_U0_C_4_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_4_q1() {
-    DCT_MAT_Multiply_U0_C_4_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_5_pipo_status() {
-    DCT_MAT_Multiply_U0_C_5_pipo_status = temp_5_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_5_q0() {
-    DCT_MAT_Multiply_U0_C_5_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_5_q1() {
-    DCT_MAT_Multiply_U0_C_5_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_6_pipo_status() {
-    DCT_MAT_Multiply_U0_C_6_pipo_status = temp_6_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_6_q0() {
-    DCT_MAT_Multiply_U0_C_6_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_6_q1() {
-    DCT_MAT_Multiply_U0_C_6_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_7_pipo_status() {
-    DCT_MAT_Multiply_U0_C_7_pipo_status = temp_7_i_full_n.read();
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_7_q0() {
-    DCT_MAT_Multiply_U0_C_7_q0 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_C_7_q1() {
-    DCT_MAT_Multiply_U0_C_7_q1 = ap_const_lv32_0;
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_ap_continue() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status.read()))) {
-        DCT_MAT_Multiply_U0_ap_continue = ap_const_logic_1;
-    } else {
-        DCT_MAT_Multiply_U0_ap_continue = ap_const_logic_0;
-    }
-}
-
-void DCT::thread_DCT_MAT_Multiply_U0_ap_start() {
-    DCT_MAT_Multiply_U0_ap_start = Xmat_t_empty_n.read();
+    DCT_Loop_3_proc1_U0_p_read = opt_type_02_loc_loc_loc_channe_1_dout.read();
 }
 
 void DCT::thread_X_read() {
@@ -2419,11 +749,11 @@ void DCT::thread_Xmat_i_write() {
 }
 
 void DCT::thread_Xmat_t_address0() {
-    Xmat_t_address0 = DCT_MAT_Multiply_U0_B_address0.read();
+    Xmat_t_address0 = DCT_Block_proc1_U0_Xmat_address0.read();
 }
 
 void DCT::thread_Xmat_t_ce0() {
-    Xmat_t_ce0 = DCT_MAT_Multiply_U0_B_ce0.read();
+    Xmat_t_ce0 = DCT_Block_proc1_U0_Xmat_ce0.read();
 }
 
 void DCT::thread_Xmat_t_d0() {
@@ -2431,7 +761,7 @@ void DCT::thread_Xmat_t_d0() {
 }
 
 void DCT::thread_Xmat_t_read() {
-    Xmat_t_read = DCT_MAT_Multiply_U0_ap_ready.read();
+    Xmat_t_read = DCT_Block_proc1_U0_ap_ready.read();
 }
 
 void DCT::thread_Xmat_t_we0() {
@@ -2451,23 +781,23 @@ void DCT::thread_Ymat_U_ap_dummy_ce() {
 }
 
 void DCT::thread_Ymat_i_address0() {
-    Ymat_i_address0 = DCT_MAT_Multiply_1_U0_C_address0.read();
+    Ymat_i_address0 = DCT_Block_proc1_U0_Ymat_address0.read();
 }
 
 void DCT::thread_Ymat_i_ce0() {
-    Ymat_i_ce0 = DCT_MAT_Multiply_1_U0_C_ce0.read();
+    Ymat_i_ce0 = DCT_Block_proc1_U0_Ymat_ce0.read();
 }
 
 void DCT::thread_Ymat_i_d0() {
-    Ymat_i_d0 = DCT_MAT_Multiply_1_U0_C_d0.read();
+    Ymat_i_d0 = DCT_Block_proc1_U0_Ymat_d0.read();
 }
 
 void DCT::thread_Ymat_i_we0() {
-    Ymat_i_we0 = DCT_MAT_Multiply_1_U0_C_we0.read();
+    Ymat_i_we0 = DCT_Block_proc1_U0_Ymat_we0.read();
 }
 
 void DCT::thread_Ymat_i_write() {
-    Ymat_i_write = DCT_MAT_Multiply_1_U0_ap_done.read();
+    Ymat_i_write = DCT_Block_proc1_U0_ap_done.read();
 }
 
 void DCT::thread_Ymat_t_address0() {
@@ -2490,6 +820,10 @@ void DCT::thread_Ymat_t_we0() {
     Ymat_t_we0 = ap_const_logic_0;
 }
 
+void DCT::thread_ap_chn_write_DCT_Block_proc1_U0_Ymat() {
+    ap_chn_write_DCT_Block_proc1_U0_Ymat = DCT_Block_proc1_U0_ap_done.read();
+}
+
 void DCT::thread_ap_chn_write_DCT_Loop_1_proc_U0_Xbuff() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status.read())) {
         ap_chn_write_DCT_Loop_1_proc_U0_Xbuff = ap_const_logic_0;
@@ -2506,76 +840,16 @@ void DCT::thread_ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe(
     }
 }
 
+void DCT::thread_ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1() {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n.read())) {
+        ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1 = ap_const_logic_0;
+    } else {
+        ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1 = DCT_Loop_1_proc_U0_ap_done.read();
+    }
+}
+
 void DCT::thread_ap_chn_write_DCT_Loop_2_proc_U0_Xmat() {
     ap_chn_write_DCT_Loop_2_proc_U0_Xmat = DCT_Loop_2_proc_U0_ap_done.read();
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat() {
-    ap_chn_write_DCT_MAT_Multiply_1_U0_Ymat = DCT_MAT_Multiply_1_U0_ap_done.read();
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_0() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_0 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_0 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_1() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_1 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_1 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_2() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_2 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_2 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_3() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_3 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_3 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_4() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_4 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_4 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_5() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_5 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_5 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_6() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_6 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_6 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
-}
-
-void DCT::thread_ap_chn_write_DCT_MAT_Multiply_U0_temp_7() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status.read())) {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_7 = ap_const_logic_0;
-    } else {
-        ap_chn_write_DCT_MAT_Multiply_U0_temp_7 = DCT_MAT_Multiply_U0_ap_done.read();
-    }
 }
 
 void DCT::thread_ap_sig_hs_continue() {
@@ -2598,67 +872,11 @@ void DCT::thread_ap_sig_ready_DCT_Loop_1_proc_U0_Xbuff_pipo_status() {
     }
 }
 
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_0_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status = DCT_MAT_Multiply_U0_C_0_pipo_status.read();
+void DCT::thread_ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n() {
+    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_opt_type_02_loc_loc_loc_channe_1_full_n.read())) {
+        ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n = opt_type_02_loc_loc_loc_channe_1_full_n.read();
     } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_0_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_1_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status = DCT_MAT_Multiply_U0_C_1_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_1_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_2_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status = DCT_MAT_Multiply_U0_C_2_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_2_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_3_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status = DCT_MAT_Multiply_U0_C_3_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_3_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_4_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status = DCT_MAT_Multiply_U0_C_4_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_4_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_5_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status = DCT_MAT_Multiply_U0_C_5_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_5_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_6_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status = DCT_MAT_Multiply_U0_C_6_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_6_pipo_status = ap_const_logic_1;
-    }
-}
-
-void DCT::thread_ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status() {
-    if (esl_seteq<1,1,1>(ap_const_logic_0, ap_reg_ready_DCT_MAT_Multiply_U0_C_7_pipo_status.read())) {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status = DCT_MAT_Multiply_U0_C_7_pipo_status.read();
-    } else {
-        ap_sig_ready_DCT_MAT_Multiply_U0_C_7_pipo_status = ap_const_logic_1;
+        ap_sig_ready_opt_type_02_loc_loc_loc_channe_1_full_n = ap_const_logic_1;
     }
 }
 
@@ -2670,564 +888,36 @@ void DCT::thread_ap_sig_ready_opt_type_02_loc_loc_loc_channe_full_n() {
     }
 }
 
+void DCT::thread_opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce() {
+    opt_type_02_loc_loc_loc_channe_1_U_ap_dummy_ce = ap_const_logic_1;
+}
+
+void DCT::thread_opt_type_02_loc_loc_loc_channe_1_din() {
+    opt_type_02_loc_loc_loc_channe_1_din = DCT_Loop_1_proc_U0_ap_return_1.read();
+}
+
+void DCT::thread_opt_type_02_loc_loc_loc_channe_1_read() {
+    opt_type_02_loc_loc_loc_channe_1_read = DCT_Loop_3_proc1_U0_ap_ready.read();
+}
+
+void DCT::thread_opt_type_02_loc_loc_loc_channe_1_write() {
+    opt_type_02_loc_loc_loc_channe_1_write = ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe_1.read();
+}
+
 void DCT::thread_opt_type_02_loc_loc_loc_channe_U_ap_dummy_ce() {
     opt_type_02_loc_loc_loc_channe_U_ap_dummy_ce = ap_const_logic_1;
 }
 
 void DCT::thread_opt_type_02_loc_loc_loc_channe_din() {
-    opt_type_02_loc_loc_loc_channe_din = DCT_Loop_1_proc_U0_ap_return.read();
+    opt_type_02_loc_loc_loc_channe_din = DCT_Loop_1_proc_U0_ap_return_0.read();
 }
 
 void DCT::thread_opt_type_02_loc_loc_loc_channe_read() {
-    opt_type_02_loc_loc_loc_channe_read = DCT_Loop_3_proc1_U0_ap_ready.read();
+    opt_type_02_loc_loc_loc_channe_read = DCT_Block_proc1_U0_ap_ready.read();
 }
 
 void DCT::thread_opt_type_02_loc_loc_loc_channe_write() {
     opt_type_02_loc_loc_loc_channe_write = ap_chn_write_DCT_Loop_1_proc_U0_opt_type_02_loc_loc_loc_channe.read();
-}
-
-void DCT::thread_temp_0_U_ap_dummy_ce() {
-    temp_0_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_0_i_address0() {
-    temp_0_i_address0 = DCT_MAT_Multiply_U0_C_0_address0.read();
-}
-
-void DCT::thread_temp_0_i_address1() {
-    temp_0_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_0_i_ce0() {
-    temp_0_i_ce0 = DCT_MAT_Multiply_U0_C_0_ce0.read();
-}
-
-void DCT::thread_temp_0_i_ce1() {
-    temp_0_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_0_i_d0() {
-    temp_0_i_d0 = DCT_MAT_Multiply_U0_C_0_d0.read();
-}
-
-void DCT::thread_temp_0_i_we0() {
-    temp_0_i_we0 = DCT_MAT_Multiply_U0_C_0_we0.read();
-}
-
-void DCT::thread_temp_0_i_write() {
-    temp_0_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_0.read();
-}
-
-void DCT::thread_temp_0_t_address0() {
-    temp_0_t_address0 = DCT_MAT_Multiply_1_U0_A_address0.read();
-}
-
-void DCT::thread_temp_0_t_address1() {
-    temp_0_t_address1 = DCT_MAT_Multiply_1_U0_A_address1.read();
-}
-
-void DCT::thread_temp_0_t_ce0() {
-    temp_0_t_ce0 = DCT_MAT_Multiply_1_U0_A_ce0.read();
-}
-
-void DCT::thread_temp_0_t_ce1() {
-    temp_0_t_ce1 = DCT_MAT_Multiply_1_U0_A_ce1.read();
-}
-
-void DCT::thread_temp_0_t_d0() {
-    temp_0_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_0_t_d1() {
-    temp_0_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_0_t_read() {
-    temp_0_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_0_t_we0() {
-    temp_0_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_0_t_we1() {
-    temp_0_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_1_U_ap_dummy_ce() {
-    temp_1_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_1_i_address0() {
-    temp_1_i_address0 = DCT_MAT_Multiply_U0_C_1_address0.read();
-}
-
-void DCT::thread_temp_1_i_address1() {
-    temp_1_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_1_i_ce0() {
-    temp_1_i_ce0 = DCT_MAT_Multiply_U0_C_1_ce0.read();
-}
-
-void DCT::thread_temp_1_i_ce1() {
-    temp_1_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_1_i_d0() {
-    temp_1_i_d0 = DCT_MAT_Multiply_U0_C_1_d0.read();
-}
-
-void DCT::thread_temp_1_i_we0() {
-    temp_1_i_we0 = DCT_MAT_Multiply_U0_C_1_we0.read();
-}
-
-void DCT::thread_temp_1_i_write() {
-    temp_1_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_1.read();
-}
-
-void DCT::thread_temp_1_t_address0() {
-    temp_1_t_address0 = DCT_MAT_Multiply_1_U0_A1_address0.read();
-}
-
-void DCT::thread_temp_1_t_address1() {
-    temp_1_t_address1 = DCT_MAT_Multiply_1_U0_A1_address1.read();
-}
-
-void DCT::thread_temp_1_t_ce0() {
-    temp_1_t_ce0 = DCT_MAT_Multiply_1_U0_A1_ce0.read();
-}
-
-void DCT::thread_temp_1_t_ce1() {
-    temp_1_t_ce1 = DCT_MAT_Multiply_1_U0_A1_ce1.read();
-}
-
-void DCT::thread_temp_1_t_d0() {
-    temp_1_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_1_t_d1() {
-    temp_1_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_1_t_read() {
-    temp_1_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_1_t_we0() {
-    temp_1_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_1_t_we1() {
-    temp_1_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_2_U_ap_dummy_ce() {
-    temp_2_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_2_i_address0() {
-    temp_2_i_address0 = DCT_MAT_Multiply_U0_C_2_address0.read();
-}
-
-void DCT::thread_temp_2_i_address1() {
-    temp_2_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_2_i_ce0() {
-    temp_2_i_ce0 = DCT_MAT_Multiply_U0_C_2_ce0.read();
-}
-
-void DCT::thread_temp_2_i_ce1() {
-    temp_2_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_2_i_d0() {
-    temp_2_i_d0 = DCT_MAT_Multiply_U0_C_2_d0.read();
-}
-
-void DCT::thread_temp_2_i_we0() {
-    temp_2_i_we0 = DCT_MAT_Multiply_U0_C_2_we0.read();
-}
-
-void DCT::thread_temp_2_i_write() {
-    temp_2_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_2.read();
-}
-
-void DCT::thread_temp_2_t_address0() {
-    temp_2_t_address0 = DCT_MAT_Multiply_1_U0_A2_address0.read();
-}
-
-void DCT::thread_temp_2_t_address1() {
-    temp_2_t_address1 = DCT_MAT_Multiply_1_U0_A2_address1.read();
-}
-
-void DCT::thread_temp_2_t_ce0() {
-    temp_2_t_ce0 = DCT_MAT_Multiply_1_U0_A2_ce0.read();
-}
-
-void DCT::thread_temp_2_t_ce1() {
-    temp_2_t_ce1 = DCT_MAT_Multiply_1_U0_A2_ce1.read();
-}
-
-void DCT::thread_temp_2_t_d0() {
-    temp_2_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_2_t_d1() {
-    temp_2_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_2_t_read() {
-    temp_2_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_2_t_we0() {
-    temp_2_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_2_t_we1() {
-    temp_2_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_3_U_ap_dummy_ce() {
-    temp_3_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_3_i_address0() {
-    temp_3_i_address0 = DCT_MAT_Multiply_U0_C_3_address0.read();
-}
-
-void DCT::thread_temp_3_i_address1() {
-    temp_3_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_3_i_ce0() {
-    temp_3_i_ce0 = DCT_MAT_Multiply_U0_C_3_ce0.read();
-}
-
-void DCT::thread_temp_3_i_ce1() {
-    temp_3_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_3_i_d0() {
-    temp_3_i_d0 = DCT_MAT_Multiply_U0_C_3_d0.read();
-}
-
-void DCT::thread_temp_3_i_we0() {
-    temp_3_i_we0 = DCT_MAT_Multiply_U0_C_3_we0.read();
-}
-
-void DCT::thread_temp_3_i_write() {
-    temp_3_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_3.read();
-}
-
-void DCT::thread_temp_3_t_address0() {
-    temp_3_t_address0 = DCT_MAT_Multiply_1_U0_A3_address0.read();
-}
-
-void DCT::thread_temp_3_t_address1() {
-    temp_3_t_address1 = DCT_MAT_Multiply_1_U0_A3_address1.read();
-}
-
-void DCT::thread_temp_3_t_ce0() {
-    temp_3_t_ce0 = DCT_MAT_Multiply_1_U0_A3_ce0.read();
-}
-
-void DCT::thread_temp_3_t_ce1() {
-    temp_3_t_ce1 = DCT_MAT_Multiply_1_U0_A3_ce1.read();
-}
-
-void DCT::thread_temp_3_t_d0() {
-    temp_3_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_3_t_d1() {
-    temp_3_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_3_t_read() {
-    temp_3_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_3_t_we0() {
-    temp_3_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_3_t_we1() {
-    temp_3_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_4_U_ap_dummy_ce() {
-    temp_4_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_4_i_address0() {
-    temp_4_i_address0 = DCT_MAT_Multiply_U0_C_4_address0.read();
-}
-
-void DCT::thread_temp_4_i_address1() {
-    temp_4_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_4_i_ce0() {
-    temp_4_i_ce0 = DCT_MAT_Multiply_U0_C_4_ce0.read();
-}
-
-void DCT::thread_temp_4_i_ce1() {
-    temp_4_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_4_i_d0() {
-    temp_4_i_d0 = DCT_MAT_Multiply_U0_C_4_d0.read();
-}
-
-void DCT::thread_temp_4_i_we0() {
-    temp_4_i_we0 = DCT_MAT_Multiply_U0_C_4_we0.read();
-}
-
-void DCT::thread_temp_4_i_write() {
-    temp_4_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_4.read();
-}
-
-void DCT::thread_temp_4_t_address0() {
-    temp_4_t_address0 = DCT_MAT_Multiply_1_U0_A4_address0.read();
-}
-
-void DCT::thread_temp_4_t_address1() {
-    temp_4_t_address1 = DCT_MAT_Multiply_1_U0_A4_address1.read();
-}
-
-void DCT::thread_temp_4_t_ce0() {
-    temp_4_t_ce0 = DCT_MAT_Multiply_1_U0_A4_ce0.read();
-}
-
-void DCT::thread_temp_4_t_ce1() {
-    temp_4_t_ce1 = DCT_MAT_Multiply_1_U0_A4_ce1.read();
-}
-
-void DCT::thread_temp_4_t_d0() {
-    temp_4_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_4_t_d1() {
-    temp_4_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_4_t_read() {
-    temp_4_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_4_t_we0() {
-    temp_4_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_4_t_we1() {
-    temp_4_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_5_U_ap_dummy_ce() {
-    temp_5_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_5_i_address0() {
-    temp_5_i_address0 = DCT_MAT_Multiply_U0_C_5_address0.read();
-}
-
-void DCT::thread_temp_5_i_address1() {
-    temp_5_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_5_i_ce0() {
-    temp_5_i_ce0 = DCT_MAT_Multiply_U0_C_5_ce0.read();
-}
-
-void DCT::thread_temp_5_i_ce1() {
-    temp_5_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_5_i_d0() {
-    temp_5_i_d0 = DCT_MAT_Multiply_U0_C_5_d0.read();
-}
-
-void DCT::thread_temp_5_i_we0() {
-    temp_5_i_we0 = DCT_MAT_Multiply_U0_C_5_we0.read();
-}
-
-void DCT::thread_temp_5_i_write() {
-    temp_5_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_5.read();
-}
-
-void DCT::thread_temp_5_t_address0() {
-    temp_5_t_address0 = DCT_MAT_Multiply_1_U0_A5_address0.read();
-}
-
-void DCT::thread_temp_5_t_address1() {
-    temp_5_t_address1 = DCT_MAT_Multiply_1_U0_A5_address1.read();
-}
-
-void DCT::thread_temp_5_t_ce0() {
-    temp_5_t_ce0 = DCT_MAT_Multiply_1_U0_A5_ce0.read();
-}
-
-void DCT::thread_temp_5_t_ce1() {
-    temp_5_t_ce1 = DCT_MAT_Multiply_1_U0_A5_ce1.read();
-}
-
-void DCT::thread_temp_5_t_d0() {
-    temp_5_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_5_t_d1() {
-    temp_5_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_5_t_read() {
-    temp_5_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_5_t_we0() {
-    temp_5_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_5_t_we1() {
-    temp_5_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_6_U_ap_dummy_ce() {
-    temp_6_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_6_i_address0() {
-    temp_6_i_address0 = DCT_MAT_Multiply_U0_C_6_address0.read();
-}
-
-void DCT::thread_temp_6_i_address1() {
-    temp_6_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_6_i_ce0() {
-    temp_6_i_ce0 = DCT_MAT_Multiply_U0_C_6_ce0.read();
-}
-
-void DCT::thread_temp_6_i_ce1() {
-    temp_6_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_6_i_d0() {
-    temp_6_i_d0 = DCT_MAT_Multiply_U0_C_6_d0.read();
-}
-
-void DCT::thread_temp_6_i_we0() {
-    temp_6_i_we0 = DCT_MAT_Multiply_U0_C_6_we0.read();
-}
-
-void DCT::thread_temp_6_i_write() {
-    temp_6_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_6.read();
-}
-
-void DCT::thread_temp_6_t_address0() {
-    temp_6_t_address0 = DCT_MAT_Multiply_1_U0_A6_address0.read();
-}
-
-void DCT::thread_temp_6_t_address1() {
-    temp_6_t_address1 = DCT_MAT_Multiply_1_U0_A6_address1.read();
-}
-
-void DCT::thread_temp_6_t_ce0() {
-    temp_6_t_ce0 = DCT_MAT_Multiply_1_U0_A6_ce0.read();
-}
-
-void DCT::thread_temp_6_t_ce1() {
-    temp_6_t_ce1 = DCT_MAT_Multiply_1_U0_A6_ce1.read();
-}
-
-void DCT::thread_temp_6_t_d0() {
-    temp_6_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_6_t_d1() {
-    temp_6_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_6_t_read() {
-    temp_6_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_6_t_we0() {
-    temp_6_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_6_t_we1() {
-    temp_6_t_we1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_7_U_ap_dummy_ce() {
-    temp_7_U_ap_dummy_ce = ap_const_logic_1;
-}
-
-void DCT::thread_temp_7_i_address0() {
-    temp_7_i_address0 = DCT_MAT_Multiply_U0_C_7_address0.read();
-}
-
-void DCT::thread_temp_7_i_address1() {
-    temp_7_i_address1 = ap_const_lv3_0;
-}
-
-void DCT::thread_temp_7_i_ce0() {
-    temp_7_i_ce0 = DCT_MAT_Multiply_U0_C_7_ce0.read();
-}
-
-void DCT::thread_temp_7_i_ce1() {
-    temp_7_i_ce1 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_7_i_d0() {
-    temp_7_i_d0 = DCT_MAT_Multiply_U0_C_7_d0.read();
-}
-
-void DCT::thread_temp_7_i_we0() {
-    temp_7_i_we0 = DCT_MAT_Multiply_U0_C_7_we0.read();
-}
-
-void DCT::thread_temp_7_i_write() {
-    temp_7_i_write = ap_chn_write_DCT_MAT_Multiply_U0_temp_7.read();
-}
-
-void DCT::thread_temp_7_t_address0() {
-    temp_7_t_address0 = DCT_MAT_Multiply_1_U0_A7_address0.read();
-}
-
-void DCT::thread_temp_7_t_address1() {
-    temp_7_t_address1 = DCT_MAT_Multiply_1_U0_A7_address1.read();
-}
-
-void DCT::thread_temp_7_t_ce0() {
-    temp_7_t_ce0 = DCT_MAT_Multiply_1_U0_A7_ce0.read();
-}
-
-void DCT::thread_temp_7_t_ce1() {
-    temp_7_t_ce1 = DCT_MAT_Multiply_1_U0_A7_ce1.read();
-}
-
-void DCT::thread_temp_7_t_d0() {
-    temp_7_t_d0 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_7_t_d1() {
-    temp_7_t_d1 = ap_const_lv32_0;
-}
-
-void DCT::thread_temp_7_t_read() {
-    temp_7_t_read = DCT_MAT_Multiply_1_U0_ap_ready.read();
-}
-
-void DCT::thread_temp_7_t_we0() {
-    temp_7_t_we0 = ap_const_logic_0;
-}
-
-void DCT::thread_temp_7_t_we1() {
-    temp_7_t_we1 = ap_const_logic_0;
 }
 
 void DCT::thread_hdltv_gen() {

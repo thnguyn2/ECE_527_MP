@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'DCT_Loop_1_proc'
 ================================================================
-* Date:           Fri Oct 30 14:22:51 2015
+* Date:           Fri Oct 30 16:48:57 2015
 
 * Version:        2015.1 (Build 1215546 on Mon Apr 27 19:24:50 PM 2015)
 * Project:        dct
@@ -132,11 +132,11 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
  <State 1>: 1.57ns
-ST_1: opt_type_02_loc_loc_out [1/1] 0.00ns
-newFuncRoot:0  %opt_type_02_loc_loc_out = alloca i32, align 4
+ST_1: opt_type_02_loc_loc_loc0 [1/1] 0.00ns
+newFuncRoot:0  %opt_type_02_loc_loc_loc0 = alloca i32, align 4
 
 ST_1: stg_4 [1/1] 0.00ns
-newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str19, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8)
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i32* %X, [8 x i8]* @p_str111, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10)
 
 ST_1: stg_5 [1/1] 1.57ns
 newFuncRoot:2  br label %0
@@ -161,8 +161,8 @@ ST_2: read_idx [1/1] 1.72ns
 ST_2: stg_11 [1/1] 0.00ns
 :5  br i1 %exitcond1, label %.preheader9.exitStub, label %1
 
-ST_2: opt_type_02_loc_loc_out_load_1 [1/1] 0.00ns
-:0  %opt_type_02_loc_loc_out_load_1 = load i32* %opt_type_02_loc_loc_out, align 4
+ST_2: opt_type_02_loc_loc_loc0_load_1 [1/1] 0.00ns
+:0  %opt_type_02_loc_loc_loc0_load_1 = load i32* %opt_type_02_loc_loc_loc0, align 4
 
 ST_2: opt_type [1/1] 4.38ns
 :1  %opt_type = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %X)
@@ -176,23 +176,29 @@ ST_2: Xbuff_addr [1/1] 0.00ns
 ST_2: stg_16 [1/1] 2.71ns
 :4  store float %tmp_i, float* %Xbuff_addr, align 4
 
-ST_2: tmp_1_i [1/1] 1.97ns
-:5  %tmp_1_i = icmp eq i7 %read_idx_0_i_i, 1
+ST_2: tmp_3_i [1/1] 1.97ns
+:5  %tmp_3_i = icmp eq i7 %read_idx_0_i_i, 1
 
 ST_2: tempin_0_opt_type_02_i_i [1/1] 1.37ns
-:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_1_i, i32 %opt_type, i32 %opt_type_02_loc_loc_out_load_1
+:6  %tempin_0_opt_type_02_i_i = select i1 %tmp_3_i, i32 %opt_type, i32 %opt_type_02_loc_loc_loc0_load_1
 
 ST_2: stg_19 [1/1] 0.00ns
-:7  store i32 %tempin_0_opt_type_02_i_i, i32* %opt_type_02_loc_loc_out, align 4
+:7  store i32 %tempin_0_opt_type_02_i_i, i32* %opt_type_02_loc_loc_loc0, align 4
 
 ST_2: stg_20 [1/1] 0.00ns
 :8  br label %0
 
-ST_2: opt_type_02_loc_loc_out_load [1/1] 0.00ns
-.preheader9.exitStub:0  %opt_type_02_loc_loc_out_load = load i32* %opt_type_02_loc_loc_out, align 4
+ST_2: opt_type_02_loc_loc_loc0_load [1/1] 0.00ns
+.preheader9.exitStub:0  %opt_type_02_loc_loc_loc0_load = load i32* %opt_type_02_loc_loc_loc0, align 4
 
-ST_2: stg_22 [1/1] 0.00ns
-.preheader9.exitStub:1  ret i32 %opt_type_02_loc_loc_out_load
+ST_2: mrv [1/1] 0.00ns
+.preheader9.exitStub:1  %mrv = insertvalue { i32, i32 } undef, i32 %opt_type_02_loc_loc_loc0_load, 0
+
+ST_2: mrv_1 [1/1] 0.00ns
+.preheader9.exitStub:2  %mrv_1 = insertvalue { i32, i32 } %mrv, i32 %opt_type_02_loc_loc_loc0_load, 1
+
+ST_2: stg_24 [1/1] 0.00ns
+.preheader9.exitStub:3  ret { i32, i32 } %mrv_1
 
 
 

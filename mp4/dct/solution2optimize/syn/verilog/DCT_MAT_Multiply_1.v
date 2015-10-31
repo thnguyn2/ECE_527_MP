@@ -88,6 +88,86 @@ module DCT_MAT_Multiply_1 (
         A7_d1,
         A7_q1,
         A7_we1,
+        B_0_address0,
+        B_0_ce0,
+        B_0_d0,
+        B_0_q0,
+        B_0_we0,
+        B_0_address1,
+        B_0_ce1,
+        B_0_d1,
+        B_0_q1,
+        B_0_we1,
+        B_1_address0,
+        B_1_ce0,
+        B_1_d0,
+        B_1_q0,
+        B_1_we0,
+        B_1_address1,
+        B_1_ce1,
+        B_1_d1,
+        B_1_q1,
+        B_1_we1,
+        B_2_address0,
+        B_2_ce0,
+        B_2_d0,
+        B_2_q0,
+        B_2_we0,
+        B_2_address1,
+        B_2_ce1,
+        B_2_d1,
+        B_2_q1,
+        B_2_we1,
+        B_3_address0,
+        B_3_ce0,
+        B_3_d0,
+        B_3_q0,
+        B_3_we0,
+        B_3_address1,
+        B_3_ce1,
+        B_3_d1,
+        B_3_q1,
+        B_3_we1,
+        B_4_address0,
+        B_4_ce0,
+        B_4_d0,
+        B_4_q0,
+        B_4_we0,
+        B_4_address1,
+        B_4_ce1,
+        B_4_d1,
+        B_4_q1,
+        B_4_we1,
+        B_5_address0,
+        B_5_ce0,
+        B_5_d0,
+        B_5_q0,
+        B_5_we0,
+        B_5_address1,
+        B_5_ce1,
+        B_5_d1,
+        B_5_q1,
+        B_5_we1,
+        B_6_address0,
+        B_6_ce0,
+        B_6_d0,
+        B_6_q0,
+        B_6_we0,
+        B_6_address1,
+        B_6_ce1,
+        B_6_d1,
+        B_6_q1,
+        B_6_we1,
+        B_7_address0,
+        B_7_ce0,
+        B_7_d0,
+        B_7_q0,
+        B_7_we0,
+        B_7_address1,
+        B_7_ce1,
+        B_7_d1,
+        B_7_q1,
+        B_7_we1,
         C_address0,
         C_ce0,
         C_d0,
@@ -100,27 +180,10 @@ module DCT_MAT_Multiply_1 (
         C_we1,
         ap_clk,
         ap_rst,
-        ap_start,
-        A_pipo_status,
-        A_pipo_update,
-        A1_pipo_status,
-        A1_pipo_update,
-        A2_pipo_status,
-        A2_pipo_update,
-        A3_pipo_status,
-        A3_pipo_update,
-        A4_pipo_status,
-        A4_pipo_update,
-        A5_pipo_status,
-        A5_pipo_update,
-        A6_pipo_status,
-        A6_pipo_update,
-        A7_pipo_status,
-        A7_pipo_update,
         C_pipo_status,
         C_pipo_update,
-        ap_continue,
         ap_done,
+        ap_start,
         ap_idle,
         ap_ready
 );
@@ -129,8 +192,8 @@ parameter    ap_const_lv3_0 = 3'b000;
 parameter    ap_const_logic_0 = 1'b0;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 parameter    ap_const_lv6_0 = 6'b000000;
-parameter    ap_true = 1'b1;
 parameter    ap_const_logic_1 = 1'b1;
+parameter    ap_true = 1'b1;
 
 output  [2:0] A_address0;
 output   A_ce0;
@@ -212,6 +275,86 @@ output   A7_ce1;
 output  [31:0] A7_d1;
 input  [31:0] A7_q1;
 output   A7_we1;
+output  [2:0] B_0_address0;
+output   B_0_ce0;
+output  [31:0] B_0_d0;
+input  [31:0] B_0_q0;
+output   B_0_we0;
+output  [2:0] B_0_address1;
+output   B_0_ce1;
+output  [31:0] B_0_d1;
+input  [31:0] B_0_q1;
+output   B_0_we1;
+output  [2:0] B_1_address0;
+output   B_1_ce0;
+output  [31:0] B_1_d0;
+input  [31:0] B_1_q0;
+output   B_1_we0;
+output  [2:0] B_1_address1;
+output   B_1_ce1;
+output  [31:0] B_1_d1;
+input  [31:0] B_1_q1;
+output   B_1_we1;
+output  [2:0] B_2_address0;
+output   B_2_ce0;
+output  [31:0] B_2_d0;
+input  [31:0] B_2_q0;
+output   B_2_we0;
+output  [2:0] B_2_address1;
+output   B_2_ce1;
+output  [31:0] B_2_d1;
+input  [31:0] B_2_q1;
+output   B_2_we1;
+output  [2:0] B_3_address0;
+output   B_3_ce0;
+output  [31:0] B_3_d0;
+input  [31:0] B_3_q0;
+output   B_3_we0;
+output  [2:0] B_3_address1;
+output   B_3_ce1;
+output  [31:0] B_3_d1;
+input  [31:0] B_3_q1;
+output   B_3_we1;
+output  [2:0] B_4_address0;
+output   B_4_ce0;
+output  [31:0] B_4_d0;
+input  [31:0] B_4_q0;
+output   B_4_we0;
+output  [2:0] B_4_address1;
+output   B_4_ce1;
+output  [31:0] B_4_d1;
+input  [31:0] B_4_q1;
+output   B_4_we1;
+output  [2:0] B_5_address0;
+output   B_5_ce0;
+output  [31:0] B_5_d0;
+input  [31:0] B_5_q0;
+output   B_5_we0;
+output  [2:0] B_5_address1;
+output   B_5_ce1;
+output  [31:0] B_5_d1;
+input  [31:0] B_5_q1;
+output   B_5_we1;
+output  [2:0] B_6_address0;
+output   B_6_ce0;
+output  [31:0] B_6_d0;
+input  [31:0] B_6_q0;
+output   B_6_we0;
+output  [2:0] B_6_address1;
+output   B_6_ce1;
+output  [31:0] B_6_d1;
+input  [31:0] B_6_q1;
+output   B_6_we1;
+output  [2:0] B_7_address0;
+output   B_7_ce0;
+output  [31:0] B_7_d0;
+input  [31:0] B_7_q0;
+output   B_7_we0;
+output  [2:0] B_7_address1;
+output   B_7_ce1;
+output  [31:0] B_7_d1;
+input  [31:0] B_7_q1;
+output   B_7_we1;
 output  [5:0] C_address0;
 output   C_ce0;
 output  [31:0] C_d0;
@@ -224,27 +367,10 @@ input  [31:0] C_q1;
 output   C_we1;
 input   ap_clk;
 input   ap_rst;
-input   ap_start;
-input   A_pipo_status;
-output   A_pipo_update;
-input   A1_pipo_status;
-output   A1_pipo_update;
-input   A2_pipo_status;
-output   A2_pipo_update;
-input   A3_pipo_status;
-output   A3_pipo_update;
-input   A4_pipo_status;
-output   A4_pipo_update;
-input   A5_pipo_status;
-output   A5_pipo_update;
-input   A6_pipo_status;
-output   A6_pipo_update;
-input   A7_pipo_status;
-output   A7_pipo_update;
 input   C_pipo_status;
 output   C_pipo_update;
-input   ap_continue;
 output   ap_done;
+input   ap_start;
 output   ap_idle;
 output   ap_ready;
 
@@ -254,6 +380,30 @@ wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done;
 reg    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue;
 wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_idle;
 wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0;
+wire   [2:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0;
+wire    DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0;
+wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0;
 wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_0;
 wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_1;
 wire   [31:0] DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_2;
@@ -330,6 +480,10 @@ reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_2_channel;
 wire    B_cached_0_2_channel_full_n;
 reg    ap_reg_ready_B_cached_0_2_channel_full_n = 1'b0;
 reg    ap_sig_ready_B_cached_0_2_channel_full_n;
+reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_6_channel;
+wire    B_cached_0_6_channel_full_n;
+reg    ap_reg_ready_B_cached_0_6_channel_full_n = 1'b0;
+reg    ap_sig_ready_B_cached_0_6_channel_full_n;
 reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_3_channel;
 wire    B_cached_0_3_channel_full_n;
 reg    ap_reg_ready_B_cached_0_3_channel_full_n = 1'b0;
@@ -342,14 +496,6 @@ reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_5_channel;
 wire    B_cached_0_5_channel_full_n;
 reg    ap_reg_ready_B_cached_0_5_channel_full_n = 1'b0;
 reg    ap_sig_ready_B_cached_0_5_channel_full_n;
-reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_6_channel;
-wire    B_cached_0_6_channel_full_n;
-reg    ap_reg_ready_B_cached_0_6_channel_full_n = 1'b0;
-reg    ap_sig_ready_B_cached_0_6_channel_full_n;
-reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_2_channel;
-wire    B_cached_1_2_channel_full_n;
-reg    ap_reg_ready_B_cached_1_2_channel_full_n = 1'b0;
-reg    ap_sig_ready_B_cached_1_2_channel_full_n;
 reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_7_channel;
 wire    B_cached_0_7_channel_full_n;
 reg    ap_reg_ready_B_cached_0_7_channel_full_n = 1'b0;
@@ -362,6 +508,10 @@ reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_1_channel;
 wire    B_cached_1_1_channel_full_n;
 reg    ap_reg_ready_B_cached_1_1_channel_full_n = 1'b0;
 reg    ap_sig_ready_B_cached_1_1_channel_full_n;
+reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_2_channel;
+wire    B_cached_1_2_channel_full_n;
+reg    ap_reg_ready_B_cached_1_2_channel_full_n = 1'b0;
+reg    ap_sig_ready_B_cached_1_2_channel_full_n;
 reg    ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_1_3_channel;
 wire    B_cached_1_3_channel_full_n;
 reg    ap_reg_ready_B_cached_1_3_channel_full_n = 1'b0;
@@ -695,22 +845,6 @@ wire   [5:0] DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_address0;
 wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_ce0;
 wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_we0;
 wire   [31:0] DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_d0;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status;
-wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update;
 wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_status;
 wire    DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_update;
 wire    ap_sig_hs_continue;
@@ -1102,7 +1236,13 @@ reg    ap_reg_procdone_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0 = 1'b0;
 reg    ap_sig_hs_done;
 reg    ap_reg_procdone_DCT_MAT_Multiply_1_Loop_Row_proc_U0 = 1'b0;
 reg    ap_CS;
-wire    ap_sig_top_allready;
+reg    ap_sig_top_allready;
+reg    ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = 1'b0;
+reg    ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready;
+reg    ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start;
+reg    ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = 1'b0;
+reg    ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready;
+reg    ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start;
 
 
 DCT_MAT_Multiply_1_Loop_LoadRow_pr DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0(
@@ -1113,6 +1253,30 @@ DCT_MAT_Multiply_1_Loop_LoadRow_pr DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0(
     .ap_continue( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue ),
     .ap_idle( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_idle ),
     .ap_ready( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready ),
+    .B_0_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0 ),
+    .B_0_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0 ),
+    .B_0_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0 ),
+    .B_1_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0 ),
+    .B_1_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0 ),
+    .B_1_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0 ),
+    .B_2_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0 ),
+    .B_2_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0 ),
+    .B_2_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0 ),
+    .B_3_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0 ),
+    .B_3_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0 ),
+    .B_3_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0 ),
+    .B_4_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0 ),
+    .B_4_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0 ),
+    .B_4_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0 ),
+    .B_5_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0 ),
+    .B_5_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0 ),
+    .B_5_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0 ),
+    .B_6_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0 ),
+    .B_6_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0 ),
+    .B_6_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0 ),
+    .B_7_address0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0 ),
+    .B_7_ce0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0 ),
+    .B_7_q0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0 ),
     .ap_return_0( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_0 ),
     .ap_return_1( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_1 ),
     .ap_return_2( DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_2 ),
@@ -2175,7 +2339,7 @@ begin : ap_ret_ap_reg_ready_B_cached_0_0_channel_full_n
     end else begin
         if (((DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done == ap_const_logic_1) & (DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue == ap_const_logic_1))) begin
             ap_reg_ready_B_cached_0_0_channel_full_n <= ap_const_logic_0;
-        end else if (((DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done == ap_const_logic_1) & (B_cached_0_0_channel_full_n == ap_const_logic_1))) begin
+        end else if (((DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done == ap_const_logic_1) & (ap_const_logic_1 == B_cached_0_0_channel_full_n))) begin
             ap_reg_ready_B_cached_0_0_channel_full_n <= ap_const_logic_1;
         end
     end
@@ -3063,6 +3227,34 @@ begin : ap_ret_ap_reg_ready_B_cached_7_7_channel_full_n
     end
 end
 
+/// ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready assign process. ///
+always @ (posedge ap_clk)
+begin : ap_ret_ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready
+    if (ap_rst == 1'b1) begin
+        ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready <= ap_const_logic_0;
+    end else begin
+        if (((ap_const_logic_1 == ap_start) & (ap_const_logic_1 == ap_sig_top_allready))) begin
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready <= ap_const_logic_0;
+        end else if ((DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready == ap_const_logic_1)) begin
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready <= ap_const_logic_1;
+        end
+    end
+end
+
+/// ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready assign process. ///
+always @ (posedge ap_clk)
+begin : ap_ret_ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready
+    if (ap_rst == 1'b1) begin
+        ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready <= ap_const_logic_0;
+    end else begin
+        if (((ap_const_logic_1 == ap_start) & (ap_const_logic_1 == ap_sig_top_allready))) begin
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready <= ap_const_logic_0;
+        end else if ((ap_const_logic_1 == DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready)) begin
+            ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready <= ap_const_logic_1;
+        end
+    end
+end
+
 /// assign process. ///
 always @(posedge ap_clk)
 begin
@@ -3070,9 +3262,9 @@ begin
 end
 
 /// DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue assign process. ///
-always @ (ap_sig_ready_B_cached_0_0_channel_full_n or ap_sig_ready_B_cached_0_1_channel_full_n or ap_sig_ready_B_cached_0_2_channel_full_n or ap_sig_ready_B_cached_0_3_channel_full_n or ap_sig_ready_B_cached_0_4_channel_full_n or ap_sig_ready_B_cached_0_5_channel_full_n or ap_sig_ready_B_cached_0_6_channel_full_n or ap_sig_ready_B_cached_1_2_channel_full_n or ap_sig_ready_B_cached_0_7_channel_full_n or ap_sig_ready_B_cached_1_0_channel_full_n or ap_sig_ready_B_cached_1_1_channel_full_n or ap_sig_ready_B_cached_1_3_channel_full_n or ap_sig_ready_B_cached_1_4_channel_full_n or ap_sig_ready_B_cached_1_5_channel_full_n or ap_sig_ready_B_cached_2_4_channel_full_n or ap_sig_ready_B_cached_1_6_channel_full_n or ap_sig_ready_B_cached_1_7_channel_full_n or ap_sig_ready_B_cached_2_0_channel_full_n or ap_sig_ready_B_cached_2_1_channel_full_n or ap_sig_ready_B_cached_2_2_channel_full_n or ap_sig_ready_B_cached_2_3_channel_full_n or ap_sig_ready_B_cached_2_5_channel_full_n or ap_sig_ready_B_cached_2_6_channel_full_n or ap_sig_ready_B_cached_2_7_channel_full_n or ap_sig_ready_B_cached_3_0_channel_full_n or ap_sig_ready_B_cached_3_1_channel_full_n or ap_sig_ready_B_cached_3_2_channel_full_n or ap_sig_ready_B_cached_3_3_channel_full_n or ap_sig_ready_B_cached_3_4_channel_full_n or ap_sig_ready_B_cached_3_5_channel_full_n or ap_sig_ready_B_cached_3_6_channel_full_n or ap_sig_ready_B_cached_3_7_channel_full_n or ap_sig_ready_B_cached_4_0_channel_full_n or ap_sig_ready_B_cached_4_1_channel_full_n or ap_sig_ready_B_cached_4_2_channel_full_n or ap_sig_ready_B_cached_4_3_channel_full_n or ap_sig_ready_B_cached_4_4_channel_full_n or ap_sig_ready_B_cached_4_5_channel_full_n or ap_sig_ready_B_cached_4_6_channel_full_n or ap_sig_ready_B_cached_4_7_channel_full_n or ap_sig_ready_B_cached_5_0_channel_full_n or ap_sig_ready_B_cached_5_1_channel_full_n or ap_sig_ready_B_cached_5_2_channel_full_n or ap_sig_ready_B_cached_5_3_channel_full_n or ap_sig_ready_B_cached_5_4_channel_full_n or ap_sig_ready_B_cached_5_5_channel_full_n or ap_sig_ready_B_cached_5_6_channel_full_n or ap_sig_ready_B_cached_5_7_channel_full_n or ap_sig_ready_B_cached_6_0_channel_full_n or ap_sig_ready_B_cached_6_1_channel_full_n or ap_sig_ready_B_cached_6_2_channel_full_n or ap_sig_ready_B_cached_6_3_channel_full_n or ap_sig_ready_B_cached_6_4_channel_full_n or ap_sig_ready_B_cached_6_5_channel_full_n or ap_sig_ready_B_cached_6_6_channel_full_n or ap_sig_ready_B_cached_6_7_channel_full_n or ap_sig_ready_B_cached_7_0_channel_full_n or ap_sig_ready_B_cached_7_1_channel_full_n or ap_sig_ready_B_cached_7_2_channel_full_n or ap_sig_ready_B_cached_7_3_channel_full_n or ap_sig_ready_B_cached_7_4_channel_full_n or ap_sig_ready_B_cached_7_5_channel_full_n or ap_sig_ready_B_cached_7_6_channel_full_n or ap_sig_ready_B_cached_7_7_channel_full_n)
+always @ (ap_sig_ready_B_cached_0_0_channel_full_n or ap_sig_ready_B_cached_0_1_channel_full_n or ap_sig_ready_B_cached_0_2_channel_full_n or ap_sig_ready_B_cached_0_6_channel_full_n or ap_sig_ready_B_cached_0_3_channel_full_n or ap_sig_ready_B_cached_0_4_channel_full_n or ap_sig_ready_B_cached_0_5_channel_full_n or ap_sig_ready_B_cached_0_7_channel_full_n or ap_sig_ready_B_cached_1_0_channel_full_n or ap_sig_ready_B_cached_1_1_channel_full_n or ap_sig_ready_B_cached_1_2_channel_full_n or ap_sig_ready_B_cached_1_3_channel_full_n or ap_sig_ready_B_cached_1_4_channel_full_n or ap_sig_ready_B_cached_1_5_channel_full_n or ap_sig_ready_B_cached_2_4_channel_full_n or ap_sig_ready_B_cached_1_6_channel_full_n or ap_sig_ready_B_cached_1_7_channel_full_n or ap_sig_ready_B_cached_2_0_channel_full_n or ap_sig_ready_B_cached_2_1_channel_full_n or ap_sig_ready_B_cached_2_2_channel_full_n or ap_sig_ready_B_cached_2_3_channel_full_n or ap_sig_ready_B_cached_2_5_channel_full_n or ap_sig_ready_B_cached_2_6_channel_full_n or ap_sig_ready_B_cached_2_7_channel_full_n or ap_sig_ready_B_cached_3_0_channel_full_n or ap_sig_ready_B_cached_3_1_channel_full_n or ap_sig_ready_B_cached_3_2_channel_full_n or ap_sig_ready_B_cached_3_3_channel_full_n or ap_sig_ready_B_cached_3_4_channel_full_n or ap_sig_ready_B_cached_3_5_channel_full_n or ap_sig_ready_B_cached_3_6_channel_full_n or ap_sig_ready_B_cached_3_7_channel_full_n or ap_sig_ready_B_cached_4_0_channel_full_n or ap_sig_ready_B_cached_4_1_channel_full_n or ap_sig_ready_B_cached_4_2_channel_full_n or ap_sig_ready_B_cached_4_3_channel_full_n or ap_sig_ready_B_cached_4_4_channel_full_n or ap_sig_ready_B_cached_4_5_channel_full_n or ap_sig_ready_B_cached_4_6_channel_full_n or ap_sig_ready_B_cached_4_7_channel_full_n or ap_sig_ready_B_cached_5_0_channel_full_n or ap_sig_ready_B_cached_5_1_channel_full_n or ap_sig_ready_B_cached_5_2_channel_full_n or ap_sig_ready_B_cached_5_3_channel_full_n or ap_sig_ready_B_cached_5_4_channel_full_n or ap_sig_ready_B_cached_5_5_channel_full_n or ap_sig_ready_B_cached_5_6_channel_full_n or ap_sig_ready_B_cached_5_7_channel_full_n or ap_sig_ready_B_cached_6_0_channel_full_n or ap_sig_ready_B_cached_6_1_channel_full_n or ap_sig_ready_B_cached_6_2_channel_full_n or ap_sig_ready_B_cached_6_3_channel_full_n or ap_sig_ready_B_cached_6_4_channel_full_n or ap_sig_ready_B_cached_6_5_channel_full_n or ap_sig_ready_B_cached_6_6_channel_full_n or ap_sig_ready_B_cached_6_7_channel_full_n or ap_sig_ready_B_cached_7_0_channel_full_n or ap_sig_ready_B_cached_7_1_channel_full_n or ap_sig_ready_B_cached_7_2_channel_full_n or ap_sig_ready_B_cached_7_3_channel_full_n or ap_sig_ready_B_cached_7_4_channel_full_n or ap_sig_ready_B_cached_7_5_channel_full_n or ap_sig_ready_B_cached_7_6_channel_full_n or ap_sig_ready_B_cached_7_7_channel_full_n)
 begin
-    if (((ap_sig_ready_B_cached_0_0_channel_full_n == ap_const_logic_1) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_7_channel_full_n))) begin
+    if (((ap_const_logic_1 == ap_sig_ready_B_cached_0_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_0_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_1_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_2_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_3_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_4_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_5_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_6_7_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_0_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_1_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_2_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_3_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_4_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_5_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_6_channel_full_n) & (ap_const_logic_1 == ap_sig_ready_B_cached_7_7_channel_full_n))) begin
         DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue = ap_const_logic_1;
     end else begin
         DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_continue = ap_const_logic_0;
@@ -3082,7 +3274,7 @@ end
 /// ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_0_channel assign process. ///
 always @ (DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done or ap_reg_ready_B_cached_0_0_channel_full_n)
 begin
-    if ((ap_reg_ready_B_cached_0_0_channel_full_n == ap_const_logic_1)) begin
+    if ((ap_const_logic_1 == ap_reg_ready_B_cached_0_0_channel_full_n)) begin
         ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_0_channel = ap_const_logic_0;
     end else begin
         ap_chn_write_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_cached_0_0_channel = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_done;
@@ -4378,13 +4570,62 @@ begin
         ap_sig_ready_B_cached_7_7_channel_full_n = ap_const_logic_1;
     end
 end
+
+/// ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready assign process. ///
+always @ (DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready or ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready)
+begin
+    if ((ap_const_logic_0 == ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready)) begin
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready;
+    end else begin
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready = ap_const_logic_1;
+    end
+end
+
+/// ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready assign process. ///
+always @ (DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready or ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready)
+begin
+    if ((ap_const_logic_0 == ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready)) begin
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready;
+    end else begin
+        ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready = ap_const_logic_1;
+    end
+end
+
+/// ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start assign process. ///
+always @ (ap_start or ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready)
+begin
+    if (((ap_const_logic_1 == ap_start) & (ap_const_logic_0 == ap_reg_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready))) begin
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_const_logic_1;
+    end else begin
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_const_logic_0;
+    end
+end
+
+/// ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start assign process. ///
+always @ (ap_start or ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready)
+begin
+    if (((ap_const_logic_0 == ap_reg_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready) & (ap_const_logic_1 == ap_start))) begin
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = ap_const_logic_1;
+    end else begin
+        ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = ap_const_logic_0;
+    end
+end
+
+/// ap_sig_top_allready assign process. ///
+always @ (ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready or ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready)
+begin
+    if (((ap_const_logic_1 == ap_sig_ready_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready) & (ap_const_logic_1 == ap_sig_ready_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_ready))) begin
+        ap_sig_top_allready = ap_const_logic_1;
+    end else begin
+        ap_sig_top_allready = ap_const_logic_0;
+    end
+end
 assign A1_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_address0;
 assign A1_address1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_address1;
 assign A1_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_ce0;
 assign A1_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_ce1;
 assign A1_d0 = ap_const_lv32_0;
 assign A1_d1 = ap_const_lv32_0;
-assign A1_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update;
 assign A1_we0 = ap_const_logic_0;
 assign A1_we1 = ap_const_logic_0;
 assign A2_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_address0;
@@ -4393,7 +4634,6 @@ assign A2_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_ce0;
 assign A2_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_ce1;
 assign A2_d0 = ap_const_lv32_0;
 assign A2_d1 = ap_const_lv32_0;
-assign A2_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update;
 assign A2_we0 = ap_const_logic_0;
 assign A2_we1 = ap_const_logic_0;
 assign A3_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_address0;
@@ -4402,7 +4642,6 @@ assign A3_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_ce0;
 assign A3_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_ce1;
 assign A3_d0 = ap_const_lv32_0;
 assign A3_d1 = ap_const_lv32_0;
-assign A3_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update;
 assign A3_we0 = ap_const_logic_0;
 assign A3_we1 = ap_const_logic_0;
 assign A4_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_address0;
@@ -4411,7 +4650,6 @@ assign A4_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_ce0;
 assign A4_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_ce1;
 assign A4_d0 = ap_const_lv32_0;
 assign A4_d1 = ap_const_lv32_0;
-assign A4_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update;
 assign A4_we0 = ap_const_logic_0;
 assign A4_we1 = ap_const_logic_0;
 assign A5_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_address0;
@@ -4420,7 +4658,6 @@ assign A5_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_ce0;
 assign A5_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_ce1;
 assign A5_d0 = ap_const_lv32_0;
 assign A5_d1 = ap_const_lv32_0;
-assign A5_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update;
 assign A5_we0 = ap_const_logic_0;
 assign A5_we1 = ap_const_logic_0;
 assign A6_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_address0;
@@ -4429,7 +4666,6 @@ assign A6_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_ce0;
 assign A6_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_ce1;
 assign A6_d0 = ap_const_lv32_0;
 assign A6_d1 = ap_const_lv32_0;
-assign A6_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update;
 assign A6_we0 = ap_const_logic_0;
 assign A6_we1 = ap_const_logic_0;
 assign A7_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_address0;
@@ -4438,7 +4674,6 @@ assign A7_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_ce0;
 assign A7_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_ce1;
 assign A7_d0 = ap_const_lv32_0;
 assign A7_d1 = ap_const_lv32_0;
-assign A7_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update;
 assign A7_we0 = ap_const_logic_0;
 assign A7_we1 = ap_const_logic_0;
 assign A_address0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_address0;
@@ -4447,9 +4682,72 @@ assign A_ce0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_ce0;
 assign A_ce1 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_ce1;
 assign A_d0 = ap_const_lv32_0;
 assign A_d1 = ap_const_lv32_0;
-assign A_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update;
 assign A_we0 = ap_const_logic_0;
 assign A_we1 = ap_const_logic_0;
+assign B_0_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_address0;
+assign B_0_address1 = ap_const_lv3_0;
+assign B_0_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_ce0;
+assign B_0_ce1 = ap_const_logic_0;
+assign B_0_d0 = ap_const_lv32_0;
+assign B_0_d1 = ap_const_lv32_0;
+assign B_0_we0 = ap_const_logic_0;
+assign B_0_we1 = ap_const_logic_0;
+assign B_1_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_address0;
+assign B_1_address1 = ap_const_lv3_0;
+assign B_1_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_ce0;
+assign B_1_ce1 = ap_const_logic_0;
+assign B_1_d0 = ap_const_lv32_0;
+assign B_1_d1 = ap_const_lv32_0;
+assign B_1_we0 = ap_const_logic_0;
+assign B_1_we1 = ap_const_logic_0;
+assign B_2_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_address0;
+assign B_2_address1 = ap_const_lv3_0;
+assign B_2_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_ce0;
+assign B_2_ce1 = ap_const_logic_0;
+assign B_2_d0 = ap_const_lv32_0;
+assign B_2_d1 = ap_const_lv32_0;
+assign B_2_we0 = ap_const_logic_0;
+assign B_2_we1 = ap_const_logic_0;
+assign B_3_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_address0;
+assign B_3_address1 = ap_const_lv3_0;
+assign B_3_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_ce0;
+assign B_3_ce1 = ap_const_logic_0;
+assign B_3_d0 = ap_const_lv32_0;
+assign B_3_d1 = ap_const_lv32_0;
+assign B_3_we0 = ap_const_logic_0;
+assign B_3_we1 = ap_const_logic_0;
+assign B_4_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_address0;
+assign B_4_address1 = ap_const_lv3_0;
+assign B_4_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_ce0;
+assign B_4_ce1 = ap_const_logic_0;
+assign B_4_d0 = ap_const_lv32_0;
+assign B_4_d1 = ap_const_lv32_0;
+assign B_4_we0 = ap_const_logic_0;
+assign B_4_we1 = ap_const_logic_0;
+assign B_5_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_address0;
+assign B_5_address1 = ap_const_lv3_0;
+assign B_5_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_ce0;
+assign B_5_ce1 = ap_const_logic_0;
+assign B_5_d0 = ap_const_lv32_0;
+assign B_5_d1 = ap_const_lv32_0;
+assign B_5_we0 = ap_const_logic_0;
+assign B_5_we1 = ap_const_logic_0;
+assign B_6_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_address0;
+assign B_6_address1 = ap_const_lv3_0;
+assign B_6_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_ce0;
+assign B_6_ce1 = ap_const_logic_0;
+assign B_6_d0 = ap_const_lv32_0;
+assign B_6_d1 = ap_const_lv32_0;
+assign B_6_we0 = ap_const_logic_0;
+assign B_6_we1 = ap_const_logic_0;
+assign B_7_address0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_address0;
+assign B_7_address1 = ap_const_lv3_0;
+assign B_7_ce0 = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_ce0;
+assign B_7_ce1 = ap_const_logic_0;
+assign B_7_d0 = ap_const_lv32_0;
+assign B_7_d1 = ap_const_lv32_0;
+assign B_7_we0 = ap_const_logic_0;
+assign B_7_we1 = ap_const_logic_0;
 assign B_cached_0_0_channel_U_ap_dummy_ce = ap_const_logic_1;
 assign B_cached_0_0_channel_din = DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_return_0;
 assign B_cached_0_0_channel_read = DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready;
@@ -4715,43 +5013,35 @@ assign C_d1 = ap_const_lv32_0;
 assign C_pipo_update = DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_update;
 assign C_we0 = DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_we0;
 assign C_we1 = ap_const_logic_0;
-assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_start;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_status = A1_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_pipo_update = ap_const_logic_0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_0_q0 = B_0_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_1_q0 = B_1_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_2_q0 = B_2_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_3_q0 = B_3_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_4_q0 = B_4_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_5_q0 = B_5_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_6_q0 = B_6_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_B_7_q0 = B_7_q0;
+assign DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start = ap_sig_start_in_DCT_MAT_Multiply_1_Loop_LoadRow_pr_U0_ap_start;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q0 = A1_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A1_q1 = A1_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_status = A2_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q0 = A2_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A2_q1 = A2_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_status = A3_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q0 = A3_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A3_q1 = A3_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_status = A4_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q0 = A4_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A4_q1 = A4_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_status = A5_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q0 = A5_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A5_q1 = A5_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_status = A6_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q0 = A6_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A6_q1 = A6_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_status = A7_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q0 = A7_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A7_q1 = A7_q1;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_status = A_pipo_status;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_q0 = A_q0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_A_q1 = A_q1;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_status = C_pipo_status;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_C_pipo_update = ap_const_logic_0;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_continue = ap_sig_hs_continue;
-assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = (ap_start & B_cached_0_0_channel_empty_n & B_cached_0_1_channel_empty_n & B_cached_0_2_channel_empty_n & B_cached_0_3_channel_empty_n & B_cached_0_4_channel_empty_n & B_cached_0_5_channel_empty_n & B_cached_0_6_channel_empty_n & B_cached_0_7_channel_empty_n & B_cached_1_0_channel_empty_n & B_cached_1_1_channel_empty_n & B_cached_1_2_channel_empty_n & B_cached_1_3_channel_empty_n & B_cached_1_4_channel_empty_n & B_cached_1_5_channel_empty_n & B_cached_1_6_channel_empty_n & B_cached_1_7_channel_empty_n & B_cached_2_0_channel_empty_n & B_cached_2_1_channel_empty_n & B_cached_2_2_channel_empty_n & B_cached_2_3_channel_empty_n & B_cached_2_4_channel_empty_n & B_cached_2_5_channel_empty_n & B_cached_2_6_channel_empty_n & B_cached_2_7_channel_empty_n & B_cached_3_0_channel_empty_n & B_cached_3_1_channel_empty_n & B_cached_3_2_channel_empty_n & B_cached_3_3_channel_empty_n & B_cached_3_4_channel_empty_n & B_cached_3_5_channel_empty_n & B_cached_3_6_channel_empty_n & B_cached_3_7_channel_empty_n & B_cached_4_0_channel_empty_n & B_cached_4_1_channel_empty_n & B_cached_4_2_channel_empty_n & B_cached_4_3_channel_empty_n & B_cached_4_4_channel_empty_n & B_cached_4_5_channel_empty_n & B_cached_4_6_channel_empty_n & B_cached_4_7_channel_empty_n & B_cached_5_0_channel_empty_n & B_cached_5_1_channel_empty_n & B_cached_5_2_channel_empty_n & B_cached_5_3_channel_empty_n & B_cached_5_4_channel_empty_n & B_cached_5_5_channel_empty_n & B_cached_5_6_channel_empty_n & B_cached_5_7_channel_empty_n & B_cached_6_0_channel_empty_n & B_cached_6_1_channel_empty_n & B_cached_6_2_channel_empty_n & B_cached_6_3_channel_empty_n & B_cached_6_4_channel_empty_n & B_cached_6_5_channel_empty_n & B_cached_6_6_channel_empty_n & B_cached_6_7_channel_empty_n & B_cached_7_0_channel_empty_n & B_cached_7_1_channel_empty_n & B_cached_7_2_channel_empty_n & B_cached_7_3_channel_empty_n & B_cached_7_4_channel_empty_n & B_cached_7_5_channel_empty_n & B_cached_7_6_channel_empty_n & B_cached_7_7_channel_empty_n);
+assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start = (B_cached_0_0_channel_empty_n & B_cached_0_1_channel_empty_n & B_cached_0_2_channel_empty_n & B_cached_0_3_channel_empty_n & B_cached_0_4_channel_empty_n & B_cached_0_5_channel_empty_n & B_cached_0_6_channel_empty_n & B_cached_0_7_channel_empty_n & B_cached_1_0_channel_empty_n & B_cached_1_1_channel_empty_n & B_cached_1_2_channel_empty_n & B_cached_1_3_channel_empty_n & B_cached_1_4_channel_empty_n & B_cached_1_5_channel_empty_n & B_cached_1_6_channel_empty_n & B_cached_1_7_channel_empty_n & B_cached_2_0_channel_empty_n & B_cached_2_1_channel_empty_n & B_cached_2_2_channel_empty_n & B_cached_2_3_channel_empty_n & B_cached_2_4_channel_empty_n & B_cached_2_5_channel_empty_n & B_cached_2_6_channel_empty_n & B_cached_2_7_channel_empty_n & B_cached_3_0_channel_empty_n & B_cached_3_1_channel_empty_n & B_cached_3_2_channel_empty_n & B_cached_3_3_channel_empty_n & B_cached_3_4_channel_empty_n & B_cached_3_5_channel_empty_n & B_cached_3_6_channel_empty_n & B_cached_3_7_channel_empty_n & B_cached_4_0_channel_empty_n & B_cached_4_1_channel_empty_n & B_cached_4_2_channel_empty_n & B_cached_4_3_channel_empty_n & B_cached_4_4_channel_empty_n & B_cached_4_5_channel_empty_n & B_cached_4_6_channel_empty_n & B_cached_4_7_channel_empty_n & B_cached_5_0_channel_empty_n & B_cached_5_1_channel_empty_n & B_cached_5_2_channel_empty_n & B_cached_5_3_channel_empty_n & B_cached_5_4_channel_empty_n & B_cached_5_5_channel_empty_n & B_cached_5_6_channel_empty_n & B_cached_5_7_channel_empty_n & B_cached_6_0_channel_empty_n & B_cached_6_1_channel_empty_n & B_cached_6_2_channel_empty_n & B_cached_6_3_channel_empty_n & B_cached_6_4_channel_empty_n & B_cached_6_5_channel_empty_n & B_cached_6_6_channel_empty_n & B_cached_6_7_channel_empty_n & B_cached_7_0_channel_empty_n & B_cached_7_1_channel_empty_n & B_cached_7_2_channel_empty_n & B_cached_7_3_channel_empty_n & B_cached_7_4_channel_empty_n & B_cached_7_5_channel_empty_n & B_cached_7_6_channel_empty_n & B_cached_7_7_channel_empty_n & ap_sig_start_in_DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_start);
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read = B_cached_0_0_channel_dout;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read1 = B_cached_0_1_channel_dout;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read10 = B_cached_1_2_channel_dout;
@@ -4818,8 +5108,7 @@ assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read8 = B_cached_1_0_channel_dout;
 assign DCT_MAT_Multiply_1_Loop_Row_proc_U0_p_read9 = B_cached_1_1_channel_dout;
 assign ap_done = ap_sig_hs_done;
 assign ap_ready = ap_sig_top_allready;
-assign ap_sig_hs_continue = ap_continue;
-assign ap_sig_top_allready = DCT_MAT_Multiply_1_Loop_Row_proc_U0_ap_ready;
+assign ap_sig_hs_continue = ap_const_logic_1;
 
 
 endmodule //DCT_MAT_Multiply_1

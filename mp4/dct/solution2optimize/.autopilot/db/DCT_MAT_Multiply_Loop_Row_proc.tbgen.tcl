@@ -8,6 +8,14 @@ set isOneStateSeq 0
 set C_modelName {DCT_MAT_Multiply_Loop_Row_proc}
 set C_modelType { void 0 }
 set C_modelArgList { 
+	{ A_0 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_1 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_2 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_3 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_4 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_5 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_6 float 32 regular {array 8 { 1 1 } 1 1 }  }
+	{ A_7 float 32 regular {array 8 { 1 1 } 1 1 }  }
 	{ p_read float 32 regular  }
 	{ p_read1 float 32 regular  }
 	{ p_read2 float 32 regular  }
@@ -82,7 +90,15 @@ set C_modelArgList {
 	{ C_7 float 32 regular {array 8 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "p_read", "interface" : "wire", "bitwidth" : 32} , 
+	{ "Name" : "A_0", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_1", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_2", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_3", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_4", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_5", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_6", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "A_7", "interface" : "memory", "bitwidth" : 32} , 
+ 	{ "Name" : "p_read", "interface" : "wire", "bitwidth" : 32} , 
  	{ "Name" : "p_read1", "interface" : "wire", "bitwidth" : 32} , 
  	{ "Name" : "p_read2", "interface" : "wire", "bitwidth" : 32} , 
  	{ "Name" : "p_read3", "interface" : "wire", "bitwidth" : 32} , 
@@ -155,7 +171,7 @@ set C_modelArgMapList {[
  	{ "Name" : "C_6", "interface" : "memory", "bitwidth" : 32} , 
  	{ "Name" : "C_7", "interface" : "memory", "bitwidth" : 32} ]}
 # RTL Port declarations: 
-set portNum 103
+set portNum 151
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -164,102 +180,150 @@ set portList {
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ p_read sc_in sc_lv 32 signal 0 } 
-	{ p_read1 sc_in sc_lv 32 signal 1 } 
-	{ p_read2 sc_in sc_lv 32 signal 2 } 
-	{ p_read3 sc_in sc_lv 32 signal 3 } 
-	{ p_read4 sc_in sc_lv 32 signal 4 } 
-	{ p_read5 sc_in sc_lv 32 signal 5 } 
-	{ p_read6 sc_in sc_lv 32 signal 6 } 
-	{ p_read7 sc_in sc_lv 32 signal 7 } 
-	{ p_read8 sc_in sc_lv 32 signal 8 } 
-	{ p_read9 sc_in sc_lv 32 signal 9 } 
-	{ p_read10 sc_in sc_lv 32 signal 10 } 
-	{ p_read11 sc_in sc_lv 32 signal 11 } 
-	{ p_read12 sc_in sc_lv 32 signal 12 } 
-	{ p_read13 sc_in sc_lv 32 signal 13 } 
-	{ p_read14 sc_in sc_lv 32 signal 14 } 
-	{ p_read15 sc_in sc_lv 32 signal 15 } 
-	{ p_read16 sc_in sc_lv 32 signal 16 } 
-	{ p_read17 sc_in sc_lv 32 signal 17 } 
-	{ p_read18 sc_in sc_lv 32 signal 18 } 
-	{ p_read19 sc_in sc_lv 32 signal 19 } 
-	{ p_read20 sc_in sc_lv 32 signal 20 } 
-	{ p_read21 sc_in sc_lv 32 signal 21 } 
-	{ p_read22 sc_in sc_lv 32 signal 22 } 
-	{ p_read23 sc_in sc_lv 32 signal 23 } 
-	{ p_read24 sc_in sc_lv 32 signal 24 } 
-	{ p_read25 sc_in sc_lv 32 signal 25 } 
-	{ p_read26 sc_in sc_lv 32 signal 26 } 
-	{ p_read27 sc_in sc_lv 32 signal 27 } 
-	{ p_read28 sc_in sc_lv 32 signal 28 } 
-	{ p_read29 sc_in sc_lv 32 signal 29 } 
-	{ p_read30 sc_in sc_lv 32 signal 30 } 
-	{ p_read31 sc_in sc_lv 32 signal 31 } 
-	{ p_read32 sc_in sc_lv 32 signal 32 } 
-	{ p_read33 sc_in sc_lv 32 signal 33 } 
-	{ p_read34 sc_in sc_lv 32 signal 34 } 
-	{ p_read35 sc_in sc_lv 32 signal 35 } 
-	{ p_read36 sc_in sc_lv 32 signal 36 } 
-	{ p_read37 sc_in sc_lv 32 signal 37 } 
-	{ p_read38 sc_in sc_lv 32 signal 38 } 
-	{ p_read39 sc_in sc_lv 32 signal 39 } 
-	{ p_read40 sc_in sc_lv 32 signal 40 } 
-	{ p_read41 sc_in sc_lv 32 signal 41 } 
-	{ p_read42 sc_in sc_lv 32 signal 42 } 
-	{ p_read43 sc_in sc_lv 32 signal 43 } 
-	{ p_read44 sc_in sc_lv 32 signal 44 } 
-	{ p_read45 sc_in sc_lv 32 signal 45 } 
-	{ p_read46 sc_in sc_lv 32 signal 46 } 
-	{ p_read47 sc_in sc_lv 32 signal 47 } 
-	{ p_read48 sc_in sc_lv 32 signal 48 } 
-	{ p_read49 sc_in sc_lv 32 signal 49 } 
-	{ p_read50 sc_in sc_lv 32 signal 50 } 
-	{ p_read51 sc_in sc_lv 32 signal 51 } 
-	{ p_read52 sc_in sc_lv 32 signal 52 } 
-	{ p_read53 sc_in sc_lv 32 signal 53 } 
-	{ p_read54 sc_in sc_lv 32 signal 54 } 
-	{ p_read55 sc_in sc_lv 32 signal 55 } 
-	{ p_read56 sc_in sc_lv 32 signal 56 } 
-	{ p_read57 sc_in sc_lv 32 signal 57 } 
-	{ p_read58 sc_in sc_lv 32 signal 58 } 
-	{ p_read59 sc_in sc_lv 32 signal 59 } 
-	{ p_read60 sc_in sc_lv 32 signal 60 } 
-	{ p_read61 sc_in sc_lv 32 signal 61 } 
-	{ p_read62 sc_in sc_lv 32 signal 62 } 
-	{ p_read63 sc_in sc_lv 32 signal 63 } 
-	{ C_0_address0 sc_out sc_lv 3 signal 64 } 
-	{ C_0_ce0 sc_out sc_logic 1 signal 64 } 
-	{ C_0_we0 sc_out sc_logic 1 signal 64 } 
-	{ C_0_d0 sc_out sc_lv 32 signal 64 } 
-	{ C_1_address0 sc_out sc_lv 3 signal 65 } 
-	{ C_1_ce0 sc_out sc_logic 1 signal 65 } 
-	{ C_1_we0 sc_out sc_logic 1 signal 65 } 
-	{ C_1_d0 sc_out sc_lv 32 signal 65 } 
-	{ C_2_address0 sc_out sc_lv 3 signal 66 } 
-	{ C_2_ce0 sc_out sc_logic 1 signal 66 } 
-	{ C_2_we0 sc_out sc_logic 1 signal 66 } 
-	{ C_2_d0 sc_out sc_lv 32 signal 66 } 
-	{ C_3_address0 sc_out sc_lv 3 signal 67 } 
-	{ C_3_ce0 sc_out sc_logic 1 signal 67 } 
-	{ C_3_we0 sc_out sc_logic 1 signal 67 } 
-	{ C_3_d0 sc_out sc_lv 32 signal 67 } 
-	{ C_4_address0 sc_out sc_lv 3 signal 68 } 
-	{ C_4_ce0 sc_out sc_logic 1 signal 68 } 
-	{ C_4_we0 sc_out sc_logic 1 signal 68 } 
-	{ C_4_d0 sc_out sc_lv 32 signal 68 } 
-	{ C_5_address0 sc_out sc_lv 3 signal 69 } 
-	{ C_5_ce0 sc_out sc_logic 1 signal 69 } 
-	{ C_5_we0 sc_out sc_logic 1 signal 69 } 
-	{ C_5_d0 sc_out sc_lv 32 signal 69 } 
-	{ C_6_address0 sc_out sc_lv 3 signal 70 } 
-	{ C_6_ce0 sc_out sc_logic 1 signal 70 } 
-	{ C_6_we0 sc_out sc_logic 1 signal 70 } 
-	{ C_6_d0 sc_out sc_lv 32 signal 70 } 
-	{ C_7_address0 sc_out sc_lv 3 signal 71 } 
-	{ C_7_ce0 sc_out sc_logic 1 signal 71 } 
-	{ C_7_we0 sc_out sc_logic 1 signal 71 } 
-	{ C_7_d0 sc_out sc_lv 32 signal 71 } 
+	{ A_0_address0 sc_out sc_lv 3 signal 0 } 
+	{ A_0_ce0 sc_out sc_logic 1 signal 0 } 
+	{ A_0_q0 sc_in sc_lv 32 signal 0 } 
+	{ A_0_address1 sc_out sc_lv 3 signal 0 } 
+	{ A_0_ce1 sc_out sc_logic 1 signal 0 } 
+	{ A_0_q1 sc_in sc_lv 32 signal 0 } 
+	{ A_1_address0 sc_out sc_lv 3 signal 1 } 
+	{ A_1_ce0 sc_out sc_logic 1 signal 1 } 
+	{ A_1_q0 sc_in sc_lv 32 signal 1 } 
+	{ A_1_address1 sc_out sc_lv 3 signal 1 } 
+	{ A_1_ce1 sc_out sc_logic 1 signal 1 } 
+	{ A_1_q1 sc_in sc_lv 32 signal 1 } 
+	{ A_2_address0 sc_out sc_lv 3 signal 2 } 
+	{ A_2_ce0 sc_out sc_logic 1 signal 2 } 
+	{ A_2_q0 sc_in sc_lv 32 signal 2 } 
+	{ A_2_address1 sc_out sc_lv 3 signal 2 } 
+	{ A_2_ce1 sc_out sc_logic 1 signal 2 } 
+	{ A_2_q1 sc_in sc_lv 32 signal 2 } 
+	{ A_3_address0 sc_out sc_lv 3 signal 3 } 
+	{ A_3_ce0 sc_out sc_logic 1 signal 3 } 
+	{ A_3_q0 sc_in sc_lv 32 signal 3 } 
+	{ A_3_address1 sc_out sc_lv 3 signal 3 } 
+	{ A_3_ce1 sc_out sc_logic 1 signal 3 } 
+	{ A_3_q1 sc_in sc_lv 32 signal 3 } 
+	{ A_4_address0 sc_out sc_lv 3 signal 4 } 
+	{ A_4_ce0 sc_out sc_logic 1 signal 4 } 
+	{ A_4_q0 sc_in sc_lv 32 signal 4 } 
+	{ A_4_address1 sc_out sc_lv 3 signal 4 } 
+	{ A_4_ce1 sc_out sc_logic 1 signal 4 } 
+	{ A_4_q1 sc_in sc_lv 32 signal 4 } 
+	{ A_5_address0 sc_out sc_lv 3 signal 5 } 
+	{ A_5_ce0 sc_out sc_logic 1 signal 5 } 
+	{ A_5_q0 sc_in sc_lv 32 signal 5 } 
+	{ A_5_address1 sc_out sc_lv 3 signal 5 } 
+	{ A_5_ce1 sc_out sc_logic 1 signal 5 } 
+	{ A_5_q1 sc_in sc_lv 32 signal 5 } 
+	{ A_6_address0 sc_out sc_lv 3 signal 6 } 
+	{ A_6_ce0 sc_out sc_logic 1 signal 6 } 
+	{ A_6_q0 sc_in sc_lv 32 signal 6 } 
+	{ A_6_address1 sc_out sc_lv 3 signal 6 } 
+	{ A_6_ce1 sc_out sc_logic 1 signal 6 } 
+	{ A_6_q1 sc_in sc_lv 32 signal 6 } 
+	{ A_7_address0 sc_out sc_lv 3 signal 7 } 
+	{ A_7_ce0 sc_out sc_logic 1 signal 7 } 
+	{ A_7_q0 sc_in sc_lv 32 signal 7 } 
+	{ A_7_address1 sc_out sc_lv 3 signal 7 } 
+	{ A_7_ce1 sc_out sc_logic 1 signal 7 } 
+	{ A_7_q1 sc_in sc_lv 32 signal 7 } 
+	{ p_read sc_in sc_lv 32 signal 8 } 
+	{ p_read1 sc_in sc_lv 32 signal 9 } 
+	{ p_read2 sc_in sc_lv 32 signal 10 } 
+	{ p_read3 sc_in sc_lv 32 signal 11 } 
+	{ p_read4 sc_in sc_lv 32 signal 12 } 
+	{ p_read5 sc_in sc_lv 32 signal 13 } 
+	{ p_read6 sc_in sc_lv 32 signal 14 } 
+	{ p_read7 sc_in sc_lv 32 signal 15 } 
+	{ p_read8 sc_in sc_lv 32 signal 16 } 
+	{ p_read9 sc_in sc_lv 32 signal 17 } 
+	{ p_read10 sc_in sc_lv 32 signal 18 } 
+	{ p_read11 sc_in sc_lv 32 signal 19 } 
+	{ p_read12 sc_in sc_lv 32 signal 20 } 
+	{ p_read13 sc_in sc_lv 32 signal 21 } 
+	{ p_read14 sc_in sc_lv 32 signal 22 } 
+	{ p_read15 sc_in sc_lv 32 signal 23 } 
+	{ p_read16 sc_in sc_lv 32 signal 24 } 
+	{ p_read17 sc_in sc_lv 32 signal 25 } 
+	{ p_read18 sc_in sc_lv 32 signal 26 } 
+	{ p_read19 sc_in sc_lv 32 signal 27 } 
+	{ p_read20 sc_in sc_lv 32 signal 28 } 
+	{ p_read21 sc_in sc_lv 32 signal 29 } 
+	{ p_read22 sc_in sc_lv 32 signal 30 } 
+	{ p_read23 sc_in sc_lv 32 signal 31 } 
+	{ p_read24 sc_in sc_lv 32 signal 32 } 
+	{ p_read25 sc_in sc_lv 32 signal 33 } 
+	{ p_read26 sc_in sc_lv 32 signal 34 } 
+	{ p_read27 sc_in sc_lv 32 signal 35 } 
+	{ p_read28 sc_in sc_lv 32 signal 36 } 
+	{ p_read29 sc_in sc_lv 32 signal 37 } 
+	{ p_read30 sc_in sc_lv 32 signal 38 } 
+	{ p_read31 sc_in sc_lv 32 signal 39 } 
+	{ p_read32 sc_in sc_lv 32 signal 40 } 
+	{ p_read33 sc_in sc_lv 32 signal 41 } 
+	{ p_read34 sc_in sc_lv 32 signal 42 } 
+	{ p_read35 sc_in sc_lv 32 signal 43 } 
+	{ p_read36 sc_in sc_lv 32 signal 44 } 
+	{ p_read37 sc_in sc_lv 32 signal 45 } 
+	{ p_read38 sc_in sc_lv 32 signal 46 } 
+	{ p_read39 sc_in sc_lv 32 signal 47 } 
+	{ p_read40 sc_in sc_lv 32 signal 48 } 
+	{ p_read41 sc_in sc_lv 32 signal 49 } 
+	{ p_read42 sc_in sc_lv 32 signal 50 } 
+	{ p_read43 sc_in sc_lv 32 signal 51 } 
+	{ p_read44 sc_in sc_lv 32 signal 52 } 
+	{ p_read45 sc_in sc_lv 32 signal 53 } 
+	{ p_read46 sc_in sc_lv 32 signal 54 } 
+	{ p_read47 sc_in sc_lv 32 signal 55 } 
+	{ p_read48 sc_in sc_lv 32 signal 56 } 
+	{ p_read49 sc_in sc_lv 32 signal 57 } 
+	{ p_read50 sc_in sc_lv 32 signal 58 } 
+	{ p_read51 sc_in sc_lv 32 signal 59 } 
+	{ p_read52 sc_in sc_lv 32 signal 60 } 
+	{ p_read53 sc_in sc_lv 32 signal 61 } 
+	{ p_read54 sc_in sc_lv 32 signal 62 } 
+	{ p_read55 sc_in sc_lv 32 signal 63 } 
+	{ p_read56 sc_in sc_lv 32 signal 64 } 
+	{ p_read57 sc_in sc_lv 32 signal 65 } 
+	{ p_read58 sc_in sc_lv 32 signal 66 } 
+	{ p_read59 sc_in sc_lv 32 signal 67 } 
+	{ p_read60 sc_in sc_lv 32 signal 68 } 
+	{ p_read61 sc_in sc_lv 32 signal 69 } 
+	{ p_read62 sc_in sc_lv 32 signal 70 } 
+	{ p_read63 sc_in sc_lv 32 signal 71 } 
+	{ C_0_address0 sc_out sc_lv 3 signal 72 } 
+	{ C_0_ce0 sc_out sc_logic 1 signal 72 } 
+	{ C_0_we0 sc_out sc_logic 1 signal 72 } 
+	{ C_0_d0 sc_out sc_lv 32 signal 72 } 
+	{ C_1_address0 sc_out sc_lv 3 signal 73 } 
+	{ C_1_ce0 sc_out sc_logic 1 signal 73 } 
+	{ C_1_we0 sc_out sc_logic 1 signal 73 } 
+	{ C_1_d0 sc_out sc_lv 32 signal 73 } 
+	{ C_2_address0 sc_out sc_lv 3 signal 74 } 
+	{ C_2_ce0 sc_out sc_logic 1 signal 74 } 
+	{ C_2_we0 sc_out sc_logic 1 signal 74 } 
+	{ C_2_d0 sc_out sc_lv 32 signal 74 } 
+	{ C_3_address0 sc_out sc_lv 3 signal 75 } 
+	{ C_3_ce0 sc_out sc_logic 1 signal 75 } 
+	{ C_3_we0 sc_out sc_logic 1 signal 75 } 
+	{ C_3_d0 sc_out sc_lv 32 signal 75 } 
+	{ C_4_address0 sc_out sc_lv 3 signal 76 } 
+	{ C_4_ce0 sc_out sc_logic 1 signal 76 } 
+	{ C_4_we0 sc_out sc_logic 1 signal 76 } 
+	{ C_4_d0 sc_out sc_lv 32 signal 76 } 
+	{ C_5_address0 sc_out sc_lv 3 signal 77 } 
+	{ C_5_ce0 sc_out sc_logic 1 signal 77 } 
+	{ C_5_we0 sc_out sc_logic 1 signal 77 } 
+	{ C_5_d0 sc_out sc_lv 32 signal 77 } 
+	{ C_6_address0 sc_out sc_lv 3 signal 78 } 
+	{ C_6_ce0 sc_out sc_logic 1 signal 78 } 
+	{ C_6_we0 sc_out sc_logic 1 signal 78 } 
+	{ C_6_d0 sc_out sc_lv 32 signal 78 } 
+	{ C_7_address0 sc_out sc_lv 3 signal 79 } 
+	{ C_7_ce0 sc_out sc_logic 1 signal 79 } 
+	{ C_7_we0 sc_out sc_logic 1 signal 79 } 
+	{ C_7_d0 sc_out sc_lv 32 signal 79 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -269,6 +333,54 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "A_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_0", "role": "address0" }} , 
+ 	{ "name": "A_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_0", "role": "ce0" }} , 
+ 	{ "name": "A_0_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_0", "role": "q0" }} , 
+ 	{ "name": "A_0_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_0", "role": "address1" }} , 
+ 	{ "name": "A_0_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_0", "role": "ce1" }} , 
+ 	{ "name": "A_0_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_0", "role": "q1" }} , 
+ 	{ "name": "A_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_1", "role": "address0" }} , 
+ 	{ "name": "A_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_1", "role": "ce0" }} , 
+ 	{ "name": "A_1_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_1", "role": "q0" }} , 
+ 	{ "name": "A_1_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_1", "role": "address1" }} , 
+ 	{ "name": "A_1_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_1", "role": "ce1" }} , 
+ 	{ "name": "A_1_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_1", "role": "q1" }} , 
+ 	{ "name": "A_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_2", "role": "address0" }} , 
+ 	{ "name": "A_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_2", "role": "ce0" }} , 
+ 	{ "name": "A_2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_2", "role": "q0" }} , 
+ 	{ "name": "A_2_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_2", "role": "address1" }} , 
+ 	{ "name": "A_2_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_2", "role": "ce1" }} , 
+ 	{ "name": "A_2_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_2", "role": "q1" }} , 
+ 	{ "name": "A_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_3", "role": "address0" }} , 
+ 	{ "name": "A_3_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_3", "role": "ce0" }} , 
+ 	{ "name": "A_3_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_3", "role": "q0" }} , 
+ 	{ "name": "A_3_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_3", "role": "address1" }} , 
+ 	{ "name": "A_3_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_3", "role": "ce1" }} , 
+ 	{ "name": "A_3_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_3", "role": "q1" }} , 
+ 	{ "name": "A_4_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_4", "role": "address0" }} , 
+ 	{ "name": "A_4_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_4", "role": "ce0" }} , 
+ 	{ "name": "A_4_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_4", "role": "q0" }} , 
+ 	{ "name": "A_4_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_4", "role": "address1" }} , 
+ 	{ "name": "A_4_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_4", "role": "ce1" }} , 
+ 	{ "name": "A_4_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_4", "role": "q1" }} , 
+ 	{ "name": "A_5_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_5", "role": "address0" }} , 
+ 	{ "name": "A_5_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_5", "role": "ce0" }} , 
+ 	{ "name": "A_5_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_5", "role": "q0" }} , 
+ 	{ "name": "A_5_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_5", "role": "address1" }} , 
+ 	{ "name": "A_5_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_5", "role": "ce1" }} , 
+ 	{ "name": "A_5_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_5", "role": "q1" }} , 
+ 	{ "name": "A_6_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_6", "role": "address0" }} , 
+ 	{ "name": "A_6_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_6", "role": "ce0" }} , 
+ 	{ "name": "A_6_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_6", "role": "q0" }} , 
+ 	{ "name": "A_6_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_6", "role": "address1" }} , 
+ 	{ "name": "A_6_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_6", "role": "ce1" }} , 
+ 	{ "name": "A_6_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_6", "role": "q1" }} , 
+ 	{ "name": "A_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_7", "role": "address0" }} , 
+ 	{ "name": "A_7_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_7", "role": "ce0" }} , 
+ 	{ "name": "A_7_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_7", "role": "q0" }} , 
+ 	{ "name": "A_7_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "A_7", "role": "address1" }} , 
+ 	{ "name": "A_7_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A_7", "role": "ce1" }} , 
+ 	{ "name": "A_7_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A_7", "role": "q1" }} , 
  	{ "name": "p_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "p_read", "role": "default" }} , 
  	{ "name": "p_read1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "p_read1", "role": "default" }} , 
  	{ "name": "p_read2", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "p_read2", "role": "default" }} , 
@@ -366,6 +478,14 @@ set NewPortList {[
  	{ "name": "C_7_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "C_7", "role": "we0" }} , 
  	{ "name": "C_7_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "C_7", "role": "d0" }}  ]}
 set Spec2ImplPortList { 
+	A_0 { ap_memory {  { A_0_address0 mem_address 1 3 }  { A_0_ce0 mem_ce 1 1 }  { A_0_q0 mem_dout 0 32 }  { A_0_address1 mem_address 1 3 }  { A_0_ce1 mem_ce 1 1 }  { A_0_q1 mem_dout 0 32 } } }
+	A_1 { ap_memory {  { A_1_address0 mem_address 1 3 }  { A_1_ce0 mem_ce 1 1 }  { A_1_q0 mem_dout 0 32 }  { A_1_address1 mem_address 1 3 }  { A_1_ce1 mem_ce 1 1 }  { A_1_q1 mem_dout 0 32 } } }
+	A_2 { ap_memory {  { A_2_address0 mem_address 1 3 }  { A_2_ce0 mem_ce 1 1 }  { A_2_q0 mem_dout 0 32 }  { A_2_address1 mem_address 1 3 }  { A_2_ce1 mem_ce 1 1 }  { A_2_q1 mem_dout 0 32 } } }
+	A_3 { ap_memory {  { A_3_address0 mem_address 1 3 }  { A_3_ce0 mem_ce 1 1 }  { A_3_q0 mem_dout 0 32 }  { A_3_address1 mem_address 1 3 }  { A_3_ce1 mem_ce 1 1 }  { A_3_q1 mem_dout 0 32 } } }
+	A_4 { ap_memory {  { A_4_address0 mem_address 1 3 }  { A_4_ce0 mem_ce 1 1 }  { A_4_q0 mem_dout 0 32 }  { A_4_address1 mem_address 1 3 }  { A_4_ce1 mem_ce 1 1 }  { A_4_q1 mem_dout 0 32 } } }
+	A_5 { ap_memory {  { A_5_address0 mem_address 1 3 }  { A_5_ce0 mem_ce 1 1 }  { A_5_q0 mem_dout 0 32 }  { A_5_address1 mem_address 1 3 }  { A_5_ce1 mem_ce 1 1 }  { A_5_q1 mem_dout 0 32 } } }
+	A_6 { ap_memory {  { A_6_address0 mem_address 1 3 }  { A_6_ce0 mem_ce 1 1 }  { A_6_q0 mem_dout 0 32 }  { A_6_address1 mem_address 1 3 }  { A_6_ce1 mem_ce 1 1 }  { A_6_q1 mem_dout 0 32 } } }
+	A_7 { ap_memory {  { A_7_address0 mem_address 1 3 }  { A_7_ce0 mem_ce 1 1 }  { A_7_q0 mem_dout 0 32 }  { A_7_address1 mem_address 1 3 }  { A_7_ce1 mem_ce 1 1 }  { A_7_q1 mem_dout 0 32 } } }
 	p_read { ap_none {  { p_read in_data 0 32 } } }
 	p_read1 { ap_none {  { p_read1 in_data 0 32 } } }
 	p_read2 { ap_none {  { p_read2 in_data 0 32 } } }
